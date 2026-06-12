@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Probabilitat II</title>
+  <meta name="description" content="Probabilitat II" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Probabilitat II" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Probabilitat II" />
+  
+  
+  
+
+<meta name="author" content="Santi Perez-Hoyos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="variables-aleatòries-multivariants.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="Rcode/custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><div style=" padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
+<li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
+<li><h2 align=center>Probabilitat II</h2></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pla docent</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dades-generals"><i class="fa fa-check"></i>Dades generals</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#hores"><i class="fa fa-check"></i>Hores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#compet%C3%A8ncies-resultats-daprenentatge-que-es-desenvolupen"><i class="fa fa-check"></i>Competències / Resultats d’aprenentatge que es desenvolupen</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objectius-daprenentatge"><i class="fa fa-check"></i>Objectius d’aprenentatge</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#blocs-tem%C3%A0tics-i-continguts-detallats"><i class="fa fa-check"></i>Blocs Temàtics i Continguts Detallats</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#metodologia-i-activitats-formatives"><i class="fa fa-check"></i>Metodologia i activitats formatives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#avaluaci%C3%B3-acreditativa-dels-aprenentatges"><i class="fa fa-check"></i>Avaluació acreditativa dels aprenentatges</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariants</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
+<li class="chapter" data-level="1.1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
+<li class="chapter" data-level="1.1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
+<li class="chapter" data-level="1.1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
+<li class="chapter" data-level="1.2.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
+<li class="chapter" data-level="1.2.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleatories-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatories multivariants continues</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-discret"><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals. Cas discret</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a></li>
+<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html"><i class="fa fa-check"></i><b>2</b> Independència de variables aleatories</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries."><i class="fa fa-check"></i><b>2.1</b> Independència i dependència entre variables aleatòries.</a></li>
+<li class="chapter" data-level="2.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat."><i class="fa fa-check"></i><b>2.2</b> Conceptes de covariància, correlació i causalitat.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html"><i class="fa fa-check"></i><b>3</b> Algunes distribucions multivariants</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant-definici%C3%B3-propietats-i-aplicacions."><i class="fa fa-check"></i><b>3.1</b> Distribució normal multivariant: definició, propietats i aplicacions.</a></li>
+<li class="chapter" data-level="3.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariant-wishart-chi-quadrat-i-dirichlet."><i class="fa fa-check"></i><b>3.2</b> Distribucions especials: Multinomial, t-Student multivariant, Wishart, Chi-quadrat i Dirichlet.</a></li>
+<li class="chapter" data-level="3.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#generaci%C3%B3-de-mostres-de-distribucions-multivariants."><i class="fa fa-check"></i><b>3.3</b> Generació de mostres de distribucions multivariants.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html"><i class="fa fa-check"></i><b>4</b> Processos estocàstics: Introducció i conceptes bàsics</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a></li>
+<li class="chapter" data-level="4.2" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.2</b> Processos estocàstics discrets i continus.</a></li>
+<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Probabilitat II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Probabilitat II</h1>
+<p class="author"><em>Santi Perez-Hoyos</em></p>
+<p class="date"><em>12 juny, 2026</em></p>
+</div>
+<div id="pla-docent" class="section level1 unnumbered hasAnchor">
+<h1>Pla docent<a href="index.html#pla-docent" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>L’assignatura pretén proporcionar una base sòlida en l’estudi de variables aleatòries multivariants i processos estocàstics, amb èmfasi en la comprensió teòrica, les propietats fonamentals i les aplicacions pràctiques en camps com la ciència de dades, les finances, les biociències i l’enginyeria.</p>
+<div id="dades-generals" class="section level2 unnumbered hasAnchor">
+<h2>Dades generals<a href="index.html#dades-generals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="29%" />
+<col width="70%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Nom de l’assignatura</td>
+<td>Probabilitat II</td>
+</tr>
+<tr class="even">
+<td>Codi de l’assignatura</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Curs Acadèmic</td>
+<td>2026/2027</td>
+</tr>
+<tr class="even">
+<td>Coordinació</td>
+<td>Santi Pérez Hoyos</td>
+</tr>
+<tr class="odd">
+<td>Departament</td>
+<td>Departament de Genètica, Microbiologia i Estadística</td>
+</tr>
+<tr class="even">
+<td>Crèdits</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>Programa Únic</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="hores" class="section level2 unnumbered hasAnchor">
+<h2>Hores<a href="index.html#hores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table style="width:100%;">
+<colgroup>
+<col width="60%" />
+<col width="29%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Activitats</th>
+<th>Tipus de formació</th>
+<th align="center">Hores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Activitats presencials i/o no presencials</td>
+<td></td>
+<td align="center">60</td>
+</tr>
+<tr class="even">
+<td>  - Teoria</td>
+<td>Presencial</td>
+<td align="center">30</td>
+</tr>
+<tr class="odd">
+<td> - Pràctiques de problemes</td>
+<td>Presencial</td>
+<td align="center">30</td>
+</tr>
+<tr class="even">
+<td>Treball tutelat/dirigit</td>
+<td></td>
+<td align="center">40</td>
+</tr>
+<tr class="odd">
+<td>Aprenentatge autònom</td>
+<td></td>
+<td align="center">50</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="competències-resultats-daprenentatge-que-es-desenvolupen" class="section level2 unnumbered hasAnchor">
+<h2>Competències / Resultats d’aprenentatge que es desenvolupen<a href="index.html#compet%C3%A8ncies-resultats-daprenentatge-que-es-desenvolupen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>- Competències</strong></p>
+<p>C05. - Aplicar los conocimientos y habilidades a situaciones prácticas</p>
+<p>C12. Detectar situacions en què els models estadístics i d’investigació operativa poden ser útils per a la presa de decisions.</p>
+<p>C14. Adaptar els models teòrics a les necessitats específiques de les diferents àrees d’aplicació.</p>
+<p><strong>- Habilitats i destreses</strong></p>
+<p>H04. Plantejar una pregunta científica en termes estadístics.</p>
+<p>H06. Identificar les fonts de variabilitat i incertesa que afecten la presa de decisions</p>
+<p><strong>- Coneixements i continguts</strong></p>
+<p>K03. Reconèixer la teoria de la probabilitat com a fonament de les tècniques estadístiques.</p>
+</div>
+<div id="objectius-daprenentatge" class="section level2 unnumbered hasAnchor">
+<h2>Objectius d’aprenentatge<a href="index.html#objectius-daprenentatge" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="53%" />
+<col width="46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Referits a Coneixements</th>
+<th>Referits a habilitats, destreses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Conèixer els conceptes de variables aleatòries multivariants i les seves components</td>
+<td>- Calcular probabilitats a partir dels models de vectors aleatoris</td>
+</tr>
+<tr class="even">
+<td>- Conèixer els conceptes de independència , covariància i correlació</td>
+<td>- Calcular densitats marginals i conjuntes i funcions de vectors aleatoris</td>
+</tr>
+<tr class="odd">
+<td>- Conèixer les principals models multivariants i les seves propietats, i identificar els seus àmbits d’aplicació</td>
+<td>- Calcular matrius de covariàncies, correlacions i moments de variables aleatòries multivariants</td>
+</tr>
+<tr class="even">
+<td>- Conèixer el concepte de procés estocàstic i les seves propietats bàsiques.</td>
+<td>- Calcular probabilitats i generar dades de les principals distribucions</td>
+</tr>
+<tr class="odd">
+<td>- Conèixer els principals tipus de processos estocàstics i identificar les situacions reals a les quals són aplicables.</td>
+<td>- Determinar matrius de transició d’una cadena de Markov amb epai d’estats finits</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Aplicació dels principals tipus de processos estocàstics</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="blocs-temàtics-i-continguts-detallats" class="section level2 unnumbered hasAnchor">
+<h2>Blocs Temàtics i Continguts Detallats<a href="index.html#blocs-tem%C3%A0tics-i-continguts-detallats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>1. Variables aleatòries multivariants</strong></p>
+<ul>
+<li><p>Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat.</p></li>
+<li><p>Funcions de densitat i de distribució conjuntes.</p></li>
+<li><p>Funcions de densitat i de distribució marginals i condicionades.</p></li>
+<li><p>Moments multivariants: vector d’esperances, matriu de variància-covariància.</p></li>
+<li><p>Transformacions de variables multivariants.</p></li>
+</ul>
+<p><strong>2. Independència de variables aleatòries</strong></p>
+<ul>
+<li><p>Independència i dependència entre variables aleatòries.</p></li>
+<li><p>Conceptes de covariància, correlació i causalitat.</p></li>
+<li><p>Esperances i variàncies condicionades.</p></li>
+</ul>
+<p><strong>3. Algunes distribucions multivariants</strong></p>
+<ul>
+<li><p>Distribució normal multivariant: definició, propietats i aplicacions.</p></li>
+<li><p>Distribucions especials: Multinomial, t-Student multivariant, Wishart, Chi-quadrat i Dirichlet.</p></li>
+<li><p>Generació de mostres de distribucions multivariants.</p></li>
+</ul>
+<p><strong>4. Processos estocàstics: Introducció i conceptes bàsics</strong></p>
+<ul>
+<li><p>Definició de procés estocàstic.</p></li>
+<li><p>Processos estocàstics discrets i continus.</p></li>
+<li><p>Processos estocàstics estacionaris i no estacionaris.</p></li>
+</ul>
+<p><strong>5. Principals tipus de Processos estocàstics.</strong></p>
+<ul>
+<li><p>Cadenes de Markov.</p></li>
+<li><p>Caminades aleatòries.</p></li>
+<li><p>Processos de Poisson.</p></li>
+<li><p>Moviment Brownià.</p></li>
+</ul>
+</div>
+<div id="metodologia-i-activitats-formatives" class="section level2 unnumbered hasAnchor">
+<h2>Metodologia i activitats formatives<a href="index.html#metodologia-i-activitats-formatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El pla docent es desglossa en els següents tipus metodològics bàsics: activitats presencials, treball dirigit (com ara el lliurament de problemes o l’estudi de casos pràctics de seguiment automatitzat) i treball autònom. Les categories desglossades són:</p>
+<ol style="list-style-type: decimal">
+<li><p>Classes de teoria. Dues sessions setmanals ( durant 15 setmanes) en que es presenten els conceptes més teòrics de l’assigunatura. Es miren amb detalls demostracions, contingut i desenvolupament amb la resolució de situacions o problemes típics amb un enfocamente pràctic</p></li>
+<li><p>Classes pràctiques. Sessions de dues hores setmanals ( durant 15 setmanes) L’alumant disposa al principi de cada tema de una collecció de problemes i exercicis pràctics. A la finalització de cada tema es deixen les solucions en el Campus Virtual. El professorat comenta les diferents formes d’abordar els problemes i resol en la pissara un classe exercicis tipus. A vegades es deixa temps a la mateixa classe perqué l’alumant pugui resodre algún problema.</p></li>
+</ol>
+<p>Les sessions pràctiques tindràn lloc durant 15 setmanes al semestre en una sessió setmanal de 2 hores. En aquestes sessions el grup es divideix en dos subgrups que rebran la docència al mateix horari per part de dos professors. L’assignació d’alumnes als grups la fa el professorat.</p>
+<p>A més, regularment es proposen qüestionaris en el Campus Virtual que cal fer de manera telemàtica i lliurar a través del Campus Virtual la setmana següent. En alguns dels qüestionaris es demana que es lliurin els càlculs i procediments, que cal lliurar a les classes de problemes. Aquests lliuraments, igual que la resta de qüestionaris, s’avaluen.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Activitats no presencials dirigides. Amb el suport d’eines informàtiques amb correcció automatitzada (qüestionaris de Moodle que es duen a terme des del Campus Virtual), es fa un seguiment del treball autònom de l’estudiant (40 hores d’activitats dirigides no presencials en total).</p></li>
+<li><p>Treball autònom de l’estudiant per acabar de consolidar tots els conceptes donats (50 hores en total).</p></li>
+</ol>
+<p>Es fa servir el Campus Virtual com a repositori del material del curs i també per concretar les activitats proposades. Alguns dels lliuraments de feines es fan directament en el Campus Virtual.</p>
+<p>S’espera que l’alumnat assisteixi a classe sempre, ja que una assistència irregular dificulta l’assoliment de les competències que l’assignatura es marca com a objectius.</p>
+</div>
+<div id="avaluació-acreditativa-dels-aprenentatges" class="section level2 unnumbered hasAnchor">
+<h2>Avaluació acreditativa dels aprenentatges<a href="index.html#avaluaci%C3%B3-acreditativa-dels-aprenentatges" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Avaluació continuada</strong></p>
+<p>Es l’opció recomanada per als estudiants que assisteixen regularment i que consta de tres parts.</p>
+<p>1.- <strong>Lliurament dels questionaris</strong> proposats en el Campus Virtual (Quest)</p>
+<p>2.- <strong>Examen parcial</strong> en acabar el tema 2 que no elimina materia (Parcial)</p>
+<p>3.- <strong>Examen final</strong> que coincideix amb la data d’avaluació única segons la data marcada pel Consell Docent. (Final)</p>
+<p>Els examens parcial i final tenen la mateixa estructura, amb una pregunta teórica i entre 2 i 4 problemes. La teoria tindrá un valor entre el 20% el 30%.</p>
+<p>La qualificació global de l’assignatura és:</p>
+<p><strong>Global = 0.1 · Màx(Quest, Final) + 0.3 · Màx(Parcial, Final) + 0.6 · Final</strong></p>
+<p>sempre que la nota de l’examen final sigui com a mínim de 4 (sobre 10); en cas contrari la qualificació global de l’assignatura és la nota de l’examen final. Per tant, la nota dels lliuraments i la del parcial es tenen en compte (amb pesos respectius del 10 % i del 30 % de la qualificació global) només si són superiors a la nota de l’examen final.</p>
+<p>La nota de la reavaluació no té en compte la nota dels lliuraments setmanals ni la de l’examen parcial; per tant, és simplement la nota de l’examen de reavaluació.</p>
+<p><strong>Avaluació única</strong></p>
+<p>L’alumnat pot optar entre dues formes d’avaluació: avaluació continuada o avaluació única. Qui vulgui renunciar a l’avaluació continuada i acollir-se a l’avaluació única ha de fer-ho abans de la data que s’estableixi, i que es fa pública amb antelació suficient.</p>
+<p>La prova d’avaluació única consta de dues parts: teoria (amb un pes entre el 20% i el 30 %) i problemes (amb un pes entre el 70% i el 80 %). Els continguts d’aquesta prova són semblants (en temàtica i dificultat) als explicats a les classes presencials. Aquesta prova avalua les competències de l’assignatura i es fa en la data fixada pel Consell Docent (abans del període de matriculació de l’alumnat).</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="variables-aleatòries-multivariants.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": "fixed"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
