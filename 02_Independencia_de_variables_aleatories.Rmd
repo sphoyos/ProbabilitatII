@@ -1,0 +1,176 @@
+# Independència de variables aleatories
+
+
+## Independència i dependència entre variables aleatòries.
+ 
+ Text aquí
+ 
+## Conceptes de covariància, correlació i causalitat.
+ 
+ Text aquí
+## Esperances i variàncies condicionades.
+Text aquí
+
+
+
+:::definition
+**Definició 1.1 (Experiment).**  
+Un **experiment** és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables.
+
+- L’experiment és **determinista** si sempre produeix el mateix resultat.
+- És **aleatori** si pot donar lloc a diversos resultats no predictibles amb certesa.
+:::
+
+**Exemple 1.1.**  
+Llençar una moneda fins que aparegui *cara* per primera vegada i comptar el nombre total de llançaments.
+
+:::definition
+**Definició 1.2 (Espai mostral).**  
+L’**espai mostral** d’un experiment, denotat per $\Omega$, és el conjunt de tots els resultats possibles.
+:::
+
+Per a l’exemple:
+
+$$
+\Omega = \{1,2,3,\ldots\}.
+$$
+
+:::definition
+**Definició 1.3 (Esdeveniment).**  
+Un **esdeveniment** és qualsevol subconjunt $A \subseteq \Omega$.  
+Diem que *A ocorre* si el resultat observat pertany a A.
+:::
+
+Exemple: “el nombre de llançaments és senar” és  
+$$A = \{1,3,5,\ldots\}.$$
+
+---
+
+1.0.2 σ-àlgebres i mesura de probabilitat
+
+Per tal de definir probabilitat de manera rigorosa, necessitem una col·lecció d’esdeveniments “ben comportada”.
+
+:::definition
+**Definició 1.4 (σ-àlgebra).**  
+Una col·lecció $\mathcal{A}\subseteq \mathcal{P}(\Omega)$ és una **σ-àlgebra** si:
+
+1. $\Omega\in\mathcal{A}$  
+2. Si $A\in\mathcal{A}$, aleshores $A^c\in\mathcal{A}$  
+3. Si $A_1,A_2,\ldots\in\mathcal{A}$, aleshores $\bigcup_{n}A_n\in\mathcal{A}$
+:::
+
+La σ-àlgebra representa “tot allò al que volem i podem assignar probabilitat”.
+
+---
+
+:::definition
+**Definició 1.5 (Probabilitat — axiomes de Kolmogorov).**  
+Donada una σ-àlgebra $\mathcal{A}$ sobre $\Omega$, una funció  
+
+$$\mathbb{P}:\mathcal{A}\to[0,1]$$
+
+és una **mesura de probabilitat** si:
+
+1. $\mathbb{P}(A)\ge 0$  
+2. $\mathbb{P}(\Omega)=1$  
+3. Si $(A_n)_n$ són disjunts:  
+   $$
+   \mathbb{P}\left(\bigcup_n A_n\right) = \sum_n \mathbb{P}(A_n).
+   $$
+:::
+
+---
+
+1.0.3 Variables aleatòries i funció de distribució
+
+:::definition
+**Definició 1.7 (Variable aleatòria).**  
+Una aplicació $X:\Omega\to\mathbb{R}$ és una **variable aleatòria** si  
+$$\{\omega: X(\omega)\le x\}\in \mathcal{A}\quad\text{per a tot }x\in\mathbb{R}.$$
+:::
+
+Això garanteix que les expressions $\mathbb{P}(X\le x)$ estan ben definides.
+
+:::definition
+**Definició 1.8 (Funció de distribució).**  
+La **funció de distribució** d’una variable aleatòria $X$ és:
+
+$$
+F_X(x)=\mathbb{P}(X\le x).
+$$
+:::
+
+Aquesta funció caracteritza completament la distribució de $X$.
+
+---
+
+ 1.1 Variables aleatòries multivariants
+
+Molts experiments produeixen més d’una magnitud d’interès. Per exemple:
+
+- ingressos i despeses d’una llar;
+- temps fins diagnòstic i temps fins curació d’un pacient.
+
+Aquests casos requereixen treballar amb **vectors aleatoris**.
+
+:::definition
+**Definició 1.11 (Variable aleatòria bivariant).**  
+Un parell $(X,Y)$ és una **variable aleatòria bivariant** si per a tot $x,y$:
+
+$$
+\{\,\omega: X(\omega)\le x,\; Y(\omega)\le y\,\}\in\mathcal{A}.
+$$
+:::
+
+La seva **funció de distribució conjunta** és:
+
+$$
+F(x,y) = \mathbb{P}(X\le x,\;Y\le y).
+$$
+
+---
+
+ 1.2 Variables aleatòries bivariants discretes i contínues
+
+ 1.2.1 Cas discret
+
+Si $(X,Y)$ només pot prendre valors d’un conjunt finit o numerable $(x_i,y_j)$, definim la seva **funció de probabilitat conjunta**:
+
+$$
+p_{ij} = \mathbb{P}(X=x_i,\,Y=y_j).
+$$
+
+La probabilitat d’un conjunt $A$ qualsevol és:
+
+$$
+\mathbb{P}((X,Y)\in A) = \sum_{(x_i,y_j)\in A} p_{ij}.
+$$
+
+Els marginals són:
+
+$$
+\mathbb{P}(X=x_i)=\sum_j p_{ij},\qquad
+\mathbb{P}(Y=y_j)=\sum_i p_{ij}.
+$$
+
+---
+
+ 1.2.2 Cas continu
+
+Si $(X,Y)$ admet una **densitat conjunta** $f(x,y)$,  
+
+$$
+\mathbb{P}((X,Y)\in A)=\iint_A f(x,y)\,dx\,dy.
+$$
+
+Propietats bàsiques:
+
+- $f(x,y)\ge 0$  
+- $\displaystyle \iint_{\mathbb{R}^2} f(x,y)\,dx\,dy = 1$
+
+Els marginals són:
+
+$$
+f_X(x)=\int_{-\infty}^{\infty} f(x,y)\,dy,\qquad
+f_Y(y)=\int_{-\infty}^{\infty} f(x,y)\,dx.
+$$

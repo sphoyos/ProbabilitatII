@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Variables aleatòries multivariants | Probabilitat II</title>
+  <meta name="description" content="1 Variables aleatòries multivariants | Probabilitat II" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Variables aleatòries multivariants | Probabilitat II" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Variables aleatòries multivariants | Probabilitat II" />
+  
+  
+  
+
+<meta name="author" content="Santi Perez-Hoyos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="independència-de-variables-aleatories.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="Rcode/custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><div style=" padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
+<li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
+<li><h2 align=center>Probabilitat II</h2></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pla docent</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dades-generals"><i class="fa fa-check"></i>Dades generals</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#hores"><i class="fa fa-check"></i>Hores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#compet%C3%A8ncies-resultats-daprenentatge-que-es-desenvolupen"><i class="fa fa-check"></i>Competències / Resultats d’aprenentatge que es desenvolupen</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objectius-daprenentatge"><i class="fa fa-check"></i>Objectius d’aprenentatge</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#blocs-tem%C3%A0tics-i-continguts-detallats"><i class="fa fa-check"></i>Blocs Temàtics i Continguts Detallats</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#metodologia-i-activitats-formatives"><i class="fa fa-check"></i>Metodologia i activitats formatives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#avaluaci%C3%B3-acreditativa-dels-aprenentatges"><i class="fa fa-check"></i>Avaluació acreditativa dels aprenentatges</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariants</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
+<li class="chapter" data-level="1.1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
+<li class="chapter" data-level="1.1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
+<li class="chapter" data-level="1.1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
+<li class="chapter" data-level="1.2.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
+<li class="chapter" data-level="1.2.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleatories-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatories multivariants continues</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-discret"><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals. Cas discret</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a></li>
+<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html"><i class="fa fa-check"></i><b>2</b> Independència de variables aleatories</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries."><i class="fa fa-check"></i><b>2.1</b> Independència i dependència entre variables aleatòries.</a></li>
+<li class="chapter" data-level="2.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat."><i class="fa fa-check"></i><b>2.2</b> Conceptes de covariància, correlació i causalitat.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html"><i class="fa fa-check"></i><b>3</b> Algunes distribucions multivariants</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant-definici%C3%B3-propietats-i-aplicacions."><i class="fa fa-check"></i><b>3.1</b> Distribució normal multivariant: definició, propietats i aplicacions.</a></li>
+<li class="chapter" data-level="3.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariant-wishart-chi-quadrat-i-dirichlet."><i class="fa fa-check"></i><b>3.2</b> Distribucions especials: Multinomial, t-Student multivariant, Wishart, Chi-quadrat i Dirichlet.</a></li>
+<li class="chapter" data-level="3.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#generaci%C3%B3-de-mostres-de-distribucions-multivariants."><i class="fa fa-check"></i><b>3.3</b> Generació de mostres de distribucions multivariants.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html"><i class="fa fa-check"></i><b>4</b> Processos estocàstics: Introducció i conceptes bàsics</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a></li>
+<li class="chapter" data-level="4.2" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.2</b> Processos estocàstics discrets i continus.</a></li>
+<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Probabilitat II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="variables-aleatòries-multivariants" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Variables aleatòries multivariants<a href="variables-aleatòries-multivariants.html#variables-aleat%C3%B2ries-multivariants" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="definició-i-conceptes-bàsics-vectors-aleatoris-espais-de-probabilitat" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat<a href="variables-aleatòries-multivariants.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introducció" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Introducció<a href="variables-aleatòries-multivariants.html#introducci%C3%B3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A qualsevol que se li pregunti quin temps es triga en recórrer els 280 kiòmetres de distància entre Barcelona i Castelló, si es circula a una velocitat constant de 120km/h, ens indicaria que en 2 hores i 20 minuts arribaríem a la destinació. Ara be, si se li pregunta quin serà el resultat de llançar un dau no tindria una resposta clara.</p>
+<ul>
+<li>El primer resultat prové d’un fenomen o <strong>experiència determinista.</strong> Es prou en extreure de l’equació <span class="math inline">\(e=v·t\)</span> el valor del temps</li>
+<li>El segon pertany a la categoria dels fenòmens o <strong>experiències aleatòries.</strong> Es coneixen tots els resultats possibles, un número del 1 al 6 en el cas del dau, però no quin resultat es produirà, ja que de repetició en repetició sortiran resultats diferents.</li>
+</ul>
+</div>
+<div id="conceptes-bàsics-experiment-aleatori-mesura-de-probabilitat" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Conceptes bàsics: Experiment aleatori, mesura de probabilitat<a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definició 1.1  </strong></span>Un <strong>experiment</strong> és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables. Direm que l’experiment es <strong>aleatori</strong> si, executat sota les mateixes condicions, pot donar lloc a un resultat <span class="math inline">\(w\)</span> d’entre un conjunt de posibles resultats.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-2" class="definition"><strong>Definició 1.2  </strong></span>L’<strong>espai mostral</strong> d’un experiment, denotat per <span class="math inline">\(\Omega\)</span>, és el conjunt de tots els resultats possibles.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-3" class="definition"><strong>Definició 1.3  </strong></span>Un <strong>esdeveniment</strong> es una col·lecció de possibles resultats d’un experiment, es a dir un subconjunt de <span class="math inline">\(A \subseteq \Omega\)</span>. Quan el resultat de l’experiment pertany al esdeveniment (<span class="math inline">\(w \in A\)</span>), direm que a ocorregut l’esdeveniment.</p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-4" class="example"><strong>Exemple 1.1  </strong></span>Així si l’experiment és llançar un dau, l’espai mostral és</p>
+<p><span class="math display">\[\Omega = \{1,2,3,4,5,6\}\]</span> i un esdeveniment pot ser <span class="math inline">\(A=\text{Treure un número senar}\)</span> . Si al llançar el dau surt un 3, l’experiment A ha ocorregut.</p>
+</div>
+<hr />
+<div class="definition">
+<p><span id="def:unlabeled-div-5" class="definition"><strong>Definició 1.4  </strong></span>Una col·lecció <span class="math inline">\(\mathcal{A}\subseteq \mathcal{P}(\Omega)\)</span> és una <strong>σ-àlgebra</strong> si:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\Omega\in\mathcal{A}\)</span><br />
+</li>
+<li>Si <span class="math inline">\(A\in\mathcal{A}\)</span>, aleshores <span class="math inline">\(A^c\in\mathcal{A}\)</span><br />
+</li>
+<li>Si <span class="math inline">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>, aleshores <span class="math inline">\(\bigcup_{n}A_n\in\mathcal{A}\)</span></li>
+</ol>
+</div>
+<p>La <span class="math inline">\(\sigma~-àlgebra\)</span> representa “tot allò al que volem i podem assignar probabilitat”.</p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-6" class="example"><strong>Exemple 1.2  </strong></span>Si suposem un experiment és triar a l’atzar un número en l’interval [0,1], l’interès es centra en conèixer si l’elecció pertany a qualsevol dels subconjunts de [0,1]. La <span class="math inline">\(\sigma-àlgebra\)</span> <span class="math inline">\(\beta_{[0,1]}\)</span> de’esdeveniments generada a partir de tots els posibles subintervals de [0,1], és coneguda com <span class="math inline">\(\sigma-àlgebra\)</span> de Borel estrictament menor que <span class="math inline">\(\mathcal{P}(\Omega)\)</span>.</p>
+<p><strong>Posar exemples de sigma algebra de <span class="math inline">\(\mathbb{R}\)</span> i <span class="math inline">\(\mathbb{N}\)</span>,</strong></p>
+</div>
+<hr />
+<p>En resum, L’espai mostral ve acompanyat de la <span class="math inline">\(\sigma-álgebra\)</span> mes convenient a l’experiment. La combinació (<span class="math inline">\(\Omega,\mathcal{A}\)</span>) reb el nom d’<strong>espai mesurable</strong></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-7" class="definition"><strong>Definició 1.5  </strong></span><strong>Mesura de Probabilitat</strong></p>
+<p>Donat un espai mostral <span class="math inline">\(\Omega\)</span> i una <span class="math inline">\(\sigma-àlgebra\)</span> <span class="math inline">\(\mathcal{A}\)</span> definim la mesura de probabilitat com una aplicació.</p>
+<p><span class="math display">\[
+\begin{aligned}
+P : \mathcal{A} &amp;\rightarrow \mathbb{R} \\
+A &amp;\mapsto Pr(A)
+\end{aligned}
+\]</span></p>
+<p>on P cumpleix els axiomes de Kolmogorov</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(P(A) \ge 0\)</span>, per tot <span class="math inline">\(A \in \mathcal{A}\)</span>.</p></li>
+<li><p><span class="math inline">\(P(\Omega) = 1\)</span>.</p></li>
+<li><p><em>Axioma d’additivitat numerable:</em><br />
+Si <span class="math inline">\(A_1, A_2, \ldots, A_n\in \mathcal{A}\)</span> es una succeció d’esdeveniments disjunts dos a dos, llavors</p></li>
+</ol>
+<p><span class="math display">\[
+P\left(\bigcup_{i=1}^{n} A_i \right)
+=
+\sum_{i=1}^{n} P(A_i)
+\]</span></p>
+<p>Dels axiomes anteriors es segueixen totes les propietats de qualsevol mesura
+de probabilitat. En particular que la probabilitat de un esdeveniment ha de ser un número entre 0 i 1.</p>
+<p><span class="math display">\[
+0 \le P(A) \le 1 \quad \text{per a tot } A \in \mathcal{A}.
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-8" class="definition"><strong>Definició 1.6  </strong></span><strong>Espai de probabilitat</strong></p>
+<p>A la <em>terna <span class="math inline">\((\Omega,\mathcal{A},Pr)\)</span></em> l’anomenarem ESPAI DE PROBABILITAT.</p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-9" class="example"><strong>Exemple 1.3  </strong></span><strong>Espai de probabilitat discret uniforme</strong></p>
+<p>Suposem un espai mostral <span class="math inline">\(\Omega\)</span>, numerable i com a <span class="math inline">\(\sigma~àlgebra\)</span> la formada per tots els subconjunts de <span class="math inline">\(\Omega\)</span>. Definim un funció no negativa sobre tots els subconjunts de <span class="math inline">\(\Omega\)</span> on es verifica que <span class="math inline">\(\sum_{w\in \Omega}p(w)=1\)</span>. Si es defineix <span class="math inline">\(P(A)=\sum_{w\in A}p(w)\)</span>, es pot comprobar que P es una probabilitat.
+Un cas particular son els espais de probabilitat discrets uniformes. Si <span class="math inline">\(\Omega={w_1,w_2,....,w_n}\)</span> i <span class="math inline">\(p(w_i)=\frac{1}{n}, \forall w_i \in \Omega\)</span>.</p>
+<p>Si <span class="math inline">\(A={w_1,w_2,....,w_m}\)</span> tenim qué <span class="math inline">\(P(A)=\frac {m}{n}\)</span> (Fórmula de Laplace). Es diu uniforme per que la massa de probabilitat està repartida al ser constant en cada punt.</p>
+<p>Per exemple imaginem que llancem dos daus. L’espai mostral serà <span class="math inline">\(\Omega={(1,1),(1,2),(1,3),....(6,5),(6,6)}\)</span> format per les 36 parelles de resultats possibles. Si els daus no estan trucats, cada parella te la mateixa probabilitat 1/36. Si es considera A={amb dues cares son senars} el número de possibilitats son 9 i per tant la probabilitat de A es P(A)=9/36=1/4.</p>
+</div>
+<hr />
+<p>El resultat d’un experiment aleatori no es tant l’espai de probabilitat resultant, sino les caracterìstiques numèriques associades. Això implica passar de <span class="math inline">\(\Omega\)</span> a <span class="math inline">\(\mathbb{R}\)</span> o <span class="math inline">\(\mathbb{R}^k\)</span> on es més fàcil treballar. Com hem comentat en <span class="math inline">\(\mathbb{R}\)</span> podem parlar de la <span class="math inline">\(\sigma-álgebra\)</span> de Borel <span class="math inline">\(\beta\)</span> que és la menor que conté els intervals i que permet parlar del espai de probabilitat <span class="math inline">\((\mathbb{R},\beta)\)</span></p>
+</div>
+<div id="conceptes-bàsics-variable-aleatòria-funcions-de-distribució-i-probabilitat." class="section level3 hasAnchor" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.<a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unlabeled-div-10" class="definition"><strong>Definició 1.7  </strong></span><strong>Variable aleatòria</strong></p>
+<p>Si considerem dos espais probabilitzables <span class="math inline">\((\Omega, \mathcal{A})\)</span> i <span class="math inline">\((\mathbb{R},\beta)\)</span>, una <strong>variable aleatòria</strong> es una aplicació <span class="math inline">\(X:\Omega \rightarrow \mathbb{R}\)</span> que verifica que <span class="math inline">\(X^{-1}(B) \in \mathcal{A}\)</span> <span class="math inline">\(\forall B \in \beta\)</span></p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-11" class="example"><strong>Exemple 1.4  </strong></span>Quan llencem una moneda, habitualment identifiquem les dues cares amb els valors <span class="math inline">\(0\)</span> i <span class="math inline">\(1\)</span>. Aquesta identificació és, de fet, una variable aleatòria:</p>
+<p><span class="math display">\[
+X:\Omega \longrightarrow \mathbb{R}
+\]</span></p>
+<p><span class="math display">\[
+\begin{array}{ccc}
+\text{Cara} &amp; \longmapsto &amp; 0 \\[0.4cm]
+\text{Creu} &amp; \longmapsto &amp; 1
+\end{array}
+\]</span></p>
+<p>Si la moneda no esta trucada la probabilitat de que sorti cara o creu al llançar la moneda es 0.5 respectivament, Així al fer la transferència entre espais de probabilitat <span class="math inline">\(P(X=0)=0.5\)</span> es el mateix que <span class="math inline">\(P(X^{-1}(0)=P(cara)=0.5\)</span> i el mateix per X=1 <span class="math inline">\(P(X=1)=0.5=P(X^{-1}(1)=P(cara)\)</span>.</p>
+<p>Per expressar aquesta probabilitat podríem haver utilitzat un altra variable aleatòria que codificarà la cara com a 1 i la creu com a 2.</p>
+</div>
+<hr />
+<div class="definition">
+<p><span id="def:unlabeled-div-12" class="definition"><strong>Definició 1.8  </strong></span><strong>Distribució de probabilitat induida</strong>
+Quan es fa intervenir una variable aleatòria és per que s’està en la presència d’un espai de probabilitat. La variable aleatòria trasllada la informació d’aquesta probabilitat de <span class="math inline">\(\Omega\)</span> a <span class="math inline">\(\mathbb{R}\)</span> mitjançant la probabilitat induïda coneguda com Llei de probabilitat o distribució de probabilitat.</p>
+<p>Així, la variable aleatòria X indueix sobre <span class="math inline">\((\mathbb{R},\beta)\)</span> la probabilitat <span class="math inline">\(P_X\)</span> de la següent forma</p>
+<p><span class="math display">\[
+       P_X(A)= P(X^{-1}(A)) \quad \forall A \in \beta
+\]</span>
+<span class="math inline">\(P_X\)</span> hereta les característiques de P a través de X. Sí X canvia a distribució de probabilitat pot canviar . Veíem-lo en un exemple.</p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-13" class="example"><strong>Exemple 1.5  </strong></span>Si tornem a l’exemple de llençar dos daus podem definir dues variables aleatòries. <em>X</em> que sigui la suma dels resultats dels dos daus i <em>Y</em> que sigui la diferència dels resultats. Encara que les dues variables estàn definides en el mateix espai de probabilitat, <span class="math inline">\(P_X\)</span> y <span class="math inline">\(P_Y\)</span> son diferents per que estan induïdes per variables diferents.</p>
+<p>En cap cas la suma de les dues cares de un dau son 0, però ens 6 situacions les dues cares poden ser iguals. Si calculem amb els dues distribucions la probabilitat de que la variable aleatòria sigui 0, dona resultats diferents.</p>
+<p><span class="math inline">\(P_X(0)=P(X^{-1}(0))=P(\varnothing)=0\)</span></p>
+<p><span class="math inline">\(P_Y(0)=P(Y^{-1}(0))=P(\{1,1\},\{2,2\},\{3,3\},\{4,4\},\{5,5\},\{6,6\})=\frac{6}{36}=\frac{1}{6}\)</span></p>
+</div>
+<hr />
+<p>Les distribucions de probabilitat com la <span class="math inline">\(P_X\)</span>, encara que ens presenta la informació necessària per obtenir les probabilitats, son objectes matemàtics complexes d’utilitzar i es recorre a dos tipus de funcions associades, la Funció de distribució de probabilitat o la funció de probabilitat o densitat de probabilitat, depenen de la natura de la variable.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-14" class="definition"><strong>Definició 1.9  </strong></span><strong>Funció de distribució de probabilitat</strong></p>
+<p>A partir de la probabilitat induida podem definir sobre <span class="math inline">\(\mathbb{R}\)</span> la següent funció</p>
+<p><span class="math display">\[
+F_X(x)= P_X((-\infty,x])=P(X^{-1}\{(-\infty,x]\})=P/X\leq x) \quad \forall x \in \mathbb{R}
+\]</span></p>
+</div>
+<p>La funció de distribució te les següents propietats</p>
+<ol style="list-style-type: decimal">
+<li>És una funció no negativa per la propia definció</li>
+<li>És una funció monòtona ja que <span class="math inline">\(F_X(x_1) \leq F_X(x_2) \quad\)</span> si <span class="math inline">\(\quad x_1 \leq x_2\)</span></li>
+<li>És una funció continua per la dreta . Es a dir si es considera una succesió de números reals <span class="math inline">\(x_n \rightarrow x\)</span> llavors <span class="math inline">\(\lim_{n \rightarrow \infty}F_X(x_n)=F_X (x)\)</span></li>
+<li><span class="math inline">\(\lim_{x \rightarrow \infty} F_X(x)=1\)</span> y <span class="math inline">\(\lim_{x \rightarrow -\infty} F_X(x)=0\)</span></li>
+</ol>
+<p>Del punt 3 es dedueix que si <span class="math inline">\((- \infty,x] =\{ x \} \cup \lim_{n \rightarrow  \infty} (- \infty, x-\frac{1}{n} )\)</span> la funció de distribució en X es</p>
+<p><span class="math display">\[
+F_X(x)= P(X=X)+ \lim_{n \rightarrow \infty} F_X(x-\frac{1}{n})=P(X=x) +F(x^-)
+\]</span>
+y <span class="math inline">\(F_X(x)\)</span> es continua si P(X=x)=0</p>
+<p>Directament es pot calcular la probabilitat d’un interval obert per l’esquerra com</p>
+<p><span class="math display">\[
+P(a&lt; X \leq b)=F_X(b)- F_X(a)
+\]</span></p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-15" class="example"><strong>Exemple 1.6  </strong></span>Suposem que a un pacient se le indica que trie un nombre real entre 0 i 10 per indicar el seu nivell de dolor (Escala analógica Visual (EVA)) i que tots els valors tenen la mateixa probabilitat de ser triats.</p>
+<p>Definim la variable aleatòria X com el nivell de dolor i es vol obtenir la funció de distribució que reflexa la probabilitat de que el nombre escollit sigui menor o igual que 3.
+<span class="math display">\[
+F_X(x)=P_X(X \leq x)
+\]</span>
+Si tots els valors son equiprobables la probabilitat seria la longitud de casos favorables partit per 10.</p>
+<p>És a dir, si <span class="math inline">\(x \in [0,10]\)</span> <span class="math inline">\(F(x)=\frac {x}{10}\)</span></p>
+<p>La funció completa és</p>
+<p><span class="math display">\[
+F_X(x)=
+\begin{cases}
+0, &amp; \text{si } x &lt;0 \\
+\frac {x}{10}, &amp;  0 \leq x \leq 10, \\
+0, &amp; x&gt;10
+\end{cases}
+\]</span></p>
+</div>
+<hr />
+<div class="definition">
+<p><span id="def:unlabeled-div-16" class="definition"><strong>Definició 1.10  </strong></span><strong>Funció de probabilitat d’una variable aleatòria discreta</strong></p>
+<p>X és una variable aleatòria discreta si <span class="math inline">\(X(\Omega)\)</span> es finit o numerable, és a dir es pot definir un conjunt <span class="math inline">\(D_X=\{x_1,x_2,....,x_n \}\)</span> tal que <span class="math inline">\(P_X(D_X))P(X \in D_X)=1)\)</span> i per tant es pot deduir que <span class="math inline">\(P(X=x)=0 \quad, \forall x \in D^zc_X\)</span></p>
+<p>Així la funció de distribució de la variable aleatòria és:
+<span class="math display">\[
+F_x(x)=\sum_{x \leq x_i} P(X=x_i)
+\]</span>
+Que serà una funció continua en els intervals <span class="math inline">\([x_i,x_{i+j}[\)</span> si els valors <span class="math inline">\(x_i\)</span> estan endreçats de menor a major i que tindrà una discontinuïtat de salt finit en cada punt <span class="math inline">\(x_i\)</span> de Valor <span class="math inline">\(F_X(x_i)- F_X(x_{i-1})=P(X=x_i)\)</span></p>
+<p>Així a la variable X li podem associar la funció de probabilitat següent</p>
+<p><span class="math display">\[
+f_X(x)=
+\begin{cases}
+P(X=x), &amp; \text{si } x \in D_X \\
+0, &amp; \text{en la resta}
+\end{cases}
+\]</span></p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-17" class="example"><strong>Exemple 1.7  </strong></span>Alguns exemples de variables aleatòries discretes que venen definides per les seves funcions de probabilitat son les que tenen una distribució Poisson, Binomial, Hipergeomètrica ó binomial negativa. La seva definició es pot trobar en l’annex del tema.</p>
+</div>
+<hr />
+<div class="definition">
+<p><span id="def:unlabeled-div-18" class="definition"><strong>Definició 1.11  </strong></span><strong>Funció de densitat o probabilitat de una variable aleatòria continua</strong></p>
+<p>Una variable aleatòria X és continua si la seva funció de distribució F_X , es absolutament continua. A efectes pràctics disposem la funció de densitat f_X(x), coneguda de manera que</p>
+<p><span class="math display">\[
+F_X(x)= \int_{-\infty}^{b}  f(t) dt
+\]</span>
+Així la probabilitat de qualsevol interval ]a,b] ès</p>
+<p><span class="math display">\[
+P(X \in ]a,b]= P(a&lt;X \leq b) \int_{a}^{b}  f(x) dx
+\]</span></p>
+<p>La funció de densitat <span class="math inline">\(f_X(x)\)</span> es no negativa i <span class="math inline">\(P(X \in  \mathbb{R} =1 )\)</span></p>
+<p>Per altra banda per una propietat de la integral de Riemann , la funció de densitat es la derivada de la Funció de distribució <span class="math inline">\(f_X(x)=F&#39;_X(x)\)</span></p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-19" class="example"><strong>Exemple 1.8  </strong></span>Alguns exemples de variables aleatòries continues que venen definides per les seves funcions de densitat probabilitat son les que tenen una distribució uniforme, Normal, Exponencial, Gamma entre altres. La seva definició es pot trobar en l’annex del tema.</p>
+</div>
+<hr />
+</div>
+<div id="variable-aleatòria-k-dimensional-o-vector-aleatori" class="section level3 hasAnchor" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Variable aleatòria k-dimensional o vector aleatori<a href="variables-aleatòries-multivariants.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Molts experiments aleatoris produeixen més d’una única quantitat rellevant, és a dir, més d’una variable aleatòria. Veíem alguns exemples</p>
+<div class="example">
+<p><span id="exm:quali1" class="example"><strong>Exemple 1.9  </strong></span></p>
+<ul>
+<li>Imaginem una situació on primer es llança una moneda amb resultats cara i creu, i després es llança un dau amb 6 resultats. Així tenim una variable aletòria <span class="math inline">\(X_1\)</span> per a la moneda i una variable aleAtòria <span class="math inline">\(X_2\)</span> per al dau. El vector en <span class="math inline">\(\mathbb{R}^2\)</span> <span class="math inline">\((X_1,X_2)\)</span> serà una variable aletatòria bidimensional composat per dues variables aleatòries unidimensionals</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-20" class="example"><strong>Exemple 1.10  </strong></span></p>
+<ul>
+<li>En economia podem estar interessants en conèixer la distribució d’ ingressos d’una persona i per altra costat el % dels ingressos dedicats al pagament de la vivenda (lloger o hipoteca). Cada individu estarà representat per un vector composat per dues variables uniDImensionals</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-21" class="example"><strong>Exemple 1.11  </strong></span></p>
+<ul>
+<li>En salut podem estar interessats en el resultat d’un experiment on es mesuren diferents paràmetres biomètrics com pes, alçada, índex cintura-maluc, índex de massa corporal, índex cintura-alçada, perímetre braquial, perímetre abdominal, superfície corporal, etc. Es tracta d’un vector multimensional definit per k variables unidimensionals en <span class="math inline">\(\mathbb{R}^k\)</span>.</li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-22" class="definition"><strong>Definició 1.12  </strong></span><strong>Vector aleatori</strong></p>
+<p>Un vector aleatori <span class="math inline">\(\mathbf{X}=(X_1,X_2,.......,X_k)\)</span>, es una aplicació del espai mostral <span class="math inline">\(\Omega\)</span> en <span class="math inline">\(\mathbb{R}^k\)</span> tal que</p>
+<p><span class="math display">\[
+\mathbf{X}^{-1}(B) \in\mathcal{A}, \quad \forall B \in \beta^K
+\]</span>
+On <span class="math inline">\(\beta^K\)</span> es una <span class="math inline">\(sigma-àlgebra\)</span> de Borel en <span class="math inline">\(\mathbb{R}^k\)</span></p>
+</div>
+<p><span class="math inline">\(\mathbf{X}\)</span> indueix sobre <span class="math inline">\((\mathbb{R}^k,\beta^K)\)</span> una probabilitat <span class="math inline">\(P_X\)</span> de la següent manera</p>
+<p><span class="math display">\[
+P_X(B)=P(\mathbf{X}^{-1}(B)), \quad \forall B \in \beta^K
+\]</span>
+És senzill comprobar que <span class="math inline">\(P_X\)</span> verifica els tres axiomes de probabilitat, pel que <span class="math inline">\((\mathbb{R}^k,\beta^K, P_X)\)</span> permet indueix un espai de probabilitat amb les característiques de <span class="math inline">\((\Omega,\mathcal{A},P)\)</span> heretats mitjançant X.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-23" class="definition"><strong>Definició 1.13  </strong></span><strong>Variable aleatoria bidimensional o bivariant</strong></p>
+<p>Sigui <span class="math inline">\((\Omega, \mathcal{A},P)\)</span> un espai de probabilitat . Podem definir la variable aleatòria bivariant com</p>
+<p><span class="math display">\[
+\begin{aligned}
+(X,Y): \Omega &amp;\rightarrow \mathbb{R}^2 \\
+w &amp; \rightarrow (X,Y)(w) =(X(w),Y(w))
+\end{aligned}
+\]</span>
+on</p>
+<p><span class="math inline">\((X,Y)^{-1}(( -\infty, x]  \times (-\infty, y]))=\{w \in \Omega: X(w) \leq x \quad i \quad  Y(w) \leq y \} \in \mathcal{A} \quad \forall x \in \mathbb{R} \quad i \quad \forall y \in \mathbb{R}\)</span></p>
+</div>
+<p>Com passa en el cas univariant es prou que <span class="math inline">\((X,Y)^{-1}(( -\infty, x]  \times (-\infty, y])) \in \mathcal{A} \quad \forall (x.y)\in \mathbb{R}^2\)</span> per a garantir que <span class="math inline">\((X,Y)^{-1}(B) \in  \mathcal{A} \quad \forall B \in \beta (\mathbb{R}^2)\)</span></p>
+<p>Per tant, qualsevol variable aleatòria bivariant (X,Y) indueix una mesura de probabilitat en <span class="math inline">\(\mathbb{R}^2\)</span> que permet assignar probabilitats a qualsevol subconjunt Borelià B de <span class="math inline">\(\mathbb{R}^2\)</span>:</p>
+<p><span class="math display">\[
+P_{(X,Y)}(B)=P((X,Y)^{-1}(B))=P(\{w \in \Omega:(X(w),Y(w)) \in B\})
+\]</span>
+Aquesta mesura de probabilitat induïda s’anomena <em>distribució de probabilitat conjunta de (X,Y)</em></p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-24" class="example"><strong>Exemple 1.12  </strong></span>Tornem a l’exemple on llançàvem una moneda (X) i un dau (Y)</p>
+<p>L’espai mostral es <span class="math inline">\(\Omega=(\{cara,1\},\{creu,1\},\{cara,2\},.....,,\{creu,6\})\)</span>
+i la Variable aleatoria (X,Y) pren el valor X= 0 si és cara i X=1 si és creu en la primera component X i el número que ha sortit al dau en la segona component Y.</p>
+<p>Podem definir</p>
+<p><span class="math display">\[
+P_{XY}(x,y)=
+\begin{cases}
+1/2 \times 1/6=1/12, &amp; \text{si } \quad  x \in \{ 0,1\}  \quad i \quad y \in \{ 1,2,3,4,5,6\} \\
+0, &amp; \text{en la resta}
+\end{cases}
+\]</span></p>
+</div>
+<hr />
+<p>Es pot demostrar que <span class="math inline">\(P_{XY}\)</span> es una mesura de probabilitat ja que compleix els axiomes de Kolmogorov.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-25" class="definition"><strong>Definició 1.14  </strong></span><strong>Variable aleatoria k- dimensional o multivariant</strong></p>
+<p>Si enlloc de 2 variables aleatòries unidimensionals generalitzem a n variables aleatèries, estarem parlant de una Variable aleatòria n-dimensional o multivariant.</p>
+<p>Sigui <span class="math inline">\((\Omega, \mathcal{A},P)\)</span> un espai de probabilitat . Podem definir la variable aleatòria multivariant <span class="math inline">\(\overrightarrow{\bf{X}}=(X_1,X_2,...,X_{k-1},X_k)\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+(\overrightarrow{\bf{X}}): \Omega &amp;\rightarrow \mathbb{R}^k \\
+w &amp; \rightarrow (X_1,X_2,...,X_{k-1},X_k)(w) =(X_1(w),X_2(w),...,X_{k-1}(w),X_k(w))
+\end{aligned}
+\]</span></p>
+<p>on</p>
+<p><span class="math display">\[
+(\overrightarrow{\bf{X}})^{-1}(( -\infty, x_1] \times...  \times (-\infty, x_k]))=\{w \in \Omega: X_1(w) \leq x_1 \quad i \quad ... \quad i \quad  X_k(w) \leq x_k \} \in \mathcal{A} \quad \forall x_i \in \mathbb{R}
+\]</span></p>
+</div>
+<p>Per tant qualsevol variable aleatòria multivariant <span class="math inline">\((\overrightarrow{\bf{X}})\)</span> indueix una mesura de probabilitat en <span class="math inline">\(\mathbb{R}^k\)</span> que permet assignar probabilitats a qualsevol subconjunt Borelià B de <span class="math inline">\(\mathbb{R}^k\)</span>:</p>
+<p><span class="math display">\[
+P_{(\overrightarrow{\bf{X}})}(B)=P((\overrightarrow{\bf{X}})^{-1}(B))=P(\{w \in \Omega:(X_1(w),...,X_k(w)) \in B\})
+\]</span>
+El que hem de fer a partir d’ara es caracteritzar aquesta probabilitat conjunta a partir de les característiques de les variables aleatories unidimensionals que la composen. Ja que si <span class="math inline">\((\overrightarrow{\bf{X}})\)</span> es mesurable també o es cadascuna de les seves components i viceversa. Per simplificar la nomenclatura definirem <span class="math inline">\(P_X\)</span> a la probabilitat conjunta de la variable multidimensional <span class="math inline">\(\overrightarrow{\bf{X}}\)</span> i per facilitar la comprensió utilitzarem la dimensió 2 i el vector aleatori <span class="math inline">\(\overrightarrow{\bf{X}}=(X,Y)\)</span></p>
+</div>
+</div>
+<div id="funcions-de-densitat-i-de-distribució-conjuntes." class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Funcions de densitat i de distribució conjuntes.<a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="funció-de-distribució-conjunta" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Funció de distribució conjunta<a href="variables-aleatòries-multivariants.html#funci%C3%B3-de-distribuci%C3%B3-conjunta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En els apartats anteriors hem definit la probabilitat conjunta associada a una variable multidimensional. Com en el cas unidimensional, podem caracteritzar aquesta probabilitat conjunta a partir de funcions conjuntes de distribució o de densitat o de probabilitat segon siguin les variables.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-26" class="definition"><strong>Definició 1.15  </strong></span><strong>Funció de distribució conjunta</strong></p>
+<p>Definim la funció de distribució associada a <span class="math inline">\(P_X\)</span> a donat un punt de <span class="math inline">\(\mathbb{R}^k\)</span> <span class="math inline">\(\mathbf{x}=(x_1,...,x_k)\)</span> com</p>
+<p><span class="math display">\[
+F_X( \mathbf{x} )=F_X(x_1,...,x_k) =P_X(S_x)=P(X \in S_x)= P(\bigcap_{i=1}^{k} \{ X_i\leq x_i \})
+\]</span></p>
+</div>
+<p>En la figura <a href="variables-aleatòries-multivariants.html#fig:img-distbiv">1.1</a> es pot observar la diferència entre una distribució univariat que es una corba en dimensió 2 y o la funció de distribució conjunta bivariada <span class="math inline">\(F(x,y)= P(X \leq x, Y \leq y)\)</span> que es tracta de una superfície en dimensió 3.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-distbiv"></span>
+<img src="images/distbiv.png" alt="Distribució continua bivariada" width="80%" />
+<p class="caption">
+Figura 1.1: Distribució continua bivariada
+</p>
+</div>
+<p>De la definició de funció de distribució conjunta es deriven les següents propietats:</p>
+<ol>
+<li>
+<b> No negativitat </b>
+</li>
+<p>Com a conseqüència que la funció de distribució conjunta es una probabilitat, pren valors entre 0 y 1 i per tant sempre seran valors no negatius.</p>
+<li>
+<b> Monotonia de cada component </b>
+</li>
+<p>Si <span class="math inline">\(\mathbf{x} \leq\ \mathbf{y}\)</span> es a dir <span class="math inline">\(x_i \leq y_i, \quad i=1,....k,\quad  S_x \subset S_y \quad  y\quad F_X(x) \leq F_Y(y)\)</span></p>
+<li>
+<b> Continuïtat conjunta per la dreta </b>
+</li>
+<p>Si <span class="math inline">\(\mathbf{x}{(n)} \rightarrow \mathbf{x}\)</span> entonces <span class="math inline">\(F_X(\mathbf{x}^{(n)}) \rightarrow F_X(\mathbf{x})\)</span></p>
+<li>
+<b> Valores límit </b>
+</li>
+<p>Al tendir a <span class="math inline">\(\pm \infty\)</span> les components del vector aleatori s’obté</p>
+<p><span class="math display">\[
+\lim_{\forall x_i  \rightarrow + \infty} F_X(x_1,...,x_k)=1
+\]</span>
+ó</p>
+<span class="math display">\[
+\lim_{\exists x_i  \rightarrow - \infty} F_X(x_1,...,x_k)=0
+\]</span>
+</ol>
+<p>Aquestes propietats ja son conegudes per al cas unidimensional. Cal una cinquena propietat sense la que no es pot recórrer el camí invers d’obtenir <span class="math inline">\(P_X\)</span> a partir de <span class="math inline">\(F_X\)</span> i poder establir la desitjada equivalència entre tots dos conceptes que il·lustrarem en dimensió 2.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-27" class="proposition"><strong>Proposició 1.1  </strong></span><b> Regla del rectangle </b></p>
+<p>En aquesta regla calculem la probabilitat d’un rectangle a partir de les funcions de distribució conjunta en cada punt del rectangle que es pot veure en la figura <a href="variables-aleatòries-multivariants.html#fig:img-rectangle">1.2</a></p>
+<p><span class="math display">\[
+\left.
+\begin{array}{l}
+\forall (x,y)\in\mathbb{R}^2\\
+\forall h&gt;0\\
+\forall k&gt;0
+\end{array}
+\right\}
+\quad F_{X,Y}(x+h,y+k)-F_{X,Y}(x,y)-F_{X,Y}(x+h,y)-F_{X,Y}(x,y+k)=P_{X,Y}(A)=P_{X,Y}(]x,x+h] \times ]y,y+k])&gt;0
+\]</span></p>
+</div>
+<p><b></p>
+<div class="proof">
+<p><span id="unlabeled-div-28" class="proof"><em>Demostració</em>. </span></p>
+</b>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-rectangle"></span>
+<img src="images/rectangle.png" alt="Càlcul de la probabilitat d'un rectangle" width="60%" />
+<p class="caption">
+Figura 1.2: Càlcul de la probabilitat d’un rectangle
+</p>
+</div>
+<p><span class="math inline">\(S_{x+h, y+k}=S_{x, y} +A_1+A_2+A\)</span></p>
+<p>on cadascú del conjunts de la part dreta son disjunts i per tant</p>
+<p><span class="math inline">\(P_{X,Y}(S_{x+h, y+k})=P_{X,Y}(S_{x, y})+ P_{X,Y}(A_1)+P_{X,Y}+P(A_2)+P_{X,Y}(A)\)</span></p>
+<p>si substituim per la funció de distribució</p>
+<p><span class="math display">\[
+{\small
+\begin{array}{l}
+F_{X,Y}(x+h, y+k)=F_{X,Y}(x, y)+ P_{X,Y}(A_1)+P_{X,Y}+P(A_2)+P_{X,Y}(A)  \\
+A_1 = S_{x+h, y} -S_{x,y}  \\
+\text{i per tant } P_{X,Y}(A_1)=F_{X,Y} (x+h.y)- F_{X,Y}(x,y)  \\
+\text{donat que } S_{X,Y}(x,y) \subset S_{X,Y}(x+h,y)  \\
+A_2 = S_{x, y+k} -S_{x,y}  \\
+\text{i per tant } P_{X,Y}(A_2)=F_{X,Y} (x,y+k)- F_{X,Y}(x,y)  \\
+\text{donat que }S_{X,Y}(x,y) \subset S_{X,Y}(x,y+k)
+\end{array}
+}
+\]</span></p>
+<p>Així, si substituim</p>
+<p><span class="math display">\[
+{\small
+\begin{array}{l}
+P_{X,Y}(A) =F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)- P_{X,Y}(A_1)-P_{X,Y}(A_2)=  \\
+F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)-F_{X,Y}(x,y))-(F_{X,Y} (x,y+k)- F_{X,Y}(x,y))=\\
+F_{X,Y}(x+h, y+k)+F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)+F_{X,Y}(x,y))-(F_{X,Y}(x,y+k)- F_{X,Y}(x,y)) &gt;0
+\end{array}
+}
+\]</span></p>
+<p>Quedant demostrada la proposició</p>
+</div>
+</div>
+<div id="variables-aleatòries-multivariants-discretas" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Variables aleatòries multivariants discretas<a href="variables-aleatòries-multivariants.html#variables-aleat%C3%B2ries-multivariants-discretas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unlabeled-div-29" class="definition"><strong>Definició 1.16  </strong></span><strong>Funció de probabilitat conjunta.</strong></p>
+<p>Sigui el vector aleatori <span class="math inline">\(\overrightarrow{\bf{X}}=(X_1,X_2,...,X_{k-1},X_k)\)</span>, direm que es un vector aleatori discret si en el suport <span class="math inline">\(D_X=(D_{X_1},...,D_{X_1})\)</span> cadascuna de les seves components <span class="math inline">\(D_{X_i}\)</span> es una component numerable discreta. Aixi, es pot definir la funció de probabilitat conjunta associada i el seu valor per a cada punt de <span class="math inline">\(\mathbb{R}^k\)</span> ve donat per:</p>
+<p><span class="math display">\[
+f_X(x_1,...,x_k)=
+\begin{cases}
+P(X_i=x_i ), &amp; \text{si } x=(x_11,...,x_k) \in D_X \\
+0, &amp; \text{en la resta}
+\end{cases}
+\]</span></p>
+</div>
+<p>Com que es una probabilitat <span class="math inline">\(f_X(x) \geq 0, \forall x \in \mathbb{R}^k\)</span></p>
+<hr />
+<p>:::{.example taula-discreta}
+Si tornem a l’exemple del llençament de la moneda i el dau de l’exemple <a href="variables-aleatòries-multivariants.html#exm:quali1">1.9</a> podem definir la funció de probabilitat continua com el producte de la probabilitat d’obtenir el resultat al llençar la moneda ( 1/2) per la probabilitat de obtenir un resultat del dau, es a dir (1/6). Així <span class="math inline">\(P_XY(x_i,y_i)=1/2 \times 1/6= 1/12\)</span></p>
+<p>En la següent taula es mostra la funció de quantia o probabilitat. Per qualsevol valor no recolit en la taula <span class="math inline">\(f_XY(x,y=0)\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Y\X</strong></th>
+<th>Cara (0)</th>
+<th>Creu (1)</th>
+<th><strong><span class="math inline">\(f_Y(y)\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>5</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="even">
+<td><strong>6</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="odd">
+<td><strong><span class="math inline">\(f_X(x)\)</span></strong></td>
+<td><strong>1/2</strong></td>
+<td><strong>1/2</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="note">
+<p><em>Nota: en els marges de la taula es poden veure les funcions de probabilitat marginals que seran definidas en la propera secció.</em></p>
+</div>
+<hr />
+<div class="proposition">
+<p><span id="prp:unlabeled-div-30" class="proposition"><strong>Proposició 1.2  </strong></span><strong>Algunes propietats de la funció de o probabilitat</strong></p>
+<p>Sigui f(x,y) una funció de probabilitat de la variable bivariada (X,Y) tal que <span class="math inline">\((X,Y)(\Omega)=\{ (x_i,y_i) \quad i \in I \subset \mathbb{N} \quad  i \quad  j \in J \subset \mathbb{N} \}\)</span></p>
+<ol>
+<li>
+<span class="math inline">\(\sum_{(X,Y) \in \mathbb{R}^2} f(x,y)= \sum_{ i \in I, j \in J}f(x_i, y_j)=1\)</span>
+</li>
+<li>
+<span class="math inline">\(\forall B \in \mathcal{B}^2 \quad  P(B)=\sum_{(X,Y) \in B} f(x,y)=\sum_{(i,j) \ (xi;yj)\in B} f(x_i,y_j)\)</span>
+</li>
+<li>
+<span class="math inline">\(\forall (x_0,y_0) \in \mathcal{B}^2  \quad  F(x,y)= \sum_{ x \leq x_0, y \leq y_0} f(x,y)=\sum_{(i,j) \ (xi;yj) \leq (x_0,y_0)} f(x_i,y_j)\)</span>
+</li>
+</ol>
+</div>
+</div>
+<div id="variables-aleatories-multivariants-continues" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Variables aleatories multivariants continues<a href="variables-aleatòries-multivariants.html#variables-aleatories-multivariants-continues" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unlabeled-div-31" class="definition"><strong>Definició 1.17  </strong></span><strong>Funció de densitat conjunta de probabilitat d’una variable aleatoria multivariat absolutament continua</strong></p>
+<p>Sigui <span class="math inline">\(\overrightarrow{\bf{X}}=(X_1,X_2,...,X_{k-1},X_k)\)</span> un vector aleatori on <span class="math inline">\(X_i\)</span> es una variable aleatoria continua. Diguem que <strong>X</strong> és continu si i només si existeis una funció <span class="math inline">\(f_X:   \mathbb{R}^k \rightarrow[0,+\infty[\)</span> tal que</p>
+<p><span class="math inline">\(P(X \in (a,b])=P(a_i&lt;X_i&lt;b_i, i=1,...,k)= \int_{a_k}^{b_k}...\int_{a_1}^{b_1} f_X(x_1,...,x_k)dx_1,....,dx_k\)</span></p>
+</div>
+<p>Com passava en el cas unidimensional aquesta funció té algunes propietats que cal remarcar.</p>
+<ol>
+<li>
+f_X(x) es no negativa
+</li>
+<li>
+donat que <span class="math inline">\(P(X \in   \mathbb{R}^k)= 1\)</span> , llavors
+<span class="math inline">\(\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty} f_X(x_1,...,x_k)dx_1,....,dx_k=1\)</span>
+</li>
+</ol>
+<p>Com a conseqüència de la definició hi ha una relació entre la funció de distribució conjunta de probabilitat <span class="math inline">\(F_X\)</span> i la funció de densitat conjunta de probabilitat <span class="math inline">\(f_X\)</span>.</p>
+<p><span class="math inline">\(F_X(x_1,....,x_K)=P_X(S_X)=\int_{-\infty}^{x_k}...\int_{-\infty}^{x_1} f_X(t_1,...,t_k)dt_1...dt_k\)</span></p>
+<p>y si <span class="math inline">\(x \in \mathbb{R}^k\)</span> es un punt de continuitat de <span class="math inline">\(f_X\)</span>,</p>
+<p><span class="math inline">\(f(x_1,...,x_k)=\frac{\partial^k F_X(x_1,...,x_k)}{\partial x_1...\partial x_k}\)</span></p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-32" class="example"><strong>Exemple 1.13  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:img-densconjunta">1.3</a> es pot observar la representació de la funció de densitat <span class="math inline">\(f_{XY}(x,y)\)</span> d’una variable aleatòria continua bivariada. La superfície de la gràfica es el valor de la funció y la probabilitat ve determinada pel volum. Aquest volum ve calculat pel que s’anomena integral doble que te algunes especificitats que mostrarem en el següent apartat.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-densconjunta"></span>
+<img src="images/densconjunta.png" alt="Funció de densitat conjunta bivariada" width="80%" />
+<p class="caption">
+Figura 1.3: Funció de densitat conjunta bivariada
+</p>
+</div>
+</div>
+<hr />
+<!-- Calculadora de Integral Doble 
+<a href="https://MiniWebtool.com/es/calculadora-de-integral-doble/">
+MiniWebtool Calculadora de Integral Doble</a> -->
+<div id="integral-doble" class="section level4 hasAnchor" number="1.2.3.1">
+<h4><span class="header-section-number">1.2.3.1</span> Integral doble<a href="variables-aleatòries-multivariants.html#integral-doble" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Aquest apartat es pot considerar com un apèndix del contingut del temari. Introduirem els conceptes d’integral doble, o més general d’integral de Lebesgue i com s’interpreta i com es calcula, ja que és necessari per obtenir la probabilitat en el cas de vectors aleatoris continus.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-33" class="definition"><strong>Definició 1.18  </strong></span>Sigui una funció <span class="math inline">\(f:   \mathbb{R}^2 \rightarrow\mathbb{R}\)</span> una funció no negativa i D un subconjunt de <span class="math inline">\(\mathbb{R}^2\)</span>. El volum sota el gràfic de la superfície que genera funció f restringida a aquest conjunt D( veure Figura <a href="variables-aleatòries-multivariants.html#fig:img-doubleintegral1">1.4</a> ) es pot obtenir calculant</p>
+<p><span class="math display">\[
+\int \int_D f(x,y) dx dy=\int \int_D f(x,y) dy dx
+\]</span></p>
+<p>que s’anomena Integral doble de <span class="math inline">\(f\)</span> sobre <span class="math inline">\(D\)</span>. El càlcul de les integrals dobles es un càlcul iteractiu on es fan dues integrals simples, una darrera de l’altra . En la primera s’integra per una de les dues variables mantenint com constants els valors de la segona variable i després es fa una segona integració per la segona integració mantenint com a constant la primera variable. L’ordre de les variables es intercanviable obtenint els mateixos resultats.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-doubleintegral1"></span>
+<img src="images/doubleintegral1.png" alt="Double integral" width="80%" />
+<p class="caption">
+Figura 1.4: Double integral
+</p>
+</div>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:densitat1" class="example"><strong>Exemple 1.14  </strong></span>Calculem el volum que la funció f(x,y)=x+y deixa sota el rectangle sobre el rectangle [1,2] x[3,4] , es a dir <span class="math inline">\(1 \leq x \leq 2\)</span> i <span class="math inline">\(3 \leq y \leq 4\)</span>.</p>
+<p><span class="math inline">\(V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy\)</span></p>
+<p>Si integren primer en funció de y la integral interior és, tenint en compte que x es constant :</p>
+<p><span class="math inline">\(V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx\)</span></p>
+<p><span class="math inline">\(\int (x+y)dy= xy+\frac{y^2}{2}\)</span></p>
+<p>que avaluat en y=3 i y=4 dona</p>
+<p><span class="math inline">\((4x+\frac{16}{2}) - (3x+\frac{9}{2})=4x+-3x-9/2=x+7/2\)</span></p>
+<p>Ara integrem respecte a x</p>
+<p><span class="math inline">\(\int (x+\frac{7}{2})dx=\frac {x^2}{2}+\frac{7}{2}x\)</span></p>
+<p>que avaluat en x=1 i x=2 dona</p>
+<p><span class="math inline">\(V=(\frac {2^2}{2}+\frac {7}{2}2)-(\frac {1^2}{2}+\frac {7}{2}1)=(2+7)-(\frac {1}{2}+\frac {7}{2})=9-4=5\)</span></p>
+<p>Si canviem l’ordre d’integració i integrem primer en funció de x i despres en funció de y</p>
+<p><span class="math inline">\(V=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy\)</span></p>
+<p><span class="math inline">\(\int (x+y)dy= \frac{x^2}{2}+xy\)</span></p>
+<p>que avaluat en x=1 y i x=2 dona</p>
+<p><span class="math inline">\(\frac{2^2}{2}+2y -\frac{1}{2}+y=2+2y-\frac{1}{2}-y=\frac{3}{2}+y\)</span></p>
+<p>Ara integrem respecte a y</p>
+<p><span class="math inline">\(\int (\frac{3}{2}+y) dy= \frac {y^2}{2} +\frac {3}{2}y\)</span></p>
+<p>que avaluat en y=3 i y=4 dona</p>
+<p><span class="math inline">\(V=(\frac {4^2}{2} +\frac {3}{2}4)-(\frac {3^2}{2} +\frac {3}{2}3)=(8+4)-(\frac {9}{2} +\frac {9}{2})=14-9=5\)</span></p>
+<p>En conclusió de les dues maneres el valor del volumen sota la funció es de 5.</p>
+<p><span class="math display">\[
+V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy=5
+\]</span></p>
+</div>
+<hr />
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-34" class="example"><strong>Exemple 1.15  </strong></span>Considerem un cas on el recinte d’integració no és un rectangle i utilitzem la funció de l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.14</a> f(x,y)=x+y</p>
+<p>Sigui el triangle <span class="math inline">\(A=\{ (x,y) \in  \mathbb{R}^2: 2 \leq x \leq 4, 2 \leq y \leq x \}\)</span> que és mostra en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle">1.5</a></p>
+<div class="figure"><span style="display:block;" id="fig:graf-triangle"></span>
+<img src="images/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<p class="caption">
+Figura 1.5: Dues maneres d’obtenir la densitat conjunta d’un triangle
+</p>
+</div>
+<p>La integral doble en el recinte de la funció es pot calcular de dues maneres començant primer per <span class="math inline">\(x\)</span> o per <span class="math inline">\(y\)</span></p>
+<p><span class="math display">\[
+\int \int_A x+y \quad dydx= \int_2^4 \int_2^x x+y  \quad dydx= \int_2^4 \left( \int_2^x x+y  \quad dy \right ) dx
+\]</span>
+Cal observar que la integral interna té el límit superior en funció de <span class="math inline">\(x\)</span> on juga un paper de constant. si resolem primer la integral interna en funció de <span class="math inline">\(y\)</span> obtenim</p>
+<p><span class="math display">\[
+\int_2^4 \left( \int_2^x x+y  \quad dy \right ) dx =  \int_2^4 \left[ (xy+\frac{y^2}{2})  \right ]_2^x dx=
+\int_2^4  [(xx+\frac{x^2}{2})-(2x+\frac{2^2}{2})] dx =  \int_2^4  (\frac{3x^2}{2}-2x-2)dx
+\]</span></p>
+<p>Si ara resolem la segona integral em funció de <span class="math inline">\(x\)</span></p>
+<p><span class="math display">\[
+\int_2^4  (\frac{3x^2}{2}-2x-2)dx = \left[ \frac{3}{2} \frac {x^3}{3}-x^2-2x    \right]_2^4 =(\frac {4^3}{2}-4^2-2(4))-(\frac {2^3}{2}-2^2-2(2))=8-(-4)=12
+\]</span></p>
+<p>obtenim que el valor de la integral en el triangle es 12. En aquest cas hem fixat <span class="math inline">\(x\)</span> i hem trobat el rang de variació de <span class="math inline">\(y\)</span> dins del recinte d’integració A en funció de <span class="math inline">\(x\)</span> com es pot veure en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle">1.5</a> esquerra.</p>
+<p>Si integrem primer en funció de <span class="math inline">\(x\)</span> i després de <span class="math inline">\(y\)</span> hem de fixar <span class="math inline">\(y\)</span> i despeés trovar la variació de y en funció de <span class="math inline">\(x\)</span> es a dir
+<span class="math inline">\(A=\{ (x,y) \in  \mathbb{R}^2: 2 \leq y \leq 4, y \leq x \leq 4 \}\)</span></p>
+<p><span class="math display">\[
+\int_2^4 \left( \int_y^4 x+y  \quad dx \right ) dy =  \int_2^4 \left[ (\frac{x^2}{2}+xy)  \right ]_y^4 dy=
+\int_2^4  [(\frac {4^2}{2}+ 4y)-(\frac {y^2}{2}+ y(y))] dy =  \int_2^4  (8+4y-\frac{3y^2}{2})dy
+\]</span></p>
+<p>Si ara resolem en funció de <span class="math inline">\(y\)</span></p>
+<p><span class="math display">\[
+  \int_2^4  (8+4y-\frac{3y^2}{2})dy = \left [ 8y + 4 \frac{y^2}{2} -\frac {3}{2} \frac {y^3}{3} \right ]_2^4= \left [ 8y + 2y^2-  \frac {y^3}{2}  \right]_2^4 = 8(4)+2(4)^2- \frac {4^3}{2} - (8(2)+2(2)^2- \frac {2^3}{2})=32-20=12
+\]</span>
+Començant primer per fixar la <span class="math inline">\(y\)</span> , hem de avaluar el rang de variació de <span class="math inline">\(x\)</span> i obtenim el mateix resultat al efectuar l’integració( Figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle">1.5</a> dreta) Per lo que done igual per on començar a l’hora de fer l’integral doble. S’obtenen els mateixos resultats.</p>
+</div>
+<hr />
+<p>En la Figura <a href="variables-aleatòries-multivariants.html#fig:img-doubleintegral2">1.6</a> es pot veure el que significa el càlcul de la probabilitat, Es pot generar una quadrícula amb costats <span class="math inline">\([x,x+dx] \times [y,y+dy]\)</span> en l’àrea de suport. El volum del prisma sobre aquest rectangle es la seva àrea per l’alçada de la funció de densitat en el limit. .</p>
+<p>Aixi<br />
+<span class="math display">\[
+\int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dy
+\]</span>
+donat que per la continuïtat de la función <span class="math inline">\(f\)</span>, aquesta es pràcticament constant al llarg de la superfície.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-doubleintegral2"></span>
+<img src="images/doubleintegral2.png" alt="Double integral" width="80%" />
+<p class="caption">
+Figura 1.6: Double integral
+</p>
+</div>
+<p>Com a consegüència a partir de la notació diferencial</p>
+<p><span class="math display">\[
+P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \}=P \{(X,Y) \in (x,x+dx] \times (y,y+dy]= \\
+\int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dty
+\]</span>
+Aleshores, es pot deduir que la unitat de mesura de la densitat de probabilitat és la probabilitat per unitat d’àrea.</p>
+<p><span class="math display">\[
+f(x,y) \approx \frac {P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \}} {dxdy}
+\]</span></p>
+<p>Així, qualsevol punt o successió infinita de punts té probabilitat 0, perquè al tenir àrea cero no es pot obtenir damunt un volum positiu.</p>
+<p>Per altra banda qualsevol corba unidimensional té probabilitat 0. En particular la probabilitat d’una recta <span class="math inline">\(P \{ Y=a+bX \}=0\)</span> o una cercle <span class="math inline">\(P \{ X^2+Y^2=r^2 \} =0\)</span> es 0.</p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-35" class="example"><strong>Exemple 1.16  </strong></span>Per a que la funció que hem calculat la integral doble en l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.14</a> hem de garantir que la integral en tot <span class="math inline">\(\mathbb{R}^2\)</span> sigui 1.</p>
+<p>Per aixó definim la funció de densitat en funció d’una constant que hem de calcular
+<span class="math display">\[
+f(x,y)=
+\begin{cases}
+k(x+y) &amp; \text{ si } x \in [1,2], y \in [3,4]  \\
+0, &amp;  \text {en altre cas}
+\end{cases}
+\]</span></p>
+<p>Aquesta funció també es pot escriure com</p>
+<p><span class="math display">\[
+f(x,y)= k(x+y) I_{[1,2] \times  I_[3,4]}(x,y) =  k(x+y) I_{[1,2]} (x) I_{[3,4]}(y)
+\]</span>
+On utilitzem la funció indicadora d’un conjunt que
+Sigui
+<span class="math display">\[
+\forall A \subseteq \Omega \text{ per a } \omega \in \Omega, \quad  I_A(\omega)= \begin{cases} 1 &amp; \text{ si } \omega \in A  \\ 0, &amp;\text { si } \omega \notin A  \end{cases}
+\]</span>
+donat que la funció <span class="math inline">\(f(x,y) \leq 0\)</span> per a tot <span class="math inline">\((x,y) \in \mathbb{R}^2\)</span> será de densitat si i només si</p>
+<p><span class="math display">\[
+1= \int_{\mathbb{R}}\int_{\mathbb{R}} f(x,y)dydx=\int_{\mathbb{R}}\int_{\mathbb{R}} k(x+y)I_{[1,2]} (x) I_{[3,4]}(y)dydx= k \int_{1}^{2}\int_{3}^{4} (x+y)dydx=k5
+\]</span>
+El valor de k és per tant 1/5 per a que f(x,y) sigui una funció de densitat.</p>
+<p>En la figura <a href="variables-aleatòries-multivariants.html#fig:density2">1.7</a> es mostra la funció de densitat que val (x+y)/5 per als punts (x,y) en el rectangle A definit i 0 en la resta.</p>
+<div class="figure"><span style="display:block;" id="fig:density2"></span>
+<img src="images/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
+<p class="caption">
+Figura 1.7: Funció de densitat f(x,y)
+</p>
+</div>
+</div>
+<hr />
+</div>
+</div>
+</div>
+<div id="funcions-de-densitat-i-de-distribució-marginals-i-condicionades." class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Funcions de densitat i de distribució marginals i condicionades.<a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Les distribucions marginals son les distribucions unidimensionals que ens informa de la distribució dels valors d’una variable prescindint dels valors de les altres.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-36" class="definition"><strong>Definició 1.19  </strong></span><strong>Funció de distribució marginal</strong></p>
+<p>Si <span class="math inline">\(X=(X_1,...., X_k)\)</span> es un vector aleatori amb funció de distribució <span class="math inline">\(F_X\)</span> la funció de distribució marginal es defineix com la funció de distribució de probabilitat de cadascuna de les components del vector aleatori.</p>
+<p>Cal tenir en compte que per una component</p>
+<p><span class="math display">\[
+\lim_{x_j \xrightarrow{j \neq i} +\infty} \bigcap_{j=1}^k \{X_j \leq x_j\}=\{X_i \leq x_i\}
+\]</span></p>
+<p><span class="math display">\[
+\forall i=1,...,k \quad F_{X_i}
+(x_i)=\lim_{x_j \xrightarrow{j \neq i} +\infty} F_X(x_1,...x_k)= F_X(+\infty,...,+\infty,x_i,+\infty,....+\infty) \quad \forall x_i \in \mathbb{R}
+\]</span></p>
+<p>El concepte de marginalitat pot aplicar-se a qualsevol subvector del vector original . Així per al subector <span class="math inline">\(X^l=(X_{i_1},...,X_{i_l})\)</span> on <span class="math inline">\(l \leq k\)</span> podem parlar de la distribució conjunta marginal de <span class="math inline">\(X^l\)</span> a la expressió on es fixan les components del subvector i es fan tendir a l’infinit a la resta</p>
+<p><span class="math display">\[
+F_{X^l}(X_{i_1},...,X_{i_l})=\lim_{x_j \xrightarrow {j \neq i_1,...,i_l} +\infty} F_X(x_1,...x_k)
+\]</span></p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-37" class="example"><strong>Exemple 1.17  </strong></span>Generem un triangle T amb vèrtexs en les coordenades (0,0), (1,0) y (0,2), como es veu en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle2">1.8</a>. Repartim la masa de probabilitat uniformment en el triangle donat que l’elegim a l’atzar un punt del triangle. Per a un àrea qualsevol la probabilitat de aquella àrea es</p>
+<p><span class="math display">\[
+P((X,Y) \in A)= \frac {\parallel A \cap T\parallel}{\parallel T\parallel}
+\]</span></p>
+<p>on <span class="math inline">\(\parallel A \parallel\)</span> és l’àreade B.</p>
+<div class="figure"><span style="display:block;" id="fig:graf-triangle2"></span>
+<img src="images/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<p class="caption">
+Figura 1.8: Dues maneres d’obtenir la densitat conjunta d’un triangle
+</p>
+</div>
+<p>Així, la funció de distribució conjunta donat que l’àrea del triangle és 1</p>
+<p><span class="math display">\[
+F_{X,Y}(x,y)=P((x,y) \in S_{xy}={\parallel S_{xy} \cap T \parallel}
+\]</span>
+on <span class="math inline">\(S_{xy}= (-\infty,x] \times (-\infty,y]\)</span>.</p>
+<p>Así podem obtenir la funció conjunta simplement aplicant una mica de geometria segons l’ubicació del punt (x,y) en el pla y aplicant la definició de la funció de distribució conjunta con la intersecció amb el triangle y que l’equació de la hipotenusa es 2x+y=2</p>
+<p><span class="math display">\[
+F_{XY}(x,y)=
+\begin{cases}
+0,              &amp; \text{si } x &lt;0 \quad ó \quad   y&lt;0 \\
+xy ,            &amp; \text{si } (x,y) \in T  \text{ (tipo 1)} \\
+xy-(x+y/2-1)^2, &amp; \text{si } (x,y) \notin T \quad \&amp; \quad 0&lt; x \leq 1,0&lt;y \leq 2 \text{ (tipo 2)} \\
+2x-x^2          &amp; \text{si } (x,y)  \notin T \quad \&amp; \quad 0&lt; x \leq 1, 2&lt;y \text{ (tipo 3)} \\
+y-y^2/4 ,       &amp; \text{si } (x,y)  \notin T \quad \&amp; \quad 1&lt; x1,0&lt;y \leq 2 \text{ (tipo 4)} \\
+1 ,             &amp; \text{si } x \geq 1 \quad ó \quad   y \geq 2 \\  
+\end{cases}
+\]</span></p>
+<p>Cal observar que les expressions de F_{XY}(x,y) depenen només de <span class="math inline">\(x\)</span> i de <span class="math inline">\(y\)</span>. Si recordem com calculem les marginals tenim que</p>
+<p><span class="math inline">\(F_{X}(x)= F_X(x,y)\)</span></p>
+<ul>
+<li><p>Si <span class="math inline">\(x\leq 0\)</span> per qualesvol y <span class="math inline">\(F_x(x,y)=0\)</span> i per tant el limit quan <span class="math inline">\(\lim_{y \rightarrow +\infty}\)</span> es 0 - Si <span class="math inline">\(O&lt;x&lt;1\)</span> al fer que y <span class="math inline">\(y \rightarrow+\infty\)</span> el punt es situa en la zona tipo 3 y per tant la funció val <span class="math inline">\(2x-x^2\)</span></p></li>
+<li><p>Si <span class="math inline">\(z /geq 1\)</span> al fer que y <span class="math inline">\(y \rightarrow+\infty\)</span> l punt es situa sobre el triangle y la probabilitat aculuada es 1</p></li>
+</ul>
+<p><span class="math display">\[
+F_{X}(x)=
+\begin{cases}
+0,              &amp; \text{si } x \leq 0  \\
+2x-x^2,         &amp; \text{si }  0&lt; x &lt; 1 \\
+1,              &amp; \text{si }  0 \geq 1 \\
+\end{cases}
+\]</span></p>
+<p>Analogament podem obtenir la funció de distribució de <span class="math inline">\(Y\)</span> on la diferència es que entre 0 i 2 quan <span class="math inline">\(x \rightarrow+\infty\)</span> estarem en punts tipus 4 y la funció valdrà <span class="math inline">\(y-\frac {y^2}{4}\)</span></p>
+<p><span class="math display">\[
+F_{Y}(y)=
+\begin{cases}
+0,              &amp; \text{si } y \leq 0  \\
+y-\frac {y^2}{4},         &amp; \text{si }  0&lt; y &lt; 2 \\
+1,              &amp; \text{si }  0 \geq 2 \\
+\end{cases}
+\]</span></p>
+</div>
+<hr />
+<div id="distribucions-marginals.-cas-discret" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Distribucions marginals. Cas discret<a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-discret" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sigui <span class="math inline">\(D_{X_i}\)</span> el soport numerable de la component <span class="math inline">\(X_i\)</span> d’un vector aleatori <span class="math inline">\(X\)</span> discret, es verifica que</p>
+<p><span class="math display">\[
+  \{ X_i=x_i  \}= \bigcup_{x_j \in D_j, j \neq  i } \left(\bigcap_{j=1}^k \{ X_j=x_j \}\right)
+\]</span>
+com que els elements son disjunts podem obtenir la funció de probabilitat marginal com</p>
+<p><span class="math display">\[
+f_{X_i}(x_i)= \sum_{x_j \in D_j, j \neq i} f_X(x_1,...,x_k)
+\]</span>
+—</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.18  </strong></span>Si revisem la taula del exemple <a href="#exm:quali1taula-discreta"><strong>??</strong></a></p>
+</div>
+<hr />
+</div>
+</div>
+<div id="moments-multivariants-vector-desperances-matriu-de-variància-covariància" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Moments multivariants: vector d’esperances, matriu de variància-covariància<a href="variables-aleatòries-multivariants.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Text aquí.</p>
+</div>
+<div id="transformacions-de-variables-multivariants" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Transformacions de variables multivariants<a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Text aquí.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="independència-de-variables-aleatories.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": "fixed"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

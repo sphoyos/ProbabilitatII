@@ -1,0 +1,18 @@
+
+# Processos estocàstics: Introducció i conceptes bàsics
+
+## Definició de procés estocàstic.
+
+
+Text aquí.
+
+
+ 
+## Processos estocàstics discrets i continus.
+
+Text aquí.
+ 
+## Processos estocàstics estacionaris i no estacionaris.
+ 
+
+Text aquí.

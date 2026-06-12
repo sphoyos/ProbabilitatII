@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Independència de variables aleatories | Probabilitat II</title>
+  <meta name="description" content="2 Independència de variables aleatories | Probabilitat II" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Independència de variables aleatories | Probabilitat II" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Independència de variables aleatories | Probabilitat II" />
+  
+  
+  
+
+<meta name="author" content="Santi Perez-Hoyos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="variables-aleatòries-multivariants.html"/>
+<link rel="next" href="algunes-distribucions-multivariants.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="Rcode/custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><div style=" padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
+<li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
+<li><h2 align=center>Probabilitat II</h2></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pla docent</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dades-generals"><i class="fa fa-check"></i>Dades generals</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#hores"><i class="fa fa-check"></i>Hores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#compet%C3%A8ncies-resultats-daprenentatge-que-es-desenvolupen"><i class="fa fa-check"></i>Competències / Resultats d’aprenentatge que es desenvolupen</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objectius-daprenentatge"><i class="fa fa-check"></i>Objectius d’aprenentatge</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#blocs-tem%C3%A0tics-i-continguts-detallats"><i class="fa fa-check"></i>Blocs Temàtics i Continguts Detallats</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#metodologia-i-activitats-formatives"><i class="fa fa-check"></i>Metodologia i activitats formatives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#avaluaci%C3%B3-acreditativa-dels-aprenentatges"><i class="fa fa-check"></i>Avaluació acreditativa dels aprenentatges</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariants</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
+<li class="chapter" data-level="1.1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
+<li class="chapter" data-level="1.1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
+<li class="chapter" data-level="1.1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
+<li class="chapter" data-level="1.2.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
+<li class="chapter" data-level="1.2.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleatories-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatories multivariants continues</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-discret"><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals. Cas discret</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a></li>
+<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html"><i class="fa fa-check"></i><b>2</b> Independència de variables aleatories</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries."><i class="fa fa-check"></i><b>2.1</b> Independència i dependència entre variables aleatòries.</a></li>
+<li class="chapter" data-level="2.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat."><i class="fa fa-check"></i><b>2.2</b> Conceptes de covariància, correlació i causalitat.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html"><i class="fa fa-check"></i><b>3</b> Algunes distribucions multivariants</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant-definici%C3%B3-propietats-i-aplicacions."><i class="fa fa-check"></i><b>3.1</b> Distribució normal multivariant: definició, propietats i aplicacions.</a></li>
+<li class="chapter" data-level="3.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariant-wishart-chi-quadrat-i-dirichlet."><i class="fa fa-check"></i><b>3.2</b> Distribucions especials: Multinomial, t-Student multivariant, Wishart, Chi-quadrat i Dirichlet.</a></li>
+<li class="chapter" data-level="3.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#generaci%C3%B3-de-mostres-de-distribucions-multivariants."><i class="fa fa-check"></i><b>3.3</b> Generació de mostres de distribucions multivariants.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html"><i class="fa fa-check"></i><b>4</b> Processos estocàstics: Introducció i conceptes bàsics</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a></li>
+<li class="chapter" data-level="4.2" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.2</b> Processos estocàstics discrets i continus.</a></li>
+<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Probabilitat II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="independència-de-variables-aleatories" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Independència de variables aleatories<a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-de-variables-aleatories" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="independència-i-dependència-entre-variables-aleatòries." class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Independència i dependència entre variables aleatòries.<a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Text aquí</p>
+</div>
+<div id="conceptes-de-covariància-correlació-i-causalitat." class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Conceptes de covariància, correlació i causalitat.<a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Text aquí
+## Esperances i variàncies condicionades.
+Text aquí</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-39" class="definition"><strong>Definició 2.1  </strong></span><strong>Definició 1.1 (Experiment).</strong><br />
+Un <strong>experiment</strong> és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables.</p>
+<ul>
+<li>L’experiment és <strong>determinista</strong> si sempre produeix el mateix resultat.</li>
+<li>És <strong>aleatori</strong> si pot donar lloc a diversos resultats no predictibles amb certesa.</li>
+</ul>
+</div>
+<p><strong>Exemple 1.1.</strong><br />
+Llençar una moneda fins que aparegui <em>cara</em> per primera vegada i comptar el nombre total de llançaments.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-40" class="definition"><strong>Definició 2.2  </strong></span><strong>Definició 1.2 (Espai mostral).</strong><br />
+L’<strong>espai mostral</strong> d’un experiment, denotat per <span class="math inline">\(\Omega\)</span>, és el conjunt de tots els resultats possibles.</p>
+</div>
+<p>Per a l’exemple:</p>
+<p><span class="math display">\[
+\Omega = \{1,2,3,\ldots\}.
+\]</span></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-41" class="definition"><strong>Definició 2.3  </strong></span><strong>Definició 1.3 (Esdeveniment).</strong><br />
+Un <strong>esdeveniment</strong> és qualsevol subconjunt <span class="math inline">\(A \subseteq \Omega\)</span>.<br />
+Diem que <em>A ocorre</em> si el resultat observat pertany a A.</p>
+</div>
+<p>Exemple: “el nombre de llançaments és senar” és<br />
+<span class="math display">\[A = \{1,3,5,\ldots\}.\]</span></p>
+<hr />
+<p>1.0.2 σ-àlgebres i mesura de probabilitat</p>
+<p>Per tal de definir probabilitat de manera rigorosa, necessitem una col·lecció d’esdeveniments “ben comportada”.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-42" class="definition"><strong>Definició 2.4  </strong></span><strong>Definició 1.4 (σ-àlgebra).</strong><br />
+Una col·lecció <span class="math inline">\(\mathcal{A}\subseteq \mathcal{P}(\Omega)\)</span> és una <strong>σ-àlgebra</strong> si:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\Omega\in\mathcal{A}\)</span><br />
+</li>
+<li>Si <span class="math inline">\(A\in\mathcal{A}\)</span>, aleshores <span class="math inline">\(A^c\in\mathcal{A}\)</span><br />
+</li>
+<li>Si <span class="math inline">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>, aleshores <span class="math inline">\(\bigcup_{n}A_n\in\mathcal{A}\)</span></li>
+</ol>
+</div>
+<p>La σ-àlgebra representa “tot allò al que volem i podem assignar probabilitat”.</p>
+<hr />
+<div class="definition">
+<p><span id="def:unlabeled-div-43" class="definition"><strong>Definició 2.5  </strong></span><strong>Definició 1.5 (Probabilitat — axiomes de Kolmogorov).</strong><br />
+Donada una σ-àlgebra <span class="math inline">\(\mathcal{A}\)</span> sobre <span class="math inline">\(\Omega\)</span>, una funció</p>
+<p><span class="math display">\[\mathbb{P}:\mathcal{A}\to[0,1]\]</span></p>
+<p>és una <strong>mesura de probabilitat</strong> si:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\mathbb{P}(A)\ge 0\)</span><br />
+</li>
+<li><span class="math inline">\(\mathbb{P}(\Omega)=1\)</span><br />
+</li>
+<li>Si <span class="math inline">\((A_n)_n\)</span> són disjunts:<br />
+<span class="math display">\[
+\mathbb{P}\left(\bigcup_n A_n\right) = \sum_n \mathbb{P}(A_n).
+\]</span></li>
+</ol>
+</div>
+<hr />
+<p>1.0.3 Variables aleatòries i funció de distribució</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-44" class="definition"><strong>Definició 2.6  </strong></span><strong>Definició 1.7 (Variable aleatòria).</strong><br />
+Una aplicació <span class="math inline">\(X:\Omega\to\mathbb{R}\)</span> és una <strong>variable aleatòria</strong> si<br />
+<span class="math display">\[\{\omega: X(\omega)\le x\}\in \mathcal{A}\quad\text{per a tot }x\in\mathbb{R}.\]</span></p>
+</div>
+<p>Això garanteix que les expressions <span class="math inline">\(\mathbb{P}(X\le x)\)</span> estan ben definides.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-45" class="definition"><strong>Definició 2.7  </strong></span><strong>Definició 1.8 (Funció de distribució).</strong><br />
+La <strong>funció de distribució</strong> d’una variable aleatòria <span class="math inline">\(X\)</span> és:</p>
+<p><span class="math display">\[
+F_X(x)=\mathbb{P}(X\le x).
+\]</span></p>
+</div>
+<p>Aquesta funció caracteritza completament la distribució de <span class="math inline">\(X\)</span>.</p>
+<hr />
+<p>1.1 Variables aleatòries multivariants</p>
+<p>Molts experiments produeixen més d’una magnitud d’interès. Per exemple:</p>
+<ul>
+<li>ingressos i despeses d’una llar;</li>
+<li>temps fins diagnòstic i temps fins curació d’un pacient.</li>
+</ul>
+<p>Aquests casos requereixen treballar amb <strong>vectors aleatoris</strong>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-46" class="definition"><strong>Definició 2.8  </strong></span><strong>Definició 1.11 (Variable aleatòria bivariant).</strong><br />
+Un parell <span class="math inline">\((X,Y)\)</span> és una <strong>variable aleatòria bivariant</strong> si per a tot <span class="math inline">\(x,y\)</span>:</p>
+<p><span class="math display">\[
+\{\,\omega: X(\omega)\le x,\; Y(\omega)\le y\,\}\in\mathcal{A}.
+\]</span></p>
+</div>
+<p>La seva <strong>funció de distribució conjunta</strong> és:</p>
+<p><span class="math display">\[
+F(x,y) = \mathbb{P}(X\le x,\;Y\le y).
+\]</span></p>
+<hr />
+<p>1.2 Variables aleatòries bivariants discretes i contínues</p>
+<p>1.2.1 Cas discret</p>
+<p>Si <span class="math inline">\((X,Y)\)</span> només pot prendre valors d’un conjunt finit o numerable <span class="math inline">\((x_i,y_j)\)</span>, definim la seva <strong>funció de probabilitat conjunta</strong>:</p>
+<p><span class="math display">\[
+p_{ij} = \mathbb{P}(X=x_i,\,Y=y_j).
+\]</span></p>
+<p>La probabilitat d’un conjunt <span class="math inline">\(A\)</span> qualsevol és:</p>
+<p><span class="math display">\[
+\mathbb{P}((X,Y)\in A) = \sum_{(x_i,y_j)\in A} p_{ij}.
+\]</span></p>
+<p>Els marginals són:</p>
+<p><span class="math display">\[
+\mathbb{P}(X=x_i)=\sum_j p_{ij},\qquad
+\mathbb{P}(Y=y_j)=\sum_i p_{ij}.
+\]</span></p>
+<hr />
+<p>1.2.2 Cas continu</p>
+<p>Si <span class="math inline">\((X,Y)\)</span> admet una <strong>densitat conjunta</strong> <span class="math inline">\(f(x,y)\)</span>,</p>
+<p><span class="math display">\[
+\mathbb{P}((X,Y)\in A)=\iint_A f(x,y)\,dx\,dy.
+\]</span></p>
+<p>Propietats bàsiques:</p>
+<ul>
+<li><span class="math inline">\(f(x,y)\ge 0\)</span><br />
+</li>
+<li><span class="math inline">\(\displaystyle \iint_{\mathbb{R}^2} f(x,y)\,dx\,dy = 1\)</span></li>
+</ul>
+<p>Els marginals són:</p>
+<p><span class="math display">\[
+f_X(x)=\int_{-\infty}^{\infty} f(x,y)\,dy,\qquad
+f_Y(y)=\int_{-\infty}^{\infty} f(x,y)\,dx.
+\]</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="variables-aleatòries-multivariants.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="algunes-distribucions-multivariants.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": "fixed"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

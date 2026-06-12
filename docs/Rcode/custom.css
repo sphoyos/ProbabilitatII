@@ -1,0 +1,270 @@
+#main .nav-pills > li.active > a,
+#main .nav-pills > li.active > a:hover,
+#main .nav-pills > li.active > a:focus {
+background-color: #515151;
+  }
+
+#main .nav-pills > li > a:hover {
+background-color: #515151;
+  }
+
+h1,h2,h3,h4,h5,h6,legend{
+  color:#0073CE;
+}
+
+
+
+
+#nav-top span.glyphicon {
+color: #22983B;
+  }
+
+#table-of-contents header{
+color:#0073CE;
+  }
+
+#table-of-contents h2{
+background-color:#C8D2FA;
+  }
+.navbar {
+    position: relative;
+    height: 80px; /* altura del banner */
+    background-color: #ffffff; /* color de fondo si no se ve el PNG */
+    padding: 0; /* elimina padding default */
+}
+
+/* Inserta la imagen del banner */
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/capsalera_ub.png'); /* ruta de tu PNG */
+    background-size: contain; /* Ajusta según tu imagen */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* queda detrás de los botones */
+}
+
+/* Ajusta los botones de navegación */
+.navbar .navbar-nav {
+    position: relative;
+    z-index: 2; /* se aseguran que estén sobre el banner */
+    margin-left: auto;
+}
+
+/* desplaza a l esquerra*/
+
+.book .book-body .page-wrapper .page-inner section.normal {
+  text-align: left;
+}
+
+
+.anchor-section {
+  display: none;
+}
+
+/* #main a {
+  background-image: linear-gradient(180deg,#d64a70,#d64a70);
+                                    color:#515151;
+                                      }*/
+  
+  #main a {
+  background-image: linear-gradient(180deg,##FFE3E0,#FFE3E0);
+                                    background-size: 100% 100%;
+                                    background-repeat: no-repeat;
+                                    background-position: 0 2em;
+                                    color: #3a3a3a;
+                                      font-weight: bold;
+                                    padding: .125em 1px 0 1px;
+                                    transition: background-position .15s, color .15s;
+                                    }
+
+a:hover{
+  color:#515151
+}
+
+a:visited{
+  color:#515151
+}
+
+a[href^="mailto"] { color: #C8D2FA; }
+    
+    tr:hover {background-color:#c8d2fa;}
+        
+        tbody tr:hover {
+          background: yellow;
+        }   
+      
+      /* parte sidebar donde esta el indice*/
+        #sidebar {
+        position:fixed;
+      top:0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height:100%;
+      background:#edf0f2;
+        z-index:200;
+      font-size: 16px;
+    }
+  
+  /* letras sidebar indice o recuadro abajo*/
+    #sidebar a{
+    display:block;
+  line-height:18px;
+  padding:0.4045em 1.618em;
+  position:relative;
+  font-size:90%;
+  color:#5e5e5e;
+    direction: ltr;
+  text-decoration: none;
+}
+
+#sidebar a:hover{
+background-color:#e4e3e3;
+  cursor:pointer}
+
+
+/* recuadro abajo izquierda*/
+  #postamble{
+  color:#1f1d1d;
+  background:#edf0f2;
+  border-top:solid 10px #edf0f2;
+font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+font-size: 90%;
+z-index:400;
+padding:12px;
+}
+
+/* fecha de abajo izquierda*/
+  #postamble .date {
+  font-size: 100%;
+margin-bottom: 0px;
+color: #0073CE;
+  }
+
+#main :not(.leaflet-control) > a {
+background-image: linear-gradient(180deg,#FFE3E0,#FFE3E0;
+                                  background-size: 100% 100%;
+                                  background-repeat: no-repeat;
+                                  background-position: 0 2em;
+                                  color:#FFE3E0;
+                                    font-weight: 300;
+                                  padding: .125em 1px 0 1px;
+                                  transition: background-position .15s, color .15s;
+     
+     /* Fuerza la alineación a la izquierda en el contenedor principal */
+.book-body .page-inner section.normal {
+    text-align: left !important;
+}
+
+/* Asegura que los párrafos no hereden alineación centrada */
+.book-body p {
+    text-align: left !important;
+}
+
+     
+     
+/* fondo del cuerpo, donde se muestra todo el informe*/
+body{
+    background:#ffffff;
+    color:#404040;
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-weight:normal;
+    margin:0;
+    min-height:100%;
+    text-align:margin-left;
+}
+
+/* max-width:1100px; para visualizar mas contenido, por defecto esta en 900*/
+#content{
+    background:#fcfcfc;
+    height:100%;
+    margin-left:300px;
+    /* margin:auto; */
+    max-width:1300px;
+    min-height:100%;
+}
+
+/* Estilo base para todos los bloques */
+div.software {
+    background-color: #e6ffe6; /* Verde pálido */
+    border: 3px solid #006600; /* Marco verde oscuro */
+    padding: 1em; /* Espaciado interno */
+    margin-bottom: 20px; /* Separación entre bloques */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Bloques adicionales */
+div.important {
+    background-color: #ffe6cc; /* Naranja pálido */
+    border: 3px solid #e67300; /* Marco naranja oscuro */
+    padding: 1em;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+div.tip {
+    background-color: #e6f2ff; /* Azul pálido */
+    border: 3px solid #004080; /* Marco azul oscuro */
+    padding: 1em;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+div.link {
+    background-color: #fff5e6; /* Amarillo pálido */
+    border: 3px solid #cc8400; /* Marco amarillo oscuro */
+    padding: 1em;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+div.think {
+    background-color: #f5e6ff; /* Morado pálido */
+    border: 3px solid #9900cc; /* Marco morado oscuro */
+    padding: 1em;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+
+.proof-title {
+  font-weight: bold;
+}
+/* parte lila de arriba}
+fcfcfc
+#sidebar h2{
+z-index:200;
+background-color:#fcfcfc;
+  text-align:center;
+padding:0.809em;
+display:block;
+color:#1f1d1d;  
+  font-size: 100%;
+margin-top: 0px;
+margin-bottom:0.809em;
+}
+
+#sidebar h2 a {
+color:#1f1d1d;
+  text-decoration: none;
+}*/
+
+/* las dos proxima instrucciones sirven para establecer un recuadro para las tablas y que el header se quede pegadp*/  
+.table-wrapper {
+  max-height: 600px; /* o lo que quieras */
+  overflow-y: auto;
+}
+
+table thead th {
+  position: sticky;
+  top: 0;
+  background-color: white; /* importante para que no se vea transparente */
+  z-index: 2; /* para que se superponga al scroll */
+}  
+  

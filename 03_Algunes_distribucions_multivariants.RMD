@@ -1,0 +1,13 @@
+# Algunes distribucions multivariants
+
+## Distribució normal multivariant: definició, propietats i aplicacions.
+
+Text aquí.
+ 
+##  Distribucions especials: Multinomial, t-Student multivariant, Wishart, Chi-quadrat i Dirichlet.
+
+Text aquí.
+
+##  Generació de mostres de distribucions multivariants.
+
+Text aquí.

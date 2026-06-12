@@ -1,0 +1,221 @@
+---
+title: "Probabilitat II"
+author: "Santi Perez-Hoyos"
+date: '`r format(Sys.time(), "%d %B, %Y")`'
+site: bookdown::bookdown_site
+---
+
+# Pla docent {-}
+
+Placeholder
+
+
+## Dades generals {-}
+## Hores   {-}
+## Competències / Resultats d'aprenenttatge que es desenvolupen  {-}
+## Objectius d'aprenentatge  {-}
+## Blocs Temàtics i Continguts Detallats  {-}
+## Metodologia i activitats formatives  {-}
+## Avaluació acreditativa dels aprenentatges  {-}
+
+<!--chapter:end:index.rmd-->
+
+
+# Variables aelatòries multivariants
+
+
+
+
+
+
+
+## Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat.
+
+### Introducció
+  A qualsevol que se li pregunti quin temps es triga en recorrer  els 280 kilometres de distància entre Barcelona i Castelló, si es circula a una velocitat constant de 120km/h,  ens indicaria que en 2 hores i 20 minuts arribaríem a la destinació. Ara be, si se li pregunta quin serà el resultat de  llençar un dau  no tindria una resposta clara.
+  
+  * El primer resultat provè d'un fenòmen o **experiència determinista.** Es prou en extreure de l'equació  $e=v·t$  el valor del temps
+  * El segon pertany a la categoria dels fenòmens o **experiències aleatories.** Es coneixen tots els resultats possibles, un número del 1 al 6 en el cas del dau, però no quin resultat es produirà, ja que de repetició en repetició sortiran resultats diferents.
+
+### Conceptes bàsics:Experiment aleatori, mesura de probabilitat,variable aleatòria
+  
+:::{.definition}
+
+
+Un **experiment** és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables.  Direm que l'experiment es **aleatori** si, executat sota les mateixes condicions, pot donar lloc a un resultat $w$ d'entre un conjunt de posibles resultats.
+
+:::
+
+
+:::{.definition}
+
+L’**espai mostral** d’un experiment, denotat per $\Omega$, 
+és el conjunt de tots els resultats possibles.
+:::
+
+
+:::{.definition}
+Un **esdeveniment**  es una colecció de possibles resultats d'un experiment, es a dir un subconjunt de $A\subseteq \Omega$.  Quan el resultat de l'experiment pertany al esdeveniment ($w \in A$), direm que a ocorregut l'esdeveniment. 
+:::
+
+---
+:::{.example} 
+Així si l'experiment és llençar un dau, l'espai mostral és 
+
+$$\Omega = \{1,2,3,4,5,6\}$$ i un esdeveniment pot ser $A=\text{Treure un número senar}$ . Si al llençar el dau surt un 3, l'experiment A ha ocorregut.
+:::
+---
+
+
+:::{.definition}
+
+Una col·lecció $\mathcal{A}\subseteq \mathcal{P}(\Omega)$ és una **σ-àlgebra** si:
+
+1. $\Omega\in\mathcal{A}$  
+2. Si $A\in\mathcal{A}$, aleshores $A^c\in\mathcal{A}$  
+3. Si $A_1,A_2,\ldots\in\mathcal{A}$, aleshores $\bigcup_{n}A_n\in\mathcal{A}$
+:::
+
+La $\sigma~$-àlgebra representa “tot allò al que volem i podem assignar probabilitat”.
+
+
+
+---
+:::{.example} 
+Si suposem un experiment és triar a l'atzar  un número en l'interval [0,1], l'interès es centra en conèixer si l'elecció pertany a qualsevol dels subconjunts de [0,1]. La $\sigma$-àlgebra $\beta_{[0,1]}$ de'esdeveniments generada a partir de tots els posibles subintervals de [0,1], és  coneguda com $\sigma$-àlgebra de Borel estrictament menor que $\mathcal{P}(\Omega)$
+
+:::
+---
+
+En resum, L'espai mostral ve acompanyat de la $\sigma$-agebra mes convenient a l'experiment. La combinació ($\Omega),\mathcal{A}$) reb el nom d'**espai mesurable** 
+
+
+
+
+
+:::{.definition}
+ **Mesura de Probabilitat**
+ 
+ Donat un espai mostral  $\Omega$ i una $\sigma$-àlgebra  $\mathcal{A}$ definim la mesura de probabilitat com una aplicación 
+ 
+$$
+\begin{aligned}
+P : \mathcal{A} &\rightarrow \mathbb{R} \\
+A &\mapsto Pr(A)
+\end{aligned}
+$$
+
+on P cumpleix els axiomes de Kolmogorov 
+
+1. $P(A) \ge 0$, per tot $A \in \mathcal{A}$.
+
+2. $P(\Omega) = 1$.
+
+3. *Axioma d’additivitat numerable:*  
+Si $A_1, A_2, \ldots, A_n\in \mathcal{A}$ es una succeció d'esdeveniments  disjunts dos a dos, llavors
+
+$$
+P\left(\bigcup_{i=1}^{n} A_i \right)
+=
+\sum_{i=1}^{n} P(A_i)
+$$
+
+Dels axiomes anteriors es segueixen totes les propietats de qualsevol mesura
+de probabilitat. En particular que la probabilitat de un esdeveniment ha de ser un número entre 0 i 1.
+
+$$
+0 \le P(A) \le 1 \quad \text{per a tot } A \in \mathcal{A}.
+$$
+
+:::
+
+:::{.definition}
+ **Espai de probabilitat**
+ 
+A la *terna $(\Omega,\mathcal{A},Pr)$*  l'anomenarem  ESPAI DE PROBABILITAT. 
+ 
+:::
+
+
+---
+:::{.example} 
+
+
+:::
+---
+
+
+
+Text aquí.
+
+## Funcions de densitat i de distribució conjuntes.
+
+Text aquí.
+
+
+## Funcions de densitat i de distribució marginales  i condicionades.
+
+Text aquí.
+
+
+## Moments multivariants: vector d'esperances, matriu de variància-covariància
+
+Text aquí.
+
+## Trasnformacions de variables multivariants
+
+Text aquí.
+
+<!--chapter:end:01_Variables_Aleatories_Multivariants.RMD-->
+
+
+# Independència de variables aleatories
+
+Placeholder
+
+
+## Independència i dependència entre variables aleatòries.
+## Conceptes de covariància, correlació i causalitat.
+## Esperances i variàncies condicionades.
+
+<!--chapter:end:02_Independencia_de_variables_aleatories.Rmd-->
+
+
+
+# Algunes distribucions multivariants
+
+## Distribució normal multivariant: definició, propietats i aplicacions.
+
+Text aquí.
+ 
+##  Distribucions especials: Multinomial, t-Student multivariant, Wishart, Chi-quadrat i Dirichlet.
+
+Text aquí.
+
+##  Generació de mostres de distribucions multivariants.
+
+Text aquí.
+
+<!--chapter:end:03_Algunes_distribucions_multivariants.RMD-->
+
+
+# Processos estocàstics: Introducció i conceptes bàsics
+
+## Definició de procés estocàstic.
+
+
+Text aquí.
+
+
+ 
+## Processos estocàstics discrets i continus.
+
+Text aquí.
+ 
+## Processos estocàstics estacionaris i no estacionaris.
+ 
+
+Text aquí.
+
+<!--chapter:end:04_Procesos_estocastics_introduccion_i_conceptes_basics.RMD-->
+
