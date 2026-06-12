@@ -1,0 +1,25 @@
+#  Principals tipus de Processos estocàstics.
+
+## Cadenes de Markov.
+
+
+Text aquí.
+
+
+ 
+## Caminades aleatòries.
+
+Text aquí.
+ 
+## Processos de Poisson.
+ 
+
+Text aquí.
+
+ 
+## Moviment Brownià.
+
+
+ 
+
+Text aquí.

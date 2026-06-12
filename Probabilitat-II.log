@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.7)  12 JUN 2026 14:03
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.7)  12 JUN 2026 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -868,13 +868,12 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 2.
-)
+[1
+
+])
 \tf@toc=\write3
 \openout3 = `Probabilitat-II.toc'.
 
-[1
-
-]
 Missing character: There is no   (U+2003) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no   (U+2003) in font [lmroman10-regular]:mapping=tex-text;!
 [2] [3] [4] [5]
@@ -909,6 +908,7 @@ Overfull \hbox (61.72845pt too wide) detected at line 838
 
 File: images/rectangle.png Graphic file (type bmp)
 <images/rectangle.png>
+[13]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 862.
 
@@ -921,22 +921,20 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 878.
 
-[13]
-ignored: Infinite glue shrinkage found in box being split [14]
+[14] [15]
 File: images/densconjunta.png Graphic file (type bmp)
 <images/densconjunta.png>
-[15]
 File: images/doubleintegral1.png Graphic file (type bmp)
 <images/doubleintegral1.png>
 [16] [17]
 File: Probabilitat-II_files/images/graf-triangle-1.pdf Graphic file (type pdf)
 <use Probabilitat-II_files/images/graf-triangle-1.pdf>
-[18]
+
 Overfull \hbox (28.51031pt too wide) detected at line 1116
 [][][][] [] [][] [] [][][][] [] [][] [] [][] [] [][][][] [] [][][][][] [] [] [] [][][][][] [] [][][][][] [] [][] [] [][] [] [][] [] [][]
  []
 
-
+[18] [19]
 Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
 
  []
@@ -948,24 +946,24 @@ Overfull \hbox (33.98537pt too wide) detected at line 1144
 [][][] [] [] [] [] [] [][][] [] [] [] [] [] [] [][][] [] [][][][][] [][] [] [][][] [] [] [][][] [] [][][] [] [] [][][] [] []  [][] [][] [][][][] [][][][][][] [] [][][][] [][][][][][][]
  []
 
-[19]
+[20]
 File: Probabilitat-II_files/images/density2-1.pdf Graphic file (type pdf)
 <use Probabilitat-II_files/images/density2-1.pdf>
-[20] [21]
+[21] [22]
 File: Probabilitat-II_files/images/graf-triangle2-1.pdf Graphic file (type pdf)
 <use Probabilitat-II_files/images/graf-triangle2-1.pdf>
 Missing character: There is no ó ("F3) in font lmmi10!
 Missing character: There is no ó ("F3) in font lmmi10!
-[22] [23]
+[23] [24]
 
-LaTeX Warning: Reference `exm:quali1taula-discreta' on page 24 undefined on input line 1313.
+LaTeX Warning: Reference `exm:quali1taula-discreta' on page 25 undefined on input line 1313.
 
 
 Underfull \hbox (badness 3098) in paragraph at lines 1318--1318
 []\TU/lmr/bx/n/12 Moments multivariants: vector d’esperances, matriu de variància-
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 1373--1374
 
  []
@@ -985,7 +983,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1393--1395
 
 Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
-[25]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1417--1419
 
  []
@@ -995,7 +993,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1419--1421
 
  []
 
-
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 1421--1422
 
  []
@@ -1005,12 +1003,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1434--1436
 
  []
 
-[26]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 1523--1525
 
  []
 
-[27] [28] (./Probabilitat-II.aux)
+[28] [29] (./Probabilitat-II.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -1020,12 +1018,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17406 strings out of 470015
- 324976 string characters out of 5472797
- 890771 words of memory out of 5000000
- 45933 multiletter control sequences out of 15000+600000
+ 17416 strings out of 470015
+ 325144 string characters out of 5472797
+ 895033 words of memory out of 5000000
+ 45943 multiletter control sequences out of 15000+600000
  635165 words of font info for 103 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,12n,114p,580b,559s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,114p,580b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Probabilitat-II.pdf (28 pages).
+Output written on Probabilitat-II.pdf (29 pages).
