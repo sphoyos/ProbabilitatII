@@ -51,7 +51,7 @@ p <- ggplot(datos, aes(x = x, y = y)) +
 
 
 # Histograma marginal a la izquierda
-ggMarginal(
+p<-ggMarginal(
   p,
   type = "histogram",
   margins = "y",
@@ -59,3 +59,6 @@ ggMarginal(
   fill = "#6baed6",
   colour = "#4a78a8"
 )
+
+print(p)
+

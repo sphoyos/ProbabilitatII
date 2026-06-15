@@ -176,7 +176,7 @@ Per expressar aquesta probabilitat podríem haver  utilitzat un altra  variable 
 
 :::{.definition}
 **Distribució de probabilitat induida**
-Quan es fa intervenir una variable aleatòria és per que s'està en la presència d'un espai de probabilitat. La variable aleatòria trasllada la informació d'aquesta probabilitat de $\Omega$  a $\mathbb{R}$   mitjançant la probabilitat induïda coneguda com Llei de probabilitat o distribució de probabilitat.
+Quan es fa intervenir una variable aleatòria és per que s'està en la presència d'un espai de probabilitat. La variable aleatòria trasllada la informació d'aquesta probabilitat de $\Omega$  a $\mathbb{R}$   mitjançant la probabilitat induïda coneguda com llei de probabilitat o distribució de probabilitat.
 
  Així, la variable aleatòria X indueix sobre $(\mathbb{R},\beta)$  la probabilitat $P_X$ de la següent forma
 
@@ -270,7 +270,7 @@ $$
 :::{.definition}
 **Funció de probabilitat d'una variable aleatòria discreta**
 
-X és una variable aleatòria discreta si  $X(\Omega)$ es  finit o numerable, és a dir es pot definir un conjunt $D_X=\{x_1,x_2,....,x_n \}$ tal que $P_X(D_X))P(X \in D_X)=1)$ i per tant es pot deduir que $P(X=x)=0 \quad, \forall x \in D^zc_X$
+X és una variable aleatòria discreta si  $X(\Omega)$ es  finit o numerable, és a dir es pot definir un conjunt suport  $D_X=\{x_1,x_2,....,x_n \}$ tal que $P_X(D_X))= P(X \in D_X)=1)$ i   $P(X=x)>0 \quad, \forall x \in D_X$. Per tant es pot deduir que $P(X=x)=0 \quad, \forall x \in D_X^c$
 
 Així la funció de distribució de la variable aleatòria és:
 $$
@@ -625,7 +625,8 @@ Com que es una probabilitat $f_X(x) \geq 0, \forall x \in \mathbb{R}^k$
 
 ---
 
-:::{.example taula-discreta}
+:::{.example #taula-discreta}
+
 Si tornem a l'exemple del llençament de la moneda i el dau de l'exemple \@ref(exm:quali1) podem definir la funció de probabilitat continua com el  producte de la probabilitat d'obtenir el resultat al llençar la moneda ( 1/2) per la probabilitat de obtenir un resultat del dau, es a dir (1/6). Així $P_XY(x_i,y_i)=1/2 \times 1/6= 1/12$
 
 En la següent taula es mostra la funció de quantia o probabilitat. Per qualsevol valor no recolit en la taula $f_XY(x,y=0)$
@@ -641,17 +642,21 @@ En la següent taula es mostra la funció de quantia o probabilitat. Per qualsev
 | **$f_X(x)$** | **1/2** | **1/2** |    | **1**     |
 
 
-::: {.note}
+
+:::{.Note }
 _Nota: en els marges de la taula es poden veure les funcions de probabilitat marginals que seran definidas en la propera secció._ 
 
 :::
+
+:::
+
 
 --- 
 
 
 :::{.proposition}
 
-**Algunes propietats de la funció de  o probabilitat**
+**Algunes propietats de la funció de  probabilitat**
 
 
 Sigui f(x,y) una funció de probabilitat de la variable bivariada (X,Y) tal que $(X,Y)(\Omega)=\{ (x_i,y_i) \quad i \in I \subset \mathbb{N} \quad  i \quad  j \in J \subset \mathbb{N} \}$
@@ -947,6 +952,8 @@ source("Rcode/gdensity2.r")
 
 ## Funcions de densitat i de distribució marginals  i condicionades.
 
+### Distribucions marginals.
+
 Les distribucions marginals son les distribucions unidimensionals que ens informa de la distribució dels valors d'una variable prescindint dels valors de les altres. 
 
 
@@ -989,7 +996,7 @@ $$
 P((X,Y) \in A)= \frac {\parallel A \cap T\parallel}{\parallel T\parallel}
 $$
 
-on $\parallel A \parallel$ és l'àreade B.  
+on $\parallel A \parallel$ és l'àrea de B.  
 
 ```{r graf-triangle2, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Dues maneres d'obtenir la densitat conjunta  d'un triangle"}
 source("Rcode/grafic_triangle_marginal.R")
@@ -1050,9 +1057,9 @@ $$
 
 ---
 
-### Distribucions marginals. Cas discret
+#### Distribucions marginals. Cas discret
                
-Sigui $D_{X_i}$  el soport numerable de la component $X_i$ d'un vector aleatori $X$ discret, es verifica que 
+Sigui $D_{X_i}$  el suport numerable de la component $X_i$ d'un vector aleatori $X$ discret, es verifica que 
 
 $$
   \{ X_i=x_i  \}= \bigcup_{x_j \in D_j, j \neq  i } \left(\bigcap_{j=1}^k \{ X_j=x_j \}\right)
@@ -1065,22 +1072,149 @@ $$
 
 ---
 
-:::{.example}
+:::{.example marginal}
 
 
-Si  revisem la taula del \@ref(exm:taula-discreta) exemple on en primer lloc es llança una moneda , o després un dau, observem que la darrera fila conté les probabilitats marginasl d'observar cara o creu que son 1/2 i la darrera columna conté les marginasl d'obtenir un resultat de les cares del dau , és a dir 1/6 per cada valor.
+Si  revisem la taula del exemple  \@ref(exm:taula-discreta), on en primer lloc es llança una moneda y després un dau. Observem que la darrera fila conté les probabilitats marginals d'observar cara o creu, obteneint un valor de 1/2 per cada columna. La darrera columna conté les marginals d'obtenir un resultat de les cares del dau , és a dir 1/6 per cada fila.
+
+
+
+|**Y\\X** | Cara (0)  | Creu (1) |  **$f_Y(y)$** |
+|------|-----------|----------|-------------|
+| **1**    |   1/12    |   1/12   | **1/6**         |
+| **2**    |   1/12    |   1/12   | **1/6**         |
+| **3**    |   1/12    |   1/12   | **1/6**        |
+| **4**    |   1/12    |   1/12   | **1/6**         |
+| **5**    |   1/12    |   1/12   | **1/6**         |
+| **6**    |   1/12    |   1/12   | **1/6**         |
+| **$f_X(x)$** | **1/2** | **1/2** |    | **1**     |
+
 :::
 
 ---
 
-### Distribucions marginals. Cas continu
+#### Distribucions marginals. Cas continu
 
-Si les dues variables $X$ i $Y$ con continues, com hem vist abans, perdefinició la distribució marginal de cadascuna de elles la podem escriure com:
+Si les dues variables $X$ i $Y$ son continues, com hem vist abans, per definició la distribució marginal de cadascuna de elles la podem escriure com:
 
 $$
 F_{X}(x)=\lim_{x \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{x}\int_{- \infty}^{+ \infty} f(s
 ,y)dyds
 $$
+$$
+F_{Y}(y)=\lim_{y \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{y}\int_{- \infty}^{+ \infty} f(t
+,x)dxdt
+$$
+
+Es pot demostrar que tant $F_X(x)$ com $F_Y(y)$ son funcions de distribució  . En el següent exemple 
+
+
+---
+
+:::{.example}
+
+
+
+ En la figura \@ref(fig:marginal) es mostra una representació de la distribució marginal. El diagrama de dispersió representa les coordenades $(x,y)$ de les observacions. Si es projecten en l'eix $Y$ totes les dades sense tenir en compte la component $X$, s'obté la función de distribució marginal de $Y$.
+
+
+
+```{r marginal, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Funció de distribució marginal de Y mostral"}
+source("Rcode/projecciomarginal.R")
+```
+
+:::
+
+
+---
+
+
+### Distribucions condicionals 
+
+Sigui  (X,Y) un vector aleatori bidimensional definit sobre $(\Omega,\mathcal{A},P)$ i $F_{XY}(x,y)$ la seva  funció de distribució conjunta.   Sabent que ha ocorregut l'esdeveniment $Y \in B$, ens interessa calcular  la probabilitat condicionada que $X \in A$
+
+
+$$
+P \{\omega  \in \Omega \quad tq \quad X(\omega) \in A \quad sabiendo  \quad  y\in B\} 
+$$
+$$
+P \{ X \in A / Y \in B \}= \frac {  P \{ X \in A \cap Y \in B \}}  { P \{ Y  \in B \}} =\frac {  P \{ X \in A ,  Y \in B \}}  { P \{ Y  \in B \}} \quad si  \quad P\{ Y \in B=>0\}
+$$
+
+ Si $A=] - \infty, x]$  i $B=]- \infty ,y]$  i $F_Y(Y)>0$
+
+
+
+$$
+P(X \leq x | Y \leq y)= \frac {P(X \leq x, Y\leq y)}{ P(Y \leq y)} =\frac {F_{XY}(x,y)}{F_Y(y)}=
+\frac {F_{XY}(x,y)}{\lim_{u \rightarrow +\infty } F_{XY}(u,y)} 
+$$
+
+
+#### Distribucions condicionals. Cas discret 
+
+
+
+Considerem un vector aleatori bidimensional (X,Y), amb suports discrets per cadascuna de les seves components $D_x=(x_1, ...,k)$ i $D_y=(y_1,....,y_h)$ i una funció de probabilitat conjunta $f_XY(x,y)$ 
+
+:::{.definition}
+** Funció de probabilitat condicionada**
+
+Es defineix la funció de probabilitat condicionada de $X$ donat $(Y=y_j). y \in D_y$, on $P(Y=y_j)>0$ com  
+
+$$
+
+f_{X|Y}(x_i|y_j)= P(X=x_i | Y=y_j)= \frac {P(X=x_i, Y=y_j)}{P(Y=yj)}= \frac {f(x_i,y_j)}{f_Y(yj)}
+
+$$
+:::
+
+
+:::{.definition}
+***Funció de distribució condicionada***
+
+A partir de la definició anterior,  podem definir la funció de distribució condicionada de X donat que $(Y=y_j). y \in D_y$ com:
+
+
+$$
+
+F_{X|Y}= P(X \leq x| Y=y_j) = \frac{ \sum_{x_i \leq x } f_{XY}(x_i,y_j)}  {f_Y(y_j)}=\sum_{x_i \leq x } f_{X|Y}(x_i|y_j) 
+$$
+
+:::
+
+
+$f_{X|Y}(x|y)$ es efectivamkente una función de probabilitat per qué complexis les dues propietats
+
+- Es una funció no negativa la tractar-se d'una función no neegativa
+- y la suma sobre la funció de soport $D_Y$ es l'a unitat 
+
+$$
+\sum_{x_i \in D_X} f_{X|Y}(x_i|y_j)= \frac{ \sum_{x_i \in D_X } f_{XY}(x_i,y_j)}  {f_Y(y_j)}=\frac  {f_Y(y_j)} {f_Y(y_j)}=1
+$$
+---
+
+::: {.exapmple }
+
+Tornem a  l'exemple de la moneda  i el dau  i la taula de probabiliatats qe es mostra en l'exemple \@ref(exm:marginal) on Y es el valor del dau y X es el resultat de la moneda. 
+
+Calculem la probabilitat de treure una cara donat que el dau ha resultat el valor 4. 
+
+Seguint la definci
+
+$$
+P(x=cara | Y=4)= \frac { P(X=cara , Y=4)}{ P(Y=4)}= \frac {1/12} {1/6}=1/2
+$$
+En aquest cas la funció de probabilitat condicionada coincideix en la distribució marginal. 
+
+Si ho fessim a l'inreves es a dir  la probabilitat d'obtenir un valor del dau si ha sortit cara o ha sortitu creu arribariem a que $P(Y=y|x=cara)=1/6$ que també coincideix amb la marginal. 
+
+Això serà rellevant més endavant quan parlem del concepte d'independència 
+:::  
+
+---
+
+#### Distribucions condicionals. Cas continu 
 
 
 ## Moments multivariants: vector d'esperances, matriu de variància-covariància

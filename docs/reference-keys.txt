@@ -29,6 +29,7 @@ fig:img-distbiv
 prp:unlabeled-div-27
 fig:img-rectangle
 def:unlabeled-div-29
+exm:taula-discreta
 prp:unlabeled-div-30
 def:unlabeled-div-31
 exm:unlabeled-div-32
@@ -45,6 +46,7 @@ def:unlabeled-div-36
 exm:unlabeled-div-37
 fig:graf-triangle2
 exm:unlabeled-div-38
+exm:unlabeled-div-39
 variables-aleatòries-multivariants
 definició-i-conceptes-bàsics-vectors-aleatoris-espais-de-probabilitat
 introducció
@@ -78,3 +80,10 @@ cadenes-de-markov.
 caminades-aleatòries.
 processos-de-poisson.
 moviment-brownià.
+fig:marginal
+distribucions-condicionals
+distribucions-condicionals.-cas-discret
+distribucions-condicionals.-cas-continu
+distribucions-marginals.
+def:unlabeled-div-39
+def:unlabeled-div-40
