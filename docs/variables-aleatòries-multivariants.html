@@ -106,8 +106,8 @@
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-discret"><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals. Cas discret</a></li>
-<li class="chapter" data-level="1.3.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-continu"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions marginals. Cas continu</a></li>
+<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals."><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals.</a></li>
+<li class="chapter" data-level="1.3.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-condicionals"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions condicionals</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a></li>
 <li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a></li>
@@ -270,7 +270,7 @@ X:\Omega \longrightarrow \mathbb{R}
 <hr />
 <div class="definition">
 <p><span id="def:unlabeled-div-12" class="definition"><strong>Definició 1.8  </strong></span><strong>Distribució de probabilitat induida</strong>
-Quan es fa intervenir una variable aleatòria és per que s’està en la presència d’un espai de probabilitat. La variable aleatòria trasllada la informació d’aquesta probabilitat de <span class="math inline">\(\Omega\)</span> a <span class="math inline">\(\mathbb{R}\)</span> mitjançant la probabilitat induïda coneguda com Llei de probabilitat o distribució de probabilitat.</p>
+Quan es fa intervenir una variable aleatòria és per que s’està en la presència d’un espai de probabilitat. La variable aleatòria trasllada la informació d’aquesta probabilitat de <span class="math inline">\(\Omega\)</span> a <span class="math inline">\(\mathbb{R}\)</span> mitjançant la probabilitat induïda coneguda com llei de probabilitat o distribució de probabilitat.</p>
 <p>Així, la variable aleatòria X indueix sobre <span class="math inline">\((\mathbb{R},\beta)\)</span> la probabilitat <span class="math inline">\(P_X\)</span> de la següent forma</p>
 <p><span class="math display">\[
        P_X(A)= P(X^{-1}(A)) \quad \forall A \in \beta
@@ -331,7 +331,7 @@ F_X(x)=
 <hr />
 <div class="definition">
 <p><span id="def:unlabeled-div-16" class="definition"><strong>Definició 1.10  </strong></span><strong>Funció de probabilitat d’una variable aleatòria discreta</strong></p>
-<p>X és una variable aleatòria discreta si <span class="math inline">\(X(\Omega)\)</span> es finit o numerable, és a dir es pot definir un conjunt <span class="math inline">\(D_X=\{x_1,x_2,....,x_n \}\)</span> tal que <span class="math inline">\(P_X(D_X))P(X \in D_X)=1)\)</span> i per tant es pot deduir que <span class="math inline">\(P(X=x)=0 \quad, \forall x \in D^zc_X\)</span></p>
+<p>X és una variable aleatòria discreta si <span class="math inline">\(X(\Omega)\)</span> es finit o numerable, és a dir es pot definir un conjunt suport <span class="math inline">\(D_X=\{x_1,x_2,....,x_n \}\)</span> tal que <span class="math inline">\(P_X(D_X))= P(X \in D_X)=1)\)</span> i <span class="math inline">\(P(X=x)&gt;0 \quad, \forall x \in D_X\)</span>. Per tant es pot deduir que <span class="math inline">\(P(X=x)=0 \quad, \forall x \in D_X^c\)</span></p>
 <p>Així la funció de distribució de la variable aleatòria és:
 <span class="math display">\[
 F_x(x)=\sum_{x \leq x_i} P(X=x_i)
@@ -577,8 +577,8 @@ P(X_i=x_i ), &amp; \text{si } x=(x_11,...,x_k) \in D_X \\
 </div>
 <p>Com que es una probabilitat <span class="math inline">\(f_X(x) \geq 0, \forall x \in \mathbb{R}^k\)</span></p>
 <hr />
-<p>:::{.example taula-discreta}
-Si tornem a l’exemple del llençament de la moneda i el dau de l’exemple <a href="variables-aleatòries-multivariants.html#exm:quali1">1.9</a> podem definir la funció de probabilitat continua com el producte de la probabilitat d’obtenir el resultat al llençar la moneda ( 1/2) per la probabilitat de obtenir un resultat del dau, es a dir (1/6). Així <span class="math inline">\(P_XY(x_i,y_i)=1/2 \times 1/6= 1/12\)</span></p>
+<div class="example">
+<p><span id="exm:taula-discreta" class="example"><strong>Exemple 1.13  </strong></span>Si tornem a l’exemple del llençament de la moneda i el dau de l’exemple <a href="variables-aleatòries-multivariants.html#exm:quali1">1.9</a> podem definir la funció de probabilitat continua com el producte de la probabilitat d’obtenir el resultat al llençar la moneda ( 1/2) per la probabilitat de obtenir un resultat del dau, es a dir (1/6). Així <span class="math inline">\(P_XY(x_i,y_i)=1/2 \times 1/6= 1/12\)</span></p>
 <p>En la següent taula es mostra la funció de quantia o probabilitat. Per qualsevol valor no recolit en la taula <span class="math inline">\(f_XY(x,y=0)\)</span></p>
 <table>
 <thead>
@@ -634,8 +634,9 @@ Si tornem a l’exemple del llençament de la moneda i el dau de l’exemple <a 
 </tr>
 </tbody>
 </table>
-<div class="note">
+<div class="Note">
 <p><em>Nota: en els marges de la taula es poden veure les funcions de probabilitat marginals que seran definidas en la propera secció.</em></p>
+</div>
 </div>
 <hr />
 <div class="proposition">
@@ -677,7 +678,7 @@ donat que <span class="math inline">\(P(X \in   \mathbb{R}^k)= 1\)</span> , llav
 <p><span class="math inline">\(f(x_1,...,x_k)=\frac{\partial^k F_X(x_1,...,x_k)}{\partial x_1...\partial x_k}\)</span></p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-32" class="example"><strong>Exemple 1.13  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:img-densconjunta">1.3</a> es pot observar la representació de la funció de densitat <span class="math inline">\(f_{XY}(x,y)\)</span> d’una variable aleatòria continua bivariada. La superfície de la gràfica es el valor de la funció y la probabilitat ve determinada pel volum. Aquest volum ve calculat pel que s’anomena integral doble que te algunes especificitats que mostrarem en el següent apartat.</p>
+<p><span id="exm:unlabeled-div-32" class="example"><strong>Exemple 1.14  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:img-densconjunta">1.3</a> es pot observar la representació de la funció de densitat <span class="math inline">\(f_{XY}(x,y)\)</span> d’una variable aleatòria continua bivariada. La superfície de la gràfica es el valor de la funció y la probabilitat ve determinada pel volum. Aquest volum ve calculat pel que s’anomena integral doble que te algunes especificitats que mostrarem en el següent apartat.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-densconjunta"></span>
 <img src="images/densconjunta.png" alt="Funció de densitat conjunta bivariada" width="80%" />
 <p class="caption">
@@ -707,7 +708,7 @@ Figura 1.4: Double integral
 </div>
 <hr />
 <div class="example">
-<p><span id="exm:densitat1" class="example"><strong>Exemple 1.14  </strong></span>Calculem el volum que la funció f(x,y)=x+y deixa sota el rectangle sobre el rectangle [1,2] x[3,4] , es a dir <span class="math inline">\(1 \leq x \leq 2\)</span> i <span class="math inline">\(3 \leq y \leq 4\)</span>.</p>
+<p><span id="exm:densitat1" class="example"><strong>Exemple 1.15  </strong></span>Calculem el volum que la funció f(x,y)=x+y deixa sota el rectangle sobre el rectangle [1,2] x[3,4] , es a dir <span class="math inline">\(1 \leq x \leq 2\)</span> i <span class="math inline">\(3 \leq y \leq 4\)</span>.</p>
 <p><span class="math inline">\(V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy\)</span></p>
 <p>Si integren primer en funció de y la integral interior és, tenint en compte que x es constant :</p>
 <p><span class="math inline">\(V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx\)</span></p>
@@ -735,12 +736,8 @@ V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy=5
 <hr />
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-34" class="example"><strong>Exemple 1.15  </strong></span>Considerem un cas on el recinte d’integració no és un rectangle i utilitzem la funció de l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.14</a> f(x,y)=x+y</p>
+<p><span id="exm:unlabeled-div-34" class="example"><strong>Exemple 1.16  </strong></span>Considerem un cas on el recinte d’integració no és un rectangle i utilitzem la funció de l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.15</a> f(x,y)=x+y</p>
 <p>Sigui el triangle <span class="math inline">\(A=\{ (x,y) \in  \mathbb{R}^2: 2 \leq x \leq 4, 2 \leq y \leq x \}\)</span> que és mostra en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle">1.5</a></p>
-<pre><code>## package &#39;patchwork&#39; successfully unpacked and MD5 sums checked
-## 
-## The downloaded binary packages are in
-##  C:\Users\Santiago Perez\AppData\Local\Temp\RtmpisR9aq\downloaded_packages</code></pre>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle"></span>
 <img src="Probabilitat-II_files/figure-html/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
@@ -799,7 +796,7 @@ f(x,y) \approx \frac {P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \}} {dxdy}
 <p>Per altra banda qualsevol corba unidimensional té probabilitat 0. En particular la probabilitat d’una recta <span class="math inline">\(P \{ Y=a+bX \}=0\)</span> o una cercle <span class="math inline">\(P \{ X^2+Y^2=r^2 \} =0\)</span> es 0.</p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-35" class="example"><strong>Exemple 1.16  </strong></span>Per a que la funció que hem calculat la integral doble en l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.14</a> hem de garantir que la integral en tot <span class="math inline">\(\mathbb{R}^2\)</span> sigui 1.</p>
+<p><span id="exm:unlabeled-div-35" class="example"><strong>Exemple 1.17  </strong></span>Per a que la funció que hem calculat la integral doble en l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.15</a> hem de garantir que la integral en tot <span class="math inline">\(\mathbb{R}^2\)</span> sigui 1.</p>
 <p>Per aixó definim la funció de densitat en funció d’una constant que hem de calcular
 <span class="math display">\[
 f(x,y)=
@@ -836,6 +833,8 @@ Figura 1.7: Funció de densitat f(x,y)
 </div>
 <div id="funcions-de-densitat-i-de-distribució-marginals-i-condicionades." class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> Funcions de densitat i de distribució marginals i condicionades.<a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="distribucions-marginals." class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Distribucions marginals.<a href="variables-aleatòries-multivariants.html#distribucions-marginals." class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Les distribucions marginals son les distribucions unidimensionals que ens informa de la distribució dels valors d’una variable prescindint dels valors de les altres.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-36" class="definition"><strong>Definició 1.19  </strong></span><strong>Funció de distribució marginal</strong></p>
@@ -855,11 +854,11 @@ F_{X^l}(X_{i_1},...,X_{i_l})=\lim_{x_j \xrightarrow {j \neq i_1,...,i_l} +\infty
 </div>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-37" class="example"><strong>Exemple 1.17  </strong></span>Generem un triangle T amb vèrtexs en les coordenades (0,0), (1,0) y (0,2), como es veu en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle2">1.8</a>. Repartim la masa de probabilitat uniformment en el triangle donat que l’elegim a l’atzar un punt del triangle. Per a un àrea qualsevol la probabilitat de aquella àrea es</p>
+<p><span id="exm:unlabeled-div-37" class="example"><strong>Exemple 1.18  </strong></span>Generem un triangle T amb vèrtexs en les coordenades (0,0), (1,0) y (0,2), como es veu en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle2">1.8</a>. Repartim la masa de probabilitat uniformment en el triangle donat que l’elegim a l’atzar un punt del triangle. Per a un àrea qualsevol la probabilitat de aquella àrea es</p>
 <p><span class="math display">\[
 P((X,Y) \in A)= \frac {\parallel A \cap T\parallel}{\parallel T\parallel}
 \]</span></p>
-<p>on <span class="math inline">\(\parallel A \parallel\)</span> és l’àreade B.</p>
+<p>on <span class="math inline">\(\parallel A \parallel\)</span> és l’àrea de B.</p>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle2"></span>
 <img src="Probabilitat-II_files/figure-html/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
@@ -908,9 +907,9 @@ y-\frac {y^2}{4},         &amp; \text{si }  0&lt; y &lt; 2 \\
 \]</span></p>
 </div>
 <hr />
-<div id="distribucions-marginals.-cas-discret" class="section level3 hasAnchor" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> Distribucions marginals. Cas discret<a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-discret" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Sigui <span class="math inline">\(D_{X_i}\)</span> el soport numerable de la component <span class="math inline">\(X_i\)</span> d’un vector aleatori <span class="math inline">\(X\)</span> discret, es verifica que</p>
+<div id="distribucions-marginals.-cas-discret" class="section level4 hasAnchor" number="1.3.1.1">
+<h4><span class="header-section-number">1.3.1.1</span> Distribucions marginals. Cas discret<a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-discret" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sigui <span class="math inline">\(D_{X_i}\)</span> el suport numerable de la component <span class="math inline">\(X_i\)</span> d’un vector aleatori <span class="math inline">\(X\)</span> discret, es verifica que</p>
 <p><span class="math display">\[
   \{ X_i=x_i  \}= \bigcup_{x_j \in D_j, j \neq  i } \left(\bigcap_{j=1}^k \{ X_j=x_j \}\right)
 \]</span>
@@ -919,18 +918,146 @@ com que els elements son disjunts podem obtenir la funció de probabilitat margi
 f_{X_i}(x_i)= \sum_{x_j \in D_j, j \neq i} f_X(x_1,...,x_k)
 \]</span></p>
 <hr />
-<div class="example">
-<p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.18  </strong></span>Si revisem la taula del <a href="#exm:taula-discreta"><strong>??</strong></a> exemple on en primer lloc es llança una moneda , o després un dau, observem que la darrera fila conté les probabilitats marginasl d’observar cara o creu que son 1/2 i la darrera columna conté les marginasl d’obtenir un resultat de les cares del dau , és a dir 1/6 per cada valor.</p>
-</div>
+<p>:::{.example marginal}</p>
+<p>Si revisem la taula del exemple <a href="variables-aleatòries-multivariants.html#exm:taula-discreta">1.13</a>, on en primer lloc es llança una moneda y després un dau. Observem que la darrera fila conté les probabilitats marginals d’observar cara o creu, obteneint un valor de 1/2 per cada columna. La darrera columna conté les marginals d’obtenir un resultat de les cares del dau , és a dir 1/6 per cada fila.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Y\X</strong></th>
+<th>Cara (0)</th>
+<th>Creu (1)</th>
+<th><strong><span class="math inline">\(f_Y(y)\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>5</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="even">
+<td><strong>6</strong></td>
+<td>1/12</td>
+<td>1/12</td>
+<td><strong>1/6</strong></td>
+</tr>
+<tr class="odd">
+<td><strong><span class="math inline">\(f_X(x)\)</span></strong></td>
+<td><strong>1/2</strong></td>
+<td><strong>1/2</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>:::</p>
 <hr />
 </div>
-<div id="distribucions-marginals.-cas-continu" class="section level3 hasAnchor" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Distribucions marginals. Cas continu<a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-continu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Si les dues variables <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> con continues, com hem vist abans, perdefinició la distribució marginal de cadascuna de elles la podem escriure com:</p>
+<div id="distribucions-marginals.-cas-continu" class="section level4 hasAnchor" number="1.3.1.2">
+<h4><span class="header-section-number">1.3.1.2</span> Distribucions marginals. Cas continu<a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-continu" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Si les dues variables <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> son continues, com hem vist abans, per definició la distribució marginal de cadascuna de elles la podem escriure com:</p>
 <p><span class="math display">\[
 F_{X}(x)=\lim_{x \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{x}\int_{- \infty}^{+ \infty} f(s
 ,y)dyds
+\]</span>
+<span class="math display">\[
+F_{Y}(y)=\lim_{y \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{y}\int_{- \infty}^{+ \infty} f(t
+,x)dxdt
 \]</span></p>
+<p>Es pot demostrar que tant <span class="math inline">\(F_X(x)\)</span> com <span class="math inline">\(F_Y(y)\)</span> son funcions de distribució . En el següent exemple</p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.19  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:marginal">1.9</a> es mostra una representació de la distribució marginal. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> totes les dades sense tenir en compte la component <span class="math inline">\(X\)</span>, s’obté la función de distribució marginal de <span class="math inline">\(Y\)</span>.</p>
+<div class="figure"><span style="display:block;" id="fig:marginal"></span>
+<img src="Probabilitat-II_files/figure-html/marginal-1.png" alt="Funció de distribució marginal de Y mostral" width="672" />
+<p class="caption">
+Figura 1.9: Funció de distribució marginal de Y mostral
+</p>
+</div>
+</div>
+<hr />
+</div>
+</div>
+<div id="distribucions-condicionals" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Distribucions condicionals<a href="variables-aleatòries-multivariants.html#distribucions-condicionals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sigui (X,Y) un vector aleatori bidimensional definit sobre <span class="math inline">\((\Omega,\mathcal{A},P)\)</span> i <span class="math inline">\(F_{XY}(x,y)\)</span> la seva funció de distribució conjunta. Sabent que ha ocorregut l’esdeveniment <span class="math inline">\(Y \in B\)</span>, ens interessa calcular la probabilitat condicionada que <span class="math inline">\(X \in A\)</span></p>
+<p><span class="math display">\[
+P \{\omega  \in \Omega \quad tq \quad X(\omega) \in A \quad sabiendo  \quad  y\in B\}
+\]</span>
+<span class="math display">\[
+P \{ X \in A / Y \in B \}= \frac {  P \{ X \in A \cap Y \in B \}}  { P \{ Y  \in B \}} =\frac {  P \{ X \in A ,  Y \in B \}}  { P \{ Y  \in B \}} \quad si  \quad P\{ Y \in B=&gt;0\}
+\]</span></p>
+<p>Si <span class="math inline">\(A=] - \infty, x]\)</span> i <span class="math inline">\(B=]- \infty ,y]\)</span> i <span class="math inline">\(F_Y(Y)&gt;0\)</span></p>
+<p><span class="math display">\[
+P(X \leq x | Y \leq y)= \frac {P(X \leq x, Y\leq y)}{ P(Y \leq y)} =\frac {F_{XY}(x,y)}{F_Y(y)}=
+\frac {F_{XY}(x,y)}{\lim_{u \rightarrow +\infty } F_{XY}(u,y)}
+\]</span></p>
+<div id="distribucions-condicionals.-cas-discret" class="section level4 hasAnchor" number="1.3.2.1">
+<h4><span class="header-section-number">1.3.2.1</span> Distribucions condicionals. Cas discret<a href="variables-aleatòries-multivariants.html#distribucions-condicionals.-cas-discret" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Considerem un vector aleatori bidimensional (X,Y), amb suports discrets per cadascuna de les seves components <span class="math inline">\(D_x=(x_1, ...,k)\)</span> i <span class="math inline">\(D_y=(y_1,....,y_h)\)</span> i una funció de probabilitat conjunta <span class="math inline">\(f_XY(x,y)\)</span></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-39" class="definition"><strong>Definició 1.20  </strong></span>** Funció de probabilitat condicionada**</p>
+<p>Es defineix la funció de probabilitat condicionada de <span class="math inline">\(X\)</span> donat <span class="math inline">\((Y=y_j). y \in D_y\)</span>, on <span class="math inline">\(P(Y=y_j)&gt;0\)</span> com</p>
+<p>$$</p>
+<p>f_{X|Y}(x_i|y_j)= P(X=x_i | Y=y_j)= = </p>
+<p>$$</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-40" class="definition"><strong>Definició 1.21  </strong></span><strong><em>Funció de distribució condicionada</em></strong></p>
+<p>A partir de la definició anterior, podem definir la funció de distribució condicionada de X donat que <span class="math inline">\((Y=y_j). y \in D_y\)</span> com:</p>
+<p>$$</p>
+<p>F_{X|Y}= P(X x| Y=y_j) = {f_Y(y_j)}=<em>{x_i x } f</em>{X|Y}(x_i|y_j)
+$$</p>
+</div>
+<p><span class="math inline">\(f_{X|Y}(x|y)\)</span> es efectivamkente una función de probabilitat per qué complexis les dues propietats</p>
+<ul>
+<li>Es una funció no negativa la tractar-se d’una función no neegativa</li>
+<li>y la suma sobre la funció de soport <span class="math inline">\(D_Y\)</span> es l’a unitat</li>
+</ul>
+<p><span class="math display">\[
+\sum_{x_i \in D_X} f_{X|Y}(x_i|y_j)= \frac{ \sum_{x_i \in D_X } f_{XY}(x_i,y_j)}  {f_Y(y_j)}=\frac  {f_Y(y_j)} {f_Y(y_j)}=1
+\]</span>
+—</p>
+<div class="exapmple">
+<p>Tornem a l’exemple de la moneda i el dau i la taula de probabiliatats qe es mostra en l’exemple <a href="#exm:marginal"><strong>??</strong></a> on Y es el valor del dau y X es el resultat de la moneda.</p>
+<p>Calculem la probabilitat de treure una cara donat que el dau ha resultat el valor 4.</p>
+<p>Seguint la definci</p>
+<p><span class="math display">\[
+P(x=cara | Y=4)= \frac { P(X=cara , Y=4)}{ P(Y=4)}= \frac {1/12} {1/6}=1/2
+\]</span>
+En aquest cas la funció de probabilitat condicionada coincideix en la distribució marginal.</p>
+<p>Si ho fessim a l’inreves es a dir la probabilitat d’obtenir un valor del dau si ha sortit cara o ha sortitu creu arribariem a que <span class="math inline">\(P(Y=y|x=cara)=1/6\)</span> que també coincideix amb la marginal.</p>
+<p>Això serà rellevant més endavant quan parlem del concepte d’independència</p>
+</div>
+<hr />
+</div>
+<div id="distribucions-condicionals.-cas-continu" class="section level4 hasAnchor" number="1.3.2.2">
+<h4><span class="header-section-number">1.3.2.2</span> Distribucions condicionals. Cas continu<a href="variables-aleatòries-multivariants.html#distribucions-condicionals.-cas-continu" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
 </div>
 </div>
 <div id="moments-multivariants-vector-desperances-matriu-de-variància-covariància" class="section level2 hasAnchor" number="1.4">
