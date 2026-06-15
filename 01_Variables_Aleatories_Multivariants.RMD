@@ -339,8 +339,10 @@ Alguns exemples de variables aleatòries continues que venen definides per les s
 
 Molts experiments aleatoris produeixen més d'una única quantitat rellevant, és a dir, més d'una variable aleatòria. Veíem alguns exemples
 
+---
+
 ::: {.example #quali1}
--  Imaginem una situació on primer es llança una moneda  amb resultats cara i creu, i després es llança un dau amb 6 resultats.  Així tenim una variable aletòria $X_1$ per a la moneda i una variable aleAtòria $X_2$ per al dau.  El vector en $\mathbb{R}^2$ $(X_1,X_2)$ serà una variable aletatòria bidimensional   composat per dues variables aleatòries unidimensionals
+-  Imaginem una situació on primer es llança una moneda  amb resultats cara i creu, i després es llança un dau amb 6 resultats.  Així tenim una variable aleatòria $X_1$ per a la moneda i una variable aleatòria $X_2$ per al dau.  El vector en $\mathbb{R}^2$ $(X_1,X_2)$ serà una variable aletatòria bidimensional   composat per dues variables aleatòries unidimensionals
 :::
 
 :::{.example}
@@ -351,6 +353,7 @@ Molts experiments aleatoris produeixen més d'una única quantitat rellevant, é
 - En salut podem estar interessats en el resultat d'un experiment on es mesuren diferents paràmetres biomètrics com pes, alçada, índex cintura-maluc,  índex de massa corporal, índex cintura-alçada, perímetre braquial, perímetre abdominal, superfície corporal, etc.  Es tracta d'un vector multimensional definit per k variables unidimensionals en $\mathbb{R}^k$.
 :::
 
+---
 
 
 :::{.definition}
@@ -860,7 +863,9 @@ $$
   \int_2^4  (8+4y-\frac{3y^2}{2})dy = \left [ 8y + 4 \frac{y^2}{2} -\frac {3}{2} \frac {y^3}{3} \right ]_2^4= \left [ 8y + 2y^2-  \frac {y^3}{2}  \right]_2^4 = 8(4)+2(4)^2- \frac {4^3}{2} - (8(2)+2(2)^2- \frac {2^3}{2})=32-20=12
 $$
 Començant primer per fixar la $y$ , hem de avaluar el rang de variació de $x$ i obtenim el mateix resultat al efectuar l'integració( Figura \@ref(fig:graf-triangle) dreta) Per lo que done igual per on començar  a l'hora de fer l'integral doble. S'obtenen els mateixos resultats. 
+
 :::
+
 ---
 
 
@@ -1057,15 +1062,26 @@ com que els elements son disjunts podem obtenir la funció de probabilitat margi
 $$
  f_{X_i}(x_i)= \sum_{x_j \in D_j, j \neq i} f_X(x_1,...,x_k)
 $$
+
 ---
 
 :::{.example}
 
 
-Si  revisem la taula del exemple  \@ref(exm:quali1taula-discreta)
+Si  revisem la taula del \@ref(exm:taula-discreta) exemple on en primer lloc es llança una moneda , o després un dau, observem que la darrera fila conté les probabilitats marginasl d'observar cara o creu que son 1/2 i la darrera columna conté les marginasl d'obtenir un resultat de les cares del dau , és a dir 1/6 per cada valor.
 :::
 
 ---
+
+### Distribucions marginals. Cas continu
+
+Si les dues variables $X$ i $Y$ con continues, com hem vist abans, perdefinició la distribució marginal de cadascuna de elles la podem escriure com:
+
+$$
+F_{X}(x)=\lim_{x \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{x}\int_{- \infty}^{+ \infty} f(s
+,y)dyds
+$$
+
 
 ## Moments multivariants: vector d'esperances, matriu de variància-covariància
 

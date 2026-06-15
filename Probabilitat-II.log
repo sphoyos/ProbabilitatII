@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.7)  12 JUN 2026 14:57
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.7)  13 JUN 2026 11:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -896,13 +896,13 @@ Missing character: There is no à ("E0) in font lmmi10!
 [6]
 Missing character: There is no à ("E0) in font lmmi10!
 Missing character: There is no á ("E1) in font lmmi10!
-[7] [8] [9]
+[7] [8] [9] [10]
 Missing character: There is no à ("E0) in font lmmi10!
-[10] [11]
+[11]
 File: images/distbiv.png Graphic file (type bmp)
 <images/distbiv.png>
 [12]
-Overfull \hbox (61.72845pt too wide) detected at line 838
+Overfull \hbox (61.72845pt too wide) detected at line 842
 []  [][][][] [] [][] [] [] [][] [] [][][][][] [][] [] [][][][] [] [][] [][] [] [][][][][] [] [] [][] [] [][][][][] [] [][][][][][] [] [] [][][][][][] [] [] [][][] [] []
  []
 
@@ -910,16 +910,16 @@ File: images/rectangle.png Graphic file (type bmp)
 <images/rectangle.png>
 [13]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 862.
+LaTeX Font Warning: Command \small invalid in math mode on input line 866.
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 864.
+(Font)              scaled to size 9.0pt on input line 868.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.00082pt on input line 864.
+(Font)              scaled to size 9.00082pt on input line 868.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 864.
+(Font)              scaled to size 8.99904pt on input line 868.
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 878.
+LaTeX Font Warning: Command \small invalid in math mode on input line 882.
 
 [14] [15]
 File: images/densconjunta.png Graphic file (type bmp)
@@ -930,19 +930,19 @@ File: images/doubleintegral1.png Graphic file (type bmp)
 File: Probabilitat-II_files/images/graf-triangle-1.pdf Graphic file (type pdf)
 <use Probabilitat-II_files/images/graf-triangle-1.pdf>
 
-Overfull \hbox (28.51031pt too wide) detected at line 1116
+Overfull \hbox (28.51031pt too wide) detected at line 1120
 [][][][] [] [][] [] [][][][] [] [][] [] [][] [] [][][][] [] [][][][][] [] [] [] [][][][][] [] [][][][][] [] [][] [] [][] [] [][] [] [][]
  []
 
 [18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1129
 
  []
 
 File: images/doubleintegral2.png Graphic file (type bmp)
 <images/doubleintegral2.png>
 
-Overfull \hbox (33.98537pt too wide) detected at line 1144
+Overfull \hbox (33.98537pt too wide) detected at line 1148
 [][][] [] [] [] [] [] [][][] [] [] [] [] [] [] [][][] [] [][][][][] [][] [] [][][] [] [] [][][] [] [][][] [] [] [][][] [] []  [][] [][] [][][][] [][][][][][] [] [][][][] [][][][][][][]
  []
 
@@ -956,15 +956,15 @@ Missing character: There is no ó ("F3) in font lmmi10!
 Missing character: There is no ó ("F3) in font lmmi10!
 [23] [24]
 
-LaTeX Warning: Reference `exm:quali1taula-discreta' on page 25 undefined on input line 1313.
+LaTeX Warning: Reference `exm:quali1taula-discreta' on page 25 undefined on input line 1317.
 
 
-Underfull \hbox (badness 3098) in paragraph at lines 1318--1318
+Underfull \hbox (badness 3098) in paragraph at lines 1322--1322
 []\TU/lmr/bx/n/12 Moments multivariants: vector d’esperances, matriu de variància-
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1373--1374
+Underfull \hbox (badness 10000) in paragraph at lines 1377--1378
 
  []
 
@@ -972,39 +972,39 @@ Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=t
 Missing character: There is no σ (U+03C3) in font [lmroman10-bold]:mapping=tex-text;!
 Missing character: There is no σ (U+03C3) in font [lmroman10-bold]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1391--1393
+Underfull \hbox (badness 10000) in paragraph at lines 1395--1397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1393--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1397--1399
 
  []
 
 Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1417--1419
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1421
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1425
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1421--1422
+Underfull \hbox (badness 10000) in paragraph at lines 1425--1426
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1434--1436
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1523--1525
+Underfull \hbox (badness 10000) in paragraph at lines 1527--1529
 
  []
 
