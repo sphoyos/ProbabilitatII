@@ -107,6 +107,7 @@
 <li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
 <ul>
 <li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-discret"><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals. Cas discret</a></li>
+<li class="chapter" data-level="1.3.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-continu"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions marginals. Cas continu</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a></li>
 <li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a></li>
@@ -115,6 +116,7 @@
 <ul>
 <li class="chapter" data-level="2.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries."><i class="fa fa-check"></i><b>2.1</b> Independència i dependència entre variables aleatòries.</a></li>
 <li class="chapter" data-level="2.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat."><i class="fa fa-check"></i><b>2.2</b> Conceptes de covariància, correlació i causalitat.</a></li>
+<li class="chapter" data-level="2.3" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#esperances-i-vari%C3%A0ncies-condicionades."><i class="fa fa-check"></i><b>2.3</b> Esperances i variàncies condicionades.</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html"><i class="fa fa-check"></i><b>3</b> Algunes distribucions multivariants</a>
 <ul>
@@ -735,8 +737,12 @@ V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy=5
 <div class="example">
 <p><span id="exm:unlabeled-div-34" class="example"><strong>Exemple 1.15  </strong></span>Considerem un cas on el recinte d’integració no és un rectangle i utilitzem la funció de l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.14</a> f(x,y)=x+y</p>
 <p>Sigui el triangle <span class="math inline">\(A=\{ (x,y) \in  \mathbb{R}^2: 2 \leq x \leq 4, 2 \leq y \leq x \}\)</span> que és mostra en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle">1.5</a></p>
+<pre><code>## package &#39;patchwork&#39; successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+##  C:\Users\Santiago Perez\AppData\Local\Temp\RtmpisR9aq\downloaded_packages</code></pre>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle"></span>
-<img src="images/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<img src="Probabilitat-II_files/figure-html/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
 Figura 1.5: Dues maneres d’obtenir la densitat conjunta d’un triangle
 </p>
@@ -818,7 +824,7 @@ donat que la funció <span class="math inline">\(f(x,y) \leq 0\)</span> per a to
 El valor de k és per tant 1/5 per a que f(x,y) sigui una funció de densitat.</p>
 <p>En la figura <a href="variables-aleatòries-multivariants.html#fig:density2">1.7</a> es mostra la funció de densitat que val (x+y)/5 per als punts (x,y) en el rectangle A definit i 0 en la resta.</p>
 <div class="figure"><span style="display:block;" id="fig:density2"></span>
-<img src="images/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
+<img src="Probabilitat-II_files/figure-html/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
 <p class="caption">
 Figura 1.7: Funció de densitat f(x,y)
 </p>
@@ -855,7 +861,7 @@ P((X,Y) \in A)= \frac {\parallel A \cap T\parallel}{\parallel T\parallel}
 \]</span></p>
 <p>on <span class="math inline">\(\parallel A \parallel\)</span> és l’àreade B.</p>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle2"></span>
-<img src="images/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<img src="Probabilitat-II_files/figure-html/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
 Figura 1.8: Dues maneres d’obtenir la densitat conjunta d’un triangle
 </p>
@@ -911,12 +917,20 @@ y-\frac {y^2}{4},         &amp; \text{si }  0&lt; y &lt; 2 \\
 com que els elements son disjunts podem obtenir la funció de probabilitat marginal com</p>
 <p><span class="math display">\[
 f_{X_i}(x_i)= \sum_{x_j \in D_j, j \neq i} f_X(x_1,...,x_k)
-\]</span>
-—</p>
+\]</span></p>
+<hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.18  </strong></span>Si revisem la taula del exemple <a href="#exm:quali1taula-discreta"><strong>??</strong></a></p>
+<p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.18  </strong></span>Si revisem la taula del <a href="#exm:taula-discreta"><strong>??</strong></a> exemple on en primer lloc es llança una moneda , o després un dau, observem que la darrera fila conté les probabilitats marginasl d’observar cara o creu que son 1/2 i la darrera columna conté les marginasl d’obtenir un resultat de les cares del dau , és a dir 1/6 per cada valor.</p>
 </div>
 <hr />
+</div>
+<div id="distribucions-marginals.-cas-continu" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Distribucions marginals. Cas continu<a href="variables-aleatòries-multivariants.html#distribucions-marginals.-cas-continu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Si les dues variables <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> con continues, com hem vist abans, perdefinició la distribució marginal de cadascuna de elles la podem escriure com:</p>
+<p><span class="math display">\[
+F_{X}(x)=\lim_{x \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{x}\int_{- \infty}^{+ \infty} f(s
+,y)dyds
+\]</span></p>
 </div>
 </div>
 <div id="moments-multivariants-vector-desperances-matriu-de-variància-covariància" class="section level2 hasAnchor" number="1.4">
@@ -926,6 +940,7 @@ f_{X_i}(x_i)= \sum_{x_j \in D_j, j \neq i} f_X(x_1,...,x_k)
 <div id="transformacions-de-variables-multivariants" class="section level2 hasAnchor" number="1.5">
 <h2><span class="header-section-number">1.5</span> Transformacions de variables multivariants<a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Text aquí.</p>
+<p>mas texto 15/06/2026</p>
 
 </div>
 </div>
