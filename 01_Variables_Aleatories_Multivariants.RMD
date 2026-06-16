@@ -1323,12 +1323,12 @@ f_X(x)= \int_{- \infty}^{+ \infty} f_{XY}(x,y) dy =
 \end{cases}
 $$
 
-Per obtenir la funció de densitat condicionada $f_{X|Y}$} només caldra dividir la funció de densitat conjunta respecta a la marginal
+Per obtenir la funció de densitat condicionada $f_{X|Y}$ només caldra dividir la funció de densitat conjunta  $f_{XY}$ respecta a la marginal  $f_{Y}$}
 
 
 
 $$
-f_{X|Y}(x)= \frac {f_{X,X} (x,y)} {f_Y(y)} = 
+f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} = 
 \begin{cases}
 \frac {4xy^3}{2y}= 2xy^2  ,              & \text{si } y \in (0,1) \quad y \quad xy \in (0,1) \\
 0,              & \text{en la resta }  \\
@@ -1342,6 +1342,21 @@ El la gràfica \@ref(fig:img-condicionada3) es pot veure la representació de la
 knitr::include_graphics("images/condicionada_Y.png")
 ```
 
+
+De forma análoga es pot  obtenir la fusnió de densitat condicionada $f_{X|Y}$  dividint la funció de densitat conjunta  $f_{XY}$ respecta a la marginal  $f_{X}$}
+
+
+
+$$
+f_{Y|X}(y)= \frac {f_{X,Y} (x,y)} {f_X(x)} = 
+\begin{cases}
+\frac {4xy^3}{x}= 4y^3  ,              & \text{si } y \in (0,1) \quad y \quad xy \in (0,1) \\
+\frac {4xy^3}{1/x^3}= 4x^4y^3  ,              & \text{si } y \in (0,1) \quad y \quad xy \in (0,1) \quad y \quad x>1 \\
+0,              & \text{en la resta }  \\
+\end{cases}
+$$
+
+
 :::
   
 ---
@@ -1349,8 +1364,92 @@ knitr::include_graphics("images/condicionada_Y.png")
 
 ## Moments multivariants: vector d'esperances, matriu de variància-covariància
 
-Text aquí.
+### Moments univariants: Esperanza i Variància
 
+En el cas univariant  podem parlar de certes característiques numèriques o constants lligades a les variables que ens permet caracteritzar-les. Son els moments , dels cuals l'esperanza i la variància son casos particulars. 
+
+:::{.Definition}
+**Esperanza d'una variable aleatòria discreta**
+ 
+ Sigui $X$ una variable aleatòria discreta on  $f_X$  es la seva funció de probabilitat i $D_x$ el seu suport numerable. Si g es una funció mesurable definida de $(\mathbb{R},\beta)$ en  $(\mathbb{R},\beta)$, tal que $\sum_{x_i \in D_x} |g(x_i)f_X(x_i)|< + \infty$ definim l'esperança de $g(X)$ a
+ 
+ $$
+ E[g(X)]=\sum_{x_i \in D_x} g(x_i)f_X(x_i)
+ $$
+En particular, si $g(X)= X$
+$$
+E[X]=\sum_{x_i \in D_x} x_if_X(x_i)
+$$
+que sería la mitjana poblacional de la distribució de la variabla $X$
+
+:::
+
+
+:::{.Definition}
+**Esperanza d'una variable aleatòria continua**
+ 
+ Sigui $X$ una variable aleatòria continua on  $f_X$  es la seva funció de densitat . Si g es una funció mesurable definida de $(\mathbb{R},\beta)$ en  $(\mathbb{R},\beta)$, tal que $\int_{\mathbb{R}} |g(x)f_X(x)dx|< + \infty$ definim l'esperança de $g(X)$ a
+ 
+ $$
+ E[g(X)]=\int_{-\infty}^{+\infty}  g(x)f_X(x)dx
+ $$
+En particular, si $g(X)= X$
+$$
+ E[X]=\int_{-\infty}^{+\infty}  xf_X(x)dx
+$$
+que sería la mitjana poblacional de la distribució de la variabla $X$
+:::
+
+Formes particulars de g(X)  donen lloc a diferents moments de X en la següent taula es mostren els més utilitzats
+$$
+\begin{array}{|l|c|c|}
+\hline
+ & \text{d'ordre } k & \text{absolut d'ordre } k \\
+\hline
+\text{Respecte del origen} & X^k & |X|^k \\
+\hline
+\text{Respecte de } a & (X-a)^k & |X-a|^k \\
+\hline
+\text{Factorials} & X(X-1)\cdots(X-k+1) &
+|X(X-1)\cdots(X-k+1)| \\
+\hline
+\end{array}
+$$
+
+
+   Així el moment d'ordre 1 es  la **$E[X]=\mu$ mitjana** de la distribució  i el moment central d'ordre 2 es la **variancia $Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2$.** 
+
+
+### Moments multivariants: Esperanza i Variància
+
+:::{.Definition}
+
+**Esperanza d'un vector alatori discret**
+ 
+ Sigui $X=(X_1,...,X_k)$ un vector aleatori discret, $D_X$ el suport del vector i $f_X$  es la seva funció de probabilitat conjunta. Si g es una funció mesurable definida de $\mathbb{R^k}$ en  $\mathbb{R}$  
+ 
+ $$
+ E[g(X)]=\sum_{(x_1,...,x_k)  \in D_x} g(x_1,...,x_k)f_X(x_1,...,x_k)
+ $$
+:::
+
+:::{.Definition}
+
+**Esperanza d'un vector alatori continu**
+ 
+ Sigui $X=(X_1,...,X_k)$ un vector aleatori continu $f_X$  es la seva funció de densitat conjunta. Si g es una funció mesurable definida de $\mathbb{R^k}$ en  $\mathbb{R}$  
+ 
+ $$
+ E[g(X)]=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(x_1,...,x_k)f_X(x_1,...,x_k)dx_1,...,dx_k
+ $$
+:::
+En ambos caos l'esperança esta supeditada a que |g(x)f(x)| siguin absolutamente sumplae o integrable.
+
+:::{.Definition}
+**Moments d'un vector aleatori**
+
+
+::: 
 ## Transformacions de variables multivariants
 
 Text aquí.
