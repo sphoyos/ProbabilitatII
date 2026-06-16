@@ -1158,17 +1158,16 @@ $$
 Considerem un vector aleatori bidimensional (X,Y), amb suports discrets per cadascuna de les seves components $D_x=(x_1, ...,k)$ i $D_y=(y_1,....,y_h)$ i una funció de probabilitat conjunta $f_XY(x,y)$ 
 
 :::{.definition}
-** Funció de probabilitat condicionada**
+**Funció de probabilitat condicionada**
 
-Es defineix la funció de probabilitat condicionada de $X$ donat $(Y=y_j). y \in D_y$, on $P(Y=y_j)>0$ com  
+Es defineix la funció de probabilitat condicionada de $X$ donat $(Y=y_j),  y \in D_y$, on $P(Y=y_j)>0$ com  
 
-$$
-
-f_{X|Y}(x_i|y_j)= P(X=x_i | Y=y_j)= \frac {P(X=x_i, Y=y_j)}{P(Y=yj)}= \frac {f(x_i,y_j)}{f_Y(yj)}
 
 $$
+f_{X|Y} (x_i| y_j)=f_{X|Y}(x_i|y_j)=P(X=x_i | Y=y_j)=\frac {P(X=x_i, Y=y_j)}{P(Y=yj)}=\frac {f_{XY}(x_i,y_j)}{f_Y(yj)}
+$$
+
 :::
-
 
 :::{.definition}
 ***Funció de distribució condicionada***
@@ -1177,12 +1176,10 @@ A partir de la definició anterior,  podem definir la funció de distribució co
 
 
 $$
-
-F_{X|Y}= P(X \leq x| Y=y_j) = \frac{ \sum_{x_i \leq x } f_{XY}(x_i,y_j)}  {f_Y(y_j)}=\sum_{x_i \leq x } f_{X|Y}(x_i|y_j) 
+F_{X|Y}= P(X \leq x| Y=y_j) =\frac{ \sum_{x_i \leq x } f_{XY}(x_i,y_j)}  {f_Y(y_j)}=\sum_{x_i \leq x } f_{X|Y}(x_i|y_j) 
 $$
 
 :::
-
 
 $f_{X|Y}(x|y)$ es efectivamkente una función de probabilitat per qué complexis les dues propietats
 
@@ -1194,7 +1191,7 @@ $$
 $$
 ---
 
-::: {.exapmple }
+::: {.example }
 
 Tornem a  l'exemple de la moneda  i el dau  i la taula de probabiliatats qe es mostra en l'exemple \@ref(exm:marginal) on Y es el valor del dau y X es el resultat de la moneda. 
 
@@ -1216,6 +1213,139 @@ Això serà rellevant més endavant quan parlem del concepte d'independència
 
 #### Distribucions condicionals. Cas continu 
 
+:::{.definition}
+**Funció de densitat condicional**
+
+Siguin X e Y dues variables aleatòries continues on $f_{XY}$ es la funció de densitat conjunta , i $f_X$ i $f_Y$ son les funcions de densitat marginal.  Definim la densitat condicional de X donat que $Y=y$ a la funció 
+
+
+$$
+f_{X|Y=y}(x)= \frac {f_{XY}(x,y)}{f_Y(y)}, \text{ per a} - \infty \leq x \leq + \infty
+$$
+- Cal notar que $f_{X|Y=y$ no més està definida per valors de $y$ on  $f_Y(y)>0$
+
+- Sembla per la definició que estem condicionat per la probabilitat de que $Y=y$, però al tractar-se d'una variable continua aquesta probabilitat es 0. La funció de densitat condicional és el límit d'una probabilitat condicional a mesura que el radi de la regió circular de (x,y) tendeix a 0.
+
+
+Análogament es pot definir la funció de densitat condicional de Y donat que $X=x$  a la funció 
+
+
+
+
+$$
+f_{Y|X=x}(y)= \frac {f_{XY}(x,y)}{f_X(x)}, \text{ per a} - \infty \leq y \leq + \infty
+$$
+::: 
+
+La funció $f_{X|Y=y}$ es una densitat ja que per definició es positiva i si la integrem dona 1.
+
+
+
+
+$$
+\int_{-\infty}^{+\infty}f_{X|Y=y}(x)dx=\int_{-\infty}^{+\infty} \frac {f_{XY}(x,y)}{f_Y(y)}dx=\frac {1}{f_Y(y)}\int_{-\infty}^{+\infty}f_{XY}(x,y=)\frac {1}{f_Y(y)}{f_Y(y)}=1
+
+$$
+
+---
+
+::: {.example }
+
+
+
+
+ En la figura \@ref(fig:condicionada) es mostra una representació de la distribució condicionada de $Y$ en funció de $X$ l. El diagrama de dispersió representa les coordenades $(x,y)$ de les observacions. Si es projecten en l'eix $Y$  els valors de la variable de Y per a les coordenades $x$ incloses en l'interval $[a,a+\epsilon]$ e, S'obté la función de distribució condicionada $Y|X=a$.
+
+
+
+```{r condicionada, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Funció de distribució condicionada de Y en funció de X mostral"}
+source("Rcode/projecciocondicional.R")
+```
+
+
+
+:::
+
+---
+
+
+---
+
+::: {.example }
+
+
+
+Sigui la següent funció de densitat conjunta  provinent de treure a l'atzar un punt sota una parabòla . 
+
+
+
+$$
+f_{XY}(x,y)=
+\begin{cases}
+4x y^3,              & \text{si } y \in (0,1), xy \in (0,1)   \Leftrightarrow   0<y<1, 0<x<\frac {1}{y}  \\
+0,              & \text{en la resta }  \\
+\end{cases}
+$$
+El la gràfica \@ref(fig:img-condicionada2) es pot veure la representació de la funció de densitat conjunta. 
+
+
+```{r img-condicionada2, fig.cap="Exemple de distribució conjunta", echo=FALSE,fig.align='center'}
+knitr::include_graphics("images/condicionada_joint.png")
+```
+
+
+
+Si calculem la funció de densitat marginal de $Y$ obtenim una funció que es diferent de 0 si $y \in 1$
+
+
+$$
+f_Y(y)= \int_{- \infty}^{+ \infty} f_{XY}(x,y) dx = 
+\begin{cases}
+ 4 y^3 \int_0^{1/y} xdx= y^3 \left [\frac {x^2}{2}\right]_0^{1/y} 
+ =2y ,              & \text{si } y \in (0,1) \\
+0,              & \text{en la resta }  \\
+\end{cases}
+$$
+
+
+ De la mateixa manera podem obtenir la funció de densitat marginal de $X$  com 
+ 
+ 
+ 
+
+$$
+f_X(x)= \int_{- \infty}^{+ \infty} f_{XY}(x,y) dy = 
+\begin{cases}
+ 4x \int_0^{1} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1}=x ,              & \text{si } x \in (0,1) \\
+ 4x \int_0^{1/x} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1/x}=\frac{1}{x^3} ,              & \text{si } x >1) \\
+ 
+0,              & \text{en la resta }  \\
+\end{cases}
+$$
+
+Per obtenir la funció de densitat condicionada $f_{X|Y}$} només caldra dividir la funció de densitat conjunta respecta a la marginal
+
+
+
+$$
+f_{X|Y}(x)= \frac {f_{X,X} (x,y)} {f_Y(y)} = 
+\begin{cases}
+\frac {4xy^3}{2y}= 2xy^2  ,              & \text{si } y \in (0,1) \quad y \quad xy \in (0,1) \\
+0,              & \text{en la resta }  \\
+\end{cases}
+$$
+El la gràfica \@ref(fig:img-condicionada3) es pot veure la representació de la funció de densitat condicional $X|Y$ per a cada valor de $y$ . 
+
+
+
+```{r img-condicionada3, fig.cap="Exemple de distribució condicionada X|Y", echo=FALSE,fig.align='center'}
+knitr::include_graphics("images/condicionada_Y.png")
+```
+
+:::
+  
+---
+
 
 ## Moments multivariants: vector d'esperances, matriu de variància-covariància
 
@@ -1227,4 +1357,4 @@ Text aquí.
 
 
 mas texto 15/06/2026
-
+por la tarde

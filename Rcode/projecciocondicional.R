@@ -51,9 +51,9 @@ p <- ggplot(datos, aes(x = x, y = y)) +
   # Flechas de proyección
   annotate(
     "segment",
-    x = a +0.15, xend = max(x) + .5,
-    y = c(-2, 0, 2),
-    yend = c(-2, 0, 2),
+    x = a +0.15, xend = max(x) + .2,
+    y = c(-1, 0.8, 2.5),
+    yend = c(-1, 0.8, 2.5),
     colour = "red",
     linewidth = 0.8,
     linetype = "dashed",
@@ -62,7 +62,7 @@ p <- ggplot(datos, aes(x = x, y = y)) +
   
   annotate(
     "text",
-    x = max(x) - 0.2,
+    x = max(x) - 0.6,
     y = 0.6,
     label = "Projection",
     colour = "red",
@@ -72,7 +72,7 @@ p <- ggplot(datos, aes(x = x, y = y)) +
   
   annotate(
     "text",
-    x =a,
+    x =a-0.15,
     y =min(y) -0.5,
     label = "a",
     colour = "red",
@@ -81,31 +81,79 @@ p <- ggplot(datos, aes(x = x, y = y)) +
   
   annotate(
     "text",
-    x =a+eps,
+    x =a+0.6,
     y = min(y)-0.5,
     label = "a+epsilon",
     colour = "red",
     parse=TRUE
   )
   
+   # 
+   # g_hist <- ggplot(datos_proj, aes(y)) +
+   # geom_histogram(
+   #   bins = 10,
+   #   fill="skyblue",
+   #   color="grey40"
+   #   )+
+   # 
+   #   coord_flip() +
+   #   scale_x_reverse() +
+   #   theme_void()
 
-  g_hist <- ggplot(datos_proj, aes(y)) +
-  geom_histogram(
-    bins = 10,
-    fill="skyblue",
-    color="grey40"
-    )+
-    
-    coord_flip() +
-    scale_x_reverse() +
-    theme_void()
-  
-
+# print(g_hist)
   library(cowplot)
   
-  plot_grid(
-    p,
-    g_hist,
-    nrow = 1,
-    rel_widths = c(4, 1)
-  )
+ # g<- plot_grid(
+ #    p,
+ #    g_hist,
+ #    nrow = 1,
+ #    rel_widths = c(4, 1)
+ #  )
+
+# 
+# aligned <- align_plots(p, g_hist, align = "h", axis = "tb")
+# 
+# g <- plot_grid(
+#   aligned[[1]],
+#   aligned[[2]],
+#   nrow = 1,
+#   rel_widths = c(4, 1)
+# )
+
+
+ 
+
+ 
+ # Histograma de los valores seleccionados
+ h <- hist(datos_proj$y, breaks = 10, plot = FALSE)
+ 
+ # Escalar las frecuencias para que entren a la derecha
+ anchura <- 0.8
+ freq <- h$counts / max(h$counts) * anchura
+ 
+ hist_df <- data.frame(
+   ymin = h$breaks[-length(h$breaks)],
+   ymax = h$breaks[-1],
+   xmin = max(datos$x) + 0.2,
+   xmax = max(datos$x) + 0.2 + freq
+ )
+ 
+g<- p +
+   geom_rect(
+     data = hist_df,
+     aes(
+       xmin = xmin,
+       xmax = xmax,
+       ymin = ymin,
+       ymax = ymax
+     ),
+     inherit.aes = FALSE,
+     fill = "skyblue",
+     colour = "grey40"
+   ) +
+   coord_cartesian(
+     xlim = c(min(datos$x), max(hist_df$xmax) + 0.2)
+   )
+ 
+ print (g)
+ 
