@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.4)  15 JUN 2026 11:12
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.17)  17 JUN 2026 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,21 +385,23 @@ Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
 \extratabsurround=\skip58
 \backup@length=\skip59
 \ar@cellbox=\box61
-) (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+)
+\c@none=\count322
+(c:/ProgramData/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count322
-\calc@Bcount=\count323
+\calc@Acount=\count323
+\calc@Bcount=\count324
 \calc@Adimen=\dimen187
 \calc@Bdimen=\dimen188
 \calc@Askip=\skip60
 \calc@Bskip=\skip61
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count324
+\calc@Ccount=\count325
 \calc@Cskip=\skip62
 ) (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count325
+\etb@tempcnta=\count326
 ) (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box62
@@ -450,19 +452,19 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count326
+\c@section@level=\count327
 ) (c:/ProgramData/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen192
-\Hy@linkcounter=\count327
-\Hy@pagecounter=\count328
+\Hy@linkcounter=\count328
+\Hy@pagecounter=\count329
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
 ) (c:/ProgramData/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count329
+\Hy@SavedSpaceFactor=\count330
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
 )
@@ -474,7 +476,7 @@ Package hyperref Info: Plain pages OFF on input line 4214.
 Package hyperref Info: Backreferencing OFF on input line 4219.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4466.
-\c@Hy@tempcnt=\count330
+\c@Hy@tempcnt=\count331
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip19
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -486,7 +488,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (c:/ProgramData/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count331
+\Fld@menulength=\count332
 \Field@Width=\dimen194
 \Fld@charsize=\dimen195
 Package hyperref Info: Hyper figures OFF on input line 6091.
@@ -496,18 +498,18 @@ Package hyperref Info: backreferencing OFF on input line 6106.
 Package hyperref Info: Link coloring OFF on input line 6111.
 Package hyperref Info: Link coloring with OCG OFF on input line 6116.
 Package hyperref Info: PDF/A mode OFF on input line 6121.
-\Hy@abspage=\count332
-\c@Item=\count333
-\c@Hfootnote=\count334
+\Hy@abspage=\count333
+\c@Item=\count334
+\c@Hfootnote=\count335
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
 File: hxetex.def 2026-04-24 v7.01q Hyperref driver for XeTeX
 \pdfm@box=\box64
-\c@Hy@AnnotLevel=\count335
-\HyField@AnnotCount=\count336
-\Fld@listcount=\count337
-\c@bookmark@seq@number=\count338
+\c@Hy@AnnotLevel=\count336
+\HyField@AnnotCount=\count337
+\Fld@listcount=\count338
+\c@bookmark@seq@number=\count339
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 (c:/ProgramData/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -518,7 +520,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip63
 ) (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-xetex.def
 File: bkm-xetex.def 2026-05-21 v1.32 bookmark driver for xetex (HO)
-\BKM@id=\count339
+\BKM@id=\count340
 )) (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks26
@@ -531,38 +533,38 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip66
 \dth@everypar=\toks31
 )
-\c@theorem=\count340
-\c@lemma=\count341
-\c@corollary=\count342
-\c@proposition=\count343
-\c@conjecture=\count344
-\c@definition=\count345
-\c@example=\count346
-\c@exercise=\count347
-\c@hypothesis=\count348
-(./Probabilitat-II.aux)
+\c@theorem=\count341
+\c@lemma=\count342
+\c@corollary=\count343
+\c@proposition=\count344
+\c@conjecture=\count345
+\c@definition=\count346
+\c@example=\count347
+\c@exercise=\count348
+\c@hypothesis=\count349
+No file Probabilitat-II.aux.
 \openout1 = `Probabilitat-II.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -598,19 +600,19 @@ LaTeX Font Info:    ... okay on input line 98.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 98.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 99.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 98.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 99.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 98.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 99.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 98.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 99.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 98.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 99.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 98.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 99.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 98.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 99.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999964596882403.
@@ -638,7 +640,7 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 98.
+(Font)              scaled to size 10.0pt on input line 99.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999964596882403.
@@ -674,15 +676,15 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999964596882403]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 98.
+(Font)              scaled to size 10.0pt on input line 99.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 98.
+(Font)              `operators' in the math version `normal' on input line 99.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 98.
+(Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 99.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 98.
+(Font)              `operators' in the math version `bold' on input line 99.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 98.
+(Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 99.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999964596882403.
@@ -748,13 +750,13 @@ Package fontspec Info:
 (fontspec)             <->s*[1.000096459334209]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 98.
+(Font)              `symbols' in the math version `normal' on input line 99.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 98.
+(Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 99.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 98.
+(Font)              `symbols' in the math version `bold' on input line 99.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 98.
+(Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 99.
 
 Package fontspec Info: 
 (fontspec)             latinmodern-math scale = 0.9999964596882403.
@@ -814,59 +816,66 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9998964600422715]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 98.
+(Font)              `largesymbols' in the math version `normal' on input line 99.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 98.
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 99.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 98.
+(Font)              `largesymbols' in the math version `bold' on input line 99.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 98.
-Package hyperref Info: Link coloring OFF on input line 98.
-(./Probabilitat-II.toc
+(Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 99.
+Package hyperref Info: Link coloring OFF on input line 99.
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+No file Probabilitat-II.toc.
+\tf@toc=\write3
+\openout3 = `Probabilitat-II.toc'.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in none 1 on input line 129.
+
+Missing character: There is no   (U+2003) in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no   (U+2003) in font [lmroman10-regular]:mapping=tex-text;!
+[1
+
+] [2] [3]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 2.
+(Font)              scaled to size 7.0pt on input line 341.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 2.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2.
+(Font)              scaled to size 5.0pt on input line 341.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 341.
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 2.
+(Font)              scaled to size 10.00092pt on input line 341.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 2.
+(Font)              scaled to size 7.00064pt on input line 341.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 2.
+(Font)              scaled to size 5.00046pt on input line 341.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 2.
+(Font)              scaled to size 9.99893pt on input line 341.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 2.
+(Font)              scaled to size 6.99925pt on input line 341.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 2.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+(Font)              scaled to size 4.99947pt on input line 341.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 341.
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 341.
 (c:/ProgramData/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-])
-\tf@toc=\write3
-\openout3 = `Probabilitat-II.toc'.
-
-Missing character: There is no   (U+2003) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no   (U+2003) in font [lmroman10-regular]:mapping=tex-text;!
-[2] [3] [4] [5]
+) [4]
 Missing character: There is no σ (U+03C3) in font [lmroman10-bold]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
+Underfull \hbox (badness 10000) in paragraph at lines 378--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--375
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
 
  []
 
@@ -875,144 +884,200 @@ Missing character: There is no à ("E0) in font lmmi10!
 Missing character: There is no à ("E0) in font lmmi10!
 Missing character: There is no á ("E1) in font lmmi10!
 Missing character: There is no à ("E0) in font lmmi10!
-[6]
+[5]
 Missing character: There is no à ("E0) in font lmmi10!
 Missing character: There is no á ("E1) in font lmmi10!
-[7] [8] [9] [10]
+[6] [7] [8] [9]
 Missing character: There is no à ("E0) in font lmmi10!
-[11]
+[10]
+
+LaTeX Warning: Reference `fig:img-distbiv' on page 11 undefined on input line 795.
+
 File: images/distbiv.png Graphic file (type bmp)
 <images/distbiv.png>
-[12]
-Overfull \hbox (61.72845pt too wide) detected at line 842
+[11]
+
+LaTeX Warning: Reference `fig:img-rectangle' on page 12 undefined on input line 838.
+
+
+Overfull \hbox (61.72845pt too wide) detected at line 849
 []  [][][][] [] [][] [] [] [][] [] [][][][][] [][] [] [][][][] [] [][] [][] [] [][][][][] [] [] [][] [] [][][][][] [] [][][][][][] [] [] [][][][][][] [] [] [][][] [] []
  []
 
+[12]
 File: images/rectangle.png Graphic file (type bmp)
 <images/rectangle.png>
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 873.
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 874.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 874.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 9.00082pt on input line 874.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.00055pt on input line 874.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 8.99904pt on input line 874.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 874.
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 889.
+
 [13]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 866.
+LaTeX Warning: Reference `exm:quali1' on page 14 undefined on input line 925.
 
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 867.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 867.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.00082pt on input line 867.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 867.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 867.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 867.
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 882.
+Package longtable Warning: Column widths have changed
+(longtable)                in none 4 on input line 944.
 
-[14] [15]
+[14]
+
+LaTeX Warning: Reference `fig:img-densconjunta' on page 15 undefined on input line 996.
+
 File: images/densconjunta.png Graphic file (type bmp)
 <images/densconjunta.png>
+
+LaTeX Warning: Reference `fig:img-doubleintegral1' on page 15 undefined on input line 1017.
+
+[15]
 File: images/doubleintegral1.png Graphic file (type bmp)
 <images/doubleintegral1.png>
-[16] [17]
+[16]
+
+LaTeX Warning: Reference `exm:densitat1' on page 17 undefined on input line 1091.
+
+
+LaTeX Warning: Reference `fig:graf-triangle' on page 17 undefined on input line 1093.
+
 File: images/graf-triangle-1.pdf Graphic file (type pdf)
 <use images/graf-triangle-1.pdf>
-[18]
-Overfull \hbox (28.51031pt too wide) detected at line 1122
+
+LaTeX Warning: Reference `fig:graf-triangle' on page 17 undefined on input line 1119.
+
+
+Overfull \hbox (28.51031pt too wide) detected at line 1133
 [][][][] [] [][] [] [][][][] [] [][] [] [][] [] [][][][] [] [][][][][] [] [] [] [][][][][] [] [][][][][] [] [][] [] [][] [] [][] [] [][]
  []
 
+[17] [18]
 
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
+LaTeX Warning: Reference `fig:graf-triangle' on page 19 undefined on input line 1134.
+
+
+LaTeX Warning: Reference `fig:img-doubleintegral2' on page 19 undefined on input line 1139.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1141--1142
 
  []
 
 File: images/doubleintegral2.png Graphic file (type bmp)
 <images/doubleintegral2.png>
 
-Overfull \hbox (33.98537pt too wide) detected at line 1150
+Overfull \hbox (33.98537pt too wide) detected at line 1161
 [][][] [] [] [] [] [] [][][] [] [] [] [] [] [] [][][] [] [][][][][] [][] [] [][][] [] [] [][][] [] [][][] [] [] [][][] [] []  [][] [][] [][][][] [][][][][][] [] [][][][] [][][][][][][]
  []
 
-[19] [20]
+[19]
+
+LaTeX Warning: Reference `exm:densitat1' on page 20 undefined on input line 1176.
+
+
+LaTeX Warning: Reference `fig:density2' on page 20 undefined on input line 1204.
+
 File: images/density2-1.pdf Graphic file (type pdf)
 <use images/density2-1.pdf>
-[21]
+[20] [21]
+
+LaTeX Warning: Reference `fig:graf-triangle2' on page 22 undefined on input line 1248.
+
 File: images/graf-triangle2-1.pdf Graphic file (type pdf)
 <use images/graf-triangle2-1.pdf>
 Missing character: There is no ó ("F3) in font lmmi10!
 Missing character: There is no ó ("F3) in font lmmi10!
 [22] [23]
 
-LaTeX Warning: Reference `fig:projecciomarginal' on page 24 undefined on input line 1343.
+LaTeX Warning: Reference `exm:taula-discreta' on page 24 undefined on input line 1335.
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in none 5 on input line 1352.
 
 [24]
-Underfull \hbox (badness 3098) in paragraph at lines 1348--1348
+
+LaTeX Warning: Reference `fig:marginal' on page 25 undefined on input line 1378.
+
+File: images/marginal-1.pdf Graphic file (type pdf)
+<use images/marginal-1.pdf>
+[25]
+
+LaTeX Warning: Reference `exm:marginal' on page 26 undefined on input line 1448.
+
+[26]
+
+LaTeX Warning: Reference `fig:condicionada' on page 27 undefined on input line 1501.
+
+File: images/condicionada-1.pdf Graphic file (type pdf)
+<use images/condicionada-1.pdf>
+
+LaTeX Warning: Reference `fig:img-condicionada2' on page 27 undefined on input line 1525.
+
+File: images/condicionada_joint.png Graphic file (type bmp)
+<images/condicionada_joint.png>
+
+Overfull \hbox (161.88516pt too wide) in paragraph at lines 1529--1530
+ [][] 
+ []
+
+[27] [28] [29]
+
+LaTeX Warning: Reference `fig:img-condicionada3' on page 30 undefined on input line 1566.
+
+File: images/condicionada_Y.png Graphic file (type bmp)
+<images/condicionada_Y.png>
+
+Overfull \hbox (368.57741pt too wide) in paragraph at lines 1570--1571
+ [][] 
+ []
+
+
+Underfull \hbox (badness 3098) in paragraph at lines 1591--1591
 []\TU/lmr/bx/n/12 Moments multivariants: vector d’esperances, matriu de variància-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1406
-
+[30] [31]
+Overfull \hbox (1074.35225pt too wide) detected at line 1690
+[][][][][] [] [][][][] [] [][] [][][] [][] [][][][][] [][][][][][][][] [][][][][][][][][] [] [][] [][] [][][] [] [][][][][][][][][][]  [] [][] [][] [][][][][] [] [][][][][][][][][] [] [][] [][] [][][][][] [] [][][][][][][][][][]  [] [][] [][][][][][][][][][][][][][] [] [][] [][][][][][][][][][][][][][] [] []  [] [][] [][] [][][] [] [][] [][] [][][] [] [][][][][] [] [][][][][] [] [][][][][] [] [][][][][][]  [] [][][][][][][][] [] [][][][][][][][] [] [][] [] [][] [] [] [] [] [] []
  []
 
-[25]
-Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no σ (U+03C3) in font [lmroman10-bold]:mapping=tex-text;!
-Missing character: There is no σ (U+03C3) in font [lmroman10-bold]:mapping=tex-text;!
-
-Underfull \hbox (badness 10000) in paragraph at lines 1423--1425
-
+[32]
+Overfull \hbox (525.78749pt too wide) detected at line 1748
+[][][][][][] [][] [] [][][][] [] [][][][][][][] [] [][][][][][][]  [] [][][][] [] [][][][][][] [] [][] [] [][][][][][][][][][][]  [] [][][][] [] [][][][][][][] [] [][][][] [] [][][][][][][][][][][][]  [] [][][][][] [] [][][][][][][][] [] [][][][][][][][] [] [][][][][][][][][][]  [] [][][][][] [] [][][][][][][][] [] [][][][][][][][] [] [][][][][][][][][]  [] [][][][][][] [] [][][][][][][][]
  []
 
+Missing character: There is no ∈ (U+2208) in font [lmroman10-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1425--1427
+! LaTeX Error: \symbballowed only in math mode.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1750 ... amb variància finita i \$ a \in \mathbb
+                                                  {R} \$.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no σ (U+03C3) in font [lmroman10-regular]:mapping=tex-text;!
-
-Underfull \hbox (badness 10000) in paragraph at lines 1449--1451
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1451--1453
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1453--1454
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1466--1468
-
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 1555--1557
-
- []
-
-[27] [28] [29] (./Probabilitat-II.aux)
- ***********
-LaTeX2e <2026-06-01>
-L3 programming layer <2026-05-26>
- ***********
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
  17416 strings out of 469836
- 320345 string characters out of 5469232
- 898505 words of memory out of 5000000
- 46131 multiletter control sequences out of 15000+600000
+ 320149 string characters out of 5469231
+ 900943 words of memory out of 5000000
+ 46132 multiletter control sequences out of 15000+600000
  633244 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,12n,114p,580b,717s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on Probabilitat-II.pdf (29 pages).
+ 90i,12n,114p,580b,596s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on Probabilitat-II.pdf (32 pages).

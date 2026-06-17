@@ -113,6 +113,7 @@
 <ul>
 <li class="chapter" data-level="1.4.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-univariants-esperanza-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.1</b> Moments univariants: Esperanza i Variància</a></li>
 <li class="chapter" data-level="1.4.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-esperanza-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperanza i Variància</a></li>
+<li class="chapter" data-level="1.4.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a></li>
 </ul></li>
@@ -120,7 +121,6 @@
 <ul>
 <li class="chapter" data-level="2.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries."><i class="fa fa-check"></i><b>2.1</b> Independència i dependència entre variables aleatòries.</a></li>
 <li class="chapter" data-level="2.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat."><i class="fa fa-check"></i><b>2.2</b> Conceptes de covariància, correlació i causalitat.</a></li>
-<li class="chapter" data-level="2.3" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#esperances-i-vari%C3%A0ncies-condicionades."><i class="fa fa-check"></i><b>2.3</b> Esperances i variàncies condicionades.</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html"><i class="fa fa-check"></i><b>3</b> Algunes distribucions multivariants</a>
 <ul>
@@ -327,7 +327,7 @@ Si tots els valors son equiprobables la probabilitat seria la longitud de casos 
 F_X(x)=
 \begin{cases}
 0, &amp; \text{si } x &lt;0 \\
-\frac {x}{10}, &amp;  0 \leq x \leq 10, \\
+\frac {x}{10}, &amp;  0 \leq x \leq 10 \\
 0, &amp; x&gt;10
 \end{cases}
 \]</span></p>
@@ -743,7 +743,7 @@ V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy=5
 <p><span id="exm:unlabeled-div-34" class="example"><strong>Exemple 1.16  </strong></span>Considerem un cas on el recinte d’integració no és un rectangle i utilitzem la funció de l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.15</a> f(x,y)=x+y</p>
 <p>Sigui el triangle <span class="math inline">\(A=\{ (x,y) \in  \mathbb{R}^2: 2 \leq x \leq 4, 2 \leq y \leq x \}\)</span> que és mostra en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle">1.5</a></p>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle"></span>
-<img src="Probabilitat-II_files/figure-html/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<img src="images/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
 Figura 1.5: Dues maneres d’obtenir la densitat conjunta d’un triangle
 </p>
@@ -825,7 +825,7 @@ donat que la funció <span class="math inline">\(f(x,y) \leq 0\)</span> per a to
 El valor de k és per tant 1/5 per a que f(x,y) sigui una funció de densitat.</p>
 <p>En la figura <a href="variables-aleatòries-multivariants.html#fig:density2">1.7</a> es mostra la funció de densitat que val (x+y)/5 per als punts (x,y) en el rectangle A definit i 0 en la resta.</p>
 <div class="figure"><span style="display:block;" id="fig:density2"></span>
-<img src="Probabilitat-II_files/figure-html/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
+<img src="images/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
 <p class="caption">
 Figura 1.7: Funció de densitat f(x,y)
 </p>
@@ -864,7 +864,7 @@ P((X,Y) \in A)= \frac {\parallel A \cap T\parallel}{\parallel T\parallel}
 \]</span></p>
 <p>on <span class="math inline">\(\parallel A \parallel\)</span> és l’àrea de B.</p>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle2"></span>
-<img src="Probabilitat-II_files/figure-html/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<img src="images/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
 Figura 1.8: Dues maneres d’obtenir la densitat conjunta d’un triangle
 </p>
@@ -922,8 +922,8 @@ com que els elements son disjunts podem obtenir la funció de probabilitat margi
 f_{X_i}(x_i)= \sum_{x_j \in D_j, j \neq i} f_X(x_1,...,x_k)
 \]</span></p>
 <hr />
-<p>:::{.example marginal}</p>
-<p>Si revisem la taula del exemple <a href="variables-aleatòries-multivariants.html#exm:taula-discreta">1.13</a>, on en primer lloc es llança una moneda y després un dau. Observem que la darrera fila conté les probabilitats marginals d’observar cara o creu, obteneint un valor de 1/2 per cada columna. La darrera columna conté les marginals d’obtenir un resultat de les cares del dau , és a dir 1/6 per cada fila.</p>
+<div class="example">
+<p><span id="exm:marginal" class="example"><strong>Exemple 1.19  </strong></span>Si revisem la taula del exemple <a href="variables-aleatòries-multivariants.html#exm:taula-discreta">1.13</a>, on en primer lloc es llança una moneda y després un dau. Observem que la darrera fila conté les probabilitats marginals d’observar cara o creu, obteneint un valor de 1/2 per cada columna. La darrera columna conté les marginals d’obtenir un resultat de les cares del dau , és a dir 1/6 per cada fila.</p>
 <table>
 <thead>
 <tr class="header">
@@ -978,7 +978,7 @@ f_{X_i}(x_i)= \sum_{x_j \in D_j, j \neq i} f_X(x_1,...,x_k)
 </tr>
 </tbody>
 </table>
-<p>:::</p>
+</div>
 <hr />
 </div>
 <div id="distribucions-marginals.-cas-continu" class="section level4 hasAnchor" number="1.3.1.2">
@@ -995,9 +995,9 @@ F_{Y}(y)=\lim_{y \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{y}\int_{- \inf
 <p>Es pot demostrar que tant <span class="math inline">\(F_X(x)\)</span> com <span class="math inline">\(F_Y(y)\)</span> son funcions de distribució . En el següent exemple</p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.19  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:marginal">1.9</a> es mostra una representació de la distribució marginal. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> totes les dades sense tenir en compte la component <span class="math inline">\(X\)</span>, s’obté la función de distribució marginal de <span class="math inline">\(Y\)</span>.</p>
+<p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.20  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:marginal">1.9</a> es mostra una representació de la distribució marginal. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> totes les dades sense tenir en compte la component <span class="math inline">\(X\)</span>, s’obté la función de distribució marginal de <span class="math inline">\(Y\)</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:marginal"></span>
-<img src="Probabilitat-II_files/figure-html/marginal-1.png" alt="Funció de distribució marginal de Y mostral" width="672" />
+<img src="images/marginal-1.png" alt="Funció de distribució marginal de Y mostral" width="672" />
 <p class="caption">
 Figura 1.9: Funció de distribució marginal de Y mostral
 </p>
@@ -1047,7 +1047,7 @@ F_{X|Y}= P(X \leq x| Y=y_j) =\frac{ \sum_{x_i \leq x } f_{XY}(x_i,y_j)}  {f_Y(y_
 \]</span>
 —</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-41" class="example"><strong>Exemple 1.20  </strong></span>Tornem a l’exemple de la moneda i el dau i la taula de probabiliatats qe es mostra en l’exemple <a href="#exm:marginal"><strong>??</strong></a> on Y es el valor del dau y X es el resultat de la moneda.</p>
+<p><span id="exm:unlabeled-div-41" class="example"><strong>Exemple 1.21  </strong></span>Tornem a l’exemple de la moneda i el dau i la taula de probabiliatats que es mostra en l’exemple <a href="variables-aleatòries-multivariants.html#exm:marginal">1.19</a> on Y es el valor del dau y X es el resultat de la moneda.</p>
 <p>Calculem la probabilitat de treure una cara donat que el dau ha resultat el valor 4.</p>
 <p>Seguint la definci</p>
 <p><span class="math display">\[
@@ -1067,7 +1067,7 @@ En aquest cas la funció de probabilitat condicionada coincideix en la distribuc
 <p><span class="math display">\[
 f_{X|Y=y}(x)= \frac {f_{XY}(x,y)}{f_Y(y)}, \text{ per a} - \infty \leq x \leq + \infty
 \]</span>
-- Cal notar que <span class="math inline">\(f_{X|Y=y\)</span> no més està definida per valors de <span class="math inline">\(y\)</span> on <span class="math inline">\(f_Y(y)&gt;0\)</span></p>
+- Cal notar que <span class="math inline">\(f_{X|Y=y}\)</span> no més està definida per valors de <span class="math inline">\(y\)</span> on <span class="math inline">\(f_Y(y)&gt;0\)</span></p>
 <ul>
 <li>Sembla per la definició que estem condicionat per la probabilitat de que <span class="math inline">\(Y=y\)</span>, però al tractar-se d’una variable continua aquesta probabilitat es 0. La funció de densitat condicional és el límit d’una probabilitat condicional a mesura que el radi de la regió circular de (x,y) tendeix a 0.</li>
 </ul>
@@ -1077,14 +1077,14 @@ f_{Y|X=x}(y)= \frac {f_{XY}(x,y)}{f_X(x)}, \text{ per a} - \infty \leq y \leq + 
 \]</span></p>
 </div>
 <p>La funció <span class="math inline">\(f_{X|Y=y}\)</span> es una densitat ja que per definició es positiva i si la integrem dona 1.</p>
-<p>$$
-<em>{-}<sup>{+}f_{X|Y=y}(x)dx=_{-}</sup>{+} dx=</em>{-}^{+}f_{XY}(x,y=)=1</p>
-<p>$$</p>
+<p><span class="math display">\[
+\int_{-\infty}^{+\infty}f_{X|Y=y}(x)dx=\int_{-\infty}^{+\infty} \frac {f_{XY}(x,y)} {f_Y(y)}dx=\frac {1}{f_Y(y)} \int_{-\infty}^{+\infty} f_{XY}(x,y)\frac {1} {f_Y(y)} {f_Y(y)}=1
+\]</span></p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-43" class="example"><strong>Exemple 1.21  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:condicionada">1.10</a> es mostra una representació de la distribució condicionada de <span class="math inline">\(Y\)</span> en funció de <span class="math inline">\(X\)</span> l. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> els valors de la variable de Y per a les coordenades <span class="math inline">\(x\)</span> incloses en l’interval <span class="math inline">\([a,a+\epsilon]\)</span> e, S’obté la función de distribució condicionada <span class="math inline">\(Y|X=a\)</span>.</p>
+<p><span id="exm:unlabeled-div-43" class="example"><strong>Exemple 1.22  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:condicionada">1.10</a> es mostra una representació de la distribució condicionada de <span class="math inline">\(Y\)</span> en funció de <span class="math inline">\(X\)</span> l. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> els valors de la variable de Y per a les coordenades <span class="math inline">\(x\)</span> incloses en l’interval <span class="math inline">\([a,a+\epsilon]\)</span> e, S’obté la función de distribució condicionada <span class="math inline">\(Y|X=a\)</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:condicionada"></span>
-<img src="Probabilitat-II_files/figure-html/condicionada-1.png" alt="Funció de distribució condicionada de Y en funció de X mostral" width="672" />
+<img src="images/condicionada-1.png" alt="Funció de distribució condicionada de Y en funció de X mostral" width="672" />
 <p class="caption">
 Figura 1.10: Funció de distribució condicionada de Y en funció de X mostral
 </p>
@@ -1093,7 +1093,7 @@ Figura 1.10: Funció de distribució condicionada de Y en funció de X mostral
 <hr />
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-44" class="example"><strong>Exemple 1.22  </strong></span>Sigui la següent funció de densitat conjunta provinent de treure a l’atzar un punt sota una parabòla .</p>
+<p><span id="exm:unlabeled-div-44" class="example"><strong>Exemple 1.23  </strong></span>Sigui la següent funció de densitat conjunta provinent de treure a l’atzar un punt sota una parabòla .</p>
 <p><span class="math display">\[
 f_{XY}(x,y)=
 \begin{cases}
@@ -1103,7 +1103,7 @@ f_{XY}(x,y)=
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariants.html#fig:img-condicionada2">1.11</a> es pot veure la representació de la funció de densitat conjunta.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada2"></span>
-<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta"  />
+<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta" width="314" />
 <p class="caption">
 Figura 1.11: Exemple de distribució conjunta
 </p>
@@ -1112,20 +1112,19 @@ Figura 1.11: Exemple de distribució conjunta
 <p><span class="math display">\[
 f_Y(y)= \int_{- \infty}^{+ \infty} f_{XY}(x,y) dx =
 \begin{cases}
-4 y^3 \int_0^{1/y} xdx= y^3 \left [\frac {x^2}{2}\right]_0^{1/y}
-=2y ,              &amp; \text{si } y \in (0,1) \\
+4 y^3 \int_0^{1/y} xdx= y^3 \left [\frac {x^2}{2}\right]_0^{1/y} =2y ,    &amp; \text{si } y \in (0,1) \\
 0,              &amp; \text{en la resta }  \\
 \end{cases}
 \]</span></p>
 <p>De la mateixa manera podem obtenir la funció de densitat marginal de <span class="math inline">\(X\)</span> com</p>
-$$
-f_X(x)= <em>{- }^{+ } f</em>{XY}(x,y) dy =
-<span class="math display">\[\begin{cases}
-4x \int_0^{1} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1}=x ,              &amp; \text{si } x \in (0,1) \\
-4x \int_0^{1/x} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1/x}=\frac{1}{x^3} ,              &amp; \text{si } x &gt;1) \\
+<p><span class="math display">\[
+f_X(x)= \int_{- \infty}^{+ \infty} f_{XY}(x,y) dy =
+\begin{cases}
+4x \int_0^{1} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1}=x ,    &amp; \text{si } x \in (0,1) \\
+4x \int_0^{1/x} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1/x}=\frac{1}{x^3} ,    &amp; \text{si } x &gt;1) \\
 0,              &amp; \text{en la resta }  \\
-\end{cases}\]</span>
-<p>$$</p>
+\end{cases}
+\]</span></p>
 <p>Per obtenir la funció de densitat condicionada <span class="math inline">\(f_{X|Y}\)</span> només caldra dividir la funció de densitat conjunta <span class="math inline">\(f_{XY}\)</span> respecta a la marginal <span class="math inline">\(f_{Y}\)</span>}</p>
 <p><span class="math display">\[
 f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} =
@@ -1136,7 +1135,7 @@ f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} =
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariants.html#fig:img-condicionada3">1.12</a> es pot veure la representació de la funció de densitat condicional <span class="math inline">\(X|Y\)</span> per a cada valor de <span class="math inline">\(y\)</span> .</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada3"></span>
-<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y"  />
+<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y" width="418" />
 <p class="caption">
 Figura 1.12: Exemple de distribució condicionada X|Y
 </p>
@@ -1199,33 +1198,158 @@ que sería la mitjana poblacional de la distribució de la variabla <span class=
 \hline
 \end{array}
 \]</span></p>
-<p>Així el moment d’ordre 1 es la <strong><span class="math inline">\(E[X]=\mu\)</span> mitjana</strong> de la distribució i el moment central d’ordre 2 es la <strong>variancia <span class="math inline">\(Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2\)</span>.</strong></p>
+<p>Així el moment d’ordre 1 es la <strong><span class="math inline">\(E[X]=\mu\)</span> mitjana</strong> de la distribució i el moment central d’ordre 2 es la <strong>variància <span class="math inline">\(Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2\)</span>.</strong></p>
 </div>
 <div id="moments-multivariants-esperanza-i-variància" class="section level3 hasAnchor" number="1.4.2">
 <h3><span class="header-section-number">1.4.2</span> Moments multivariants: Esperanza i Variància<a href="variables-aleatòries-multivariants.html#moments-multivariants-esperanza-i-vari%C3%A0ncia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="Definition">
-<p><strong>Esperanza d’un vector alatori discret</strong></p>
+<p><strong>Esperanza d’un vector aleatori discret</strong></p>
 <p>Sigui <span class="math inline">\(X=(X_1,...,X_k)\)</span> un vector aleatori discret, <span class="math inline">\(D_X\)</span> el suport del vector i <span class="math inline">\(f_X\)</span> es la seva funció de probabilitat conjunta. Si g es una funció mesurable definida de <span class="math inline">\(\mathbb{R^k}\)</span> en <span class="math inline">\(\mathbb{R}\)</span></p>
 <p><span class="math display">\[
 E[g(X)]=\sum_{(x_1,...,x_k)  \in D_x} g(x_1,...,x_k)f_X(x_1,...,x_k)
 \]</span></p>
 </div>
 <div class="Definition">
-<p><strong>Esperanza d’un vector alatori continu</strong></p>
+<p><strong>Esperanza d’un vector aleatori continu</strong></p>
 <p>Sigui <span class="math inline">\(X=(X_1,...,X_k)\)</span> un vector aleatori continu <span class="math inline">\(f_X\)</span> es la seva funció de densitat conjunta. Si g es una funció mesurable definida de <span class="math inline">\(\mathbb{R^k}\)</span> en <span class="math inline">\(\mathbb{R}\)</span></p>
 <p><span class="math display">\[
 E[g(X)]=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(x_1,...,x_k)f_X(x_1,...,x_k)dx_1,...,dx_k
 \]</span></p>
 </div>
-<p>En ambos caos l’esperança esta supeditada a que |g(x)f(x)| siguin absolutamente sumplae o integrable.</p>
+<p>En ambdos casos l’esperança esta supeditada a que |g(x)f(x)| sigui absolutament sumable o integrable.</p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-45" class="example"><strong>Exemple 1.24  </strong></span>Una</p>
+<p>Una barra d’un metre es trenca aleatòriament en dos punts, generant tres peces. Quina és la llargada mitjana de la peça del mig?</p>
+<p>Per estudiar el problema considerem dues variables aleatòries que segueixen una distribució uniforme <span class="math inline">\((U_1,U_2)\sim U([0,1]x[0,1])\)</span></p>
+<p>Es a dir, la distribució conjunta ve definida per la densitat constant</p>
+<p><span class="math display">\[
+f_{U_1, U_2}(u_1,u_2)=  
+\begin{cases}
+1,          &amp; \text{si} (u_1,u_2) \in [0,1] \times [0,1] \\
+0,          &amp; \text{en la resta }  \\
+\end{cases}
+\]</span></p>
+<p>La longitud de la peça central ve donada per la variable aleatòria <span class="math inline">\(X=g(U_1,U_2)=|U_2-U_1|\)</span></p>
+<p>LLavors seguint la definició d’esperança de la variable X obtenim el valor de la longitud de la peça central</p>
+<p><span class="math display">\[
+E[|U_1-U_2|]=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(u_1,u_2)f(u_1,u_2)du_1du_2=\int_{0}^{1}\int_{0}^{1} |u_1-u_2|du_1du_2  \\
+=\int_0^1\int_0^1 1_{(u_1 \geq u_2)} (u_1-u_2) du_1du_2 +\int_0^1\int_0^1 1_{(u_1 \leq u_2)} (u_2-u_1) du_1du_2  \\
+=\int_0^1\int_0^{u_1}(u1_u2) du_2du_1 + \int_{0}^{1}\int_{0}^{u_2}(u2_u1) du_1du_2=  \\
+= \int_0^1 \left [u_1u_2 - \frac {u_2^2}{2}  \right]_0^{u_1}du_1+\int_0^1 \left [u_2u_1 - \frac {u_1^2}{2}  \right]_0^{u_2}du_2=\int_0^1 ( u_1^2 - \frac {u_1^2}{2})  du_1+\int_0^1 ( u_2^2 - \frac {u_2^2}{2})  du_2 \\
+=\int_0^1 ( \frac {u_1^2}{2})  du_1+\int_0^1 (  \frac {u_2^2}{2})  du_2= \left [ \frac {u_1^2}{2 \times 3} \right]_0^1+\left [ \frac {u_2^2}{2 \times 3} \right]_0^1= \frac {1}{2 \times 3}+\frac {1}{2 \times 3}=\frac {1}{3}
+\]</span>
+que és un terç de la longitut de la barra.</p>
+</div>
+<hr />
 <div class="Definition">
-<p><strong>Moments d’un vector aleatori</strong></p>
+<p><strong>Moments d’un vector aleatori</strong>
+En el cas de les variables aleatòries univariantes hem vist com determinades formes de la fucnió g donen lloc als anomenats moments que podem extendre al cas dels vectors aleatoris.</p>
+<p>El moment d’odre <span class="math inline">\((n_1,...,n_k)\)</span> s’obté sempre que existix l’esperança
+<span class="math display">\[
+g(X_1,...,X_k)=X_1^{n_1} .....X_k^{n_k}, n_i \geq 0
+\]</span>
+que dona lloc a <span class="math inline">\(E[X_1^{n_1} .....X_k^{n_k}]\)</span> respece al origen de cada component.</p>
+</div>
+<p>Un cas particulasr si <span class="math inline">\(n_i=m\)</span> i <span class="math inline">\(n_j=0, j \neq i\)</span> dona que <span class="math inline">\(E[X_1^{n_1} .....X_k^{n_k}]=E[X_i^m]\)</span></p>
+<p>El moment conjunt central d’ordre k respecte de l’origen de cada component es un cas particular , que es pot obtenir sempre que l’esperança existixca</p>
+<p><span class="math display">\[
+g(X_1,...,X_k)=(X_1-E[X_1])^{n_1} .....X_k-E[X_k])^{n_k}, n_i \geq 0
+\]</span></p>
+<p>La linialitat de l’esperança aplicada quan <span class="math inline">\(g(X)=X_1+...+X_k\)</span> permet escriure que l’esperança de la suma de variables es la suma de les esperances.</p>
+<p><span class="math display">\[
+E(X_1+...+X_k) =\sum_{i=1}^kE(X_i)
+\]</span>
+Així mateix si <span class="math inline">\(g(X)=\sum_{i=1}^k (a_i X_i)\)</span> obtenim que l’esperançade de una constant per una variable es la constant per l’esperança de la variable</p>
+<p><span class="math display">\[
+E(a_1X_1+...+a_kX_k) =\sum_{i=1}^k a_i E(X_i)
+\]</span></p>
+</div>
+<div id="matriu-de-variància-covariància" class="section level3 hasAnchor" number="1.4.3">
+<h3><span class="header-section-number">1.4.3</span> Matriu de Variància-Covariància<a href="variables-aleatòries-multivariants.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="Definition">
+<p><strong>covariància</strong></p>
+<p>Un moment d’especial interès e el moment conjunt central que s’obtè pera <span class="math inline">\(n_i=1, n_j=1 i n_l=0, l\neq (i,j)\)</span> que anomenarem covariància</p>
+<p><span class="math display">\[
+cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=
+\]</span></p>
+</div>
+<div class="Proposition">
+<p>Siguin X i Y variables aleatories tals que <span class="math inline">\(\sigma_X^2 &lt;\infty \quad i \quad  \sigma_Y^2 &lt;\infty\)</span> llavors</p>
+<p><span class="math display">\[
+Cov(X,Y)=E[(XY)]-E[X]E[Y]  
+\]</span></p>
+<p><strong>Demostració</strong>
+<span class="math display">\[
+Cov(X, Y ) = E[(X − E[X])(Y − E[Y])] \\
+= E[(X − E[X])Y − (X − E[X])E[Y]]  \\
+= E[(X − E[X])Y ] − E[(X − E[X]))E[Y]] \\
+= E[XY] − E[E[X]Y]  − E[XE[Y]] + E[X]E[Y]] \\
+= E[XY] − E[X]E[Y] − E[X]E[Y] + E[X]E[Y] \\
+= E[XY]) − E[X] E[Y]
+\]</span></p>
+</div>
+<div class="Proposition">
+<p>Siguin (X, Y,Z) variables aleatòries amb variància finita i $ a $.</p>
+<ol style="list-style-type: decimal">
+<li>La covariancia és un operador simètric: <span class="math inline">\(Cov(X, Y ) = Cov(Y,X)\)</span></li>
+<li>La variància és un cas particular de covariància: <span class="math inline">\(Var(X) = Cov(X,X)\)</span></li>
+<li>La covariància amb una constant és 0: <span class="math inline">\(Cov(X, a) = 0\)</span></li>
+<li>La covariància és un operador bilineal, és a dir, éss lineal en els seus dos arguments:
+<span class="math inline">\(Cov(aX, Y ) = Cov(X, aY ) = aCov(X, Y )\)</span>
+<span class="math inline">\(Cov(X + Y,Z) = Cov(X,Z) + Cov(Y,Z)\)</span>
+<span class="math inline">\(Cov(X, Y + Z) = Cov(X, Y ) + Cov(X,Z)\)</span></li>
+<li><span class="math inline">\(Var(X + Y ) = Var(X) + Var(Y ) + 2Cov(X, Y )\)</span></li>
+<li><span class="math inline">\(Var(X − Y ) = Var(X) + Var(Y ) − 2Cov(X, Y )\)</span></li>
+</ol>
+</div>
+<p><strong>Demostració:</strong></p>
+<p><span class="math display">\[
+Cov(aX, Y ) = E[aXY] − E[aX]E[Y]= aE[XY] − aE[X]E[Y]= a (E[XY]) − E[X]E[Y])= aCov(X,Y).
+\]</span>
+<span class="math display">\[
+Cov(X + Y,Z) = E[(X + Y )Z] − E[X + Y]E[Z] \\
+= E[XZ] + E[YZ] − (E[X] + E[Y])E[Z] \\
+= E[XZ] + E[YZ] − E[X]E[Z] − E[Y]E[Z] \\
+= E[XZ] − E[X]E[Z] + E[YZ] − E[Y]E[Z] \\
+= Cov(X,Z) + Cov(Y,Z).
+\]</span></p>
+<p>La demostració dels dos últims apartats es dedueix directament de la anterior escrivint Var(X+Y)=Cov(X+Y,X+Y) i Var(X-Y)= Cov(X-Y, X-Y)</p>
+<p>Un problema de la covariància com a mesura de força de la relación linial de dues variables aleatòries, és que la covariància depèn de les unitats en que es mesuren les variables. Si canviem les unitats canvia el valor de la covariància.</p>
+<div class="Definition">
+<p><strong><em>Matriu de Variància-Covariància</em></strong></p>
+<p>Si <span class="math inline">\((X_1, X_2)\)</span> es un vector de 2 variables aleatòries definim la matriu de convarìances <span class="math inline">\(\Sigma\)</span> a la matriu 2x2 amb les variàncies a la diagonal i les covariàncies del vector en les altres posicions</p>
+<p><span class="math display">\[
+\Sigma= \begin{bmatrix} Var(X_1) &amp; Cov(X_1,X_2) \\Cov(X_1,X_2)  &amp; Var(X_2)  \end{bmatrix} = \begin{bmatrix} \sigma_1^2 &amp; \sigma_{1_2} \\\sigma_{1_2}  &amp; \sigma_2^2 \end{bmatrix}
+\]</span>
+En general. Si <span class="math inline">\(X=(X_1,....X_k)\)</span> és un vector aleatori de dimensió k la matriu de variancies-covariancies és</p>
+<p><span class="math display">\[
+\Sigma=
+\begin{bmatrix}
+Var(X_1) &amp; Cov(X_1,X_2) &amp; ... &amp; Cov(X_1,X_{k-1})  &amp; Cov(X_1,X_k) \\
+Cov(X_1,X_2)  &amp; Var(X_2) &amp; ... &amp; Cov(X_2,X_{k-1})  &amp; Cov(X_2,X_k) \\  
+.  &amp; . &amp; . &amp; .  &amp; . \\  
+Cov(X_1,X_{k-1})  &amp; Cov(X_2,X_{k-1}) &amp; ... &amp; Var(X_{k-1})  &amp; Cov(X_{k-1},X_k) \\  
+Cov(X_1,X_k)  &amp; Cov(X_2,X_k) &amp; ... &amp;  Cov(X_{k-1},X_k)  &amp; Var(X_k)\\  
+\end{bmatrix}  
+\]</span></p>
+$$
+=
+<span class="math display">\[\begin{bmatrix}
+\sigma_1^2 &amp; \sigma_1 \sigma_2 &amp; ... &amp; \sigma_1\sigma_{k-1}  &amp; \sigma_1\sigma_k \\
+\sigma_1\sigma_2)  &amp; \sigma_2^2 &amp; ... &amp; \sigma_2\sigma{k-1}  &amp; \sigma_2\sigma_k \\  
+.  &amp; . &amp; . &amp; .  &amp; . \\  
+\sigma_1,\sigma_{k-1}  &amp; \sigma_2\sigma_{k-1} &amp; ... &amp; \sigma_{k-1}^2  &amp; \sigma_{k-1}\sigma_k \\  
+\sigma_1\sigma_k  &amp; \sigma_2\sigma_k &amp; ... &amp;  \sigma_{k-1}\sigma_k  &amp; \sigma_k^2\\  
+\end{bmatrix}\]</span>
+<p>$$</p>
 </div>
 </div>
 </div>
 <div id="transformacions-de-variables-multivariants" class="section level2 hasAnchor" number="1.5">
 <h2><span class="header-section-number">1.5</span> Transformacions de variables multivariants<a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí.</p>
+<p>1.6. Funci¶on de una o varias variables aleatorias apunts Paco Montes</p>
+<p>1.6 trasnformacions va multivariants pagina 69 apunts PIPE</p>
 <p>mas texto 15/06/2026
 por la tarde</p>
 
