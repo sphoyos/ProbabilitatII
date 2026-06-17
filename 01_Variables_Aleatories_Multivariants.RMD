@@ -259,7 +259,7 @@ $$
 F_X(x)=
 \begin{cases}
 0, & \text{si } x <0 \\
-\frac {x}{10}, &  0 \leq x \leq 10, \\
+\frac {x}{10}, &  0 \leq x \leq 10 \\
 0, & x>10
 \end{cases}
 $$
@@ -1072,7 +1072,7 @@ $$
 
 ---
 
-:::{.example marginal}
+:::{.example #marginal}
 
 
 Si  revisem la taula del exemple  \@ref(exm:taula-discreta), on en primer lloc es llança una moneda y després un dau. Observem que la darrera fila conté les probabilitats marginals d'observar cara o creu, obteneint un valor de 1/2 per cada columna. La darrera columna conté les marginals d'obtenir un resultat de les cares del dau , és a dir 1/6 per cada fila.
@@ -1193,7 +1193,7 @@ $$
 
 ::: {.example }
 
-Tornem a  l'exemple de la moneda  i el dau  i la taula de probabiliatats qe es mostra en l'exemple \@ref(exm:marginal) on Y es el valor del dau y X es el resultat de la moneda. 
+Tornem a  l'exemple de la moneda  i el dau  i la taula de probabiliatats que es mostra en l'exemple \@ref(exm:marginal) on Y es el valor del dau y X es el resultat de la moneda. 
 
 Calculem la probabilitat de treure una cara donat que el dau ha resultat el valor 4. 
 
@@ -1222,7 +1222,7 @@ Siguin X e Y dues variables aleatòries continues on $f_{XY}$ es la funció de d
 $$
 f_{X|Y=y}(x)= \frac {f_{XY}(x,y)}{f_Y(y)}, \text{ per a} - \infty \leq x \leq + \infty
 $$
-- Cal notar que $f_{X|Y=y$ no més està definida per valors de $y$ on  $f_Y(y)>0$
+- Cal notar que $f_{X|Y=y}$ no més està definida per valors de $y$ on  $f_Y(y)>0$
 
 - Sembla per la definició que estem condicionat per la probabilitat de que $Y=y$, però al tractar-se d'una variable continua aquesta probabilitat es 0. La funció de densitat condicional és el límit d'una probabilitat condicional a mesura que el radi de la regió circular de (x,y) tendeix a 0.
 
@@ -1243,8 +1243,7 @@ La funció $f_{X|Y=y}$ es una densitat ja que per definició es positiva i si la
 
 
 $$
-\int_{-\infty}^{+\infty}f_{X|Y=y}(x)dx=\int_{-\infty}^{+\infty} \frac {f_{XY}(x,y)}{f_Y(y)}dx=\frac {1}{f_Y(y)}\int_{-\infty}^{+\infty}f_{XY}(x,y=)\frac {1}{f_Y(y)}{f_Y(y)}=1
-
+\int_{-\infty}^{+\infty}f_{X|Y=y}(x)dx=\int_{-\infty}^{+\infty} \frac {f_{XY}(x,y)} {f_Y(y)}dx=\frac {1}{f_Y(y)} \int_{-\infty}^{+\infty} f_{XY}(x,y)\frac {1} {f_Y(y)} {f_Y(y)}=1
 $$
 
 ---
@@ -1301,8 +1300,7 @@ Si calculem la funció de densitat marginal de $Y$ obtenim una funció que es di
 $$
 f_Y(y)= \int_{- \infty}^{+ \infty} f_{XY}(x,y) dx = 
 \begin{cases}
- 4 y^3 \int_0^{1/y} xdx= y^3 \left [\frac {x^2}{2}\right]_0^{1/y} 
- =2y ,              & \text{si } y \in (0,1) \\
+ 4 y^3 \int_0^{1/y} xdx= y^3 \left [\frac {x^2}{2}\right]_0^{1/y} =2y ,    & \text{si } y \in (0,1) \\
 0,              & \text{en la resta }  \\
 \end{cases}
 $$
@@ -1316,10 +1314,9 @@ $$
 $$
 f_X(x)= \int_{- \infty}^{+ \infty} f_{XY}(x,y) dy = 
 \begin{cases}
- 4x \int_0^{1} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1}=x ,              & \text{si } x \in (0,1) \\
- 4x \int_0^{1/x} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1/x}=\frac{1}{x^3} ,              & \text{si } x >1) \\
- 
-0,              & \text{en la resta }  \\
+ 4x \int_0^{1} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1}=x ,    & \text{si } x \in (0,1) \\
+ 4x \int_0^{1/x} y^3dy= 4x \left [\frac {y^4}{4}\right]_0^{1/x}=\frac{1}{x^3} ,    & \text{si } x >1) \\
+ 0,              & \text{en la resta }  \\
 \end{cases}
 $$
 
@@ -1417,14 +1414,14 @@ $$
 $$
 
 
-   Així el moment d'ordre 1 es  la **$E[X]=\mu$ mitjana** de la distribució  i el moment central d'ordre 2 es la **variancia $Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2$.** 
+   Així el moment d'ordre 1 es  la **$E[X]=\mu$ mitjana** de la distribució  i el moment central d'ordre 2 es la **variància $Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2$.** 
 
 
 ### Moments multivariants: Esperanza i Variància
 
 :::{.Definition}
 
-**Esperanza d'un vector alatori discret**
+**Esperanza d'un vector aleatori discret**
  
  Sigui $X=(X_1,...,X_k)$ un vector aleatori discret, $D_X$ el suport del vector i $f_X$  es la seva funció de probabilitat conjunta. Si g es una funció mesurable definida de $\mathbb{R^k}$ en  $\mathbb{R}$  
  
@@ -1435,7 +1432,7 @@ $$
 
 :::{.Definition}
 
-**Esperanza d'un vector alatori continu**
+**Esperanza d'un vector aleatori continu**
  
  Sigui $X=(X_1,...,X_k)$ un vector aleatori continu $f_X$  es la seva funció de densitat conjunta. Si g es una funció mesurable definida de $\mathbb{R^k}$ en  $\mathbb{R}$  
  
@@ -1443,16 +1440,199 @@ $$
  E[g(X)]=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(x_1,...,x_k)f_X(x_1,...,x_k)dx_1,...,dx_k
  $$
 :::
-En ambos caos l'esperança esta supeditada a que |g(x)f(x)| siguin absolutamente sumplae o integrable.
+En ambdos casos l'esperança esta supeditada a que |g(x)f(x)| sigui absolutament sumable o integrable.
+
+
+
+---
+
+::: {.example}
+
+Una  
+
+Una barra d’un metre es trenca aleatòriament en dos punts, generant tres peces. Quina és la llargada mitjana de la peça del mig?
+
+Per estudiar el problema considerem dues variables aleatòries  que segueixen una distribució uniforme  $(U_1,U_2)\sim U([0,1]x[0,1])$
+
+Es a dir, la distribució conjunta ve definida per la densitat constant 
+
+
+$$
+f_{U_1, U_2}(u_1,u_2)=  
+\begin{cases}
+1,          & \text{si} (u_1,u_2) \in [0,1] \times [0,1] \\
+0,          & \text{en la resta }  \\
+\end{cases}
+$$
+
+La longitud de la peça central ve donada per la variable aleatòria $X=g(U_1,U_2)=|U_2-U_1|$
+
+LLavors seguint la definició d'esperança de la variable X obtenim el valor de la longitud de la peça central
+
+$$
+E[|U_1-U_2|]=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(u_1,u_2)f(u_1,u_2)du_1du_2=\int_{0}^{1}\int_{0}^{1} |u_1-u_2|du_1du_2  \\
+=\int_0^1\int_0^1 1_{(u_1 \geq u_2)} (u_1-u_2) du_1du_2 +\int_0^1\int_0^1 1_{(u_1 \leq u_2)} (u_2-u_1) du_1du_2  \\
+=\int_0^1\int_0^{u_1}(u1_u2) du_2du_1 + \int_{0}^{1}\int_{0}^{u_2}(u2_u1) du_1du_2=  \\
+= \int_0^1 \left [u_1u_2 - \frac {u_2^2}{2}  \right]_0^{u_1}du_1+\int_0^1 \left [u_2u_1 - \frac {u_1^2}{2}  \right]_0^{u_2}du_2=\int_0^1 ( u_1^2 - \frac {u_1^2}{2})  du_1+\int_0^1 ( u_2^2 - \frac {u_2^2}{2})  du_2 \\
+=\int_0^1 ( \frac {u_1^2}{2})  du_1+\int_0^1 (  \frac {u_2^2}{2})  du_2= \left [ \frac {u_1^2}{2 \times 3} \right]_0^1+\left [ \frac {u_2^2}{2 \times 3} \right]_0^1= \frac {1}{2 \times 3}+\frac {1}{2 \times 3}=\frac {1}{3} 
+$$
+que és un terç de la longitut de la barra. 
+
+::: 
+
+---
+
+
+
 
 :::{.Definition}
 **Moments d'un vector aleatori**
+En el cas de les variables aleatòries univariantes hem vist com  determinades formes de la fucnió g donen lloc als anomenats moments que podem extendre al cas dels vectors aleatoris.
+
+ El moment d'odre $(n_1,...,n_k)$ s'obté sempre que existix l'esperança 
+ $$
+g(X_1,...,X_k)=X_1^{n_1} .....X_k^{n_k}, n_i \geq 0
+$$ 
+que dona lloc a $E[X_1^{n_1} .....X_k^{n_k}]$ respece al origen de cada component. 
+:::
+
+Un cas particulasr si $n_i=m$ i $n_j=0, j \neq i$  dona que $E[X_1^{n_1} .....X_k^{n_k}]=E[X_i^m]$
 
 
-::: 
+El moment conjunt central d'ordre k respecte de l'origen de cada component es un cas particular , que es pot obtenir sempre que l'esperança existixca
+
+$$
+g(X_1,...,X_k)=(X_1-E[X_1])^{n_1} .....X_k-E[X_k])^{n_k}, n_i \geq 0
+$$ 
+
+La linialitat de l'esperança aplicada quan $g(X)=X_1+...+X_k$ permet escriure que l'esperança de la suma de variables es la suma de les esperances.
+
+$$
+E(X_1+...+X_k) =\sum_{i=1}^kE(X_i)
+$$
+Així mateix si $g(X)=\sum_{i=1}^k (a_i X_i)$ obtenim que l'esperançade de una constant per una variable es la constant per l'esperança de la variable
+
+
+$$
+E(a_1X_1+...+a_kX_k) =\sum_{i=1}^k a_i E(X_i)
+$$
+
+
+
+
+
+### Matriu de Variància-Covariància
+
+:::{.Definition}
+**covariància**
+
+Un moment d'especial interès  e el moment conjunt central que s'obtè pera $n_i=1, n_j=1 i n_l=0, l\neq (i,j)$ que anomenarem covariància 
+
+
+$$
+cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=
+$$
+:::
+
+:::{.Proposition}
+
+Siguin X i Y variables aleatories tals que $\sigma_X^2 <\infty \quad i \quad  \sigma_Y^2 <\infty$ llavors
+
+$$
+Cov(X,Y)=E[(XY)]-E[X]E[Y]  
+$$
+
+**Demostració**
+$$
+Cov(X, Y ) = E[(X − E[X])(Y − E[Y])] \\ 
+= E[(X − E[X])Y − (X − E[X])E[Y]]  \\
+= E[(X − E[X])Y ] − E[(X − E[X]))E[Y]] \\
+= E[XY] − E[E[X]Y]  − E[XE[Y]] + E[X]E[Y]] \\
+= E[XY] − E[X]E[Y] − E[X]E[Y] + E[X]E[Y] \\
+= E[XY]) − E[X] E[Y]
+$$
+:::
+
+:::{.Proposition}
+
+Siguin (X, Y,Z) variables aleatòries amb variància finita i $ a \in \mathbb{R} $.
+
+1. La covariancia és un operador simètric: $Cov(X, Y ) = Cov(Y,X)$
+2. La variància és un cas particular de covariància: $Var(X) = Cov(X,X)$
+3. La covariància amb una constant és 0: $Cov(X, a) = 0$
+4. La covariància és un operador bilineal, és a dir, éss lineal en els seus dos arguments:
+$Cov(aX, Y ) = Cov(X, aY ) = aCov(X, Y )$
+$Cov(X + Y,Z) = Cov(X,Z) + Cov(Y,Z)$
+$Cov(X, Y + Z) = Cov(X, Y ) + Cov(X,Z)$
+5. $Var(X + Y ) = Var(X) + Var(Y ) + 2Cov(X, Y )$
+6. $Var(X − Y ) = Var(X) + Var(Y ) − 2Cov(X, Y )$
+
+:::
+
+**Demostració:**
+
+$$
+Cov(aX, Y ) = E[aXY] − E[aX]E[Y]= aE[XY] − aE[X]E[Y]= a (E[XY]) − E[X]E[Y])= aCov(X,Y).
+$$
+$$
+Cov(X + Y,Z) = E[(X + Y )Z] − E[X + Y]E[Z] \\
+= E[XZ] + E[YZ] − (E[X] + E[Y])E[Z] \\
+= E[XZ] + E[YZ] − E[X]E[Z] − E[Y]E[Z] \\
+= E[XZ] − E[X]E[Z] + E[YZ] − E[Y]E[Z] \\
+= Cov(X,Z) + Cov(Y,Z).
+$$
+
+La demostració dels dos últims apartats es dedueix directament de la anterior escrivint Var(X+Y)=Cov(X+Y,X+Y) i Var(X-Y)= Cov(X-Y, X-Y) 
+
+Un problema de la covariància com a mesura de força de la relación linial de dues variables aleatòries, és que la covariància depèn de les unitats en que es mesuren les variables. Si canviem les unitats canvia el valor de la covariància. 
+
+
+:::{.Definition}
+***Matriu de Variància-Covariància***
+
+Si $(X_1, X_2)$ es un vector de 2 variables aleatòries  definim la matriu de convarìances $\Sigma$ a la matriu 2x2 amb les variàncies a la diagonal i les covariàncies  del vector en les altres posicions
+
+$$
+\Sigma= \begin{bmatrix} Var(X_1) & Cov(X_1,X_2) \\Cov(X_1,X_2)  & Var(X_2)  \end{bmatrix} = \begin{bmatrix} \sigma_1^2 & \sigma_{1_2} \\\sigma_{1_2}  & \sigma_2^2 \end{bmatrix}
+$$
+En general.  Si $X=(X_1,....X_k)$ és un vector aleatori de dimensió k la matriu de variancies-covariancies és
+
+$$
+\Sigma=
+\begin{bmatrix} 
+Var(X_1) & Cov(X_1,X_2) & ... & Cov(X_1,X_{k-1})  & Cov(X_1,X_k) \\
+Cov(X_1,X_2)  & Var(X_2) & ... & Cov(X_2,X_{k-1})  & Cov(X_2,X_k) \\  
+.  & . & . & .  & . \\  
+Cov(X_1,X_{k-1})  & Cov(X_2,X_{k-1}) & ... & Var(X_{k-1})  & Cov(X_{k-1},X_k) \\  
+Cov(X_1,X_k)  & Cov(X_2,X_k) & ... &  Cov(X_{k-1},X_k)  & Var(X_k)\\  
+\end{bmatrix}  
+$$
+
+$$
+\Sigma=
+\begin{bmatrix} 
+\sigma_1^2 & \sigma_1 \sigma_2 & ... & \sigma_1\sigma_{k-1}  & \sigma_1\sigma_k \\
+\sigma_1\sigma_2)  & \sigma_2^2 & ... & \sigma_2\sigma{k-1}  & \sigma_2\sigma_k \\  
+.  & . & . & .  & . \\  
+\sigma_1,\sigma_{k-1}  & \sigma_2\sigma_{k-1} & ... & \sigma_{k-1}^2  & \sigma_{k-1}\sigma_k \\  
+\sigma_1\sigma_k  & \sigma_2\sigma_k & ... &  \sigma_{k-1}\sigma_k  & \sigma_k^2\\  
+\end{bmatrix} 
+
+$$
+
+
+:::
+
+
+
+
+
 ## Transformacions de variables multivariants
 
-Text aquí.
+1.6. Funci¶on de una o varias variables aleatorias apunts Paco Montes
+
+1.6 trasnformacions va multivariants pagina 69 apunts PIPE
+
 
 
 mas texto 15/06/2026
