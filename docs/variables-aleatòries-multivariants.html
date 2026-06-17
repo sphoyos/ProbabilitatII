@@ -1198,7 +1198,7 @@ que sería la mitjana poblacional de la distribució de la variabla <span class=
 \hline
 \end{array}
 \]</span></p>
-<p>Així el moment d’ordre 1 es la <strong><span class="math inline">\(E[X]=\mu\)</span> mitjana</strong> de la distribució i el moment central d’ordre 2 es la <strong>variància <span class="math inline">\(Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2\)</span>.</strong></p>
+<p>Així el moment d’ordre 1 es la <b><span class="math inline">\(E[X]=\mu\)</span> mitjana</b> de la distribució i el moment central d’ordre 2 es la <b>variància <span class="math inline">\(Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2\)</span>.</b></p>
 </div>
 <div id="moments-multivariants-esperanza-i-variància" class="section level3 hasAnchor" number="1.4.2">
 <h3><span class="header-section-number">1.4.2</span> Moments multivariants: Esperanza i Variància<a href="variables-aleatòries-multivariants.html#moments-multivariants-esperanza-i-vari%C3%A0ncia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1290,7 +1290,7 @@ Cov(X, Y ) = E[(X − E[X])(Y − E[Y])] \\
 \]</span></p>
 </div>
 <div class="Proposition">
-<p>Siguin (X, Y,Z) variables aleatòries amb variància finita i $ a $.</p>
+<p>Siguin (X, Y,Z) variables aleatòries amb variància finita i <span class="math inline">\(a \in \mathbb{R}\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li>La covariancia és un operador simètric: <span class="math inline">\(Cov(X, Y ) = Cov(Y,X)\)</span></li>
 <li>La variància és un cas particular de covariància: <span class="math inline">\(Var(X) = Cov(X,X)\)</span></li>
@@ -1332,17 +1332,18 @@ Cov(X_1,X_2)  &amp; Var(X_2) &amp; ... &amp; Cov(X_2,X_{k-1})  &amp; Cov(X_2,X_k
 Cov(X_1,X_{k-1})  &amp; Cov(X_2,X_{k-1}) &amp; ... &amp; Var(X_{k-1})  &amp; Cov(X_{k-1},X_k) \\  
 Cov(X_1,X_k)  &amp; Cov(X_2,X_k) &amp; ... &amp;  Cov(X_{k-1},X_k)  &amp; Var(X_k)\\  
 \end{bmatrix}  
-\]</span></p>
-$$
-=
-<span class="math display">\[\begin{bmatrix}
-\sigma_1^2 &amp; \sigma_1 \sigma_2 &amp; ... &amp; \sigma_1\sigma_{k-1}  &amp; \sigma_1\sigma_k \\
-\sigma_1\sigma_2)  &amp; \sigma_2^2 &amp; ... &amp; \sigma_2\sigma{k-1}  &amp; \sigma_2\sigma_k \\  
+\]</span>
+Podem simplificar l’expresió de la matriu utilitzant utilizando los valors <span class="math inline">\(\sigma_{ij}\)</span> per <span class="math inline">\(Cov(X_i,X_j)\)</span> i <span class="math inline">\(\sigma_i^2\)</span> per <span class="math inline">\(Var(X_i)\)</span></p>
+<p><span class="math display">\[
+\Sigma=
+\begin{bmatrix}
+\sigma_1^2 &amp; \sigma_{12} &amp; ... &amp; \sigma_{1(k-1)}  &amp; \sigma_{1k} \\
+\sigma_{12}  &amp; \sigma_2^2 &amp; ... &amp; \sigma_{2(k-1)}  &amp; \sigma_{2k} \\  
 .  &amp; . &amp; . &amp; .  &amp; . \\  
-\sigma_1,\sigma_{k-1}  &amp; \sigma_2\sigma_{k-1} &amp; ... &amp; \sigma_{k-1}^2  &amp; \sigma_{k-1}\sigma_k \\  
-\sigma_1\sigma_k  &amp; \sigma_2\sigma_k &amp; ... &amp;  \sigma_{k-1}\sigma_k  &amp; \sigma_k^2\\  
-\end{bmatrix}\]</span>
-<p>$$</p>
+\sigma_{1(k-1)}  &amp; \sigma_{2(k-1)} &amp; ... &amp; \sigma_{k-1}^2  &amp; \sigma_{(k-1)k} \\  
+\sigma_{1k}  &amp; \sigma_{2k} &amp; ... &amp;  \sigma_{(k-1)k}  &amp; \sigma_k^2\\  
+\end{bmatrix}
+\]</span></p>
 </div>
 </div>
 </div>

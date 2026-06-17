@@ -1,7 +1,7 @@
   bookdown::gitbook:
     css: Rcode/custom.css
     pandoc_args: [ "--metadata", "fig-path=images/" ]
-    highlight: tango
+    syntax-highlighting: tango
     fig_caption: TRUE
     df_print: paged
     config:

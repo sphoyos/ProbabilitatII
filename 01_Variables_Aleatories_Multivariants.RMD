@@ -1414,7 +1414,7 @@ $$
 $$
 
 
-   Així el moment d'ordre 1 es  la **$E[X]=\mu$ mitjana** de la distribució  i el moment central d'ordre 2 es la **variància $Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2$.** 
+   Així el moment d'ordre 1 es  la <b>$E[X]=\mu$ mitjana</b> de la distribució  i el moment central d'ordre 2 es la <b>variància $Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2$.</b> 
 
 
 ### Moments multivariants: Esperanza i Variància
@@ -1483,8 +1483,6 @@ que és un terç de la longitut de la barra.
 ---
 
 
-
-
 :::{.Definition}
 **Moments d'un vector aleatori**
 En el cas de les variables aleatòries univariantes hem vist com  determinades formes de la fucnió g donen lloc als anomenats moments que podem extendre al cas dels vectors aleatoris.
@@ -1494,6 +1492,7 @@ En el cas de les variables aleatòries univariantes hem vist com  determinades f
 g(X_1,...,X_k)=X_1^{n_1} .....X_k^{n_k}, n_i \geq 0
 $$ 
 que dona lloc a $E[X_1^{n_1} .....X_k^{n_k}]$ respece al origen de cada component. 
+
 :::
 
 Un cas particulasr si $n_i=m$ i $n_j=0, j \neq i$  dona que $E[X_1^{n_1} .....X_k^{n_k}]=E[X_i^m]$
@@ -1555,7 +1554,7 @@ $$
 
 :::{.Proposition}
 
-Siguin (X, Y,Z) variables aleatòries amb variància finita i $ a \in \mathbb{R} $.
+Siguin (X, Y,Z) variables aleatòries amb variància finita i $a \in \mathbb{R}$.
 
 1. La covariancia és un operador simètric: $Cov(X, Y ) = Cov(Y,X)$
 2. La variància és un cas particular de covariància: $Var(X) = Cov(X,X)$
@@ -1607,17 +1606,17 @@ Cov(X_1,X_{k-1})  & Cov(X_2,X_{k-1}) & ... & Var(X_{k-1})  & Cov(X_{k-1},X_k) \\
 Cov(X_1,X_k)  & Cov(X_2,X_k) & ... &  Cov(X_{k-1},X_k)  & Var(X_k)\\  
 \end{bmatrix}  
 $$
+Podem simplificar l'expresió  de la matriu utilitzant   utilizando los valors $\sigma_{ij}$ per $Cov(X_i,X_j)$ i $\sigma_i^2$ per $Var(X_i)$ 
 
 $$
 \Sigma=
 \begin{bmatrix} 
-\sigma_1^2 & \sigma_1 \sigma_2 & ... & \sigma_1\sigma_{k-1}  & \sigma_1\sigma_k \\
-\sigma_1\sigma_2)  & \sigma_2^2 & ... & \sigma_2\sigma{k-1}  & \sigma_2\sigma_k \\  
+\sigma_1^2 & \sigma_{12} & ... & \sigma_{1(k-1)}  & \sigma_{1k} \\
+\sigma_{12}  & \sigma_2^2 & ... & \sigma_{2(k-1)}  & \sigma_{2k} \\  
 .  & . & . & .  & . \\  
-\sigma_1,\sigma_{k-1}  & \sigma_2\sigma_{k-1} & ... & \sigma_{k-1}^2  & \sigma_{k-1}\sigma_k \\  
-\sigma_1\sigma_k  & \sigma_2\sigma_k & ... &  \sigma_{k-1}\sigma_k  & \sigma_k^2\\  
+\sigma_{1(k-1)}  & \sigma_{2(k-1)} & ... & \sigma_{k-1}^2  & \sigma_{(k-1)k} \\  
+\sigma_{1k}  & \sigma_{2k} & ... &  \sigma_{(k-1)k}  & \sigma_k^2\\  
 \end{bmatrix} 
-
 $$
 
 
