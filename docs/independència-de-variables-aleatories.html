@@ -115,7 +115,12 @@
 <li class="chapter" data-level="1.4.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-esperanza-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperanza i Variància</a></li>
 <li class="chapter" data-level="1.4.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a></li>
+<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#suma-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.1</b> Suma de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.2</b> Producte de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries-1"><i class="fa fa-check"></i><b>1.5.3</b> Producte de dues variables aleatòries</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html"><i class="fa fa-check"></i><b>2</b> Independència de variables aleatories</a>
 <ul>
@@ -173,7 +178,7 @@
 ## Esperances i variàncies condicionades.
 Text aquí</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-46" class="definition"><strong>Definició 2.1  </strong></span><strong>Definició 1.1 (Experiment).</strong><br />
+<p><span id="def:unlabeled-div-47" class="definition"><strong>Definició 2.1  </strong></span><strong>Definició 1.1 (Experiment).</strong><br />
 Un <strong>experiment</strong> és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables.</p>
 <ul>
 <li>L’experiment és <strong>determinista</strong> si sempre produeix el mateix resultat.</li>
@@ -183,7 +188,7 @@ Un <strong>experiment</strong> és una seqüència d’accions que, en repetir-s
 <p><strong>Exemple 1.1.</strong><br />
 Llençar una moneda fins que aparegui <em>cara</em> per primera vegada i comptar el nombre total de llançaments.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-47" class="definition"><strong>Definició 2.2  </strong></span><strong>Definició 1.2 (Espai mostral).</strong><br />
+<p><span id="def:unlabeled-div-48" class="definition"><strong>Definició 2.2  </strong></span><strong>Definició 1.2 (Espai mostral).</strong><br />
 L’<strong>espai mostral</strong> d’un experiment, denotat per <span class="math inline">\(\Omega\)</span>, és el conjunt de tots els resultats possibles.</p>
 </div>
 <p>Per a l’exemple:</p>
@@ -191,7 +196,7 @@ L’<strong>espai mostral</strong> d’un experiment, denotat per <span class="m
 \Omega = \{1,2,3,\ldots\}.
 \]</span></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-48" class="definition"><strong>Definició 2.3  </strong></span><strong>Definició 1.3 (Esdeveniment).</strong><br />
+<p><span id="def:unlabeled-div-49" class="definition"><strong>Definició 2.3  </strong></span><strong>Definició 1.3 (Esdeveniment).</strong><br />
 Un <strong>esdeveniment</strong> és qualsevol subconjunt <span class="math inline">\(A \subseteq \Omega\)</span>.<br />
 Diem que <em>A ocorre</em> si el resultat observat pertany a A.</p>
 </div>
@@ -201,7 +206,7 @@ Diem que <em>A ocorre</em> si el resultat observat pertany a A.</p>
 <p>1.0.2 σ-àlgebres i mesura de probabilitat</p>
 <p>Per tal de definir probabilitat de manera rigorosa, necessitem una col·lecció d’esdeveniments “ben comportada”.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-49" class="definition"><strong>Definició 2.4  </strong></span><strong>Definició 1.4 (σ-àlgebra).</strong><br />
+<p><span id="def:unlabeled-div-50" class="definition"><strong>Definició 2.4  </strong></span><strong>Definició 1.4 (σ-àlgebra).</strong><br />
 Una col·lecció <span class="math inline">\(\mathcal{A}\subseteq \mathcal{P}(\Omega)\)</span> és una <strong>σ-àlgebra</strong> si:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\Omega\in\mathcal{A}\)</span><br />
@@ -214,7 +219,7 @@ Una col·lecció <span class="math inline">\(\mathcal{A}\subseteq \mathcal{P}(\O
 <p>La σ-àlgebra representa “tot allò al que volem i podem assignar probabilitat”.</p>
 <hr />
 <div class="definition">
-<p><span id="def:unlabeled-div-50" class="definition"><strong>Definició 2.5  </strong></span><strong>Definició 1.5 (Probabilitat — axiomes de Kolmogorov).</strong><br />
+<p><span id="def:unlabeled-div-51" class="definition"><strong>Definició 2.5  </strong></span><strong>Definició 1.5 (Probabilitat — axiomes de Kolmogorov).</strong><br />
 Donada una σ-àlgebra <span class="math inline">\(\mathcal{A}\)</span> sobre <span class="math inline">\(\Omega\)</span>, una funció</p>
 <p><span class="math display">\[\mathbb{P}:\mathcal{A}\to[0,1]\]</span></p>
 <p>és una <strong>mesura de probabilitat</strong> si:</p>
@@ -232,13 +237,13 @@ Donada una σ-àlgebra <span class="math inline">\(\mathcal{A}\)</span> sobre <s
 <hr />
 <p>1.0.3 Variables aleatòries i funció de distribució</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-51" class="definition"><strong>Definició 2.6  </strong></span><strong>Definició 1.7 (Variable aleatòria).</strong><br />
+<p><span id="def:unlabeled-div-52" class="definition"><strong>Definició 2.6  </strong></span><strong>Definició 1.7 (Variable aleatòria).</strong><br />
 Una aplicació <span class="math inline">\(X:\Omega\to\mathbb{R}\)</span> és una <strong>variable aleatòria</strong> si<br />
 <span class="math display">\[\{\omega: X(\omega)\le x\}\in \mathcal{A}\quad\text{per a tot }x\in\mathbb{R}.\]</span></p>
 </div>
 <p>Això garanteix que les expressions <span class="math inline">\(\mathbb{P}(X\le x)\)</span> estan ben definides.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-52" class="definition"><strong>Definició 2.7  </strong></span><strong>Definició 1.8 (Funció de distribució).</strong><br />
+<p><span id="def:unlabeled-div-53" class="definition"><strong>Definició 2.7  </strong></span><strong>Definició 1.8 (Funció de distribució).</strong><br />
 La <strong>funció de distribució</strong> d’una variable aleatòria <span class="math inline">\(X\)</span> és:</p>
 <p><span class="math display">\[
 F_X(x)=\mathbb{P}(X\le x).
@@ -254,7 +259,7 @@ F_X(x)=\mathbb{P}(X\le x).
 </ul>
 <p>Aquests casos requereixen treballar amb <strong>vectors aleatoris</strong>.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-53" class="definition"><strong>Definició 2.8  </strong></span><strong>Definició 1.11 (Variable aleatòria bivariant).</strong><br />
+<p><span id="def:unlabeled-div-54" class="definition"><strong>Definició 2.8  </strong></span><strong>Definició 1.11 (Variable aleatòria bivariant).</strong><br />
 Un parell <span class="math inline">\((X,Y)\)</span> és una <strong>variable aleatòria bivariant</strong> si per a tot <span class="math inline">\(x,y\)</span>:</p>
 <p><span class="math display">\[
 \{\,\omega: X(\omega)\le x,\; Y(\omega)\le y\,\}\in\mathcal{A}.

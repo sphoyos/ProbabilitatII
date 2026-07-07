@@ -58,7 +58,7 @@ La $\sigma~-àlgebra$ representa “tot allò al que volem i podem assignar prob
 :::{.example} 
 Si suposem un experiment és triar a l'atzar  un número en l'interval [0,1], l'interès es centra en conèixer si l'elecció pertany a qualsevol dels subconjunts de [0,1]. La $\sigma-àlgebra$ $\beta_{[0,1]}$ de'esdeveniments generada a partir de tots els posibles subintervals de [0,1], és  coneguda com $\sigma-àlgebra$ de Borel estrictament menor que $\mathcal{P}(\Omega)$.
 
-**Posar exemples de sigma algebra de $\mathbb{R}$ i $\mathbb{N}$,**
+<!-- **Posar exemples de sigma algebra de $\mathbb{R}$ i $\mathbb{N}$,** -->
 :::
 
 ---
@@ -74,7 +74,7 @@ En resum, L'espai mostral ve acompanyat de la $\sigma-álgebra$ mes convenient a
  
 $$
 \begin{aligned}
-P : \mathcal{A} &\rightarrow \mathbb{R} \\
+P : \mathcal{A} & \rightarrow \mathbb{R} \\
 A &\mapsto Pr(A)
 \end{aligned}
 $$
@@ -211,9 +211,10 @@ Les distribucions de probabilitat com la $P_X$, encara que ens presenta la infor
 
 A partir de la probabilitat induida podem definir sobre  $\mathbb{R}$ la següent funció
 
-$$
-F_X(x)= P_X((-\infty,x])=P(X^{-1}\{(-\infty,x]\})=P/X\leq x) \quad \forall x \in \mathbb{R}
-$$
+\begin{equation}
+F_X(x)= P_X((-\infty,x])=P(X^{-1}\{(-\infty,x]\})=P(X\leq x) \quad \forall x \in \mathbb{R} (\#eq:Fx)
+\end{equation}
+
 :::
 
 
@@ -272,10 +273,12 @@ $$
 
 X és una variable aleatòria discreta si  $X(\Omega)$ es  finit o numerable, és a dir es pot definir un conjunt suport  $D_X=\{x_1,x_2,....,x_n \}$ tal que $P_X(D_X))= P(X \in D_X)=1)$ i   $P(X=x)>0 \quad, \forall x \in D_X$. Per tant es pot deduir que $P(X=x)=0 \quad, \forall x \in D_X^c$
 
-Així la funció de distribució de la variable aleatòria és:
-$$
- F_x(x)=\sum_{x \leq x_i} P(X=x_i)
-$$
+Així la funció de distribució de la variable aleatòria discreta és:
+
+\begin{equation}
+ F_x(x)=\sum_{x \leq x_i} P(X=x_i) (\#eq:Fxdiscret)
+\end{equation}
+
 Que serà una funció continua en els intervals $[x_i,x_{i+j}[$ si els valors $x_i$ estan endreçats de menor a major i que tindrà una discontinuïtat de salt finit en cada punt $x_i$  de Valor $F_X(x_i)- F_X(x_{i-1})=P(X=x_i)$
 
 Així a la variable X li podem associar la funció de probabilitat següent
@@ -286,6 +289,7 @@ f_X(x)=
 P(X=x), & \text{si } x \in D_X \\
 0, & \text{en la resta}
 \end{cases}
+(\#eq:pxdiscret)
 $$
 
 :::
@@ -307,12 +311,13 @@ Alguns exemples de variables aleatòries discretes que venen definides per les s
 Una variable aleatòria X és continua si la seva funció de distribució F_X , es absolutament continua.  A efectes pràctics disposem  la funció de densitat f_X(x), coneguda de manera que
 
 $$
-F_X(x)= \int_{-\infty}^{b}  f(t) dt
+F_X(x)= \int_{-\infty}^{x}  f(t) dt  
+(\#eq:Fxcont)
 $$
 Així la probabilitat de qualsevol interval ]a,b] ès
 
 $$
-P(X \in ]a,b]= P(a<X \leq b) \int_{a}^{b}  f(x) dx
+P(X \in ]a,b]= P(a<X \leq b) \int_{a}^{b}  f(x) dx (\#eq:pxcontint)
 $$
 
 
@@ -345,6 +350,11 @@ Molts experiments aleatoris produeixen més d'una única quantitat rellevant, é
 -  Imaginem una situació on primer es llança una moneda  amb resultats cara i creu, i després es llança un dau amb 6 resultats.  Així tenim una variable aleatòria $X_1$ per a la moneda i una variable aleatòria $X_2$ per al dau.  El vector en $\mathbb{R}^2$ $(X_1,X_2)$ serà una variable aletatòria bidimensional   composat per dues variables aleatòries unidimensionals
 :::
 
+---
+
+---
+
+
 :::{.example}
 - En economia podem estar interessants en conèixer la distribució d' ingressos d'una persona i per altra costat el % dels ingressos dedicats al pagament de la vivenda (lloger o hipoteca). Cada individu estarà representat per un vector composat per dues variables uniDImensionals
 :::
@@ -370,7 +380,7 @@ On $\beta^K$ es una $sigma-àlgebra$ de Borel en   $\mathbb{R}^k$
 $\mathbf{X}$ indueix sobre $(\mathbb{R}^k,\beta^K)$ una probabilitat $P_X$ de la següent manera
 
 $$
-P_X(B)=P(\mathbf{X}^{-1}(B)), \quad \forall B \in \beta^K
+P_X(B)=P(\mathbf{X}^{-1}(B)), \quad \forall B \in \beta^K (\#eq:pvectorind)
 $$
 És senzill comprobar que $P_X$ verifica els tres axiomes de probabilitat, pel que $(\mathbb{R}^k,\beta^K, P_X)$ permet indueix un espai de probabilitat amb les característiques de $(\Omega,\mathcal{A},P)$ heretats mitjançant X.
 
@@ -403,7 +413,7 @@ Com passa en el cas univariant es prou que $(X,Y)^{-1}(( -\infty, x]  \times (-\
 Per tant, qualsevol variable aleatòria bivariant (X,Y) indueix una mesura de probabilitat en $\mathbb{R}^2$  que permet assignar probabilitats a qualsevol subconjunt Borelià B de $\mathbb{R}^2$:
 
 $$
-P_{(X,Y)}(B)=P((X,Y)^{-1}(B))=P(\{w \in \Omega:(X(w),Y(w)) \in B\})
+P_{(X,Y)}(B)=P((X,Y)^{-1}(B))=P(\{w \in \Omega:(X(w),Y(w)) \in B\})  (\#eq:pconjunt)
 $$
 Aquesta mesura de probabilitat induïda s'anomena *distribució de probabilitat conjunta de (X,Y)*
 
@@ -487,7 +497,7 @@ Definim la  funció de distribució associada a $P_X$ a donat un punt de  $\math
 
 
 $$
-F_X( \mathbf{x} )=F_X(x_1,...,x_k) =P_X(S_x)=P(X \in S_x)= P(\bigcap_{i=1}^{k} \{ X_i\leq x_i \})
+F_X( \mathbf{x} )=F_X(x_1,...,x_k) =P_X(S_x)=P(X \in S_x)= P(\bigcap_{i=1}^{k} \{ X_i\leq x_i \}) (\#eq:Fdistconjunt)
 $$
 :::
 
@@ -550,7 +560,9 @@ $$
 \end{array}
 \right\}
 \quad F_{X,Y}(x+h,y+k)-F_{X,Y}(x,y)-F_{X,Y}(x+h,y)-F_{X,Y}(x,y+k)=P_{X,Y}(A)=P_{X,Y}(]x,x+h] \times ]y,y+k])>0
+(\#eq:rectangle)
 $$
+
 :::
 
 <b>
@@ -588,11 +600,11 @@ $$
 
 $$
 {\small 
-\begin{array}{l}
-P_{X,Y}(A) =F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)- P_{X,Y}(A_1)-P_{X,Y}(A_2)=  \\
-F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)-F_{X,Y}(x,y))-(F_{X,Y} (x,y+k)- F_{X,Y}(x,y))=\\
-F_{X,Y}(x+h, y+k)+F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)+F_{X,Y}(x,y))-(F_{X,Y}(x,y+k)- F_{X,Y}(x,y)) >0 
-\end{array}
+\begin{aligned}
+P_{X,Y}(A) &=F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)- P_{X,Y}(A_1)-P_{X,Y}(A_2)  \\
+&=F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)-F_{X,Y}(x,y))-(F_{X,Y} (x,y+k)- F_{X,Y}(x,y))\\
+&=F_{X,Y}(x+h, y+k)+F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)+F_{X,Y}(x,y))-(F_{X,Y}(x,y+k)- F_{X,Y}(x,y)) >0 
+\end{aligned}
 }
 $$
 
@@ -891,8 +903,10 @@ knitr::include_graphics("images/doubleintegral2.png")
 Com a consegüència a partir de la notació diferencial
 
 $$
-P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \}=P \{(X,Y) \in (x,x+dx] \times (y,y+dy]= \\
- \int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dty 
+\begin{aligned}
+P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \} &=P \{(X,Y) \in (x,x+dx] \times (y,y+dy] \\
+ &=\int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dty 
+ \end{aligned}
 $$
 Aleshores,  es pot deduir que la unitat de mesura de la densitat de probabilitat és la probabilitat per unitat  d'àrea.
 
@@ -1470,11 +1484,13 @@ La longitud de la peça central ve donada per la variable aleatòria $X=g(U_1,U_
 LLavors seguint la definició d'esperança de la variable X obtenim el valor de la longitud de la peça central
 
 $$
-E[|U_1-U_2|]=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(u_1,u_2)f(u_1,u_2)du_1du_2=\int_{0}^{1}\int_{0}^{1} |u_1-u_2|du_1du_2  \\
-=\int_0^1\int_0^1 1_{(u_1 \geq u_2)} (u_1-u_2) du_1du_2 +\int_0^1\int_0^1 1_{(u_1 \leq u_2)} (u_2-u_1) du_1du_2  \\
-=\int_0^1\int_0^{u_1}(u1_u2) du_2du_1 + \int_{0}^{1}\int_{0}^{u_2}(u2_u1) du_1du_2=  \\
-= \int_0^1 \left [u_1u_2 - \frac {u_2^2}{2}  \right]_0^{u_1}du_1+\int_0^1 \left [u_2u_1 - \frac {u_1^2}{2}  \right]_0^{u_2}du_2=\int_0^1 ( u_1^2 - \frac {u_1^2}{2})  du_1+\int_0^1 ( u_2^2 - \frac {u_2^2}{2})  du_2 \\
-=\int_0^1 ( \frac {u_1^2}{2})  du_1+\int_0^1 (  \frac {u_2^2}{2})  du_2= \left [ \frac {u_1^2}{2 \times 3} \right]_0^1+\left [ \frac {u_2^2}{2 \times 3} \right]_0^1= \frac {1}{2 \times 3}+\frac {1}{2 \times 3}=\frac {1}{3} 
+\begin{aligned}
+E[|U_1-U_2|] &=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(u_1,u_2)f(u_1,u_2)du_1du_2=\int_{0}^{1}\int_{0}^{1} |u_1-u_2|du_1du_2  \\
+&=\int_0^1\int_0^1 1_{(u_1 \geq u_2)} (u_1-u_2) du_1du_2 +\int_0^1\int_0^1 1_{(u_1 \leq u_2)} (u_2-u_1) du_1du_2  \\
+&=\int_0^1\int_0^{u_1}(u1_u2) du_2du_1 + \int_{0}^{1}\int_{0}^{u_2}(u2_u1) du_1du_2  \\
+&= \int_0^1 \left [u_1u_2 - \frac {u_2^2}{2}  \right]_0^{u_1}du_1+\int_0^1 \left [u_2u_1 - \frac {u_1^2}{2}  \right]_0^{u_2}du_2=\int_0^1 ( u_1^2 - \frac {u_1^2}{2})  du_1+\int_0^1 ( u_2^2 - \frac {u_2^2}{2})  du_2 \\
+&=\int_0^1 ( \frac {u_1^2}{2})  du_1+\int_0^1 (  \frac {u_2^2}{2})  du_2= \left [ \frac {u_1^2}{2 \times 3} \right]_0^1+\left [ \frac {u_2^2}{2 \times 3} \right]_0^1= \frac {1}{2 \times 3}+\frac {1}{2 \times 3}=\frac {1}{3} 
+\end{aligned}
 $$
 que és un terç de la longitut de la barra. 
 
@@ -1523,9 +1539,9 @@ $$
 ### Matriu de Variància-Covariància
 
 :::{.Definition}
-**covariància**
+**Covariància**
 
-Un moment d'especial interès  e el moment conjunt central que s'obtè pera $n_i=1, n_j=1 i n_l=0, l\neq (i,j)$ que anomenarem covariància 
+Un moment d'especial interès  és el moment conjunt central que s'obtè per a les variables $X_i$ i $X_j$  $n_i=1, n_j=1 \quad  i \quad  n_l=0, l\neq (i,j)$ que anomenarem covariància 
 
 
 $$
@@ -1543,12 +1559,14 @@ $$
 
 **Demostració**
 $$
-Cov(X, Y ) = E[(X − E[X])(Y − E[Y])] \\ 
-= E[(X − E[X])Y − (X − E[X])E[Y]]  \\
-= E[(X − E[X])Y ] − E[(X − E[X]))E[Y]] \\
-= E[XY] − E[E[X]Y]  − E[XE[Y]] + E[X]E[Y]] \\
-= E[XY] − E[X]E[Y] − E[X]E[Y] + E[X]E[Y] \\
-= E[XY]) − E[X] E[Y]
+\begin{aligned}
+Cov(X, Y ) &= E[(X − E[X])(Y − E[Y])] \\ 
+&= E[(X − E[X])Y − (X − E[X])E[Y]]  \\
+&= E[(X − E[X])Y ] − E[(X − E[X]))E[Y]] \\
+&= E[XY] − E[E[X]Y]  − E[XE[Y]] + E[X]E[Y]] \\
+&= E[XY] − E[X]E[Y] − E[X]E[Y] + E[X]E[Y] \\
+&= E[XY]) − E[X] E[Y]
+\end{aligned}
 $$
 :::
 
@@ -1559,7 +1577,7 @@ Siguin (X, Y,Z) variables aleatòries amb variància finita i $a \in \mathbb{R}$
 1. La covariancia és un operador simètric: $Cov(X, Y ) = Cov(Y,X)$
 2. La variància és un cas particular de covariància: $Var(X) = Cov(X,X)$
 3. La covariància amb una constant és 0: $Cov(X, a) = 0$
-4. La covariància és un operador bilineal, és a dir, éss lineal en els seus dos arguments:
+4. La covariància és un operador bilineal, és a dir, és lineal en els seus dos arguments:
 $Cov(aX, Y ) = Cov(X, aY ) = aCov(X, Y )$
 $Cov(X + Y,Z) = Cov(X,Z) + Cov(Y,Z)$
 $Cov(X, Y + Z) = Cov(X, Y ) + Cov(X,Z)$
@@ -1574,11 +1592,13 @@ $$
 Cov(aX, Y ) = E[aXY] − E[aX]E[Y]= aE[XY] − aE[X]E[Y]= a (E[XY]) − E[X]E[Y])= aCov(X,Y).
 $$
 $$
-Cov(X + Y,Z) = E[(X + Y )Z] − E[X + Y]E[Z] \\
-= E[XZ] + E[YZ] − (E[X] + E[Y])E[Z] \\
-= E[XZ] + E[YZ] − E[X]E[Z] − E[Y]E[Z] \\
-= E[XZ] − E[X]E[Z] + E[YZ] − E[Y]E[Z] \\
-= Cov(X,Z) + Cov(Y,Z).
+\begin{aligned}
+Cov(X + Y,Z) &= E[(X + Y )Z] − E[X + Y]E[Z] \\
+&= E[XZ] + E[YZ] − (E[X] + E[Y])E[Z] \\
+&= E[XZ] + E[YZ] − E[X]E[Z] − E[Y]E[Z] \\
+&= E[XZ] − E[X]E[Z] + E[YZ] − E[Y]E[Z] \\
+&= Cov(X,Z) + Cov(Y,Z)
+\end{aligned}
 $$
 
 La demostració dels dos últims apartats es dedueix directament de la anterior escrivint Var(X+Y)=Cov(X+Y,X+Y) i Var(X-Y)= Cov(X-Y, X-Y) 
@@ -1606,7 +1626,7 @@ Cov(X_1,X_{k-1})  & Cov(X_2,X_{k-1}) & ... & Var(X_{k-1})  & Cov(X_{k-1},X_k) \\
 Cov(X_1,X_k)  & Cov(X_2,X_k) & ... &  Cov(X_{k-1},X_k)  & Var(X_k)\\  
 \end{bmatrix}  
 $$
-Podem simplificar l'expresió  de la matriu utilitzant   utilizando los valors $\sigma_{ij}$ per $Cov(X_i,X_j)$ i $\sigma_i^2$ per $Var(X_i)$ 
+Podem simplificar l'expresió  de la matriu utilitzantels els valors $\sigma_{ij}$ per $Cov(X_i,X_j)$ i $\sigma_i^2$ per $Var(X_i)$ 
 
 $$
 \Sigma=
@@ -1628,11 +1648,343 @@ $$
 
 ## Transformacions de variables multivariants
 
-1.6. Funci¶on de una o varias variables aleatorias apunts Paco Montes
 
-1.6 trasnformacions va multivariants pagina 69 apunts PIPE
+:::{.theorem #thm-cambio}
+
+Sigui $X=(X_1,..., X_k)$ un vector aleatori  continu  amb soport $D_X$, és a dir $P((X_1,...,X_k) \in D_X)=1$, i sigui $g=(g_1,...,g_k):\mathbb{R^k} \rightarrow  \mathbb{R^k}$   una funció vectorial que verifica:
+
+1 g es uno a uno sobre Dx
+
+2 el  Jacobiano de g, $J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }$ es diferente de cero $\forall x \in D_X$
+
+3 existeix $h=(h_1,...,h_k)$ inversa de g
+
+Llavors, $Y=g(X)$ es un vector aleatori continu amb densitat conjunta per a $y=(y_1,...,y_k) \in g(D_X)$ ve donada per 
+$$
+f_Y(y_1,...,y_k)=f_X(h_1(y1,...,yk),....,h_k(y1,...,yk)) |J^{-1}|
+$$
+on $|J^{-1}|=\frac{\partial (h_1,....,h_k)}{\partial (y_1,...,y_k) }$ és el Jacobià de h. 
+
+
+:::
+
+
+La demostració d'aquest teorema no es més que el teorema del canvi de variable en una integral múltiple y la seva demostració rigorosa, pot trobar-se en qualsevol llibre d'Anàlisi Matemàtica.
+
+---
+
+:::{.example}
+
+ Sigui l'experiment aleatori triar un punt a l'atzar del cercle unitat $C_1$, on podem definir sobre l'esapi de probabilitat un vector aleatori de les coordenades del punt (X,Y). L'elecció a l'atzar implica una probabilitat uniforme sobre $C_1$. La densitat conjunta la podem expresar com 
+ 
+ $$
+ f_{XY}(x,y)=
+ \begin{cases}
+\dfrac{1}{\pi},          & \text{si} \quad (x,y) \in C_1 \\
+0,          & \text{en la resta }  \\
+\end{cases}
+ $$
+
+
+Considerem un canvi entre les coordenades cartesianes a les coordenades polars del punt del cercle.
+
+En aquest casa la transformació a coordenades polars serà $R= \sqrt{X^2+Y^2}$ i $\Theta=arctan (Y/X)$.
+
+
+Per obtenir la seva densitat conjunta necessitem les transformacions inversas de coordenades polars a euclideas, $X=R cos(\Theta)$ i $Y=R sin(\Theta)$. Si es calcula el jacobià aquest val $J_1=R$ 
+
+Per tant segons el teorema   \@ref(thm:thm-cambio) la densitat conjunta es 
+ $$
+ f_{R\Theta}(r,\theta)=
+ \begin{cases}
+\dfrac{r}{\pi},          & \text{si} \quad (r,\theta) \in [0,1] \times[0,2\pi]  \\
+0,          & \text{en la resta }  \\
+\end{cases}
+ $$
+ Amb facilitat es poden obtenir les marginals corresponents
+ 
+ 
+ $$
+ f_{R}(r)=
+ \begin{cases}
+2r,          & \text{si} \quad r \in [0,1]   \\
+0,          & \text{en la resta }  \\
+\end{cases}
+ $$
+ $$
+ f_{\Theta}(\theta)=
+ \begin{cases}
+\dfrac{1}{2\pi},          & \text{si} \quad \theta \in [0,2\pi]  \\
+0,          & \text{en la resta }  \\
+\end{cases}
+ $$
+ 
+ 
+:::
+
+---
+
+### Suma  de dues variables aleatòries
 
 
 
-mas texto 15/06/2026
-por la tarde
+Sigui la variable aleatòria $Z=X+Y$ on (X,Y) es la distribució conjunta de les dues components aleatòria on es vol determinar la distribució de probabilitat de $Z$
+
+**Cas (X,Y) variable aleatòria bivariant discreta**
+
+
+Sigui  $p(x_i,y_j)$   la funció de probabilitat conjunta de $(X, Y)$
+
+$$
+p(x_i,y_j)=P(X=x_i, Y=y_j), \quad  i=1,2,...\quad  j=1,2,...
+$$
+
+La variable aleatòria suma, $Z=X+Y$ és una variable aleatòria univariant discreta, ja que com a molt pot pendre els valors produïts per les combinacions dels valors de X e Y, es a dir
+
+$$
+x_i+y_j, , \quad  i=1,2,...\quad  j=1,2,...
+$$
+
+Alguns dels valor poden estar repetits.  Sigui $z_\ell$ algun dels valors posibles de $Z=X+Y$. La funció de probabilitat de Z és:
+
+$$
+\begin{aligned}
+\Pr(Z = z_\ell)
+&=\Pr(X+Y = z_\ell) \\
+&=\sum_{i,j:\,x_i+y_j=z_\ell}
+   \Pr(X=x_i,\;Y=y_j) \\
+&=\sum_i
+   \Pr(X=x_i,\;Y=z_\ell-x_i) \\
+&=\sum_j
+   \Pr(X=z_\ell-y_j,\;Y=y_j).
+\end{aligned}
+$$
+
+**Cas (X,Y) variable aleatòria bivariant continua**
+
+ 
+Sigui $f_{XY}(x,y)$ la funció de densitat conjunta de les variables aleatòries quantitatives $(X,Y)$, Definim  $Z=X+Y$ funció de la que volem conèixer la serva densitat.  Per poder utilitzar el teorema \@ref(thm:thm-cambio)
+és necessita una transformació bidimensional, el que podem obenir utilitzant una nova variable $V=X$. 
+
+Així al vector $(Z,V)$ li podem aplicar diectament el teorema , amb les inverses $X=V$ i $Y=Z-V$ on el jacobià es :
+
+$$
+J^{-1}=\det 
+\begin{bmatrix}
+\dfrac {\partial v } {\partial z}  & \dfrac {\partial v } {\partial v}  \\
+\dfrac {\partial z- v } {\partial z}  & \dfrac {\partial (z-v) } {\partial v}  \\
+\end{bmatrix}=
+\det \begin{bmatrix}
+ 0  &  1  \\
+1  &  -1 \\
+\end{bmatrix}
+=-1
+$$
+
+Tindrem que $|J^{-1}|=1$ i l'expressió de la distribució conjunta es. 
+
+$$
+f_{Z,V}(z,v)=f_{X,Y}(v,z-v)
+$$
+y per obtenir la densitat marginal de la suma Z tenim
+$$
+ f_Z(z)=\int_{- \infty}^{+ \infty} f_{X,Y}(v,z-v)dv =\int_{- \infty}^{+ \infty} f_{X,Y}(x,z-x)dx 
+$$
+
+---
+
+:::{.example #suma}
+
+
+Siguin X i Y dues variables aleatòries amb distribució uniforme al interval (0,1) i amb densitat conjunta
+
+$$
+f_{X,Y}(x,y)=
+\begin{cases}
+1, & \text{si } 0<x<1,\;0<y<1,\\
+0, & \text{en la resta}
+\end{cases}
+$$
+Si Z=X+Y i utilitzant la transformació V=X la funció de distribució conjunta serà
+
+
+La densitat marginal de la suma Z segons hem vist és
+
+$$
+f_Z(z)=\int_{- \infty}^{+ \infty} f_{X,Y}(x,z-x)dx =\int_{max(0,z-1)}^{min(1,z)} 1 dx 
+$$
+
+donat que de e les condicions inicials,  la funció està definida si $0<x<1$ i $0<z-v<1$. Es a dir $z-1<v<z$  i per tant $max(0,z-1) <v<min(1,z)$
+
+Així és distingeixen dos casos. 
+
+
+Si $0<z<1$
+
+$$
+f_Z(z)= \int_{0}^{z} 1 dx= z 
+$$
+Si $1\leq z<2$
+
+$$
+f_Z(z)= \int_{z-1}^{1} 1 dx= 2-z 
+$$
+Finalment 
+$$
+f_Z(z)=
+\begin{cases}
+z, & \text{si } 0<z<1,\\
+2-z, & \text{si } 1\le z<2,\\
+0, & \text{en la resta.}
+\end{cases}
+$$
+
+
+Que es la coneguda distribució triangular resultat de sumar dues variables independents* U(0,1)
+
+
+<small>
+* Nota:  El concepte de independència es veura en el tema següent
+</small>
+
+::: 
+
+---
+
+### Producte de dues variables aleatòries
+
+En el cas del producte W=XY i com abans definint V=X tenim que podem calcular la distribució conjunta (W,V) aplicant el teorema  \@ref(thm:thm-cambio)  partir de les funcions inverses  X=V i Y=W/V i el Jacobià 
+  
+$$
+J^{-1}= 
+\det
+\begin{bmatrix}
+\dfrac{\partial v}{\partial w} &
+\dfrac{\partial v}{\partial v} \\[1ex]
+\dfrac{\partial (w/v)}{\partial w} &
+\dfrac{\partial (w/v)}{\partial v}
+\end{bmatrix} =
+\det
+\begin{bmatrix}
+0 & 1 \\[1ex]
+\dfrac{1}{v} & -\dfrac{w}{v^2}
+\end{bmatrix} 
+=-\dfrac{1}{v}
+$$
+
+I per tant $|J^{-1}|=\dfrac{1}{|v|}$ 
+
+
+
+La distribució conjunta de (W,V) és
+
+$$
+f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (\dfrac{w}{v},v)
+$$
+
+
+I la distribució marginal del producto s'obté integran respecte a l'altra component
+
+
+$$
+f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v})dv
+$$
+
+---
+
+:::{.example}{}
+
+
+Siguin  les dues variable uniformes del exemple  \@ref(exm:suma)
+
+
+Volem obtenir la densitat del producte $W=XY$ que seguint l'apartat anterior es pot obtenir  comn
+
+$$
+f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|x|}f_{XY}(x,\dfrac{w}{x})dx
+$$
+
+Com que la densitat conjunta només és diferent de zero quan   
+
+$$
+0<x<1,\qquad
+0<\frac{w}{x}<1,
+$$
+
+ha de complir-se
+
+$$
+w<x<1.
+$$
+
+Així, si \(0<w<1\),
+
+$$
+f_W(w)=\int_w^1\frac{1}{x}\,dx.
+$$
+
+Finalment,
+
+$$
+f_W(w)=\left[\ln(v)\right]_w^1=\ln(1)-\ln(w)=-\ln(w).
+$$
+
+Per tant, la densitat del producte és
+
+$$
+f_W(w)=
+\begin{cases}
+-\ln(w), & \text{si } 0<w<1,\\
+0, & \text{en la resta}
+\end{cases}
+$$
+
+:::
+
+---
+ 
+ 
+ 
+
+### Producte de dues variables aleatòries
+
+En el cas del quocient $Q=XY$ i com abans definint V=X tenim que podem calcular la distribució conjunta (Q,V) aplicant el teorema  \@ref(thm:thm-cambio)  partir de les funcions inverses  X=V i Y=QV i el Jacobià 
+  
+$$
+J^{-1}= 
+\det
+\begin{bmatrix}
+\dfrac{\partial v}{\partial q} &
+\dfrac{\partial v}{\partial v} \\[1ex]
+\dfrac{\partial (qv)}{\partial q} &
+\dfrac{\partial (qv)}{\partial v}
+\end{bmatrix} =
+\det
+\begin{bmatrix}
+0 & 1 \\
+v & q \\
+\end{bmatrix} 
+=v
+$$
+
+I per tant $|J^{-1}|=|v|$ 
+
+
+
+La distribució conjunta de (W,V) és
+
+$$
+f_{QV}(q,v)=|v| f_{XY} (v,qv)
+
+$$
+
+
+I la distribució marginal del producto s'obté integran respecte a l'altra component
+
+
+$$
+f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(\dfrac{w}{v},v)dv
+$$
+
+ 
+ 

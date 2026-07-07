@@ -115,12 +115,18 @@
 <li class="chapter" data-level="1.4.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-esperanza-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperanza i Variància</a></li>
 <li class="chapter" data-level="1.4.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a></li>
+<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#suma-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.1</b> Suma de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.2</b> Producte de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries-1"><i class="fa fa-check"></i><b>1.5.3</b> Producte de dues variables aleatòries</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html"><i class="fa fa-check"></i><b>2</b> Independència de variables aleatories</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries."><i class="fa fa-check"></i><b>2.1</b> Independència i dependència entre variables aleatòries.</a></li>
 <li class="chapter" data-level="2.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat."><i class="fa fa-check"></i><b>2.2</b> Conceptes de covariància, correlació i causalitat.</a></li>
+<li class="chapter" data-level="2.3" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#esperances-i-vari%C3%A0ncies-condicionades."><i class="fa fa-check"></i><b>2.3</b> Esperances i variàncies condicionades.</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html"><i class="fa fa-check"></i><b>3</b> Algunes distribucions multivariants</a>
 <ul>
@@ -204,7 +210,7 @@
 <hr />
 <div class="example">
 <p><span id="exm:unlabeled-div-6" class="example"><strong>Exemple 1.2  </strong></span>Si suposem un experiment és triar a l’atzar un número en l’interval [0,1], l’interès es centra en conèixer si l’elecció pertany a qualsevol dels subconjunts de [0,1]. La <span class="math inline">\(\sigma-àlgebra\)</span> <span class="math inline">\(\beta_{[0,1]}\)</span> de’esdeveniments generada a partir de tots els posibles subintervals de [0,1], és coneguda com <span class="math inline">\(\sigma-àlgebra\)</span> de Borel estrictament menor que <span class="math inline">\(\mathcal{P}(\Omega)\)</span>.</p>
-<p><strong>Posar exemples de sigma algebra de <span class="math inline">\(\mathbb{R}\)</span> i <span class="math inline">\(\mathbb{N}\)</span>,</strong></p>
+<!-- **Posar exemples de sigma algebra de $\mathbb{R}$ i $\mathbb{N}$,** -->
 </div>
 <hr />
 <p>En resum, L’espai mostral ve acompanyat de la <span class="math inline">\(\sigma-álgebra\)</span> mes convenient a l’experiment. La combinació (<span class="math inline">\(\Omega,\mathcal{A}\)</span>) reb el nom d’<strong>espai mesurable</strong></p>
@@ -213,7 +219,7 @@
 <p>Donat un espai mostral <span class="math inline">\(\Omega\)</span> i una <span class="math inline">\(\sigma-àlgebra\)</span> <span class="math inline">\(\mathcal{A}\)</span> definim la mesura de probabilitat com una aplicació.</p>
 <p><span class="math display">\[
 \begin{aligned}
-P : \mathcal{A} &amp;\rightarrow \mathbb{R} \\
+P : \mathcal{A} &amp; \rightarrow \mathbb{R} \\
 A &amp;\mapsto Pr(A)
 \end{aligned}
 \]</span></p>
@@ -293,9 +299,9 @@ Quan es fa intervenir una variable aleatòria és per que s’està en la presè
 <div class="definition">
 <p><span id="def:unlabeled-div-14" class="definition"><strong>Definició 1.9  </strong></span><strong>Funció de distribució de probabilitat</strong></p>
 <p>A partir de la probabilitat induida podem definir sobre <span class="math inline">\(\mathbb{R}\)</span> la següent funció</p>
-<p><span class="math display">\[
-F_X(x)= P_X((-\infty,x])=P(X^{-1}\{(-\infty,x]\})=P/X\leq x) \quad \forall x \in \mathbb{R}
-\]</span></p>
+<p><span class="math display" id="eq:Fx">\[\begin{equation}
+F_X(x)= P_X((-\infty,x])=P(X^{-1}\{(-\infty,x]\})=P(X\leq x) \quad \forall x \in \mathbb{R} \tag{1.1}
+\end{equation}\]</span></p>
 </div>
 <p>La funció de distribució te les següents propietats</p>
 <ol style="list-style-type: decimal">
@@ -336,18 +342,19 @@ F_X(x)=
 <div class="definition">
 <p><span id="def:unlabeled-div-16" class="definition"><strong>Definició 1.10  </strong></span><strong>Funció de probabilitat d’una variable aleatòria discreta</strong></p>
 <p>X és una variable aleatòria discreta si <span class="math inline">\(X(\Omega)\)</span> es finit o numerable, és a dir es pot definir un conjunt suport <span class="math inline">\(D_X=\{x_1,x_2,....,x_n \}\)</span> tal que <span class="math inline">\(P_X(D_X))= P(X \in D_X)=1)\)</span> i <span class="math inline">\(P(X=x)&gt;0 \quad, \forall x \in D_X\)</span>. Per tant es pot deduir que <span class="math inline">\(P(X=x)=0 \quad, \forall x \in D_X^c\)</span></p>
-<p>Així la funció de distribució de la variable aleatòria és:
-<span class="math display">\[
-F_x(x)=\sum_{x \leq x_i} P(X=x_i)
-\]</span>
-Que serà una funció continua en els intervals <span class="math inline">\([x_i,x_{i+j}[\)</span> si els valors <span class="math inline">\(x_i\)</span> estan endreçats de menor a major i que tindrà una discontinuïtat de salt finit en cada punt <span class="math inline">\(x_i\)</span> de Valor <span class="math inline">\(F_X(x_i)- F_X(x_{i-1})=P(X=x_i)\)</span></p>
+<p>Així la funció de distribució de la variable aleatòria discreta és:</p>
+<p><span class="math display" id="eq:Fxdiscret">\[\begin{equation}
+F_x(x)=\sum_{x \leq x_i} P(X=x_i) \tag{1.2}
+\end{equation}\]</span></p>
+<p>Que serà una funció continua en els intervals <span class="math inline">\([x_i,x_{i+j}[\)</span> si els valors <span class="math inline">\(x_i\)</span> estan endreçats de menor a major i que tindrà una discontinuïtat de salt finit en cada punt <span class="math inline">\(x_i\)</span> de Valor <span class="math inline">\(F_X(x_i)- F_X(x_{i-1})=P(X=x_i)\)</span></p>
 <p>Així a la variable X li podem associar la funció de probabilitat següent</p>
-<p><span class="math display">\[
+<p><span class="math display" id="eq:pxdiscret">\[
 f_X(x)=
 \begin{cases}
 P(X=x), &amp; \text{si } x \in D_X \\
 0, &amp; \text{en la resta}
 \end{cases}
+\tag{1.3}
 \]</span></p>
 </div>
 <hr />
@@ -358,12 +365,13 @@ P(X=x), &amp; \text{si } x \in D_X \\
 <div class="definition">
 <p><span id="def:unlabeled-div-18" class="definition"><strong>Definició 1.11  </strong></span><strong>Funció de densitat o probabilitat de una variable aleatòria continua</strong></p>
 <p>Una variable aleatòria X és continua si la seva funció de distribució F_X , es absolutament continua. A efectes pràctics disposem la funció de densitat f_X(x), coneguda de manera que</p>
-<p><span class="math display">\[
-F_X(x)= \int_{-\infty}^{b}  f(t) dt
+<p><span class="math display" id="eq:Fxcont">\[
+F_X(x)= \int_{-\infty}^{x}  f(t) dt  
+\tag{1.4}
 \]</span>
 Així la probabilitat de qualsevol interval ]a,b] ès</p>
-<p><span class="math display">\[
-P(X \in ]a,b]= P(a&lt;X \leq b) \int_{a}^{b}  f(x) dx
+<p><span class="math display" id="eq:pxcontint">\[
+P(X \in ]a,b]= P(a&lt;X \leq b) \int_{a}^{b}  f(x) dx \tag{1.5}
 \]</span></p>
 <p>La funció de densitat <span class="math inline">\(f_X(x)\)</span> es no negativa i <span class="math inline">\(P(X \in  \mathbb{R} =1 )\)</span></p>
 <p>Per altra banda per una propietat de la integral de Riemann , la funció de densitat es la derivada de la Funció de distribució <span class="math inline">\(f_X(x)=F&#39;_X(x)\)</span></p>
@@ -384,6 +392,8 @@ P(X \in ]a,b]= P(a&lt;X \leq b) \int_{a}^{b}  f(x) dx
 <li>Imaginem una situació on primer es llança una moneda amb resultats cara i creu, i després es llança un dau amb 6 resultats. Així tenim una variable aleatòria <span class="math inline">\(X_1\)</span> per a la moneda i una variable aleatòria <span class="math inline">\(X_2\)</span> per al dau. El vector en <span class="math inline">\(\mathbb{R}^2\)</span> <span class="math inline">\((X_1,X_2)\)</span> serà una variable aletatòria bidimensional composat per dues variables aleatòries unidimensionals</li>
 </ul>
 </div>
+<hr />
+<hr />
 <div class="example">
 <p><span id="exm:unlabeled-div-20" class="example"><strong>Exemple 1.10  </strong></span></p>
 <ul>
@@ -406,8 +416,8 @@ P(X \in ]a,b]= P(a&lt;X \leq b) \int_{a}^{b}  f(x) dx
 On <span class="math inline">\(\beta^K\)</span> es una <span class="math inline">\(sigma-àlgebra\)</span> de Borel en <span class="math inline">\(\mathbb{R}^k\)</span></p>
 </div>
 <p><span class="math inline">\(\mathbf{X}\)</span> indueix sobre <span class="math inline">\((\mathbb{R}^k,\beta^K)\)</span> una probabilitat <span class="math inline">\(P_X\)</span> de la següent manera</p>
-<p><span class="math display">\[
-P_X(B)=P(\mathbf{X}^{-1}(B)), \quad \forall B \in \beta^K
+<p><span class="math display" id="eq:pvectorind">\[
+P_X(B)=P(\mathbf{X}^{-1}(B)), \quad \forall B \in \beta^K \tag{1.6}
 \]</span>
 És senzill comprobar que <span class="math inline">\(P_X\)</span> verifica els tres axiomes de probabilitat, pel que <span class="math inline">\((\mathbb{R}^k,\beta^K, P_X)\)</span> permet indueix un espai de probabilitat amb les característiques de <span class="math inline">\((\Omega,\mathcal{A},P)\)</span> heretats mitjançant X.</p>
 <div class="definition">
@@ -424,8 +434,8 @@ on</p>
 </div>
 <p>Com passa en el cas univariant es prou que <span class="math inline">\((X,Y)^{-1}(( -\infty, x]  \times (-\infty, y])) \in \mathcal{A} \quad \forall (x.y)\in \mathbb{R}^2\)</span> per a garantir que <span class="math inline">\((X,Y)^{-1}(B) \in  \mathcal{A} \quad \forall B \in \beta (\mathbb{R}^2)\)</span></p>
 <p>Per tant, qualsevol variable aleatòria bivariant (X,Y) indueix una mesura de probabilitat en <span class="math inline">\(\mathbb{R}^2\)</span> que permet assignar probabilitats a qualsevol subconjunt Borelià B de <span class="math inline">\(\mathbb{R}^2\)</span>:</p>
-<p><span class="math display">\[
-P_{(X,Y)}(B)=P((X,Y)^{-1}(B))=P(\{w \in \Omega:(X(w),Y(w)) \in B\})
+<p><span class="math display" id="eq:pconjunt">\[
+P_{(X,Y)}(B)=P((X,Y)^{-1}(B))=P(\{w \in \Omega:(X(w),Y(w)) \in B\})  \tag{1.7}
 \]</span>
 Aquesta mesura de probabilitat induïda s’anomena <em>distribució de probabilitat conjunta de (X,Y)</em></p>
 <hr />
@@ -556,11 +566,11 @@ A_2 = S_{x, y+k} -S_{x,y}  \\
 <p>Així, si substituim</p>
 <p><span class="math display">\[
 {\small
-\begin{array}{l}
-P_{X,Y}(A) =F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)- P_{X,Y}(A_1)-P_{X,Y}(A_2)=  \\
-F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)-F_{X,Y}(x,y))-(F_{X,Y} (x,y+k)- F_{X,Y}(x,y))=\\
-F_{X,Y}(x+h, y+k)+F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)+F_{X,Y}(x,y))-(F_{X,Y}(x,y+k)- F_{X,Y}(x,y)) &gt;0
-\end{array}
+\begin{aligned}
+P_{X,Y}(A) &amp;=F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)- P_{X,Y}(A_1)-P_{X,Y}(A_2)  \\
+&amp;=F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)-F_{X,Y}(x,y))-(F_{X,Y} (x,y+k)- F_{X,Y}(x,y))\\
+&amp;=F_{X,Y}(x+h, y+k)+F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)+F_{X,Y}(x,y))-(F_{X,Y}(x,y+k)- F_{X,Y}(x,y)) &gt;0
+\end{aligned}
 }
 \]</span></p>
 <p>Quedant demostrada la proposició</p>
@@ -743,7 +753,7 @@ V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy=5
 <p><span id="exm:unlabeled-div-34" class="example"><strong>Exemple 1.16  </strong></span>Considerem un cas on el recinte d’integració no és un rectangle i utilitzem la funció de l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.15</a> f(x,y)=x+y</p>
 <p>Sigui el triangle <span class="math inline">\(A=\{ (x,y) \in  \mathbb{R}^2: 2 \leq x \leq 4, 2 \leq y \leq x \}\)</span> que és mostra en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle">1.5</a></p>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle"></span>
-<img src="images/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<img src="Probabilitat-II_files/figure-html/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
 Figura 1.5: Dues maneres d’obtenir la densitat conjunta d’un triangle
 </p>
@@ -789,8 +799,10 @@ Figura 1.6: Double integral
 </div>
 <p>Com a consegüència a partir de la notació diferencial</p>
 <p><span class="math display">\[
-P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \}=P \{(X,Y) \in (x,x+dx] \times (y,y+dy]= \\
-\int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dty
+\begin{aligned}
+P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \} &amp;=P \{(X,Y) \in (x,x+dx] \times (y,y+dy] \\
+&amp;=\int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dty
+\end{aligned}
 \]</span>
 Aleshores, es pot deduir que la unitat de mesura de la densitat de probabilitat és la probabilitat per unitat d’àrea.</p>
 <p><span class="math display">\[
@@ -825,7 +837,7 @@ donat que la funció <span class="math inline">\(f(x,y) \leq 0\)</span> per a to
 El valor de k és per tant 1/5 per a que f(x,y) sigui una funció de densitat.</p>
 <p>En la figura <a href="variables-aleatòries-multivariants.html#fig:density2">1.7</a> es mostra la funció de densitat que val (x+y)/5 per als punts (x,y) en el rectangle A definit i 0 en la resta.</p>
 <div class="figure"><span style="display:block;" id="fig:density2"></span>
-<img src="images/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
+<img src="Probabilitat-II_files/figure-html/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
 <p class="caption">
 Figura 1.7: Funció de densitat f(x,y)
 </p>
@@ -864,7 +876,7 @@ P((X,Y) \in A)= \frac {\parallel A \cap T\parallel}{\parallel T\parallel}
 \]</span></p>
 <p>on <span class="math inline">\(\parallel A \parallel\)</span> és l’àrea de B.</p>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle2"></span>
-<img src="images/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<img src="Probabilitat-II_files/figure-html/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
 Figura 1.8: Dues maneres d’obtenir la densitat conjunta d’un triangle
 </p>
@@ -997,7 +1009,7 @@ F_{Y}(y)=\lim_{y \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{y}\int_{- \inf
 <div class="example">
 <p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.20  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:marginal">1.9</a> es mostra una representació de la distribució marginal. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> totes les dades sense tenir en compte la component <span class="math inline">\(X\)</span>, s’obté la función de distribució marginal de <span class="math inline">\(Y\)</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:marginal"></span>
-<img src="images/marginal-1.png" alt="Funció de distribució marginal de Y mostral" width="672" />
+<img src="Probabilitat-II_files/figure-html/marginal-1.png" alt="Funció de distribució marginal de Y mostral" width="672" />
 <p class="caption">
 Figura 1.9: Funció de distribució marginal de Y mostral
 </p>
@@ -1084,7 +1096,7 @@ f_{Y|X=x}(y)= \frac {f_{XY}(x,y)}{f_X(x)}, \text{ per a} - \infty \leq y \leq + 
 <div class="example">
 <p><span id="exm:unlabeled-div-43" class="example"><strong>Exemple 1.22  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:condicionada">1.10</a> es mostra una representació de la distribució condicionada de <span class="math inline">\(Y\)</span> en funció de <span class="math inline">\(X\)</span> l. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> els valors de la variable de Y per a les coordenades <span class="math inline">\(x\)</span> incloses en l’interval <span class="math inline">\([a,a+\epsilon]\)</span> e, S’obté la función de distribució condicionada <span class="math inline">\(Y|X=a\)</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:condicionada"></span>
-<img src="images/condicionada-1.png" alt="Funció de distribució condicionada de Y en funció de X mostral" width="672" />
+<img src="Probabilitat-II_files/figure-html/condicionada-1.png" alt="Funció de distribució condicionada de Y en funció de X mostral" width="672" />
 <p class="caption">
 Figura 1.10: Funció de distribució condicionada de Y en funció de X mostral
 </p>
@@ -1103,7 +1115,7 @@ f_{XY}(x,y)=
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariants.html#fig:img-condicionada2">1.11</a> es pot veure la representació de la funció de densitat conjunta.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada2"></span>
-<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta" width="314" />
+<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta"  />
 <p class="caption">
 Figura 1.11: Exemple de distribució conjunta
 </p>
@@ -1135,7 +1147,7 @@ f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} =
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariants.html#fig:img-condicionada3">1.12</a> es pot veure la representació de la funció de densitat condicional <span class="math inline">\(X|Y\)</span> per a cada valor de <span class="math inline">\(y\)</span> .</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada3"></span>
-<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y" width="418" />
+<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y"  />
 <p class="caption">
 Figura 1.12: Exemple de distribució condicionada X|Y
 </p>
@@ -1233,11 +1245,13 @@ f_{U_1, U_2}(u_1,u_2)=
 <p>La longitud de la peça central ve donada per la variable aleatòria <span class="math inline">\(X=g(U_1,U_2)=|U_2-U_1|\)</span></p>
 <p>LLavors seguint la definició d’esperança de la variable X obtenim el valor de la longitud de la peça central</p>
 <p><span class="math display">\[
-E[|U_1-U_2|]=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(u_1,u_2)f(u_1,u_2)du_1du_2=\int_{0}^{1}\int_{0}^{1} |u_1-u_2|du_1du_2  \\
-=\int_0^1\int_0^1 1_{(u_1 \geq u_2)} (u_1-u_2) du_1du_2 +\int_0^1\int_0^1 1_{(u_1 \leq u_2)} (u_2-u_1) du_1du_2  \\
-=\int_0^1\int_0^{u_1}(u1_u2) du_2du_1 + \int_{0}^{1}\int_{0}^{u_2}(u2_u1) du_1du_2=  \\
-= \int_0^1 \left [u_1u_2 - \frac {u_2^2}{2}  \right]_0^{u_1}du_1+\int_0^1 \left [u_2u_1 - \frac {u_1^2}{2}  \right]_0^{u_2}du_2=\int_0^1 ( u_1^2 - \frac {u_1^2}{2})  du_1+\int_0^1 ( u_2^2 - \frac {u_2^2}{2})  du_2 \\
-=\int_0^1 ( \frac {u_1^2}{2})  du_1+\int_0^1 (  \frac {u_2^2}{2})  du_2= \left [ \frac {u_1^2}{2 \times 3} \right]_0^1+\left [ \frac {u_2^2}{2 \times 3} \right]_0^1= \frac {1}{2 \times 3}+\frac {1}{2 \times 3}=\frac {1}{3}
+\begin{aligned}
+E[|U_1-U_2|] &amp;=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(u_1,u_2)f(u_1,u_2)du_1du_2=\int_{0}^{1}\int_{0}^{1} |u_1-u_2|du_1du_2  \\
+&amp;=\int_0^1\int_0^1 1_{(u_1 \geq u_2)} (u_1-u_2) du_1du_2 +\int_0^1\int_0^1 1_{(u_1 \leq u_2)} (u_2-u_1) du_1du_2  \\
+&amp;=\int_0^1\int_0^{u_1}(u1_u2) du_2du_1 + \int_{0}^{1}\int_{0}^{u_2}(u2_u1) du_1du_2  \\
+&amp;= \int_0^1 \left [u_1u_2 - \frac {u_2^2}{2}  \right]_0^{u_1}du_1+\int_0^1 \left [u_2u_1 - \frac {u_1^2}{2}  \right]_0^{u_2}du_2=\int_0^1 ( u_1^2 - \frac {u_1^2}{2})  du_1+\int_0^1 ( u_2^2 - \frac {u_2^2}{2})  du_2 \\
+&amp;=\int_0^1 ( \frac {u_1^2}{2})  du_1+\int_0^1 (  \frac {u_2^2}{2})  du_2= \left [ \frac {u_1^2}{2 \times 3} \right]_0^1+\left [ \frac {u_2^2}{2 \times 3} \right]_0^1= \frac {1}{2 \times 3}+\frac {1}{2 \times 3}=\frac {1}{3}
+\end{aligned}
 \]</span>
 que és un terç de la longitut de la barra.</p>
 </div>
@@ -1268,8 +1282,8 @@ E(a_1X_1+...+a_kX_k) =\sum_{i=1}^k a_i E(X_i)
 <div id="matriu-de-variància-covariància" class="section level3 hasAnchor" number="1.4.3">
 <h3><span class="header-section-number">1.4.3</span> Matriu de Variància-Covariància<a href="variables-aleatòries-multivariants.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="Definition">
-<p><strong>covariància</strong></p>
-<p>Un moment d’especial interès e el moment conjunt central que s’obtè pera <span class="math inline">\(n_i=1, n_j=1 i n_l=0, l\neq (i,j)\)</span> que anomenarem covariància</p>
+<p><strong>Covariància</strong></p>
+<p>Un moment d’especial interès és el moment conjunt central que s’obtè per a les variables <span class="math inline">\(X_i\)</span> i <span class="math inline">\(X_j\)</span> <span class="math inline">\(n_i=1, n_j=1 \quad  i \quad  n_l=0, l\neq (i,j)\)</span> que anomenarem covariància</p>
 <p><span class="math display">\[
 cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=
 \]</span></p>
@@ -1281,12 +1295,14 @@ Cov(X,Y)=E[(XY)]-E[X]E[Y]
 \]</span></p>
 <p><strong>Demostració</strong>
 <span class="math display">\[
-Cov(X, Y ) = E[(X − E[X])(Y − E[Y])] \\
-= E[(X − E[X])Y − (X − E[X])E[Y]]  \\
-= E[(X − E[X])Y ] − E[(X − E[X]))E[Y]] \\
-= E[XY] − E[E[X]Y]  − E[XE[Y]] + E[X]E[Y]] \\
-= E[XY] − E[X]E[Y] − E[X]E[Y] + E[X]E[Y] \\
-= E[XY]) − E[X] E[Y]
+\begin{aligned}
+Cov(X, Y ) &amp;= E[(X − E[X])(Y − E[Y])] \\
+&amp;= E[(X − E[X])Y − (X − E[X])E[Y]]  \\
+&amp;= E[(X − E[X])Y ] − E[(X − E[X]))E[Y]] \\
+&amp;= E[XY] − E[E[X]Y]  − E[XE[Y]] + E[X]E[Y]] \\
+&amp;= E[XY] − E[X]E[Y] − E[X]E[Y] + E[X]E[Y] \\
+&amp;= E[XY]) − E[X] E[Y]
+\end{aligned}
 \]</span></p>
 </div>
 <div class="Proposition">
@@ -1295,7 +1311,7 @@ Cov(X, Y ) = E[(X − E[X])(Y − E[Y])] \\
 <li>La covariancia és un operador simètric: <span class="math inline">\(Cov(X, Y ) = Cov(Y,X)\)</span></li>
 <li>La variància és un cas particular de covariància: <span class="math inline">\(Var(X) = Cov(X,X)\)</span></li>
 <li>La covariància amb una constant és 0: <span class="math inline">\(Cov(X, a) = 0\)</span></li>
-<li>La covariància és un operador bilineal, és a dir, éss lineal en els seus dos arguments:
+<li>La covariància és un operador bilineal, és a dir, és lineal en els seus dos arguments:
 <span class="math inline">\(Cov(aX, Y ) = Cov(X, aY ) = aCov(X, Y )\)</span>
 <span class="math inline">\(Cov(X + Y,Z) = Cov(X,Z) + Cov(Y,Z)\)</span>
 <span class="math inline">\(Cov(X, Y + Z) = Cov(X, Y ) + Cov(X,Z)\)</span></li>
@@ -1308,11 +1324,13 @@ Cov(X, Y ) = E[(X − E[X])(Y − E[Y])] \\
 Cov(aX, Y ) = E[aXY] − E[aX]E[Y]= aE[XY] − aE[X]E[Y]= a (E[XY]) − E[X]E[Y])= aCov(X,Y).
 \]</span>
 <span class="math display">\[
-Cov(X + Y,Z) = E[(X + Y )Z] − E[X + Y]E[Z] \\
-= E[XZ] + E[YZ] − (E[X] + E[Y])E[Z] \\
-= E[XZ] + E[YZ] − E[X]E[Z] − E[Y]E[Z] \\
-= E[XZ] − E[X]E[Z] + E[YZ] − E[Y]E[Z] \\
-= Cov(X,Z) + Cov(Y,Z).
+\begin{aligned}
+Cov(X + Y,Z) &amp;= E[(X + Y )Z] − E[X + Y]E[Z] \\
+&amp;= E[XZ] + E[YZ] − (E[X] + E[Y])E[Z] \\
+&amp;= E[XZ] + E[YZ] − E[X]E[Z] − E[Y]E[Z] \\
+&amp;= E[XZ] − E[X]E[Z] + E[YZ] − E[Y]E[Z] \\
+&amp;= Cov(X,Z) + Cov(Y,Z)
+\end{aligned}
 \]</span></p>
 <p>La demostració dels dos últims apartats es dedueix directament de la anterior escrivint Var(X+Y)=Cov(X+Y,X+Y) i Var(X-Y)= Cov(X-Y, X-Y)</p>
 <p>Un problema de la covariància com a mesura de força de la relación linial de dues variables aleatòries, és que la covariància depèn de les unitats en que es mesuren les variables. Si canviem les unitats canvia el valor de la covariància.</p>
@@ -1333,7 +1351,7 @@ Cov(X_1,X_{k-1})  &amp; Cov(X_2,X_{k-1}) &amp; ... &amp; Var(X_{k-1})  &amp; Cov
 Cov(X_1,X_k)  &amp; Cov(X_2,X_k) &amp; ... &amp;  Cov(X_{k-1},X_k)  &amp; Var(X_k)\\  
 \end{bmatrix}  
 \]</span>
-Podem simplificar l’expresió de la matriu utilitzant utilizando los valors <span class="math inline">\(\sigma_{ij}\)</span> per <span class="math inline">\(Cov(X_i,X_j)\)</span> i <span class="math inline">\(\sigma_i^2\)</span> per <span class="math inline">\(Var(X_i)\)</span></p>
+Podem simplificar l’expresió de la matriu utilitzantels els valors <span class="math inline">\(\sigma_{ij}\)</span> per <span class="math inline">\(Cov(X_i,X_j)\)</span> i <span class="math inline">\(\sigma_i^2\)</span> per <span class="math inline">\(Var(X_i)\)</span></p>
 <p><span class="math display">\[
 \Sigma=
 \begin{bmatrix}
@@ -1349,11 +1367,239 @@ Podem simplificar l’expresió de la matriu utilitzant utilizando los valors <s
 </div>
 <div id="transformacions-de-variables-multivariants" class="section level2 hasAnchor" number="1.5">
 <h2><span class="header-section-number">1.5</span> Transformacions de variables multivariants<a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>1.6. Funci¶on de una o varias variables aleatorias apunts Paco Montes</p>
-<p>1.6 trasnformacions va multivariants pagina 69 apunts PIPE</p>
-<p>mas texto 15/06/2026
-por la tarde</p>
+<div class="theorem">
+<p><span id="thm:thm-cambio" class="theorem"><strong>Theorem 1.1  </strong></span>Sigui <span class="math inline">\(X=(X_1,..., X_k)\)</span> un vector aleatori continu amb soport <span class="math inline">\(D_X\)</span>, és a dir <span class="math inline">\(P((X_1,...,X_k) \in D_X)=1\)</span>, i sigui <span class="math inline">\(g=(g_1,...,g_k):\mathbb{R^k} \rightarrow  \mathbb{R^k}\)</span> una funció vectorial que verifica:</p>
+<p>1 g es uno a uno sobre Dx</p>
+<p>2 el Jacobiano de g, <span class="math inline">\(J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }\)</span> es diferente de cero <span class="math inline">\(\forall x \in D_X\)</span></p>
+<p>3 existeix <span class="math inline">\(h=(h_1,...,h_k)\)</span> inversa de g</p>
+<p>Llavors, <span class="math inline">\(Y=g(X)\)</span> es un vector aleatori continu amb densitat conjunta per a <span class="math inline">\(y=(y_1,...,y_k) \in g(D_X)\)</span> ve donada per
+<span class="math display">\[
+f_Y(y_1,...,y_k)=f_X(h_1(y1,...,yk),....,h_k(y1,...,yk)) |J^{-1}|
+\]</span>
+on <span class="math inline">\(|J^{-1}|=\frac{\partial (h_1,....,h_k)}{\partial (y_1,...,y_k) }\)</span> és el Jacobià de h.</p>
+</div>
+<p>La demostració d’aquest teorema no es més que el teorema del canvi de variable en una integral múltiple y la seva demostració rigorosa, pot trobar-se en qualsevol llibre d’Anàlisi Matemàtica.</p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-46" class="example"><strong>Exemple 1.25  </strong></span>Sigui l’experiment aleatori triar un punt a l’atzar del cercle unitat <span class="math inline">\(C_1\)</span>, on podem definir sobre l’esapi de probabilitat un vector aleatori de les coordenades del punt (X,Y). L’elecció a l’atzar implica una probabilitat uniforme sobre <span class="math inline">\(C_1\)</span>. La densitat conjunta la podem expresar com</p>
+<p><span class="math display">\[
+f_{XY}(x,y)=
+\begin{cases}
+\dfrac{1}{\pi},          &amp; \text{si} \quad (x,y) \in C_1 \\
+0,          &amp; \text{en la resta }  \\
+\end{cases}
+\]</span></p>
+<p>Considerem un canvi entre les coordenades cartesianes a les coordenades polars del punt del cercle.</p>
+<p>En aquest casa la transformació a coordenades polars serà <span class="math inline">\(R= \sqrt{X^2+Y^2}\)</span> i <span class="math inline">\(\Theta=arctan (Y/X)\)</span>.</p>
+<p>Per obtenir la seva densitat conjunta necessitem les transformacions inversas de coordenades polars a euclideas, <span class="math inline">\(X=R cos(\Theta)\)</span> i <span class="math inline">\(Y=R sin(\Theta)\)</span>. Si es calcula el jacobià aquest val <span class="math inline">\(J_1=R\)</span></p>
+<p>Per tant segons el teorema <a href="variables-aleatòries-multivariants.html#thm:thm-cambio">1.1</a> la densitat conjunta es
+<span class="math display">\[
+f_{R\Theta}(r,\theta)=
+\begin{cases}
+\dfrac{r}{\pi},          &amp; \text{si} \quad (r,\theta) \in [0,1] \times[0,2\pi]  \\
+0,          &amp; \text{en la resta }  \\
+\end{cases}
+\]</span>
+Amb facilitat es poden obtenir les marginals corresponents</p>
+<p><span class="math display">\[
+f_{R}(r)=
+\begin{cases}
+2r,          &amp; \text{si} \quad r \in [0,1]   \\
+0,          &amp; \text{en la resta }  \\
+\end{cases}
+\]</span>
+<span class="math display">\[
+f_{\Theta}(\theta)=
+\begin{cases}
+\dfrac{1}{2\pi},          &amp; \text{si} \quad \theta \in [0,2\pi]  \\
+0,          &amp; \text{en la resta }  \\
+\end{cases}
+\]</span></p>
+</div>
+<hr />
+<div id="suma-de-dues-variables-aleatòries" class="section level3 hasAnchor" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> Suma de dues variables aleatòries<a href="variables-aleatòries-multivariants.html#suma-de-dues-variables-aleat%C3%B2ries" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sigui la variable aleatòria <span class="math inline">\(Z=X+Y\)</span> on (X,Y) es la distribució conjunta de les dues components aleatòria on es vol determinar la distribució de probabilitat de <span class="math inline">\(Z\)</span></p>
+<p><strong>Cas (X,Y) variable aleatòria bivariant discreta</strong></p>
+<p>Sigui <span class="math inline">\(p(x_i,y_j)\)</span> la funció de probabilitat conjunta de <span class="math inline">\((X, Y)\)</span></p>
+<p><span class="math display">\[
+p(x_i,y_j)=P(X=x_i, Y=y_j), \quad  i=1,2,...\quad  j=1,2,...
+\]</span></p>
+<p>La variable aleatòria suma, <span class="math inline">\(Z=X+Y\)</span> és una variable aleatòria univariant discreta, ja que com a molt pot pendre els valors produïts per les combinacions dels valors de X e Y, es a dir</p>
+<p><span class="math display">\[
+x_i+y_j, , \quad  i=1,2,...\quad  j=1,2,...
+\]</span></p>
+<p>Alguns dels valor poden estar repetits. Sigui <span class="math inline">\(z_\ell\)</span> algun dels valors posibles de <span class="math inline">\(Z=X+Y\)</span>. La funció de probabilitat de Z és:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Pr(Z = z_\ell)
+&amp;=\Pr(X+Y = z_\ell) \\
+&amp;=\sum_{i,j:\,x_i+y_j=z_\ell}
+   \Pr(X=x_i,\;Y=y_j) \\
+&amp;=\sum_i
+   \Pr(X=x_i,\;Y=z_\ell-x_i) \\
+&amp;=\sum_j
+   \Pr(X=z_\ell-y_j,\;Y=y_j).
+\end{aligned}
+\]</span></p>
+<p><strong>Cas (X,Y) variable aleatòria bivariant continua</strong></p>
+<p>Sigui <span class="math inline">\(f_{XY}(x,y)\)</span> la funció de densitat conjunta de les variables aleatòries quantitatives <span class="math inline">\((X,Y)\)</span>, Definim <span class="math inline">\(Z=X+Y\)</span> funció de la que volem conèixer la serva densitat. Per poder utilitzar el teorema <a href="variables-aleatòries-multivariants.html#thm:thm-cambio">1.1</a>
+és necessita una transformació bidimensional, el que podem obenir utilitzant una nova variable <span class="math inline">\(V=X\)</span>.</p>
+<p>Així al vector <span class="math inline">\((Z,V)\)</span> li podem aplicar diectament el teorema , amb les inverses <span class="math inline">\(X=V\)</span> i <span class="math inline">\(Y=Z-V\)</span> on el jacobià es :</p>
+<p><span class="math display">\[
+J^{-1}=\det
+\begin{bmatrix}
+\dfrac {\partial v } {\partial z}  &amp; \dfrac {\partial v } {\partial v}  \\
+\dfrac {\partial z- v } {\partial z}  &amp; \dfrac {\partial (z-v) } {\partial v}  \\
+\end{bmatrix}=
+\det \begin{bmatrix}
+0  &amp;  1  \\
+1  &amp;  -1 \\
+\end{bmatrix}
+=-1
+\]</span></p>
+<p>Tindrem que <span class="math inline">\(|J^{-1}|=1\)</span> i l’expressió de la distribució conjunta es.</p>
+<p><span class="math display">\[
+f_{Z,V}(z,v)=f_{X,Y}(v,z-v)
+\]</span>
+y per obtenir la densitat marginal de la suma Z tenim
+<span class="math display">\[
+f_Z(z)=\int_{- \infty}^{+ \infty} f_{X,Y}(v,z-v)dv =\int_{- \infty}^{+ \infty} f_{X,Y}(x,z-x)dx
+\]</span></p>
+<hr />
+<div class="example">
+<p><span id="exm:suma" class="example"><strong>Exemple 1.26  </strong></span>Siguin X i Y dues variables aleatòries amb distribució uniforme al interval (0,1) i amb densitat conjunta</p>
+<p><span class="math display">\[
+f_{X,Y}(x,y)=
+\begin{cases}
+1, &amp; \text{si } 0&lt;x&lt;1,\;0&lt;y&lt;1,\\
+0, &amp; \text{en la resta}
+\end{cases}
+\]</span>
+Si Z=X+Y i utilitzant la transformació V=X la funció de distribució conjunta serà</p>
+<p>La densitat marginal de la suma Z segons hem vist és</p>
+<p><span class="math display">\[
+f_Z(z)=\int_{- \infty}^{+ \infty} f_{X,Y}(x,z-x)dx =\int_{max(0,z-1)}^{min(1,z)} 1 dx
+\]</span></p>
+<p>donat que de e les condicions inicials, la funció està definida si <span class="math inline">\(0&lt;x&lt;1\)</span> i <span class="math inline">\(0&lt;z-v&lt;1\)</span>. Es a dir <span class="math inline">\(z-1&lt;v&lt;z\)</span> i per tant <span class="math inline">\(max(0,z-1) &lt;v&lt;min(1,z)\)</span></p>
+<p>Així és distingeixen dos casos.</p>
+<p>Si <span class="math inline">\(0&lt;z&lt;1\)</span></p>
+<p><span class="math display">\[
+f_Z(z)= \int_{0}^{z} 1 dx= z
+\]</span>
+Si <span class="math inline">\(1\leq z&lt;2\)</span></p>
+<p><span class="math display">\[
+f_Z(z)= \int_{z-1}^{1} 1 dx= 2-z
+\]</span>
+Finalment
+<span class="math display">\[
+f_Z(z)=
+\begin{cases}
+z, &amp; \text{si } 0&lt;z&lt;1,\\
+2-z, &amp; \text{si } 1\le z&lt;2,\\
+0, &amp; \text{en la resta.}
+\end{cases}
+\]</span></p>
+<p>Que es la coneguda distribució triangular resultat de sumar dues variables independents* U(0,1)</p>
+<p><small>
+* Nota: El concepte de independència es veura en el tema següent
+</small></p>
+</div>
+<hr />
+</div>
+<div id="producte-de-dues-variables-aleatòries" class="section level3 hasAnchor" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Producte de dues variables aleatòries<a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En el cas del producte W=XY i com abans definint V=X tenim que podem calcular la distribució conjunta (W,V) aplicant el teorema <a href="variables-aleatòries-multivariants.html#thm:thm-cambio">1.1</a> partir de les funcions inverses X=V i Y=W/V i el Jacobià</p>
+<p><span class="math display">\[
+J^{-1}=
+\det
+\begin{bmatrix}
+\dfrac{\partial v}{\partial w} &amp;
+\dfrac{\partial v}{\partial v} \\[1ex]
+\dfrac{\partial (w/v)}{\partial w} &amp;
+\dfrac{\partial (w/v)}{\partial v}
+\end{bmatrix} =
+\det
+\begin{bmatrix}
+0 &amp; 1 \\[1ex]
+\dfrac{1}{v} &amp; -\dfrac{w}{v^2}
+\end{bmatrix}
+=-\dfrac{1}{v}
+\]</span></p>
+<p>I per tant <span class="math inline">\(|J^{-1}|=\dfrac{1}{|v|}\)</span></p>
+<p>La distribució conjunta de (W,V) és</p>
+<p><span class="math display">\[
+f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (\dfrac{w}{v},v)
+\]</span></p>
+<p>I la distribució marginal del producto s’obté integran respecte a l’altra component</p>
+<p><span class="math display">\[
+f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v})dv
+\]</span></p>
+<hr />
+<p>:::{.example}{}</p>
+<p>Siguin les dues variable uniformes del exemple <a href="variables-aleatòries-multivariants.html#exm:suma">1.26</a></p>
+<p>Volem obtenir la densitat del producte <span class="math inline">\(W=XY\)</span> que seguint l’apartat anterior es pot obtenir comn</p>
+<p><span class="math display">\[
+f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|x|}f_{XY}(x,\dfrac{w}{x})dx
+\]</span></p>
+<p>Com que la densitat conjunta només és diferent de zero quan</p>
+<p><span class="math display">\[
+0&lt;x&lt;1,\qquad
+0&lt;\frac{w}{x}&lt;1,
+\]</span></p>
+<p>ha de complir-se</p>
+<p><span class="math display">\[
+w&lt;x&lt;1.
+\]</span></p>
+<p>Així, si <span class="math inline">\(0&lt;w&lt;1\)</span>,</p>
+<p><span class="math display">\[
+f_W(w)=\int_w^1\frac{1}{x}\,dx.
+\]</span></p>
+<p>Finalment,</p>
+<p><span class="math display">\[
+f_W(w)=\left[\ln(v)\right]_w^1=\ln(1)-\ln(w)=-\ln(w).
+\]</span></p>
+<p>Per tant, la densitat del producte és</p>
+<p><span class="math display">\[
+f_W(w)=
+\begin{cases}
+-\ln(w), &amp; \text{si } 0&lt;w&lt;1,\\
+0, &amp; \text{en la resta}
+\end{cases}
+\]</span></p>
+<p>:::</p>
+<hr />
+</div>
+<div id="producte-de-dues-variables-aleatòries-1" class="section level3 hasAnchor" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> Producte de dues variables aleatòries<a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En el cas del quocient <span class="math inline">\(Q=XY\)</span> i com abans definint V=X tenim que podem calcular la distribució conjunta (Q,V) aplicant el teorema <a href="variables-aleatòries-multivariants.html#thm:thm-cambio">1.1</a> partir de les funcions inverses X=V i Y=QV i el Jacobià</p>
+<p><span class="math display">\[
+J^{-1}=
+\det
+\begin{bmatrix}
+\dfrac{\partial v}{\partial q} &amp;
+\dfrac{\partial v}{\partial v} \\[1ex]
+\dfrac{\partial (qv)}{\partial q} &amp;
+\dfrac{\partial (qv)}{\partial v}
+\end{bmatrix} =
+\det
+\begin{bmatrix}
+0 &amp; 1 \\
+v &amp; q \\
+\end{bmatrix}
+=v
+\]</span></p>
+<p>I per tant <span class="math inline">\(|J^{-1}|=|v|\)</span></p>
+<p>La distribució conjunta de (W,V) és</p>
+<p>$$
+f_{QV}(q,v)=|v| f_{XY} (v,qv)</p>
+<p>$$</p>
+<p>I la distribució marginal del producto s’obté integran respecte a l’altra component</p>
+<p><span class="math display">\[
+f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(\dfrac{w}{v},v)dv
+\]</span></p>
 
+</div>
 </div>
 </div>
             </section>
