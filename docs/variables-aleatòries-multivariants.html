@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="ca" xml:lang="ca">
 <head>
 
   <meta charset="utf-8" />
@@ -74,9 +74,9 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><div style=" padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
+<li><div style="padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
 <li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
-<li><h2 align=center>Probabilitat II</h2></li>
+<li><h2 align="center">Probabilitat II</h2></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pla docent</a>
@@ -126,7 +126,6 @@
 <ul>
 <li class="chapter" data-level="2.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries."><i class="fa fa-check"></i><b>2.1</b> Independència i dependència entre variables aleatòries.</a></li>
 <li class="chapter" data-level="2.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat."><i class="fa fa-check"></i><b>2.2</b> Conceptes de covariància, correlació i causalitat.</a></li>
-<li class="chapter" data-level="2.3" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#esperances-i-vari%C3%A0ncies-condicionades."><i class="fa fa-check"></i><b>2.3</b> Esperances i variàncies condicionades.</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html"><i class="fa fa-check"></i><b>3</b> Algunes distribucions multivariants</a>
 <ul>
@@ -148,7 +147,7 @@
 <li class="chapter" data-level="5.4" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#moviment-browni%C3%A0."><i class="fa fa-check"></i><b>5.4</b> Moviment Brownià.</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com" target="blank">Publicado con bookdown</a></li>
+<li><a href="https://github.com" target="_blank">Publicado con bookdown</a></li>
 
 </ul>
 
@@ -484,8 +483,8 @@ El que hem de fer a partir d’ara es caracteritzar aquesta probabilitat conjunt
 <div class="definition">
 <p><span id="def:unlabeled-div-26" class="definition"><strong>Definició 1.15  </strong></span><strong>Funció de distribució conjunta</strong></p>
 <p>Definim la funció de distribució associada a <span class="math inline">\(P_X\)</span> a donat un punt de <span class="math inline">\(\mathbb{R}^k\)</span> <span class="math inline">\(\mathbf{x}=(x_1,...,x_k)\)</span> com</p>
-<p><span class="math display">\[
-F_X( \mathbf{x} )=F_X(x_1,...,x_k) =P_X(S_x)=P(X \in S_x)= P(\bigcap_{i=1}^{k} \{ X_i\leq x_i \})
+<p><span class="math display" id="eq:Fdistconjunt">\[
+F_X( \mathbf{x} )=F_X(x_1,...,x_k) =P_X(S_x)=P(X \in S_x)= P(\bigcap_{i=1}^{k} \{ X_i\leq x_i \}) \tag{1.8}
 \]</span></p>
 </div>
 <p>En la figura <a href="variables-aleatòries-multivariants.html#fig:img-distbiv">1.1</a> es pot observar la diferència entre una distribució univariat que es una corba en dimensió 2 y o la funció de distribució conjunta bivariada <span class="math inline">\(F(x,y)= P(X \leq x, Y \leq y)\)</span> que es tracta de una superfície en dimensió 3.</p>
@@ -525,7 +524,7 @@ Figura 1.1: Distribució continua bivariada
 <div class="proposition">
 <p><span id="prp:unlabeled-div-27" class="proposition"><strong>Proposició 1.1  </strong></span><b> Regla del rectangle </b></p>
 <p>En aquesta regla calculem la probabilitat d’un rectangle a partir de les funcions de distribució conjunta en cada punt del rectangle que es pot veure en la figura <a href="variables-aleatòries-multivariants.html#fig:img-rectangle">1.2</a></p>
-<p><span class="math display">\[
+<p><span class="math display" id="eq:rectangle">\[
 \left.
 \begin{array}{l}
 \forall (x,y)\in\mathbb{R}^2\\
@@ -534,6 +533,7 @@ Figura 1.1: Distribució continua bivariada
 \end{array}
 \right\}
 \quad F_{X,Y}(x+h,y+k)-F_{X,Y}(x,y)-F_{X,Y}(x+h,y)-F_{X,Y}(x,y+k)=P_{X,Y}(A)=P_{X,Y}(]x,x+h] \times ]y,y+k])&gt;0
+\tag{1.9}
 \]</span></p>
 </div>
 <p><b></p>
@@ -753,7 +753,7 @@ V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy=5
 <p><span id="exm:unlabeled-div-34" class="example"><strong>Exemple 1.16  </strong></span>Considerem un cas on el recinte d’integració no és un rectangle i utilitzem la funció de l’exemple <a href="variables-aleatòries-multivariants.html#exm:densitat1">1.15</a> f(x,y)=x+y</p>
 <p>Sigui el triangle <span class="math inline">\(A=\{ (x,y) \in  \mathbb{R}^2: 2 \leq x \leq 4, 2 \leq y \leq x \}\)</span> que és mostra en la figura <a href="variables-aleatòries-multivariants.html#fig:graf-triangle">1.5</a></p>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle"></span>
-<img src="Probabilitat-II_files/figure-html/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<img src="images/graf-triangle-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
 Figura 1.5: Dues maneres d’obtenir la densitat conjunta d’un triangle
 </p>
@@ -837,7 +837,7 @@ donat que la funció <span class="math inline">\(f(x,y) \leq 0\)</span> per a to
 El valor de k és per tant 1/5 per a que f(x,y) sigui una funció de densitat.</p>
 <p>En la figura <a href="variables-aleatòries-multivariants.html#fig:density2">1.7</a> es mostra la funció de densitat que val (x+y)/5 per als punts (x,y) en el rectangle A definit i 0 en la resta.</p>
 <div class="figure"><span style="display:block;" id="fig:density2"></span>
-<img src="Probabilitat-II_files/figure-html/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
+<img src="images/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
 <p class="caption">
 Figura 1.7: Funció de densitat f(x,y)
 </p>
@@ -864,8 +864,8 @@ Figura 1.7: Funció de densitat f(x,y)
 (x_i)=\lim_{x_j \xrightarrow{j \neq i} +\infty} F_X(x_1,...x_k)= F_X(+\infty,...,+\infty,x_i,+\infty,....+\infty) \quad \forall x_i \in \mathbb{R}
 \]</span></p>
 <p>El concepte de marginalitat pot aplicar-se a qualsevol subvector del vector original . Així per al subector <span class="math inline">\(X^l=(X_{i_1},...,X_{i_l})\)</span> on <span class="math inline">\(l \leq k\)</span> podem parlar de la distribució conjunta marginal de <span class="math inline">\(X^l\)</span> a la expressió on es fixan les components del subvector i es fan tendir a l’infinit a la resta</p>
-<p><span class="math display">\[
-F_{X^l}(X_{i_1},...,X_{i_l})=\lim_{x_j \xrightarrow {j \neq i_1,...,i_l} +\infty} F_X(x_1,...x_k)
+<p><span class="math display" id="eq:Fmarginal">\[
+F_{X^l}(X_{i_1},...,X_{i_l})=\lim_{x_j \xrightarrow {j \neq i_1,...,i_l} +\infty} F_X(x_1,...x_k)  \tag{1.10}
 \]</span></p>
 </div>
 <hr />
@@ -876,7 +876,7 @@ P((X,Y) \in A)= \frac {\parallel A \cap T\parallel}{\parallel T\parallel}
 \]</span></p>
 <p>on <span class="math inline">\(\parallel A \parallel\)</span> és l’àrea de B.</p>
 <div class="figure"><span style="display:block;" id="fig:graf-triangle2"></span>
-<img src="Probabilitat-II_files/figure-html/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
+<img src="images/graf-triangle2-1.png" alt="Dues maneres d'obtenir la densitat conjunta  d'un triangle" width="672" />
 <p class="caption">
 Figura 1.8: Dues maneres d’obtenir la densitat conjunta d’un triangle
 </p>
@@ -1009,7 +1009,7 @@ F_{Y}(y)=\lim_{y \rightarrow +\infty} F_XY(x,y)= \int_{- \infty}^{y}\int_{- \inf
 <div class="example">
 <p><span id="exm:unlabeled-div-38" class="example"><strong>Exemple 1.20  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:marginal">1.9</a> es mostra una representació de la distribució marginal. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> totes les dades sense tenir en compte la component <span class="math inline">\(X\)</span>, s’obté la función de distribució marginal de <span class="math inline">\(Y\)</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:marginal"></span>
-<img src="Probabilitat-II_files/figure-html/marginal-1.png" alt="Funció de distribució marginal de Y mostral" width="672" />
+<img src="images/marginal-1.png" alt="Funció de distribució marginal de Y mostral" width="672" />
 <p class="caption">
 Figura 1.9: Funció de distribució marginal de Y mostral
 </p>
@@ -1096,7 +1096,7 @@ f_{Y|X=x}(y)= \frac {f_{XY}(x,y)}{f_X(x)}, \text{ per a} - \infty \leq y \leq + 
 <div class="example">
 <p><span id="exm:unlabeled-div-43" class="example"><strong>Exemple 1.22  </strong></span>En la figura <a href="variables-aleatòries-multivariants.html#fig:condicionada">1.10</a> es mostra una representació de la distribució condicionada de <span class="math inline">\(Y\)</span> en funció de <span class="math inline">\(X\)</span> l. El diagrama de dispersió representa les coordenades <span class="math inline">\((x,y)\)</span> de les observacions. Si es projecten en l’eix <span class="math inline">\(Y\)</span> els valors de la variable de Y per a les coordenades <span class="math inline">\(x\)</span> incloses en l’interval <span class="math inline">\([a,a+\epsilon]\)</span> e, S’obté la función de distribució condicionada <span class="math inline">\(Y|X=a\)</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:condicionada"></span>
-<img src="Probabilitat-II_files/figure-html/condicionada-1.png" alt="Funció de distribució condicionada de Y en funció de X mostral" width="672" />
+<img src="images/condicionada-1.png" alt="Funció de distribució condicionada de Y en funció de X mostral" width="672" />
 <p class="caption">
 Figura 1.10: Funció de distribució condicionada de Y en funció de X mostral
 </p>
@@ -1115,7 +1115,7 @@ f_{XY}(x,y)=
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariants.html#fig:img-condicionada2">1.11</a> es pot veure la representació de la funció de densitat conjunta.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada2"></span>
-<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta"  />
+<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta" width="314" />
 <p class="caption">
 Figura 1.11: Exemple de distribució conjunta
 </p>
@@ -1147,7 +1147,7 @@ f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} =
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariants.html#fig:img-condicionada3">1.12</a> es pot veure la representació de la funció de densitat condicional <span class="math inline">\(X|Y\)</span> per a cada valor de <span class="math inline">\(y\)</span> .</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada3"></span>
-<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y"  />
+<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y" width="418" />
 <p class="caption">
 Figura 1.12: Exemple de distribució condicionada X|Y
 </p>
@@ -1369,9 +1369,11 @@ Podem simplificar l’expresió de la matriu utilitzantels els valors <span clas
 <h2><span class="header-section-number">1.5</span> Transformacions de variables multivariants<a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="theorem">
 <p><span id="thm:thm-cambio" class="theorem"><strong>Theorem 1.1  </strong></span>Sigui <span class="math inline">\(X=(X_1,..., X_k)\)</span> un vector aleatori continu amb soport <span class="math inline">\(D_X\)</span>, és a dir <span class="math inline">\(P((X_1,...,X_k) \in D_X)=1\)</span>, i sigui <span class="math inline">\(g=(g_1,...,g_k):\mathbb{R^k} \rightarrow  \mathbb{R^k}\)</span> una funció vectorial que verifica:</p>
-<p>1 g es uno a uno sobre Dx</p>
-<p>2 el Jacobiano de g, <span class="math inline">\(J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }\)</span> es diferente de cero <span class="math inline">\(\forall x \in D_X\)</span></p>
-<p>3 existeix <span class="math inline">\(h=(h_1,...,h_k)\)</span> inversa de g</p>
+<ol style="list-style-type: decimal">
+<li><p>g es uno a uno sobre Dx</p></li>
+<li><p>el Jacobiano de g, <span class="math inline">\(J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }\)</span> es diferente de cero <span class="math inline">\(\forall x \in D_X\)</span></p></li>
+<li><p>existeix <span class="math inline">\(h=(h_1,...,h_k)\)</span> inversa de g</p></li>
+</ol>
 <p>Llavors, <span class="math inline">\(Y=g(X)\)</span> es un vector aleatori continu amb densitat conjunta per a <span class="math inline">\(y=(y_1,...,y_k) \in g(D_X)\)</span> ve donada per
 <span class="math display">\[
 f_Y(y_1,...,y_k)=f_X(h_1(y1,...,yk),....,h_k(y1,...,yk)) |J^{-1}|
@@ -1381,7 +1383,7 @@ on <span class="math inline">\(|J^{-1}|=\frac{\partial (h_1,....,h_k)}{\partial 
 <p>La demostració d’aquest teorema no es més que el teorema del canvi de variable en una integral múltiple y la seva demostració rigorosa, pot trobar-se en qualsevol llibre d’Anàlisi Matemàtica.</p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-46" class="example"><strong>Exemple 1.25  </strong></span>Sigui l’experiment aleatori triar un punt a l’atzar del cercle unitat <span class="math inline">\(C_1\)</span>, on podem definir sobre l’esapi de probabilitat un vector aleatori de les coordenades del punt (X,Y). L’elecció a l’atzar implica una probabilitat uniforme sobre <span class="math inline">\(C_1\)</span>. La densitat conjunta la podem expresar com</p>
+<p><span id="exm:exm-circulo" class="example"><strong>Exemple 1.25  </strong></span>Sigui l’experiment aleatori triar un punt a l’atzar del cercle unitat <span class="math inline">\(C_1\)</span>, on podem definir sobre l’esapi de probabilitat un vector aleatori de les coordenades del punt (X,Y). L’elecció a l’atzar implica una probabilitat uniforme sobre <span class="math inline">\(C_1\)</span>. La densitat conjunta la podem expresar com</p>
 <p><span class="math display">\[
 f_{XY}(x,y)=
 \begin{cases}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="ca" xml:lang="ca">
 <head>
 
   <meta charset="utf-8" />
@@ -74,9 +74,9 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><div style=" padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
+<li><div style="padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
 <li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
-<li><h2 align=center>Probabilitat II</h2></li>
+<li><h2 align="center">Probabilitat II</h2></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pla docent</a>
@@ -147,7 +147,7 @@
 <li class="chapter" data-level="5.4" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#moviment-browni%C3%A0."><i class="fa fa-check"></i><b>5.4</b> Moviment Brownià.</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com" target="blank">Publicado con bookdown</a></li>
+<li><a href="https://github.com" target="_blank">Publicado con bookdown</a></li>
 
 </ul>
 
@@ -168,140 +168,116 @@
             <section class="normal" id="section-">
 <div id="independència-de-variables-aleatories" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Independència de variables aleatories<a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-de-variables-aleatories" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>La independència entre dos esdevniments A i B, suposa que cap d’ells aporta informació d’interés alhora de calcular la probabilitat d’ells. Es a dir <span class="math inline">\(P(A)=P(A/B)\)</span> i per tant <span class="math inline">\(P(B)=P(B/A)\)</span>. En aquest tema volerm traslladar el conpte d’indepèndencia i algunes mesures relacionades als vectors aleatòris.</p>
 <div id="independència-i-dependència-entre-variables-aleatòries." class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Independència i dependència entre variables aleatòries.<a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí</p>
+<div class="definition">
+<p><span id="def:indep" class="definition"><strong>Definició 2.1  </strong></span><strong>Variables aleatòries independents</strong></p>
+<p>Es diu que dos variables aleatòries <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> son independents si, per a qualsevol conjunts A i B tal que <span class="math inline">\(X \in A\)</span> i <span class="math inline">\(Y \in B\)</span> es té que:</p>
+<p><span class="math display">\[
+P(X \in A \cap  Y \in B) =P(X \in A) P(Y \in B)
+\]</span>
+Com a consequència <span class="math inline">\(P(X \leq x \quad and  \quad   Y \leq y )=P(X \leq x)P(Y \leq y )\)</span></p>
+<p>En general es diu que les variables <span class="math inline">\(X_i, i=1,...k\)</span> son independents si les <span class="math inline">\(\sigma-àlgebras\)</span> que les indueixen s ho son</p>
+<p>Aquesta definició implica que al pendre <span class="math inline">\(A_i \in \sigma(X_i), i=1,...,k\)</span></p>
+<p><span class="math display">\[
+P(A_{j_1} \cap ...\cap A_{j_n} ) =\prod_{l=1}^n P(A_{j_l})  \quad \forall(j_1,...,j_n) \in(1,...,k)
+\]</span></p>
+<p>Tenint en compte com han estat induïdes les <span class="math inline">\(\sigma(X_i)\)</span> admet una expressió alternativa en funció de les diferents variables</p>
+<p><span class="math display" id="eq:pxindep">\[
+P(A_{j_1} \cap ...\cap A_{j_n} ) =P(X_{j_l} \in B_{j_l},l=1,...,n)=  
+\prod_{l=1}^n P(X_{j_l} \in  B_{j_l})  \\  \forall(j_1,...,j_n) \in(1,...,k)  
+\tag{2.1}
+\]</span>
+on <span class="math inline">\(A_{j_1}=X^{-1}B_{j_1}\)</span></p>
+</div>
+<p>Comprobar l’independència de variables aleatòries a partir de la ecuació <a href="independència-de-variables-aleatories.html#eq:pxindep">(2.1)</a> es complicat i es mès fàcil caracterítzar l’independència a partir de les funcions de distribució i densitat conjuntes i marginals.</p>
+<div class="theorem">
+<p><span id="thm:factor" class="theorem"><strong>Theorem 2.1  </strong></span><strong>Teorema de factorització</strong></p>
+<p>Sigui <span class="math inline">\(X=(X_1,...,X_k)\)</span> un vector aleatori amb funció de distribució conjunta <span class="math inline">\(F_X(x_1,...,x_k)\)</span> i funció de densitat o probabilitat <span class="math inline">\(f_X(x_1,...,x_k)\)</span>. Si <span class="math inline">\(F_j(x_j) \quad i \quad f_j(x_j)  , j=1,...,k\)</span> con les funcions de distribució marginals i les funcions de densitat o probabilitat marginals de cada component del vector aleatori direm que les variables <span class="math inline">\(X_1,...,X_k\)</span> son independents si i només si es verifiquen les següents condicions equivalents:</p>
+<p><span class="math display" id="eq:Fxindep">\[
+1.\qquad F_X(x_1,...,x_k)= \prod_{l=1}^k F_j(x_j), \quad \forall (x_1,...,x_k) \in \mathbb{R}^k \tag{2.2}
+\]</span></p>
+<p><span class="math display" id="eq:fpxindep">\[
+2. \qquad f_X(x_1,...,x_k)= \prod_{l=1}^k f_j(x_j), \quad \forall (x_1,...,x_k) \in \mathbb{R}^k \tag{2.3}
+\]</span></p>
+</div>
+<p><strong>Demostració</strong></p>
+<p>Suposem que les variables aleatòries contínues (X_1,,X_k) són independents. Per definició,</p>
+<p><span class="math display">\[
+\prod_{j=1}^{k}\Pr(X_j\in A_j),
+\qquad
+\forall,A_1,\ldots,A_k\in\mathcal{B}(\mathbb{R}).
+\]</span></p>
+<p>1.- Siguin els conjunts <span class="math inline">\(A_j=(-\infty ,x_j] \quad j=1,...,k\)</span></p>
+<p>Aleshores,</p>
+<p><span class="math display">\[
+\begin{aligned}
+F_X(x_1,\ldots,x_k)&amp;=P(X_1\le x_1,\ldots,X_k\le x_k) \\
+&amp;=P\left(X_1\in(-\infty,x_1],\ldots,
+X_k\in(-\infty,x_k]\right) \\
+&amp;=\prod_{j=1}^{k}
+P \left(X_j\in(-\infty,x_j]\right)
+=\prod_{j=1}^{k}
+P(X_j\le x_j) \\
+&amp;=\prod_{j=1}^{k}
+F_j(x_j)
+\end{aligned}
+\]</span></p>
+<p>2- A partir del càlcul de la densitat conjunta i tenim en compte que cada factor <span class="math inline">\(F_j(x_j)\)</span> només depen de la vaqriable <span class="math inline">\(x_j\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+f_X(x_1,...,x_k)&amp;= \frac{\partial^k}
+{\partial x_1\cdots\partial x_k}
+F_X(x_1,\ldots,x_k) \\
+&amp;=\frac{\partial^k} {\partial x_1\cdots\partial x_k}(\prod_{j=1}^{k}
+F_j(x_j)) \\
+&amp;=
+\frac{\partial}{\partial x_1}F_1(x_1)
+\cdot
+\frac{\partial}{\partial x_2}F_2(x_2)
+\cdots
+\frac{\partial}{\partial x_k}F_k(x_k) \\
+&amp;=
+f_1(x_1),
+f_2(x_2)\cdots
+f_k(x_k) \\
+&amp;=\prod_{j=1}^{k}f_j(x_j)
+\end{aligned}
+\]</span></p>
+<div class="observation">
+<p>Com es va veure en el tema anterior a partir de la distribució conjunta d’un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components. Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginales sempre que les variables siguin indepenbdents.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-1" class="example"><strong>Exemple 2.1  </strong></span>En l’exemple <a href="#exm:exm-circulo"><strong>??</strong></a> del tema anterior varem veure que les coordenades de la distribució conjunta de un punt triat a l’atzar en el circle unitas <span class="math inline">\(C_1\)</span> tenia una densitat conjunta</p>
+<p><span class="math display">\[
+f_{XY}(x,y)=
+\begin{cases}
+\dfrac{1}{\pi},          &amp; \text{si} \quad (x,y) \in C_1 \\
+0,          &amp; \text{en la resta }  \\
+\end{cases}
+\]</span></p>
+<p>I fàcilement i de forma simètrica, les garginals de X e Y son idèntiques i tenen la forma</p>
+<p><span class="math display">\[
+f_{X}(x)=
+\begin{cases}
+\dfrac{2}{\pi}\sqrt(1-x^2),          &amp; \text{si} \quad |x|&lt;1 \\
+0,          &amp; \text{en la resta }  \\
+\end{cases}
+\]</span></p>
+<p>Directamente les dues variables <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> no son independents donat que <span class="math inline">\(f_{XY}(x,y) \neq  f_{X}(x)f_{Y}(y)\)</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-2" class="definition"><strong>Definició 2.2  </strong></span><strong>Mostra aleatoria</strong></p>
+<p>Considerem una distribució de probabilitat que ve representata per la seva funció de probabilitat o densitat de probabilitat segons sigui discreta o continua. Es diu que n variables aleatòries <span class="math inline">\(X_1,...,X_n\)</span> formen una mostra aleatòria d’aquesta distribució si les variables aleatòries son independents i la funció de probabilitat o densitat marginal de cada variable aleatòria <span class="math inline">\(X_i\)</span> es f. Normalment a este conjunt de variables aleatòrias es diu que son independents i identicament distribuides o abreviadament i.i.d”. El nombre de variables aleatòries es la grandària o mida mostral.</p>
+</div>
+<p>D’aquesta definició es dedueix que les dades observades en una mostra de subjectes d’una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu <span class="math inline">\(g(x_1,...,x_n)=f(x_1)...f(x_n)\)</span></p>
 </div>
 <div id="conceptes-de-covariància-correlació-i-causalitat." class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Conceptes de covariància, correlació i causalitat.<a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Text aquí
 ## Esperances i variàncies condicionades.
 Text aquí</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-47" class="definition"><strong>Definició 2.1  </strong></span><strong>Definició 1.1 (Experiment).</strong><br />
-Un <strong>experiment</strong> és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables.</p>
-<ul>
-<li>L’experiment és <strong>determinista</strong> si sempre produeix el mateix resultat.</li>
-<li>És <strong>aleatori</strong> si pot donar lloc a diversos resultats no predictibles amb certesa.</li>
-</ul>
-</div>
-<p><strong>Exemple 1.1.</strong><br />
-Llençar una moneda fins que aparegui <em>cara</em> per primera vegada i comptar el nombre total de llançaments.</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-48" class="definition"><strong>Definició 2.2  </strong></span><strong>Definició 1.2 (Espai mostral).</strong><br />
-L’<strong>espai mostral</strong> d’un experiment, denotat per <span class="math inline">\(\Omega\)</span>, és el conjunt de tots els resultats possibles.</p>
-</div>
-<p>Per a l’exemple:</p>
-<p><span class="math display">\[
-\Omega = \{1,2,3,\ldots\}.
-\]</span></p>
-<div class="definition">
-<p><span id="def:unlabeled-div-49" class="definition"><strong>Definició 2.3  </strong></span><strong>Definició 1.3 (Esdeveniment).</strong><br />
-Un <strong>esdeveniment</strong> és qualsevol subconjunt <span class="math inline">\(A \subseteq \Omega\)</span>.<br />
-Diem que <em>A ocorre</em> si el resultat observat pertany a A.</p>
-</div>
-<p>Exemple: “el nombre de llançaments és senar” és<br />
-<span class="math display">\[A = \{1,3,5,\ldots\}.\]</span></p>
-<hr />
-<p>1.0.2 σ-àlgebres i mesura de probabilitat</p>
-<p>Per tal de definir probabilitat de manera rigorosa, necessitem una col·lecció d’esdeveniments “ben comportada”.</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-50" class="definition"><strong>Definició 2.4  </strong></span><strong>Definició 1.4 (σ-àlgebra).</strong><br />
-Una col·lecció <span class="math inline">\(\mathcal{A}\subseteq \mathcal{P}(\Omega)\)</span> és una <strong>σ-àlgebra</strong> si:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(\Omega\in\mathcal{A}\)</span><br />
-</li>
-<li>Si <span class="math inline">\(A\in\mathcal{A}\)</span>, aleshores <span class="math inline">\(A^c\in\mathcal{A}\)</span><br />
-</li>
-<li>Si <span class="math inline">\(A_1,A_2,\ldots\in\mathcal{A}\)</span>, aleshores <span class="math inline">\(\bigcup_{n}A_n\in\mathcal{A}\)</span></li>
-</ol>
-</div>
-<p>La σ-àlgebra representa “tot allò al que volem i podem assignar probabilitat”.</p>
-<hr />
-<div class="definition">
-<p><span id="def:unlabeled-div-51" class="definition"><strong>Definició 2.5  </strong></span><strong>Definició 1.5 (Probabilitat — axiomes de Kolmogorov).</strong><br />
-Donada una σ-àlgebra <span class="math inline">\(\mathcal{A}\)</span> sobre <span class="math inline">\(\Omega\)</span>, una funció</p>
-<p><span class="math display">\[\mathbb{P}:\mathcal{A}\to[0,1]\]</span></p>
-<p>és una <strong>mesura de probabilitat</strong> si:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(\mathbb{P}(A)\ge 0\)</span><br />
-</li>
-<li><span class="math inline">\(\mathbb{P}(\Omega)=1\)</span><br />
-</li>
-<li>Si <span class="math inline">\((A_n)_n\)</span> són disjunts:<br />
-<span class="math display">\[
-\mathbb{P}\left(\bigcup_n A_n\right) = \sum_n \mathbb{P}(A_n).
-\]</span></li>
-</ol>
-</div>
-<hr />
-<p>1.0.3 Variables aleatòries i funció de distribució</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-52" class="definition"><strong>Definició 2.6  </strong></span><strong>Definició 1.7 (Variable aleatòria).</strong><br />
-Una aplicació <span class="math inline">\(X:\Omega\to\mathbb{R}\)</span> és una <strong>variable aleatòria</strong> si<br />
-<span class="math display">\[\{\omega: X(\omega)\le x\}\in \mathcal{A}\quad\text{per a tot }x\in\mathbb{R}.\]</span></p>
-</div>
-<p>Això garanteix que les expressions <span class="math inline">\(\mathbb{P}(X\le x)\)</span> estan ben definides.</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-53" class="definition"><strong>Definició 2.7  </strong></span><strong>Definició 1.8 (Funció de distribució).</strong><br />
-La <strong>funció de distribució</strong> d’una variable aleatòria <span class="math inline">\(X\)</span> és:</p>
-<p><span class="math display">\[
-F_X(x)=\mathbb{P}(X\le x).
-\]</span></p>
-</div>
-<p>Aquesta funció caracteritza completament la distribució de <span class="math inline">\(X\)</span>.</p>
-<hr />
-<p>1.1 Variables aleatòries multivariants</p>
-<p>Molts experiments produeixen més d’una magnitud d’interès. Per exemple:</p>
-<ul>
-<li>ingressos i despeses d’una llar;</li>
-<li>temps fins diagnòstic i temps fins curació d’un pacient.</li>
-</ul>
-<p>Aquests casos requereixen treballar amb <strong>vectors aleatoris</strong>.</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-54" class="definition"><strong>Definició 2.8  </strong></span><strong>Definició 1.11 (Variable aleatòria bivariant).</strong><br />
-Un parell <span class="math inline">\((X,Y)\)</span> és una <strong>variable aleatòria bivariant</strong> si per a tot <span class="math inline">\(x,y\)</span>:</p>
-<p><span class="math display">\[
-\{\,\omega: X(\omega)\le x,\; Y(\omega)\le y\,\}\in\mathcal{A}.
-\]</span></p>
-</div>
-<p>La seva <strong>funció de distribució conjunta</strong> és:</p>
-<p><span class="math display">\[
-F(x,y) = \mathbb{P}(X\le x,\;Y\le y).
-\]</span></p>
-<hr />
-<p>1.2 Variables aleatòries bivariants discretes i contínues</p>
-<p>1.2.1 Cas discret</p>
-<p>Si <span class="math inline">\((X,Y)\)</span> només pot prendre valors d’un conjunt finit o numerable <span class="math inline">\((x_i,y_j)\)</span>, definim la seva <strong>funció de probabilitat conjunta</strong>:</p>
-<p><span class="math display">\[
-p_{ij} = \mathbb{P}(X=x_i,\,Y=y_j).
-\]</span></p>
-<p>La probabilitat d’un conjunt <span class="math inline">\(A\)</span> qualsevol és:</p>
-<p><span class="math display">\[
-\mathbb{P}((X,Y)\in A) = \sum_{(x_i,y_j)\in A} p_{ij}.
-\]</span></p>
-<p>Els marginals són:</p>
-<p><span class="math display">\[
-\mathbb{P}(X=x_i)=\sum_j p_{ij},\qquad
-\mathbb{P}(Y=y_j)=\sum_i p_{ij}.
-\]</span></p>
-<hr />
-<p>1.2.2 Cas continu</p>
-<p>Si <span class="math inline">\((X,Y)\)</span> admet una <strong>densitat conjunta</strong> <span class="math inline">\(f(x,y)\)</span>,</p>
-<p><span class="math display">\[
-\mathbb{P}((X,Y)\in A)=\iint_A f(x,y)\,dx\,dy.
-\]</span></p>
-<p>Propietats bàsiques:</p>
-<ul>
-<li><span class="math inline">\(f(x,y)\ge 0\)</span><br />
-</li>
-<li><span class="math inline">\(\displaystyle \iint_{\mathbb{R}^2} f(x,y)\,dx\,dy = 1\)</span></li>
-</ul>
-<p>Els marginals són:</p>
-<p><span class="math display">\[
-f_X(x)=\int_{-\infty}^{\infty} f(x,y)\,dy,\qquad
-f_Y(y)=\int_{-\infty}^{\infty} f(x,y)\,dx.
-\]</span></p>
 
 </div>
 </div>

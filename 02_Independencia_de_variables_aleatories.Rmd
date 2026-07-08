@@ -1,176 +1,163 @@
 # Independència de variables aleatories
 
 
+La independència entre dos esdevniments A i B, suposa que cap d'ells aporta informació d'interés alhora de calcular la probabilitat d'ells. Es a dir $P(A)=P(A/B)$  i per tant $P(B)=P(B/A)$. En aquest tema volerm traslladar el conpte d'indepèndencia i algunes mesures relacionades als vectors aleatòris. 
+
 ## Independència i dependència entre variables aleatòries.
  
- Text aquí
  
+:::{.definition #indep}
+**Variables aleatòries independents** 
+
+Es diu que dos variables aleatòries $X$ i $Y$ son independents si, per a qualsevol conjunts A i B tal que $X \in A$ i  $Y \in B$ es té que:
+
+$$
+P(X \in A \cap  Y \in B) =P(X \in A) P(Y \in B)
+$$
+Com a consequència  $P(X \leq x \quad and  \quad   Y \leq y )=P(X \leq x)P(Y \leq y )$
+
+
+En general es diu que les variables $X_i, i=1,...k$ son independents si les $\sigma-àlgebras$ que les indueixen s ho son
+
+Aquesta definició  implica que al pendre $A_i \in \sigma(X_i), i=1,...,k$
+
+$$
+P(A_{j_1} \cap ...\cap A_{j_n} ) =\prod_{l=1}^n P(A_{j_l})  \quad \forall(j_1,...,j_n) \in(1,...,k) 
+$$
+
+Tenint en compte com han estat induïdes les $\sigma(X_i)$ admet una expressió alternativa en funció de les diferents variables
+
+
+$$
+P(A_{j_1} \cap ...\cap A_{j_n} ) =P(X_{j_l} \in B_{j_l},l=1,...,n)=  
+\prod_{l=1}^n P(X_{j_l} \in  B_{j_l})  \\  \forall(j_1,...,j_n) \in(1,...,k)  
+(\#eq:pxindep)
+$$
+on $A_{j_1}=X^{-1}B_{j_1}$
+
+:::
+
+Comprobar l'independència de variables aleatòries a partir de la ecuació   \@ref(eq:pxindep) es complicat i es mès fàcil caracterítzar l'independència a partir de les funcions de distribució  i densitat conjuntes i marginals.
+
+
+ 
+:::{.theorem #factor}
+**Teorema de factorització** 
+
+Sigui $X=(X_1,...,X_k)$ un vector aleatori amb  funció de distribució conjunta $F_X(x_1,...,x_k)$ i funció de densitat o probabilitat  $f_X(x_1,...,x_k)$. Si $F_j(x_j) \quad i \quad f_j(x_j)  , j=1,...,k$ con les funcions  de distribució marginals i les funcions de densitat o probabilitat marginals de cada component del vector aleatori direm que les variables $X_1,...,X_k$ son independents si i només si es verifiquen les següents condicions equivalents:
+
+
+$$ 
+1.\qquad F_X(x_1,...,x_k)= \prod_{l=1}^k F_j(x_j), \quad \forall (x_1,...,x_k) \in \mathbb{R}^k (\#eq:Fxindep)
+$$
+
+$$
+2. \qquad f_X(x_1,...,x_k)= \prod_{l=1}^k f_j(x_j), \quad \forall (x_1,...,x_k) \in \mathbb{R}^k (\#eq:fpxindep)
+$$
+
+:::
+
+
+**Demostració**
+
+Suposem que les variables aleatòries contínues (X_1,\ldots,X_k) són independents. Per definició,
+
+$$
+\prod_{j=1}^{k}\Pr(X_j\in A_j),
+\qquad
+\forall,A_1,\ldots,A_k\in\mathcal{B}(\mathbb{R}).
+$$
+
+1.- Siguin els conjunts $A_j=(-\infty ,x_j] \quad j=1,...,k$
+
+Aleshores, 
+
+
+$$
+\begin{aligned}
+F_X(x_1,\ldots,x_k)&=P(X_1\le x_1,\ldots,X_k\le x_k) \\
+&=P\left(X_1\in(-\infty,x_1],\ldots,
+X_k\in(-\infty,x_k]\right) \\
+&=\prod_{j=1}^{k}
+P \left(X_j\in(-\infty,x_j]\right)
+=\prod_{j=1}^{k}
+P(X_j\le x_j) \\
+&=\prod_{j=1}^{k}
+F_j(x_j)
+\end{aligned}
+$$
+
+2-  A partir del càlcul de la densitat conjunta i tenim en compte que cada factor $F_j(x_j)$ només depen de la vaqriable $x_j$
+
+$$ 
+\begin{aligned}
+f_X(x_1,...,x_k)&= \frac{\partial^k}
+{\partial x_1\cdots\partial x_k} 
+F_X(x_1,\ldots,x_k) \\
+&=\frac{\partial^k} {\partial x_1\cdots\partial x_k}(\prod_{j=1}^{k}
+F_j(x_j)) \\
+&=
+\frac{\partial}{\partial x_1}F_1(x_1)
+\cdot
+\frac{\partial}{\partial x_2}F_2(x_2)
+\cdots
+\frac{\partial}{\partial x_k}F_k(x_k) \\
+&=
+f_1(x_1),
+f_2(x_2)\cdots
+f_k(x_k) \\ 
+&=\prod_{j=1}^{k}f_j(x_j)
+\end{aligned}
+$$
+
+
+:::{.observation}
+
+Com es va veure en el tema anterior a partir de la distribució conjunta d'un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components.  Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginales sempre que les variables siguin indepenbdents. 
+
+:::
+
+:::{.example}
+En l'exemple \@ref(exm:exm-circulo) del tema anterior varem veure que les coordenades de la distribució conjunta de un punt triat a l'atzar en el circle unitas $C_1$ tenia una densitat conjunta
+
+
+ $$
+ f_{XY}(x,y)=
+ \begin{cases}
+\dfrac{1}{\pi},          & \text{si} \quad (x,y) \in C_1 \\
+0,          & \text{en la resta }  \\
+\end{cases}
+ $$
+ 
+I fàcilement  i de forma simètrica, les garginals de X e Y son idèntiques i tenen la forma
+
+
+ $$
+ f_{X}(x)=
+ \begin{cases}
+\dfrac{2}{\pi}\sqrt(1-x^2),          & \text{si} \quad |x|<1 \\
+0,          & \text{en la resta }  \\
+\end{cases}
+ $$
+ 
+Directamente les dues variables $X$ e $Y$ no son independents donat que $f_{XY}(x,y) \neq  f_{X}(x)f_{Y}(y)$
+
+::: 
+
+
+
+:::{.definition}
+**Mostra aleatoria**
+
+Considerem una distribució de probabilitat que ve representata per la seva funció de probabilitat o densitat de probabilitat segons sigui discreta o continua.  Es diu que n variables aleatòries $X_1,...,X_n$ formen una mostra  aleatòria d'aquesta distribució si les  variables aleatòries son independents i la  funció de probabilitat o densitat marginal de cada variable aleatòria $X_i$ es f. Normalment a este conjunt de variables aleatòrias es diu que son independents i identicament distribuides o abreviadament i.i.d".  El nombre de variables aleatòries es la grandària o mida mostral. 
+
+:::
+
+D'aquesta definició es dedueix que les dades observades en una mostra de subjectes d'una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu $g(x_1,...,x_n)=f(x_1)...f(x_n)$
+
 ## Conceptes de covariància, correlació i causalitat.
  
  Text aquí
 ## Esperances i variàncies condicionades.
 Text aquí
 
-
-
-:::definition
-**Definició 1.1 (Experiment).**  
-Un **experiment** és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables.
-
-- L’experiment és **determinista** si sempre produeix el mateix resultat.
-- És **aleatori** si pot donar lloc a diversos resultats no predictibles amb certesa.
-:::
-
-**Exemple 1.1.**  
-Llençar una moneda fins que aparegui *cara* per primera vegada i comptar el nombre total de llançaments.
-
-:::definition
-**Definició 1.2 (Espai mostral).**  
-L’**espai mostral** d’un experiment, denotat per $\Omega$, és el conjunt de tots els resultats possibles.
-:::
-
-Per a l’exemple:
-
-$$
-\Omega = \{1,2,3,\ldots\}.
-$$
-
-:::definition
-**Definició 1.3 (Esdeveniment).**  
-Un **esdeveniment** és qualsevol subconjunt $A \subseteq \Omega$.  
-Diem que *A ocorre* si el resultat observat pertany a A.
-:::
-
-Exemple: “el nombre de llançaments és senar” és  
-$$A = \{1,3,5,\ldots\}.$$
-
----
-
-1.0.2 σ-àlgebres i mesura de probabilitat
-
-Per tal de definir probabilitat de manera rigorosa, necessitem una col·lecció d’esdeveniments “ben comportada”.
-
-:::definition
-**Definició 1.4 (σ-àlgebra).**  
-Una col·lecció $\mathcal{A}\subseteq \mathcal{P}(\Omega)$ és una **σ-àlgebra** si:
-
-1. $\Omega\in\mathcal{A}$  
-2. Si $A\in\mathcal{A}$, aleshores $A^c\in\mathcal{A}$  
-3. Si $A_1,A_2,\ldots\in\mathcal{A}$, aleshores $\bigcup_{n}A_n\in\mathcal{A}$
-:::
-
-La σ-àlgebra representa “tot allò al que volem i podem assignar probabilitat”.
-
----
-
-:::definition
-**Definició 1.5 (Probabilitat — axiomes de Kolmogorov).**  
-Donada una σ-àlgebra $\mathcal{A}$ sobre $\Omega$, una funció  
-
-$$\mathbb{P}:\mathcal{A}\to[0,1]$$
-
-és una **mesura de probabilitat** si:
-
-1. $\mathbb{P}(A)\ge 0$  
-2. $\mathbb{P}(\Omega)=1$  
-3. Si $(A_n)_n$ són disjunts:  
-   $$
-   \mathbb{P}\left(\bigcup_n A_n\right) = \sum_n \mathbb{P}(A_n).
-   $$
-:::
-
----
-
-1.0.3 Variables aleatòries i funció de distribució
-
-:::definition
-**Definició 1.7 (Variable aleatòria).**  
-Una aplicació $X:\Omega\to\mathbb{R}$ és una **variable aleatòria** si  
-$$\{\omega: X(\omega)\le x\}\in \mathcal{A}\quad\text{per a tot }x\in\mathbb{R}.$$
-:::
-
-Això garanteix que les expressions $\mathbb{P}(X\le x)$ estan ben definides.
-
-:::definition
-**Definició 1.8 (Funció de distribució).**  
-La **funció de distribució** d’una variable aleatòria $X$ és:
-
-$$
-F_X(x)=\mathbb{P}(X\le x).
-$$
-:::
-
-Aquesta funció caracteritza completament la distribució de $X$.
-
----
-
- 1.1 Variables aleatòries multivariants
-
-Molts experiments produeixen més d’una magnitud d’interès. Per exemple:
-
-- ingressos i despeses d’una llar;
-- temps fins diagnòstic i temps fins curació d’un pacient.
-
-Aquests casos requereixen treballar amb **vectors aleatoris**.
-
-:::definition
-**Definició 1.11 (Variable aleatòria bivariant).**  
-Un parell $(X,Y)$ és una **variable aleatòria bivariant** si per a tot $x,y$:
-
-$$
-\{\,\omega: X(\omega)\le x,\; Y(\omega)\le y\,\}\in\mathcal{A}.
-$$
-:::
-
-La seva **funció de distribució conjunta** és:
-
-$$
-F(x,y) = \mathbb{P}(X\le x,\;Y\le y).
-$$
-
----
-
- 1.2 Variables aleatòries bivariants discretes i contínues
-
- 1.2.1 Cas discret
-
-Si $(X,Y)$ només pot prendre valors d’un conjunt finit o numerable $(x_i,y_j)$, definim la seva **funció de probabilitat conjunta**:
-
-$$
-p_{ij} = \mathbb{P}(X=x_i,\,Y=y_j).
-$$
-
-La probabilitat d’un conjunt $A$ qualsevol és:
-
-$$
-\mathbb{P}((X,Y)\in A) = \sum_{(x_i,y_j)\in A} p_{ij}.
-$$
-
-Els marginals són:
-
-$$
-\mathbb{P}(X=x_i)=\sum_j p_{ij},\qquad
-\mathbb{P}(Y=y_j)=\sum_i p_{ij}.
-$$
-
----
-
- 1.2.2 Cas continu
-
-Si $(X,Y)$ admet una **densitat conjunta** $f(x,y)$,  
-
-$$
-\mathbb{P}((X,Y)\in A)=\iint_A f(x,y)\,dx\,dy.
-$$
-
-Propietats bàsiques:
-
-- $f(x,y)\ge 0$  
-- $\displaystyle \iint_{\mathbb{R}^2} f(x,y)\,dx\,dy = 1$
-
-Els marginals són:
-
-$$
-f_X(x)=\int_{-\infty}^{\infty} f(x,y)\,dy,\qquad
-f_Y(y)=\int_{-\infty}^{\infty} f(x,y)\,dx.
-$$

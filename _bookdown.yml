@@ -1,19 +1,18 @@
 book_filename:  "Probabilitat II"
 delete_merged_file: true
 output_dir: "docs"
-language:
+language: 
   ui:
   label:
     fig: "Figura "
     tab: "Taula "
     eq: "Equació "
     theorem: "Teorema "
-    lem: "Lema " 
-    cor: "Corol·lari "
     prp: "Proposició "
     def: "Definició "
     exm: "Exemple "
     proof: "Demostració "
     note: "Nota"
+    observation: "Observació"
   chapter_name: "Capítol "
   

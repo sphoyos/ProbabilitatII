@@ -2,6 +2,7 @@
 title: "Probabilitat II"
 author: "Santi Perez-Hoyos"
 date: '`r format(Sys.time(), "%d %B, %Y")`'
+lang: ca
 site: bookdown::bookdown_site
 ---
 
@@ -98,10 +99,12 @@ K03. Reconèixer la teoria de la probabilitat com a fonament de les tècniques e
 **2. Independència de variables aleatòries**
 
 * Independència i dependència entre variables aleatòries.
+
+* Esperances i variàncies condicionades.
  
 * Conceptes de covariància, correlació i causalitat.
  
-* Esperances i variàncies condicionades.
+
 
 **3. Algunes distribucions multivariants**
 

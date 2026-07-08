@@ -1,23 +1,28 @@
-  bookdown::gitbook:
-    css: Rcode/custom.css
-    pandoc_args: [ "--metadata", "fig-path=images/" ]
-    syntax-highlighting: tango
-    fig_caption: TRUE
-    df_print: paged
-    config:
-      sharing: false
-      toolbar: fixed
-      toc:
-        collapse: section
-        scroll_highlight: true
-        before: |
-          <li><div style=" padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
-          <li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
-          <li><h2 align=center>Probabilitat II</h2></li>
-        after: |
-          <li><a href="https://github.com" target="blank">Publicado con bookdown</a></li>
-  bookdown::pdf_book:
-    latex_engine:  xelatex
-    keep_tex: no 
-    keep_md:  no 
-    
+bookdown::gitbook:
+  css: Rcode/custom.css
+  pandoc_args:
+    - "--lua-filter=Rcode/theorems.lua"
+    - "--metadata"
+    - "fig-path=images/"
+  syntax-highlighting: tango
+  fig_caption: true
+  df_print: paged
+  config:
+    sharing: false
+    toolbar: fixed
+    toc:
+      collapse: section
+      scroll_highlight: true
+      before: |
+        <li><div style="padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
+        <li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
+        <li><h2 align="center">Probabilitat II</h2></li>
+      after: |
+        <li><a href="https://github.com" target="_blank">Publicado con bookdown</a></li>
+
+bookdown::pdf_book:
+  latex_engine: xelatex
+  keep_tex: no
+  keep_md: no
+  pandoc_args:
+    - "--lua-filter=Rcode/theorems.lua"
