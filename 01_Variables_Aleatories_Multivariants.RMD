@@ -991,7 +991,7 @@ $$
 El concepte de marginalitat pot aplicar-se a qualsevol subvector del vector original . Així per al subector $X^l=(X_{i_1},...,X_{i_l})$ on $l \leq k$  podem parlar de la distribució conjunta marginal de $X^l$ a la expressió on es fixan les components del subvector i es fan tendir a l'infinit a la resta 
 
 $$
-F_{X^l}(X_{i_1},...,X_{i_l})=\lim_{x_j \xrightarrow {j \neq i_1,...,i_l} +\infty} F_X(x_1,...x_k)
+F_{X^l}(X_{i_1},...,X_{i_l})=\lim_{x_j \xrightarrow {j \neq i_1,...,i_l} +\infty} F_X(x_1,...x_k)  (\#eq:Fmarginal)
 $$
 
 :::
@@ -1653,11 +1653,11 @@ $$
 
 Sigui $X=(X_1,..., X_k)$ un vector aleatori  continu  amb soport $D_X$, és a dir $P((X_1,...,X_k) \in D_X)=1$, i sigui $g=(g_1,...,g_k):\mathbb{R^k} \rightarrow  \mathbb{R^k}$   una funció vectorial que verifica:
 
-1 g es uno a uno sobre Dx
+1. g es uno a uno sobre Dx
 
-2 el  Jacobiano de g, $J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }$ es diferente de cero $\forall x \in D_X$
+2. el  Jacobiano de g, $J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }$ es diferente de cero $\forall x \in D_X$
 
-3 existeix $h=(h_1,...,h_k)$ inversa de g
+3. existeix $h=(h_1,...,h_k)$ inversa de g
 
 Llavors, $Y=g(X)$ es un vector aleatori continu amb densitat conjunta per a $y=(y_1,...,y_k) \in g(D_X)$ ve donada per 
 $$
@@ -1673,7 +1673,7 @@ La demostració d'aquest teorema no es més que el teorema del canvi de variable
 
 ---
 
-:::{.example}
+:::{.example #exm-circulo}
 
  Sigui l'experiment aleatori triar un punt a l'atzar del cercle unitat $C_1$, on podem definir sobre l'esapi de probabilitat un vector aleatori de les coordenades del punt (X,Y). L'elecció a l'atzar implica una probabilitat uniforme sobre $C_1$. La densitat conjunta la podem expresar com 
  
