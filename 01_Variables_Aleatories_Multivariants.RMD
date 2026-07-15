@@ -1375,12 +1375,12 @@ $$
 
 ## Moments multivariants: vector d'esperances, matriu de variància-covariància
 
-### Moments univariants: Esperanza i Variància
+### Moments univariants: Esperança i Variància
 
-En el cas univariant  podem parlar de certes característiques numèriques o constants lligades a les variables que ens permet caracteritzar-les. Son els moments , dels cuals l'esperanza i la variància son casos particulars. 
+En el cas univariant  podem parlar de certes característiques numèriques o constants lligades a les variables que ens permet caracteritzar-les. Son els moments , dels quals l'esperança i la variància son casos particulars. 
 
 :::{.Definition}
-**Esperanza d'una variable aleatòria discreta**
+**Esperança d'una variable aleatòria discreta**
  
  Sigui $X$ una variable aleatòria discreta on  $f_X$  es la seva funció de probabilitat i $D_x$ el seu suport numerable. Si g es una funció mesurable definida de $(\mathbb{R},\beta)$ en  $(\mathbb{R},\beta)$, tal que $\sum_{x_i \in D_x} |g(x_i)f_X(x_i)|< + \infty$ definim l'esperança de $g(X)$ a
  
@@ -1397,7 +1397,7 @@ que sería la mitjana poblacional de la distribució de la variabla $X$
 
 
 :::{.Definition}
-**Esperanza d'una variable aleatòria continua**
+**Esperança d'una variable aleatòria continua**
  
  Sigui $X$ una variable aleatòria continua on  $f_X$  es la seva funció de densitat . Si g es una funció mesurable definida de $(\mathbb{R},\beta)$ en  $(\mathbb{R},\beta)$, tal que $\int_{\mathbb{R}} |g(x)f_X(x)dx|< + \infty$ definim l'esperança de $g(X)$ a
  
@@ -1431,11 +1431,11 @@ $$
    Així el moment d'ordre 1 es  la <b>$E[X]=\mu$ mitjana</b> de la distribució  i el moment central d'ordre 2 es la <b>variància $Var[X]=\sigma_X^2=E[(X-\mu)^2]= E[X^2]-(E[X])^2$.</b> 
 
 
-### Moments multivariants: Esperanza i Variància
+### Moments multivariants: Esperança i Variància
 
 :::{.Definition}
 
-**Esperanza d'un vector aleatori discret**
+**Esperança d'un vector aleatori discret**
  
  Sigui $X=(X_1,...,X_k)$ un vector aleatori discret, $D_X$ el suport del vector i $f_X$  es la seva funció de probabilitat conjunta. Si g es una funció mesurable definida de $\mathbb{R^k}$ en  $\mathbb{R}$  
  
@@ -1446,7 +1446,7 @@ $$
 
 :::{.Definition}
 
-**Esperanza d'un vector aleatori continu**
+**Esperança d'un vector aleatori continu**
  
  Sigui $X=(X_1,...,X_k)$ un vector aleatori continu $f_X$  es la seva funció de densitat conjunta. Si g es una funció mesurable definida de $\mathbb{R^k}$ en  $\mathbb{R}$  
  
@@ -1461,8 +1461,6 @@ En ambdos casos l'esperança esta supeditada a que |g(x)f(x)| sigui absolutament
 ---
 
 ::: {.example}
-
-Una  
 
 Una barra d’un metre es trenca aleatòriament en dos punts, generant tres peces. Quina és la llargada mitjana de la peça del mig?
 
@@ -1492,7 +1490,7 @@ E[|U_1-U_2|] &=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(u_1,u_2)f(
 &=\int_0^1 ( \frac {u_1^2}{2})  du_1+\int_0^1 (  \frac {u_2^2}{2})  du_2= \left [ \frac {u_1^2}{2 \times 3} \right]_0^1+\left [ \frac {u_2^2}{2 \times 3} \right]_0^1= \frac {1}{2 \times 3}+\frac {1}{2 \times 3}=\frac {1}{3} 
 \end{aligned}
 $$
-que és un terç de la longitut de la barra. 
+que és un terç de la longitud de la barra. 
 
 ::: 
 
@@ -1501,13 +1499,13 @@ que és un terç de la longitut de la barra.
 
 :::{.Definition}
 **Moments d'un vector aleatori**
-En el cas de les variables aleatòries univariantes hem vist com  determinades formes de la fucnió g donen lloc als anomenats moments que podem extendre al cas dels vectors aleatoris.
+En el cas de les variables aleatòries univariantes hem vist com  determinades formes de la funció g donen lloc als anomenats moments que podem extendre al cas dels vectors aleatoris.
 
  El moment d'odre $(n_1,...,n_k)$ s'obté sempre que existix l'esperança 
  $$
-g(X_1,...,X_k)=X_1^{n_1} .....X_k^{n_k}, n_i \geq 0
+g(X_1,...,X_k)=X_1^{n_1} ...X_k^{n_k}, n_i \geq 0
 $$ 
-que dona lloc a $E[X_1^{n_1} .....X_k^{n_k}]$ respece al origen de cada component. 
+que dona lloc a $E[X_1^{n_1} .....X_k^{n_k}]$ respecte a l'origen de cada component. 
 
 :::
 
@@ -1520,7 +1518,7 @@ $$
 g(X_1,...,X_k)=(X_1-E[X_1])^{n_1} .....X_k-E[X_k])^{n_k}, n_i \geq 0
 $$ 
 
-La linialitat de l'esperança aplicada quan $g(X)=X_1+...+X_k$ permet escriure que l'esperança de la suma de variables es la suma de les esperances.
+La linialitat de l'esperança aplicada quan $g(X)=X_1+...+X_k$ permet concloure que l'esperança de la suma de variables es la suma de les esperances.
 
 $$
 E(X_1+...+X_k) =\sum_{i=1}^kE(X_i)
@@ -1545,7 +1543,7 @@ Un moment d'especial interès  és el moment conjunt central que s'obtè per a l
 
 
 $$
-cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=
+cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=E[(X_iX_j)]-E[X_i]E[X_j] 
 $$
 :::
 
@@ -1578,11 +1576,23 @@ Siguin (X, Y,Z) variables aleatòries amb variància finita i $a \in \mathbb{R}$
 2. La variància és un cas particular de covariància: $Var(X) = Cov(X,X)$
 3. La covariància amb una constant és 0: $Cov(X, a) = 0$
 4. La covariància és un operador bilineal, és a dir, és lineal en els seus dos arguments:
-$Cov(aX, Y ) = Cov(X, aY ) = aCov(X, Y )$
-$Cov(X + Y,Z) = Cov(X,Z) + Cov(Y,Z)$
-$Cov(X, Y + Z) = Cov(X, Y ) + Cov(X,Z)$
-5. $Var(X + Y ) = Var(X) + Var(Y ) + 2Cov(X, Y )$
-6. $Var(X − Y ) = Var(X) + Var(Y ) − 2Cov(X, Y )$
+
+$$
+Cov(aX, Y ) = Cov(X, aY ) = aCov(X, Y )    (\#eq:provcov1)
+$$
+$$
+Cov(X + Y,Z) = Cov(X,Z) + Cov(Y,Z)   (\#eq:provcov2)
+$$
+$$
+Cov(X, Y + Z) = Cov(X, Y ) + Cov(X,Z)   (\#eq:provcov3)
+$$
+
+$$
+\text{5. }  Var(X + Y ) = Var(X) + Var(Y ) + 2Cov(X, Y )   (\#eq:provcov4)
+$$ 
+$$
+\text{6. } Var(X − Y ) = Var(X) + Var(Y ) − 2Cov(X, Y )   (\#eq:provcov5)
+$$
 
 :::
 
@@ -1673,7 +1683,7 @@ La demostració d'aquest teorema no es més que el teorema del canvi de variable
 
 ---
 
-:::{.example #exm-circulo}
+:::{.example #circulo}
 
  Sigui l'experiment aleatori triar un punt a l'atzar del cercle unitat $C_1$, on podem definir sobre l'esapi de probabilitat un vector aleatori de les coordenades del punt (X,Y). L'elecció a l'atzar implica una probabilitat uniforme sobre $C_1$. La densitat conjunta la podem expresar com 
  
