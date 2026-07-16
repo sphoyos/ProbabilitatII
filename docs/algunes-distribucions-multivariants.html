@@ -141,9 +141,12 @@
 <li class="chapter" data-level="3.1.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-marginals-i-condicional-de-una-normal-bivariant."><i class="fa fa-check"></i><b>3.1.2</b> Distribucions marginals i condicional de una normal bivariant.</a></li>
 <li class="chapter" data-level="3.1.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant"><i class="fa fa-check"></i><b>3.1.3</b> Distribució normal multivariant</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariantchi-quadrat-wishart-i-dirichlet."><i class="fa fa-check"></i><b>3.2</b> Distribucions especials: Multinomial, t-Student multivariant,Chi-quadrat, Wishart i Dirichlet.</a>
+<li class="chapter" data-level="3.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariantkhi-quadrat-wishart-i-dirichlet."><i class="fa fa-check"></i><b>3.2</b> Distribucions especials: Multinomial, t-Student multivariant,Khi-quadrat, Wishart i Dirichlet.</a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-multinomial"><i class="fa fa-check"></i><b>3.2.1</b> Distribució Multinomial</a></li>
+<li class="chapter" data-level="3.2.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-t-student-multivariant"><i class="fa fa-check"></i><b>3.2.2</b> Distribució t-student multivariant</a></li>
+<li class="chapter" data-level="3.2.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-khi-quadrat"><i class="fa fa-check"></i><b>3.2.3</b> Distribució khi-quadrat</a></li>
+<li class="chapter" data-level="3.2.4" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3n-de-whishart"><i class="fa fa-check"></i><b>3.2.4</b> Distribución de Whishart</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#generaci%C3%B3-de-mostres-de-distribucions-multivariants."><i class="fa fa-check"></i><b>3.3</b> Generació de mostres de distribucions multivariants.</a></li>
 </ul></li>
@@ -188,7 +191,7 @@
 <div id="distribució-normal-bivariant" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Distribució normal bivariant<a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-bivariant" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
-<p><span id="def:unlabeled-div-63" class="definition"><strong>Definició 3.1  </strong></span><strong>Vector aleatori normal bivariant</strong></p>
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definició 3.1  </strong></span><strong>Vector aleatori normal bivariant</strong></p>
 <p>El vector aleatori bidimensional <span class="math inline">\((X,Y)\)</span> té una distribució normal bivariant de paráetres</p>
 <p><span class="math inline">\(\mu_x \in \mathbb{R}, \mu_y \in \mathbb{R},\sigma_x&gt;0,\sigma_y&gt;0\)</span> i <span class="math inline">\(\rho \quad \text{tal que}  \quad |\rho|&lt;1\)</span> si la funció de densitat conjunta és de la forma</p>
 <p><span class="math display" id="eq:fxybinorm">\[
@@ -202,7 +205,7 @@ q(x,y)=\dfrac{1}{1-\rho^2} \left\{ \left(\dfrac{x-\mu_x}{\sigma_x}\right)^2 -2 \
 <p>En la figura <a href="algunes-distribucions-multivariants.html#fig:graf-binormalrho">3.1</a> es mostra en la part esquerra la distribució de densitat normal bivariant conjunta i en la part dreta es mostren les corbes de nivell. Es pot veure la forma el·liptica que té la figura que mostra el nivell de correlació entre les dues variables, que és molt estreta ja que la correlació és <span class="math inline">\(\rho=0.8\)</span>.</p>
 
 <div class="figure"><span style="display:block;" id="fig:graf-binormalrho"></span>
-<img src="images/graf-binormalrho-1.png" alt="Densitat icorbes de nivell binormal amb \(\mu_x=\mu_y=0, \sigma_x=\sigma_y=1\) i \(\rho=0.8\)" width="672" />
+<img src="Probabilitat-II_files/figure-html/graf-binormalrho-1.png" alt="Densitat icorbes de nivell binormal amb \(\mu_x=\mu_y=0, \sigma_x=\sigma_y=1\) i \(\rho=0.8\)" width="672" />
 <p class="caption">
 Figura 3.1: Densitat icorbes de nivell binormal amb <span class="math inline">\(\mu_x=\mu_y=0, \sigma_x=\sigma_y=1\)</span> i <span class="math inline">\(\rho=0.8\)</span>
 </p>
@@ -225,7 +228,7 @@ Així en aquest cas es diu que <span class="math inline">\(\mathbf{x}^{\prime}=(
 \]</span>
 Queda per al lector la comprovació de l’equivalència de les expressions de les funcions de densitat.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-64" class="definition"><strong>Definició 3.2  </strong></span><strong>Distribució normal bivariant estàndardd amb marginal independents</strong></p>
+<p><span id="def:unlabeled-div-2" class="definition"><strong>Definició 3.2  </strong></span><strong>Distribució normal bivariant estàndardd amb marginal independents</strong></p>
 <p>Sigui <span class="math inline">\(Z_1 \sim N(0,1)\)</span> i <span class="math inline">\(Z_2 \sim N(0,1)\)</span> amb <span class="math inline">\(Z_1\)</span> i <span class="math inline">\(Z_2\)</span> independents i per tant <span class="math inline">\(\rho=0\)</span>
 Llavors</p>
 <p><span class="math display" id="eq:fxybinormstand">\[
@@ -237,13 +240,13 @@ f_{Z_1, Z_2}(z_1,z_2)=f_{Z_1}(z_1)f_{Z_2}(z_2)=
 <p>En la gráfica es mostra la densitat de la binormal estàndard amb mostres independents. S’observa que la corba de nivell està formada per isocrones de densitat en forma de cercles.</p>
 
 <div class="figure"><span style="display:block;" id="fig:graf-binormalrho0"></span>
-<img src="images/graf-binormalrho0-1.png" alt="Densitat icorbes de nivell binormal amb \(\mu_x=\mu_y=0, \sigma_x=\sigma_y=1\) i \(\rho=0\)" width="672" />
+<img src="Probabilitat-II_files/figure-html/graf-binormalrho0-1.png" alt="Densitat icorbes de nivell binormal amb \(\mu_x=\mu_y=0, \sigma_x=\sigma_y=1\) i \(\rho=0\)" width="672" />
 <p class="caption">
 Figura 3.2: Densitat icorbes de nivell binormal amb <span class="math inline">\(\mu_x=\mu_y=0, \sigma_x=\sigma_y=1\)</span> i <span class="math inline">\(\rho=0\)</span>
 </p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-65" class="definition"><strong>Definició 3.3  </strong></span><strong>Distribució normal bivariant estàndard amb marginals correlades </strong></p>
+<p><span id="def:unlabeled-div-3" class="definition"><strong>Definició 3.3  </strong></span><strong>Distribució normal bivariant estàndard amb marginals correlades </strong></p>
 <p>Sigui <span class="math inline">\(Z_1 \sim N(0,1)\)</span> i <span class="math inline">\(Z_2 \sim N(0,1)\)</span> amb <span class="math inline">\(Z_1\)</span> i <span class="math inline">\(Z_2\)</span> i la correlació <span class="math inline">\(\rho \in (-1,1)\)</span>
 Llavors<br />
 <span class="math display">\[
@@ -253,11 +256,11 @@ f_{Z_1, Z_2}(z_1,z_2)= \dfrac {1}{2\pi\sqrt{1-\rho^2 }}e^{(-\frac{1}{2(1-\rho^2)
 </div>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-66" class="example"><strong>Exemple 3.1  </strong></span>Per questions de conveniència formal hem introduit la distribució de les variables normals bivariants com a cmbinació de variables aleatòries normals independents. Cal remarcar que en nombroses ocasions aquesta distribució es la manera habitual com es presenten les dades. De fet Karl Pearson a partir de les dades treballade de Francis Galton a finals del segle 19, planteja el coeficient de correlació entre les alçades dels pares i els fills, on hi ha un correlació diferent de 0 entre elles. Els pares alts tendeixen a tenir els fills alts i a l’inrevès en els baixets. Aquesta seria una distribució normal bivariant.</p>
+<p><span id="exm:unlabeled-div-4" class="example"><strong>Exemple 3.1  </strong></span>Per questions de conveniència formal hem introduit la distribució de les variables normals bivariants com a cmbinació de variables aleatòries normals independents. Cal remarcar que en nombroses ocasions aquesta distribució es la manera habitual com es presenten les dades. De fet Karl Pearson a partir de les dades treballade de Francis Galton a finals del segle 19, planteja el coeficient de correlació entre les alçades dels pares i els fills, on hi ha un correlació diferent de 0 entre elles. Els pares alts tendeixen a tenir els fills alts i a l’inrevès en els baixets. Aquesta seria una distribució normal bivariant.</p>
 </div>
 <hr />
 <div class="proposition">
-<p><span id="prp:unlabeled-div-67" class="proposition"><strong>Proposició 3.1  </strong></span><strong>Transformación de una normal bivariante estándar en una normal bivariante general</strong></p>
+<p><span id="prp:unlabeled-div-5" class="proposition"><strong>Proposició 3.1  </strong></span><strong>Transformación de una normal bivariante estándar en una normal bivariante general</strong></p>
 <p>Sigui <span class="math inline">\((Z_1,Z_2)\)</span> un vector aleatori amb distribució normal bivariant estàndard:</p>
 <p><span class="math display">\[
 \begin{pmatrix}
@@ -379,7 +382,7 @@ Figura 3.3: Marginals de la distribució continua bivariant
 </p>
 </div>
 <div class="proposition">
-<p><span id="prp:unlabeled-div-68" class="proposition"><strong>Proposició 3.2  </strong></span><strong>Independència i correlació en una distribució normal bivariant</strong></p>
+<p><span id="prp:unlabeled-div-6" class="proposition"><strong>Proposició 3.2  </strong></span><strong>Independència i correlació en una distribució normal bivariant</strong></p>
 <p>Siguin <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> dues variables aleatories amb distrbució normal bivariant bivariant:</p>
 <p><span class="math display">\[
 \begin{pmatrix}
@@ -447,7 +450,7 @@ X\perp Y\quad\Longleftrightarrow\quad\rho=0
 \]</span>
 Així, en una distribució normal bivariant, la incorrelació és equivalent a la independència.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-69" class="theorem"><strong>Theorem 3.1  </strong></span><strong>Distribucions condicionals</strong></p>
+<p><span id="thm:unlabeled-div-7" class="theorem"><strong>Theorem 3.1  </strong></span><strong>Distribucions condicionals</strong></p>
 <p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori que sequeix una distribución normal bivariant amb paràmetres <span class="math inline">\(\mu_x,\mu_y\in\mathbb{R}\)</span> y <span class="math inline">\(\sigma_x,\sigma_y&gt;0\)</span> i <span class="math inline">\(\rho \in [-1,1]\)</span> amb la funció de densitat definida en <a href="algunes-distribucions-multivariants.html#eq:fxybinorm">(3.1)</a> corresponetn a una distribució normal bivariant. La distribució condicional de <span class="math inline">\(y\)</span> donat que <span class="math inline">\(X=x\)</span> es una distribució normal amb la esperança i variància següent:</p>
 <p><span class="math display" id="eq:espcondbinorm">\[
 E(Y|X=x]= \mu_Y+\rho \sigma_Y \left (  \dfrac {X-\mu_X}{\sigma_X}\right )   \tag{3.9}
@@ -534,7 +537,7 @@ N
 <div id="distribució-normal-multivariant" class="section level3 hasAnchor" number="3.1.3">
 <h3><span class="header-section-number">3.1.3</span> Distribució normal multivariant<a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
-<p><span id="def:unlabeled-div-70" class="definition"><strong>Definició 3.4  </strong></span><strong>Distribució normal multivariant</strong></p>
+<p><span id="def:unlabeled-div-8" class="definition"><strong>Definició 3.4  </strong></span><strong>Distribució normal multivariant</strong></p>
 <p>Sigui un vector aleatori <span class="math inline">\(X=(X_1,....,X_n)\)</span> on <span class="math inline">\(\boldsymbol{\mu}^{\prime}=(\mu_1,...,\mu_n)\)</span> és el vector de mitjanes o valors esperats i <span class="math inline">\(|\Sigma|\)</span> es el determinant de la matriu de variàncies covariàncies <span class="math inline">\(\Sigma\)</span> que pren el valor</p>
 <p><span class="math display">\[
 \Sigma=
@@ -562,14 +565,14 @@ f(x_1, x_2, \dots, x_n) = \frac{1}{\prod_{i=1}^n (2\pi\sigma_i^2)^{\frac{1}{2}}}
 \]</span></p>
 </div>
 </div>
-<div id="distribucions-especials-multinomial-t-student-multivariantchi-quadrat-wishart-i-dirichlet." class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Distribucions especials: Multinomial, t-Student multivariant,Chi-quadrat, Wishart i Dirichlet.<a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariantchi-quadrat-wishart-i-dirichlet." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="distribucions-especials-multinomial-t-student-multivariantkhi-quadrat-wishart-i-dirichlet." class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Distribucions especials: Multinomial, t-Student multivariant,Khi-quadrat, Wishart i Dirichlet.<a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariantkhi-quadrat-wishart-i-dirichlet." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="distribució-multinomial" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Distribució Multinomial<a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-multinomial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En nombroses ocassions observem dades discretes que tenen tres o més valors possibles. La familia de distribucions multinomial es una etensió de la familia de distribucions binomial, conduint a una distribució multivariant.</p>
 <hr />
 <div class="example">
-<p><span id="exm:multinomial" class="example"><strong>Exemple 3.2  </strong></span>Es coneix que hi ha quatre tipus de sang humana, O, A, B i AB. Es selecciona una mostra de persones donants d sean al atzar i podem estar interessats en conèixer la probabilitat de observar un número determinat de cada tipus de sang.</p>
+<p><span id="exm:multinomial" class="example"><strong>Exemple 3.2  </strong></span>Es coneix que hi ha quatre tipus de sang humana, O, A, B i AB. Es selecciona una mostra de persones donants de sang al atzar i podem estar interessats en conèixer la probabilitat de observar un número determinat de cada tipus de sang.</p>
 </div>
 <hr />
 <p>En general, suponsem que la població contè k ítems diferents <span class="math inline">\((k \geq 2)\)</span> i la proporció en la població de cata tipo <span class="math inline">\(i\)</span> es <span class="math inline">\(p_i, i=1,...,k\)</span>. Assumim que <span class="math inline">\(p_i&gt;0\)</span> i <span class="math inline">\(\sum_{i=1}^k p_i=1\)</span>. Així , <span class="math inline">\(\mathbf{p}=(p_1,...,p_k)\)</span> és el vector de probabilitats</p>
@@ -579,7 +582,7 @@ f(x_1, x_2, \dots, x_n) = \frac{1}{\prod_{i=1}^n (2\pi\sigma_i^2)^{\frac{1}{2}}}
 \left(\begin{array}{c} n\\ x_1,x_2,...,x_k\end{array}\right)=\dfrac{n!}{x_1! x_2!...x_k!}
 \]</span></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-71" class="definition"><strong>Definició 3.5  </strong></span><strong>Distribució multinomial</strong></p>
+<p><span id="def:unlabeled-div-9" class="definition"><strong>Definició 3.5  </strong></span><strong>Distribució multinomial</strong></p>
 <p>Sigui <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> el vector aleatorio discreto on <span class="math inline">\(\mathbf{x}=(x_1,...x_k)\)</span> es el vector de recomptes observats de cada tipus <span class="math inline">\(i,i=1,...k\)</span> on <span class="math inline">\(\mathbf{p}=(p_1,...,p_k)\)</span> es el vector de probabilitat de cadascuna dels items. Direm que <span class="math inline">\(\mathbf{X}\)</span> segueix una distribució multinomial amb paramètres n i <span class="math inline">\(\mathbf{p}\)</span> si la funció de distribució conjunta és:</p>
 <p><span class="math display">\[
 f(\mathbf{x}|n, \mathbf{p}) = \Pr(\mathbf{X} = \mathbf{x}) = \Pr(X_1 = x_1, \dots, X_k = x_k)
@@ -590,22 +593,265 @@ f(\mathbf{x}|n, \mathbf{p}) = \Pr(\mathbf{X} = \mathbf{x}) = \Pr(X_1 = x_1, \dot
 </div>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-72" class="example"><strong>Exemple 3.3  </strong></span>Si recordem l’exemple <a href="algunes-distribucions-multivariants.html#exm:multinomial">3.2</a> i es sap que <span class="math inline">\(P(O)=0.479. P(A)=0.360, P(B)=0.123 i P(AB)=0.038\)</span> i es seleccionen dues persones de la població. quina es la probabilitat de que les dues siguin del mateix tipus. A partir de la definicio de probabilitat</p>
+<p><span id="exm:unlabeled-div-10" class="example"><strong>Exemple 3.3  </strong></span>Si recordem l’exemple <a href="algunes-distribucions-multivariants.html#exm:multinomial">3.2</a> i es sap que <span class="math inline">\(P(O)=0.479. P(A)=0.360, P(B)=0.123 i P(AB)=0.038\)</span> i es seleccionen dues persones de la població. quina es la probabilitat de que les dues siguin del mateix tipus. A partir de la definicio de probabilitat</p>
 <p><span class="math display">\[
 P(X_O=2)+P(X_A=2)+P(X_B=2)+P(X_{AB}=2)=  \binom{2}{2,0,0,0} (0.479^2+0.360^2+0.123^2+0.038^2)=0.376
 \]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-73" class="theorem"><strong>Theorem 3.2  </strong></span>Suposem el vector aleatori <span class="math inline">\(\mathbf{X}=(X_1,X_2)\)</span> que te una distribució multinomial amb <span class="math inline">\(n=2\)</span> i <span class="math inline">\(\mathbf{p}=(p_1,p_2)\)</span> llavors <span class="math inline">\(X_1 \sim Bi(n,p_1)\)</span> i <span class="math inline">\(X_2 =n-X1\)</span></p>
+<p><span id="thm:unlabeled-div-11" class="theorem"><strong>Theorem 3.2  </strong></span>Suposem el vector aleatori <span class="math inline">\(\mathbf{X}=(X_1,X_2)\)</span> que te una distribució multinomial amb <span class="math inline">\(n=2\)</span> i <span class="math inline">\(\mathbf{p}=(p_1,p_2)\)</span> llavors <span class="math inline">\(X_1 \sim Bi(n,p_1)\)</span> i <span class="math inline">\(X_2 =n-X1\)</span></p>
 </div>
 <p><strong>Demostració</strong></p>
 <p>De la definició de distribució binomial esta clar que <span class="math inline">\(X_2 =n-X1\)</span> i <span class="math inline">\(p_2=1-p_1\)</span>. Així que el vector <span class="math inline">\(\mathbf{X}\)</span>n està actualment determinat per una variable singular <span class="math inline">\(X_1\)</span>. A partir de la distribució binomial s’observa que <span class="math inline">\(X_1\)</span> que és la variable que representa el número de items tipus 1 seleccionats de n items on hi han 2 tipus de items. Aixi <span class="math inline">\(X_1\)</span> es el número d’esdeveniments de n experiments Bernoulli amb probabilitat del èxit de cada experiment de <span class="math inline">\(p_1\)</span>. Així es segueix que <span class="math inline">\(X_1 \sim Bi(n,p_1)\)</span></p>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-74" class="corollary"><strong>Corollary 3.1  </strong></span>Si <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> es un vector aleatorio amb parametres n i <span class="math inline">\(\mathbf{p}=(p_1,...,p_k)\)</span> . La distribució marginal de cada variable <span class="math inline">\(X_i,i=1,...,k)\)</span> segueix una distribución binomial amb paramètre <span class="math inline">\(n\)</span> i <span class="math inline">\(p_i\)</span></p>
+<p><span id="cor:binomial" class="corollary"><strong>Corollary 3.1  </strong></span>Si <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> es un vector aleatorio amb parametres n i <span class="math inline">\(\mathbf{p}=(p_1,...,p_k)\)</span> . La distribució marginal de cada variable <span class="math inline">\(X_i,i=1,...,k)\)</span> segueix una distribución binomial amb paramètre <span class="math inline">\(n\)</span> i <span class="math inline">\(p_i\)</span></p>
 </div>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-75" class="corollary"><strong>Corollary 3.2  </strong></span>Si <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> es un vector aleatorio amb parametres n i <span class="math inline">\(\mathbf{p}=(p_1,...,p_k)\)</span> amb <span class="math inline">\(k \geq 2\)</span> .Si <span class="math inline">\(\ell&lt;k\)</span> i <span class="math inline">\(i_1,...,i_{\ell}\)</span> un subjconjunt de elements de <span class="math inline">\((1,...,k)\)</span> La distribució de <span class="math inline">\(Y=Y_1,...,Y_k\)</span> segueix una distribución binomial amb paramètre <span class="math inline">\(n\)</span> i <span class="math inline">\(p_i+  ....+p_{\ell}\)</span></p>
+<p><span id="cor:agregacio" class="corollary"><strong>Corollary 3.2  </strong></span>Si <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> es un vector aleatorio amb parametres <span class="math inline">\(n\)</span> i <span class="math inline">\(\mathbf{p}=(p_1,...,p_k)\)</span> amb <span class="math inline">\(k \geq 2\)</span> .Si <span class="math inline">\(\ell&lt;k\)</span> i <span class="math inline">\(i_1,...,i_{\ell}\)</span> un subjconjunt de elements de <span class="math inline">\((1,...,k)\)</span> La distribució de <span class="math inline">\(Y=Y_1+...+Y_k\)</span> segueix una distribución binomial amb paramètre <span class="math inline">\(n\)</span> i <span class="math inline">\(p_{i_1}+  ....+p_{i_\ell}\)</span></p>
 </div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-12" class="theorem"><strong>Theorem 3.3  </strong></span><strong>Esperances, Varianciès i covariàncies</strong></p>
+<p>Suposem el vector aleatori <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> que te una distribució multinomial amb parametres <span class="math inline">\(n\)</span> i <span class="math inline">\(\mathbf{p}=(p_1,...,p_k)\)</span> amb <span class="math inline">\(k \geq 2\)</span>, llavors els valors esperats, variàncies i covariàncies son</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; E[X_i]= np_i \\
+&amp; Var(X_i)=np_i (1-p_i) \\
+&amp; Cov(X_i,X_j)=-np_ip_j
+\end{aligned}
+\]</span></p>
+</div>
+<p>Segons hem vist en el corol·lari <a href="algunes-distribucions-multivariants.html#cor:binomial">3.1</a> la distribució marginal de cada component es binomial i el valor de l’esperança i la variància son els de l’enunciat del teorema.</p>
+<p>Per el corol·lari @ref(cor:agregació) sabem que <span class="math inline">\(X_i+X_j\)</span> segueix una distribució binomial amb parametres <span class="math inline">\(n\)</span> i <span class="math inline">\(p_i+p_j\)</span>. D’ací</p>
+<p><span class="math display">\[
+Var(X_i+X_j)=n(p_i+p_j)(1-p_i-p_j)
+\]</span>
+Per altra banda de la equació <a href="#eq:provcov4">(<strong>??</strong>)</a> sabem que
+<span class="math display">\[
+\begin{aligned}
+Var(X_i+X_j)&amp;=Var(X_i)+Var(X_j)+2Cov(X_i,X_j) \\
+&amp;=np_i(1-p_i)+ np_j(1-p_j)+2Cov(X_i,X_j)
+\end{aligned}
+\]</span>
+igualant les equacions anterior i despejant <span class="math inline">\(Cov(X_i, X_j)\)</span> obtenim el resultat desitjat</p>
+<p><span class="math display">\[
+\begin{aligned}
+Cov(X_i,X_j) &amp;= \dfrac{1}{2}  n(p_i+p_j)(1-p_i-p_j)-np_i(1-p_i)- np_j(1-p_j) \\
+&amp; =\dfrac{n}{2} \left[ (p_i+p_j) - (p_i+p_j)^2-p_i+p_i^2-p_j+p_j^2 \right] \\
+&amp; =\dfrac{n}{2} \left[ (p_i+p_j - p_i^2-p_j^2- 2p_ip_j -p_i+p_i^2-p_j+p_j^2 \right] \\
+&amp;= \dfrac{n}{2}  (-2p_ip_j)  =-n p_i p_j
+\end{aligned}
+\]</span>
+Cal reseñar que la covariància de la distribució multinomial és negativa, el que és natural donat que les <span class="math inline">\(n\)</span> observacions s’han de distribuir en <span class="math inline">\(k\)</span> tipus de items. Si agumenta el número de¡observacions d’un tipus ha de disminuir el de l’altre donat que la grandària es fixa.</p>
+</div>
+<div id="distribució-t-student-multivariant" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Distribució t-student multivariant<a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-t-student-multivariant" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La distribució t-Student muultivariant es una generalització de la distribució t-de Student unidimensional. Al igual que aquella serveix pel càlcul de intervals de confiança per a vectors però també per l’ús como distribuciones posteriores en estadísticas bayesianes i el análisis conjunt de variables biomèdiques i de finances.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-13" class="definition"><strong>Definició 3.6  </strong></span><strong>Distribució t-student multivariant</strong></p>
+<p>Sigui <span class="math inline">\(\mathbf{X}=(X_1,...,X_n)\)</span> un vector aleatorio de dimensió <span class="math inline">\(n\)</span>, direm que <span class="math inline">\(\mathbf{X}\)</span> segueix una distribució t-multivariant amb mitjana el vector <span class="math inline">\(\boldsymbol{\mu}=(\mu_1,...,\mu_n)\)</span> , amb la matriu de variàncies-covariàncies <span class="math inline">\(\Sigma\)</span> i <span class="math inline">\(\nu\)</span> graus de llibertat</p>
+<p><span class="math display">\[
+  \mathbf{X} \sim t(\mu,\Sigma,\nu)
+\]</span>
+si i només si la funció de densitat de probabilitat és:</p>
+<p><span class="math display" id="eq:fxymultit">\[
+t(x;\mu,\Sigma,\nu)=\sqrt{\dfrac {1}{(\nu\pi)^n |\Sigma|}} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} (x-\mu)^T \Sigma^{-1} (x-\mu)  \right]^{-(\nu+n)/2}   \tag{3.13}
+\]</span>
+on <span class="math inline">\(\Gamma ()\)</span> es la funció Gamma <span class="math inline">\(\Gamma(z)= \int_0^{\infty} x^{z-1} e^{-x}dx\)</span></p>
+</div>
+<div class="proposition">
+<p><span id="prp:marginalt" class="proposition"><strong>Proposició 3.3  </strong></span>Si el vector aleatori <span class="math inline">\(\mathbf{X} \sim t(\boldsymbol{\mu},\boldsymbol{\Sigma},\nu)\)</span> és distibueix com una distribució t-multivariant, la distribució marginal de cualquier subvector m-dimensional <span class="math inline">\(\mathbf{X_s}\)</span> subconjunt del vector <span class="math inline">\(\mathbf{X}\)</span> segueix una distribució t-multivariant amb vector de mitjanes <span class="math inline">\(\boldsymbol{\mu_s}\)</span> i una matriu de variàncies <span class="math inline">\(\boldsymbol{\Sigma}\)</span> eliminant els valors de les variables no incloses en el subvector.</p>
+</div>
+<p><strong>Demostració</strong></p>
+<p>Definim els subconjunt de dimensió <span class="math inline">\(m \times n\)</span> tal que <span class="math inline">\(s_{ij}=1\)</span> si el j-èsim element de <span class="math inline">\(\mathbf{X_s}\)</span> correspon al i-èsim element de <span class="math inline">\(\mathbf{X}\)</span> i <span class="math inline">\(0\)</span> en altre cas. Així <span class="math inline">\(\mathbf{X_s}=S\mathbf{X}\)</span></p>
+<p>Podem aplicar el teorema de la transformació linial a l’expressió anterior així</p>
+<p><span class="math display">\[
+\mathbf{X_s} \sim t(S \boldsymbol{\mu},S \boldsymbol{\Sigma} S^T,\nu)
+\]</span></p>
+<p>Si operem es pot veure que <span class="math inline">\(S \boldsymbol{\mu}=\boldsymbol{\mu}_s\)</span> i <span class="math inline">\(S \boldsymbol{\Sigma} S^T=\boldsymbol{\Sigma_s}\)</span></p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-14" class="corollary"><strong>Corollary 3.3  </strong></span>Si m=1 en la proposició <span class="citation">@marginalt</span> implica que la distribució marginal de una t-multivariant es una distribució t amb mitjana <span class="math inline">\(\mu_i\)</span> i variància <span class="math inline">\(\sigma_i^2\)</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-15" class="definition"><strong>Definició 3.7  </strong></span>Sigui <span class="math inline">\(\mathbf{X}=(X_1,...,X_n)\)</span> un vector aleatorio de dimensió <span class="math inline">\(n\)</span>, direm que <span class="math inline">\(\mathbf{X}\)</span> segueix una distribució t-multivariant standard amb <span class="math inline">\(\nu\)</span> graus de llibertat, si la funció de densitat es</p>
+<p><span class="math display" id="eq:fxymultit">\[
+t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} x^T  x  \right]^{-(\nu+n)/2}   \tag{3.13}
+\]</span></p>
+</div>
+<p>La distribució de la distribució t-multivariant standard es un distribució t-univariada standar amb <span class="math inline">\(\nu\)</span> graus de llibertat. Es pot deduir directament que el valor esperat es el vector nul <span class="math inline">\(E[\mathbf{X}]=\mathbf{0}\)</span> i que la matriu de variància es <span class="math inline">\(Var(\mathbf{X}) = \frac {\nu}{\nu-2} I\)</span> on I es la matriu identitat <span class="math inline">\(k \times k\)</span></p>
+</div>
+<div id="distribució-khi-quadrat" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Distribució khi-quadrat<a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-khi-quadrat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La distribució khi-quadrat (<span class="math inline">\(\chi^2\)</span>) és una distribució de probabilitat molt utilitzada en la resolució de tests de bondat d’ajustament i en altres proves estadístiques. S’utilitza principalment per comparar les freqüències observades amb les freqüències esperades, analitzant les diferències entre ambdues de manera quadràtica. En aquesta secció introduirem la distribució a partir de vectors aleatoris.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-16" class="definition"><strong>Definició 3.8  </strong></span><strong>Distribució Khi-quadrat</strong>
+Sigui <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> un vector aleatori de variables aleatories normals amb mitjana <span class="math inline">\(\mu_i=0\)</span> i variància <span class="math inline">\(\sigma_i^2=1\)</span> es a dir <span class="math inline">\(X_i \sim N(0,1)\)</span> i <span class="math inline">\(\mathbf{X} \sim N_n(0,\mathbf{I})\)</span> llavors</p>
+<p><span class="math display" id="eq:chi2">\[
+Y=\mathbf{X}^T \mathbf{X}= \sum_{i=1}^k  X_i^2 \sim \chi^2(k) \qquad  0&gt;Q&lt;\infty  \tag{3.14}
+\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-17" class="theorem"><strong>Theorem 3.4  </strong></span>La función de densidad de la variable definida en <a href="algunes-distribucions-multivariants.html#eq:chi2">(3.14)</a> viene definida por</p>
+<p><span class="math display" id="eq:denschi2">\[f_Y(y) = \frac{1}{2^{k/2} \Gamma(k/2)} y^{k/2 \tag{3.15}]  (#eq:denschi2)\]</span></p>
+</div>
+<p><strong>Demostració</strong></p>
+<p>Per fer la demostració en primer lloc demostrarem que la distribució <span class="math inline">\(\chi_1_2\)</span> és un cas particular de una distribució Gamma con parámetros <span class="math inline">\(\alpha=\beta=1/&quot;\)</span></p>
+<p><em>1. Cas Base (<span class="math inline">\(k=1\)</span>): Densitat de <span class="math inline">\(Y = X_1^2\)</span></em></p>
+<p>Sigui <span class="math inline">\(X_1 \sim N(0,1)\)</span> on la seva funció de densitat serà:</p>
+<p><span class="math display">\[f_{X_1}(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}\]</span></p>
+<p>Volem trobar la densitat de la transformació <span class="math inline">\(Y = X_1^2\)</span>. LLavors la funció de probabilitat acumulada serà <span class="math inline">\(y &gt; 0\)</span>:</p>
+<p><span class="math display">\[F_Y(y) = P(Y \le y) = P(X_1^2 \le y) = P(-\sqrt{y} \le X_1 \le \sqrt{y})\]</span></p>
+<p>Per la simetria respecte al zero de la distribució normal estàndard, podem reescriure-ho com:</p>
+<p><span class="math display">\[F_Y(y) = 2 \cdot P(0 \le X_1 \le \sqrt{y}) = 2 \int_{0}^{\sqrt{y}} \frac{1}{\sqrt{2\pi}} e^{-x^2/2} dx\]</span></p>
+<p>Derivem respecte a <span class="math inline">\(y\)</span> per obtenir la seva densitat <span class="math inline">\(f_Y(y)\)</span>:</p>
+<p><span class="math display">\[f_Y(y) = \frac{d}{dy} F_Y(y) = 2 \cdot \left( \frac{1}{\sqrt{2\pi}} e^{-(\sqrt{y})^2/2} \right) \cdot \frac{d}{dy}(\sqrt{y})\]</span></p>
+<p><span class="math display">\[f_Y(y) = \frac{2}{\sqrt{2\pi}} e^{-y/2} \cdot \frac{1}{2\sqrt{y}} = \frac{1}{\sqrt{2\pi}} y^{-1/2} e^{-y/2}\]</span></p>
+<p>Sabent que la funció Gamma compleix que <span class="math inline">\(\Gamma(1/2) = \sqrt{\pi}\)</span> i que <span class="math inline">\(\sqrt{2} = 2^{1/2}\)</span>, podem reescriure l’expressió anterior com:</p>
+<p><span class="math display">\[f_Y(y) = \frac{1}{2^{1/2} \Gamma(1/2)} y^{1/2 - 1} e^{-y/2}\]</span></p>
+<p>Aquesta expressió coincideix exactament amb la definició d’una distribució <strong>Gamma</strong> amb paràmetre de forma <span class="math inline">\(\alpha = 1/2\)</span> i paràmetre d’escala <span class="math inline">\(\beta = 1/2\)</span>. Per tant:</p>
+<p><span class="math display">\[Y = X_1^2 \sim \text{Gamma}\left(\alpha = \frac{1}{2}, \beta = 2\right)\]</span>
+2. Generalització per a <span class="math inline">\(k\)</span> variables (
+La variable d’interès és la suma de <span class="math inline">\(k\)</span> normals estàndard al quadrat independents:</p>
+<p><span class="math display">\[Y = \sum_{i=1}^{k} X_i^2\]</span></p>
+<p>Atès que cada component <span class="math inline">\(X_i^2 \sim \text{Gamma}\left(\frac{1}{2}, \frac{1}{2}\right)\)</span>, apliquem la propietat d’additivitat per a variables Gamma independents. Quan s’utilitza la parametrizació per escala, la suma de variables amb la mateixa escala <span class="math inline">\(\beta\)</span> dona lloc a una nova variable Gamma on els paràmetres de forma <span class="math inline">\(\alpha\)</span> se sumen i els de escala <span class="math inline">\(\beta\)</span> es manté constant:</p>
+<p><span class="math display">\[\alpha_{\text{total}} = \sum_{i=1}^{k} \alpha_i = \sum_{i=1}^{k} \frac{1}{2} = \frac{k}{2} \qquad \text{i} \qquad \beta = \frac{1}{2}\]</span></p>
+<p>D’aquesta manera, obtenim que la suma total es distribueix com:</p>
+<p><span class="math display">\[Y \sim \text{Gamma}\left(\alpha = \frac{k}{2}, \beta = \frac{1}{2}\right)\]</span></p>
+<p>Substituïm finalment els paràmetres <span class="math inline">\(\alpha = \frac{k}{2}\)</span> i <span class="math inline">\(\beta = \frac{1}{2}\)</span> en la definició original <span class="math inline">\(f(y|\alpha, \beta) = \frac{\beta^\alpha}{\Gamma(\alpha)} y^{\alpha-1} e^{-\beta y}\)</span>:</p>
+<p><span class="math display">\[f_Y(y) = \frac{(1/2)^{k/2}}{\Gamma(k/2)} y^{k/2 - 1} e^{-\frac{1}{2}y}\]</span></p>
+<p>Operant el terme constant del numerador <span class="math inline">\(\left(\frac{1}{2}\right)^{k/2} = \frac{1}{2^{k/2}}\)</span>, arribem exactament a l’expressió del Teorema</p>
+<p><span class="math display">\[f_Y(y) = \frac{1}{2^{k/2} \Gamma(k/2)} y^{k/2 - 1} \exp[-y/2]\]</span></p>
+<p>El valor esperat de la distribució <span class="math inline">\(Y= \sim \chi^2(k)\)</span> és E[Y]=k i Var(Y)=2k</p>
+</div>
+<div id="distribución-de-whishart" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Distribución de Whishart<a href="algunes-distribucions-multivariants.html#distribuci%C3%B3n-de-whishart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><!-- referencia en https://statproofbook.github.io/D/wish -->
+La distribució de Whishart, que deu el seu nom al estadístic escocés John Whishart que la va formular en 1928, es molt utilitzada en el anàlisis de matrius de covariància estimadas i en estadística Bayesiana.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-18" class="definition"><strong>Definició 3.9  </strong></span><strong>Distribució de Whishart</strong>
+Sigui <span class="math inline">\(\mathbf{X}\)</span> una matriu <span class="math inline">\(n \times p\)</span> que segueix una distribució de matriu normal amb mitjana 0, independent a lo llarg de les files i covarianzia entre les columnes V covariància V es a dir</p>
+<p><span class="math display">\[
+\mathbf{X} \sim \mathcal{MN}_{n \times p}(\mathbf{0}, \mathbf{I}_n, \mathbf{V})
+\]</span>
+Definim la matriu S com el producte de X i la seva trasposada</p>
+<p><span class="math display">\[
+\mathbf{S} = \mathbf{X}^T \mathbf{X} = \sum_{i=1}^{n} \mathbf{x}_i^T \mathbf{x}_i
+\]</span></p>
+<p>Llavors la mattriu S es diu que segueix la funció de distribució Wishart amb escala la matriu V i el graus de llibertat n</p>
+<p><span class="math display">\[
+\mathbf{S} \sim \mathcal{W}_p(\mathbf{V}, n)
+\]</span></p>
+<p>On n&gt;p-1 i V es una matriu simetrica definida positiva <span class="math inline">\(p \times p\)</span></p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-19" class="example"><strong>Exemple 3.4  </strong></span>Suposem que volem estudiar <strong>3 característiques físiques</strong> de <strong>5 persones</strong>:</p>
+<ul>
+<li>Alçada (cm)</li>
+<li>Pes (kg)</li>
+<li>Pressió arterial sistòlica (mmHg)</li>
+</ul>
+<p>Les dades observades són:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Persona</th>
+<th align="right">Alçada (cm)</th>
+<th align="right">Pes (kg)</th>
+<th align="right">Pressió (mmHg)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="right">170</td>
+<td align="right">68</td>
+<td align="right">120</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="right">165</td>
+<td align="right">62</td>
+<td align="right">118</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="right">180</td>
+<td align="right">80</td>
+<td align="right">130</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="right">175</td>
+<td align="right">75</td>
+<td align="right">125</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="right">168</td>
+<td align="right">65</td>
+<td align="right">119</td>
+</tr>
+</tbody>
+</table>
+<p>En aquest cas:</p>
+<ul>
+<li><span class="math inline">\(n = 5\)</span>: nombre d’observacions (persones).</li>
+<li><span class="math inline">\(p = 3\)</span>: nombre de variables.</li>
+</ul>
+<p>La matriu de dades és</p>
+<p><span class="math display">\[
+X=
+\begin{pmatrix}
+170 &amp; 68 &amp; 120\\
+165 &amp; 62 &amp; 118\\
+180 &amp; 80 &amp; 130\\
+175 &amp; 75 &amp; 125\\
+168 &amp; 65 &amp; 119
+\end{pmatrix}.
+\]</span></p>
+<p>Per poder assumir que la matriu segueix una distribució normal matricial amb mitjana nul·la, primer es centren les dades restant la mitjana de cada columna.</p>
+<p>Les mitjanes són:</p>
+<ul>
+<li>Alçada: <span class="math inline">\(171.6\)</span> cm,</li>
+<li>Pes: <span class="math inline">\(70\)</span> kg,</li>
+<li>Pressió: <span class="math inline">\(122.4\)</span> mmHg.</li>
+</ul>
+<p>La matriu centrada és</p>
+<p><span class="math display">\[
+X_c=
+\begin{pmatrix}
+-1.6 &amp; -2 &amp; -2.4\\
+-6.6 &amp; -8 &amp; -4.4\\
+8.4 &amp; 10 &amp; 7.6\\
+3.4 &amp; 5 &amp; 2.6\\
+-3.6 &amp; -5 &amp; -3.4
+\end{pmatrix}.
+\]</span></p>
+<p>En aquesta matriu:</p>
+<ul>
+<li>cada <strong>fila</strong> representa una persona;</li>
+<li>les <strong>files</strong> es consideren independents entre si;</li>
+<li>les <strong>columnes</strong> poden estar correlacionades. Per exemple, persones més altes acostumen a tenir també un pes més elevat. Aquesta dependència queda descrita per la matriu de covariàncies <span class="math inline">\(V\)</span>.</li>
+</ul>
+<p>Finalment, es calcula</p>
+<p><span class="math display">\[
+S = X_c^{T}X_c,
+\]</span></p>
+<p>que és una matriu <span class="math inline">\(3 \times 3\)</span> de sumes de productes creuats. Si les files de <span class="math inline">\(X_c\)</span> segueixen una distribució normal multivariant,</p>
+<p><span class="math display">\[
+X_i \sim N_3(0,V),
+\]</span></p>
+<p>aleshores</p>
+<p><span class="math display">\[
+S \sim W_3(5,V),
+\]</span></p>
+<p>és a dir, <span class="math inline">\(S\)</span> segueix una distribució de <strong>Wishart</strong> amb <span class="math inline">\(5\)</span> graus de llibertat i matriu de covariàncies <span class="math inline">\(V\)</span>.</p>
+<p>La matriu de covariàncies mostral s’obté com</p>
+<p><span class="math display">\[
+\hat{\Sigma}=\frac{1}{n-1}X_c^{T}X_c.
+\]</span></p>
+</div>
+<hr />
 </div>
 </div>
 <div id="generació-de-mostres-de-distribucions-multivariants." class="section level2 hasAnchor" number="3.3">

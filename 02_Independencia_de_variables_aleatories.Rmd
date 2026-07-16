@@ -210,7 +210,7 @@ Si les variables $X_1,...,X_k$ son independents i les seves variàncies existeix
 :::
 
 
-Aquests corolaris permeten obtenir esperances i variàncies de algunes variables conegudes de manera fàcil com verurem en el tema 3.
+Aquests corol·laris permeten obtenir esperances i variàncies de algunes variables conegudes de manera fàcil com verurem en el tema 3.
 
 
 ## Esperances i variàncies condicionades.

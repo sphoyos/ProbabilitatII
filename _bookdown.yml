@@ -7,7 +7,7 @@ language:
     fig: "Figura "
     tab: "Taula "
     eq: "Equació "
-    corollary: "Corolari "
+    corollary: "Corol·lari "
     theorem: "Teorema "
     prp: "Proposició "
     def: "Definició "

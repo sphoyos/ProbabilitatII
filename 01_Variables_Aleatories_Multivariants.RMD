@@ -1391,7 +1391,7 @@ En particular, si $g(X)= X$
 $$
 E[X]=\sum_{x_i \in D_x} x_if_X(x_i)
 $$
-que sería la mitjana poblacional de la distribució de la variabla $X$
+que sería la mitjana poblacional de la distribució de la variable $X$
 
 :::
 
@@ -1902,7 +1902,7 @@ $$
 
 ---
 
-:::{.example}{}
+:::{.example}
 
 
 Siguin  les dues variable uniformes del exemple  \@ref(exm:suma)
@@ -1985,7 +1985,6 @@ La distribució conjunta de (W,V) és
 
 $$
 f_{QV}(q,v)=|v| f_{XY} (v,qv)
-
 $$
 
 

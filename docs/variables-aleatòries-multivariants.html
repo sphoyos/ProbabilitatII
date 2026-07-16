@@ -141,9 +141,11 @@
 <li class="chapter" data-level="3.1.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-marginals-i-condicional-de-una-normal-bivariant."><i class="fa fa-check"></i><b>3.1.2</b> Distribucions marginals i condicional de una normal bivariant.</a></li>
 <li class="chapter" data-level="3.1.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant"><i class="fa fa-check"></i><b>3.1.3</b> Distribució normal multivariant</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariantchi-quadrat-wishart-i-dirichlet."><i class="fa fa-check"></i><b>3.2</b> Distribucions especials: Multinomial, t-Student multivariant,Chi-quadrat, Wishart i Dirichlet.</a>
+<li class="chapter" data-level="3.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariantkhi-quadrat-wishart-i-dirichlet."><i class="fa fa-check"></i><b>3.2</b> Distribucions especials: Multinomial, t-Student multivariant,Khi-quadrat, Wishart i Dirichlet.</a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-multinomial"><i class="fa fa-check"></i><b>3.2.1</b> Distribució Multinomial</a></li>
+<li class="chapter" data-level="3.2.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-t-student-multivariant"><i class="fa fa-check"></i><b>3.2.2</b> Distribució t-student multivariant</a></li>
+<li class="chapter" data-level="3.2.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-khi-quadrat"><i class="fa fa-check"></i><b>3.2.3</b> Distribució khi-quadrat</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#generaci%C3%B3-de-mostres-de-distribucions-multivariants."><i class="fa fa-check"></i><b>3.3</b> Generació de mostres de distribucions multivariants.</a></li>
 </ul></li>
@@ -1129,7 +1131,7 @@ f_{XY}(x,y)=
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariants.html#fig:img-condicionada2">1.11</a> es pot veure la representació de la funció de densitat conjunta.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada2"></span>
-<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta"  />
+<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta" width="314" />
 <p class="caption">
 Figura 1.11: Exemple de distribució conjunta
 </p>
@@ -1161,7 +1163,7 @@ f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} =
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariants.html#fig:img-condicionada3">1.12</a> es pot veure la representació de la funció de densitat condicional <span class="math inline">\(X|Y\)</span> per a cada valor de <span class="math inline">\(y\)</span> .</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada3"></span>
-<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y"  />
+<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y" width="418" />
 <p class="caption">
 Figura 1.12: Exemple de distribució condicionada X|Y
 </p>
@@ -1195,7 +1197,7 @@ En particular, si <span class="math inline">\(g(X)= X\)</span>
 <span class="math display">\[
 E[X]=\sum_{x_i \in D_x} x_if_X(x_i)
 \]</span>
-que sería la mitjana poblacional de la distribució de la variabla <span class="math inline">\(X\)</span></p>
+que sería la mitjana poblacional de la distribució de la variable <span class="math inline">\(X\)</span></p>
 </div>
 <div class="Definition">
 <p><strong>Esperança d’una variable aleatòria continua</strong></p>
@@ -1561,8 +1563,8 @@ f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (\dfrac{w}{v},v)
 f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v})dv
 \]</span></p>
 <hr />
-<p>:::{.example}{}</p>
-<p>Siguin les dues variable uniformes del exemple <a href="variables-aleatòries-multivariants.html#exm:suma">1.26</a></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-46" class="example"><strong>Exemple 1.27  </strong></span>Siguin les dues variable uniformes del exemple <a href="variables-aleatòries-multivariants.html#exm:suma">1.26</a></p>
 <p>Volem obtenir la densitat del producte <span class="math inline">\(W=XY\)</span> que seguint l’apartat anterior es pot obtenir comn</p>
 <p><span class="math display">\[
 f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|x|}f_{XY}(x,\dfrac{w}{x})dx
@@ -1592,7 +1594,7 @@ f_W(w)=
 0, &amp; \text{en la resta}
 \end{cases}
 \]</span></p>
-<p>:::</p>
+</div>
 <hr />
 </div>
 <div id="producte-de-dues-variables-aleatòries-1" class="section level3 hasAnchor" number="1.5.3">
@@ -1616,9 +1618,9 @@ v &amp; q \\
 \]</span></p>
 <p>I per tant <span class="math inline">\(|J^{-1}|=|v|\)</span></p>
 <p>La distribució conjunta de (W,V) és</p>
-<p>$$
-f_{QV}(q,v)=|v| f_{XY} (v,qv)</p>
-<p>$$</p>
+<p><span class="math display">\[
+f_{QV}(q,v)=|v| f_{XY} (v,qv)
+\]</span></p>
 <p>I la distribució marginal del producto s’obté integran respecte a l’altra component</p>
 <p><span class="math display">\[
 f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(\dfrac{w}{v},v)dv

@@ -531,7 +531,7 @@ $$
 $$
 
  
-##  Distribucions especials:  Multinomial, t-Student multivariant,Chi-quadrat, Wishart  i Dirichlet.
+##  Distribucions especials:  Multinomial, t-Student multivariant,Khi-quadrat, Wishart  i Dirichlet.
 
 
 ### Distribució Multinomial
@@ -542,7 +542,7 @@ En nombroses ocassions observem dades discretes que tenen tres o més valors pos
 
 :::{.example #multinomial}
 
-Es coneix que hi ha quatre tipus de sang humana, O, A, B i AB. Es selecciona una mostra de persones donants d sean  al atzar i podem estar interessats en conèixer la probabilitat de observar un número determinat de cada tipus de sang.
+Es coneix que hi ha quatre tipus de sang humana, O, A, B i AB. Es selecciona una mostra de persones donants de sang al atzar i podem estar interessats en conèixer la probabilitat de observar un número determinat de cada tipus de sang.
 
 :::
 
@@ -593,13 +593,315 @@ Suposem el vector aleatori $\mathbf{X}=(X_1,X_2)$  que te una distribució multi
 
 De la definició de distribució binomial esta clar que $X_2 =n-X1$  i $p_2=1-p_1$. Així que el vector  $\mathbf{X}$n està actualment determinat per una variable singular $X_1$.   A partir de la distribució binomial  s'observa que $X_1$ que és la variable que representa el número de items tipus 1 seleccionats de n items on hi han 2 tipus de items.  Aixi $X_1$ es el número d'esdeveniments de n experiments Bernoulli amb probabilitat del èxit de cada experiment de $p_1$.  Així es segueix que $X_1 \sim Bi(n,p_1)$
 
-:::{.corollary}
+:::{.corollary #binomial}
 Si $\mathbf{X}=(X_1,...,X_k)$ es un vector aleatorio amb parametres n i $\mathbf{p}=(p_1,...,p_k)$ . La distribució marginal de cada variable $X_i,i=1,...,k)$ segueix una distribución binomial amb paramètre $n$ i $p_i$
 :::
 
-:::{.corollary}
-Si $\mathbf{X}=(X_1,...,X_k)$ es un vector aleatorio amb parametres n i $\mathbf{p}=(p_1,...,p_k)$ amb $k \geq 2$ .Si $\ell<k$ i $i_1,...,i_{\ell}$ un subjconjunt de elements de $(1,...,k)$ La distribució de $Y=Y_1,...,Y_k$  segueix una distribución binomial amb paramètre $n$ i $p_i+  ....+p_{\ell}$
+:::{.corollary #agregacio }
+Si $\mathbf{X}=(X_1,...,X_k)$ es un vector aleatorio amb parametres $n$ i $\mathbf{p}=(p_1,...,p_k)$ amb $k \geq 2$ .Si $\ell<k$ i $i_1,...,i_{\ell}$ un subjconjunt de elements de $(1,...,k)$ La distribució de $Y=Y_1+...+Y_k$  segueix una distribución binomial amb paramètre $n$ i $p_{i_1}+  ....+p_{i_\ell}$
 :::
+
+:::{.theorem}
+**Esperances, Varianciès i covariàncies**
+
+
+Suposem el vector aleatori $\mathbf{X}=(X_1,...,X_k)$  que te una distribució multinomial amb parametres $n$ i $\mathbf{p}=(p_1,...,p_k)$ amb $k \geq 2$, llavors els valors esperats, variàncies i covariàncies son
+
+$$
+\begin{aligned}
+& E[X_i]= np_i \\
+& Var(X_i)=np_i (1-p_i) \\
+& Cov(X_i,X_j)=-np_ip_j 
+\end{aligned}
+$$
+:::
+
+Segons hem vist en el corol·lari \@ref(cor:binomial) la distribució marginal de cada component es binomial i el valor de l'esperança i la variància son els de l'enunciat del teorema.
+
+Per el  corol·lari \@ref(cor:agregació) sabem que $X_i+X_j$ segueix una distribució binomial amb parametres $n$ i $p_i+p_j$. D'ací
+
+$$
+Var(X_i+X_j)=n(p_i+p_j)(1-p_i-p_j)
+$$
+Per altra banda  de la equació  \@ref(eq:provcov4) sabem que 
+$$
+\begin{aligned} 
+Var(X_i+X_j)&=Var(X_i)+Var(X_j)+2Cov(X_i,X_j) \\
+&=np_i(1-p_i)+ np_j(1-p_j)+2Cov(X_i,X_j)
+\end{aligned}
+$$
+igualant les equacions anterior i despejant $Cov(X_i, X_j)$  obtenim el resultat desitjat
+
+$$
+\begin{aligned}
+Cov(X_i,X_j) &= \dfrac{1}{2}  n(p_i+p_j)(1-p_i-p_j)-np_i(1-p_i)- np_j(1-p_j) \\
+& =\dfrac{n}{2} \left[ (p_i+p_j) - (p_i+p_j)^2-p_i+p_i^2-p_j+p_j^2 \right] \\
+& =\dfrac{n}{2} \left[ (p_i+p_j - p_i^2-p_j^2- 2p_ip_j -p_i+p_i^2-p_j+p_j^2 \right] \\
+&= \dfrac{n}{2}  (-2p_ip_j)  =-n p_i p_j 
+\end{aligned}
+$$
+Cal  reseñar que la covariància de la distribució multinomial és negativa, el que és  natural donat que les $n$ observacions s'han de distribuir en $k$ tipus de items. Si agumenta el número de¡observacions d'un tipus ha de disminuir el de l'altre donat que la grandària  es fixa. 
+
+
+### Distribució t-student multivariant
+
+La distribució t-Student muultivariant es una generalització de la distribució t-de Student unidimensional. Al igual que aquella serveix pel càlcul de intervals de confiança per a vectors però també  per l'ús como distribuciones posteriores en estadísticas bayesianes i el análisis conjunt de variables biomèdiques i de finances.  
+
+
+:::{.definition}
+**Distribució t-student multivariant**
+
+Sigui  $\mathbf{X}=(X_1,...,X_n)$  un vector aleatorio de dimensió $n$, direm que $\mathbf{X}$ segueix una distribució t-multivariant amb mitjana el vector  $\boldsymbol{\mu}=(\mu_1,...,\mu_n)$ , amb la  matriu de variàncies-covariàncies $\Sigma$ i $\nu$ graus de llibertat 
+
+$$
+  \mathbf{X} \sim t(\mu,\Sigma,\nu)
+$$
+si i només si la funció de densitat de probabilitat és:
+
+$$
+t(x;\mu,\Sigma,\nu)=\sqrt{\dfrac {1}{(\nu\pi)^n |\Sigma|}} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} (x-\mu)^T \Sigma^{-1} (x-\mu)  \right]^{-(\nu+n)/2}   (\#eq:fxymultit)
+$$
+on $\Gamma ()$ es la funció Gamma $\Gamma(z)= \int_0^{\infty} x^{z-1} e^{-x}dx$
+:::
+
+:::{.proposition #marginalt}
+Si el vector aleatori   $\mathbf{X} \sim t(\boldsymbol{\mu},\boldsymbol{\Sigma},\nu)$ és distibueix com una distribució t-multivariant, la distribució marginal de cualquier subvector m-dimensional $\mathbf{X_s}$   subconjunt del vector $\mathbf{X}$ segueix una distribució t-multivariant amb vector de mitjanes $\boldsymbol{\mu_s}$  i una matriu de variàncies  $\boldsymbol{\Sigma}$  eliminant els valors de les variables no incloses en el subvector. 
+:::
+**Demostració**
+
+Definim els subconjunt de dimensió $m \times n$ tal que $s_{ij}=1$ si el j-èsim element de $\mathbf{X_s}$ correspon al i-èsim element de  $\mathbf{X}$ i $0$ en altre cas. Així $\mathbf{X_s}=S\mathbf{X}$
+
+Podem aplicar el teorema de la transformació linial a l'expressió anterior així
+
+
+$$
+\mathbf{X_s} \sim t(S \boldsymbol{\mu},S \boldsymbol{\Sigma} S^T,\nu) 
+$$
+
+Si operem es pot veure que $S \boldsymbol{\mu}=\boldsymbol{\mu}_s$ i $S \boldsymbol{\Sigma} S^T=\boldsymbol{\Sigma_s}$
+
+:::{.corollary}
+Si m=1 en la proposició @marginalt  implica que la distribució marginal de una t-multivariant es una distribució t amb mitjana $\mu_i$ i variància $\sigma_i^2$
+
+:::
+
+
+:::{.definition}
+Sigui $\mathbf{X}=(X_1,...,X_n)$ un vector aleatorio de dimensió $n$, direm que $\mathbf{X}$ segueix una distribució t-multivariant standard amb $\nu$ graus de llibertat, si la  funció de densitat es 
+
+
+$$
+t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} x^T  x  \right]^{-(\nu+n)/2}   (\#eq:fxymultit)
+$$
+:::
+ 
+
+
+La distribució de la distribució t-multivariant standard es un distribució t-univariada standar amb $\nu$ graus de llibertat.  Es pot deduir directament que el valor esperat es el vector nul $E[\mathbf{X}]=\mathbf{0}$ i que la  matriu de variància es $Var(\mathbf{X}) = \frac {\nu}{\nu-2} I$ on I es la matriu identitat $k \times k$
+
+
+
+### Distribució khi-quadrat
+
+La distribució khi-quadrat ($\chi^2$) és una distribució de probabilitat molt utilitzada en la resolució de tests de bondat d’ajustament i en altres proves estadístiques. S’utilitza principalment per comparar les freqüències observades amb les freqüències esperades, analitzant les diferències entre ambdues de manera quadràtica. En aquesta secció introduirem la distribució a partir de vectors aleatoris.
+
+
+:::{.definition}
+**Distribució Khi-quadrat**
+Sigui $\mathbf{X}=(X_1,...,X_k)$ un vector aleatori de variables aleatories normals amb mitjana $\mu_i=0$ i variància $\sigma_i^2=1$  es a dir $X_i \sim N(0,1)$ i $\mathbf{X} \sim N_n(0,\mathbf{I})$ llavors
+
+$$
+Y=\mathbf{X}^T \mathbf{X}= \sum_{i=1}^k  X_i^2 \sim \chi^2(k) \qquad  0>Q<\infty  (\#eq:chi2)
+$$
+
+
+:::
+
+
+:::{.theorem}
+La función de densidad de la variable definida en \@ref(eq:chi2)  viene definida por 
+
+
+$$f_Y(y) = \frac{1}{2^{k/2} \Gamma(k/2)} y^{k/2 - 1} \exp[-y/2]  (\#eq:denschi2)$$
+:::
+
+**Demostració**
+
+ Per fer la demostració en primer lloc  demostrarem que la distribució $\chi_1_2$ és un cas particular de una distribució Gamma con parámetros $\alpha=\beta=1/"$
+ 
+ 
+*1. Cas Base ($k=1$): Densitat de $Y = X_1^2$*
+
+Sigui $X_1 \sim N(0,1)$  on la seva funció de densitat serà:
+
+$$f_{X_1}(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}$$
+
+Volem trobar la densitat de la transformació $Y = X_1^2$. LLavors  la funció de probabilitat acumulada serà  $y > 0$:
+
+$$F_Y(y) = P(Y \le y) = P(X_1^2 \le y) = P(-\sqrt{y} \le X_1 \le \sqrt{y})$$
+
+Per la simetria respecte al zero de la distribució normal estàndard, podem reescriure-ho com:
+
+$$F_Y(y) = 2 \cdot P(0 \le X_1 \le \sqrt{y}) = 2 \int_{0}^{\sqrt{y}} \frac{1}{\sqrt{2\pi}} e^{-x^2/2} dx$$
+
+Derivem respecte a $y$  per obtenir la seva densitat $f_Y(y)$:
+
+$$f_Y(y) = \frac{d}{dy} F_Y(y) = 2 \cdot \left( \frac{1}{\sqrt{2\pi}} e^{-(\sqrt{y})^2/2} \right) \cdot \frac{d}{dy}(\sqrt{y})$$
+
+$$f_Y(y) = \frac{2}{\sqrt{2\pi}} e^{-y/2} \cdot \frac{1}{2\sqrt{y}} = \frac{1}{\sqrt{2\pi}} y^{-1/2} e^{-y/2}$$
+
+Sabent que la funció Gamma compleix que $\Gamma(1/2) = \sqrt{\pi}$ i que $\sqrt{2} = 2^{1/2}$, podem reescriure l'expressió anterior com:
+
+$$f_Y(y) = \frac{1}{2^{1/2} \Gamma(1/2)} y^{1/2 - 1} e^{-y/2}$$
+
+Aquesta expressió coincideix exactament amb la definició d'una distribució **Gamma** amb paràmetre de forma $\alpha = 1/2$ i paràmetre d'escala $\beta = 1/2$. Per tant:
+
+$$Y = X_1^2 \sim \text{Gamma}\left(\alpha = \frac{1}{2}, \beta = 2\right)$$
+2. Generalització per a $k$ variables (
+La variable d'interès és la suma de $k$ normals estàndard al quadrat independents:
+
+$$Y = \sum_{i=1}^{k} X_i^2$$
+
+Atès que cada component $X_i^2 \sim \text{Gamma}\left(\frac{1}{2}, \frac{1}{2}\right)$, apliquem la propietat d'additivitat per a variables Gamma independents. Quan s'utilitza la parametrizació per escala, la suma de variables amb la mateixa escala $\beta$ dona lloc a una nova variable Gamma on els paràmetres de forma $\alpha$ se sumen i els de escala $\beta$  es manté constant:
+
+$$\alpha_{\text{total}} = \sum_{i=1}^{k} \alpha_i = \sum_{i=1}^{k} \frac{1}{2} = \frac{k}{2} \qquad \text{i} \qquad \beta = \frac{1}{2}$$
+
+D'aquesta manera, obtenim que la suma total es distribueix com:
+
+$$Y \sim \text{Gamma}\left(\alpha = \frac{k}{2}, \beta = \frac{1}{2}\right)$$
+
+Substituïm finalment els paràmetres $\alpha = \frac{k}{2}$ i $\beta = \frac{1}{2}$ en la definició original $f(y|\alpha, \beta) = \frac{\beta^\alpha}{\Gamma(\alpha)} y^{\alpha-1} e^{-\beta y}$:
+
+$$f_Y(y) = \frac{(1/2)^{k/2}}{\Gamma(k/2)} y^{k/2 - 1} e^{-\frac{1}{2}y}$$
+
+Operant el terme constant del numerador $\left(\frac{1}{2}\right)^{k/2} = \frac{1}{2^{k/2}}$, arribem exactament a l'expressió del Teorema 
+
+$$f_Y(y) = \frac{1}{2^{k/2} \Gamma(k/2)} y^{k/2 - 1} \exp[-y/2]$$
+
+El valor esperat de la distribució  $Y= \sim \chi^2(k)$ és E[Y]=k i Var(Y)=2k
+
+
+### Distribución de Whishart
+
+  <!-- referencia en https://statproofbook.github.io/D/wish -->
+La distribució de Whishart,  que deu el seu nom al  estadístic escocés John Whishart que la va formular en 1928,  es molt utilitzada en el anàlisis de matrius de covariància estimadas i en estadística Bayesiana. 
+
+:::{.definition}
+**Distribució de Whishart** 
+Sigui  $\mathbf{X}$ una matriu $n \times p$  que segueix una distribució de matriu normal amb mitjana 0, independent a lo llarg de les files i covarianzia entre les columnes V covariància V  es a dir 
+
+$$
+\mathbf{X} \sim \mathcal{MN}_{n \times p}(\mathbf{0}, \mathbf{I}_n, \mathbf{V})
+$$
+Definim la matriu  S com el producte de X i la seva trasposada
+
+$$
+\mathbf{S} = \mathbf{X}^T \mathbf{X} = \sum_{i=1}^{n} \mathbf{x}_i^T \mathbf{x}_i
+$$
+
+Llavors la mattriu S es diu que segueix la funció de distribució Wishart amb escala la matriu V i el graus de llibertat n
+
+$$
+\mathbf{S} \sim \mathcal{W}_p(\mathbf{V}, n)
+$$
+
+On  n>p-1 i V es una matriu simetrica definida positiva $p \times p$
+:::
+
+---
+
+:::{.example}
+
+Suposem que volem estudiar **3 característiques físiques** de **5 persones**:
+
+- Alçada (cm)
+- Pes (kg)
+- Pressió arterial sistòlica (mmHg)
+
+Les dades observades són:
+
+| Persona | Alçada (cm) | Pes (kg) | Pressió (mmHg) |
+|:--------:|------------:|----------:|---------------:|
+| 1 | 170 | 68 | 120 |
+| 2 | 165 | 62 | 118 |
+| 3 | 180 | 80 | 130 |
+| 4 | 175 | 75 | 125 |
+| 5 | 168 | 65 | 119 |
+
+En aquest cas:
+
+- \(n = 5\): nombre d'observacions (persones).
+- \(p = 3\): nombre de variables.
+
+La matriu de dades és
+
+$$
+X=
+\begin{pmatrix}
+170 & 68 & 120\\
+165 & 62 & 118\\
+180 & 80 & 130\\
+175 & 75 & 125\\
+168 & 65 & 119
+\end{pmatrix}.
+$$
+
+Per poder assumir que la matriu segueix una distribució normal matricial amb mitjana nul·la, primer es centren les dades restant la mitjana de cada columna.
+
+Les mitjanes són:
+
+- Alçada: \(171.6\) cm,
+- Pes: \(70\) kg,
+- Pressió: \(122.4\) mmHg.
+
+La matriu centrada és
+
+$$
+X_c=
+\begin{pmatrix}
+-1.6 & -2 & -2.4\\
+-6.6 & -8 & -4.4\\
+8.4 & 10 & 7.6\\
+3.4 & 5 & 2.6\\
+-3.6 & -5 & -3.4
+\end{pmatrix}.
+$$
+
+En aquesta matriu:
+
+- cada **fila** representa una persona;
+- les **files** es consideren independents entre si;
+- les **columnes** poden estar correlacionades. Per exemple, persones més altes acostumen a tenir també un pes més elevat. Aquesta dependència queda descrita per la matriu de covariàncies \(V\).
+
+Finalment, es calcula
+
+$$
+S = X_c^{T}X_c,
+$$
+
+que és una matriu \(3 \times 3\) de sumes de productes creuats. Si les files de \(X_c\) segueixen una distribució normal multivariant,
+
+$$
+X_i \sim N_3(0,V),
+$$
+
+aleshores
+
+$$
+S \sim W_3(5,V),
+$$
+
+és a dir, \(S\) segueix una distribució de **Wishart** amb \(5\) graus de llibertat i matriu de covariàncies \(V\).
+
+La matriu de covariàncies mostral s'obté com
+
+$$
+\hat{\Sigma}=\frac{1}{n-1}X_c^{T}X_c.
+$$
+:::
+
+---
+
 
 
 ##  Generació de mostres de distribucions multivariants.
