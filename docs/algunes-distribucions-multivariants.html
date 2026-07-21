@@ -159,9 +159,12 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html"><i class="fa fa-check"></i><b>4</b> Processos estocàstics: Introducció i conceptes bàsics</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a></li>
-<li class="chapter" data-level="4.2" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.2</b> Processos estocàstics discrets i continus.</a></li>
-<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
+<li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic"><i class="fa fa-check"></i><b>4.2.1</b> Funcions de moment un procès estocástic</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics discrets i continus.</a></li>
+<li class="chapter" data-level="4.4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.4</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html"><i class="fa fa-check"></i><b>5</b> Principals tipus de Processos estocàstics.</a>
 <ul>
@@ -680,8 +683,8 @@ on <span class="math inline">\(\Gamma ()\)</span> es la funció Gamma <span clas
 </div>
 <div class="definition">
 <p><span id="def:unlabeled-div-78" class="definition"><strong>Definició 3.7  </strong></span>Sigui <span class="math inline">\(\mathbf{X}=(X_1,...,X_n)\)</span> un vector aleatorio de dimensió <span class="math inline">\(n\)</span>, direm que <span class="math inline">\(\mathbf{X}\)</span> segueix una distribució t-multivariant standard amb <span class="math inline">\(\nu\)</span> graus de llibertat, si la funció de densitat es</p>
-<p><span class="math display" id="eq:fxymultit">\[
-t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} x^T  x  \right]^{-(\nu+n)/2}   \tag{3.13}
+<p><span class="math display" id="eq:fxymultit2">\[
+t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} x^T  x  \right]^{-(\nu+n)/2}   \tag{3.14}
 \]</span></p>
 </div>
 <p>La distribució de la distribució t-multivariant standard es un distribució t-univariada standar amb <span class="math inline">\(\nu\)</span> graus de llibertat. Es pot deduir directament que el valor esperat es el vector nul <span class="math inline">\(E[\mathbf{X}]=\mathbf{0}\)</span> i que la matriu de variància es <span class="math inline">\(Var(\mathbf{X}) = \frac {\nu}{\nu-2} I\)</span> on I es la matriu identitat <span class="math inline">\(k \times k\)</span></p>
@@ -693,13 +696,13 @@ t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} 
 <p><span id="def:unlabeled-div-79" class="definition"><strong>Definició 3.8  </strong></span><strong>Distribució Khi-quadrat</strong>
 Sigui <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> un vector aleatori de variables aleatories normals amb mitjana <span class="math inline">\(\mu_i=0\)</span> i variància <span class="math inline">\(\sigma_i^2=1\)</span> es a dir <span class="math inline">\(X_i \sim N(0,1)\)</span> i <span class="math inline">\(\mathbf{X} \sim N_n(0,\mathbf{I})\)</span> llavors</p>
 <p><span class="math display" id="eq:chi2">\[
-Y=\mathbf{X}^T \mathbf{X}= \sum_{i=1}^k  X_i^2 \sim \chi^2(k) \qquad  0&gt;Q&lt;\infty  \tag{3.14}
+Y=\mathbf{X}^T \mathbf{X}= \sum_{i=1}^k  X_i^2 \sim \chi^2(k) \qquad  0&gt;Q&lt;\infty  \tag{3.15}
 \]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-80" class="theorem"><strong>Theorem 3.4  </strong></span>La función de densidad de la variable definida en <a href="algunes-distribucions-multivariants.html#eq:chi2">(3.14)</a> viene definida por</p>
+<p><span id="thm:unlabeled-div-80" class="theorem"><strong>Theorem 3.4  </strong></span>La función de densidad de la variable definida en <a href="algunes-distribucions-multivariants.html#eq:chi2">(3.15)</a> viene definida por</p>
 <p><span class="math display" id="eq:denschi2">\[
-f_Y(y) = \frac{1}{2^{k/2} \Gamma(k/2)} y^{k/2 - 1} \exp[-y/2]    \tag{3.15}
+f_Y(y) = \frac{1}{2^{k/2} \Gamma(k/2)} y^{k/2 - 1} \exp[-y/2]    \tag{3.16}
 \]</span></p>
 </div>
 <p><strong>Demostració</strong></p>
@@ -1017,8 +1020,8 @@ E[h(x)] \approx \dfrac {1}{N} \sum_{i=1}^{N}h(X_i)
 <p>k- Genera <span class="math inline">\(x_k\)</span> (condicionalment de <span class="math inline">\(F_k(x_k |x1,x2,....,x_{k-1})\)</span></p>
 <p>k+1- Retorna el vector <span class="math inline">\(\mathbf{x}=(x_1,....,x_k)^T\)</span></p>
 <hr />
-<div id="simnormbiv" class="exemple">
-<p><strong>Normal Bivariant</strong></p>
+<div class="example">
+<p><span id="exm:simnormbiv" class="example"><strong>Exemple 3.5  </strong></span><strong>Normal Bivariant</strong></p>
 <p>Volem generar observacions d’un vector aleatori bidimensional <span class="math inline">\((X_1, X_2)^\top \sim N_2(\boldsymbol{\mu}, \mathbf{\Sigma})\)</span> amb:</p>
 <p><span class="math display">\[
 \boldsymbol{\mu} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \quad \mathbf{\Sigma} = \begin{pmatrix} 1 &amp; \rho \\ \rho &amp; 1 \end{pmatrix} \quad (|\rho| &lt; 1)
@@ -1072,7 +1075,7 @@ Així la matriu <span class="math inline">\(C=\sqrt{D}U\)</span> que satisfa <sp
 <hr />
 <div class="exemple">
 <p><strong>Simulació d’una Normal Bivariant mitjançant la Descomposició de Cholesky</strong></p>
-<p>Assumim les dades del exemple <a href="#exmg:simnormbiv"><strong>??</strong></a> on simulavem dades d’una distribució binormal</p>
+<p>Assumim les dades del exemple <a href="algunes-distribucions-multivariants.html#exm:simnormbiv">3.5</a> on simulavem dades d’una distribució binormal</p>
 <p>Donada la matriu de covariàncies <span class="math inline">\(\mathbf{\Sigma} = \begin{pmatrix} 1 &amp; \rho \\ \rho &amp; 1 \end{pmatrix}\)</span>, la seva factorització de Cholesky <span class="math inline">\(\mathbf{\Sigma} = \mathbf{C} \mathbf{C}^\top\)</span> produeix la matriu triangular inferior:</p>
 <p><span class="math display">\[\mathbf{C} = \begin{pmatrix} 1 &amp; 0 \\ \rho &amp; \sqrt{1 - \rho^2} \end{pmatrix}\]</span></p>
 <p>Multiplicant aquesta matriu per un vector <span class="math inline">\(\mathbf{Z} = (Z_1, Z_2)^\top\)</span> de normals estàndard independents (<span class="math inline">\(Z_1, Z_2 \stackrel{iid}{\sim} N(0,1)\)</span>), s’obté:</p>

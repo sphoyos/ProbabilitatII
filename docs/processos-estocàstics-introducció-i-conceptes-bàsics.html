@@ -159,9 +159,12 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html"><i class="fa fa-check"></i><b>4</b> Processos estocàstics: Introducció i conceptes bàsics</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a></li>
-<li class="chapter" data-level="4.2" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.2</b> Processos estocàstics discrets i continus.</a></li>
-<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
+<li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic"><i class="fa fa-check"></i><b>4.2.1</b> Funcions de moment un procès estocástic</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics discrets i continus.</a></li>
+<li class="chapter" data-level="4.4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.4</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html"><i class="fa fa-check"></i><b>5</b> Principals tipus de Processos estocàstics.</a>
 <ul>
@@ -194,15 +197,227 @@
 <h1><span class="header-section-number">4</span> Processos estocàstics: Introducció i conceptes bàsics<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-introducci%C3%B3-i-conceptes-b%C3%A0sics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="definició-de-procés-estocàstic." class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Definició de procés estocàstic.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí.</p>
+<p>En el curs de probabilitat I es van estudiar les susccesions de variables aleatòries, es a dir col·leccions infinites numerables de variables aleatgòries i es va centrar l’interès en les diferents convergències d’aquestes variables, sobretot utilitzant la llei dels grans nombres i el teoerema central del Límit. En aquell moment no es varen analitzar les relacions entre les variables de la succesió i altres.
+En questst tema introduirem el concepte de procéss estocàstic. De tota manera cal resenyar que el concepte de procés estocàstic va mès enllà de les successions de variables. Es tracta d’una conjunt de variables aleatòries on pot estar indexat per un conjunt no numerables.</p>
+<p>Un exemple seria l’estudi de l’ocurrència de un mateix esdeveniment al llarg del temps. Si aquestes ocurrències son independents i el tema d’interés es el temps que trancorreix entre esdeveniments, parlarem de la succeció <span class="math inline">\(\{X_n\}\)</span> on <span class="math inline">\(X_i\)</span>=(temps que passa entre l’esdeveniment i- i el i). Però si el que ens interessa es el nombre de vegades que l’esdeveniment ha succeit en l’interva l [0,t], la familia a considerar es <span class="math inline">\(N_t\)</span>, amb t&gt;0 desde luego no es numerable .</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-85" class="definition"><strong>Definició 4.1  </strong></span><strong>Procés estòcastic</strong></p>
+<p>Un procès estocàstic es una colecció de variables aleatòries <span class="math inline">\(\{ X_t,t \in T \}\)</span> definides sobre un espai de probabilitat <span class="math inline">\((\Omega, \mathcal{A},P)\)</span>.</p>
+<p><span class="math inline">\(T\)</span> es un subconjunt de <span class="math inline">\(\mathbb{R}\)</span> que s’anomena <strong>conjunt d’indexos</strong>. S’utilitza la lletra <span class="math inline">\(t\)</span> donat que l’estudi de processos estocàstics surt del estudi de l’evolutió temporal de fenòmens aleatòris.</p>
+<p>El conjunt de valors <span class="math inline">\(S \subseteq \mathbb{R}\)</span> que poden prendre les variables aleatòries <span class="math inline">\(X_t\)</span> s’anomena <strong>espai d’estats</strong> del procés.</p>
+<p>Amb frequència l’índex <span class="math inline">\(t \in T\)</span> que ordena les variables aleatòries del procés correspon al temps i <span class="math inline">\(X_t\)</span> és l’estat del sistema en estudi a l’instant t.</p>
 </div>
-<div id="processos-estocàstics-discrets-i-continus." class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Processos estocàstics discrets i continus.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí.</p>
+<hr />
+<div class="example">
+<p><span id="exm:cadena" class="example"><strong>Exemple 4.1  </strong></span>En una botiga de roba el 65% de les persones que entren compren algo. En una hora entren 30 clients en la botiga. El proceso que indica si el client compra o no compra es un procès estòcastic bernoulli</p>
+<p><span class="math display">\[
+X_t=
+\begin{cases}
+1, &amp; \text{si el client } t \text{ realitza una compra},\\
+0, &amp; \text{si el client } t \text{ no realitza una compra}.
+\end{cases}
+\]</span></p>
+<p>Si históricament el 65 % dels clients realitzen una compra i suposem que les decisions de comprar dels clients es independent una de l’altra, aleshores
+<span class="math display">\[
+X_t\sim\operatorname{Bernoulli}(0.65),
+\]</span>
+Els resultats es mostren en el següent gràfic.</p>
+<div class="figure"><span style="display:block;" id="fig:graf-pbernoulli"></span>
+<img src="images/graf-pbernoulli-1.png" alt=" Exemple  Commpra Botiga de roba  " width="672" />
+<p class="caption">
+Figura 4.1:  Exemple Commpra Botiga de roba
+</p>
 </div>
-<div id="processos-estocàstics-estacionaris-i-no-estacionaris." class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Processos estocàstics estacionaris i no estacionaris.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-86" class="example"><strong>Exemple 4.2  </strong></span></p>
+<div id="exemple-5.2" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Exemple 5.2<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exemple-5.2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Un jugador comença amb <strong>10 euros</strong> i juga consecutivament <strong>20 partides</strong>. En cada partida aposta 1 euro a cara o creu.</p>
+<p>Denotem per <span class="math inline">\(X_t\)</span> els diners que té el jugador després d’haver jugat <span class="math inline">\(t\)</span> partides, on</p>
+<p><span class="math display">\[
+t=0,1,\ldots,20. \qquad X_0=10
+\]</span></p>
+<p>En cada partida:</p>
+<ul>
+<li>amb probabilitat <span class="math inline">\(1/2\)</span> guanya 1 euro;</li>
+<li>amb probabilitat <span class="math inline">\(1/2\)</span> perd 1 euro.</li>
+</ul>
+<p>Per tant,</p>
+<p><span class="math display">\[
+X_{t+1}=
+\begin{cases}
+X_t+1, &amp; \text{amb probabilitat }1/2,\\[2mm]
+X_t-1, &amp; \text{amb probabilitat }1/2.
+\end{cases}
+\]</span></p>
+<p>En aquest exemple s’observen dues possibles realitzacions del procés estocàstic. Tot i que els dos jugadors comencen amb el mateix capital inicial i juguen el mateix nombre de partides, les seves trajectòries són diferents perquè el resultat de cada partida és aleatori.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="images/unnamed-chunk-1-1.png" alt="Exemple de proceso del jugador arruinado" width="672" />
+<p class="caption">
+Figura 4.2: Exemple de proceso del jugador arruinado
+</p>
+</div>
+</div>
+</div>
+<div class="example">
+<p><span id="exm:ppuntual" class="example"><strong>Exemple 4.3  </strong></span>Suposem que els pacients arriben a un servei d’urgències d’un hospital de manera aleatòria al llarg del temps. Sigui</p>
+<p><span class="math display">\[
+X(t)=\text{nombre de pacients arribats fins a l&#39;instant }t,
+\qquad t\ge0.
+\]</span></p>
+<p>Si les arribades segueixen una distribución de Poisson amb una intensitat <span class="math inline">\(\lambda= 3\)</span> pacients per hora, com que t es continu
+<span class="math inline">\(X(t)\sim\operatorname{Poisson}(\lambda t)\)</span></p>
+<p>En el gràfic es mostra una realització del procés en les primeres 8 hores.La trajectòria és una funció esglaonada: roman constant entre dues arribades consecutives i augmenta una unitat cada vegada que arriba un nou pacient.</p>
+<div class="figure"><span style="display:block;" id="fig:graf-ppoisson"></span>
+<img src="images/graf-ppoisson-1.png" alt="Exemple de nombre d'urgències per temps" width="672" />
+<p class="caption">
+Figura 4.3: Exemple de nombre d’urgències per temps
+</p>
+</div>
+</div>
+<div class="example">
+<p><span id="exm:pcontinu" class="example"><strong>Exemple 4.4  </strong></span>En una prova d’esforç es mesura el consum d’oxigen d’un esportista (<span class="math inline">\(VO_2\)</span>) cada segon durant 10 minuts i es recull en un procès estocàstic <span class="math inline">\(X(t)=\text{valor del } V0_2 \text{ en l&#39;instant }t\)</span></p>
+<p>En aquest exemple suposem que el consum d’oxigen augmenta progressivament durant l’exercici i que presenta fluctuacions aleatòries.</p>
+<p>La línia blava representa una possible realització del procés corresponent a les mesures de $VO_2. La línia vermella discontínua representa la tendència mitjana esperada durant l’exercici. En auquest cas es representa una sèrie temporal biomèdica on clarament les observacions no son independents</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:graf-pgaussia"></span>
+<img src="images/graf-pgaussia-1.png" alt="Exemple de nombre d'urgències per temps" width="672" />
+<p class="caption">
+Figura 4.4: Exemple de nombre d’urgències per temps
+</p>
+</div>
+<hr />
+<p>Un procès estocàstic també pot ser considerat com una funció aleatòria de doble argument <span class="math inline">\(\{ X(t,\omega), t \in T , \omega \in \Omega\}\)</span>. Si fixem <span class="math inline">\(\omega=\omega_0\)</span> tindrem una <em>realització</em> del procés <span class="math inline">\(X(.,\omega_0)\)</span> cuya representació gràfica son le anomenades <em>trajectòries del procés</em> que hem representant en els 4 gràfics anteriors.</p>
+<p>Si per contra fixem <span class="math inline">\(t=t_0\)</span> estarem parlant de la variable aleatoria <span class="math inline">\(X_{t_0}= X(t_0,.)\)</span> que es la distribución de la variable de interés en el punt d’observació t</p>
+<div id="funcions-de-moment-un-procès-estocástic" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Funcions de moment un procès estocástic<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Com a variable aleatoria de dos dimensions podem definir les següents funcións característiques de un procès estocàstic <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span></p>
+<p><strong>Funció mitjana d’un procès estocàstic</strong></p>
+<p>Es defineix com la funció</p>
+<p><span class="math display" id="eq:meanprocess">\[
+\mu_X(t)= E[X_t], \in T=
+\begin{cases}
+\displaystyle
+\sum_{x \in D_{X_t}} x P(X_t=x)
+&amp; \text{si } X_t \text{ és discret} \\
+\displaystyle
+\int_{- \infty}^{+\infty} xf_t(x) dx  
+&amp; \text{si } X_t \text{ és continu}
+\end{cases}   \tag{4.1}
+\]</span></p>
+<p><strong>Funció de autocorrelació</strong></p>
+<p>La funció de autocorrelació del procés <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es defineix com el valor esperat del producte de les variables aleatòries <span class="math inline">\(X_{t_1}\)</span> i <span class="math inline">\(X_{t_2}\)</span> en els instants <span class="math inline">\(t_1\)</span> i <span class="math inline">\(t_2\)</span> respectivament, és a dir</p>
+<p><span class="math display" id="eq:acfprocess">\[
+R(t_1,t_2)=E\!\left[X_{t_1}X_{t_2}\right]=
+\begin{cases}
+\displaystyle
+\sum_{x_1\in D_{X_{t_1}},\,x_2\in D_{X_{t_2}}}
+x_1x_2\,P(X_{t_1}=x_1,\,X_{t_2}=x_2),
+&amp; \text{si } X_t \text{ és discret},\\[3ex]
+\displaystyle
+\int_{-\infty}^{+\infty}
+\int_{-\infty}^{+\infty}
+x_1x_2\,f_{X_{t_1},X_{t_2}}(x_1,x_2)\,dx_1\,dx_2,
+&amp; \text{si } X_t \text{ és continu}.
+\end{cases} \tag{4.2}
+\]</span></p>
+<p><strong>Funció de autocovariància</strong></p>
+<p>A partir del moment central conjunt de dues variables asociades a dos temps qualsevol, <span class="math inline">\(t_1\)</span> i <span class="math inline">\(t_2\)</span>, l’autocovariància és</p>
+<p><span class="math display" id="eq:aujtocovprocess">\[
+  C(t_1,t_2)=E[(X_{t_1}-\mu(t1))(X_{t_2}-\mu(t2))] \tag{4.3}
+\]</span></p>
+<p>ràpidament es dedueix la relació entre la autocorrelació i la autocovariància</p>
+<p><span class="math display">\[
+C(t_1,t_2)= R(t_1,t_2)-\mu(t_1)\mu(t_2)
+\]</span></p>
+<p>en el cas particular que <span class="math inline">\(t_1=t_2=t\)</span> parelm de la <em>funció de variància</em> <span class="math inline">\(\sigma^2(t)=C(t,t)\)</span></p>
+<p>Finalment definim la funció de correlació com</p>
+<p><span class="math display">\[
+\rho(t_1,t_2) \dfrac {C(t_1,t_2)} {\sqrt{\sigma^2(t_1)\sigma^2(t_2)}}
+\]</span>
+que obviamente pren valors enttre <span class="math inline">\([-1,1]\)</span>- Em eñ cas de les series temporals es reserva el nom de autocorrelació per aquesta funció.</p>
+</div>
+</div>
+<div id="processos-estocàstics-discrets-i-continus." class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Processos estocàstics discrets i continus.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Els processos estòcastics es poden classificar en funció del tipo de variables T i X_t</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong><span class="math inline">\(X_t\)</span> </strong></th>
+<th align="center"><strong>T Discret</strong></th>
+<th align="center"><strong>T Continu</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Discret</strong></td>
+<td align="center">Cadena</td>
+<td align="center">Proc. puntual</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Continu</strong></td>
+<td align="center">Suc. de v.a.</td>
+<td align="center">Proc. continu</td>
+</tr>
+</tbody>
+</table>
+<p>-Un procès discret amb el temps discret , que s’anomena cadena, seria l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:cadena">4.1</a> on es veia en 30 clients que entraven en una botiga si compraven o no</p>
+<p>-Un procés continu en un temps discret s’anomena un succeció de variables. Si en el cas anterior en lloc de mesurar si compra o no compra haguessim mesurat l ’alçada o el pes del client seria un bon exemple</p>
+<p>-Un procès puntual com el de l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> on es mesura el número de urgències en un determinat temps és el cas on el procès es discret pero el temps és continu.</p>
+<p>-El procès continu es aquell en el que la variable es continua i el temps també. Es el cas de l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:pcontinu">4.4</a> on es mesura el <span class="math inline">\(VO_2\)</span> d’un esportista en 10 minuts d’esforç</p>
+</div>
+<div id="processos-estocàstics-estacionaris-i-no-estacionaris." class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Processos estocàstics estacionaris i no estacionaris.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-87" class="definition"><strong>Definició 4.2  </strong></span><strong>Distribucions finito-dimensionals</strong>
+En general les variables aleatòries del procés <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> no son independents entre elles. Si <span class="math inline">\(\{ t_1,t_2,..,t_n\} \subset T\)</span> és un subconjunt finit de qualsevol dels índex, la distribució conjunta del vector <span class="math inline">\((X_{t_1},X_{t_2},...,X_{t_n})\)</span> vindrà donada per</p>
+<p><span class="math display">\[
+F_{t_1},{t_2},...,{t_n}(x_1,...,x_n))=P(X_{t_1}\leq x_{t_1},X_{t_2}\leq x_{t_2},...,X_{t_n}\leq x_{t_n})   
+\]</span>
+Aquesta distribució rep el nom de distribució finito-dimensional del procés. Tambe es poden expressar aquestes distribucion a partir de les funcions de densitat i probabilitat conjuntes ddel vector.</p>
+</div>
+<p>Un procés estòcastic es pot descriure especificant les seves distribucions finito-dimensionals, que permeten obtenir la probabilitat de qualsevol esdeveniment involucrat en el procés. Cal remarcar qeu el conjunt de distribucions finio-dimensionals no determinen per complet les característiques del procés, i en ocasions cal definir certes característiques o propietats adicionals. Si el procès es pot específicar completament a partir de les distribucions finites , es diu que el procés es <em>separable</em>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-88" class="definition"><strong>Definició 4.3  </strong></span><strong>Processos de variables independents</strong></p>
+<p>sea <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es diu que es un procés estòcastic de variables aleatòries independents si <span class="math inline">\(X_m\)</span> i <span class="math inline">\(X_n\)</span> son independents para todo <span class="math inline">\(n,m \leq 0\)</span> con <span class="math inline">\(n \neq m\)</span></p>
+</div>
+<p>L’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:cadena">4.1</a> del procès on es vol saber si un client que entra en una botiga compra o no es tracta de un procès de variables independents</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-89" class="definition"><strong>Definició 4.4  </strong></span><strong>Processos amb increments independents</strong></p>
+<p>Sea <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es diu que es un procés estòcastic que té increments independents si per a qualsevol <span class="math inline">\(t_0&lt;t_1&lt;...&lt;t_n,\quad t_i \in T\)</span> les variables aleatòries:</p>
+<p><span class="math display">\[
+X_{t_1}-X_{t_0},X_{t_2}-X_{t_1},...,X_{t_n}-X_{t_{n-1}}
+\]</span>
+són independents.</p>
+</div>
+<p>En l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> sobre el nombre d’urgències, el número de urgències en la primera hora és independent del de la segona hora i de la tercera hora.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-90" class="definition"><strong>Definició 4.5  </strong></span><strong>Processos estacionaris forts</strong></p>
+<p>El procès <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es fortament estacionari si les families de les variables aleatòries
+<span class="math display">\[
+(X_{t_1},X_{t_2},...,X_{t_n}) \quad \text(i) \quad (X_{t_1+h},X_{t_2+h},...,X_{t_n+h})
+\]</span>
+tenen la mateixa distribució conjunta per a tot <span class="math inline">\(h&gt;0\)</span>, tots <span class="math inline">\(\{t_1,...,t_n\} \subset T\)</span> i <span class="math inline">\(n\geq 1\)</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-91" class="theorem"><strong>Theorem 4.1  </strong></span>La funció mitjana d’un procés estocàstic estacionari es constant</p>
+</div>
+<p><strong>Demostració</strong></p>
+<p><span class="math display">\[
+\mu_X(t)=\int_{- \infty}^{+\infty} xf_t(x) dx=  \int_{- \infty}^{+\infty} xf(x) dx=m(x)
+\]</span>
+Més en general , qualsevol propietat de una variable singular d’un procés estaconari es invariant al temps</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-92" class="definition"><strong>Definició 4.6  </strong></span><strong>Processos estacionaris dèbil</strong></p>
+<p>El procès <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es dèbilment estacionari si per a tot <span class="math inline">\(t_1\)</span> i <span class="math inline">\(t_2 \in T\)</span> i tot <span class="math inline">\(h&gt;0\)</span>,</p>
+<p><span class="math display">\[
+E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h},X_{t_2+h})
+\]</span></p>
+</div>
+<p>–
+Una forma equivalent de definir l’estacionarietat dèbil és dir que un procès es dèbilment estacionari si i només si te esperança constant i la covariància entre <span class="math inline">\(X_{t_1}\)</span> i <span class="math inline">\(X_{t_2}\)</span> només depen de <span class="math inline">\(t_2-t_1\)</span>. La estacionarietat dèbil implica la estacionarietat forta.</p>
 
 </div>
 </div>

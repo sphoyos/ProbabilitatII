@@ -691,7 +691,7 @@ Sigui $\mathbf{X}=(X_1,...,X_n)$ un vector aleatorio de dimensió $n$, direm que
 
 
 $$
-t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} x^T  x  \right]^{-(\nu+n)/2}   (\#eq:fxymultit)
+t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} x^T  x  \right]^{-(\nu+n)/2}   (\#eq:fxymultit2)
 $$
 :::
  
@@ -1130,7 +1130,7 @@ k+1- Retorna el vector $\mathbf{x}=(x_1,....,x_k)^T$
 
 ---
 
-:::{.exemple #simnormbiv}
+:::{.example #simnormbiv}
 **Normal Bivariant**
 
 Volem generar observacions d'un vector aleatori bidimensional $(X_1, X_2)^\top \sim N_2(\boldsymbol{\mu}, \mathbf{\Sigma})$ amb:
@@ -1248,7 +1248,7 @@ Així  a l'hora de simular la distribució  el algorite funciona de la següent 
 :::{.exemple}
 **Simulació d'una Normal Bivariant mitjançant la Descomposició de Cholesky**
 
- Assumim les dades del exemple  \@ref(exmg:simnormbiv) on simulavem dades d'una distribució binormal
+ Assumim les dades del exemple  \@ref(exm:simnormbiv) on simulavem dades d'una distribució binormal
  
  
 Donada la matriu de covariàncies $\mathbf{\Sigma} = \begin{pmatrix} 1 & \rho \\ \rho & 1 \end{pmatrix}$, la seva factorització de Cholesky $\mathbf{\Sigma} = \mathbf{C} \mathbf{C}^\top$ produeix la matriu triangular inferior:
