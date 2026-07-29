@@ -13,6 +13,7 @@ language:
     def: "Definició "
     exm: "Exemple "
     proof: "Demostració "
+    lemma: "Lema"
     note: "Nota"
     observation: "Observació"
   chapter_name: "Capítol "

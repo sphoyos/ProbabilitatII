@@ -12,7 +12,8 @@ knitr::opts_chunk$set(
   fig.path = "images/",
   echo = FALSE,
   message = FALSE,
-  warning = FALSE
+  warning = FALSE,
+  knitr.graphics.auto_pdf=TRUE
 )
 ```
 

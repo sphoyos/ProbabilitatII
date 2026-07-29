@@ -9,7 +9,7 @@
 En el curs de probabilitat I es van estudiar les susccesions de variables aleatòries, es a dir col·leccions infinites numerables de variables aleatgòries i es va centrar l'interès en les diferents convergències d'aquestes variables, sobretot utilitzant la llei dels grans nombres i el teoerema central del Límit. En aquell moment no es varen analitzar les relacions entre les variables de la succesió i altres. 
 En questst tema introduirem el concepte de procéss estocàstic. De tota manera cal resenyar que el concepte de procés estocàstic va mès enllà de les successions de variables. Es tracta d'una conjunt de variables aleatòries on pot estar indexat per un conjunt no numerables. 
 
-Un exemple seria l'estudi de l'ocurrència de un mateix esdeveniment al llarg del temps. Si aquestes ocurrències son independents i el tema d'interés es el temps que trancorreix entre esdeveniments, parlarem de la succeció $\{X_n\}$  on $X_i$=(temps que passa entre l'esdeveniment i- i el i). Però si el que ens interessa es el nombre de vegades que l'esdeveniment ha succeit en l'interva l [0,t], la familia a considerar es $N_t$, amb t>0 desde luego no es numerable . 
+Un exemple seria l'estudi de l'ocurrència de un mateix esdeveniment al llarg del temps. Si aquestes ocurrències son independents i el tema d'interés es el temps que trancorreix entre esdeveniments, parlarem de la succeció $\{X_n\}$  on $X_i$=(temps que passa entre l'esdeveniment i- i el i). Però, si el que ens interessa es el nombre de vegades que l'esdeveniment ha succeit en l'interva l [0,t], la familia a considerar es $N_t$, amb t>0 desde luego no es numerable . 
 
 
 
@@ -61,8 +61,6 @@ source("Rcode/pbernoulli.r")
 
 :::{.example}
 
-
-## Exemple 5.2
 
 Un jugador comença amb **10 euros** i juga consecutivament **20 partides**. En cada partida aposta 1 euro a cara o creu.
 
@@ -241,13 +239,13 @@ Els processos estòcastics es poden classificar en  funció del tipo de variable
 
 
 
--Un procès discret amb el temps discret , que s'anomena cadena, seria l'exemple   \@ref(exm:cadena) on es veia en 30 clients que entraven en una botiga si compraven o no
+-Un procès discret amb el temps discret (**DTDV*+- Discret Time/Discret Values) , que s'anomena cadena, seria l'exemple   \@ref(exm:cadena) on es veia en 30 clients que entraven en una botiga si compraven o no
 
--Un procés  continu en un temps discret s'anomena un succeció de variables. Si en el cas anterior en lloc de mesurar si compra o no compra haguessim mesurat l 'alçada o el pes del client seria un bon exemple
+-Un procés  continu en un temps discret  (**DTCV**- Discret Time/Continous Values)s'anomena un succeció de variables. Si en el cas anterior en lloc de mesurar si compra o no compra haguessim mesurat l 'alçada o el pes del client seria un bon exemple
 
--Un procès puntual com el de l'exemple  \@ref(exm:ppuntual) on es mesura el número de urgències en un determinat temps és el cas on el procès es discret pero el temps és continu. 
+-Un procès puntual com el de l'exemple  \@ref(exm:ppuntual) on es mesura el nombre de urgències en un determinat temps és el cas on el procès es discret pero el temps és continu.(**CTDV**+-Continous Time/Discret Values) 
 
--El procès continu es aquell en el que la variable es continua i el temps també. Es el cas de  l'exemple \@ref(exm:pcontinu) on es mesura el $VO_2$ d'un esportista en 10 minuts d'esforç
+-El procès continu es aquell en el que la variable es continua i el temps també(**CTCV**+-Continous Time/Continous Values) . Es el cas de  l'exemple \@ref(exm:pcontinu) on es mesura el $VO_2$ d'un esportista en 10 minuts d'esforç
 
 
 ## Processos estocàstics estacionaris i no estacionaris.
@@ -287,7 +285,27 @@ X_{t_1}-X_{t_0},X_{t_2}-X_{t_1},...,X_{t_n}-X_{t_{n-1}}
 són independents.
 :::
 
-En l'exemple \@ref(exm:ppuntual) sobre el nombre d'urgències, el número de urgències en la primera hora és independent del de la segona hora i de la tercera hora.
+En l'exemple \@ref(exm:ppuntual) sobre el nombre d'urgències, el nombre de urgències en la primera hora és independent del de la segona hora i de la tercera hora.
+
+
+
+:::{.definition}
+**Processos de Markov**
+
+Sea  $\textbf{X}=\{X_t\}_{t \in T}$ es diu que es un procés estòcastic de Markov si satisfà  la propietat de Markov, és a dir
+
+$$
+P(X_{t_n}=x_n|X_{t_{n-1}}=x_{n-1},...,X_{t_0}=x_0)=P(X_{t_n}=x_n|X_{t_{n-1}}=x_{n-1})
+$$
+amb $t_0<t_1<....<t_n, t_i \in T$ 
+:::
+Aquest tipus de processos son aquells on l'evolució futura depen només del estat present del procés. 
+
+
+
+ L'exemple \@ref(exm:ppuntual) sobre el nombre d'urgències també es un procés de Markov. Per calcular el nombre de urgències en l'instant t+`s, nom´s necessitem saber quants hi ha en t ( present), donat que les arribades futures són independents de les passades i saber en quin temps estem no aporta cap informació. en la primera hora és independent del de la segona hora i de la tercera hora.
+
+
 
 
 :::{.definition}
@@ -325,7 +343,7 @@ $$
 
 :::
 
---
+
 Una forma equivalent de definir l’estacionarietat dèbil és dir que un procès es dèbilment estacionari si i només si te esperança constant i la covariància entre $X_{t_1}$ i $X_{t_2}$ només depen de $t_2-t_1$. La estacionarietat dèbil implica la estacionarietat forta.
 
 

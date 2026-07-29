@@ -1,13 +1,21 @@
-# Variables aleatòries multivariants
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+\newpage
+
+# Variables aleatòries multivariades
 
 
 ## Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat
 
 ### Introducció
 
-A qualsevol que se li pregunti quin temps es triga en recórrer  els 280 kiòmetres de distància entre Barcelona i Castelló, si es circula a una velocitat constant de 120km/h,  ens indicaria que en 2 hores i 20 minuts arribaríem a la destinació. Ara be, si se li pregunta quin serà el resultat de  llançar un dau  no tindria una resposta clara.
+A qualsevol que se li pregunti quin temps es triga en recórrer  els 280 quilòmetres de distància entre Barcelona i Castelló, si es circula a una velocitat constant de 120km/h,  ens indicaria que en 2 hores i 20 minuts arribaríem a la destinació. Ara be, si se li pregunta quin serà el resultat de  llançar un dau  no tindria una resposta clara.
   
-  * El primer resultat prové d'un fenomen o **experiència determinista.** Es prou en extreure de l'equació  $e=v·t$  el valor del temps
+  * El primer resultat prové d'un fenomen o **experiència determinista.** N'hi ha prou amb extreure de l'equació  $e=v·t$  el valor del temps
   * El segon pertany a la categoria dels fenòmens o **experiències aleatòries.** Es coneixen tots els resultats possibles, un número del 1 al 6 en el cas del dau, però no quin resultat es produirà, ja que de repetició en repetició sortiran resultats diferents.
 
 ### Conceptes bàsics: Experiment aleatori, mesura de probabilitat
@@ -16,7 +24,7 @@ A qualsevol que se li pregunti quin temps es triga en recórrer  els 280 kiòmet
 :::{.definition}
 
 
-Un **experiment** és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables.  Direm que l'experiment es **aleatori** si, executat sota les mateixes condicions, pot donar lloc a un resultat $w$ d'entre un conjunt de posibles resultats.
+Un **experiment** és una seqüència d’accions que, en repetir-se sota les mateixes condicions, produeix resultats observables.  Direm que l'experiment és **aleatori** si, executat sota les mateixes condicions, pot donar lloc a un resultat $w$ d'entre un conjunt de posibles resultats.
 
 :::
 
@@ -28,7 +36,7 @@ L’**espai mostral** d’un experiment, denotat per $\Omega$, és el conjunt de
 
 
 :::{.definition}
-Un **esdeveniment**  es una col·lecció  de possibles resultats d'un experiment, es a dir un subconjunt de $A \subseteq \Omega$.  Quan el resultat de l'experiment pertany al esdeveniment ($w \in A$), direm que a ocorregut l'esdeveniment. 
+Un **esdeveniment**  es una col·lecció  de possibles resultats d'un experiment, és a dir un subconjunt de $A \subseteq \Omega$. Quan el resultat de l'experiment pertany al esdeveniment ($w \in A$), direm que a ocorregut l'esdeveniment. 
 :::
 
 
@@ -131,7 +139,7 @@ Per exemple imaginem que llancem dos daus. L'espai mostral serà $\Omega={(1,1),
 ---
 
 
-El resultat d'un experiment aleatori no es tant l'espai de probabilitat resultant, sino les caracterìstiques numèriques associades. Això implica passar de $\Omega$ a  $\mathbb{R}$ o  $\mathbb{R}^k$ on es més fàcil treballar.  Com hem comentat en  $\mathbb{R}$ podem parlar de la $\sigma-álgebra$ de Borel $\beta$ que és la menor que conté els intervals i que permet parlar del espai de probabilitat $(\mathbb{R},\beta)$
+El resultat d'un experiment aleatori no es tant l'espai de probabilitat resultant, sino les caracterìstiques numèriques associades. Això implica passar de $\Omega$ a  $\mathbb{R}$ o  $\mathbb{R}^k$ on es més fàcil treballar.  Com hem comentat en  $\mathbb{R}$ podem parlar de la $\sigma-álgebra$ de Borel $\beta$ que és la menor que conté els intervals i que permet parlar de l'espai de probabilitat $(\mathbb{R},\beta)$
 
 
 
@@ -190,7 +198,7 @@ $P_X$ hereta les característiques de P a través de X. Sí X canvia  a distribu
 
 :::{.example}
 
-Si tornem a l'exemple de llençar dos daus podem definir dues variables aleatòries. *X* que sigui la suma dels resultats dels dos daus i *Y* que sigui la diferència dels resultats. Encara que les dues variables estàn definides en el mateix espai de probabilitat, $P_X$ y $P_Y$ son diferents per que estan induïdes per variables diferents.
+Si tornem a l'exemple de llençar dos daus podem definir dues variables aleatòries. *X* que sigui la suma dels resultats dels dos daus i *Y* que sigui la diferència dels resultats. Encara que les dues variables estàn definides en el mateix espai de probabilitat, $P_X$ i $P_Y$ son diferents per que estan induïdes per variables diferents.
 
 En cap cas la suma de les dues cares de un dau son 0, però ens 6 situacions les dues cares poden ser iguals. Si calculem amb els dues distribucions la probabilitat de que la variable aleatòria sigui 0, dona resultats diferents.
 
@@ -223,7 +231,7 @@ La funció de distribució te les següents propietats
 1. És una funció no negativa per la propia definció
 2. És una funció monòtona  ja que $F_X(x_1) \leq F_X(x_2) \quad$ si $\quad x_1 \leq x_2$
 3. És una funció continua per la dreta . Es a dir si es considera una succesió de números reals $x_n \rightarrow x$  llavors $\lim_{n \rightarrow \infty}F_X(x_n)=F_X (x)$
-4. $\lim_{x \rightarrow \infty} F_X(x)=1$  y  $\lim_{x \rightarrow -\infty} F_X(x)=0$
+4. $\lim_{x \rightarrow \infty} F_X(x)=1$  i  $\lim_{x \rightarrow -\infty} F_X(x)=0$
 
 Del punt 3 es dedueix que si $(- \infty,x] =\{ x \} \cup \lim_{n \rightarrow  \infty} (- \infty, x-\frac{1}{n} )$  la funció de distribució en X es
 
@@ -244,7 +252,7 @@ $$
 
 :::{.example}
 
-Suposem que a un pacient se le indica que trie un nombre real entre 0 i 10 per indicar el seu nivell de dolor (Escala analógica Visual (EVA)) i que tots els valors tenen la mateixa probabilitat de ser triats.
+Suposem que a un pacient se li indica que trie un nombre real entre 0 i 10 per indicar el seu nivell de dolor (Escala analógica Visual (EVA)) i que tots els valors tenen la mateixa probabilitat de ser triats.
 
 Definim la variable aleatòria X com el nivell de dolor i es vol obtenir la funció de distribució que reflexa la probabilitat de que el nombre escollit sigui menor o igual que 3.
 $$
@@ -261,7 +269,7 @@ F_X(x)=
 \begin{cases}
 0, & \text{si } x <0 \\
 \frac {x}{10}, &  0 \leq x \leq 10 \\
-0, & x>10
+1, & x>10
 \end{cases}
 $$
 :::
@@ -306,7 +314,7 @@ Alguns exemples de variables aleatòries discretes que venen definides per les s
 
 
 :::{.definition}
-**Funció de densitat o  probabilitat de una variable aleatòria continua**
+**Funció de densitat o  probabilitat d'una variable aleatòria continua**
 
 Una variable aleatòria X és continua si la seva funció de distribució F_X , es absolutament continua.  A efectes pràctics disposem  la funció de densitat f_X(x), coneguda de manera que
 
@@ -356,7 +364,7 @@ Molts experiments aleatoris produeixen més d'una única quantitat rellevant, é
 
 
 :::{.example}
-- En economia podem estar interessants en conèixer la distribució d' ingressos d'una persona i per altra costat el % dels ingressos dedicats al pagament de la vivenda (lloger o hipoteca). Cada individu estarà representat per un vector composat per dues variables uniDImensionals
+- En economia podem estar interessants en conèixer la distribució d' ingressos d'una persona i per altra costat el % dels ingressos dedicats al pagament del habitatge (lloger o hipoteca). Cada individu estarà representat per un vector composat per dues variables uniDImensionals
 :::
 
 :::{.example}
@@ -369,7 +377,7 @@ Molts experiments aleatoris produeixen més d'una única quantitat rellevant, é
 :::{.definition}
 **Vector aleatori**
 
-Un vector aleatori $\mathbf{X}=(X_1,X_2,.......,X_k)$,  es una aplicació del espai mostral  $\Omega$ en  $\mathbb{R}^k$ tal que
+Un vector aleatori $\mathbf{X}=(X_1,X_2,.......,X_k)$,  es una aplicació de l'espai mostral  $\Omega$ en  $\mathbb{R}^k$ tal que
 
 $$
 \mathbf{X}^{-1}(B) \in\mathcal{A}, \quad \forall B \in \beta^K
@@ -450,7 +458,7 @@ Es pot demostrar que $P_{XY}$ es una mesura de probabilitat ja que compleix els 
 :::{.definition}
 **Variable aleatoria  k- dimensional o multivariant**
 
-Si enlloc de 2 variables aleatòries unidimensionals generalitzem a n variables aleatèries, estarem parlant de una Variable aleatòria n-dimensional o multivariant.
+Si enlloc de 2 variables aleatòries unidimensionals generalitzem a n variables aleatèries, estarem parlant d'una Variable aleatòria n-dimensional o multivariant.
 
 Sigui $(\Omega, \mathcal{A},P)$ un espai de probabilitat . Podem definir la variable aleatòria multivariant $\overrightarrow{\bf{X}}=(X_1,X_2,...,X_{k-1},X_k)$
 
@@ -502,7 +510,7 @@ $$
 :::
 
 
-En la figura \@ref(fig:img-distbiv) es pot observar la diferència entre una distribució univariat que es una corba en dimensió 2 y o la funció de distribució conjunta bivariada  $F(x,y)= P(X \leq x, Y \leq y)$ que es tracta de una superfície en dimensió 3.
+En la figura \@ref(fig:img-distbiv) es pot observar la diferència entre una distribució univariat que es una corba en dimensió 2 o la funció de distribució conjunta bivariada  $F(x,y)= P(X \leq x, Y \leq y)$ que es tracta d'una superfície en dimensió 3.
 
 ```{r img-distbiv, fig.cap="Distribució continua bivariada", echo=FALSE,fig.align='center',out.width="80%"}
 knitr::include_graphics("images/distbiv.png")
@@ -515,7 +523,7 @@ De la definició de funció de distribució conjunta es deriven les següents pr
 
 <li> <b> No negativitat </b> </li>
 
-Com a conseqüència que  la funció de distribució conjunta es una probabilitat, pren valors entre 0 y 1 i per tant sempre seran valors no negatius.
+Com a conseqüència que  la funció de distribució conjunta es una probabilitat, pren valors entre 0 1 i per tant sempre seran valors no negatius.
 
 <li> <b> Monotonia de cada component </b> </li>
 
@@ -726,7 +734,7 @@ $f(x_1,...,x_k)=\frac{\partial^k F_X(x_1,...,x_k)}{\partial x_1...\partial x_k}$
 :::{.example}
 
 
-En la figura \@ref(fig:img-densconjunta) es pot observar la representació de la funció de densitat $f_{XY}(x,y)$ d'una variable aleatòria continua bivariada. La superfície de la gràfica es el valor de la funció y la probabilitat ve determinada pel volum. Aquest volum ve calculat pel que s'anomena integral doble que te algunes especificitats que mostrarem en el següent apartat.  
+En la figura \@ref(fig:img-densconjunta) es pot observar la representació de la funció de densitat $f_{XY}(x,y)$ d'una variable aleatòria continua bivariada. La superfície de la gràfica es el valor de la funció la probabilitat ve determinada pel volum. Aquest volum ve calculat pel que s'anomena integral doble que te algunes especificitats que mostrarem en el següent apartat.  
 
 ```{r img-densconjunta, fig.cap="Funció de densitat conjunta bivariada", echo=FALSE,fig.align='center',out.width="80%"}
 knitr::include_graphics("images/densconjunta.png")
@@ -802,7 +810,7 @@ $V=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy$
 
 $\int (x+y)dy= \frac{x^2}{2}+xy$
 
-que avaluat en x=1 y i x=2 dona
+que avaluat en x=1 i x=2 dona
 
 $\frac{2^2}{2}+2y -\frac{1}{2}+y=2+2y-\frac{1}{2}-y=\frac{3}{2}+y$
 
@@ -865,7 +873,7 @@ $$
 
 obtenim que  el valor de la integral en el triangle es 12. En aquest cas hem fixat $x$ i hem trobat el rang de variació de $y$ dins del recinte d'integració A en funció de $x$ com es pot veure en la figura  \@ref(fig:graf-triangle) esquerra.
 
-Si integrem primer en funció de $x$  i després de  $y$  hem de fixar $y$ i despeés trovar la variació de y en funció de $x$ es a dir 
+Si integrem primer en funció de $x$  i després de  $y$  hem de fixar $y$ i després trovar la variació de i en funció de $x$ es a dir 
 $A=\{ (x,y) \in  \mathbb{R}^2: 2 \leq y \leq 4, y \leq x \leq 4 \}$
 
 
@@ -943,7 +951,7 @@ Sigui
 $$
 \forall A \subseteq \Omega \text{ per a } \omega \in \Omega, \quad  I_A(\omega)= \begin{cases} 1 & \text{ si } \omega \in A  \\ 0, &\text { si } \omega \notin A  \end{cases}
 $$
-donat que la funció $f(x,y) \leq 0$ per a tot $(x,y) \in \mathbb{R}^2$ será de densitat si i només si
+donat que la funció $f(x,y) \geq 0$ per a tot $(x,y) \in \mathbb{R}^2$ será de densitat si i només si
 
 
 $$
@@ -1004,7 +1012,7 @@ $$
 :::{.example}
 
 
-Generem un triangle  T amb vèrtexs en les coordenades (0,0), (1,0) y (0,2),  como es veu en la figura \@ref(fig:graf-triangle2). Repartim la masa de probabilitat uniformment en el triangle donat que l'elegim a l'atzar un punt del triangle.  Per a un àrea qualsevol  la probabilitat de aquella àrea es
+Generem un triangle  T amb vèrtexs en les coordenades (0,0), (1,0) (0,2),  como es veu en la figura \@ref(fig:graf-triangle2). Repartim la masa de probabilitat uniformment en el triangle donat que l'elegim a l'atzar un punt del triangle.  Per a un àrea qualsevol  la probabilitat de aquella àrea es
 
 $$
 P((X,Y) \in A)= \frac {\parallel A \cap T\parallel}{\parallel T\parallel}
@@ -1023,17 +1031,17 @@ F_{X,Y}(x,y)=P((x,y) \in S_{xy}={\parallel S_{xy} \cap T \parallel}
 $$
 on $S_{xy}= (-\infty,x] \times (-\infty,y]$.
 
-Así podem obtenir la funció conjunta simplement aplicant una mica de geometria segons l'ubicació del punt (x,y) en el pla y aplicant la definició de la funció de distribució conjunta con la intersecció amb el triangle y que l'equació de la hipotenusa es 2x+y=2 
+Así podem obtenir la funció conjunta simplement aplicant una mica de geometria segons l'ubicació del punt (x,y) en el pla aplicant la definició de la funció de distribució conjunta con la intersecció amb el triangle que l'equació de la hipotenusa es 2x+y=2 
 
 
 $$
 F_{XY}(x,y)=
 \begin{cases}
 0,              & \text{si } x <0 \quad ó \quad   y<0 \\
-xy ,            & \text{si } (x,y) \in T  \text{ (tipo 1)} \\
-xy-(x+y/2-1)^2, & \text{si } (x,y) \notin T \quad \& \quad 0< x \leq 1,0<y \leq 2 \text{ (tipo 2)} \\
-2x-x^2          & \text{si } (x,y)  \notin T \quad \& \quad 0< x \leq 1, 2<y \text{ (tipo 3)} \\
-y-y^2/4 ,       & \text{si } (x,y)  \notin T \quad \& \quad 1< x1,0<y \leq 2 \text{ (tipo 4)} \\
+xy ,            & \text{si } (x,y) \in T  \text{ (tipus 1)} \\
+xy-(x+y/2-1)^2, & \text{si } (x,y) \notin T \quad \& \quad 0< x \leq 1,0<y \leq 2 \text{ (tipus 2)} \\
+2x-x^2          & \text{si } (x,y)  \notin T \quad \& \quad 0< x \leq 1, 2<y \text{ (tipus 3)} \\
+y-y^2/4 ,       & \text{si } (x,y)  \notin T \quad \& \quad 1< x1,0<y \leq 2 \text{ (tipus 4)} \\
 1 ,             & \text{si } x \geq 1 \quad ó \quad   y \geq 2 \\  
 \end{cases}
 $$
@@ -1042,7 +1050,9 @@ Cal observar que les expressions de F_{XY}(x,y)  depenen només de $x$ i de $y$.
 
 $F_{X}(x)= F_X(x,y)$ 
 
-- Si $x\leq 0$ per qualesvol y  $F_x(x,y)=0$ i per tant el limit quan $\lim_{y \rightarrow +\infty}$ es 0                                                                                                                                                                                                          - Si  $O<x<1$  al fer que  y $y \rightarrow+\infty$ el punt es situa en la zona tipo 3 y per tant la funció val $2x-x^2$
+- Si $x\leq 0$ per qualesvol y  $F_x(x,y)=0$ i per tant el limit quan $\lim_{y \rightarrow +\infty}$ es 0                      
+
+- Si  $O<x<1$  al fer que  y $y \rightarrow+\infty$ el punt es situa en la zona tipus 3 y per tant la funció val $2x-x^2$
  
 - Si $z /geq 1$   al fer que  y $y \rightarrow+\infty$ l punt es situa sobre el triangle y la probabilitat aculuada es 1
 
@@ -1056,7 +1066,7 @@ F_{X}(x)=
 \end{cases}
 $$
 
-Analogament podem obtenir la  funció de distribució de $Y$  on la diferència es que  entre 0 i 2 quan $x \rightarrow+\infty$ estarem en punts tipus 4 y la funció valdrà $y-\frac {y^2}{4}$
+Analogament podem obtenir la  funció de distribució de $Y$  on la diferència es que  entre 0 i 2 quan $x \rightarrow+\infty$ estarem en punts tipus 4 i  la funció valdrà $y-\frac {y^2}{4}$
 
 
 $$
@@ -1089,7 +1099,7 @@ $$
 :::{.example #marginal}
 
 
-Si  revisem la taula del exemple  \@ref(exm:taula-discreta), on en primer lloc es llança una moneda y després un dau. Observem que la darrera fila conté les probabilitats marginals d'observar cara o creu, obteneint un valor de 1/2 per cada columna. La darrera columna conté les marginals d'obtenir un resultat de les cares del dau , és a dir 1/6 per cada fila.
+Si  revisem la taula del exemple  \@ref(exm:taula-discreta), on en primer lloc es llança una moneda i  després un dau. Observem que la darrera fila conté les probabilitats marginals d'observar cara o creu, obteneint un valor de 1/2 per cada columna. La darrera columna conté les marginals d'obtenir un resultat de les cares del dau , és a dir 1/6 per cada fila.
 
 
 
@@ -1198,7 +1208,7 @@ $$
 $f_{X|Y}(x|y)$ es efectivamkente una función de probabilitat per qué complexis les dues propietats
 
 - Es una funció no negativa la tractar-se d'una función no neegativa
-- y la suma sobre la funció de soport $D_Y$ es l'a unitat 
+- i la suma sobre la funció de soport $D_Y$ es l'a unitat 
 
 $$
 \sum_{x_i \in D_X} f_{X|Y}(x_i|y_j)= \frac{ \sum_{x_i \in D_X } f_{XY}(x_i,y_j)}  {f_Y(y_j)}=\frac  {f_Y(y_j)} {f_Y(y_j)}=1
@@ -1207,7 +1217,7 @@ $$
 
 ::: {.example }
 
-Tornem a  l'exemple de la moneda  i el dau  i la taula de probabiliatats que es mostra en l'exemple \@ref(exm:marginal) on Y es el valor del dau y X es el resultat de la moneda. 
+Tornem a  l'exemple de la moneda  i el dau  i la taula de probabiliatats que es mostra en l'exemple \@ref(exm:marginal) on Y es el valor del dau i  X es el resultat de la moneda. 
 
 Calculem la probabilitat de treure una cara donat que el dau ha resultat el valor 4. 
 
@@ -1230,7 +1240,7 @@ Això serà rellevant més endavant quan parlem del concepte d'independència
 :::{.definition}
 **Funció de densitat condicional**
 
-Siguin X e Y dues variables aleatòries continues on $f_{XY}$ es la funció de densitat conjunta , i $f_X$ i $f_Y$ son les funcions de densitat marginal.  Definim la densitat condicional de X donat que $Y=y$ a la funció 
+Siguin X i Y dues variables aleatòries continues on $f_{XY}$ es la funció de densitat conjunta , i $f_X$ i $f_Y$ son les funcions de densitat marginal.  Definim la densitat condicional de X donat que $Y=y$ a la funció 
 
 
 $$
@@ -1485,7 +1495,7 @@ $$
 \begin{aligned}
 E[|U_1-U_2|] &=\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty}  g(u_1,u_2)f(u_1,u_2)du_1du_2=\int_{0}^{1}\int_{0}^{1} |u_1-u_2|du_1du_2  \\
 &=\int_0^1\int_0^1 1_{(u_1 \geq u_2)} (u_1-u_2) du_1du_2 +\int_0^1\int_0^1 1_{(u_1 \leq u_2)} (u_2-u_1) du_1du_2  \\
-&=\int_0^1\int_0^{u_1}(u1_u2) du_2du_1 + \int_{0}^{1}\int_{0}^{u_2}(u2_u1) du_1du_2  \\
+&=\int_0^1\int_0^{u_1}(u_1-u_2) du_2du_1 + \int_{0}^{1}\int_{0}^{u_2}(u_2-u_1) du_1du_2  \\
 &= \int_0^1 \left [u_1u_2 - \frac {u_2^2}{2}  \right]_0^{u_1}du_1+\int_0^1 \left [u_2u_1 - \frac {u_1^2}{2}  \right]_0^{u_2}du_2=\int_0^1 ( u_1^2 - \frac {u_1^2}{2})  du_1+\int_0^1 ( u_2^2 - \frac {u_2^2}{2})  du_2 \\
 &=\int_0^1 ( \frac {u_1^2}{2})  du_1+\int_0^1 (  \frac {u_2^2}{2})  du_2= \left [ \frac {u_1^2}{2 \times 3} \right]_0^1+\left [ \frac {u_2^2}{2 \times 3} \right]_0^1= \frac {1}{2 \times 3}+\frac {1}{2 \times 3}=\frac {1}{3} 
 \end{aligned}
@@ -1523,7 +1533,7 @@ La linialitat de l'esperança aplicada quan $g(X)=X_1+...+X_k$ permet concloure 
 $$
 E(X_1+...+X_k) =\sum_{i=1}^kE(X_i)
 $$
-Així mateix si $g(X)=\sum_{i=1}^k (a_i X_i)$ obtenim que l'esperançade de una constant per una variable es la constant per l'esperança de la variable
+Així mateix si $g(X)=\sum_{i=1}^k (a_i X_i)$ obtenim que l'esperançade d'una constant per una variable es la constant per l'esperança de la variable
 
 
 $$
@@ -1539,7 +1549,7 @@ $$
 :::{.Definition}
 **Covariància**
 
-Un moment d'especial interès  és el moment conjunt central que s'obtè per a les variables $X_i$ i $X_j$  $n_i=1, n_j=1 \quad  i \quad  n_l=0, l\neq (i,j)$ que anomenarem covariància 
+Un moment d'especial interès  és el moment conjunt central que s'obté per a les variables $X_i$ i $X_j$  $n_i=1, n_j=1 \quad  i \quad  n_l=0, l\neq (i,j)$ que anomenarem covariància 
 
 
 $$
@@ -1663,7 +1673,7 @@ $$
 
 Sigui $X=(X_1,..., X_k)$ un vector aleatori  continu  amb soport $D_X$, és a dir $P((X_1,...,X_k) \in D_X)=1$, i sigui $g=(g_1,...,g_k):\mathbb{R^k} \rightarrow  \mathbb{R^k}$   una funció vectorial que verifica:
 
-1. g es uno a uno sobre Dx
+1. g es unívoca sobre Dx
 
 2. el  Jacobiano de g, $J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }$ es diferente de cero $\forall x \in D_X$
 
@@ -1679,7 +1689,7 @@ on $|J^{-1}|=\frac{\partial (h_1,....,h_k)}{\partial (y_1,...,y_k) }$ és el Jac
 :::
 
 
-La demostració d'aquest teorema no es més que el teorema del canvi de variable en una integral múltiple y la seva demostració rigorosa, pot trobar-se en qualsevol llibre d'Anàlisi Matemàtica.
+La demostració d'aquest teorema no es més que el teorema del canvi de variable en una integral múltiple i  la seva demostració rigorosa, pot trobar-se en qualsevol llibre d'Anàlisi Matemàtica.
 
 ---
 
@@ -1956,7 +1966,7 @@ $$
  
  
 
-### Producte de dues variables aleatòries
+### Quocient de dues variables aleatòries
 
 En el cas del quocient $Q=XY$ i com abans definint V=X tenim que podem calcular la distribució conjunta (Q,V) aplicant el teorema  \@ref(thm:thm-cambio)  partir de les funcions inverses  X=V i Y=QV i el Jacobià 
   
@@ -1992,7 +2002,7 @@ I la distribució marginal del producto s'obté integran respecte a l'altra comp
 
 
 $$
-f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(\dfrac{w}{v},v)dv
+f_{Q}(q)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(\dfrac{q}{v},v)dv
 $$
 
  

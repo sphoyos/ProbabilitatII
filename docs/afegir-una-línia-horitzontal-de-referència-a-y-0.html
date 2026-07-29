@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ca" xml:lang="ca">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Afegir una línia horitzontal de referència a y = 0 | Probabilitat II</title>
+  <meta name="description" content="7 Afegir una línia horitzontal de referència a y = 0 | Probabilitat II" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Afegir una línia horitzontal de referència a y = 0 | Probabilitat II" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Afegir una línia horitzontal de referència a y = 0 | Probabilitat II" />
+  
+  
+  
+
+<meta name="author" content="Santi Perez-Hoyos" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="creació-del-gràfic.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.12/grViz.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="Rcode/custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><div style="padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
+<li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
+<li><h2 align="center">Probabilitat II</h2></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pla docent</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dades-generals"><i class="fa fa-check"></i>Dades generals</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#hores"><i class="fa fa-check"></i>Hores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#compet%C3%A8ncies-resultats-daprenentatge-que-es-desenvolupen"><i class="fa fa-check"></i>Competències / Resultats d’aprenentatge que es desenvolupen</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#objectius-daprenentatge"><i class="fa fa-check"></i>Objectius d’aprenentatge</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#blocs-tem%C3%A0tics-i-continguts-detallats"><i class="fa fa-check"></i>Blocs Temàtics i Continguts Detallats</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#metodologia-i-activitats-formatives"><i class="fa fa-check"></i>Metodologia i activitats formatives</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#avaluaci%C3%B3-acreditativa-dels-aprenentatges"><i class="fa fa-check"></i>Avaluació acreditativa dels aprenentatges</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariades</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
+<li class="chapter" data-level="1.1.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
+<li class="chapter" data-level="1.1.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
+<li class="chapter" data-level="1.1.4" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
+<li class="chapter" data-level="1.2.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
+<li class="chapter" data-level="1.2.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variables-aleatories-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatories multivariants continues</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#distribucions-marginals."><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals.</a></li>
+<li class="chapter" data-level="1.3.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#distribucions-condicionals"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions condicionals</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-univariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.1</b> Moments univariants: Esperança i Variància</a></li>
+<li class="chapter" data-level="1.4.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-multivariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperança i Variància</a></li>
+<li class="chapter" data-level="1.4.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#suma-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.1</b> Suma de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#producte-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.2</b> Producte de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#quocient-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.3</b> Quocient de dues variables aleatòries</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html"><i class="fa fa-check"></i><b>2</b> Independència de variables aleatories</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#independ%C3%A8ncia-i-depend%C3%A8ncia-entre-variables-aleat%C3%B2ries."><i class="fa fa-check"></i><b>2.1</b> Independència i dependència entre variables aleatòries.</a></li>
+<li class="chapter" data-level="2.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#esperances-i-vari%C3%A0ncies-condicionades."><i class="fa fa-check"></i><b>2.2</b> Esperances i variàncies condicionades.</a></li>
+<li class="chapter" data-level="2.3" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#conceptes-de-covari%C3%A0ncia-correlaci%C3%B3-i-causalitat"><i class="fa fa-check"></i><b>2.3</b> Conceptes de covariància, correlació i causalitat</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#desigualtats"><i class="fa fa-check"></i><b>2.3.1</b> Desigualtats</a></li>
+<li class="chapter" data-level="2.3.2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#covari%C3%A0ncia-i-correlaci%C3%B3"><i class="fa fa-check"></i><b>2.3.2</b> Covariància i Correlació</a></li>
+<li class="chapter" data-level="2.3.3" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html#causalitat-i-correlaci%C3%B3."><i class="fa fa-check"></i><b>2.3.3</b> Causalitat i correlació.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html"><i class="fa fa-check"></i><b>3</b> Algunes distribucions multivariants</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant-definici%C3%B3-propietats-i-aplicacions."><i class="fa fa-check"></i><b>3.1</b> Distribució normal multivariant: definició, propietats i aplicacions.</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-bivariant"><i class="fa fa-check"></i><b>3.1.1</b> Distribució normal bivariant</a></li>
+<li class="chapter" data-level="3.1.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-marginals-i-condicional-de-una-normal-bivariant."><i class="fa fa-check"></i><b>3.1.2</b> Distribucions marginals i condicional de una normal bivariant.</a></li>
+<li class="chapter" data-level="3.1.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant"><i class="fa fa-check"></i><b>3.1.3</b> Distribució normal multivariant</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribucions-especials-multinomial-t-student-multivariantkhi-quadrat-wishart-i-dirichlet."><i class="fa fa-check"></i><b>3.2</b> Distribucions especials: Multinomial, t-Student multivariant,Khi-quadrat, Wishart i Dirichlet.</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-multinomial"><i class="fa fa-check"></i><b>3.2.1</b> Distribució Multinomial</a></li>
+<li class="chapter" data-level="3.2.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-t-student-multivariant"><i class="fa fa-check"></i><b>3.2.2</b> Distribució t-student multivariant</a></li>
+<li class="chapter" data-level="3.2.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-khi-quadrat"><i class="fa fa-check"></i><b>3.2.3</b> Distribució khi-quadrat</a></li>
+<li class="chapter" data-level="3.2.4" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-de-whishart"><i class="fa fa-check"></i><b>3.2.4</b> Distribució de Whishart</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#propietats-de-la-distribuci%C3%B3-wishart"><i class="fa fa-check"></i><b>3.3</b> Propietats de la Distribució Wishart</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-dirichlet"><i class="fa fa-check"></i><b>3.3.1</b> Distribució Dirichlet</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#propietat-daggregaci%C3%B3-de-la-distribuci%C3%B3-de-dirichlet"><i class="fa fa-check"></i><b>3.4</b> Propietat d’aggregació de la distribució de Dirichlet</a></li>
+<li class="chapter" data-level="3.5" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#generaci%C3%B3-de-mostres-de-distribucions-multivariants."><i class="fa fa-check"></i><b>3.5</b> Generació de mostres de distribucions multivariants.</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#revisi%C3%B3-de-m%C3%A8todes-de-generaci%C3%B3-de-mostres-de-variables-aleat%C3%B2ries-univariants"><i class="fa fa-check"></i><b>3.5.1</b> Revisió de mètodes de generació de mostres de variables aleatòries univariants</a></li>
+<li class="chapter" data-level="3.5.2" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#generaci%C3%B3-de-variables-aleat%C3%B2ries-multivariants-utilitzant-distribuci%C3%B3n-condicionals"><i class="fa fa-check"></i><b>3.5.2</b> Generació de variables aleatòries multivariants utilitzant distribución condicionals</a></li>
+<li class="chapter" data-level="3.5.3" data-path="algunes-distribucions-multivariants.html"><a href="algunes-distribucions-multivariants.html#generaci%C3%B3-de-vectors-aleatoris-de-una-distribuci%C3%B3-normal-multivariant"><i class="fa fa-check"></i><b>3.5.3</b> Generació de vectors aleatoris de una distribució normal multivariant</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html"><i class="fa fa-check"></i><b>4</b> Processos estocàstics: Introducció i conceptes bàsics</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic"><i class="fa fa-check"></i><b>4.1.1</b> Funcions de moment un procès estocástic</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.2</b> Processos estocàstics discrets i continus.</a></li>
+<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html"><i class="fa fa-check"></i><b>5</b> Principals tipus de Processos estocàstics.</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#cadenes-de-markov."><i class="fa fa-check"></i><b>5.1</b> Cadenes de Markov.</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#classificaci%C3%B3-dels-estats-i-comunnicacions-duna-cadena-de-markov"><i class="fa fa-check"></i><b>5.1.1</b> Classificació dels estats i comunnicacions d’una cadena de Markov</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#passeig-o-caminades-aleat%C3%B2ries."><i class="fa fa-check"></i><b>5.2</b> Passeig o Caminades aleatòries.</a></li>
+<li class="chapter" data-level="7.1" data-path="afegir-una-línia-horitzontal-de-referència-a-y-0.html"><a href="afegir-una-línia-horitzontal-de-referència-a-y-0.html"><i class="fa fa-check"></i><b>7.1</b> Processos de Poisson.</a></li>
+<li class="chapter" data-level="7.2" data-path="afegir-una-línia-horitzontal-de-referència-a-y-0.html"><a href="afegir-una-línia-horitzontal-de-referència-a-y-0.html#moviment-browni%C3%A0."><i class="fa fa-check"></i><b>7.2</b> Moviment Brownià.</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com" target="_blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Probabilitat II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="afegir-una-línia-horitzontal-de-referència-a-y-0" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Afegir una línia horitzontal de referència a y = 0<a href="afegir-una-línia-horitzontal-de-referència-a-y-0.html#afegir-una-l%C3%ADnia-horitzontal-de-refer%C3%A8ncia-a-y-0" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>abline(h = 0, col = “red”, lty = 2, lwd = 1.2)
+grid()
+```</p>
+</div>
+</div>
+</div>
+<div id="processos-de-poisson." class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Processos de Poisson.<a href="afegir-una-línia-horitzontal-de-referència-a-y-0.html#processos-de-poisson." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Text aquí.</p>
+</div>
+<div id="moviment-brownià." class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Moviment Brownià.<a href="afegir-una-línia-horitzontal-de-referència-a-y-0.html#moviment-browni%C3%A0." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Text aquí.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="creació-del-gràfic.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection",
+    "scroll_highlight": true
+  },
+  "toolbar": "fixed"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,3 +1,6 @@
+
+\newpage
+
 # Independència de variables aleatories
 
 

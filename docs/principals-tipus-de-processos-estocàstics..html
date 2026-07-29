@@ -53,8 +53,77 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.12/grViz.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -89,37 +158,37 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#metodologia-i-activitats-formatives"><i class="fa fa-check"></i>Metodologia i activitats formatives</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#avaluaci%C3%B3-acreditativa-dels-aprenentatges"><i class="fa fa-check"></i>Avaluació acreditativa dels aprenentatges</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariants</a>
+<li class="chapter" data-level="1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariades</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
+<li class="chapter" data-level="1.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
-<li class="chapter" data-level="1.1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
-<li class="chapter" data-level="1.1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
-<li class="chapter" data-level="1.1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
+<li class="chapter" data-level="1.1.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
+<li class="chapter" data-level="1.1.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
+<li class="chapter" data-level="1.1.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
+<li class="chapter" data-level="1.1.4" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
+<li class="chapter" data-level="1.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
-<li class="chapter" data-level="1.2.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
-<li class="chapter" data-level="1.2.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleatories-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatories multivariants continues</a></li>
+<li class="chapter" data-level="1.2.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
+<li class="chapter" data-level="1.2.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
+<li class="chapter" data-level="1.2.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variables-aleatories-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatories multivariants continues</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
+<li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals."><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals.</a></li>
-<li class="chapter" data-level="1.3.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-condicionals"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions condicionals</a></li>
+<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#distribucions-marginals."><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals.</a></li>
+<li class="chapter" data-level="1.3.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#distribucions-condicionals"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions condicionals</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a>
+<li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a>
 <ul>
-<li class="chapter" data-level="1.4.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-univariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.1</b> Moments univariants: Esperança i Variància</a></li>
-<li class="chapter" data-level="1.4.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperança i Variància</a></li>
-<li class="chapter" data-level="1.4.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
+<li class="chapter" data-level="1.4.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-univariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.1</b> Moments univariants: Esperança i Variància</a></li>
+<li class="chapter" data-level="1.4.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-multivariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperança i Variància</a></li>
+<li class="chapter" data-level="1.4.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a>
+<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a>
 <ul>
-<li class="chapter" data-level="1.5.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#suma-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.1</b> Suma de dues variables aleatòries</a></li>
-<li class="chapter" data-level="1.5.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.2</b> Producte de dues variables aleatòries</a></li>
-<li class="chapter" data-level="1.5.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries-1"><i class="fa fa-check"></i><b>1.5.3</b> Producte de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#suma-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.1</b> Suma de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#producte-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.2</b> Producte de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#quocient-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.3</b> Quocient de dues variables aleatòries</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html"><i class="fa fa-check"></i><b>2</b> Independència de variables aleatories</a>
@@ -161,15 +230,18 @@
 <ul>
 <li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic"><i class="fa fa-check"></i><b>4.2.1</b> Funcions de moment un procès estocástic</a></li>
+<li class="chapter" data-level="4.1.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic"><i class="fa fa-check"></i><b>4.1.1</b> Funcions de moment un procès estocástic</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics discrets i continus.</a></li>
-<li class="chapter" data-level="4.4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.4</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
+<li class="chapter" data-level="4.2" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.2</b> Processos estocàstics discrets i continus.</a></li>
+<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html"><i class="fa fa-check"></i><b>5</b> Principals tipus de Processos estocàstics.</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#cadenes-de-markov."><i class="fa fa-check"></i><b>5.1</b> Cadenes de Markov.</a></li>
-<li class="chapter" data-level="5.2" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#caminades-aleat%C3%B2ries."><i class="fa fa-check"></i><b>5.2</b> Caminades aleatòries.</a></li>
+<li class="chapter" data-level="5.1" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#cadenes-de-markov."><i class="fa fa-check"></i><b>5.1</b> Cadenes de Markov.</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#classificaci%C3%B3-dels-estats-i-comunnicacions-duna-cadena-de-markov"><i class="fa fa-check"></i><b>5.1.1</b> Classificació dels estats i comunnicacions d’una cadena de Markov</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#passeig-o-caminades-aleat%C3%B2ries."><i class="fa fa-check"></i><b>5.2</b> Passeig o Caminades aleatòries.</a></li>
 <li class="chapter" data-level="5.3" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#processos-de-poisson."><i class="fa fa-check"></i><b>5.3</b> Processos de Poisson.</a></li>
 <li class="chapter" data-level="5.4" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#moviment-browni%C3%A0."><i class="fa fa-check"></i><b>5.4</b> Moviment Brownià.</a></li>
 </ul></li>
@@ -195,21 +267,799 @@
             <section class="normal" id="section-">
 <div id="principals-tipus-de-processos-estocàstics." class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">5</span> Principals tipus de Processos estocàstics.<a href="principals-tipus-de-processos-estocàstics..html#principals-tipus-de-processos-estoc%C3%A0stics." class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>En el tema passat hem introducit els principals conceptes dels processos estòcastics, que neixen de la necessitat d’analitzar col·leccions de variables aleatòries ordenades cronològicament. En la pràctica modelar la depèndencia temporal es un repte, i els models es simplifiquen utilitzant diverses propietas per tal de no avaluar l’història completa que normalment es matemàticament inviable. En auqest temas avaluarem alguns tipus de processos estòcastics que s’ajusten a nombroses situacions reals.</p>
 <div id="cadenes-de-markov." class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Cadenes de Markov.<a href="principals-tipus-de-processos-estocàstics..html#cadenes-de-markov." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí.</p>
+<p>En el tema anterior varem definir un procés de Markov com aquell que per conéixer l’estat futur del procés només cal conèixer l’estat actual i oblidarmos del passat.</p>
+<p><span class="math display">\[
+P(X_{t_n}=x_n |X_{t_{n-1}}=x_{n-1}, \cdots ,X_{t_0}=x_0)=P(X_{t_n}=x_n|X_{t_{n-1}}=x_{n-1})
+\]</span></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-94" class="definition"><strong>Definició 5.1  </strong></span><strong>Cadena de markov</strong></p>
+<p>Si un procés estòcastic DTDV, és a dir discret amb el temps i amb un nombre finit d’estats compleix la propietat de markov es una cadena de markov</p>
+<p>Es costum designar com a <span class="math inline">\(X_0\)</span> l’inici de la cadena. Considerem com espai d’estats de la cadena al suport de les variables del procès <span class="math inline">\(X_n\)</span>, <span class="math inline">\(S=(s_1,...,s_k)\)</span> on <span class="math inline">\(n \in \mathbb{N} \cup \{0\}\)</span></p>
 </div>
-<div id="caminades-aleatòries." class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Caminades aleatòries.<a href="principals-tipus-de-processos-estocàstics..html#caminades-aleat%C3%B2ries." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí.</p>
+<p>Per caracterítzar les cadenes de Markov necessitem definir les probabilitats inicials i de transició.</p>
+<p><strong>Probabilitats inicials</strong></p>
+<p>Les probabilitats inicials sòn les probabilitats de cada un dels possibles estat a linici del procés</p>
+<p><span class="math display" id="eq:pi">\[
+\pi_i=P(X_0=s_i), \quad  \pi_i \geq 0, \forall i=1,...,k, \qquad \Sigma_i \pi_i=1  \tag{5.1}
+\]</span>
+<strong>Probabilitats de transició</strong></p>
+<p>Designarem com a probabilitats de transició d’un pas a ,la probabilitat condicionada de estar en un estat <span class="math inline">\(s_j\)</span> en un moment <span class="math inline">\(n+1\)</span> sabent que s’estava en un estat <span class="math inline">\(s_i\)</span> en el moment anterior <span class="math inline">\(n\)</span></p>
+<p><span class="math display" id="eq:pij">\[
+\pi_{ij}=P(X_n+1=s_j \mid X_n+1=s_i )  \tag{5.2}
+\]</span></p>
+<p>Si el valor de la probabilitat de transició <span class="math inline">\(\pi_{ij}\)</span> no depen del tems, es a dir la probabilitat de passar d’un estat a un altre només depen de l’estat i no del temps, tenim probabilitats de <strong>transició estacionaries ó homogènies</strong>.</p>
+<p><span class="math display">\[
+p_{ij}=P(X_n+1=s_j \mid X_n+1=s_i )   \quad  \text{ per a n=0,1,2,} \cdots  
+\]</span>
+A més les distribucions finito-dimensionals s’obtenen fàcilment a partir de les probabilitats de transició si fem us de la propietat de Markov i el teorema de factorització</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; P(X_n = s_{i_n}, X_{n-1} = s_{i_{n-1}}, \dots, X_0 = s_{i_0}) \\
+&amp;= P(X_n = s_{i_n} \mid X_{n-1} = s_{i_{n-1}}, \dots, X_0 = s_{i_0}) \cdots P(X_1 = s_{i_1} \mid X_0 = s_{i_0}) P(X_0 = s_{i_0}) \\
+&amp;= P(X_n = s_{i_n} \mid X_{n-1} = s_{i_{n-1}}) \cdots P(X_1 = s_{i_1} \mid X_0 = s_{i_0}) P(X_0 = s_{i_0}) \\
+&amp;= p_{i_{n-1}, i_n} \cdot p_{i_{n-2}, i_{n-1}} \cdots p_{i_0, i_1} \cdot \pi_{i_0}
+\end{aligned}
+\]</span></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-95" class="definition"><strong>Definició 5.2  </strong></span><strong>Matriu de transició</strong></p>
+<p>La cadena de Markov discreta, <span class="math inline">\(X_n\)</span>, queda completament especificada amb les probabilitats inicials i l’anomenada matriu de transició d’un pas, que recull les probabilitats del mateix nom:</p>
+<p><span class="math display" id="eq:ptransp">\[
+P =
+\begin{pmatrix}
+p_{11} &amp; p_{12}  &amp; \cdots  &amp; p_{1k} \\
+p_{21} &amp; p_{22} &amp; \cdots  &amp; p_{2k} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+p_{k1} &amp; p_{k12} &amp; \cdots &amp;  p_{kk}
+\end{pmatrix}
+\tag{5.3}
+\]</span></p>
+<p>D’acord con el significat de <span class="math inline">\(p_{ij}\)</span>, les files de la matriu sumen la unitat:</p>
+<p><span class="math display">\[
+\sum_{j} p_{ij} = 1, \quad \forall i=1,...,k
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-96" class="definition"><strong>Definició 5.3  </strong></span>Una matriu quadrada amb tots els elements no negatius i tals que la suma dels elements de cada fila sigui 1 s’anomena matriu estocàstica. La matriu de transició <span class="math inline">\(\mathbf{P}\)</span> d’una cadena de markov es una matriu estocàstica</p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:climapoble" class="example"><strong>Exemple 5.1  </strong></span>Imaginem que ens anem de vacances al poble i suposem que el clima del poble pot estar en un d’aquets tres estats posibles Sol(S), Nuvolat(N) ó Pluja(P)</p>
+<p>El procès <span class="math inline">\(X_n\)</span> que determina el temps que fará cadascun dels 30 dies de vacances seria un procés de Makov markov donat que el clima de demà no més depen del que hagi fet avui. En la figura <a href="principals-tipus-de-processos-estocàstics..html#fig:graf-clima">5.1</a> es mostra la reprentació gráica del procès on cada nus es un posible estat i les fletxes marquen les probabilitatsde transició entre estats-</p>
+<ul>
+<li><p>Si avui fa sol la probablitat de que demà faci sol és el 60%, de que estigui nuvolat el 30% i de que plogui el 10%.</p></li>
+<li><p>Si avui està nuvòl la probabilitat de que demà faci sol és el 40%, de que estigui nuvolat el 40% i de que plogui el 20%.</p></li>
+<li><p>Si avui plou la probabilitat de que demà faci sol és el 20%, de que estigui nuvolat el 40% i de que plogui el 40%.</p></li>
+</ul>
+<p>Aquestes probabilitats condicionals on indepents del dia que les mesurem.</p>
+<div class="figure"><span style="display:block;" id="fig:graf-clima"></span>
+<img src="images/graf-clima-1.png" alt="Exemple de cadena de markov del clima al poble" width="100%" />
+<p class="caption">
+Figura 5.1: Exemple de cadena de markov del clima al poble
+</p>
+</div>
+<p>A continuació es mostren les probabilitats en forma de matriu de transició.</p>
+<p><span class="math display">\[
+P =
+\begin{pmatrix}
+p_{SS} &amp; p_{SN} &amp; p_{SP} \\
+p_{NS} &amp; p_{NN} &amp; p_{NP} \\
+p_{PS} &amp; p_{PN} &amp; p_{PP}
+\end{pmatrix} =
+\begin{pmatrix}
+0.6 &amp; 0.3 &amp; 0.1 \\
+0.4 &amp; 0.4 &amp; 0.2 \\
+0.2 &amp; 0.4 &amp; 0.4
+\end{pmatrix}
+\]</span></p>
+</div>
+<hr />
+<p><strong>Probabilitats de transició a n pasos</strong></p>
+<p>En una cadena de markov les probabilitats de transició a n pasos son fàcils d’obtenir.</p>
+<p><span class="math display">\[
+p_{ij}(n) =P(X_{n+k}= s_j \mid X_k=s_i) \forall n\geq0
+\]</span>
+Com en una cadena de markov les transicions no depenen del temps <span class="math inline">\(k\)</span> i podem calcular</p>
+<p><span class="math display">\[
+p_{ij}(n) =P(X_{n+k}= s_j \mid X_k=s_i)P(X_{n}= s_j \mid X_0=s_i) \qquad \forall n\geq0 \text{ i } \forall k \geq 0
+\]</span>
+Si <span class="math inline">\(n=2\)</span> podem escriure</p>
+<p><span class="math display">\[
+\begin{aligned}
+P(X_2=s_j\mid X_0=s_i) &amp; = P\left(\{X_2=s_j\} \bigcap \left (\bigcup_k  \{X_1=s_k\}\right)\mid X_0=s_i \right) \\
+                      &amp;=\sum_k P(X_2=s_j,X_1=s_k|X_0=s_i) \\
+                      &amp;= \sum_k \dfrac {P(X_2=s_j,X_1=s_k,X_0=s_i)}{P(X_0=s_i)} \\
+                      &amp;= \sum_k \dfrac {P(X_2=s_j \mid X_1=s_k,X_0=s_i) P( X_1=s_k \mid X_0=s_i) P(X_0=s_i)}  {P(X_0=s_i)} \\
+                      &amp;= \sum_k P(X_2=s_j \mid X_1=s_k) P( X_1=s_k \mid X_0=s_i) \\
+                      &amp;=  \sum_k p_{ik}p_{kj} \\
+\end{aligned}
+\]</span></p>
+<p>Així podem escriure que la transició a 2 temps es <span class="math inline">\(\textbf{P}(2)=\textbf{P} \textbf{P}=\textbf{P}^2\)</span></p>
+<p>Aplicant el mateix raonament podem generalitzar a n pasos.
+<span class="math display" id="eq:ptranspn">\[
+\textbf{P}(n)=\textbf{P}(n-1) \textbf{P}=\textbf{P}^n   \tag{5.4}
+\]</span></p>
+<p>En general <span class="math inline">\(\textbf{P}(n+m)=\textbf{P}^n\textbf{P}^m\)</span> que terme a terme ho expresem com
+<span class="math display" id="eq:chapman">\[
+p_{ij}(n+m)=\sum_k p_{ik}(n)p_{kj}(m), \qquad n,m&gt;0, \forall (s_i,s_j)   \in S   \tag{5.5}
+\]</span>
+Aquestes expressions son conegudes com les equacions de <strong>Chapman-Kolmogorov</strong></p>
+<p><strong>Probabilitats dels estats desprès de n pasos</strong></p>
+<p>Si <span class="math inline">\(\pi_i\)</span> eren els probabilitats dels estats inicials es fàcil deduir que la probabilitat desprès de n pasos és:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\pi_i(n) &amp;= P(X_n = s_i) \\
+&amp;= P\left(\bigcup_j \{X_n = s_i \cap X_{n-1} = s_j\}\right) \\
+&amp;= \sum_j P(X_n = s_i \cap X_{n-1} = s_j) \\
+&amp;= \sum_j P(X_n = s_i \mid X_{n-1} = s_j) P(X_{n-1} = s_j) \\
+&amp;= \sum_j \pi_j(n-1) p_{ji}
+\end{aligned}
+\]</span></p>
+<p>resultat que podem expressar en forma matricial,</p>
+<p><span class="math display">\[
+\pi(n) = \pi(n-1)P
+\]</span></p>
+<p>Aplicant recursivament la fòrmual anterior podem relacionar <span class="math inline">\(\pi(n)\)</span> amb <span class="math inline">\(\pi = \pi(0)\)</span>,</p>
+<p><span class="math display">\[
+\pi(n) = \pi P^n
+\]</span></p>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-97" class="example"><strong>Exemple 5.2  </strong></span>Seguint les dades del exemple <a href="principals-tipus-de-processos-estocàstics..html#exm:climapoble">5.1</a> del clima al poble volem obtenir la matriu de transició per a un canvi de 2 dies i a partir de les dades generals .</p>
+<p>Per trobar les probabilitats de transició d’ací a dos dies, multipliquem la matriu per si mateixa (<span class="math inline">\(P^2 = P \times P\)</span>).</p>
+<pre><code>## Matriu de transició a 2 dies (P^2):</code></pre>
+<pre><code>##        Sol Núvol Pluja
+## Sol   0.50  0.34  0.16
+## Núvol 0.44  0.36  0.20
+## Pluja 0.36  0.38  0.26</code></pre>
+<p>Si se sap que el 50% dels dies hi ha sol, el 30% esta nuvolat i el 20% hi ha pluja i no tenim informació del dia que fa avui, ¿quina es la probabilitat qué en 5 dies faci sol?. ¿Y de que faci pluja?</p>
+<p>Per conèixer la distribució del clima en un horitzó temporal m, concretament d’ací a cinc dies, hem d’aplicar de manera iterativa el teorema de Chapman-Kolmogorov. Això implica que la probabilitat de transició després de cinc passos es calcula elevant la matriu original a la cinquena potència (<span class="math inline">\(P^5 = P \cdot P \cdot P \cdot P \cdot P\)</span>).
+La matriu resultante ens indicarà les probabilitats de passar d’un estat climàtic a un altre al cap de cinc dies, mostrant com evoluciona la dependència del clima respecte al dia inicial.
+Combinant el vector de la distribució del clima actual amb la matriu de transició a cinc passos mitjançant el producte matricial, obtenim el vector d’estat futur projectat:
+<span class="math display">\[\pi(5) = \pi(0) \cdot P^5\]</span></p>
+<pre><code>## Matriu de transició d&#39;ací a 5 dies (P^5):</code></pre>
+<pre><code>##           Sol   Núvol   Pluja
+## Sol   0.45352 0.35428 0.19220
+## Núvol 0.45120 0.35496 0.19384
+## Pluja 0.44792 0.35592 0.19616</code></pre>
+<pre><code>## Vector de probabilitats d&#39;ací a 5 dies (pi(5)):</code></pre>
+<pre><code>##           Sol    Núvol    Pluja
+## [1,] 0.451704 0.354812 0.193484</code></pre>
+<ul>
+<li><strong>Probabilitat de Sol d’ací a 5 dies:</strong> La probabilitat de tenir un dia assolellat és del <strong>45.17%</strong>(un valor de 0.4517).</li>
+<li><strong>Probabilitat de Pluja d’ací a 5 dies:</strong> La probabilitat que plogui d’ací a cinc dies és del <strong>19.35%</strong> (un valor de 0.1935).</li>
+</ul>
+</div>
+<hr />
+<hr />
+<div class="example">
+<p><span id="exm:dequilibri" class="example"><strong>Exemple 5.3  </strong></span>Si <span class="math inline">\(X_n\)</span> és la variable que indica si el n-ésim client en una botiga compra o no compra, es tracta d’una cadena de Markov discreta amb espai d’estats <span class="math inline">\(S = \{0=\text{no compra}, 1=\text{compra} \}\)</span> i matriu de transició:</p>
+<p><span class="math display">\[P = \begin{pmatrix} 1 - \alpha &amp; \alpha \\ \beta &amp; 1 - \beta \end{pmatrix}\]</span>
+On:</p>
+<ul>
+<li><p><span class="math inline">\(\alpha\)</span>: probabilitat de passar de <em>No Compra</em> a <em>Compra</em>.</p></li>
+<li><p><span class="math inline">\(\beta\)</span>: probabilitat de passar de <em>Compra</em> a <em>No Compra</em>.</p></li>
+</ul>
+<p>La matriu de transició d’ordre <span class="math inline">\(n\)</span> ve donada per:</p>
+<p><span class="math display">\[P^n = \frac{1}{\alpha + \beta} \begin{pmatrix} \beta &amp; \alpha \\ \beta &amp; \alpha \end{pmatrix} + \frac{(1 - \alpha - \beta)^n}{\alpha + \beta} \begin{pmatrix} \alpha &amp; -\alpha \\ -\beta &amp; \beta \end{pmatrix}\]</span></p>
+<p>El seu límit quan <span class="math inline">\(n \to \infty\)</span> és:</p>
+<p><span class="math display">\[\lim_{n \to \infty} P^n = \frac{1}{\alpha + \beta} \begin{pmatrix} \beta &amp; \alpha \\ \beta &amp; \alpha \end{pmatrix}\]</span></p>
+<p>Per exemple, si <span class="math inline">\(\alpha = 1/10\)</span> i <span class="math inline">\(\beta = 2/10\)</span>, en el límit tenim:</p>
+<p><span class="math display">\[\lim_{n \to \infty} P^n = \begin{pmatrix} 2/3 &amp; 1/3 \\ 2/3 &amp; 1/3 \end{pmatrix}\]</span></p>
+<p>El procés gaudeix a més d’una interessant propietat. Si la distribució inicial és:</p>
+<p><span class="math display">\[\pi_0 = \begin{pmatrix} p_0 &amp; 1 - p_0 \end{pmatrix}\]</span></p>
+<p>aplicant la propietat de multiplicació per la matriu límit, podem obtenir la distribució límit de l’espai d’estats:</p>
+<p><span class="math display">\[\lim_{n \to \infty} \pi^{(n)} = \pi_0 \left( \lim_{n \to \infty} P^n \right) = \begin{pmatrix} p_0 &amp; 1 - p_0 \end{pmatrix} \begin{pmatrix} 2/3 &amp; 1/3 \\ 2/3 &amp; 1/3 \end{pmatrix} = \begin{pmatrix} 2/3 &amp; 1/3 \end{pmatrix}\]</span>
+la qual <strong>no depèn de la distribució inicial</strong>.</p>
+</div>
+<hr />
+<div class="definition">
+<p><span id="def:unlabeled-div-98" class="definition"><strong>Definició 5.4  </strong></span><strong>Equilibri d’una cadena de Markov</strong>
+El que hem vist en l’exemple significa que una cadena de Markov tendeix a una situació estacionaria a mesura que n augmenta.</p>
+<p>Si en general</p>
+<p><span class="math display">\[
+\lim_n p_{ij}(n)=\pi_j^(e), \quad \forall i.
+\]</span>
+la consequència és que</p>
+<p><span class="math display">\[
+\lim_n \boldsymbol{\pi_j^{(n)}} =\sum_i  \pi_j^(e) \pi_i=\pi_j^(e), \quad \forall j
+\]</span>
+Així la distribució sobre l’espai d’estats ten a una distribució fixa independent de la distribució inicial <span class="math inline">\(\boldsymbol{\pi}\)</span> Es diu que la cadena ha arribat a l’equilibri o a una situació estables- La distribució <span class="math inline">\(\boldsymbol{\pi^{(e)}}\)</span> rep el nom de <em>distribució d’equilibri o estacionaria</em></p>
+<p>Per obtenir la distribvució d’equilibri <span class="math inline">\(\boldsymbol{\pi^{(e)}}\)</span> no fa falta resoldre el límit. Es prou en resoldre el sistema d’equacions,</p>
+<p><span class="math display" id="eq:pie">\[
+\boldsymbol{\pi^{(e)}}=\boldsymbol{\pi^{(e)}} \boldsymbol{P}   \tag{5.6}
+\]</span>
+amb la condició adicional de <span class="math inline">\(\sum_i \pi_i^{(e)}=1\)</span></p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-99" class="example"><strong>Exemple 5.4  </strong></span>Continuació del exemple <a href="principals-tipus-de-processos-estocàstics..html#exm:dequilibri">5.3</a></p>
+<p>La distribució estacionària també es pot obtenir utilitzant l’equació <a href="principals-tipus-de-processos-estocàstics..html#eq:pie">(5.6)</a> . Si <span class="math inline">\(\boldsymbol{\pi}^{(e)}=\left[\pi^{(e)}_0,\,\pi^{(e)}_1\right]\)</span></p>
+<p>aleshores el sistema d’equacions que cal resoldre és</p>
+<p><span class="math display">\[
+\begin{aligned}
+\pi^{(e)}_0 &amp;= (1-\alpha)\pi^{(e)}_0+\beta\pi^{(e)}_1,\\
+\pi^{(e)}_1 &amp;= \alpha\pi^{(e)}_0+(1-\beta)\pi^{(e)}_1.
+\end{aligned}
+\]</span></p>
+<p>Aquest sistema es redueix a una única equació, <span class="math inline">\(\alpha\,\pi^{(e)}_0=\beta\,\pi^{(e)}_1\)</span> que, juntament amb la condició de normalització <span class="math inline">\(\pi^{(e)}_0+\pi^{(e)}_1=1\)</span></p>
+<p>permet obtenir la distribució estacionària</p>
+<p><span class="math display">\[
+\pi^{(e)}_0=\frac{\beta}{\alpha+\beta}=2/3
+\qquad
+\pi^{(e)}_1=\frac{\alpha}{\alpha+\beta}=1/3
+\]</span></p>
+</div>
+<hr />
+<div id="classificació-dels-estats-i-comunnicacions-duna-cadena-de-markov" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Classificació dels estats i comunnicacions d’una cadena de Markov<a href="principals-tipus-de-processos-estocàstics..html#classificaci%C3%B3-dels-estats-i-comunnicacions-duna-cadena-de-markov" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Les cadenes de Markov es poden classificar segons els diferents tipus de matrius de transició que te interès per qué permet entendre el paper que juga cadascun dels posibles estats del procés i de l’altra per qué alguns tipus de matriu admeten un límit quan <span class="math inline">\(n\)</span> tendeix a <span class="math inline">\(\infty\)</span>.</p>
+<p>Sigui <span class="math inline">\(\{X_n\}_{n\geq 1}\)</span> una cadena de Markov amb estats <span class="math inline">\(\{1,2,3,\dots,m\}\)</span> i amb matriu de transició <span class="math inline">\(\boldsymbol{P}= (p_{ij})_{1\leq i,j\leq m}\)</span></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-100" class="definition"><strong>Definició 5.5  </strong></span>Un <strong>camí</strong> <span class="math inline">\(i \rightarrow j\)</span> és una seqüència de transicions entre estats que porta de l’estat <span class="math inline">\(i\)</span> a l’estat <span class="math inline">\(j\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-101" class="definition"><strong>Definició 5.6  </strong></span>L’estat <span class="math inline">\(j\)</span> es un <strong>estat accesible</strong> des d’<span class="math inline">\(i\)</span> si existeix un camì <span class="math inline">\(i \rightarrow j\)</span> que porta de <span class="math inline">\(i\)</span> a <span class="math inline">\(j\)</span>. En aquest cas existeix un <span class="math inline">\(k\)</span> tal qué <span class="math inline">\(p_{ij}^{(k)&gt;0}\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-102" class="definition"><strong>Definició 5.7  </strong></span>Els estats <span class="math inline">\(i\)</span> i <span class="math inline">\(j\)</span> són <strong>estats comunicats</strong> si existèix un camí de <span class="math inline">\(i\)</span> a <span class="math inline">\(j\)</span> i un altre de <span class="math inline">\(j\)</span> a <span class="math inline">\(i\)</span>. Ho representarem com <span class="math inline">\(i \leftrightarrow j\)</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-103" class="definition"><strong>Definició 5.8  </strong></span>Definim una <strong>classe d’estats o de comunicació</strong> es un subconjunt de estats del que cada parell d’estats (considerant el mateix estat) estan comunicats. La coumicació es una relació d’equivalència que indueix una partició en l’espai d’estats.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-104" class="definition"><strong>Definició 5.9  </strong></span>Es diu que un cadena de Markov és <strong>irreductible</strong> quant tots els seus estats comuniquenËs a dir <span class="math inline">\(\forall i, j  \quad \exists k  \text{ tal que } p_{ij}^{(k)}&gt;0\)</span> . En aquest cas només hi ha una classe de comunicació.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-105" class="definition"><strong>Definició 5.10  </strong></span>Un estat <span class="math inline">\(i\)</span> és absorbent si <span class="math inline">\(p_{ii}=1\)</span>. El que vol dir és que si ens situem en un estat absorbent ens hi quedarem</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-106" class="definition"><strong>Definició 5.11  </strong></span>Un estat <span class="math inline">\(i\)</span> és <strong>transitori</strong> si existeix un estat <span class="math inline">\(j\)</span> i una camí <span class="math inline">\(i \rightarrow j\)</span> i no existeix cap camí
+<span class="math inline">\(j \rightarrow i\)</span>. que ho escriuem com <span class="math inline">\(j \nrightarrow i\)</span>. Això vol dir que</p>
+<p><span class="math display">\[
+\text{i es transitori si existeix j,n tals que } p_{ij}^{(n)}&gt;0 \quad i \quad p_{ji}^{(k)}=0 \text{ per a tot k}
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-107" class="definition"><strong>Definició 5.12  </strong></span>Un estat <span class="math inline">\(i\)</span> que no és transitori s’anomena <strong>estat recurrent</strong>. En un estat recurrent la probabilitat de (eventualment) regresar a <span class="math inline">\(i\)</span> es u es a dir <span class="math inline">\(P(X_n=s_i \mid X_0=s_i)=1\)</span> per algú <span class="math inline">\(n\geq 1\)</span></p>
+</div>
+<hr />
+<div class="example">
+<p><span id="exm:unlabeled-div-108" class="example"><strong>Exemple 5.5  </strong></span>Sigui una cadena de Markov amb els estats 0,1,2,3,4 Tenim la matriu de transició</p>
+<p><span class="math display">\[P_ =
+\begin{array}{r | ccccc}
+{ }{} &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4  \\
+\hline
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 1-p &amp; 0 &amp; p &amp; 0 &amp; 0 \\
+2 &amp; 0 &amp; 1-p &amp; 0 &amp; p &amp; 0 \\
+3 &amp; 0 &amp; 0 &amp; 1-p &amp; 0 &amp; p \\
+4 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{array}
+\]</span></p>
+<p>La representació de la cadena de Markov és la següent:</p>
+<!-- ```{r echo=FALSE, message=FALSE, warning=FALSE ,fig.align='center',fig.width=5,fig.height=1.2,out.width="70%", fig.cap="Representació cadena de Markov", code=readLines("Rcode/cadenaestats.r")} -->
+<!-- ``` -->
+<div id="htmlwidget-ed97937fc5a1fd73691c" style="width:70%;height:150px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ed97937fc5a1fd73691c">{"x":{"diagram":"\ndigraph Markov {\n\ngraph [\n  layout = neato,\n  overlap = false\n]\n\nnode [\n  shape = circle,\n  fixedsize = true,\n  width = 0.6,\n  fontsize = 14\n]\n\nedge [\n  fontsize = 12\n]\n\n# 1. Definim els nodes amb posicions fixes (X, Y!)\n0 [pos = \"0,0!\"]\n1 [pos = \"2,0!\"]\n2 [pos = \"4,0!\"]\n3 [pos = \"6,0!\"]\n4 [pos = \"8,0!\"]\n\n# 2. Bucles\n0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n# 3. Transicions cap a la dreta (p) per dalt\n1 -> 2 [label = \"p\", constraint = false]\n2 -> 3 [label = \"p\", constraint = false]\n3 -> 4 [label = \"p\", constraint = false]\n\n# 4. Transicions cap a l\"esquerra (1-p) per baix\n1 -> 0 [label = \"1-p\", constraint = false]\n2 -> 1 [label = \"1-p\", constraint = false]\n3 -> 2 [label = \"1-p\", constraint = false]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>Tenim que:</p>
+<ul>
+<li><p>Els estats <strong>0</strong> i <strong>4</strong> són <strong>absorbents</strong>.</p></li>
+<li><p>Els estats <strong>1</strong>, <strong>2</strong> i <strong>3</strong> són <strong>transitoris</strong>.</p></li>
+<li><p>Els estats <strong>0</strong> i <strong>4</strong> són <strong>recurrents</strong>.</p></li>
+<li><p>Les parelles d’estats <strong>(1,2)</strong>, <strong>(1,3)</strong> i <strong>(2,3)</strong> es comuniquen.</p></li>
+</ul>
+</div>
+<hr />
+<div class="definition">
+<p><span id="def:unlabeled-div-109" class="definition"><strong>Definició 5.13  </strong></span>Una <strong>classe</strong> A s’anomena <strong>tancada</strong> si quan es comença en qualsevol estat d’A sempre ens quedem a A. ÉEs a dir</p>
+<p><span class="math display">\[
+Si \quad y \in A \quad llavors \quad P(A|y)=1
+\]</span>
+o equivalent</p>
+<p><span class="math display">\[
+Si \quad y \in A \quad llavors \quad P(X_{n+1}\in A |X_n \in A)=1
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-110" class="definition"><strong>Definició 5.14  </strong></span>Direm que l’estat <span class="math inline">\(i\)</span> és <strong>periòdic</strong> amb període <span class="math inline">\(k&gt;1\)</span> si <span class="math inline">\(k\)</span> és l’enter més petit tal que la longitud de qualsevol camí de <span class="math inline">\(i \leftarrow i\)</span> es múltiple de k.</p>
+<p>Dit d’una altra manera</p>
+<p><span class="math inline">\(\text{k=màxim comú divisor  } \{n\mid p_{i,i}^{(n)}&gt;0\} \text{ i } k&gt;1\)</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-111" class="definition"><strong>Definició 5.15  </strong></span>Un estat que no és periòdic s’anomena <strong>aperiòdic</strong>. Ës aquell estat <span class="math inline">\(i\)</span> per al que existeix un enter positiu <span class="math inline">\(r\)</span> tal que <span class="math inline">\(p_{i,i}^r&gt;0\)</span> i <span class="math inline">\(p_{i,i}^{r+1}&gt;0\)</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-112" class="definition"><strong>Definició 5.16  </strong></span>Una cadena de Markov es <strong>ergòdica</strong> si és irreductible i aperiòdica</p>
+</div>
+<div class="{[.example}">
+<p>A continuació es mostren alguns exemples de cadenas definidesa a partir de la seva matriu de transició on es representa la cadena i es classifiquen els estats segons les definicions previes.</p>
+<hr />
+<p><strong>Primera Cadena</strong></p>
+<p><span class="math display">\[
+P_1=\begin{pmatrix}0&amp;1&amp;0\\ 0&amp;0&amp;1\\ 1&amp;0&amp;0\end{pmatrix}
+\]</span></p>
+<p><br><br></p>
+<div id="htmlwidget-168e970060f0d332feef" style="width:70%;height:140px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-168e970060f0d332feef">{"x":{"diagram":"\ndigraph Markov1 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,0!\"]\n  3 [pos = \"4,0!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 1 [label = \"1\", tailport = \"s\", headport = \"s\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><span class="math display">\[
+\{n \mid p_{i,i}^{(n)}&gt;0\} = \{3,6,9,12,\dots\}
+\]</span>
+<br><br>
+En aquest cas tots els estats són periòdics amb període <span class="math inline">\(k=3\)</span>.</p>
+<hr />
+<hr />
+<p><strong>Segona Cadena</strong></p>
+<p><span class="math display">\[
+P_2 = \begin{pmatrix}
+0.4 &amp; 0.6 &amp; 0 &amp; 0 &amp; 0 \\
+0.5 &amp; 0.5 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0.3 &amp; 0.7 &amp; 0 \\
+0 &amp; 0 &amp; 0.5 &amp; 0.4 &amp; 0.1 \\
+0 &amp; 0 &amp;  0 &amp; 0.8 &amp; 0.2
+\end{pmatrix}
+\]</span></p>
+<p><br><br></p>
+<div id="htmlwidget-f0c5de542c78ea30ae5b" style="width:70%;height:220px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f0c5de542c78ea30ae5b">{"x":{"diagram":"\ndigraph Markov2 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"3,-0.5!\"]\n  5 [pos = \"1,-0.5!\"]\n\n  1 -> 1 [label = \"0.4\", tailport = \"nw\", headport = \"sw\"]\n  1 -> 2 [label = \"0.6\"]\n  2 -> 1 [label = \"0.5\"]\n  2 -> 2 [label = \"0.5\", tailport = \"ne\", headport = \"se\"]\n\n  3 -> 4 [label = \"0.7\"]\n  4 -> 3 [label = \"0.5\"]\n  3 -> 3 [label = \"0.3\", tailport = \"ne\", headport = \"se\"]\n  4 -> 4 [label = \"0.4\", tailport = \"se\", headport = \"sw\"]\n  4 -> 5 [label = \"0.1\"]\n\n  5 -> 4 [label = \"0.8\"]\n  5 -> 5 [label = \"0.2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><br><br></p>
+<p>Fixem-nos que <span class="math inline">\(p_{i,i}&gt;0\)</span> per tot <span class="math inline">\(i\)</span> i per tant tots els estats són aperiòdics.</p>
+<hr />
+<hr />
+<p><strong>Tercera Cadena</strong></p>
+<p><span class="math display">\[
+P_{3}=\begin{pmatrix}
+1&amp;0&amp;0&amp;0&amp;0\\
+1-p&amp;0&amp;p&amp;0&amp;0\\
+0&amp;1-p&amp;0&amp;p&amp;0\\
+0&amp;0&amp;1-p&amp;0&amp;p\\
+0&amp;0&amp;0&amp;0&amp;1
+\end{pmatrix}
+\]</span></p>
+<p><br><br></p>
+<div id="htmlwidget-e57cc8607ea285f33fde" style="width:70%;height:140px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e57cc8607ea285f33fde">{"x":{"diagram":"\ndigraph Markov3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  0 [pos = \"0,0!\"]\n  1 [pos = \"2,0!\"]\n  2 [pos = \"4,0!\"]\n  3 [pos = \"6,0!\"]\n  4 [pos = \"8,0!\"]\n\n  0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n  4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n  1 -> 2 [label = \"p\"]\n  2 -> 3 [label = \"p\"]\n  3 -> 4 [label = \"p\"]\n\n  1 -> 0 [label = \"1-p\"]\n  2 -> 1 [label = \"1-p\"]\n  3 -> 2 [label = \"1-p\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><br><br></p>
+<p>Quan <span class="math inline">\(i=1,2,3\)</span> llavors <span class="math display">\[\{n \mid p_{i,i}^{(n)}&gt;0\} = \{2,4,6,8,\dots\}\]</span> i per tant els estats 1, 2, 3 són periòdics amb període <span class="math inline">\(k=2\)</span>.</p>
+<hr />
+<hr />
+<p><strong>Quarta cadena</strong></p>
+<div id="htmlwidget-911878549535907d1101" style="width:70%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-911878549535907d1101">{"x":{"diagram":"\ndigraph Markov4 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n\n  7 [pos = \"0,0!\"]\n  8 [pos = \"1.5,0.8!\"]\n  9 [pos = \"3.5,0.8!\"]\n  1 [pos = \"5,0!\"]\n  2 [pos = \"6.5,0.8!\"]\n  3 [pos = \"8.5,0!\"]\n  4 [pos = \"6.5,-0.8!\"]\n  5 [pos = \"3.5,-0.8!\"]\n  6 [pos = \"1.5,-0.8!\"]\n\n  7 -> 8; 8 -> 9; 9 -> 1;\n  1 -> 2; 2 -> 3; 3 -> 4; 4 -> 1;\n  1 -> 5; 5 -> 6; 6 -> 7;\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><br><br></p>
+<p><span class="math display">\[\{n \mid p_{i,i}^{(n)}&gt;0\} = \{4,6,8,10\dots\}\]</span> amb perìode 2</p>
+<hr />
+<hr />
+<p><strong>Cinquena Cadena</strong></p>
+<p><span class="math display">\[
+P_{5}=
+\begin{pmatrix}
+0&amp;1&amp;0&amp;0 \\
+0&amp;0&amp;1&amp;0 \\
+0&amp;0&amp;0&amp;1 \\
+.5&amp;0.5&amp;0&amp;0
+\end{pmatrix}
+\]</span></p>
+<p><br><br></p>
+<div id="htmlwidget-a0d44a3d9d39b98616e4" style="width:70%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a0d44a3d9d39b98616e4">{"x":{"diagram":"\ndigraph Markov5 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"2,-0.5!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 4 [label = \"1\"]\n  4 -> 1 [label = \"1/2\"]\n  4 -> 2 [label = \"1/2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><span class="math display">\[
+\{n \mid p_{1,1}^{(n)}&gt;0\} = \{4,7,8,10,\dots\} \quad \text{amb període 1.}
+\]</span></p>
+<hr />
+<hr />
+<p><strong>Sisena Cadena</strong></p>
+<p>Considerem un problema amb la següent matriu de transició :
+<span class="math display">\[P_6 =
+\begin{array}{r | ccccccccc}
+{ }{} &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 \\
+\hline
+1 &amp; 0 &amp; 0 &amp; 0.6 &amp; 0.4 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+2 &amp; 0 &amp; 0 &amp; 0.6 &amp; 0.4 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+3 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.6 &amp; 0.2 &amp; 0 &amp; 0 &amp; 0.2 \\
+4 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.6 &amp; 0.4 &amp; 0 &amp; 0 &amp; 0 \\
+5 &amp; 0.6 &amp; 0.3 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.1 &amp; 0 \\
+6 &amp; 0.6 &amp; 0.4 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+7 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.7 &amp; 0.3 &amp; 0 \\
+8 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+9 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{array}\]</span></p>
+<p>la representació gràfica de la cadena de Markov es</p>
+<div id="htmlwidget-7313ca9f4d15dadf06b9" style="width:70%;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7313ca9f4d15dadf06b9">{"x":{"diagram":"\ndigraph Markov11 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,2!\"]\n  2 [pos = \"0,0!\"]\n  3 [pos = \"2,2!\"]\n  4 [pos = \"1,3.2!\"]\n  5 [pos = \"2,0!\"]\n  6 [pos = \"1,-1.2!\"]\n  7 [pos = \"5,-0.8!\"]\n  8 [pos = \"4,0!\"]\n  9 [pos = \"4,2!\"]\n\n  1 -> 4 [label = \"0.4\"]\n  1 -> 3 [label = \"0.6\"]\n  2 -> 4 [label = \"0.4\"]\n  2 -> 3 [label = \"0.6\"]\n  3 -> 5 [label = \"0.6\"]\n  3 -> 6 [label = \"0.2\"]\n  3 -> 9 [label = \"0.2\"]\n  4 -> 5 [label = \"0.6\"]\n  4 -> 6 [label = \"0.4\"]\n  5 -> 1 [label = \"0.6\"]\n  5 -> 2 [label = \"0.3\"]\n  5 -> 8 [label = \"0.1\"]\n  6 -> 1 [label = \"0.6\"]\n  6 -> 2 [label = \"0.4\"]\n\n  7 -> 7 [label = \"0.7\", tailport = \"se\", headport = \"ne\"]\n  7 -> 8 [label = \"0.3\"]\n  8 -> 7 [label = \"1\"]\n\n  9 -> 9 [label = \"1\", tailport = \"ne\", headport = \"se\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>Veiem doncs que tenim 3 classes:</p>
+<ul>
+<li>Classe 1 formada pels estats <span class="math inline">\(\{1,2,\dots, 6\}\)</span>. És transitòria.</li>
+<li>Classe 2 formada pels estats <span class="math inline">\(\{7,8\}\)</span>. És recurrent.</li>
+<li>Classe 3 formada pels estats <span class="math inline">\(\{9\}\)</span>. És absorbent</li>
+</ul>
+<hr />
+<hr />
+<p><strong>setena cadena</strong></p>
+<p>Considerem la següent matriu de transició</p>
+<p><span class="math display">\[P_7 = \begin{pmatrix} 0.5 &amp; 0.5 &amp; 0 \\ 0 &amp; 0.3 &amp; 0.7 \\ 0.8 &amp; 0 &amp; 0.2 \end{pmatrix}\]</span>
+On la seva reprentació gràfica es</p>
+<div id="htmlwidget-cd2dbfc686764c46ec40" style="width:100%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cd2dbfc686764c46ec40">{"x":{"diagram":"\ndigraph MarkovP3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  # Posicions dels nodes en un triangle\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,1.5!\"]\n  3 [pos = \"4,0!\"]\n\n  # Bucles (transicions a un mateix)\n  1 -> 1 [label = \"0.5\", tailport = \"w\", headport = \"nw\"]\n  2 -> 2 [label = \"0.3\", tailport = \"ne\", headport = \"nw\"]\n  3 -> 3 [label = \"0.2\", tailport = \"e\", headport = \"se\"]\n\n  # Transicions entre estats\n  1 -> 2 [label = \"0.5\"]\n  2 -> 3 [label = \"0.7\"]\n  3 -> 1 [label = \"0.8\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>La cadena de Markov es ergòdica ja que es aperiòdica al ser tots els <span class="math inline">\(p_{ii}&gt;0\)</span> i es irreductible per qué tots els nodes estan comunicats entre si.</p>
+</div>
+</div>
+</div>
+<div id="passeig-o-caminades-aleatòries." class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Passeig o Caminades aleatòries.<a href="principals-tipus-de-processos-estocàstics..html#passeig-o-caminades-aleat%C3%B2ries." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Imagineu un caminant que es mou al atzar cap a la dreta o cap a l’esquerra. Suposem que el caminant llança una moneda amb una probabilitat p d’obtenir una cara. Si surt cara va cap a dreta (amb probabilitat <span class="math inline">\(p\)</span>) i si surt creu va cap a l’esquerra (amb probabilitat <span class="math inline">\(q=1-p\)</span>). Estarem interestats en conèixer quina es la situació <span class="math inline">\(S_n\)</span> després de n passos del caminant que direm que esta seguint un passeig o caminada aleatoria.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-113" class="definition"><strong>Definició 5.17  </strong></span>Sigui <span class="math inline">\(\{Y1,\dots\}\)</span> una successió de variables aleatòries independens idènticament distribuides que preenen els valors <span class="math inline">\(1\)</span> i <span class="math inline">\(-1\)</span> amb una probabilitat <span class="math inline">\(p\in [0,1]\)</span> i <span class="math inline">\(q=1-p\)</span>, respectivament. La <strong>caminada aleatoria (“random walk”)</strong> simple amb paràmetre p es la successió</p>
+<p><span class="math display" id="eq:rwalk">\[
+S_n=S_0+Y_1+Y_2+\dots+Y_n, \quad  n\geq 0  \tag{5.7}
+\]</span>
+on <span class="math inline">\(S_0\)</span> és una variable aleatòria que pren valors a <span class="math inline">\(\mathcal{Z}\)</span> i que és independent de la successió <span class="math inline">\(\{Y1,\dots\}\)</span> . També podem definir la camenada aleatoria de forma recursiva</p>
+<p><span class="math display" id="eq:rwalkseq">\[
+S_n=S_{n+1}+ Y_n, \quad n \geq 1  \tag{5.8}
+\]</span></p>
+</div>
+<!-- Si en $n$ desplaçcaments $k$ d'ells han estat cap a la dreta i per tant $n-k$ cap a l'esquerra, la posició final del caminant serà $S_n=k-(n-k)= 2k-n$ -->
+<div class="Proposition">
+<p>Si suposem que <span class="math inline">\(P(S_0=0)=1\)</span>, la funció de probabilitat de <span class="math inline">\(S_n\)</span> de terminar en la posició k és:</p>
+<p><span class="math display" id="eq:prwalk">\[
+\Pr(S_n = k) = \binom{n}{\frac{n+k}{2}} p^{\frac{n+k}{2}} (1-p)^{\frac{n-k}{2}}, \quad k \in \{-n, -n+2, \dots, n-2, n\}.  \tag{5.9}
+\]</span>
+i per tant <span class="math inline">\(E[S_n]=n(2p-1)\)</span> i la variància és <span class="math inline">\(Var(S_n)=4p(1-p)\)</span></p>
+</div>
+<p><strong>Demostració</strong></p>
+<p>Si definim <span class="math inline">\(X_j=\frac{1}{2}(Y_j+1) \text{ per } j \in \mathbb{N}\)</span> , <span class="math inline">\(X_j\)</span> es una variable aleatòrica amb distribució Bernoulli amb una probabiltit d’èxit de p i <span class="math inline">\(\{X_1,X_2,\dots\}\)</span> és una succesció de variables aleatòries independientes i identicament distribuïdes que en termes del caminant indicant si el pás j-èsim ha estat a la dreta.</p>
+<p>Llavors <span class="math inline">\(Y_j=2X_j-1\)</span> i directament de la transformació de una distribució Bernoulli <span class="math inline">\(E[Y_j]=2p-1\)</span> y <span class="math inline">\(Var(Y_j)=4p(1-p)\)</span></p>
+<p>Si definim <span class="math inline">\(Z_n=\sum_{j=1}^n X_j \text{ per }  n \in \mathbb{N}\)</span> té una distribució <span class="math inline">\(Bi(n,p)\)</span>. <span class="math inline">\(Z_n\)</span> és el nombre de passos a la dreta dins dels n primers passos.</p>
+<p>com hem suposat que <span class="math inline">\(P(S_0=0)=1\)</span> llavors podem expresar <span class="math inline">\(S_n=2Z_n-n\)</span> i com els valors de <span class="math inline">\(Z_n\)</span> per definició son <span class="math inline">\(0,\dots,n\)</span> llavors els valors de <span class="math inline">\(S_n\)</span> són <span class="math inline">\(k \in \{-n, -n+2,\dots,n-2,n \}\)</span> i <span class="math inline">\(P(S_n=k)=P(Z_n=(n+k)/2\)</span>
+Així</p>
+<p><span class="math display">\[
+\Pr(S_n = k) = \binom{n}{\frac{n+k}{2}} p^{\frac{n+k}{2}} (1-p)^{\frac{n-k}{2}}, \quad k \in \{-n, -n+2, \dots, n-2, n\}.
+\]</span>
+Les expressions de la esperança i variància surten directes.</p>
+<p>La caminata aleatòria simple satisfà les propietats de</p>
+<ul>
+<li><p><em>Homogeneitat espacial:</em> <span class="math inline">\(P(S_n=k\mid S_0=a)P(Sn=k+b\mid S_0=a+b )\)</span></p></li>
+<li><p><em>Homogeneitat temporal:</em> <span class="math inline">\(P(S_n=k\mid S_0=a)P(S_{n+m}=k\mid S_m=a )\)</span></p></li>
+<li><p><em>Propietat de markov:</em> Per a <span class="math inline">\(0&lt;i_0&lt;i_1&lt;\dots&lt;i_m&lt;n\)</span> llavors</p></li>
+</ul>
+<p><span class="math display">\[
+P(S_n=k\mid S_{i_0}=a_0,S_{i_1}=a_1,\dots, S_{i_m}=a_m)=P(S_n=k\mid S_{i_m}=a_m)
+\]</span>
+—</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-114" class="example"><strong>Exemple 5.6  </strong></span>Suposem que p=1/2 . En aquest cas es diu que <span class="math inline">\(S_n\)</span> es una <strong>caminata aleatòria simple simètrica</strong>. En aquest cas el vector aleatori <span class="math inline">\(\textbf{Y}^n=\{Y_1\dots,Y_n\}\)</span> es distribueix uniformement en <span class="math inline">\(\Omega=\{-1,1\}^n\)</span> Axi el nombre de combinacions serà <span class="math inline">\(2^n\)</span> que sera el número de camins diferents.</p>
+<p>I seguint l’equació <a href="principals-tipus-de-processos-estocàstics..html#eq:prwalk">(5.9)</a> la probabilitat de <span class="math inline">\(S_n\)</span> és:</p>
+<p><span class="math display">\[
+\Pr(S_n = k) = \binom{n}{\frac{n+k}{2}} \frac{1}{2^n}, \quad k \in \{-n, -n+2, \dots, n-2, n\}.
+\]</span></p>
+<p>En la taula i la gràfica gràfica és mostra una caminata aleatòria de longitut <strong><span class="math inline">\(n=200\)</span></strong> on el valor final es <strong><span class="math inline">\(S_{200}=14\)</span></strong> i la probabilitat d’obtenir aquest valor és <strong><span class="math inline">\(P(S_{200}=14)=0.0345913\)</span></strong></p>
+<pre><code>##   [1]  0 -1 -2 -1  0 -1  0 -1 -2 -3 -2 -3 -4 -3 -4 -3 -2 -3 -4 -3 -2 -1  0 -1  0
+##  [26]  1  0 -1  0 -1  0 -1  0  1  2  1  0  1  0 -1 -2 -3 -4 -3 -2 -3 -2 -1  0  1
+##  [51]  0 -1 -2 -1  0  1  0  1  0  1  2  3  2  1  2  1  2  3  2  1  2  1  0  1  2
+##  [76]  3  2  3  2  1  2  1  0  1  2  1  0 -1 -2 -3 -4 -3 -4 -3 -2 -1 -2 -1  0  1
+## [101]  0 -1 -2 -3 -2 -3 -2 -3 -4 -3 -4 -3 -2 -3 -2 -1 -2 -1  0 -1  0  1  0  1  0
+## [126]  1  2  3  4  5  4  5  4  5  6  7  6  7  6  7  6  7  8  9 10 11 12 11 10 11
+## [151] 10 11 10  9  8  9 10  9 10 11 12 11 12 11 10  9  8  9 10  9  8  9  8  7  8
+## [176]  9 10 11 12 13 14 13 14 15 14 15 14 13 12 11 12 13 14 13 14 15 14 15 14 15
+## [201] 14</code></pre>
+<p><img src="images/passeig-aleatori-1.png" alt="" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<hr />
+<p>Considerem una representació d’un passeig aleatori simple en el pla cartesiá amb el parell de coordenades <span class="math inline">\((n,Sn), \quad n \in \mathbb{N}\)</span></p>
+<div class="{lema}">
+<p>Sigui <span class="math inline">\(N_n(a,b)\)</span> el nombre de camins que porten de la posició <span class="math inline">\((0,a)\)</span> ala posició <span class="math inline">\((n,b)\)</span>. Aleshores</p>
+<p><span class="math display">\[
+N_n(a,b)= \binom{n} {\frac{n+b-a}{2}}
+\]</span>
+Per altra banda si <span class="math inline">\(P(S_0=0)=1\)</span> , qualsevol dels camins anteriors té probabilitat $p^{(n+b-a)/2} (1-p)^{(n-b+a)/2}</p>
+</div>
+<div class="{theorem}">
+<p><strong>Principi de reflexió</strong>
+Siguin <span class="math inline">\(a,b&gt;0\)</span> i <span class="math inline">\(N_n^0(a,b)\)</span> el nombre de camins que porten de <span class="math inline">\((0,a)\)</span> a <span class="math inline">\((n,b)\)</span> de manera que passen per 0, es a dir visiten algún punt de la forma (k,0). Aleshores <span class="math inline">\(N_n^0(a,b)=N_n(-a,b)\)</span></p>
+</div>
+<p><strong>Demostració</strong></p>
+<p>Per a cada camí d’aquest tipus, sigui</p>
+<p><span class="math display">\[
+\tau=\min{k\ge 0:, S_k=0}
+\]</span></p>
+<p>el primer instant en què el camí arriba al nivell (0).</p>
+<p>Construïm ara un nou camí reflectint respecte del nivell (0) la part del camí anterior a (). És a dir, definim</p>
+<p><span class="math display">\[
+S_k^{*}=\{-S_k,\quad  0\le k\le \tau,S_k,  k&gt;\tau.\}
+\]</span></p>
+<p>Com que el primer tram del camí ha estat reflectit, el punt inicial passa de ser <span class="math inline">\((0,a)\)</span> a <span class="math inline">\((0,-a)\)</span> mentre que el punt final continua essent<span class="math inline">\((n,b)\)</span> ja que la reflexió només afecta el tram anterior al primer contacte amb el nivell <span class="math inline">\(0\)</span>.</p>
+<p>Aquesta transformació és una bijecció. En efecte, si tornem a reflectir el primer tram del nou camí fins al seu primer contacte amb el nivell <span class="math inline">\(0\)</span>, recuperem exactament el camí original. Per tant, existeix una correspondència un a un entre els camins que van de <span class="math inline">\((0,a)\)</span> a <span class="math inline">\((n,b)\)</span> i visiten el nivell <span class="math inline">\(0\)</span>, iels camins que van de <span class="math inline">\((0,-a)\)</span> a <span class="math inline">\((n,b)\)</span>.</p>
+<p>En conseqüència, ambdós conjunts tenen el mateix nombre d’elements.</p>
+<p>Aquesta propietat és coneguda com el principi de reflexió i constitueix una eina fonamental en l’estudi dels passeigs aleatoris, ja que permet comptar camins amb restriccions transformant-los en un problema equivalent sense restriccions.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-115" class="theorem"><strong>Theorem 5.1  </strong></span><strong>Recompte de camins que no creuejn el 0</strong>
+Si <span class="math inline">\(b&gt;0\)</span> el nombre de camins que porten de <span class="math inline">\(80,0\)</span> a (n,b) sense tornar a tocar l’eix d’abcisses es <span class="math inline">\((b/n)N_n(0,b)\)</span></p>
+</div>
+<hr />
+<div class="Example">
+<p><em>El problema de les paperetes (Ballot Problem)</em></p>
+<p>En una votació hi ha dos candidats, <span class="math inline">\(A\)</span> i <span class="math inline">\(B\)</span>. Suposem que el candidat <span class="math inline">\(A\)</span> rep <span class="math inline">\(\alpha\)</span> vots i el candidat <span class="math inline">\(B\)</span> rep <span class="math inline">\(\beta\)</span> vots, amb$ &gt;.$ Suposant que les paperetes es compten en un ordre completament aleatori, es vol determinar la probabilitat que durant tot l’escrutini el candidat <span class="math inline">\(A\)</span> vagi sempre per davant del candidat <span class="math inline">\(B\)</span>.</p>
+<p>Aquest és un problema històricament molt conegut, anomenat en anglès <em>Ballot Problem</em>, resolt per Joseph Louis Bertrand l’any 1887. Constitueix una aplicació clàssica del principi de reflexió en els passeigs aleatoris.
+Sigui <span class="math inline">\(n=\alpha+\beta\)</span> el nombre total de vots. Per a <span class="math inline">\(j=0,1,\ldots,n\)</span>, definim <span class="math inline">\(S_j=\)</span> nombre de vots d’avantatge del candidat A sobre B després d’haver comptat els primers <span class="math inline">\(j\)</span> vots. Cada vot per al candidat <span class="math inline">\(A\)</span> representa un increment de <span class="math inline">\(+1\)</span>, mentre que cada vot per al candidat <span class="math inline">\(B\)</span> representa un increment de <span class="math inline">\(-1\)</span>. En conseqüència, <span class="math inline">\(S_0=0,\qquad S_n=\alpha-\beta\)</span>.
+Si representem l’escrutini al pla mitjançant els punts <span class="math inline">\((j,S_j),\quad j=0,1,\ldots,n,\)</span> cada possible ordre de recompte correspon a un camí d’un passeig aleatori que uneix els punts <span class="math inline">\((0,0) \quad \text{i} \quad(n,\alpha-\beta)\)</span> El nombre total d’escrutinis possibles és <span class="math inline">\(N_n(0,\alpha-\beta)\)</span> i tots són equiprobables.</p>
+<p>Per altra banda, els escrutinis en què el candidat <span class="math inline">\(A\)</span> es manté sempre estrictament per davant del candidat <span class="math inline">\(B\)</span>, és a dir,<span class="math inline">\(S_j&gt;0,\qquad j=1,\ldots,n,\)</span> corresponen, segons el teorema anterior a <span class="math inline">\(\frac{\alpha-\beta}{n}\, N_n(0,\alpha-\beta)\)</span> camins. Per tant, la probabilitat que el candidat <span class="math inline">\(A\)</span> vagi sempre per davant durant tot l’escrutini és <span class="math inline">\(P(A\text{ sempre va per davant}) = \frac{\alpha-\beta}{\alpha+\beta}\)</span>.</p>
+</div>
+<hr />
+<p><strong>La distribució del primer retorn a l’origen</strong></p>
+<p>Suposem P(S_0=0)=1. Sigui T el moment del primer retorn a 0:</p>
+<p><span class="math display">\[
+T=min \{n \in \mathbb{N}_+ : S_n=0 \}
+\]</span>
+Cal observar que el retorn a 0 només pot passar per instants parells. També es possible que el passeig aleatori mai torni a 0. Per <span class="math inline">\(T\)</span> pren valors <span class="math inline">\(\{2,4,\dots\} \cup \{ \infty \}\)</span></p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-116" class="theorem"><strong>Theorem 5.2  </strong></span>La función de probabilitat de <span class="math inline">\(T_2n\)</span> vé donada perç</p>
+<p><span class="math display" id="eq:restorn1">\[
+\Pr(T=2n)=\frac{1}{2n-1}\Pr(S_{2n}=0)
+=\frac{1}{2n-1}\binom{2n}{n}p^n(1-p)^n,
+\qquad n\in\mathbb{N}^{+}. \tag{5.10}
+\]</span></p>
+</div>
+<p><strong>Demostració</strong>
+La prova és la següent. Per a <span class="math inline">\(n \in \mathbb{N}_{+}\)</span>,</p>
+<p><span class="math inline">\(Pr(T=2n)=\Pr(T=2n,\;S_{2n}=0)=\Pr(T=2n\mid S_{2n}=0)\Pr(S_{2n}=0)\)</span>
+Però <span class="math inline">\(Pr(T = 2n|S2n = 0)\)</span> és la probabilitat d’anar de la posició <span class="math inline">\((0, 0)\)</span> inicial a la posició <span class="math inline">\((2n − 1, 1)\)</span> (la immediatament anterior a la <span class="math inline">\((2n, 0)\)</span> sense haver tocat l’eix d’abscisses. Pel problema del recompte de vots sabem que aquesta
+probabilitat és <span class="math inline">\(1/(2n − 1)\)</span>, i el resultat queda provat.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-117" class="theorem"><strong>Theorem 5.3  </strong></span>*Primer retorn després d’n etapes.</p>
+<p>Suposem <span class="math inline">\(P(S_0=0)=1\)</span>, aleshores</p>
+<p><span class="math display">\[
+P(S_1·S_2···S_n \neq 0, S_n=k)=\dfrac{|k|}{n} P(S_n=k, k \in \mathbb{Z})
+\]</span></p>
+</div>
+<p>Sumposem k&gt;0. Pel teorema del recompte de camins que no creuen el zeor, el nombre de camins que van de <span class="math inline">\((0,0)\)</span> a <span class="math inline">\((n,k\)</span> és <span class="math inline">\((k/n)N_n(0,k)\)</span>. Cadascun té probabilitat <span class="math inline">\(p^{(n+k)/2} (1-p)^{(n-k)/2}\)</span>. Aleshores la probabilitat demanada és:</p>
+<p><span class="math display">\[
+\dfrac{k}{n} N_n(0,k)p^{(n+k)/2} (1-p)^{(n-k)/2}
+\]</span>
+però
+<span class="math display">\[
+P(S_n=k)=N_n(0,k)p^{(n+k)/2} (1-p)^{(n-k)/2}
+\]</span></p>
+<p><strong>La posició màxima</strong></p>
+<p>Considerem de nou el passeig aleatori simple simètric. A la posició màxima a la que arriba el procés en els primers n passoas la denotarem per <span class="math inline">\(M_n=max\{S_0,S_1,\dots,S_n\}\)</span>, que pren valors en el conjunt <span class="math inline">\(\{0,1,\dots,n \}\)</span>. La distribució de <span class="math inline">\(M_n\)</span> es pot obtenir a partir del principi de reflexió.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-118" class="theorem"><strong>Theorem 5.4  </strong></span><em>(Màxim)</em>. Suposem <span class="math inline">\(P(S_0=0)=1\)</span> i <span class="math inline">\(p=1/2\)</span>. La funció de probabilitat del màxim <span class="math inline">\(M_n\)</span> és per a <span class="math inline">\(m\geq 1\)</span></p>
+<p><span class="math display" id="eq:posmax">\[
+P(M_n=M)=
+\begin{cases}
+\Pr(S_n=m), &amp; \text{si } (n-m) \text{ és parell},\\
+\Pr(S_n=m+1), &amp; \text{si } (n-m) \text{ és senar}. \end{cases}  \tag{5.11}
+\]</span>
+Per a <span class="math inline">\(M=0, P(M_n=0)=P(S_n \leq 0)\)</span></p>
+</div>
+<p>Cal obervar que per a qualsevol n, la funció de probabilitat d <span class="math inline">\(M_n\)</span> és decreixent. en particular el valor més probable per al màxim (i per tant la moda de la distribució ) és 0.</p>
+<p><strong>L’última visita a l’origen</strong></p>
+<p>Considerem de nou el passeig aleatori simple simètric. Ens ocupem ara de l’última visita a 0 durant els primers <span class="math inline">\(2n\)</span> passos:
+<span class="math display">\[
+L_{2n}=max\{j \in \{0,2,\dots,2n\}: S_j=0\} \quad n \in \mathbb{N}
+\]</span>
+Observeu que, donat que les visites a 0 només pot passar en instants parells, <span class="math inline">\(L_{2n}\)</span> preu els valors del conjunt <span class="math inline">\(\{0,2,\dots,2n\}\)</span>. Aquesta variable aleatòria té una distribució coneguda com a <em>distribució arcsinus discreta</em></p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-119" class="theorem"><strong>Theorem 5.5  </strong></span><em>LLei de l’arcsinus per l’última visita a l’origen</em>. suposem <span class="math inline">\(P(S_0=0)=1\)</span> i <span class="math inline">\(p=1/2\)</span>. Aleshores, per <span class="math inline">\(k \in \{0,1,\dots,n \}\)</span></p>
+<p><span class="math display" id="eq:arcsinus">\[
+P(L_{2n}=2k)=P(S_{2k}=0)P(S_{2n-2k}=0)=\binom{2k}{k}\binom{2n-2k}{n-k}\dfrac{1}{2^{2n}} \tag{5.12}
+\]</span>
+a més a més, la seva fucnió de distribució <span class="math inline">\(P(L_{2n}\leq 2k)\)</span> s’aproxima bé per <span class="math inline">\((2/\pi)arcsin \sqrt{k/n}\)</span></p>
+<p>La funció de probabilitat de <span class="math inline">\(L_{2n}\)</span> és simètrica respecte a <span class="math inline">\(n\)</span> i t´la forma d’u:</p>
+<p><span class="math display">\[
+P(L_{2n} =2k)=P(L_{2n}=2n-2k),
+\]</span>
+<span class="math inline">\(P(L_{2n}=2j)&gt;P(L_{2n}=2k)\)</span> si i nòmés si <span class="math inline">\(j&lt;k\)</span> i <span class="math inline">\(2k\leq n\)</span></p>
+</div>
+<p>En particular, <span class="math inline">\(0\)</span> i <span class="math inline">\(2n\)</span> són els valors més probables. La distribució arcinus eñes bastant sorprenent. Com que estem llan
+ant una moneda a l’aire per determinar els passos del caminant, és fácil pensar que el passeig aleatori ha de ser positiu la meitat del temps i negatiu l’altra meitat, i que ha de tornar a 0 freqüentment. Però, en realitat,m la llei arcsinus implica que amkb probabilitat 1/2, no hi haurá retorn a 0 durant la segona meitat del passeig, des de <span class="math inline">\(n+1\)</span> fins a <span class="math inline">\(2n\)</span>, independentment del valor que tingui <span class="math inline">\(n\)</span>, i si no és estrany que el passeig se mantingui en valors positius( o negatius) durant tot el temps d’1 a 2n.</p>
+<p>Nota: La funció <span class="math inline">\(F(x)=(2/\pi)arcsin \sqrt(x), x \in [0,1]\)</span>, és la funció de distribució asociada a la densitat
+<span class="math display">\[
+f(x)\dfrac {1}{\pi \sqrt{x(1-x)}}
+\]</span>
+La distribució de probabilitat amb aquesta densitat rep el nom de distribució arcinus contínua. Observeu que un cas particular d’aquesta distribució Beta amb paràmetres <span class="math inline">\(a=b=1/2\)</span></p>
+<p>Cal observar que la funció de probabilitat <span class="math inline">\(L_{2n}\)</span>( amb distribució arcsinus discreta) té una forma similar a la de la funció de densitat de la disribució arcsinus contínua.</p>
+<p><strong>Probabilitat de visitar una posició donada</strong></p>
+<p>Considerem un caminant que es mou segons un passeig aleatori simple <span class="math inline">\(\{S_n: n \geq 0\}\)</span> amb probabilitats <span class="math inline">\(p\)</span> i <span class="math inline">\(q=1-p\)</span> de moviment a dreta i esquerra respectivament. Suposem que <span class="math inline">\(P(S=0)=1\)</span>. Ens preguntem aquí per la probabilitat que el caminant torni alguna vegada a l’origen, el seu punt de partida. També ens interessa saber amb quina probabilitat visitarà alguna vegada una posició fixada r</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-120" class="theorem"><strong>Theorem 5.6  </strong></span></p>
+<ul>
+<li><p>La probabilitat que el caminant torni alguna vegada a l’origen és <span class="math inline">\(1-|p-q|\)</span>.</p></li>
+<li><p>El cas del passeig aleatòri simple simètric <span class="math inline">\((p=2=1/2)\)</span>. En aquest cas el temps fins al primer retorn és una variable aleatòria no negativa amb esperança infinita</p></li>
+<li><p>Sigui <span class="math inline">\(r&gt;0\)</span>. La probabilitat que el caminant visite alguna vegada la posició r és <span class="math inline">\((min\{ 1,p/q\})^r\)</span></p></li>
+<li><p>En el cas del passeig aleatori simple simètric <span class="math inline">\((p=q=1/2)\)</span> és segur que es visitarà la posició r&gt;0. També ho és si <span class="math inline">\(p&gt;q\)</span>.</p></li>
+</ul>
+</div>
 </div>
 <div id="processos-de-poisson." class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Processos de Poisson.<a href="principals-tipus-de-processos-estocàstics..html#processos-de-poisson." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí.</p>
+<p>considerem una succesió d’ocurrències d’un determinat esdeveniment al llarg del temps. Sigui <span class="math inline">\(X_1\)</span> el temps d’espera necesari per a que el esdeveniment passe per primera vegada, <span class="math inline">\(X_2\)</span> el temps d’espera entre la primera i la segona ocurrència, i en geneal <span class="math inline">\(X_i\)</span> el temps entre les ocurrencies <span class="math inline">\(i-1\)</span> i <span class="math inline">\(i\)</span>. El model formal que descriu aquest fenòmen es una succesió de variebles aleatòries definides sobre un determinat espai de probabilitat.</p>
+<p>Un altra característica d’intères lligada al fenòmen anterior es el nombre d’esdeveniments que han ocorregut en un determinat interval de temps <span class="math inline">\(]t_1,t_2]\)</span> . Per exemple, per a <span class="math inline">\(t_1=0\)</span> i <span class="math inline">\(t2=t\)</span> definim la variable <span class="math inline">\(N_t=N_t=\)</span>{nombre d’esdeveniments ocorreguts fins al temps <span class="math inline">\(t\)</span>}. Aquest procès <span class="math inline">\(N_t; t\geq0\)</span> en temps continu te espai d’estats discret {<span class="math inline">\(S=\{0,1,2,\dots \}\)</span> i verifica que <span class="math inline">\(N(0)=0\)</span> i que no es decreixent en el temps, <span class="math inline">\(N_s\leq N_t\)</span>, si <span class="math inline">\(s&lt;t\)</span>. Aquest tipus de processos s’anomenen <strong>processos comptadors(count process)</strong></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-121" class="definition"><strong>Definició 5.18  </strong></span>Un procès comptador es un <strong>procés de Poisson amb intensitat <span class="math inline">\(\lambda\)</span></strong> que compleix les segúents propietats</p>
+<p>1.No poden ocòrrer dues esdeveniments alhora</p>
+<p>2.En cada interval finit de temps el nombre d’esdeviniments observables es finit</p>
+<p>3.Els temps d’espera són independents i idènticament distribuits segons una distribució <span class="math inline">\(Exp(\lambda)\)</span></p>
+</div>
+<p>Per estudiar el comportament probabílistic de les variables <span class="math inline">\(N_t\)</span> es convenient recòrrer a una nova successió de variables <span class="math inline">\(S_n\)</span> que representa el temps tanscorreguts fins l’observació del n-ésim esdeveniment. com a conseqüència de dels dues primeres propietats la successió es estrictament creixent
+<span class="math display">\[
+0=S_0&lt;S_1&lt;S_2&lt;\dots, sup_n S_n=\infty
+\]</span>
+En la següent figura es mostra gráficament la relació entre les variables <span class="math inline">\(S_n,X_i\)</span> i <span class="math inline">\(N_t\)</span> que caracterítzan el pocès de Pisson</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="images/unnamed-chunk-10-1.png" alt="Representació gràfica de les funcions relacionades amb un procés de Poisson" width="60%" />
+<p class="caption">
+Figura 5.2: Representació gràfica de les funcions relacionades amb un procés de Poisson
+</p>
+</div>
+<p>La distribució de <span class="math inline">\(S_n\)</span> al ser suma d’exponencials independents i identicament distribuïdes amb el mateix paràmetre <span class="math inline">\(\lambda\)</span> ve donad per la distribució d’Erlang <span class="math inline">\(G(n,1/\lambda)\)</span> cuya densitat és:
+<span class="math display" id="eq:denserlang">\[
+g_n(t) =\lambda \dfrac {(\lambda t)^{n-1}} {(n-1)!}e^{-\lambda t},\quad t \geq 0  \tag{5.13}
+\]</span>
+i la funció de distribució és
+<span class="math display" id="eq:disterlang">\[
+G_n(t)
+=\sum_{k\geq n} e^{-\lambda t} \dfrac {(\lambda t)^k}{k!}=1-e^{-\lambda t} \sum_{k\geq 0}^{n-1}\dfrac {(\lambda t)^k}{k!} \tag{5.14}
+\]</span></p>
+<p>El número <span class="math inline">\(N_t\)</span> d’esdeveniments ocorreguts en l’interval <span class="math inline">\(]0,t]\)</span> és el major <span class="math inline">\(n\)</span> tal que <span class="math inline">\(S_n&lt;t\)</span>
+<span class="math display">\[
+N_t=máx\{n: S_n\leq t\}
+\]</span>
+d’on es fàcil deduir que
+<span class="math display">\[
+\{N_t \geq n \}=\{S_n \geq t \}
+\]</span>
+i combinat l’equació anterior i <a href="principals-tipus-de-processos-estocàstics..html#eq:disterlang">(5.14)</a> tenim</p>
+<p><span class="math display">\[
+P(N_t \geq n)=G_n(t)=\sum_{k\geq n} e^{-\lambda t} \dfrac {(\lambda t)^k}{k!}
+\]</span>
+d’ací es fàcil deduir que</p>
+<p><span class="math display">\[
+P(N_t=n)= e^{\lambda t} \dfrac {(\lambda t)^n}{n!}
+  \]</span>
+que es la distribució de Poisson. Així <span class="math inline">\(N_t \sim Po(\lambda t)\)</span>, que justifica como es diu el procès. A més el resultat ens permet identificar el paràmetre <span class="math inline">\(\lambda\)</span> perqué si recorden <span class="math inline">\(E[N_t]=\lambda t\)</span> , es dedueix que <span class="math inline">\(\lambda\)</span> es el nombre de esdeveniments que ocorreixen per unitat de temps.</p>
+<hr />
+<p>:::{.exemple}</p>
+<p>En l’exemple @ref(exm: #ppuntual) es mostrava la realització d’un procès de Poisson on es volia avaluar el nombre de pacients que arribaven en un determinat temps a un servei d’urgències amb <span class="math inline">\(\lambda=3\)</span> per hora.</p>
+<p>:::</p>
+<p>*<strong>Increments Independents i Estacionaris</strong></p>
+<p>La successió de temps acumulats <span class="math inline">\(S_n\)</span> s’obté com a suma de variables exponencials IID i presenta increments independents i estacionaris.</p>
+<p>Atesa la relació entre <span class="math inline">\(N_t\)</span> i <span class="math inline">\(S_n\)</span>, és natural pensar que el procés de Poisson comparteix aquesta propietat. Tanmateix, la justificació no és immediata: en un interval <span class="math inline">\((t, t+s]\)</span>, el primer temps d’espera pot haver-se iniciat abans de <span class="math inline">\(t\)</span>, quedant-ne només una part (<span class="math inline">\(Y_{N_t+1}\)</span>) dins de l’interval.</p>
+<ol style="list-style-type: decimal">
+<li>Per la <strong>propietat de falta de memòria</strong>, el temps restant <span class="math inline">\(Y_{N_t+1}\)</span> manté la mateixa distribució: <span class="math inline">\(Y_{N_t+1} \sim \text{Exp}(\lambda)\)</span>.</li>
+<li>Com que <span class="math inline">\(Y_{N_t+1}\)</span> només depèn de <span class="math inline">\(t - S_{N_t}\)</span>, és independent de tots els temps d’espera posteriors (<span class="math inline">\(X_{N_t+k}\)</span> per a <span class="math inline">\(k \ge 2\)</span>).</li>
+</ol>
+<p>D’aquesta manera, l’increment <span class="math inline">\(N_{t+s} - N_t = m\)</span> es determina com la suma:
+<span class="math display">\[Y_{N_t+1} + \sum_{k=2}^{m} X_{N_t+k}\]</span></p>
+<p>A la pràctica, equival a traslladar l’origen de temps a <span class="math inline">\(t\)</span>:
+<span class="math display">\[P(N_{t+s} - N_t = m) = P(N_s = m) = \frac{e^{-\lambda s} (\lambda s)^m}{m!}\]</span></p>
+<p>En general, per a <span class="math inline">\(t_2 &gt; t_1\)</span>:
+<span class="math display">\[N_{t_2} - N_{t_1} \sim \text{Po}\big(\lambda(t_2 - t_1)\big)\]</span></p>
+<p>La distribució depèn només de la durada de l’interval (<span class="math inline">\(t_2 - t_1\)</span>) i no de la seva posició. Per tant, els increments són estacionaris.</p>
+<p>Respecte a les funcions de moments.</p>
+<p><strong>Mitjana del procés:</strong>
+Com ja hem vist anteriorment:
+<span class="math display">\[\mu(t) = \lambda t\]</span></p>
+<p><strong>Funció d’autocorrelació:</strong>
+Per a dos instants qualsevol tals que <span class="math inline">\(t_2 &gt; t_1\)</span>, fent ús de la estacionarietat i independència dels increments:</p>
+<p><span class="math display">\[
+\begin{align*}
+E[N_{t_1} N_{t_2}] &amp;= E\big[(N_{t_1} + (N_{t_2} - N_{t_1})) N_{t_1}\big] \\
+&amp;= E[N_{t_1}^2] + E[N_{t_2} - N_{t_1}] E[N_{t_1}] \\
+&amp;= (\lambda t_1 + \lambda^2 t_1^2) + \lambda(t_2 - t_1) \lambda t_1 \\
+&amp;= \lambda t_1 + \lambda^2 t_1 t_2
+\end{align*}
+\]</span>
+Si <span class="math inline">\(t_1 &gt; t_2\)</span>, intercanviaríem <span class="math inline">\(t_1\)</span> i <span class="math inline">\(t_2\)</span> en l’expressió anterior. En conseqüència, la funció d’autocorrelació val:
+<span class="math display">\[R(t_1, t_2) = E[N_{t_1} N_{t_2}] = \lambda \min(t_1, t_2) + \lambda^2 t_1 t_2\]</span></p>
+<p><strong>Funció d’autocovariància:</strong>
+De la relació entre <span class="math inline">\(R(t_1, t_2)\)</span> i <span class="math inline">\(C(t_1, t_2)\)</span> es dedueix:
+<span class="math display">\[C(t_1, t_2) = R(t_1, t_2) - \mu(t_1)\mu(t_2) = \lambda \min(t_1, t_2)\]</span></p>
+<p><strong>Variància del procés:</strong>
+Per a <span class="math inline">\(t_1 = t_2 = t\)</span> obtenim la variància del procés que, com en el cas de la distribució de Poisson, coincideix amb la mitjana:
+<span class="math display">\[\sigma^2(t) = \lambda t\]</span></p>
+<p><strong>Procés de Poisson i Arribades a l’Atzar</strong></p>
+<p>El procés de Poisson permet modelar la suma d’esdeveniments que succeeixen al llarg del temps (com les partícules que arriben a un comptador Geiger). En aquests fenòmens es parla d’arribades a l’atzar.</p>
+<p><em>Distribució condicional de les arribades:</em></p>
+<p>Si observem un procés en l’interval <span class="math inline">\((0, t]\)</span> i sabem que s’han après <span class="math inline">\(n\)</span> esdeveniments (<span class="math inline">\(N_t = n\)</span>), la probabilitat que <span class="math inline">\(k\)</span> d’ells hagin tingut lloc en un subinterval <span class="math inline">\((0, t_1]\)</span> és:</p>
+<p><span class="math display">\[
+\begin{align*}
+P(N_{t_1} = k \mid N_t = n) &amp;= \frac{P(N_{t_1} = k, N_t = n)}{P(N_t = n)} = \frac{P(N_{t_1} = k, N_{t - t_1} = n - k)}{P(N_t = n)} \\[0.3em]
+&amp;= \frac{\left[ \frac{e^{-\lambda t_1} (\lambda t_1)^k}{k!} \right] \left[ \frac{e^{-\lambda (t - t_1)} (\lambda (t - t_1))^{n - k}}{(n - k)!} \right]}{\frac{e^{-\lambda t} (\lambda t)^n}{n!}} \\[0.3em]
+&amp;= \binom{n}{k} \left( \frac{t_1}{t} \right)^k \left( \frac{t - t_1}{t} \right)^{n - k}
+\end{align*}
+\]</span>
+Per tant, <span class="math inline">\(N_{t_1} \mid N_t = n \sim \text{Binomial}(n, p)\)</span> amb <span class="math inline">\(p = \frac{t_1}{t}\)</span>.</p>
+<p><em>Conclusió:</em> Condicionat a haver-hi <span class="math inline">\(n\)</span> esdeveniments en <span class="math inline">\((0, t]\)</span>, aquests es distribueixen de forma uniforme i independent al llarg de l’interval.</p>
+<p><strong>Simulació d’un Procés de Poisson</strong></p>
+<p>Gràcies a la propietat de distribució uniforme condicional, podem simular la trajectòria d’un procés de Poisson de paràmetre <span class="math inline">\(\lambda\)</span> en un interval <span class="math inline">\((0, t]\)</span> de forma molt senzilla:</p>
+<p><em>Algorisme de simulació:</em></p>
+<ol style="list-style-type: decimal">
+<li>Generar el nombre d’arribades: Simultàniament es genera un valor <span class="math inline">\(n_0\)</span> d’una variable aleatòria <span class="math inline">\(\text{Po}(\lambda t)\)</span>.</li>
+<li>Generar els temps d’arribada: Si el valor simulat és <span class="math inline">\(n_0\)</span>, es generen <span class="math inline">\(n_0\)</span> valors independents d’una distribució uniforme <span class="math inline">\(\text{U}(0, t)\)</span>.</li>
+<li>Ordenar els temps: S’ordenen els <span class="math inline">\(n_0\)</span> valors obtinguts de menor a major per obtenir els temps d’arribada <span class="math inline">\(S_1, S_2, \dots, S_{n_0}\)</span>.</li>
+</ol>
+<p><em>Codi en R:</em></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="principals-tipus-de-processos-estocàstics..html#cb10-1" tabindex="-1"></a>simular_poisson <span class="ot">&lt;-</span> <span class="cf">function</span>(lambda, t) {</span>
+<span id="cb10-2"><a href="principals-tipus-de-processos-estocàstics..html#cb10-2" tabindex="-1"></a>  <span class="co"># 1. Nombre de successos</span></span>
+<span id="cb10-3"><a href="principals-tipus-de-processos-estocàstics..html#cb10-3" tabindex="-1"></a>  n0 <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="dv">1</span>, lambda <span class="sc">*</span> t)</span>
+<span id="cb10-4"><a href="principals-tipus-de-processos-estocàstics..html#cb10-4" tabindex="-1"></a>  <span class="co"># 2. Temps d&#39;arribada uniformes</span></span>
+<span id="cb10-5"><a href="principals-tipus-de-processos-estocàstics..html#cb10-5" tabindex="-1"></a>  <span class="cf">if</span> (n0 <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb10-6"><a href="principals-tipus-de-processos-estocàstics..html#cb10-6" tabindex="-1"></a>    S <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">runif</span>(n0, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> t))</span>
+<span id="cb10-7"><a href="principals-tipus-de-processos-estocàstics..html#cb10-7" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb10-8"><a href="principals-tipus-de-processos-estocàstics..html#cb10-8" tabindex="-1"></a>    S <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">0</span>)</span>
+<span id="cb10-9"><a href="principals-tipus-de-processos-estocàstics..html#cb10-9" tabindex="-1"></a>  }</span>
+<span id="cb10-10"><a href="principals-tipus-de-processos-estocàstics..html#cb10-10" tabindex="-1"></a>  </span>
+<span id="cb10-11"><a href="principals-tipus-de-processos-estocàstics..html#cb10-11" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">n_events =</span> n0, <span class="at">temps_arribada =</span> S))</span>
+<span id="cb10-12"><a href="principals-tipus-de-processos-estocàstics..html#cb10-12" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="moviment-brownià." class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Moviment Brownià.<a href="principals-tipus-de-processos-estocàstics..html#moviment-browni%C3%A0." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Text aquí.</p>
+<p>La caminata aleatòria (<em>random walk</em>) presentada en un apartat anterior era la suma de desplaçaments independents a dreta i a esquerra, de forma que només estaven permesos salts de un sentit a un altre en cada interval de temps. Imaginem ara despla
+aments petits de longitud <span class="math inline">\(\Delta\)</span> que es produixen en intervals de temps petit de longitud <span class="math inline">\(\tau\)</span>, En el límit, quan tant la longitud dels desplaçaments com la durada dels intervals de temps tendeixen a zero, s’obté un procés estocàstic les realitzacions del qual són funcions contínues del temps.</p>
+<p>El matemàtic Norbert Wiener estipulo las següentes asumpcions para un procés aleatori estacionari W(.,.) amb increments independents en 1923</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-122" class="definition"><strong>Definició 5.19  </strong></span><strong>Moviment Brownià</strong></p>
+<p>Un procés estòcastic W(t) s’anomenta moviment Brownià si</p>
+<ol style="list-style-type: decimal">
+<li><em>Independence:</em> <span class="math inline">\(W(t+\Delta t)- W(t)\)</span> es independent de ${ W() } t</li>
+<li><em>Estacionarietat:</em> La distribució de <span class="math inline">\(W(t+\Delta t)-W(t)\)</span> no depen de t</li>
+<li><em>Continuitat:</em> <span class="math inline">\(lim_{\Delta t \rightarrow 0} \dfrac {P(|W(t+\Delta t)- W(t)| \geq \delta)}{\Delta t}=0 \quad \forall \delta &gt;0\)</span>
+4.Per a qualsevol <span class="math inline">\(\Delta t&gt;0\)</span>, l’increment del procés verifica</li>
+</ol>
+<p><span class="math display">\[
+W(t+\Delta t)-W(t)\sim \mathcal{N}\left(\mu\,\Delta t,\sigma^2\Delta t\right).
+\]</span></p>
+</div>
+<p><em>Propietats del moviment Brownià</em></p>
+<ul>
+<li><p>El valor esperat és <span class="math inline">\(E[W(t)]=\mu t\)</span></p></li>
+<li><p>La variància és <span class="math inline">\(Var[W(t)]=\sigma^2 t\)</span></p></li>
+<li><p>La funció de autocovariància és <span class="math inline">\(E[(W(t)]-\mu t) (W(\tau)-\mu \tau]=\sigma^2 min(t,\tau)\)</span> que coincideix en la autocorrelació.</p></li>
+<li><p>la variació total de un moviment Brownià sobre un interval finte [0,T] és <span class="math inline">\(\infty\)</span></p></li>
+<li><p>La suma de quadrats de un “drift-free” moviment Brownià es deterministic.</p></li>
+</ul>
+<p><span class="math display">\[
+\lim_{N \to \infty} \sum_{k=1}^{N} \left( W\left(\frac{kT}{N}\right) - W\left(\frac{(k-1)T}{N}\right) \right)^2=
+\sigma^2 T.
+\]</span></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-123" class="definition"><strong>Definició 5.20  </strong></span>Un moviment Bronwnià es estàndard si.</p>
+<p><span class="math inline">\(W(0)=0\)</span></p>
+<p><span class="math inline">\(E[W(t)]=0 ; \mu=0\)</span></p>
+<p><span class="math inline">\(E[W^2(t)]=t ; \sigma^2=1\)</span></p>
+</div>
+<hr />
+<div class="{.exemple]}">
+<p><strong>Fluctuacions del cabal d’un riu</strong></p>
+<p>Suposem que volem estudiar les petites fluctuacions del cabal d’un riu al llarg
+d’un dia. Tot i que el cabal presenta una tendència general estable, les
+variacions de la pluja, el vent, l’obertura de comportes i altres factors
+ambientals provoquen petites oscil·lacions contínues i imprevisibles.</p>
+<p>Per descriure aquestes fluctuacions, suposem que <span class="math inline">\(W(t)\)</span> és un moviment
+brownià estàndard, on <span class="math inline">\(t\)</span> representa el temps en hores des de l’inici del dia.
+El procés compleix les propietats següents:</p>
+<ul>
+<li>El nivell inicial és conegut: <span class="math inline">\(W(0)=0\)</span>.</li>
+<li>Els increments del procés en intervals disjunts són independents.</li>
+<li>En qualsevol interval de longitud <span class="math inline">\(\Delta t\)</span>, la variació del cabal és una
+variable aleatòria normal
+<span class="math display">\[W(t+\Delta t)-W(t)\sim N(0,\Delta t).\]</span></li>
+</ul>
+<p>Això significa que, com més llarg és l’interval de temps, més gran és la
+variabilitat esperada de les fluctuacions. No obstant això, les variacions
+positives i negatives són igualment probables, de manera que l’esperança dels
+increments és zero.</p>
+<p>La figura següent mostra una possible realització d’un moviment brownià durant
+les 24 hores d’un dia.</p>
+<p><img src="images/brownian-river-1.png" alt="" width="768" /></p>
+<p>En aquest exemple la trajectòria representa les fluctuacions acumulades del
+cabal respecte del valor inicial. Es pot observar que la funció és contínua,
+però extremadament irregular: presenta nombrosos canvis de direcció i no és
+derivable en cap punt. Aquest és un dels trets característics del moviment
+brownià.</p>
+</div>
 
 </div>
 </div>

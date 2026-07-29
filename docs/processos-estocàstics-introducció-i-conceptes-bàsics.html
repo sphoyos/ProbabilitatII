@@ -53,8 +53,77 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.12/grViz.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -89,37 +158,37 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#metodologia-i-activitats-formatives"><i class="fa fa-check"></i>Metodologia i activitats formatives</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#avaluaci%C3%B3-acreditativa-dels-aprenentatges"><i class="fa fa-check"></i>Avaluació acreditativa dels aprenentatges</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariants</a>
+<li class="chapter" data-level="1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariades</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
+<li class="chapter" data-level="1.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
-<li class="chapter" data-level="1.1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
-<li class="chapter" data-level="1.1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
-<li class="chapter" data-level="1.1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
+<li class="chapter" data-level="1.1.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
+<li class="chapter" data-level="1.1.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
+<li class="chapter" data-level="1.1.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
+<li class="chapter" data-level="1.1.4" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
+<li class="chapter" data-level="1.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
-<li class="chapter" data-level="1.2.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
-<li class="chapter" data-level="1.2.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#variables-aleatories-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatories multivariants continues</a></li>
+<li class="chapter" data-level="1.2.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
+<li class="chapter" data-level="1.2.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
+<li class="chapter" data-level="1.2.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#variables-aleatories-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatories multivariants continues</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
+<li class="chapter" data-level="1.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-marginals."><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals.</a></li>
-<li class="chapter" data-level="1.3.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#distribucions-condicionals"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions condicionals</a></li>
+<li class="chapter" data-level="1.3.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#distribucions-marginals."><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals.</a></li>
+<li class="chapter" data-level="1.3.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#distribucions-condicionals"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions condicionals</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a>
+<li class="chapter" data-level="1.4" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a>
 <ul>
-<li class="chapter" data-level="1.4.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-univariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.1</b> Moments univariants: Esperança i Variància</a></li>
-<li class="chapter" data-level="1.4.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#moments-multivariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperança i Variància</a></li>
-<li class="chapter" data-level="1.4.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
+<li class="chapter" data-level="1.4.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-univariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.1</b> Moments univariants: Esperança i Variància</a></li>
+<li class="chapter" data-level="1.4.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#moments-multivariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperança i Variància</a></li>
+<li class="chapter" data-level="1.4.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a>
+<li class="chapter" data-level="1.5" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a>
 <ul>
-<li class="chapter" data-level="1.5.1" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#suma-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.1</b> Suma de dues variables aleatòries</a></li>
-<li class="chapter" data-level="1.5.2" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.2</b> Producte de dues variables aleatòries</a></li>
-<li class="chapter" data-level="1.5.3" data-path="variables-aleatòries-multivariants.html"><a href="variables-aleatòries-multivariants.html#producte-de-dues-variables-aleat%C3%B2ries-1"><i class="fa fa-check"></i><b>1.5.3</b> Producte de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.1" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#suma-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.1</b> Suma de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.2" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#producte-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.2</b> Producte de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.3" data-path="variables-aleatòries-multivariades.html"><a href="variables-aleatòries-multivariades.html#quocient-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.3</b> Quocient de dues variables aleatòries</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="independència-de-variables-aleatories.html"><a href="independència-de-variables-aleatories.html"><i class="fa fa-check"></i><b>2</b> Independència de variables aleatories</a>
@@ -161,15 +230,18 @@
 <ul>
 <li class="chapter" data-level="4.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic."><i class="fa fa-check"></i><b>4.1</b> Definició de procés estocàstic.</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic"><i class="fa fa-check"></i><b>4.2.1</b> Funcions de moment un procès estocástic</a></li>
+<li class="chapter" data-level="4.1.1" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic"><i class="fa fa-check"></i><b>4.1.1</b> Funcions de moment un procès estocástic</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics discrets i continus.</a></li>
-<li class="chapter" data-level="4.4" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.4</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
+<li class="chapter" data-level="4.2" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus."><i class="fa fa-check"></i><b>4.2</b> Processos estocàstics discrets i continus.</a></li>
+<li class="chapter" data-level="4.3" data-path="processos-estocàstics-introducció-i-conceptes-bàsics.html"><a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris."><i class="fa fa-check"></i><b>4.3</b> Processos estocàstics estacionaris i no estacionaris.</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html"><i class="fa fa-check"></i><b>5</b> Principals tipus de Processos estocàstics.</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#cadenes-de-markov."><i class="fa fa-check"></i><b>5.1</b> Cadenes de Markov.</a></li>
-<li class="chapter" data-level="5.2" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#caminades-aleat%C3%B2ries."><i class="fa fa-check"></i><b>5.2</b> Caminades aleatòries.</a></li>
+<li class="chapter" data-level="5.1" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#cadenes-de-markov."><i class="fa fa-check"></i><b>5.1</b> Cadenes de Markov.</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#classificaci%C3%B3-dels-estats-i-comunnicacions-duna-cadena-de-markov"><i class="fa fa-check"></i><b>5.1.1</b> Classificació dels estats i comunnicacions d’una cadena de Markov</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#passeig-o-caminades-aleat%C3%B2ries."><i class="fa fa-check"></i><b>5.2</b> Passeig o Caminades aleatòries.</a></li>
 <li class="chapter" data-level="5.3" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#processos-de-poisson."><i class="fa fa-check"></i><b>5.3</b> Processos de Poisson.</a></li>
 <li class="chapter" data-level="5.4" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#moviment-browni%C3%A0."><i class="fa fa-check"></i><b>5.4</b> Moviment Brownià.</a></li>
 </ul></li>
@@ -199,7 +271,7 @@
 <h2><span class="header-section-number">4.1</span> Definició de procés estocàstic.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#definici%C3%B3-de-proc%C3%A9s-estoc%C3%A0stic." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En el curs de probabilitat I es van estudiar les susccesions de variables aleatòries, es a dir col·leccions infinites numerables de variables aleatgòries i es va centrar l’interès en les diferents convergències d’aquestes variables, sobretot utilitzant la llei dels grans nombres i el teoerema central del Límit. En aquell moment no es varen analitzar les relacions entre les variables de la succesió i altres.
 En questst tema introduirem el concepte de procéss estocàstic. De tota manera cal resenyar que el concepte de procés estocàstic va mès enllà de les successions de variables. Es tracta d’una conjunt de variables aleatòries on pot estar indexat per un conjunt no numerables.</p>
-<p>Un exemple seria l’estudi de l’ocurrència de un mateix esdeveniment al llarg del temps. Si aquestes ocurrències son independents i el tema d’interés es el temps que trancorreix entre esdeveniments, parlarem de la succeció <span class="math inline">\(\{X_n\}\)</span> on <span class="math inline">\(X_i\)</span>=(temps que passa entre l’esdeveniment i- i el i). Però si el que ens interessa es el nombre de vegades que l’esdeveniment ha succeit en l’interva l [0,t], la familia a considerar es <span class="math inline">\(N_t\)</span>, amb t&gt;0 desde luego no es numerable .</p>
+<p>Un exemple seria l’estudi de l’ocurrència de un mateix esdeveniment al llarg del temps. Si aquestes ocurrències son independents i el tema d’interés es el temps que trancorreix entre esdeveniments, parlarem de la succeció <span class="math inline">\(\{X_n\}\)</span> on <span class="math inline">\(X_i\)</span>=(temps que passa entre l’esdeveniment i- i el i). Però, si el que ens interessa es el nombre de vegades que l’esdeveniment ha succeit en l’interva l [0,t], la familia a considerar es <span class="math inline">\(N_t\)</span>, amb t&gt;0 desde luego no es numerable .</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-85" class="definition"><strong>Definició 4.1  </strong></span><strong>Procés estòcastic</strong></p>
 <p>Un procès estocàstic es una colecció de variables aleatòries <span class="math inline">\(\{ X_t,t \in T \}\)</span> definides sobre un espai de probabilitat <span class="math inline">\((\Omega, \mathcal{A},P)\)</span>.</p>
@@ -230,10 +302,7 @@ Figura 4.1:  Exemple Commpra Botiga de roba
 </div>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-86" class="example"><strong>Exemple 4.2  </strong></span></p>
-<div id="exemple-5.2" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Exemple 5.2<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exemple-5.2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Un jugador comença amb <strong>10 euros</strong> i juga consecutivament <strong>20 partides</strong>. En cada partida aposta 1 euro a cara o creu.</p>
+<p><span id="exm:unlabeled-div-86" class="example"><strong>Exemple 4.2  </strong></span>Un jugador comença amb <strong>10 euros</strong> i juga consecutivament <strong>20 partides</strong>. En cada partida aposta 1 euro a cara o creu.</p>
 <p>Denotem per <span class="math inline">\(X_t\)</span> els diners que té el jugador després d’haver jugat <span class="math inline">\(t\)</span> partides, on</p>
 <p><span class="math display">\[
 t=0,1,\ldots,20. \qquad X_0=10
@@ -257,7 +326,6 @@ X_t-1, &amp; \text{amb probabilitat }1/2.
 <p class="caption">
 Figura 4.2: Exemple de proceso del jugador arruinado
 </p>
-</div>
 </div>
 </div>
 <div class="example">
@@ -290,8 +358,8 @@ Figura 4.4: Exemple de nombre d’urgències per temps
 <hr />
 <p>Un procès estocàstic també pot ser considerat com una funció aleatòria de doble argument <span class="math inline">\(\{ X(t,\omega), t \in T , \omega \in \Omega\}\)</span>. Si fixem <span class="math inline">\(\omega=\omega_0\)</span> tindrem una <em>realització</em> del procés <span class="math inline">\(X(.,\omega_0)\)</span> cuya representació gràfica son le anomenades <em>trajectòries del procés</em> que hem representant en els 4 gràfics anteriors.</p>
 <p>Si per contra fixem <span class="math inline">\(t=t_0\)</span> estarem parlant de la variable aleatoria <span class="math inline">\(X_{t_0}= X(t_0,.)\)</span> que es la distribución de la variable de interés en el punt d’observació t</p>
-<div id="funcions-de-moment-un-procès-estocástic" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Funcions de moment un procès estocástic<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="funcions-de-moment-un-procès-estocástic" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Funcions de moment un procès estocástic<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#funcions-de-moment-un-proc%C3%A8s-estoc%C3%A1stic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Com a variable aleatoria de dos dimensions podem definir les següents funcións característiques de un procès estocàstic <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span></p>
 <p><strong>Funció mitjana d’un procès estocàstic</strong></p>
 <p>Es defineix com la funció</p>
@@ -339,8 +407,8 @@ C(t_1,t_2)= R(t_1,t_2)-\mu(t_1)\mu(t_2)
 que obviamente pren valors enttre <span class="math inline">\([-1,1]\)</span>- Em eñ cas de les series temporals es reserva el nom de autocorrelació per aquesta funció.</p>
 </div>
 </div>
-<div id="processos-estocàstics-discrets-i-continus." class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Processos estocàstics discrets i continus.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="processos-estocàstics-discrets-i-continus." class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Processos estocàstics discrets i continus.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-discrets-i-continus." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Els processos estòcastics es poden classificar en funció del tipo de variables T i X_t</p>
 <table>
 <thead>
@@ -363,13 +431,13 @@ que obviamente pren valors enttre <span class="math inline">\([-1,1]\)</span>- E
 </tr>
 </tbody>
 </table>
-<p>-Un procès discret amb el temps discret , que s’anomena cadena, seria l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:cadena">4.1</a> on es veia en 30 clients que entraven en una botiga si compraven o no</p>
-<p>-Un procés continu en un temps discret s’anomena un succeció de variables. Si en el cas anterior en lloc de mesurar si compra o no compra haguessim mesurat l ’alçada o el pes del client seria un bon exemple</p>
-<p>-Un procès puntual com el de l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> on es mesura el número de urgències en un determinat temps és el cas on el procès es discret pero el temps és continu.</p>
-<p>-El procès continu es aquell en el que la variable es continua i el temps també. Es el cas de l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:pcontinu">4.4</a> on es mesura el <span class="math inline">\(VO_2\)</span> d’un esportista en 10 minuts d’esforç</p>
+<p>-Un procès discret amb el temps discret (**DTDV*+- Discret Time/Discret Values) , que s’anomena cadena, seria l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:cadena">4.1</a> on es veia en 30 clients que entraven en una botiga si compraven o no</p>
+<p>-Un procés continu en un temps discret (<strong>DTCV</strong>- Discret Time/Continous Values)s’anomena un succeció de variables. Si en el cas anterior en lloc de mesurar si compra o no compra haguessim mesurat l ’alçada o el pes del client seria un bon exemple</p>
+<p>-Un procès puntual com el de l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> on es mesura el nombre de urgències en un determinat temps és el cas on el procès es discret pero el temps és continu.(<strong>CTDV</strong>+-Continous Time/Discret Values)</p>
+<p>-El procès continu es aquell en el que la variable es continua i el temps també(<strong>CTCV</strong>+-Continous Time/Continous Values) . Es el cas de l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:pcontinu">4.4</a> on es mesura el <span class="math inline">\(VO_2\)</span> d’un esportista en 10 minuts d’esforç</p>
 </div>
-<div id="processos-estocàstics-estacionaris-i-no-estacionaris." class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Processos estocàstics estacionaris i no estacionaris.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="processos-estocàstics-estacionaris-i-no-estacionaris." class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Processos estocàstics estacionaris i no estacionaris.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
 <p><span id="def:unlabeled-div-87" class="definition"><strong>Definició 4.2  </strong></span><strong>Distribucions finito-dimensionals</strong>
 En general les variables aleatòries del procés <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> no son independents entre elles. Si <span class="math inline">\(\{ t_1,t_2,..,t_n\} \subset T\)</span> és un subconjunt finit de qualsevol dels índex, la distribució conjunta del vector <span class="math inline">\((X_{t_1},X_{t_2},...,X_{t_n})\)</span> vindrà donada per</p>
@@ -392,9 +460,19 @@ X_{t_1}-X_{t_0},X_{t_2}-X_{t_1},...,X_{t_n}-X_{t_{n-1}}
 \]</span>
 són independents.</p>
 </div>
-<p>En l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> sobre el nombre d’urgències, el número de urgències en la primera hora és independent del de la segona hora i de la tercera hora.</p>
+<p>En l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> sobre el nombre d’urgències, el nombre de urgències en la primera hora és independent del de la segona hora i de la tercera hora.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-90" class="definition"><strong>Definició 4.5  </strong></span><strong>Processos estacionaris forts</strong></p>
+<p><span id="def:unlabeled-div-90" class="definition"><strong>Definició 4.5  </strong></span><strong>Processos de Markov</strong></p>
+<p>Sea <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es diu que es un procés estòcastic de Markov si satisfà la propietat de Markov, és a dir</p>
+<p><span class="math display">\[
+P(X_{t_n}=x_n|X_{t_{n-1}}=x_{n-1},...,X_{t_0}=x_0)=P(X_{t_n}=x_n|X_{t_{n-1}}=x_{n-1})
+\]</span>
+amb <span class="math inline">\(t_0&lt;t_1&lt;....&lt;t_n, t_i \in T\)</span></p>
+</div>
+<p>Aquest tipus de processos son aquells on l’evolució futura depen només del estat present del procés.</p>
+<p>L’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> sobre el nombre d’urgències també es un procés de Markov. Per calcular el nombre de urgències en l’instant t+`s, nom´s necessitem saber quants hi ha en t ( present), donat que les arribades futures són independents de les passades i saber en quin temps estem no aporta cap informació. en la primera hora és independent del de la segona hora i de la tercera hora.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-91" class="definition"><strong>Definició 4.6  </strong></span><strong>Processos estacionaris forts</strong></p>
 <p>El procès <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es fortament estacionari si les families de les variables aleatòries
 <span class="math display">\[
 (X_{t_1},X_{t_2},...,X_{t_n}) \quad \text(i) \quad (X_{t_1+h},X_{t_2+h},...,X_{t_n+h})
@@ -402,7 +480,7 @@ són independents.</p>
 tenen la mateixa distribució conjunta per a tot <span class="math inline">\(h&gt;0\)</span>, tots <span class="math inline">\(\{t_1,...,t_n\} \subset T\)</span> i <span class="math inline">\(n\geq 1\)</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-91" class="theorem"><strong>Theorem 4.1  </strong></span>La funció mitjana d’un procés estocàstic estacionari es constant</p>
+<p><span id="thm:unlabeled-div-92" class="theorem"><strong>Theorem 4.1  </strong></span>La funció mitjana d’un procés estocàstic estacionari es constant</p>
 </div>
 <p><strong>Demostració</strong></p>
 <p><span class="math display">\[
@@ -410,14 +488,13 @@ tenen la mateixa distribució conjunta per a tot <span class="math inline">\(h&g
 \]</span>
 Més en general , qualsevol propietat de una variable singular d’un procés estaconari es invariant al temps</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-92" class="definition"><strong>Definició 4.6  </strong></span><strong>Processos estacionaris dèbil</strong></p>
+<p><span id="def:unlabeled-div-93" class="definition"><strong>Definició 4.7  </strong></span><strong>Processos estacionaris dèbil</strong></p>
 <p>El procès <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es dèbilment estacionari si per a tot <span class="math inline">\(t_1\)</span> i <span class="math inline">\(t_2 \in T\)</span> i tot <span class="math inline">\(h&gt;0\)</span>,</p>
 <p><span class="math display">\[
 E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h},X_{t_2+h})
 \]</span></p>
 </div>
-<p>–
-Una forma equivalent de definir l’estacionarietat dèbil és dir que un procès es dèbilment estacionari si i només si te esperança constant i la covariància entre <span class="math inline">\(X_{t_1}\)</span> i <span class="math inline">\(X_{t_2}\)</span> només depen de <span class="math inline">\(t_2-t_1\)</span>. La estacionarietat dèbil implica la estacionarietat forta.</p>
+<p>Una forma equivalent de definir l’estacionarietat dèbil és dir que un procès es dèbilment estacionari si i només si te esperança constant i la covariància entre <span class="math inline">\(X_{t_1}\)</span> i <span class="math inline">\(X_{t_2}\)</span> només depen de <span class="math inline">\(t_2-t_1\)</span>. La estacionarietat dèbil implica la estacionarietat forta.</p>
 
 </div>
 </div>
