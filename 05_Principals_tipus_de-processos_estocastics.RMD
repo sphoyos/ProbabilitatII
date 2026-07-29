@@ -1126,7 +1126,7 @@ En la taula i la gràfica  gràfica és mostra una caminata aleatòria de longit
 
 
 
-```{r passeig-aleatori, fig.align='center', fig.width=8, fig.height=4, echo=FALSE}
+```{r passeig-aleatori, fig.align='center', fig.width=7, fig.height=4, echo=FALSE}
 S
 
 # Creació del gràfic
