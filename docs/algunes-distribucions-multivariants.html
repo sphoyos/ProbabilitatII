@@ -533,7 +533,7 @@ X\perp Y\quad\Longleftrightarrow\quad\rho=0
 Així, en una distribució normal bivariant, la incorrelació és equivalent a la independència.</p>
 <div class="theorem">
 <p><span id="thm:unlabeled-div-70" class="theorem"><strong>Theorem 3.1  </strong></span><strong>Distribucions condicionals</strong></p>
-<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori que sequeix una distribución normal bivariant amb paràmetres <span class="math inline">\(\mu_x,\mu_y\in\mathbb{R}\)</span> y <span class="math inline">\(\sigma_x,\sigma_y&gt;0\)</span> i <span class="math inline">\(\rho \in [-1,1]\)</span> amb la funció de densitat definida en <a href="algunes-distribucions-multivariants.html#eq:fxybinorm">(3.1)</a> corresponetn a una distribució normal bivariant. La distribució condicional de <span class="math inline">\(y\)</span> donat que <span class="math inline">\(X=x\)</span> es una distribució normal amb la esperança i variància següent:</p>
+<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori que sequeix una distribución normal bivariant amb paràmetres <span class="math inline">\(\mu_x,\mu_y\in\mathbb{R}\)</span> y <span class="math inline">\(\sigma_x,\sigma_y&gt;0\)</span> i <span class="math inline">\(\rho \in [-1,1]\)</span> amb la funció de densitat definida en <a href="algunes-distribucions-multivariants.html#eq:fxybinorm">(3.1)</a> corresponent a una distribució normal bivariant. La distribució condicional de <span class="math inline">\(y\)</span> donat que <span class="math inline">\(X=x\)</span> es una distribució normal amb la esperança i variància següent:</p>
 <p><span class="math display" id="eq:espcondbinorm">\[
 E(Y|X=x]= \mu_Y+\rho \sigma_Y \left (  \dfrac {X-\mu_X}{\sigma_X}\right )   \tag{3.9}
 \]</span></p>
@@ -573,8 +573,9 @@ Tambè podem trobar <span class="math inline">\(Var(Y \mid X)\)</span></p>
 <p>1- Observem que la variància condicional o funció de regressió es lineal</p>
 <p><span class="math display">\[
 E[Y|X=x]= \mu_Y+\rho  \frac {\sigma_Y} {\sigma_X} (X-\mu_X)  =\beta_0 +\beta_1 x
-\]</span>
-2- La variància condicionada no depén del valor pel que condicionem</p>
+\]</span></p>
+<p>on <span class="math inline">\(\beta_1= \frac {\sigma_{XY}}{\sigma_X^2}\)</span> i <span class="math inline">\(\beta_0=\mu_Y-\mu_X \beta_1\)</span></p>
+<p>2- La variància condicionada no depén del valor pel que condicionem</p>
 <p><span class="math display">\[
 Var(Y|X=x)=(1-\rho^2) \sigma_Y^2    
 \]</span>

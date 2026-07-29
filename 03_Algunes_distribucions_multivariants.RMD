@@ -375,7 +375,7 @@ Així, en una distribució normal bivariant, la incorrelació és equivalent a l
 :::{.theorem}
 **Distribucions condicionals**
 
-Sigui $(X,Y)$ un vector aleatori que sequeix una distribución normal bivariant amb paràmetres  $\mu_x,\mu_y\in\mathbb{R}$ y $\sigma_x,\sigma_y>0$ i $\rho \in [-1,1]$ amb la funció  de densitat definida en \@ref(eq:fxybinorm) corresponetn a una distribució normal bivariant. La distribució condicional de $y$ donat que $X=x$  es una distribució normal amb la esperança i variància següent:
+Sigui $(X,Y)$ un vector aleatori que sequeix una distribución normal bivariant amb paràmetres  $\mu_x,\mu_y\in\mathbb{R}$ y $\sigma_x,\sigma_y>0$ i $\rho \in [-1,1]$ amb la funció  de densitat definida en \@ref(eq:fxybinorm) corresponent a una distribució normal bivariant. La distribució condicional de $y$ donat que $X=x$  es una distribució normal amb la esperança i variància següent:
 
 $$
 E(Y|X=x]= \mu_Y+\rho \sigma_Y \left (  \dfrac {X-\mu_X}{\sigma_X}\right )   (\#eq:espcondbinorm)
@@ -430,6 +430,9 @@ $$
 $$
  E[Y|X=x]= \mu_Y+\rho  \frac {\sigma_Y} {\sigma_X} (X-\mu_X)  =\beta_0 +\beta_1 x
 $$
+
+on $\beta_1= \frac {\sigma_{XY}}{\sigma_X^2}$ i $\beta_0=\mu_Y-\mu_X \beta_1$
+
 2- La variància condicionada no depén del valor pel que condicionem 
 
 $$
