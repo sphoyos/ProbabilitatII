@@ -1,7 +1,6 @@
 ---
 title: "Probabilitat II"
 author: "Santi Perez-Hoyos"
-date: '`r format(Sys.time(), "%d %B, %Y")`'
 lang: ca
 site: bookdown::bookdown_site
 ---
