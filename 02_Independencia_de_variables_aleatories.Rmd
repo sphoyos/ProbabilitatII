@@ -1,10 +1,10 @@
 
 \newpage
 
-# Independència de variables aleatories
+# Independència de variables aleatòries
 
 
-La independència entre dos esdeveniments A i B, suposa que cap d'ells aporta informació d'interés alhora de calcular la probabilitat d'ells. Es a dir $P(A)=P(A/B)$  i per tant $P(B)=P(B/A)$. En aquest tema volerm traslladar el conpte d'indepèndencia i algunes mesures relacionades als vectors aleatòris. 
+La independència entre dos esdeveniments A i B, suposa que cap d'ells aporta informació d'interés alhora de calcular la probabilitat d'ells. Es a dir $P(A)=P(A/B)$  i per tant $P(B)=P(B/A)$. En aquest tema volem traslladar el compte d'independència i algunes mesures relacionades als vectors aletoris. 
 
 ## Independència i dependència entre variables aleatòries.
  
@@ -17,7 +17,7 @@ Es diu que dos variables aleatòries $X$ i $Y$ son independents si, per a qualse
 $$
 P(X \in A \cap  Y \in B) =P(X \in A) P(Y \in B)
 $$
-Com a consequència  $P(X \leq x \quad and  \quad   Y \leq y )=P(X \leq x)P(Y \leq y )$
+Com a conseqüència  $P(X \leq x \quad and  \quad   Y \leq y )=P(X \leq x)P(Y \leq y )$
 
 
 En general es diu que les variables $X_i, i=1,...k$ son independents si les $\sigma-àlgebras$ que les indueixen s ho son
@@ -40,7 +40,7 @@ on $A_{j_1}=X^{-1}B_{j_1}$
 
 :::
 
-Comprobar l'independència de variables aleatòries a partir de la equació   \@ref(eq:pxindep) es complicat i es mès fàcil caracterítzar l'independència a partir de les funcions de distribució  i densitat conjuntes i marginals.
+Comprovar la independència de variables aleatòries a partir de la equació   \@ref(eq:pxindep) es complicat i es mès fàcil caracteritzar la independènciaa partir de les funcions de distribució  i densitat conjuntes i marginals.
 
 
  
@@ -90,7 +90,7 @@ F_j(x_j)
 \end{aligned}
 $$
 
-2-  A partir del càlcul de la densitat conjunta i tenim en compte que cada factor $F_j(x_j)$ només depen de la vaqriable $x_j$
+2-  A partir del càlcul de la densitat conjunta i tenim en compte que cada factor $F_j(x_j)$ només depèn de la variable $x_j$
 
 $$ 
 \begin{aligned}
@@ -116,12 +116,12 @@ $$
 
 :::{.observation}
 
-Com es va veure en el tema anterior a partir de la distribució conjunta d'un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components.  Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginales sempre que les variables siguin indepen                                                                                                                              dents. 
+Com es va veure en el tema anterior a partir de la distribució conjunta d'un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components.  Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin indepen                                                                                                                              dents. 
 
 :::
 
 :::{.example}
-En l'exemple \@ref(exm:circulo)  del tema anterior varem veure que les coordenades de la distribució conjunta de un punt triat a l'atzar en el circle unitas $C_1$ tenia una densitat conjunta
+En l'exemple \@ref(exm:circulo)  del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l'atzar en el cercle unitats $C_1$ tenia una densitat conjunta
 
 
  $$
@@ -132,7 +132,7 @@ En l'exemple \@ref(exm:circulo)  del tema anterior varem veure que les coordenad
 \end{cases}
  $$
  
-I fàcilement  i de forma simètrica, les garginals de X e Y son idèntiques i tenen la forma
+I fàcilment i de forma simètrica, les marginals de X e Y son idèntiques i tenen la forma
 
 
  $$
@@ -150,22 +150,22 @@ Directamente les dues variables $X$ e $Y$ no son independents donat que $f_{XY}(
 
 
 :::{.definition}
-**Mostra aleatoria**
+**Mostra aleatòria**
 
-Considerem una distribució de probabilitat que ve representada per la seva funció de probabilitat o densitat de probabilitat segons sigui discreta o continua.  Es diu que n variables aleatòries $X_1,...,X_n$ formen una mostra  aleatòria d'aquesta distribució si les  variables aleatòries son independents i la  funció de probabilitat o densitat marginal de cada variable aleatòria $X_i$ es f. Normalment a este conjunt de variables aleatòrias es diu que son independents i identicament distribuides o abreviadament i.i.d".  El nombre de variables aleatòries es la grandària o mida mostral. 
+Considerem una distribució de probabilitat que ve representada per la seva funció de probabilitat o densitat de probabilitat segons sigui discreta o continua.  Es diu que n variables aleatòries $X_1,...,X_n$ formen una mostra  aleatòria d'aquesta distribució si les  variables aleatòries son independents i la  funció de probabilitat o densitat marginal de cada variable aleatòria $X_i$ es f. Normalment a este conjunt de variables aleatòrias es diu que son independents i idènticament distribuïdes o abreviadament i.i.d.  El nombre de variables aleatòries es la grandària o mida mostral. 
 
 :::
 
 D'aquesta definició es dedueix que les dades observades en una mostra de subjectes d'una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu $g(x_1,...,x_n)=f(x_1)...f(x_n)$
 
 :::{.proposition}
-**Indepèndencia i Esperança**
+**Independència i Esperança**
 
 Si $X_1,...,X_k$ són independents, aleshores $E[X_1,...,X_k]=E[\prod_{j=1}^{k}X_i]=\prod_{j=1}^{k}E[X_i]$ (\#eq:indep)
 
 **Demostració**
 
-Utilitzant la definició de esperança d'un vector i  la intercanviabilitat de les intregrals i els productes de funcions pel teorema de Fubini podem demostrar 
+Utilitzant la definició de esperança d'un vector i  la intercanviabilitat de les integrals i els productes de funcions pel teorema de Fubini podem demostrar 
 
 $$
 \begin{aligned}
@@ -209,16 +209,16 @@ Si les variables $X_1,...,X_k$ son independents, llavors $cov(X_i,X_j)=0, \quad 
 :::
 
 :::{.corollary}
-Si les variables $X_1,...,X_k$ son independents i les seves variàncies existeixen, la variancia de $S=\sum_{i=1}^k a_i X_i$, on $a_i$ son qualsevol número real, existeix i ve donada per $V(S)= \sum_{i=1}^k a_i^2  Var(X_i)$
+Si les variables $X_1,...,X_k$ son independents i les seves variàncies existeixen, la variància de $S=\sum_{i=1}^k a_i X_i$, on $a_i$ son qualsevol número real, existeix i ve donada per $V(S)= \sum_{i=1}^k a_i^2  Var(X_i)$
 :::
 
 
-Aquests corol·laris permeten obtenir esperances i variàncies de algunes variables conegudes de manera fàcil com verurem en el tema 3.
+Aquests corol·laris permeten obtenir esperances i variàncies de algunes variables conegudes de manera fàcil com veurem en el tema 3.
 
 
 ## Esperances i variàncies condicionades.
 
-En el tema anterior varem introduir el concepte d'esperança i variància de un vector aleatori, així com el  concepte de distribució condicional. En aquest apartat introduirem el concepte de esperança condicional i la seva relació amb el concepte d'independencia. 
+En el tema anterior varem introduir el concepte d'esperança i variància de un vector aleatori, així com el  concepte de distribució condicional. En aquest apartat introduirem el concepte de esperança condicional i la seva relació amb el concepte d'independència. 
 
 
 
@@ -273,7 +273,7 @@ Quan el valor x de X  varia, l'esperança condicionada de Y al valor de x també
 $$
 m_y =E[Y \mid X=x]
 $$
-que estarà definida per a tot x tal que $f_X(x)>0$  i que la funció de probabilitit o densitat condicionada $f_{Y|X=x}(y)$ tingui esperança finita
+que estarà definida per a tot x tal que $f_X(x)>0$  i que la funció de probabilitat o densitat condicionada $f_{Y|X=x}(y)$ tingui esperança finita
 
 :::{.definition} 
 **Funció de esperança condicionada o regressió**
@@ -312,7 +312,7 @@ p^m(1-p)^{2n-m}
 \end{aligned}
 $$
 
-De donde se obtiene que:
+D'on s'obté que:
 
 $$
 X+Y\sim B(2n,p).
@@ -363,12 +363,12 @@ $$
 
 ---
 
-Totes les operacions que es feiem en l'operador esperança es poden realitar en l'esperança condicionada
+Totes les operacions que es fèien en l'operador esperança es poden realitzar en l'esperança condicionada
 
 
-1. L'esperança condicionada es un operador linial 
+1. L'esperança condicionada es un operador lineal 
 $$
-E[(a g_1(Y)+b g_2(Y))\mid X]=aE[g_1(Y)\mid X]+bE[g_2(Y)\mid X] (\#eq:expcondlinial) 
+E[(a g_1(Y)+b g_2(Y))\mid X]=aE[g_1(Y)\mid X]+bE[g_2(Y)\mid X] (\#eq:expcondlineal) 
 $$
 En particular,
 
@@ -395,7 +395,7 @@ $E[c|X]=c$ para c constant.  (\#eq:expcondconstant)
 Però hi ha algunes propietats que son específiques de de l'esperança condicional
 
 :::{proposition}
-**LLei de l'esperança total**
+**Llei de l'esperança total**
 
 Si $E[g(Y)]$ existeix , llavors  $E[E[g(Y)|X]]=E[g(Y)]$
 
@@ -436,9 +436,9 @@ f_{XY}(x,y)=
 $$
 
 
-Facilment obtenim que $X \sim U(0,1)$ y que $Y|X=x \sim U(0,x)$ 
+Fècilment obtenim que $X \sim U(0,1)$ i que $Y|X=x \sim U(0,x)$ 
 
-apolicant el resultat antreior podem obtenir $E[Y]$
+aplicant el resultat anterior podem obtenir $E[Y]$
 
 $$
 E[Y]= \int_0^1 E(Y|x)f_X(x) dx= \int_0^1 \frac{1}{2} xdx=\frac{1}{4}
@@ -453,20 +453,20 @@ $$
 
 :::{.example}
 
-Un treballador está encarregat del correcte funcionament de n màquines situades en línia recta i distantes una de l'altra l metros. El treballador ha de reparar-les quan s'espatllen, el que succeeix amb la mateixa probabilitat per totes les màquines de manera independent una de l'altra. L'operari pot seguir dues estratègies.
+Un treballador está encarregat del correcte funcionament de n màquines situades en línia recta i distants una de l'altra l metros. El treballador ha de reparar-les quan s'espatllen, el que succeeix amb la mateixa probabilitat per totes les màquines de manera independent una de l'altra. L'operari pot seguir dues estratègies.
 
-1. Anar a reparar la màquina que s'espatlla i romandre al costat d'ella fins que un altra s'espatlle i anar llavors a  reparar-la
+1. Anar a reparar la màquina que s'espatlli i romandre al costat d'ella fins que un altra s'espatlle i anar llavors a  reparar-la
 
 2. Situar-se al punt mig de la línia de màquines i des de alli anar a la màquina espatllada i tornar al punt mig quan la màquina estigui reparada.
 
-Si X es la distància que camina el tgreballadaor entre dues avaries consecutives, ¿Quina de les dues estratègies es la més convenient per caminar menys?
+Si X es la distància que camina el treballador entre dues avaries consecutives, ¿Quina de les dues estratègies es la més convenient per caminar menys?
 
-Per tant es tracta de obtenir el valor E[X] amb les dues estratègies i triar la que tinga menys valor esperat.  Designem $E_i[X]$ l'esperança que obetnim en cada estratègia $i=1,2$.
+Per tant es tracta de obtenir el valor E[X] amb les dues estratègies i triar la que tingui menys valor esperat.  Designem $E_i[X]$ l'esperança que obtenim en cada estratègia $i=1,2$.
 
 
 **Estratègia 1** 
 
-Si $A_k$  es l'esdeveniment  l'operari està en la màquina k. Per obtenir $E_1[X]$ recurrim a la propietat de l'esperança total, peroò tuilitzan com a distribució condicionada la que es deriva de condicionar respecte del succès $A_k$. Tindrem E_1[X]=E[E(A_k]] 
+Si $A_k$  es l'esdeveniment  l'operari està en la màquina k. Per obtenir $E_1[X]$ recorrem a la propietat de l'esperança total, però utilitzan com a distribució condicionada la que es deriva condicionar respecte de l'esdeveniment$A_k$. Tindrem E_1[X]=E[E(A_k]] 
 
 Para obtenir $E[X\mid A_k])$, tinguem en compte que, si $i$ és la pròxima màquina avariada,  $P(A_i)=\frac{1}{n}, \qquad \forall i=1,\ldots,n,$ i la distància a recórrer serà 
 
@@ -752,7 +752,7 @@ $$
 
 ## Conceptes de covariància, correlació i causalitat
  
- En el capítol anterior varem introduïr el càlcul de la matriu de variàncies-covariàncies. En aquest apartat  anem a discutir sobre la interpretació incloent conceptes com la correlació i la causalitat.
+ En el capítol anterior vàrem introduir el càlcul de la matriu de variàncies-covariàncies. En aquest apartat  anem a discutir sobre la interpretació incloent conceptes com la correlació i la causalitat.
  
  
 ### Desigualtats
@@ -760,7 +760,7 @@ $$
  En primer lloc anem a formular algunes desigualtats que són útils quan no coneixem la distribució de algunes variables, però si que coneixem alguns dels seus moments o els estimem a partir de les observacions. En aquest cas les desigualtats  permeten establir cotes de les probabilitats a partir dels moments i poden ajudar a demostrar alguns teoremes crucials com la llei dels grans números.
  
  
- Per a una variable $X \geq 0$ existeix la seva esperqança, sigui $\epsilon>0$ podem escriure el valor de l'esperança com
+ Per a una variable $X \geq 0$ existeix la seva esperança, sigui $\epsilon>0$ podem escriure el valor de l'esperança com
  
 $$
 E[X]=\int_0^{+\infty} P(X \geq x)dx=\int_0^{\epsilon} P(X \geq x)dx+\int_{\epsilon}^{+\infty} P(X \geq x)dx 
@@ -782,7 +782,7 @@ Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcione
 
 **Desigualtat de Markov**
 
-Si en la desigualtat  \@ref(eq:desigepsilon) substituim $X$ per $|X|^k$  i $\epsilon$ per $\epsilon^k$ tenim
+Si en la desigualtat  \@ref(eq:desigepsilon) substituïm $X$ per $|X|^k$  i $\epsilon$ per $\epsilon^k$ tenim
 
 
   $$
@@ -836,7 +836,7 @@ $$
  E[g(X)] \geq g(E[X])   (\#eq:desjensen)
  $$
 :::{.Theorem #thm-cauchy}
-**Desigualtad de Cauchy-Schwarz**
+**Desigualtat de Cauchy-Schwarz**
 
 Si $X$ i $Y$ son variables aleatòries amb variàncies finites. Aleshores, $cov(X,Y)$ existeix i es verifica que 
 
@@ -844,7 +844,7 @@ Si $X$ i $Y$ son variables aleatòries amb variàncies finites. Aleshores, $cov(
 $$
 (E[XY])^2 \leq E[X^2]E[Y^2]  (\#eq:descauchy)
 $$
-verificant-se la igualtat si i només si existeis un nombre real tal que $P(\alpha X+Y=0)=1$
+verificant-se la igualtat si i només si existeix un nombre real tal que $P(\alpha X+Y=0)=1$
 :::
 **Demostració**
 Per qualsevol nombre real $a$ i $b$ es verifica que:
@@ -859,7 +859,7 @@ Per altra banda per qualsevol real $\alpha$ es te que:
 $$
 E[(\alpha X+Y)]^2 =\alpha^2 E[X^2] +2 \alpha E[XY]+E[X^2] \geq 0
 $$
-que es tracta d'una equaciò de segon grau que te almenys una arrel i el seu discriminant no serà positiu. És a dir:
+que es tracta d'una equació de segon grau que te almenys una arrel i el seu discriminant no serà positiu. És a dir:
 
 
 $$
@@ -875,14 +875,14 @@ $$
 cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=E[(X_iX_j)]-E[X_i]E[X_j] 
 $$
 
-La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitut i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariancies. Si $X$ es el pes i $Y$ es l'alçada en centimetros i    transformem l'alçada en metros multiplicant per 100 Cov(X,100Y)= 100Cov(X,Y)  segons   \@ref(eq:provcov5)
+La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si $X$ es el pes i $Y$ es l'alçada en centímetres i transformem l'alçada en metres multiplicant per 100 Cov(X,100Y)= 100Cov(X,Y)  segons   \@ref(eq:provcov5)
 
 
 
 :::{.definition}
 **Coeficient de correlació**
 
-Si (X,Y) són variables aleatòries amb variances finites $Var(X)=\sigma_X^2$ I $Var(Y)=\sigma_Y^2$   la correlació $\rho(X,Y)$ entre $X$ i $Y$  es defineix com
+Si (X,Y) són variables aleatòries amb variànces finites $Var(X)=\sigma_X^2$ I $Var(Y)=\sigma_Y^2$   la correlació $\rho(X,Y)$ entre $X$ i $Y$  es defineix com
 
 $$
 \rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
@@ -894,12 +894,12 @@ es a dir la covariància de les variables $X$ i $Y$ tipificades
 
 :::{.proposition}
 
-Siguin $X$ i $Y$ dues variables aleatories amb variancia finita llavors 
+Siguin $X$ i $Y$ dues variables aleatòries amb variància finita llavors 
 
 $$
 (Cov(X,Y))^2 \leq \sigma_X^2 \sigma_Y^2
 $$
-i de aqui es depren que que $\rho^2_{XY} \leq 1$ i en particular    $-1 \leq \rho_{XY} \leq 1$ . A nmés desigualtat seria igualtat si i només si hi ha una constant $\alpha_0$ tal que amb probabilitat 1, $P(\alpha_0 X+Y=0)=1$ el que implica que la correlació $\rho_{XY}^2=1$
+i d'ací es desprèn que $\rho^2_{XY} \leq 1$ i en particular    $-1 \leq \rho_{XY} \leq 1$ . A més la desigualtat seria igualtat si i només si hi ha una constant $\alpha_0$ tal que amb probabilitat 1, $P(\alpha_0 X+Y=0)=1$ el que implica que la correlació $\rho_{XY}^2=1$
 :::
 
 **Demostració**
@@ -925,7 +925,7 @@ A més sabem que $E[X_c^2]=Var(X)=\sigma_X^2$ i  $E[Y_c^2]=Var(Y)=\sigma_Y^2$
 $$
 (Cov(X,Y))^2 =\sigma_{X,Y}^2=(E[X_cY_c])^2\leq E[X_c^2] E[Y_c^2]=\sigma_X^2 \sigma_Y^2
 $$ 
- Com a consequència si $\sigma_X>0$ i  $\sigma_Y>0$  el coeficient de correlació es 
+ Com a conseqüència si $\sigma_X>0$ i  $\sigma_Y>0$  el coeficient de correlació es 
  
 $$
 \rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
@@ -942,11 +942,11 @@ $$
 $$ 
 
 
-En el cas de igualtat també per la desigualtat de Cauchy-Schwarz es sabe que existeix una constant $\alpha_0$ tal que  les variables centrade  $X_c$ i $Y_c$ estan relacionades linealment amb probabilitat 1.  $P(\alpha0 X_c+Y_c=0)=1$ i per tant la correlació al quadrat valdra 1. És a dir $\rho_{XY}=-1$  ó $\rho_{XY}=-$. En aquest cas es parla de relació linial perfecta. 
+En el cas de igualtat també per la desigualtat de Cauchy-Schwarz es sabe que existeix una constant $\alpha_0$ tal que  les variables centrade  $X_c$ i $Y_c$ estan relacionades linealment amb probabilitat 1.  $P(\alpha0 X_c+Y_c=0)=1$ i per tant la correlació al quadrat valdrà 1. És a dir $\rho_{XY}=-1$  ó $\rho_{XY}=-$. En aquest cas es parla de relació lineal perfecta. 
 
-Si $\rho_{XY}>0$ parlarem de que les variables estàn positivament correlacionades i si $\rho_{XY}<0$ direm que estàn negativament correlacionades. 
+Si $\rho_{XY}>0$ parlarem de que les variables estàn positivament correlacionades i si $\rho_{XY}<0$ direm que estan negativament correlacionades. 
 
-Si  $\rho_{XY}=0$ es diu que les variables están incorrelades i a més a més la $Cov(X,Y)=0$ i hi ha absència de correlació linial. 
+Si  $\rho_{XY}=0$ es diu que les variables estan incorrelades i a més a més la $Cov(X,Y)=0$ i hi ha absència de correlació lineal. 
 
 
 
@@ -957,7 +957,9 @@ Si $X_i$ i $X_j$ son independents  aleshores $Cov(X_i,X_J)=\rho{X_i,X_J}=0$
 
 **Demostració**
 
-Si dues variables son independents l'esperanza del producte es el producte d'esperances . Aixi
+Si dues variables son independents l'esperança del producte es el producte d'esperances . 
+
+Aixi
 
 $$
 cov(X_i,X_j)=E[(X_iX_j)]-E[X_i]E[X_j]=E[X_i]E[X_j]-E[X_i]E[X_j]=0 
@@ -1010,7 +1012,7 @@ $$
 
 :::
 
-La matriu de variàncies-covàriancies $\Sigma$  es relaciona directament amb la matriu de correlació $R$ amb la següent fòrmula:
+La matriu de variàncies-covariàncies $\Sigma$  es relaciona directament amb la matriu de correlació $R$ amb la següent fórmula:
 
 $$
 \Sigma= D·R·D
@@ -1038,14 +1040,14 @@ i $D^{-1}$ es una matriu diagonal amb $\dfrac {1}{\sigma_i}$ en la diagonal
 
 ### Causalitat i correlació.
 
-Tal i com hem vist en apartata anterior diguem que dues variables estàn relacionades  si existeix correlació entre les mateixes. Aquesta correlació es una mesura estadística que descriu una direcció de relació ( positiva o negativa)  i una intensitat que va entre 0 i 1 en valors absoluts. No obstant, aquesta correlaci´no implica que el canvi en una varialbe atuomáticament es vegi reflectit en el canvi d'un altra.
+Tal i com hem vist en apartat anterior deíem que dues variables estan relacionades  si existeix correlació entre les mateixes. Aquesta correlació es una mesura estadística que descriu una direcció de relació ( positiva o negativa)  i una intensitat que va entre 0 i 1 en valors absoluts. No obstant, aquesta correlació no implica que el canvi en una variable auomàticament es vegi reflectit en el canvi d'un altra.
 
-La causalitat implica que el canvi en la ocurrència en una variable implica el canvi en ul altra.  Per exemple, si una variable és la quantitat de les hores treballades i l'altra es la quantitat de diners guanyats quan a un treballador se li paga per hores, està clar que un increment d'hores treballades implica un augment del diners rebuts.
+La causalitat implica que el canvi en la ocurrència en una variable implica el canvi en l'altra.  Per exemple, si una variable és la quantitat de les hores treballades i l'altra es la quantitat de diners guanyats quan a un treballador se li paga per hores, està clar que un increment d'hores treballades implica un augment del diners rebuts.
  
-A més de l'existència de relació entre dues variables com per exemple correlació linial son necessaries algunes altres característiques com la sequència temporarl ( la causa ha de existir abans de la consequèincia), la plausibilidad , la consistèncie, l'especificidad etc.
+A més de l'existència de relació entre dues variables com per exemple correlació lineal son necessàries algunes altres característiques com la seqüència temporal (la causa ha d'existir abans de la conseqüència), la plausibilidat , la consistència, l'especificitat etc.
 
 
-Per exemple, el consum de gelats te una bona correlació amb el nombre de ofegaments en  piscines, platges , rius, etc. peró està clar  que el menjar-es un gelat no fa que t'ofegues en una piscina. Simplemnet hi ha una correlació temporal. Es messos d'estiu es quan més  calor fa i es mengen més gelats i la gent es banya més amb risc d'ofegar-se. Al contrari pasa al hivern, es mengen més gelats i como la gent no es banya disminueix el risc d'ofegament. En la següent figura es poden veure dades reals en USA on la correlació es 0.44 i està clar que no hi ha relació causal.
+Per exemple, el consum de gelats te una bona correlació amb el nombre de ofegaments en  piscines, platges , rius, etc. peró està clar  que el menjar-es un gelat no fa que t'ofegues en una piscina. Simplemet hi ha una correlació temporal. Es messos d'estiu es quan més  calor fa i es mengen més gelats i la gent es banya més amb risc d'ofegar-se. Al contrari passa al hivern, es mengen més gelats i como la gent no es banya disminueix el risc d'ofegament. En la següent figura es poden veure dades reals en USA on la correlació es 0.44 i està clar que no hi ha relació causal.
 
 
 

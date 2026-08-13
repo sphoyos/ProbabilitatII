@@ -15,14 +15,14 @@ output:
 ```
 
 
-En el tema passat hem introducit els principals conceptes dels processos estòcastics, que neixen de la necessitat d'analitzar col·leccions de variables aleatòries ordenades cronològicament. En la pràctica modelar la depèndencia temporal es un repte, i els models es simplifiquen utilitzant diverses propietas per tal de no avaluar l'història completa que normalment es matemàticament inviable. En auqest temas avaluarem alguns tipus de processos estòcastics que  s'ajusten a nombroses situacions reals.
+En el tema passat hem introduït els principals conceptes dels processos estocàstics, que neixen de la necessitat d'analitzar col·leccions de variables aleatòries ordenades cronològicament. En la pràctica modelar la dependència temporal es un repte, i els models es simplifiquen utilitzant diverses propietats per tal de no avaluar l'història completa que normalment es matemàticament inviable. En aquest tema avaluarem alguns tipus de processos estocàstics que s'ajusten a nombroses situacions reals.
 
 
 
 ## Cadenes de Markov.
 
 
-En el tema anterior varem definir un procés de Markov com aquell que  per conéixer l'estat futur del procés només cal conèixer l'estat actual i oblidarmos del passat. 
+En el tema anterior vàrem definir un procés de Markov com aquell que  per conéixer l'estat futur del procés només cal conèixer l'estat actual i oblidarmos del passat. 
 
 
 $$
@@ -31,11 +31,11 @@ $$
 
 
 :::{.definition}
-**Cadena de markov**
+**Cadena de Markov**
 
-Si un  procés estòcastic DTDV, és a dir discret amb el temps i amb un nombre finit d'estats compleix la propietat de markov es una cadena de markov
+Si un  procés estocàstic DTDV, és a dir discret amb el temps i amb un nombre finit d'estats compleix la propietat de Markov es una cadena de Markov
 
-Es costum designar com a $X_0$ l'inici de la cadena.  Considerem com espai d'estats de la cadena al suport de les variables del procès  $X_n$, $S=(s_1,...,s_k)$ on $n \in \mathbb{N} \cup \{0\}$ 
+Es costum designar com a $X_0$ l'inici de la cadena.  Considerem com espai d'estats de la cadena al suport de les variables del procés  $X_n$, $S=(s_1,...,s_k)$ on $n \in \mathbb{N} \cup \{0\}$ 
 
 
 :::
@@ -43,11 +43,11 @@ Es costum designar com a $X_0$ l'inici de la cadena.  Considerem com espai d'est
 
  
  
-Per caracterítzar les cadenes de Markov necessitem definir les probabilitats inicials i de transició.
+Per caracteritzar les cadenes de Markov necessitem definir les probabilitats inicials i de transició.
 
 **Probabilitats inicials**
 
-Les probabilitats inicials sòn les probabilitats de cada un dels possibles estat a linici del procés
+Les probabilitats inicials són les probabilitats de cada un dels possibles estat a l'inici del procés
 
 $$ 
 \pi_i=P(X_0=s_i), \quad  \pi_i \geq 0, \forall i=1,...,k, \qquad \Sigma_i \pi_i=1  (\#eq:pi)
@@ -102,7 +102,7 @@ $$
 :::
 
 :::{.definition}
-Una matriu quadrada amb tots els elements no negatius i tals que la suma dels elements de cada fila sigui 1 s'anomena matriu estocàstica. La matriu de transició $\mathbf{P}$ d'una cadena de markov es una matriu estocàstica 
+Una matriu quadrada amb tots els elements no negatius i tals que la suma dels elements de cada fila sigui 1 s'anomena matriu estocàstica. La matriu de transició $\mathbf{P}$ d'una cadena de Markov es una matriu estocàstica 
 ::: 
 
 
@@ -110,20 +110,20 @@ Una matriu quadrada amb tots els elements no negatius i tals que la suma dels el
 
 :::{.example #climapoble}
 
-Imaginem que ens anem de vacances al poble i suposem  que el clima del poble pot estar en un d'aquets tres estats posibles Sol(S), Nuvolat(N) ó Pluja(P)
+Imaginem que ens anem de vacances al poble i suposem  que el clima del poble pot estar en un d'aquets tres estats possibles Sol(S), Nuvolat(N) ó Pluja(P)
 
-El procès  $X_n$ que determina el temps que fará cadascun dels 30 dies de vacances seria un procés de Makov markov donat que el clima de demà no  més depen del que hagi fet avui.  En la figura \@ref(fig:graf-clima) es mostra la reprentació gráica del procès on cada nus es un posible estat i les fletxes marquen les probabilitatsde transició entre estats-
+El procés  $X_n$ que determina el temps que farà cadascun dels 30 dies de vacances seria un procés de Markov donat que el clima de demà no  més depén del que hagi fet avui.  En la figura \@ref(fig:graf-clima) es mostra la representació gráfica del procés on cada nus es un posible estat i les fletxes marquen les probabilitats de transició entre estats:
 
-* Si  avui fa sol la probablitat de que demà faci sol és el 60%, de que estigui nuvolat el 30% i de que plogui el 10%. 
+* Si  avui fa sol la probabliitat de que demà faci sol és el 60%, de que estigui nuvolat el 30% i de que plogui el 10%. 
 
-* Si avui està nuvòl la probabilitat de que demà faci sol és el 40%, de que estigui nuvolat el 40% i de que plogui el 20%.
+* Si avui està núvol la probabilitat de que demà faci sol és el 40%, de que estigui nuvolat el 40% i de que plogui el 20%.
 
 * Si avui plou la probabilitat de que  demà faci sol és el 20%, de que estigui nuvolat el 40% i de que plogui el 40%. 
 
-Aquestes probabilitats condicionals on indepents del dia que les mesurem. 
+Aquestes probabilitats condicionals on independents del dia que les mesurem. 
 
-```{r graf-clima, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Exemple de cadena de markov del clima al poble",out.width="100%"}
-source("Rcode/markov1.r")
+```{r graf-clima, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Exemple de cadena de Markov del clima al poble",out.width="100%"}
+source("Rcode/Markov1.r")
 ```
 A continuació es mostren les probabilitats en forma de matriu de transició. 
 
@@ -145,14 +145,14 @@ $$
  
 ---
 
-**Probabilitats de transició a n pasos**
+**Probabilitats de transició a n passos**
 
-En una cadena de markov les probabilitats de transició a n pasos son fàcils d'obtenir. 
+En una cadena de Markov les probabilitats de transició a n passos son fàcils d'obtenir. 
 
 $$
 p_{ij}(n) =P(X_{n+k}= s_j \mid X_k=s_i) \forall n\geq0
 $$
-Com en una cadena de markov les transicions no depenen del temps $k$ i podem calcular
+Com en una cadena de Markov les transicions no depenen del temps $k$ i podem calcular
 
 
 $$
@@ -174,7 +174,7 @@ $$
 
 Així podem escriure que la transició a 2 temps es $\textbf{P}(2)=\textbf{P} \textbf{P}=\textbf{P}^2$
 
-Aplicant el mateix raonament podem generalitzar a n pasos. 
+Aplicant el mateix raonament podem generalitzar a n passos. 
 $$
 \textbf{P}(n)=\textbf{P}(n-1) \textbf{P}=\textbf{P}^n   (\#eq:ptranspn)
 $$
@@ -187,9 +187,9 @@ $$
  
  
  
- **Probabilitats dels estats desprès de n pasos**
+ **Probabilitats dels estats desprès de n passos**
  
- Si $\pi_i$ eren els probabilitats dels estats inicials es fàcil deduir que la probabilitat desprès de n pasos és:
+ Si $\pi_i$ eren els probabilitats dels estats inicials es fàcil deduir que la probabilitat desprès de n passos és:
 
 $$
 \begin{aligned}
@@ -207,7 +207,7 @@ $$
 \pi(n) = \pi(n-1)P 
 $$
 
-Aplicant recursivament la fòrmual anterior  podem relacionar $\pi(n)$ amb $\pi = \pi(0)$,
+Aplicant recursivament la fòrmula anterior  podem relacionar $\pi(n)$ amb $\pi = \pi(0)$,
 
 $$
 \pi(n) = \pi P^n
@@ -249,7 +249,7 @@ Si se sap que el 50% dels dies hi ha sol, el 30% esta nuvolat i el 20% hi ha plu
 
 
 Per conèixer la distribució del clima en un horitzó temporal m, concretament d'ací a cinc dies, hem d'aplicar de manera iterativa el teorema de Chapman-Kolmogorov. Això implica que la probabilitat de transició després de cinc passos es calcula elevant la matriu original a la cinquena potència ($P^5 = P \cdot P \cdot P \cdot P \cdot P$).
-La matriu resultante ens indicarà les probabilitats de passar d'un estat climàtic a un altre al cap de cinc dies, mostrant com evoluciona la dependència del clima respecte al dia inicial.
+La matriu resultant ens indicarà les probabilitats de passar d'un estat climàtic a un altre al cap de cinc dies, mostrant com evoluciona la dependència del clima respecte al dia inicial.
 Combinant el vector de la distribució del clima actual amb la matriu de transició a cinc passos mitjançant el producte matricial, obtenim el vector d'estat futur projectat:
 $$\pi(5) = \pi(0) \cdot P^5$$
 
@@ -337,7 +337,7 @@ $$
 Així la distribució sobre l'espai d'estats ten a una distribució fixa independent de la distribució inicial $\boldsymbol{\pi}$  Es diu que la cadena ha arribat a l'equilibri o a una situació estables- La distribució $\boldsymbol{\pi^{(e)}}$ rep el nom de *distribució d'equilibri o estacionaria*
 
 
-Per obtenir la distribvució d'equilibri $\boldsymbol{\pi^{(e)}}$  no fa falta resoldre el límit. Es prou en resoldre el sistema d'equacions,
+Per obtenir la distribució d'equilibri $\boldsymbol{\pi^{(e)}}$  no fa falta resoldre el límit. Es prou en resoldre el sistema d'equacions,
 
 $$
 \boldsymbol{\pi^{(e)}}=\boldsymbol{\pi^{(e)}} \boldsymbol{P}   (\#eq:pie) 
@@ -380,7 +380,7 @@ $$
 ### Classificació dels estats i comunnicacions d'una cadena de Markov
 
 
-Les cadenes de Markov es poden classificar segons els diferents tipus de matrius de transició que te interès per qué permet entendre el paper que juga cadascun dels posibles estats del procés i de l'altra per qué alguns tipus de matriu admeten un límit quan $n$ tendeix a $\infty$. 
+Les cadenes de Markov es poden classificar segons els diferents tipus de matrius de transició que te interès per qué permet entendre el paper que juga cadascun dels possibles estats del procés i de l'altra per qué alguns tipus de matriu admeten un límit quan $n$ tendeix a $\infty$. 
 
 
 Sigui  $\{X_n\}_{n\geq 1}$ una cadena de Markov amb estats $\{1,2,3,\dots,m\}$  i amb matriu de transició $\boldsymbol{P}= (p_{ij})_{1\leq i,j\leq m}$
@@ -394,7 +394,7 @@ Un **camí** $i \rightarrow j$ és una seqüència de transicions entre estats q
 
 :::{.definition}
 
-L'estat $j$ es un **estat accesible** des d'$i$ si existeix un camì  $i \rightarrow j$ que porta de $i$ a $j$. En aquest cas existeix un $k$ tal qué  $p_{ij}^{(k)>0}$.
+L'estat $j$ es un **estat accessible** des d'$i$ si existeix un camì  $i \rightarrow j$ que porta de $i$ a $j$. En aquest cas existeix un $k$ tal qué  $p_{ij}^{(k)>0}$.
 :::
 
 
@@ -413,7 +413,7 @@ Definim una **classe d'estats o de comunicació** es un subconjunt de estats del
 
 :::{.definition}
 
-Es diu que un cadena de Markov és **irreductible**  quant tots els seus estats comuniquenËs a dir $\forall i, j  \quad \exists k  \text{ tal que } p_{ij}^{(k)}>0$  . En aquest cas només hi ha una classe de comunicació.
+Es diu que un cadena de Markov és **irreductible**  quant tots els seus estats comuniquen. És a dir $\forall i, j  \quad \exists k  \text{ tal que } p_{ij}^{(k)}>0$  . En aquest cas només hi ha una classe de comunicació.
 
 :::
 
@@ -600,7 +600,7 @@ Una cadena de Markov es **ergòdica** si és irreductible i aperiòdica
 
 
 
-A continuació es mostren alguns exemples de cadenas definidesa a partir de la seva matriu de transició on es representa la cadena i es classifiquen els estats  segons les definicions previes. 
+A continuació es mostren alguns exemples de cadenes definides a partir de la seva matriu de transició on es representa la cadena i es classifiquen els estats  segons les definicions previes. 
 
 ---
 
@@ -978,7 +978,7 @@ Veiem doncs que tenim 3 classes:
 
 ---
 
-**setena cadena**
+**Setena cadena**
 
 Considerem la següent matriu de transició
 
@@ -1028,7 +1028,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-La cadena de Markov es ergòdica ja que es  aperiòdica al ser tots els $p_{ii}>0$ i es irreductible per qué tots els nodes estan comunicats entre si. 
+La cadena de Markov es ergòdica ja que es  aperiòdica al ser tots els $p_{ii}>0$ i es irreductible per que tots els nodes estan comunicats entre si. 
 
 :::
 
@@ -1038,17 +1038,17 @@ La cadena de Markov es ergòdica ja que es  aperiòdica al ser tots els $p_{ii}>
 ## Passeig o Caminades aleatòries.
 
 
-Imagineu un caminant que es mou  al atzar cap a la dreta o cap a l'esquerra. Suposem que el caminant llança una moneda amb una probabilitat p d'obtenir una cara. Si surt cara va cap a dreta (amb probabilitat $p$) i si surt creu va cap a l'esquerra (amb probabilitat $q=1-p$). Estarem interestats en conèixer quina es la situació $S_n$ després de n passos del caminant que direm que esta seguint un passeig o caminada aleatoria.
+Imagineu un caminant que es mou  al atzar cap a la dreta o cap a l'esquerra. Suposem que el caminant llança una moneda amb una probabilitat p d'obtenir una cara. Si surt cara va cap a dreta (amb probabilitat $p$) i si surt creu va cap a l'esquerra (amb probabilitat $q=1-p$). Estarem interessats en conèixer quina es la situació $S_n$ després de n passos del caminant que direm que esta seguint un passeig o caminada aleatòria.
 
 
 :::{.definition}
 
-Sigui $\{Y1,\dots\}$ una successió de variables aleatòries independens idènticament distribuides que preenen els valors $1$ i $-1$ amb una probabilitat $p\in [0,1]$ i $q=1-p$, respectivament. La **caminada aleatoria ("random walk")** simple amb paràmetre p es la successió
+Sigui $\{Y1,\dots\}$ una successió de variables aleatòries independents idènticament distribuïdes que prenen els valors $1$ i $-1$ amb una probabilitat $p\in [0,1]$ i $q=1-p$, respectivament. La **caminada aleatòria ("random walk")** simple amb paràmetre p es la successió
 
 $$
 S_n=S_0+Y_1+Y_2+\dots+Y_n, \quad  n\geq 0  (\#eq:rwalk)
 $$
-on $S_0$ és una variable aleatòria que pren valors a $\mathcal{Z}$  i que és independent de la successió  $\{Y1,\dots\}$ . També podem definir la camenada aleatoria de forma recursiva
+on $S_0$ és una variable aleatòria que pren valors a $\mathcal{Z}$  i que és independent de la successió  $\{Y1,\dots\}$ . També podem definir la caminada aleatòria de forma recursiva
 
 $$
 S_n=S_{n+1}+ Y_n, \quad n \geq 1  (\#eq:rwalkseq)
@@ -1070,14 +1070,14 @@ $$
 
 **Demostració**
 
-Si definim $X_j=\frac{1}{2}(Y_j+1) \text{ per } j \in \mathbb{N}$ , $X_j$ es una variable aleatòrica amb distribució Bernoulli amb  una probabiltit d'èxit de p i $\{X_1,X_2,\dots\}$ és una succesció de variables aleatòries independientes i identicament distribuïdes  que en termes del caminant indicant si el pás j-èsim ha estat a la dreta.  
+Si definim $X_j=\frac{1}{2}(Y_j+1) \text{ per } j \in \mathbb{N}$ , $X_j$ es una variable aleatòria amb distribució Bernoulli amb  una probabilitat d'èxit de p i $\{X_1,X_2,\dots\}$ és una succesció de variables aleatòries independents i identicament distribuïdes  que en termes del caminant indicant si el pas j-èsim ha estat a la dreta.  
 
 Llavors $Y_j=2X_j-1$  i directament de la transformació de una distribució Bernoulli $E[Y_j]=2p-1$  y $Var(Y_j)=4p(1-p)$
 
 
 Si definim $Z_n=\sum_{j=1}^n X_j \text{ per }  n \in \mathbb{N}$ té una distribució $Bi(n,p)$. $Z_n$ és el nombre de passos a la dreta dins dels n primers passos. 
 
-com hem suposat que $P(S_0=0)=1$ llavors podem expresar $S_n=2Z_n-n$ i com els valors de $Z_n$ per definició son $0,\dots,n$  llavors els valors de $S_n$ són $k \in \{-n, -n+2,\dots,n-2,n \}$ i $P(S_n=k)=P(Z_n=(n+k)/2$
+com hem suposat que $P(S_0=0)=1$ llavors podem expressar $S_n=2Z_n-n$ i com els valors de $Z_n$ per definició són $0,\dots,n$  llavors els valors de $S_n$ són $k \in \{-n, -n+2,\dots,n-2,n \}$ i $P(S_n=k)=P(Z_n=(n+k)/2$
 Així 
 
  $$
@@ -1087,11 +1087,11 @@ Les expressions de la esperança i variància surten directes.
 
 La caminata aleatòria simple satisfà les propietats de
 
-* *Homogeneitat espacial:*  $P(S_n=k\mid S_0=a)P(Sn=k+b\mid S_0=a+b )$
+* *Homogeneïtat espacial:*  $P(S_n=k\mid S_0=a)P(Sn=k+b\mid S_0=a+b )$
 
-* *Homogeneitat temporal:* $P(S_n=k\mid S_0=a)P(S_{n+m}=k\mid S_m=a )$
+* *Homogeneïtat temporal:* $P(S_n=k\mid S_0=a)P(S_{n+m}=k\mid S_m=a )$
 
-* *Propietat de markov:* Per a  $0<i_0<i_1<\dots<i_m<n$   llavors 
+* *Propietat de Markov:* Per a  $0<i_0<i_1<\dots<i_m<n$   llavors 
 
 $$
 P(S_n=k\mid S_{i_0}=a_0,S_{i_1}=a_1,\dots, S_{i_m}=a_m)=P(S_n=k\mid S_{i_m}=a_m)
@@ -1148,7 +1148,7 @@ grid()
 
 ---
 
-Considerem una representació d'un passeig aleatori simple en el pla cartesiá amb el parell de coordenades $(n,Sn), \quad n \in \mathbb{N}$
+Considerem una representació d'un passeig aleatori simple en el pla cartesià amb el parell de coordenades $(n,Sn), \quad n \in \mathbb{N}$
 
 :::{lema}
 
@@ -1165,7 +1165,7 @@ Per altra banda si $P(S_0=0)=1$ , qualsevol dels camins anteriors té probabilit
 
 :::{theorem}
 **Principi de reflexió**
-Siguin $a,b>0$ i $N_n^0(a,b)$ el nombre de camins que porten de $(0,a)$ a $(n,b)$  de manera que passen per 0, es a dir visiten algún punt de la forma (k,0). Aleshores $N_n^0(a,b)=N_n(-a,b)$
+Siguin $a,b>0$ i $N_n^0(a,b)$ el nombre de camins que porten de $(0,a)$ a $(n,b)$  de manera que passen per 0, es a dir visiten algun punt de la forma (k,0). Aleshores $N_n^0(a,b)=N_n(-a,b)$
 :::
 
 **Demostració**
@@ -1193,8 +1193,8 @@ En conseqüència, ambdós conjunts tenen el mateix nombre d'elements.
 Aquesta propietat és coneguda com el principi de reflexió i constitueix una eina fonamental en l'estudi dels passeigs aleatoris, ja que permet comptar camins amb restriccions transformant-los en un problema equivalent sense restriccions.
 
 :::{.theorem }
-**Recompte de camins que no creuejn el 0**
-Si $b>0$ el nombre de camins que porten de $80,0$ a (n,b) sense tornar a tocar l'eix d'abcisses es $(b/n)N_n(0,b)$
+**Recompte de camins que no creuen el 0**
+Si $b>0$ el nombre de camins que porten de $80,0$ a (n,b) sense tornar a tocar l'eix d'abscisses es $(b/n)N_n(0,b)$
 :::
 
 ---
@@ -1225,7 +1225,7 @@ $$
 Cal observar que el retorn a 0 només pot passar per instants parells. També es possible que el passeig aleatori mai torni a 0. Per $T$ pren valors $\{2,4,\dots\} \cup \{ \infty \}$
 
 :::{.theorem}
-La función de probabilitat de $T_2n$ vé donada perç
+La funció de probabilitat de $T_2n$ ve  donada per
 
 $$
 \Pr(T=2n)=\frac{1}{2n-1}\Pr(S_{2n}=0)
@@ -1243,7 +1243,7 @@ probabilitat és $1/(2n − 1)$, i el resultat queda provat.
 
 
 :::{.theorem}
-*Primer retorn després d'n etapes.
+*Primer retorn després de n etapes.
 
 Suposem $P(S_0=0)=1$, aleshores
 
@@ -1264,7 +1264,7 @@ $$
 
 **La posició màxima**
 
-Considerem de nou el passeig aleatori simple simètric. A la posició màxima a la que arriba el procés en els primers n passoas la denotarem per $M_n=max\{S_0,S_1,\dots,S_n\}$, que pren valors en el conjunt $\{0,1,\dots,n \}$. La distribució de $M_n$ es pot obtenir a partir del principi de reflexió.
+Considerem de nou el passeig aleatori simple simètric. A la posició màxima a la que arriba el procés en els primers n passos la denotarem per $M_n=max\{S_0,S_1,\dots,S_n\}$, que pren valors en el conjunt $\{0,1,\dots,n \}$. La distribució de $M_n$ es pot obtenir a partir del principi de reflexió.
 
 :::{.theorem}
 *(Màxim)*. Suposem  $P(S_0=0)=1$ i $p=1/2$. La funció de probabilitat del màxim $M_n$ és per a $m\geq 1$
@@ -1278,7 +1278,7 @@ $$
 Per a $M=0, P(M_n=0)=P(S_n \leq 0)$
 :::
 
-Cal obervar que per a qualsevol n, la funció de probabilitat d $M_n$ és decreixent. en particular el valor més probable per al màxim (i per tant la moda de la distribució ) és 0.
+Cal observar que per a qualsevol n, la funció de probabilitat d $M_n$ és decreixent. en particular el valor més probable per al màxim (i per tant la moda de la distribució ) és 0.
 
 
 
@@ -1291,14 +1291,14 @@ $$
 Observeu que, donat que les visites a 0 només pot passar en instants parells, $L_{2n}$ preu els valors del conjunt $\{0,2,\dots,2n\}$. Aquesta variable aleatòria té una distribució coneguda com a *distribució arcsinus discreta* 
 
 :::{.theorem}
-*LLei de l'arcsinus per l'última visita a l'origen*. suposem $P(S_0=0)=1$ i $p=1/2$. Aleshores, per $k \in \{0,1,\dots,n \}$
+*Llei de l'arcsinus per l'última visita a l'origen*. suposem $P(S_0=0)=1$ i $p=1/2$. Aleshores, per $k \in \{0,1,\dots,n \}$
 
 $$
 P(L_{2n}=2k)=P(S_{2k}=0)P(S_{2n-2k}=0)=\binom{2k}{k}\binom{2n-2k}{n-k}\dfrac{1}{2^{2n}} (\#eq:arcsinus) 
 $$ 
 a més a més, la seva fucnió de distribució $P(L_{2n}\leq 2k)$ s'aproxima bé per $(2/\pi)arcsin \sqrt{k/n}$
 
-La funció de probabilitat de $L_{2n}$ és simètrica respecte a $n$ i t´la forma d'u:
+La funció de probabilitat de $L_{2n}$ és simètrica respecte a $n$ i té la forma:
 
 $$
 P(L_{2n} =2k)=P(L_{2n}=2n-2k),
@@ -1306,17 +1306,16 @@ $$
 $P(L_{2n}=2j)>P(L_{2n}=2k)$ si i nòmés si $j<k$ i $2k\leq n$
 :::
 
-En particular, $0$ i $2n$ són els valors més probables. La distribució arcinus eñes bastant sorprenent. Com que estem llan
-ant una moneda a l'aire per determinar els passos del caminant, és fácil pensar que el passeig aleatori ha de ser positiu la meitat del temps i negatiu l'altra meitat, i que ha de tornar a 0 freqüentment. Però, en realitat,m la llei arcsinus implica que amkb probabilitat 1/2, no hi haurá retorn a 0 durant la segona meitat del passeig, des de $n+1$ fins a $2n$, independentment del valor que tingui $n$, i si no és estrany que el passeig se mantingui en valors positius( o negatius) durant tot el temps d'1 a 2n.
+En particular, $0$ i $2n$ són els valors més probables. La distribució arcinus és bastant sorprenent. Com que estem llançant una moneda a l'aire per determinar els passos del caminant, és fàcil pensar que el passeig aleatori ha de ser positiu la meitat del temps i negatiu l'altra meitat, i que ha de tornar a 0 freqüentment. Però, en realitat, la llei arcsinus implica que amb probabilitat 1/2, no hi hauràretorn a 0 durant la segona meitat del passeig, des de $n+1$ fins a $2n$, independentment del valor que tingui $n$, i si no és estrany que el passeig se mantingui en valors positius( o negatius) durant tot el temps d'1 a 2n.
 
-Nota: La funció $F(x)=(2/\pi)arcsin \sqrt(x), x \in [0,1]$, és la funció de distribució asociada a la densitat
+Nota: La funció $F(x)=(2/\pi)arcsin \sqrt(x), x \in [0,1]$, és la funció de distribució associada a la densitat
 $$
 f(x)\dfrac {1}{\pi \sqrt{x(1-x)}}
 $$
 La distribució de probabilitat amb aquesta densitat rep el nom de distribució arcinus contínua. Observeu que un cas particular d'aquesta distribució Beta amb paràmetres $a=b=1/2$
 
 
-Cal observar que la funció de probabilitat $L_{2n}$( amb distribució arcsinus discreta) té una forma similar a la de la funció de densitat de la disribució arcsinus contínua.
+Cal observar que la funció de probabilitat $L_{2n}$( amb distribució arcsinus discreta) té una forma similar a la de la funció de densitat de la distribució arcsinus contínua.
 
 
 **Probabilitat de visitar una posició donada**
@@ -1327,9 +1326,9 @@ Considerem un caminant que es mou segons un passeig aleatori simple  $\{S_n: n \
 
 * La probabilitat que el caminant torni alguna vegada a l'origen és $1-|p-q|$.
 
-* El cas del passeig aleatòri simple simètric $(p=2=1/2)$. En  aquest cas el temps fins al primer retorn és una variable aleatòria no negativa amb esperança infinita
+* El cas del passeig aleatori simple simètric $(p=2=1/2)$. En  aquest cas el temps fins al primer retorn és una variable aleatòria no negativa amb esperança infinita
 
-* Sigui $r>0$. La probabilitat que el caminant visite alguna vegada la posició r és  $(min\{ 1,p/q\})^r$
+* Sigui $r>0$. La probabilitat que el caminant visiti alguna vegada la posició r és  $(min\{ 1,p/q\})^r$
 
 * En el cas del passeig aleatori simple simètric $(p=q=1/2)$ és segur que es visitarà la posició r>0. També ho és si $p>q$.
 
@@ -1341,32 +1340,32 @@ Considerem un caminant que es mou segons un passeig aleatori simple  $\{S_n: n \
 
 ## Processos de Poisson.
  
-considerem una succesió d'ocurrències d'un determinat esdeveniment al llarg del temps. Sigui $X_1$ el temps d'espera necesari per a que el esdeveniment passe per primera vegada, $X_2$ el temps d'espera entre la primera i la segona ocurrència, i en geneal $X_i$ el temps entre les ocurrencies $i-1$ i $i$. El model formal que descriu aquest fenòmen es una succesió de variebles aleatòries definides sobre un determinat espai de probabilitat.
+Considerem una successió d'ocurrències d'un determinat esdeveniment al llarg del temps. Sigui $X_1$ el temps d'espera necesari per a que el esdeveniment passi per primera vegada, $X_2$ el temps d'espera entre la primera i la segona ocurrència, i en general $X_i$ el temps entre les ocurrències $i-1$ i $i$. El model formal que descriu aquest fenòmen es una successió de variables aleatòries definides sobre un determinat espai de probabilitat.
 
-Un altra característica d'intères lligada al fenòmen anterior es el nombre d'esdeveniments que han ocorregut en un determinat interval de temps $]t_1,t_2]$ . Per exemple, per a $t_1=0$ i $t2=t$ definim la variable $N_t=N_t=${nombre d'esdeveniments ocorreguts fins al temps $t$}. Aquest procès $N_t; t\geq0$ en temps continu te espai d'estats discret {$S=\{0,1,2,\dots \}$  i verifica que $N(0)=0$ i que no es decreixent en el temps, $N_s\leq N_t$, si $s<t$. Aquest tipus de processos s'anomenen **processos comptadors(count process)**
+Un altra característica d'interés lligada al fenomen anterior es el nombre d'esdeveniments que han ocorregut en un determinat interval de temps $]t_1,t_2]$ . Per exemple, per a $t_1=0$ i $t2=t$ definim la variable $N_t=N_t=${nombre d'esdeveniments ocorreguts fins al temps $t$}. Aquest procés $N_t; t\geq0$ en temps continu te espai d'estats discret {$S=\{0,1,2,\dots \}$  i verifica que $N(0)=0$ i que no es decreixent en el temps, $N_s\leq N_t$, si $s<t$. Aquest tipus de processos s'anomenen **processos comptadors(count process)**
 
 :::{.definition}
-Un procès comptador es un **procés de Poisson amb intensitat $\lambda$** que compleix les segúents propietats
+Un procés comptador es un **procés de Poisson amb intensitat $\lambda$** que compleix les segúents propietats
 
-1.No poden ocòrrer dues esdeveniments alhora
+1.No poden ocórrer dues esdeveniments alhora
 
-2.En cada interval finit de temps el nombre d'esdeviniments observables es finit
+2.En cada interval finit de temps el nombre d'esdeveniments observables es finit
 
-3.Els temps d'espera són independents i idènticament distribuits segons una distribució $Exp(\lambda)$
+3.Els temps d'espera són independents i idènticament distribuïts segons una distribució $Exp(\lambda)$
 
 :::
 
-Per estudiar el comportament probabílistic de les variables $N_t$  es convenient recòrrer a una nova successió de variables $S_n$ que representa el temps tanscorreguts fins l'observació del n-ésim esdeveniment. com a conseqüència de  dels dues primeres propietats  la successió es estrictament creixent
+Per estudiar el comportament probabílistic de les variables $N_t$  es convenient recorrer a una nova successió de variables $S_n$ que representa el temps transcorreguts fins l'observació del n-ésim esdeveniment. com a conseqüència de les dues primeres propietats  la successió es estrictament creixent
 $$
 0=S_0<S_1<S_2<\dots, sup_n S_n=\infty
 $$
-En la següent figura es mostra gráficament la relació entre les variables  $S_n,X_i$ i $N_t$ que caracterítzan el pocès de Pisson 
+En la següent figura es mostra gràficament la relació entre les variables  $S_n,X_i$ i $N_t$ que caracteritzan el procés de Poisson 
 
 ```{r , echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.cap="Representació gràfica de les funcions relacionades amb un procés de Poisson",out.width="60%"}
 source("Rcode/varppoisson.R")
 ```
  
- La distribució de $S_n$ al ser suma d'exponencials independents i identicament distribuïdes amb el mateix paràmetre $\lambda$  ve donad per la distribució d'Erlang $G(n,1/\lambda)$ cuya densitat és:
+ La distribució de $S_n$ al ser suma d'exponencials independents i idènticament distribuïdes amb el mateix paràmetre $\lambda$  ve donat per la distribució d'Erlang $G(n,1/\lambda)$ cuya densitat és:
  $$
  g_n(t) =\lambda \dfrac {(\lambda t)^{n-1}} {(n-1)!}e^{-\lambda t},\quad t \geq 0  (\#eq:denserlang) 
  $$
@@ -1395,13 +1394,13 @@ source("Rcode/varppoisson.R")
  $$
  P(N_t=n)= e^{\lambda t} \dfrac {(\lambda t)^n}{n!}
   $$
- que es la distribució de Poisson. Així $N_t \sim Po(\lambda t)$, que justifica como es diu el procès.  A més el resultat ens permet identificar el paràmetre $\lambda$ perqué si recorden $E[N_t]=\lambda t$ , es dedueix que $\lambda$ es el nombre de esdeveniments que ocorreixen per unitat de temps.
+ que es la distribució de Poisson. Així $N_t \sim Po(\lambda t)$, que justifica como es diu el procés.  A més el resultat ens permet identificar el paràmetre $\lambda$ perque si recordem $E[N_t]=\lambda t$ , es dedueix que $\lambda$ és el nombre de esdeveniments que ocorren per unitat de temps.
  
  ---
  
  :::{.exemple}
  
- En l'exemple  \@ref(exm: #ppuntual) es mostrava la realització d'un procès de Poisson on es volia avaluar el nombre de pacients que arribaven en un determinat temps a un servei d'urgències amb $\lambda=3$  per hora. 
+ En l'exemple  \@ref(exm: #ppuntual) es mostrava la realització d'un procés de Poisson on es volia avaluar el nombre de pacients que arribaven en un determinat temps a un servei d'urgències amb $\lambda=3$  per hora. 
  
  
  :::
@@ -1513,21 +1512,21 @@ simular_poisson <- function(lambda, t) {
 ## Moviment Brownià.
 
 
-La caminata aleatòria (*random walk*)  presentada en un apartat anterior era la suma de desplaçaments independents a dreta i a esquerra, de forma que només estaven permesos salts de un sentit a un altre en cada interval de temps. Imaginem ara despla
-aments petits de longitud $\Delta$ que es produixen en intervals de temps petit de longitud $\tau$,  En el límit, quan tant la longitud dels desplaçaments com la durada dels intervals de temps tendeixen a zero, s'obté un procés estocàstic les realitzacions del qual són funcions contínues del temps.
+La caminada aleatòria (*random walk*)  presentada en un apartat anterior era la suma de desplaçaments independents a dreta i a esquerra, de forma que només estaven permesos salts de un sentit a un altre en cada interval de temps. Imaginem ara despla
+aments petits de longitud $\Delta$ que es produeixen en intervals de temps petit de longitud $\tau$,  En el límit, quan tant la longitud dels desplaçaments com la durada dels intervals de temps tendeixen a zero, s'obté un procés estocàstic les realitzacions del qual són funcions contínues del temps.
 
 
-El matemàtic Norbert Wiener estipulo las següentes asumpcions para un procés aleatori estacionari W(.,.) amb increments independents en 1923
+El matemàtic Norbert Wiener estipulo las següents assumpcions para un procés aleatori estacionari W(.,.) amb increments independents en 1923
 
 :::{.definition}
 **Moviment Brownià**
 
-Un procés estòcastic W(t) s'anomenta moviment Brownià si 
+Un procés estocàstic W(t) s'anomena moviment Brownià si 
 
-1. *Independence:* $W(t+\Delta t)- W(t)$ es independent de $\{ W(\tau) \} \quad  \forall \tau \leq t
+1. *Independència:* $W(t+\Delta t)- W(t)$ es independent de $\{ W(\tau) \} \quad  \forall \tau \leq t
 2. *Estacionarietat:* La distribució de $W(t+\Delta t)-W(t)$ no depen de t
-3. *Continuitat:* $lim_{\Delta t \rightarrow 0} \dfrac {P(|W(t+\Delta t)- W(t)| \geq \delta)}{\Delta t}=0 \quad \forall \delta >0$
-4.Per a qualsevol $\Delta t>0$, l'increment del procés verifica
+3. *Continuïtat:* $lim_{\Delta t \rightarrow 0} \dfrac {P(|W(t+\Delta t)- W(t)| \geq \delta)}{\Delta t}=0 \quad \forall \delta >0$
+4. Per a qualsevol $\Delta t>0$, l'increment del procés verifica
 
 $$
 W(t+\Delta t)-W(t)\sim \mathcal{N}\left(\mu\,\Delta t,\sigma^2\Delta t\right).
@@ -1544,9 +1543,9 @@ $$
 
 * La funció de autocovariància és $E[(W(t)]-\mu t) (W(\tau)-\mu \tau]=\sigma^2 min(t,\tau)$ que coincideix en la autocorrelació. 
 
-* la variació total de un moviment Brownià sobre un interval finte [0,T] és $\infty$
+* la variació total de un moviment Brownià sobre un interval finit [0,T] és $\infty$
 
-* La suma de quadrats de un "drift-free" moviment Brownià es deterministic. 
+* La suma de quadrats de un "drift-free" moviment Brownià es determinístic. 
 
 $$
 \lim_{N \to \infty} \sum_{k=1}^{N} \left( W\left(\frac{kT}{N}\right) - W\left(\frac{(k-1)T}{N}\right) \right)^2=
