@@ -173,7 +173,7 @@ X:\Omega \longrightarrow \mathbb{R}
 \]
 
 
-Si la moneda no esta trucada la probabilitat de que sorti cara o creu al llançar la moneda es 0.5 respectivament, Així al fer la transferència entre espais de probabilitat $P(X=0)=0.5$ es el mateix que $P(X^{-1}(0)=P(cara)=0.5$  i el mateix per X=1   $P(X=1)=0.5=P(X^{-1}(1)=P(cara)$.
+Si la moneda no esta trucada la probabilitat de que sorti cara o creu al llançar la moneda es 0.5 respectivament, Així al fer la transferència entre espais de probabilitat $P(X=0)=0.5$ es el mateix que $P(X^{-1}(0))=P(cara)=0.5$  i el mateix per X=1   $P(X=1)=0.5=P(X^{-1}(1)=P(cruz)$.
 
 Per expressar aquesta probabilitat podríem haver  utilitzat un altra  variable aleatòria que codificarà la cara com a 1 i la creu com a 2.
 
