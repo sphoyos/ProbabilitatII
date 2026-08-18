@@ -52,19 +52,19 @@ $$\Omega = \{1,2,3,4,5,6\}$$ i un esdeveniment pot ser $A=\text{Treure un númer
 
 :::{.definition}
 
-Una col·lecció $\mathcal{A}\subseteq \mathcal{P}(\Omega)$ és una **σ-àlgebra** si:
+Una col·lecció $\mathcal{A}\subseteq \mathcal{P}(\Omega)$ és una **$\sigma\text{-àlgebra}$** si:
 
 1. $\Omega\in\mathcal{A}$  
 2. Si $A\in\mathcal{A}$, aleshores $A^c\in\mathcal{A}$  
 3. Si $A_1,A_2,\ldots\in\mathcal{A}$, aleshores $\bigcup_{n}A_n\in\mathcal{A}$
 :::
 
-La $\sigma~-àlgebra$ representa “tot allò al que volem i podem assignar probabilitat”.
+La $\sigma\text{-àlgebra}$ representa “tot allò al que volem i podem assignar probabilitat”.
 
 ---
 
 :::{.example} 
-Si suposem un experiment és triar a l'atzar  un número en l'interval [0,1], l'interès es centra en conèixer si l'elecció pertany a qualsevol dels subconjunts de [0,1]. La $\sigma-àlgebra$ $\beta_{[0,1]}$ d'esdeveniments generada a partir de tots els possibles subintervals de [0,1], és  coneguda com $\sigma-àlgebra$ de Borel estrictament menor que $\mathcal{P}(\Omega)$.
+Si suposem un experiment és triar a l'atzar  un número en l'interval [0,1], l'interès es centra en conèixer si l'elecció pertany a qualsevol dels subconjunts de [0,1]. La $\sigma\text{-àlgebra}$ $\beta_{[0,1]}$ d'esdeveniments generada a partir de tots els possibles subintervals de [0,1], és  coneguda com $\sigma\text{-àlgebra}$ de Borel estrictament menor que $\mathcal{P}(\Omega)$.
 
 <!-- **Posar exemples de sigma algebra de $\mathbb{R}$ i $\mathbb{N}$,** -->
 :::
@@ -78,7 +78,7 @@ En resum, L'espai mostral ve acompanyat de la $\sigma-álgebra$ mes convenient a
 :::{.definition}
  **Mesura de Probabilitat**
  
- Donat un espai mostral  $\Omega$ i una $\sigma-àlgebra$  $\mathcal{A}$ definim la mesura de probabilitat com una aplicació. 
+ Donat un espai mostral  $\Omega$ i una $\sigma\text{-àlgebra}$ $\mathcal{A}$ definim la mesura de probabilitat com una aplicació. 
  
 $$
 \begin{aligned}
@@ -115,7 +115,7 @@ $$
 :::{.definition}
  **Espai de probabilitat**
  
-A la *terna $(\Omega,\mathcal{A},Pr)$*  l'anomenarem  ESPAI DE PROBABILITAT. 
+A la *terna $(\Omega,\mathcal{A},Pr)$*  l'anomenarem  **espai de probabilitat**. 
  
 :::
 
@@ -127,7 +127,7 @@ A la *terna $(\Omega,\mathcal{A},Pr)$*  l'anomenarem  ESPAI DE PROBABILITAT.
 
 **Espai de probabilitat discret uniforme**
 
-Suposem un espai mostral $\Omega$, numerable i com a $\sigma~àlgebra$  la formada per tots els subconjunts de $\Omega$. Definim un funció no negativa sobre tots els subconjunts de $\Omega$ on es verifica que $\sum_{w\in \Omega}p(w)=1$. Si es defineix  $P(A)=\sum_{w\in A}p(w)$, es pot comprovar que P es una probabilitat.
+Suposem un espai mostral $\Omega$, numerable i com a $\sigma\text{-àlgebra}$  la formada per tots els subconjunts de $\Omega$. Definim un funció no negativa sobre tots els subconjunts de $\Omega$ on es verifica que $\sum_{w\in \Omega}p(w)=1$. Si es defineix  $P(A)=\sum_{w\in A}p(w)$, es pot comprovar que P es una probabilitat.
 Un cas particular son els espais de probabilitat discrets uniformes.  Si $\Omega={w_1,w_2,....,w_n}$ i $p(w_i)=\frac{1}{n}, \forall w_i \in \Omega$.
 
 Si $A={w_1,w_2,....,w_m}$ tenim qué $P(A)=\frac {m}{n}$ (Fórmula de Laplace). Es diu uniforme per que la massa de probabilitat està repartida al ser constant en cada punt.
@@ -139,7 +139,7 @@ Per exemple imaginem que llancem dos daus. L'espai mostral serà $\Omega={(1,1),
 ---
 
 
-El resultat d'un experiment aleatori no es tant l'espai de probabilitat resultant, sino les característiques numèriques associades. Això implica passar de $\Omega$ a  $\mathbb{R}$ o  $\mathbb{R}^k$ on es més fàcil treballar.  Com hem comentat en  $\mathbb{R}$ podem parlar de la $\sigma-álgebra$ de Borel $\beta$ que és la menor que conté els intervals i que permet parlar de l'espai de probabilitat $(\mathbb{R},\beta)$
+El resultat d'un experiment aleatori no es tant l'espai de probabilitat resultant, sino les característiques numèriques associades. Això implica passar de $\Omega$ a  $\mathbb{R}$ o  $\mathbb{R}^k$ on es més fàcil treballar.  Com hem comentat en  $\mathbb{R}$ podem parlar de la $\sigma\text{-àlgebra}$ de Borel $\beta$ que és la menor que conté els intervals i que permet parlar de l'espai de probabilitat $(\mathbb{R},\beta)$
 
 
 
@@ -382,7 +382,7 @@ Un vector aleatori $\mathbf{X}=(X_1,X_2,.......,X_k)$,  es una aplicació de l'e
 $$
 \mathbf{X}^{-1}(B) \in\mathcal{A}, \quad \forall B \in \beta^K
 $$
-On $\beta^K$ es una $sigma-àlgebra$ de Borel en   $\mathbb{R}^k$
+On $\beta^K$ es una $\sigma\text{-àlgebra}$ de Borel en   $\mathbb{R}^k$
 :::
 
 $\mathbf{X}$ indueix sobre $(\mathbb{R}^k,\beta^K)$ una probabilitat $P_X$ de la següent manera
