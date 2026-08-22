@@ -238,7 +238,7 @@ Del punt 3 es dedueix que si $(- \infty,x] =\{ x \} \cup \lim_{n \rightarrow  \i
 $$
 F_X(x)= P(X=X)+ \lim_{n \rightarrow \infty} F_X(x-\frac{1}{n})=P(X=x) +F(x^-)
 $$
-y $F_X(x)$ es continua si P(X=x)=0
+i $F_X(x)$ es continua si P(X=x)=0
 
 
 
@@ -254,7 +254,7 @@ $$
 
 Suposem que a un pacient se li indica que triï un nombre real entre 0 i 10 per indicar el seu nivell de dolor (Escala analògica Visual (EVA)) i que tots els valors tenen la mateixa probabilitat de ser triats.
 
-Definim la variable aleatòria X com el nivell de dolor i es vol obtenir la funció de distribució que reflexa la probabilitat de que el nombre escollit sigui menor o igual que 3.
+Definim la variable aleatòria $X$ com el nivell de dolor i es vol obtenir la funció de distribució que reflexa la probabilitat de que el nombre escollit sigui menor o igual que $x$.
 $$
 F_X(x)=P_X(X \leq x)
 $$
@@ -279,7 +279,7 @@ $$
 :::{.definition}
 **Funció de probabilitat d'una variable aleatòria discreta**
 
-X és una variable aleatòria discreta si  $X(\Omega)$ es  finit o numerable, és a dir es pot definir un conjunt suport  $D_X=\{x_1,x_2,....,x_n \}$ tal que $P_X(D_X))= P(X \in D_X)=1)$ i   $P(X=x)>0 \quad, \forall x \in D_X$. Per tant es pot deduir que $P(X=x)=0 \quad, \forall x \in D_X^c$
+$X$ és una variable aleatòria discreta si  $X(\Omega)$ es  finit o numerable, és a dir es pot definir un conjunt suport  $D_X=\{x_1,x_2,....,x_n \}$ tal que $P_X(D_X))= P(X \in D_X)=1)$ i   $P(X=x)>0 \quad, \forall x \in D_X$. Per tant es pot deduir que $P(X=x)=0 \quad, \forall x \in D_X^c$
 
 Així la funció de distribució de la variable aleatòria discreta és:
 
@@ -289,7 +289,7 @@ Així la funció de distribució de la variable aleatòria discreta és:
 
 Que serà una funció continua en els intervals $[x_i,x_{i+j}[$ si els valors $x_i$ estan endreçats de menor a major i que tindrà una discontinuïtat de salt finit en cada punt $x_i$  de Valor $F_X(x_i)- F_X(x_{i-1})=P(X=x_i)$
 
-Així a la variable X li podem associar la funció de probabilitat següent
+Així a la variable $X$ li podem associar la funció de probabilitat següent
 
 $$
 f_X(x)=
@@ -364,8 +364,12 @@ Molts experiments aleatoris produeixen més d'una única quantitat rellevant, é
 
 
 :::{.example}
-- En economia podem estar interessants en conèixer la distribució d' ingressos d'una persona i per altra costat el % dels ingressos dedicats al pagament del habitatge (lloguer o hipoteca). Cada individu estarà representat per un vector composat per dues variables unidimensionals
+- En economia podem estar interessants en conèixer la distribució d'ingressos d'una persona i per altra costat el % dels ingressos dedicats al pagament del habitatge (lloguer o hipoteca). Cada individu estarà representat per un vector composat per dues variables unidimensionals
 :::
+
+---
+
+---
 
 :::{.example}
 - En salut podem estar interessats en el resultat d'un experiment on es mesuren diferents paràmetres biomètrics com pes, alçada, índex cintura-maluc,  índex de massa corporal, índex cintura-alçada, perímetre braquial, perímetre abdominal, superfície corporal, etc.  Es tracta d'un vector multidimensional definit per k variables unidimensionals en $\mathbb{R}^k$.
@@ -390,7 +394,7 @@ $\mathbf{X}$ indueix sobre $(\mathbb{R}^k,\beta^K)$ una probabilitat $P_X$ de la
 $$
 P_X(B)=P(\mathbf{X}^{-1}(B)), \quad \forall B \in \beta^K (\#eq:pvectorind)
 $$
-És senzill comprobar que $P_X$ verifica els tres axiomes de probabilitat, pel que $(\mathbb{R}^k,\beta^K, P_X)$ permet indueix un espai de probabilitat amb les característiques de $(\Omega,\mathcal{A},P)$ heretats mitjançant X.
+És senzill comprobar que $P_X$ verifica els tres axiomes de probabilitat, per això $(\mathbb{R}^k,\beta^K, P_X)$ permet induir un espai de probabilitat amb les característiques de $(\Omega,\mathcal{A},P)$ heretades mitjançant $X$.
 
 
 

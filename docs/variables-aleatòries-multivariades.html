@@ -411,7 +411,7 @@ F_X(x)= P_X((-\infty,x])=P(X^{-1}\{(-\infty,x]\})=P(X\leq x) \quad \forall x \in
 <p><span class="math display">\[
 F_X(x)= P(X=X)+ \lim_{n \rightarrow \infty} F_X(x-\frac{1}{n})=P(X=x) +F(x^-)
 \]</span>
-y <span class="math inline">\(F_X(x)\)</span> es continua si P(X=x)=0</p>
+i <span class="math inline">\(F_X(x)\)</span> es continua si P(X=x)=0</p>
 <p>Directament es pot calcular la probabilitat d’un interval obert per l’esquerra com</p>
 <p><span class="math display">\[
 P(a&lt; X \leq b)=F_X(b)- F_X(a)
@@ -419,7 +419,7 @@ P(a&lt; X \leq b)=F_X(b)- F_X(a)
 <hr />
 <div class="example">
 <p><span id="exm:unlabeled-div-15" class="example"><strong>Exemple 1.6  </strong></span>Suposem que a un pacient se li indica que triï un nombre real entre 0 i 10 per indicar el seu nivell de dolor (Escala analògica Visual (EVA)) i que tots els valors tenen la mateixa probabilitat de ser triats.</p>
-<p>Definim la variable aleatòria X com el nivell de dolor i es vol obtenir la funció de distribució que reflexa la probabilitat de que el nombre escollit sigui menor o igual que 3.
+<p>Definim la variable aleatòria <span class="math inline">\(X\)</span> com el nivell de dolor i es vol obtenir la funció de distribució que reflexa la probabilitat de que el nombre escollit sigui menor o igual que <span class="math inline">\(x\)</span>.
 <span class="math display">\[
 F_X(x)=P_X(X \leq x)
 \]</span>
@@ -438,13 +438,13 @@ F_X(x)=
 <hr />
 <div class="definition">
 <p><span id="def:unlabeled-div-16" class="definition"><strong>Definició 1.10  </strong></span><strong>Funció de probabilitat d’una variable aleatòria discreta</strong></p>
-<p>X és una variable aleatòria discreta si <span class="math inline">\(X(\Omega)\)</span> es finit o numerable, és a dir es pot definir un conjunt suport <span class="math inline">\(D_X=\{x_1,x_2,....,x_n \}\)</span> tal que <span class="math inline">\(P_X(D_X))= P(X \in D_X)=1)\)</span> i <span class="math inline">\(P(X=x)&gt;0 \quad, \forall x \in D_X\)</span>. Per tant es pot deduir que <span class="math inline">\(P(X=x)=0 \quad, \forall x \in D_X^c\)</span></p>
+<p><span class="math inline">\(X\)</span> és una variable aleatòria discreta si <span class="math inline">\(X(\Omega)\)</span> es finit o numerable, és a dir es pot definir un conjunt suport <span class="math inline">\(D_X=\{x_1,x_2,....,x_n \}\)</span> tal que <span class="math inline">\(P_X(D_X))= P(X \in D_X)=1)\)</span> i <span class="math inline">\(P(X=x)&gt;0 \quad, \forall x \in D_X\)</span>. Per tant es pot deduir que <span class="math inline">\(P(X=x)=0 \quad, \forall x \in D_X^c\)</span></p>
 <p>Així la funció de distribució de la variable aleatòria discreta és:</p>
 <p><span class="math display" id="eq:Fxdiscret">\[\begin{equation}
 F_x(x)=\sum_{x \leq x_i} P(X=x_i) \tag{1.2}
 \end{equation}\]</span></p>
 <p>Que serà una funció continua en els intervals <span class="math inline">\([x_i,x_{i+j}[\)</span> si els valors <span class="math inline">\(x_i\)</span> estan endreçats de menor a major i que tindrà una discontinuïtat de salt finit en cada punt <span class="math inline">\(x_i\)</span> de Valor <span class="math inline">\(F_X(x_i)- F_X(x_{i-1})=P(X=x_i)\)</span></p>
-<p>Així a la variable X li podem associar la funció de probabilitat següent</p>
+<p>Així a la variable <span class="math inline">\(X\)</span> li podem associar la funció de probabilitat següent</p>
 <p><span class="math display" id="eq:pxdiscret">\[
 f_X(x)=
 \begin{cases}
@@ -494,9 +494,11 @@ P(X \in ]a,b]= P(a&lt;X \leq b) \int_{a}^{b}  f(x) dx \tag{1.5}
 <div class="example">
 <p><span id="exm:unlabeled-div-20" class="example"><strong>Exemple 1.10  </strong></span></p>
 <ul>
-<li>En economia podem estar interessants en conèixer la distribució d’ ingressos d’una persona i per altra costat el % dels ingressos dedicats al pagament del habitatge (lloguer o hipoteca). Cada individu estarà representat per un vector composat per dues variables unidimensionals</li>
+<li>En economia podem estar interessants en conèixer la distribució d’ingressos d’una persona i per altra costat el % dels ingressos dedicats al pagament del habitatge (lloguer o hipoteca). Cada individu estarà representat per un vector composat per dues variables unidimensionals</li>
 </ul>
 </div>
+<hr />
+<hr />
 <div class="example">
 <p><span id="exm:unlabeled-div-21" class="example"><strong>Exemple 1.11  </strong></span></p>
 <ul>
@@ -516,7 +518,7 @@ On <span class="math inline">\(\beta^K\)</span> es una <span class="math inline"
 <p><span class="math display" id="eq:pvectorind">\[
 P_X(B)=P(\mathbf{X}^{-1}(B)), \quad \forall B \in \beta^K \tag{1.6}
 \]</span>
-És senzill comprobar que <span class="math inline">\(P_X\)</span> verifica els tres axiomes de probabilitat, pel que <span class="math inline">\((\mathbb{R}^k,\beta^K, P_X)\)</span> permet indueix un espai de probabilitat amb les característiques de <span class="math inline">\((\Omega,\mathcal{A},P)\)</span> heretats mitjançant X.</p>
+És senzill comprobar que <span class="math inline">\(P_X\)</span> verifica els tres axiomes de probabilitat, per això <span class="math inline">\((\mathbb{R}^k,\beta^K, P_X)\)</span> permet induir un espai de probabilitat amb les característiques de <span class="math inline">\((\Omega,\mathcal{A},P)\)</span> heretades mitjançant <span class="math inline">\(X\)</span>.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-23" class="definition"><strong>Definició 1.13  </strong></span><strong>Variable aleatòria bidimensional o bivariant</strong></p>
 <p>Sigui <span class="math inline">\((\Omega, \mathcal{A},P)\)</span> un espai de probabilitat . Podem definir la variable aleatòria bivariant com</p>
