@@ -427,17 +427,17 @@ Per tant, qualsevol variable aleatòria bivariant (X,Y) indueix una mesura de pr
 $$
 P_{(X,Y)}(B)=P((X,Y)^{-1}(B))=P(\{w \in \Omega:(X(w),Y(w)) \in B\})  (\#eq:pconjunt)
 $$
-Aquesta mesura de probabilitat induïda s'anomena *distribució de probabilitat conjunta de (X,Y)*
+Aquesta mesura de probabilitat induïda s'anomena **distribució de probabilitat conjunta de (X,Y)**
 
 
 ---
 
 :::{.example}
 
-Tornem a l'exemple on llançàvem una moneda (X) i un dau (Y)
+Tornem a l'exemple on llançàvem una moneda $(X)$ i un dau $(Y)$
 
-L'espai mostral es $\Omega=(\{cara,1\},\{creu,1\},\{cara,2\},.....,,\{creu,6\})$
-i la Variable aleatòria (X,Y)  pren  el valor X= 0 si és cara i X=1  si és creu en la primera component X i el número  que ha sortit al dau en la segona component Y.
+L'espai mostral és $\Omega=(\{cara,1\},\{creu,1\},\{cara,2\},.....,,\{creu,6\})$
+i la variable aleatòria $(X,Y)$  pren  el valor $X= 0$ si és cara i $X=1$  si és creu en la primera component $X$ i el número  que ha sortit al dau en la segona component $Y$.
 
 Podem definir
 
@@ -481,12 +481,6 @@ $$
 $$
 :::
 
-Per tant qualsevol variable aleatòria multivariant $(\overrightarrow{\bf{X}})$ indueix una mesura de probabilitat en $\mathbb{R}^k$  que permet assignar probabilitats a qualsevol subconjunt Borelià B de $\mathbb{R}^k$:
-
-$$
-P_{(\overrightarrow{\bf{X}})}(B)=P((\overrightarrow{\bf{X}})^{-1}(B))=P(\{w \in \Omega:(X_1(w),...,X_k(w)) \in B\})
-$$
-El que hem de fer a partir d'ara es caracteritzar aquesta probabilitat conjunta a partir de les característiques de les variables aleatòries unidimensionals que la composen. Ja que si $(\overrightarrow{\bf{X}})$ es mesurable també o es cadascuna de les seves components i viceversa. Per simplificar la nomenclatura definirem $P_X$ a la probabilitat conjunta de la variable multidimensional $\overrightarrow{\bf{X}}$ i per facilitar la comprensió utilitzarem la dimensió 2 i el vector aleatori $\overrightarrow{\bf{X}}=(X,Y)$
 
 
 
@@ -505,7 +499,7 @@ En els apartats anteriors hem definit la probabilitat conjunta associada a una v
 
 
 
-Definim la  funció de distribució associada a $P_X$ a donat un punt de  $\mathbb{R}^k$  $\mathbf{x}=(x_1,...,x_k)$ com
+Definim la funció de distribució associada a la probabilitat conjunta $P_X$ donat un punt de  $\mathbb{R}^k$  $\mathbf{x}=(x_1,...,x_k)$ com
 
 
 $$
@@ -535,7 +529,7 @@ Si $\mathbf{x} \leq\ \mathbf{y}$ es a dir $x_i \leq y_i, \quad i=1,....k,\quad  
 
 <li> <b> Continuïtat conjunta per la dreta </b> </li>
 
-Si $\mathbf{x}{(n)} \rightarrow \mathbf{x}$ entonces  $F_X(\mathbf{x}^{(n)}) \rightarrow F_X(\mathbf{x})$
+Si $\mathbf{x}{(n)} \rightarrow \mathbf{x}$ llavors  $F_X(\mathbf{x}^{(n)}) \rightarrow F_X(\mathbf{x})$
 
 
 <li> <b> Valores límit </b> </li>

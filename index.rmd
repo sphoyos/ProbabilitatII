@@ -79,7 +79,7 @@ K03. Reconèixer la teoria de la probabilitat com a fonament de les tècniques e
 |- Conèixer els conceptes de independència , covariància i correlació  |- Calcular densitats marginals i conjuntes i funcions de vectors aleatoris|
 |- Conèixer les principals models multivariants i les seves propietats, i identificar els seus àmbits d'aplicació |- Calcular matrius de covariàncies, correlacions i moments de variables aleatòries multivariants |
 |- Conèixer el concepte de procés estocàstic i les seves propietats bàsiques.  |- Calcular probabilitats i generar dades de les principals distribucions|
-|- Conèixer  els principals tipus de processos estocàstics i identificar les situacions reals a les quals són aplicables. |- Determinar matrius de transició d'una cadena de Markov amb epai d'estats finits | 
+|- Conèixer  els principals tipus de processos estocàstics i identificar les situacions reals a les quals són aplicables. |- Determinar matrius de transició d'una cadena de Markov amb espai d'estats finits | 
 ||- Aplicació dels principals tipus de processos estocàstics|
 
 ## Blocs Temàtics i Continguts Detallats  {-}

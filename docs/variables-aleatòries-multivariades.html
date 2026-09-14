@@ -536,12 +536,12 @@ on</p>
 <p><span class="math display" id="eq:pconjunt">\[
 P_{(X,Y)}(B)=P((X,Y)^{-1}(B))=P(\{w \in \Omega:(X(w),Y(w)) \in B\})  \tag{1.7}
 \]</span>
-Aquesta mesura de probabilitat induïda s’anomena <em>distribució de probabilitat conjunta de (X,Y)</em></p>
+Aquesta mesura de probabilitat induïda s’anomena <strong>distribució de probabilitat conjunta de (X,Y)</strong></p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-24" class="example"><strong>Exemple 1.12  </strong></span>Tornem a l’exemple on llançàvem una moneda (X) i un dau (Y)</p>
-<p>L’espai mostral es <span class="math inline">\(\Omega=(\{cara,1\},\{creu,1\},\{cara,2\},.....,,\{creu,6\})\)</span>
-i la Variable aleatòria (X,Y) pren el valor X= 0 si és cara i X=1 si és creu en la primera component X i el número que ha sortit al dau en la segona component Y.</p>
+<p><span id="exm:unlabeled-div-24" class="example"><strong>Exemple 1.12  </strong></span>Tornem a l’exemple on llançàvem una moneda <span class="math inline">\((X)\)</span> i un dau <span class="math inline">\((Y)\)</span></p>
+<p>L’espai mostral és <span class="math inline">\(\Omega=(\{cara,1\},\{creu,1\},\{cara,2\},.....,,\{creu,6\})\)</span>
+i la variable aleatòria <span class="math inline">\((X,Y)\)</span> pren el valor <span class="math inline">\(X= 0\)</span> si és cara i <span class="math inline">\(X=1\)</span> si és creu en la primera component <span class="math inline">\(X\)</span> i el número que ha sortit al dau en la segona component <span class="math inline">\(Y\)</span>.</p>
 <p>Podem definir</p>
 <p><span class="math display">\[
 P_{XY}(x,y)=
@@ -568,11 +568,6 @@ w &amp; \rightarrow (X_1,X_2,...,X_{k-1},X_k)(w) =(X_1(w),X_2(w),...,X_{k-1}(w),
 (\overrightarrow{\bf{X}})^{-1}(( -\infty, x_1] \times...  \times (-\infty, x_k]))=\{w \in \Omega: X_1(w) \leq x_1 \quad i \quad ... \quad i \quad  X_k(w) \leq x_k \} \in \mathcal{A} \quad \forall x_i \in \mathbb{R}
 \]</span></p>
 </div>
-<p>Per tant qualsevol variable aleatòria multivariant <span class="math inline">\((\overrightarrow{\bf{X}})\)</span> indueix una mesura de probabilitat en <span class="math inline">\(\mathbb{R}^k\)</span> que permet assignar probabilitats a qualsevol subconjunt Borelià B de <span class="math inline">\(\mathbb{R}^k\)</span>:</p>
-<p><span class="math display">\[
-P_{(\overrightarrow{\bf{X}})}(B)=P((\overrightarrow{\bf{X}})^{-1}(B))=P(\{w \in \Omega:(X_1(w),...,X_k(w)) \in B\})
-\]</span>
-El que hem de fer a partir d’ara es caracteritzar aquesta probabilitat conjunta a partir de les característiques de les variables aleatòries unidimensionals que la composen. Ja que si <span class="math inline">\((\overrightarrow{\bf{X}})\)</span> es mesurable també o es cadascuna de les seves components i viceversa. Per simplificar la nomenclatura definirem <span class="math inline">\(P_X\)</span> a la probabilitat conjunta de la variable multidimensional <span class="math inline">\(\overrightarrow{\bf{X}}\)</span> i per facilitar la comprensió utilitzarem la dimensió 2 i el vector aleatori <span class="math inline">\(\overrightarrow{\bf{X}}=(X,Y)\)</span></p>
 </div>
 </div>
 <div id="funcions-de-densitat-i-de-distribució-conjuntes." class="section level2 hasAnchor" number="1.2">
@@ -582,7 +577,7 @@ El que hem de fer a partir d’ara es caracteritzar aquesta probabilitat conjunt
 <p>En els apartats anteriors hem definit la probabilitat conjunta associada a una variable multidimensional. Com en el cas unidimensional, podem caracteritzar aquesta probabilitat conjunta a partir de funcions conjuntes de distribució o de densitat o de probabilitat segon siguin les variables.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-26" class="definition"><strong>Definició 1.15  </strong></span><strong>Funció de distribució conjunta</strong></p>
-<p>Definim la funció de distribució associada a <span class="math inline">\(P_X\)</span> a donat un punt de <span class="math inline">\(\mathbb{R}^k\)</span> <span class="math inline">\(\mathbf{x}=(x_1,...,x_k)\)</span> com</p>
+<p>Definim la funció de distribució associada a la probabilitat conjunta <span class="math inline">\(P_X\)</span> donat un punt de <span class="math inline">\(\mathbb{R}^k\)</span> <span class="math inline">\(\mathbf{x}=(x_1,...,x_k)\)</span> com</p>
 <p><span class="math display" id="eq:Fdistconjunt">\[
 F_X( \mathbf{x} )=F_X(x_1,...,x_k) =P_X(S_x)=P(X \in S_x)= P(\bigcap_{i=1}^{k} \{ X_i\leq x_i \}) \tag{1.8}
 \]</span></p>
@@ -607,7 +602,7 @@ Figura 1.1: Distribució continua bivariada
 <li>
 <b> Continuïtat conjunta per la dreta </b>
 </li>
-<p>Si <span class="math inline">\(\mathbf{x}{(n)} \rightarrow \mathbf{x}\)</span> entonces <span class="math inline">\(F_X(\mathbf{x}^{(n)}) \rightarrow F_X(\mathbf{x})\)</span></p>
+<p>Si <span class="math inline">\(\mathbf{x}{(n)} \rightarrow \mathbf{x}\)</span> llavors <span class="math inline">\(F_X(\mathbf{x}^{(n)}) \rightarrow F_X(\mathbf{x})\)</span></p>
 <li>
 <b> Valores límit </b>
 </li>
@@ -1216,7 +1211,7 @@ f_{XY}(x,y)=
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariades.html#fig:img-condicionada2">1.11</a> es pot veure la representació de la funció de densitat conjunta.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada2"></span>
-<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta"  />
+<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta" width="314" />
 <p class="caption">
 Figura 1.11: Exemple de distribució conjunta
 </p>
@@ -1248,7 +1243,7 @@ f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} =
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariades.html#fig:img-condicionada3">1.12</a> es pot veure la representació de la funció de densitat condicional <span class="math inline">\(X|Y\)</span> per a cada valor de <span class="math inline">\(y\)</span> .</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada3"></span>
-<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y"  />
+<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y" width="418" />
 <p class="caption">
 Figura 1.12: Exemple de distribució condicionada X|Y
 </p>
