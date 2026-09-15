@@ -633,7 +633,7 @@ Sigui el vector aleatori $\overrightarrow{\bf{X}}=(X_1,X_2,...,X_{k-1},X_k)$, di
 $$
 f_X(x_1,...,x_k)=
 \begin{cases}
-P(X_1=x_1,\ldots\X_k=x_k ), & \text{si } \mathbf{x}=(x_1,...,x_k) \in D_X \\
+P(X_1=x_1,\ldots,X_k=x_k ), & \text{si } \mathbf{x}=(x_1,...,x_k) \in D_X \\
 0, & \text{en la resta}
 \end{cases}
 $$
