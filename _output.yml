@@ -1,5 +1,7 @@
 bookdown::gitbook:
   css: Rcode/custom.css
+  includes:
+    after_body: Rcode/section-toc.html
   toc_depth: 3
   pandoc_args:
     - "--lua-filter=Rcode/theorems.lua"
@@ -12,7 +14,7 @@ bookdown::gitbook:
     sharing: false
     toolbar: fixed
     toc:
-      collapse: subsection
+      collapse: section
       scroll_highlight: true
       before: |
         <li><div style="padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>

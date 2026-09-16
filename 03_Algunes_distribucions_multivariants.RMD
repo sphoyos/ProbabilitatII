@@ -1,8 +1,3 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: inline
----
 # Algunes distribucions multivariants
 
 En els dos temes anteriors s'ha introduït el concepte de vectors aleatoris i totes les funcions associades a les seves distribucions. En aquest tema introduirem algunes de les distribucions de probabilitat més utilitzades. Dedicarem un apartat sencer a la distribució normal multivariant, introduirem algunes de les distribucions discretes i continues més utilitzades i en la tercera part del tema  parlarem de la generació de distribucions multivariants. 

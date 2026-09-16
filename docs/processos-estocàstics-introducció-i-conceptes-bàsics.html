@@ -497,6 +497,56 @@ E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h
 
 </div>
 </div>
+<script>
+(function () {
+  function createSectionToc() {
+    var section = document.querySelector('.page-inner section.normal');
+    if (!section || document.getElementById('section-toc')) return;
+
+    var headings = Array.prototype.slice.call(section.querySelectorAll('h2, h3'))
+      .filter(function (heading) { return heading.id || heading.parentElement.id; });
+    if (!headings.length) return;
+
+    var toc = document.createElement('aside');
+    toc.id = 'section-toc';
+    toc.setAttribute('aria-label', 'Índex de la secció');
+    toc.innerHTML = '<h2>En aquesta secció</h2><ul></ul>';
+    var list = toc.querySelector('ul');
+
+    headings.forEach(function (heading) {
+      var target = heading.id || heading.parentElement.id;
+      heading.id = target;
+      var item = document.createElement('li');
+      item.className = heading.tagName === 'H3' ? 'level-3' : 'level-2';
+      var link = document.createElement('a');
+      link.href = '#' + target;
+      link.textContent = heading.textContent.replace(/^\s*[\d.]+\s*/, '');
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+    document.body.appendChild(toc);
+
+    if ('IntersectionObserver' in window) {
+      var links = Array.prototype.slice.call(toc.querySelectorAll('a'));
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (link) {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        });
+      }, { rootMargin: '-15% 0px -70% 0px' });
+      headings.forEach(function (heading) { observer.observe(heading); });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createSectionToc);
+  } else {
+    createSectionToc();
+  }
+}());
+</script>
             </section>
 
           </div>
@@ -541,7 +591,7 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "subsection",
+    "collapse": "section",
     "scroll_highlight": true
   },
   "toolbar": "fixed"
