@@ -679,7 +679,7 @@ P_{X,Y}(A) &amp;=F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)- P_{X,Y}(A_1)-P_{X,Y}(A_2)  \\
 <p><span class="math display">\[
 f_X(x_1,...,x_k)=
 \begin{cases}
-P(X_1=x_1,\ldots,X_k=x_k ), &amp; \text{si } \mathbf{x}=(x_1,...,x_k) \in D_X \\
+P(X_i=x_i ), &amp; \text{si } \mathbf{x}=(x_1,...,x_k) \in D_X \\
 0, &amp; \text{en la resta}
 \end{cases}
 \]</span></p>
@@ -769,12 +769,12 @@ P(X_1=x_1,\ldots,X_k=x_k ), &amp; \text{si } \mathbf{x}=(x_1,...,x_k) \in D_X \\
 <div class="definition">
 <p><span id="def:unlabeled-div-31" class="definition"><strong>Definició 1.17  </strong></span><strong>Funció de densitat conjunta de probabilitat d’una variable aleatòria multivariat absolutament continua</strong></p>
 <p>Sigui <span class="math inline">\(\overrightarrow{\bf{X}}=(X_1,X_2,...,X_{k-1},X_k)\)</span> un vector aleatori on <span class="math inline">\(X_i\)</span> es una variable aleatòria continua. Diguem que <strong>X</strong> és continu si i només si existeis una funció <span class="math inline">\(f_X:   \mathbb{R}^k \rightarrow[0,+\infty[\)</span> tal que</p>
-<p><span class="math inline">\(P(X \in (a,b])=P(a_i&lt;X_i&lt;b_i, i=1,...,k)= \int_{a_k}^{b_k}...\int_{a_1}^{b_1} f_X(x_1,...,x_k)dx_1,....,dx_k\)</span></p>
+<p><span class="math inline">\(P(\mathbf{X} \in (\mathbf{a},\mathbf{b})=P(a_i&lt;X_i&lt;b_i, i=1,...,k)= \int_{a_k}^{b_k}...\int_{a_1}^{b_1} f_X(x_1,...,x_k)dx_1,....,dx_k\)</span></p>
 </div>
 <p>Com passava en el cas unidimensional aquesta funció té algunes propietats que cal remarcar.</p>
 <ol>
 <li>
-f_X(x) es no negativa
+<span class="math inline">\(f_X(x)\)</span> es no negativa
 </li>
 <li>
 donat que <span class="math inline">\(P(X \in   \mathbb{R}^k)= 1\)</span> , llavors
@@ -1211,7 +1211,7 @@ f_{XY}(x,y)=
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariades.html#fig:img-condicionada2">1.11</a> es pot veure la representació de la funció de densitat conjunta.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada2"></span>
-<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta"  />
+<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta" width="314" />
 <p class="caption">
 Figura 1.11: Exemple de distribució conjunta
 </p>
@@ -1243,7 +1243,7 @@ f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} =
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariades.html#fig:img-condicionada3">1.12</a> es pot veure la representació de la funció de densitat condicional <span class="math inline">\(X|Y\)</span> per a cada valor de <span class="math inline">\(y\)</span> .</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada3"></span>
-<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y"  />
+<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y" width="418" />
 <p class="caption">
 Figura 1.12: Exemple de distribució condicionada X|Y
 </p>

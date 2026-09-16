@@ -629,11 +629,10 @@ Sigui el vector aleatori $\overrightarrow{\bf{X}}=(X_1,X_2,...,X_{k-1},X_k)$, di
 
 
 
-
 $$
 f_X(x_1,...,x_k)=
 \begin{cases}
-P(X_1=x_1,\ldots,X_k=x_k ), & \text{si } \mathbf{x}=(x_1,...,x_k) \in D_X \\
+P(X_i=x_i ), & \text{si } \mathbf{x}=(x_1,...,x_k) \in D_X \\
 0, & \text{en la resta}
 \end{cases}
 $$
@@ -705,14 +704,14 @@ Sigui f(x,y) una funció de probabilitat de la variable bivariada (X,Y) tal que 
 
 Sigui $\overrightarrow{\bf{X}}=(X_1,X_2,...,X_{k-1},X_k)$ un vector aleatori on $X_i$ es una variable aleatòria continua. Diguem que **X** és continu si i només si existeis una funció $f_X:   \mathbb{R}^k \rightarrow[0,+\infty[$ tal que 
 
-$P(X \in (a,b])=P(a_i<X_i<b_i, i=1,...,k)= \int_{a_k}^{b_k}...\int_{a_1}^{b_1} f_X(x_1,...,x_k)dx_1,....,dx_k$
+$P(\mathbf{X} \in (\mathbf{a},\mathbf{b})=P(a_i<X_i<b_i, i=1,...,k)= \int_{a_k}^{b_k}...\int_{a_1}^{b_1} f_X(x_1,...,x_k)dx_1,....,dx_k$
 :::
 
 
 Com passava en el cas unidimensional aquesta funció té algunes propietats que cal remarcar. 
 
 <ol>
-<li>  f_X(x) es no negativa </li>
+<li>  $f_X(x)$ es no negativa </li>
 <li> donat que $P(X \in   \mathbb{R}^k)= 1$ , llavors
 $\int_{-\infty}^{+\infty}...\int_{-\infty}^{+\infty} f_X(x_1,...,x_k)dx_1,....,dx_k=1$ </li>
 </ol>
