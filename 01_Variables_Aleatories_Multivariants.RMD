@@ -749,7 +749,7 @@ Aquest apartat es pot considerar com un apèndix del contingut del temari. Intro
 :::{.definition} 
 
 
-Sigui una funció $f:   \mathbb{R}^2 \rightarrow\mathbb{R}$ una funció no negativa i D un subconjunt de $\mathbb{R}^2$. El volum sota el gràfic de la superfície que genera funció f restringida a aquest conjunt D( veure Figura \@ref(fig:img-doubleintegral1) ) es pot obtenir calculant 
+Sigui una funció $f:   \mathbb{R}^2 \rightarrow\mathbb{R}$ funció no negativa i D un subconjunt de $\mathbb{R}^2$. El volum sota el gràfic de la superfície que genera funció f restringida a aquest conjunt D( veure Figura \@ref(fig:img-doubleintegral1) ) es pot obtenir calculant 
 
 $$
 \int \int_D f(x,y) dx dy=\int \int_D f(x,y) dy dx
@@ -770,7 +770,7 @@ knitr::include_graphics("images/doubleintegral1.png")
 
 :::{.example #densitat1}
 
-Calculem el volum que la funció f(x,y)=x+y deixa sota el rectangle sobre el rectangle [1,2] x[3,4] , es a  dir $1 \leq x \leq 2$  i   $3 \leq y \leq 4$.
+Calculem el volum que la funció f(x,y)=x+y deixa sota el rectangle [1,2] x[3,4] , es a  dir $1 \leq x \leq 2$  i   $3 \leq y \leq 4$.
 
 
 $V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy$

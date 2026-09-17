@@ -541,8 +541,8 @@ amb la condició adicional de <span class="math inline">\(\sum_i \pi_i^{(e)}=1\)
 <p>La representació de la cadena de Markov és la següent:</p>
 <!-- ```{r echo=FALSE, message=FALSE, warning=FALSE ,fig.align='center',fig.width=5,fig.height=1.2,out.width="70%", fig.cap="Representació cadena de Markov", code=readLines("Rcode/cadenaestats.r")} -->
 <!-- ``` -->
-<div id="htmlwidget-ed97937fc5a1fd73691c" style="width:70%;height:150px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ed97937fc5a1fd73691c">{"x":{"diagram":"\ndigraph Markov {\n\ngraph [\n  layout = neato,\n  overlap = false\n]\n\nnode [\n  shape = circle,\n  fixedsize = true,\n  width = 0.6,\n  fontsize = 14\n]\n\nedge [\n  fontsize = 12\n]\n\n# 1. Definim els nodes amb posicions fixes (X, Y!)\n0 [pos = \"0,0!\"]\n1 [pos = \"2,0!\"]\n2 [pos = \"4,0!\"]\n3 [pos = \"6,0!\"]\n4 [pos = \"8,0!\"]\n\n# 2. Bucles\n0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n# 3. Transicions cap a la dreta (p) per dalt\n1 -> 2 [label = \"p\", constraint = false]\n2 -> 3 [label = \"p\", constraint = false]\n3 -> 4 [label = \"p\", constraint = false]\n\n# 4. Transicions cap a l\"esquerra (1-p) per baix\n1 -> 0 [label = \"1-p\", constraint = false]\n2 -> 1 [label = \"1-p\", constraint = false]\n3 -> 2 [label = \"1-p\", constraint = false]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-aab856462fe0e136a77e" style="width:70%;height:150px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aab856462fe0e136a77e">{"x":{"diagram":"\ndigraph Markov {\n\ngraph [\n  layout = neato,\n  overlap = false\n]\n\nnode [\n  shape = circle,\n  fixedsize = true,\n  width = 0.6,\n  fontsize = 14\n]\n\nedge [\n  fontsize = 12\n]\n\n# 1. Definim els nodes amb posicions fixes (X, Y!)\n0 [pos = \"0,0!\"]\n1 [pos = \"2,0!\"]\n2 [pos = \"4,0!\"]\n3 [pos = \"6,0!\"]\n4 [pos = \"8,0!\"]\n\n# 2. Bucles\n0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n# 3. Transicions cap a la dreta (p) per dalt\n1 -> 2 [label = \"p\", constraint = false]\n2 -> 3 [label = \"p\", constraint = false]\n3 -> 4 [label = \"p\", constraint = false]\n\n# 4. Transicions cap a l\"esquerra (1-p) per baix\n1 -> 0 [label = \"1-p\", constraint = false]\n2 -> 1 [label = \"1-p\", constraint = false]\n3 -> 2 [label = \"1-p\", constraint = false]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p>Tenim que:</p>
 <ul>
 <li><p>Els estats <strong>0</strong> i <strong>4</strong> són <strong>absorbents</strong>.</p></li>
@@ -581,8 +581,8 @@ Si \quad y \in A \quad llavors \quad P(X_{n+1}\in A |X_n \in A)=1
 P_1=\begin{pmatrix}0&amp;1&amp;0\\ 0&amp;0&amp;1\\ 1&amp;0&amp;0\end{pmatrix}
 \]</span></p>
 <p><br><br></p>
-<div id="htmlwidget-168e970060f0d332feef" style="width:70%;height:140px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-168e970060f0d332feef">{"x":{"diagram":"\ndigraph Markov1 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,0!\"]\n  3 [pos = \"4,0!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 1 [label = \"1\", tailport = \"s\", headport = \"s\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9d0b8b30c615dcc75a12" style="width:70%;height:140px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9d0b8b30c615dcc75a12">{"x":{"diagram":"\ndigraph Markov1 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,0!\"]\n  3 [pos = \"4,0!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 1 [label = \"1\", tailport = \"s\", headport = \"s\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><span class="math display">\[
 \{n \mid p_{i,i}^{(n)}&gt;0\} = \{3,6,9,12,\dots\}
 \]</span>
@@ -601,8 +601,8 @@ P_2 = \begin{pmatrix}
 \end{pmatrix}
 \]</span></p>
 <p><br><br></p>
-<div id="htmlwidget-f0c5de542c78ea30ae5b" style="width:70%;height:220px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f0c5de542c78ea30ae5b">{"x":{"diagram":"\ndigraph Markov2 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"3,-0.5!\"]\n  5 [pos = \"1,-0.5!\"]\n\n  1 -> 1 [label = \"0.4\", tailport = \"nw\", headport = \"sw\"]\n  1 -> 2 [label = \"0.6\"]\n  2 -> 1 [label = \"0.5\"]\n  2 -> 2 [label = \"0.5\", tailport = \"ne\", headport = \"se\"]\n\n  3 -> 4 [label = \"0.7\"]\n  4 -> 3 [label = \"0.5\"]\n  3 -> 3 [label = \"0.3\", tailport = \"ne\", headport = \"se\"]\n  4 -> 4 [label = \"0.4\", tailport = \"se\", headport = \"sw\"]\n  4 -> 5 [label = \"0.1\"]\n\n  5 -> 4 [label = \"0.8\"]\n  5 -> 5 [label = \"0.2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-55f90a1580076d5f9112" style="width:70%;height:220px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-55f90a1580076d5f9112">{"x":{"diagram":"\ndigraph Markov2 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"3,-0.5!\"]\n  5 [pos = \"1,-0.5!\"]\n\n  1 -> 1 [label = \"0.4\", tailport = \"nw\", headport = \"sw\"]\n  1 -> 2 [label = \"0.6\"]\n  2 -> 1 [label = \"0.5\"]\n  2 -> 2 [label = \"0.5\", tailport = \"ne\", headport = \"se\"]\n\n  3 -> 4 [label = \"0.7\"]\n  4 -> 3 [label = \"0.5\"]\n  3 -> 3 [label = \"0.3\", tailport = \"ne\", headport = \"se\"]\n  4 -> 4 [label = \"0.4\", tailport = \"se\", headport = \"sw\"]\n  4 -> 5 [label = \"0.1\"]\n\n  5 -> 4 [label = \"0.8\"]\n  5 -> 5 [label = \"0.2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br><br></p>
 <p>Fixem-nos que <span class="math inline">\(p_{i,i}&gt;0\)</span> per tot <span class="math inline">\(i\)</span> i per tant tots els estats són aperiòdics.</p>
 <hr />
@@ -618,15 +618,15 @@ P_{3}=\begin{pmatrix}
 \end{pmatrix}
 \]</span></p>
 <p><br><br></p>
-<div id="htmlwidget-e57cc8607ea285f33fde" style="width:70%;height:140px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e57cc8607ea285f33fde">{"x":{"diagram":"\ndigraph Markov3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  0 [pos = \"0,0!\"]\n  1 [pos = \"2,0!\"]\n  2 [pos = \"4,0!\"]\n  3 [pos = \"6,0!\"]\n  4 [pos = \"8,0!\"]\n\n  0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n  4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n  1 -> 2 [label = \"p\"]\n  2 -> 3 [label = \"p\"]\n  3 -> 4 [label = \"p\"]\n\n  1 -> 0 [label = \"1-p\"]\n  2 -> 1 [label = \"1-p\"]\n  3 -> 2 [label = \"1-p\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-29a8f40f1f7bf2035de0" style="width:70%;height:140px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-29a8f40f1f7bf2035de0">{"x":{"diagram":"\ndigraph Markov3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  0 [pos = \"0,0!\"]\n  1 [pos = \"2,0!\"]\n  2 [pos = \"4,0!\"]\n  3 [pos = \"6,0!\"]\n  4 [pos = \"8,0!\"]\n\n  0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n  4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n  1 -> 2 [label = \"p\"]\n  2 -> 3 [label = \"p\"]\n  3 -> 4 [label = \"p\"]\n\n  1 -> 0 [label = \"1-p\"]\n  2 -> 1 [label = \"1-p\"]\n  3 -> 2 [label = \"1-p\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br><br></p>
 <p>Quan <span class="math inline">\(i=1,2,3\)</span> llavors <span class="math display">\[\{n \mid p_{i,i}^{(n)}&gt;0\} = \{2,4,6,8,\dots\}\]</span> i per tant els estats 1, 2, 3 són periòdics amb període <span class="math inline">\(k=2\)</span>.</p>
 <hr />
 <hr />
 <p><strong>Quarta cadena</strong></p>
-<div id="htmlwidget-911878549535907d1101" style="width:70%;height:180px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-911878549535907d1101">{"x":{"diagram":"\ndigraph Markov4 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n\n  7 [pos = \"0,0!\"]\n  8 [pos = \"1.5,0.8!\"]\n  9 [pos = \"3.5,0.8!\"]\n  1 [pos = \"5,0!\"]\n  2 [pos = \"6.5,0.8!\"]\n  3 [pos = \"8.5,0!\"]\n  4 [pos = \"6.5,-0.8!\"]\n  5 [pos = \"3.5,-0.8!\"]\n  6 [pos = \"1.5,-0.8!\"]\n\n  7 -> 8; 8 -> 9; 9 -> 1;\n  1 -> 2; 2 -> 3; 3 -> 4; 4 -> 1;\n  1 -> 5; 5 -> 6; 6 -> 7;\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d9660c8e7430210c54f8" style="width:70%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d9660c8e7430210c54f8">{"x":{"diagram":"\ndigraph Markov4 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n\n  7 [pos = \"0,0!\"]\n  8 [pos = \"1.5,0.8!\"]\n  9 [pos = \"3.5,0.8!\"]\n  1 [pos = \"5,0!\"]\n  2 [pos = \"6.5,0.8!\"]\n  3 [pos = \"8.5,0!\"]\n  4 [pos = \"6.5,-0.8!\"]\n  5 [pos = \"3.5,-0.8!\"]\n  6 [pos = \"1.5,-0.8!\"]\n\n  7 -> 8; 8 -> 9; 9 -> 1;\n  1 -> 2; 2 -> 3; 3 -> 4; 4 -> 1;\n  1 -> 5; 5 -> 6; 6 -> 7;\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br><br></p>
 <p><span class="math display">\[\{n \mid p_{i,i}^{(n)}&gt;0\} = \{4,6,8,10\dots\}\]</span> amb perìode 2</p>
 <hr />
@@ -642,8 +642,8 @@ P_{5}=
 \end{pmatrix}
 \]</span></p>
 <p><br><br></p>
-<div id="htmlwidget-a0d44a3d9d39b98616e4" style="width:70%;height:180px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a0d44a3d9d39b98616e4">{"x":{"diagram":"\ndigraph Markov5 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"2,-0.5!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 4 [label = \"1\"]\n  4 -> 1 [label = \"1/2\"]\n  4 -> 2 [label = \"1/2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9f17fcb06bd9a40afc92" style="width:70%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9f17fcb06bd9a40afc92">{"x":{"diagram":"\ndigraph Markov5 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"2,-0.5!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 4 [label = \"1\"]\n  4 -> 1 [label = \"1/2\"]\n  4 -> 2 [label = \"1/2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><span class="math display">\[
 \{n \mid p_{1,1}^{(n)}&gt;0\} = \{4,7,8,10,\dots\} \quad \text{amb període 1.}
 \]</span></p>
@@ -666,8 +666,8 @@ P_{5}=
 9 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
 \end{array}\]</span></p>
 <p>la representació gràfica de la cadena de Markov es</p>
-<div id="htmlwidget-7313ca9f4d15dadf06b9" style="width:70%;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7313ca9f4d15dadf06b9">{"x":{"diagram":"\ndigraph Markov11 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,2!\"]\n  2 [pos = \"0,0!\"]\n  3 [pos = \"2,2!\"]\n  4 [pos = \"1,3.2!\"]\n  5 [pos = \"2,0!\"]\n  6 [pos = \"1,-1.2!\"]\n  7 [pos = \"5,-0.8!\"]\n  8 [pos = \"4,0!\"]\n  9 [pos = \"4,2!\"]\n\n  1 -> 4 [label = \"0.4\"]\n  1 -> 3 [label = \"0.6\"]\n  2 -> 4 [label = \"0.4\"]\n  2 -> 3 [label = \"0.6\"]\n  3 -> 5 [label = \"0.6\"]\n  3 -> 6 [label = \"0.2\"]\n  3 -> 9 [label = \"0.2\"]\n  4 -> 5 [label = \"0.6\"]\n  4 -> 6 [label = \"0.4\"]\n  5 -> 1 [label = \"0.6\"]\n  5 -> 2 [label = \"0.3\"]\n  5 -> 8 [label = \"0.1\"]\n  6 -> 1 [label = \"0.6\"]\n  6 -> 2 [label = \"0.4\"]\n\n  7 -> 7 [label = \"0.7\", tailport = \"se\", headport = \"ne\"]\n  7 -> 8 [label = \"0.3\"]\n  8 -> 7 [label = \"1\"]\n\n  9 -> 9 [label = \"1\", tailport = \"ne\", headport = \"se\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3ed6c2900dbf898ef2ca" style="width:70%;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3ed6c2900dbf898ef2ca">{"x":{"diagram":"\ndigraph Markov11 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,2!\"]\n  2 [pos = \"0,0!\"]\n  3 [pos = \"2,2!\"]\n  4 [pos = \"1,3.2!\"]\n  5 [pos = \"2,0!\"]\n  6 [pos = \"1,-1.2!\"]\n  7 [pos = \"5,-0.8!\"]\n  8 [pos = \"4,0!\"]\n  9 [pos = \"4,2!\"]\n\n  1 -> 4 [label = \"0.4\"]\n  1 -> 3 [label = \"0.6\"]\n  2 -> 4 [label = \"0.4\"]\n  2 -> 3 [label = \"0.6\"]\n  3 -> 5 [label = \"0.6\"]\n  3 -> 6 [label = \"0.2\"]\n  3 -> 9 [label = \"0.2\"]\n  4 -> 5 [label = \"0.6\"]\n  4 -> 6 [label = \"0.4\"]\n  5 -> 1 [label = \"0.6\"]\n  5 -> 2 [label = \"0.3\"]\n  5 -> 8 [label = \"0.1\"]\n  6 -> 1 [label = \"0.6\"]\n  6 -> 2 [label = \"0.4\"]\n\n  7 -> 7 [label = \"0.7\", tailport = \"se\", headport = \"ne\"]\n  7 -> 8 [label = \"0.3\"]\n  8 -> 7 [label = \"1\"]\n\n  9 -> 9 [label = \"1\", tailport = \"ne\", headport = \"se\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p>Veiem doncs que tenim 3 classes:</p>
 <ul>
 <li>Classe 1 formada pels estats <span class="math inline">\(\{1,2,\dots, 6\}\)</span>. És transitòria.</li>
@@ -680,8 +680,8 @@ P_{5}=
 <p>Considerem la següent matriu de transició</p>
 <p><span class="math display">\[P_7 = \begin{pmatrix} 0.5 &amp; 0.5 &amp; 0 \\ 0 &amp; 0.3 &amp; 0.7 \\ 0.8 &amp; 0 &amp; 0.2 \end{pmatrix}\]</span>
 On la seva reprentació gràfica es</p>
-<div id="htmlwidget-cd2dbfc686764c46ec40" style="width:100%;height:180px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cd2dbfc686764c46ec40">{"x":{"diagram":"\ndigraph MarkovP3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  # Posicions dels nodes en un triangle\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,1.5!\"]\n  3 [pos = \"4,0!\"]\n\n  # Bucles (transicions a un mateix)\n  1 -> 1 [label = \"0.5\", tailport = \"w\", headport = \"nw\"]\n  2 -> 2 [label = \"0.3\", tailport = \"ne\", headport = \"nw\"]\n  3 -> 3 [label = \"0.2\", tailport = \"e\", headport = \"se\"]\n\n  # Transicions entre estats\n  1 -> 2 [label = \"0.5\"]\n  2 -> 3 [label = \"0.7\"]\n  3 -> 1 [label = \"0.8\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e8a9fe026079dd80be2f" style="width:100%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e8a9fe026079dd80be2f">{"x":{"diagram":"\ndigraph MarkovP3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  # Posicions dels nodes en un triangle\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,1.5!\"]\n  3 [pos = \"4,0!\"]\n\n  # Bucles (transicions a un mateix)\n  1 -> 1 [label = \"0.5\", tailport = \"w\", headport = \"nw\"]\n  2 -> 2 [label = \"0.3\", tailport = \"ne\", headport = \"nw\"]\n  3 -> 3 [label = \"0.2\", tailport = \"e\", headport = \"se\"]\n\n  # Transicions entre estats\n  1 -> 2 [label = \"0.5\"]\n  2 -> 3 [label = \"0.7\"]\n  3 -> 1 [label = \"0.8\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p>La cadena de Markov es ergòdica ja que es aperiòdica al ser tots els <span class="math inline">\(p_{ii}&gt;0\)</span> i es irreductible per que tots els nodes estan comunicats entre si.</p>
 </div>
 </div>
@@ -734,10 +734,12 @@ P(S_n=k\mid S_{i_0}=a_0,S_{i_1}=a_1,\dots, S_{i_m}=a_m)=P(S_n=k\mid S_{i_m}=a_m)
 \Pr(S_n = k) = \binom{n}{\frac{n+k}{2}} \frac{1}{2^n}, \quad k \in \{-n, -n+2, \dots, n-2, n\}.
 \]</span></p>
 <p>En la taula i la gràfica gràfica és mostra una caminata aleatòria de longitut <strong><span class="math inline">\(n=200\)</span></strong> on el valor final es <strong><span class="math inline">\(S_{200}=14\)</span></strong> i la probabilitat d’obtenir aquest valor és <strong><span class="math inline">\(P(S_{200}=14)=0.0345913\)</span></strong></p>
-<pre><code>##   [1]  0 -1 -2 -1  0 -1  0 -1 -2 -3 -2 -3 -4 -3 -4 -3 -2 -3 -4 -3 -2 -1  0 -1  0  1  0 -1  0 -1  0 -1  0  1  2  1  0  1  0 -1 -2 -3 -4 -3 -2 -3 -2 -1  0  1  0 -1
-##  [53] -2 -1  0  1  0  1  0  1  2  3  2  1  2  1  2  3  2  1  2  1  0  1  2  3  2  3  2  1  2  1  0  1  2  1  0 -1 -2 -3 -4 -3 -4 -3 -2 -1 -2 -1  0  1  0 -1 -2 -3
-## [105] -2 -3 -2 -3 -4 -3 -4 -3 -2 -3 -2 -1 -2 -1  0 -1  0  1  0  1  0  1  2  3  4  5  4  5  4  5  6  7  6  7  6  7  6  7  8  9 10 11 12 11 10 11 10 11 10  9  8  9
-## [157] 10  9 10 11 12 11 12 11 10  9  8  9 10  9  8  9  8  7  8  9 10 11 12 13 14 13 14 15 14 15 14 13 12 11 12 13 14 13 14 15 14 15 14 15 14</code></pre>
+<pre><code>##   [1]  0 -1 -2 -1  0 -1  0 -1 -2 -3 -2 -3 -4 -3 -4 -3 -2 -3 -4 -3 -2 -1  0 -1  0  1  0 -1  0 -1  0 -1  0  1
+##  [35]  2  1  0  1  0 -1 -2 -3 -4 -3 -2 -3 -2 -1  0  1  0 -1 -2 -1  0  1  0  1  0  1  2  3  2  1  2  1  2  3
+##  [69]  2  1  2  1  0  1  2  3  2  3  2  1  2  1  0  1  2  1  0 -1 -2 -3 -4 -3 -4 -3 -2 -1 -2 -1  0  1  0 -1
+## [103] -2 -3 -2 -3 -2 -3 -4 -3 -4 -3 -2 -3 -2 -1 -2 -1  0 -1  0  1  0  1  0  1  2  3  4  5  4  5  4  5  6  7
+## [137]  6  7  6  7  6  7  8  9 10 11 12 11 10 11 10 11 10  9  8  9 10  9 10 11 12 11 12 11 10  9  8  9 10  9
+## [171]  8  9  8  7  8  9 10 11 12 13 14 13 14 15 14 15 14 13 12 11 12 13 14 13 14 15 14 15 14 15 14</code></pre>
 <p><img src="images/passeig-aleatori-1.png" alt="" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <hr />
