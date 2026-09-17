@@ -776,7 +776,7 @@ Calculem el volum que la funció f(x,y)=x+y deixa sota el rectangle [1,2] x[3,4]
 $V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy$
 
 
-Si integren primer en funció de y la integral interior és, tenint en compte que x es constant : 
+Si integren primer en funció de $y$ la integral anterior és, tenint en compte que $x$ és constant : 
 
 $V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx$
 
@@ -892,7 +892,7 @@ En la Figura \@ref(fig:img-doubleintegral2) es pot veure el que significa el cà
 
  Així  
  $$
- \int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dy 
+ \int_{x}^{x+dx}\int_{y}^{y+dy} f(u,v) dx dy \approx f(x,y)dx dy 
  $$
 donat que per la continuïtat  de la funció $f$, aquesta es pràcticament constant al llarg de la superfície.
 
@@ -905,7 +905,7 @@ Com a conseqüència a partir de la notació diferencial
 $$
 \begin{aligned}
 P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \} &=P \{(X,Y) \in (x,x+dx] \times (y,y+dy] \\
- &=\int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dty 
+ &=\int_{x}^{x+dx}\int_{y}^{y+dy} f(u,v) dx dy \approx f(x,y)dx dy 
  \end{aligned}
 $$
 Aleshores,  es pot deduir que la unitat de mesura de la densitat de probabilitat és la probabilitat per unitat  d'àrea.
@@ -916,7 +916,7 @@ $$
 
  Així, qualsevol punt o successió infinita de punts té probabilitat 0, perquè al tenir àrea cero no es pot obtenir damunt un volum positiu. 
  
- Per altra banda qualsevol corba unidimensional té probabilitat 0. En particular la probabilitat d'una recta $P \{ Y=a+bX \}=0$  o una cercle $P \{ X^2+Y^2=r^2 \} =0$ es 0.  
+ Per altra banda qualsevol corba unidimensional té probabilitat 0. En particular la probabilitat d'una recta $P \{ Y=a+bX \}=0$  o una cercle $P \{ X^2+Y^2=r^2 \} =0$  
 
 ---
 
@@ -949,11 +949,11 @@ donat que la funció $f(x,y) \geq 0$ per a tot $(x,y) \in \mathbb{R}^2$ será de
 $$
 1= \int_{\mathbb{R}}\int_{\mathbb{R}} f(x,y)dydx=\int_{\mathbb{R}}\int_{\mathbb{R}} k(x+y)I_{[1,2]} (x) I_{[3,4]}(y)dydx= k \int_{1}^{2}\int_{3}^{4} (x+y)dydx=k5
 $$
-El valor de k és per tant 1/5 per a que f(x,y) sigui una funció de densitat.
+El valor de $k$ és per tant **1/5** per a que $f(x,y)$ sigui una funció de densitat.
 
 
 
- En la figura \@ref(fig:density2) es mostra la funció de densitat que val (x+y)/5 per als punts (x,y) en el rectangle A definit i 0 en la resta. 
+ En la figura \@ref(fig:density2) es mostra la funció de densitat que val $(x+y)/5$ per als punts $(x,y)$ en el rectangle A definit i 0 en la resta. 
 
 
 
