@@ -1,0 +1,148 @@
+---
+title: "Distribución Univariante y Distribución Conjunta Bivariante"
+author: "ChatGPT"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+
+library(ggplot2)
+library(plotly)
+```
+
+# Distribución univariante
+
+Consideramos la función logística
+
+$$
+F_X(x)=\frac{1}{1+e^{-x}}
+$$
+
+que tiene las propiedades de una función de distribución acumulada.
+
+```{r univariate}
+Fx <- function(x){
+  1/(1+exp(-x))
+}
+
+x <- seq(-4, 4, length.out = 1000)
+
+df_uni <- data.frame(
+  x = x,
+  Fx = Fx(x)
+)
+
+ggplot(df_uni, aes(x, Fx)) +
+  geom_line(linewidth = 1.2) +
+  labs(
+    title = "Función de distribución acumulada univariante",
+    x = "x",
+    y = expression(F[X](x))
+  ) +
+  ylim(0, 1) +
+  theme_minimal()
+```
+
+# Distribución conjunta bivariante
+
+Definimos
+
+$$
+F_{X,Y}(x,y)=
+\left(\frac{1}{1+e^{-x}}\right)
+\left(\frac{1}{1+e^{-y}}\right)
+$$
+
+que representa una función de distribución conjunta para dos variables independientes con distribución logística.
+
+```{r bivariate-surface}
+x <- seq(-4, 4, length.out = 80)
+y <- seq(-4, 4, length.out = 80)
+
+Fx <- function(x){
+  1/(1+exp(-x))
+}
+
+Z <- outer(
+  x,
+  y,
+  FUN = function(x, y) Fx(x) * Fx(y)
+)
+
+plot_ly(
+  x = x,
+  y = y,
+  z = Z,
+  type = "surface"
+) %>%
+  layout(
+    title = "Distribución conjunta bivariante",
+    scene = list(
+      xaxis = list(title = "x"),
+      yaxis = list(title = "y"),
+      zaxis = list(title = "F(x,y)")
+    )
+  )
+```
+
+# Comparación conceptual
+
+La distribución acumulada univariante se define como
+
+$$
+F_X(x)=P(X\le x)
+$$
+
+mientras que la distribución conjunta bivariante se define como
+
+$$
+F_{X,Y}(x,y)=P(X\le x,\;Y\le y)
+$$
+
+La segunda generaliza la primera al caso de dos variables aleatorias.
+
+
+
+**funcioó de densitat conjunta" 
+```{r}
+
+
+
+x <- seq(-4, 4, length.out = 80)
+y <- seq(-4, 4, length.out = 80)
+# Densidad logística estándar
+fx <- function(x) {
+  exp(-x) / (1 + exp(-x))^2
+}
+# Densidad conjunta (producto por independencia)
+Z <- outer(
+  x,
+  y,
+  FUN = function(x, y) fx(x) * fx(y)
+)
+plot_ly(
+  x = x,
+  y = y,
+  z = Z,
+  type = "surface"
+) %>%
+  layout(
+    title = "Densitat conjunta bivariant",
+    scene = list(
+      xaxis = list(title = "x"),
+      yaxis = list(title = "y"),
+      zaxis = list(title = "f(x,y)")
+    )
+  )
+
+
+```
