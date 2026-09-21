@@ -904,14 +904,14 @@ Com a conseqüència a partir de la notació diferencial
 
 $$
 \begin{aligned}
-P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \} &=P \{(X,Y) \in (x,x+dx] \times (y,y+dy] \\
+P \{ x \leq X \leq x+dx, y \leq y \leq y+dy \} &=P \{(X,Y) \in (x,x+dx] \times (y,y+dy] \\
  &=\int_{x}^{x+dx}\int_{y}^{y+dy} f(u,v) dx dy \approx f(x,y)dx dy 
  \end{aligned}
 $$
 Aleshores,  es pot deduir que la unitat de mesura de la densitat de probabilitat és la probabilitat per unitat  d'àrea.
 
 $$
-f(x,y) \approx \frac {P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \}} {dxdy}
+f(x,y) \approx \frac {P \{ x \leq X \leq x+dx, y \leq y \leq y+dy \}} {dxdy}
 $$
 
  Així, qualsevol punt o successió infinita de punts té probabilitat 0, perquè al tenir àrea cero no es pot obtenir damunt un volum positiu. 
