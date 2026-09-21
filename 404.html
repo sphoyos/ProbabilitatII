@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Page not found | 01_Variables_Aleatories_Multivariants.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Page not found | 01_Variables_Aleatories_Multivariants.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Page not found | 01_Variables_Aleatories_Multivariants.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="Rcode/custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><div style="padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
+<li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
+<li><h2 align="center">Probabilitat II</h2></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#variables-aleat%C3%B2ries-multivariades"><i class="fa fa-check"></i><b>1</b> Variables aleatòries multivariades</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#definici%C3%B3-i-conceptes-b%C3%A0sics-vectors-aleatoris-espais-de-probabilitat"><i class="fa fa-check"></i><b>1.1</b> Definició i conceptes bàsics: vectors aleatoris, espais de probabilitat</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path=""><a href="#introducci%C3%B3"><i class="fa fa-check"></i><b>1.1.1</b> Introducció</a></li>
+<li class="chapter" data-level="1.1.2" data-path=""><a href="#conceptes-b%C3%A0sics-experiment-aleatori-mesura-de-probabilitat"><i class="fa fa-check"></i><b>1.1.2</b> Conceptes bàsics: Experiment aleatori, mesura de probabilitat</a></li>
+<li class="chapter" data-level="1.1.3" data-path=""><a href="#conceptes-b%C3%A0sics-variable-aleat%C3%B2ria-funcions-de-distribuci%C3%B3-i-probabilitat."><i class="fa fa-check"></i><b>1.1.3</b> Conceptes bàsics: Variable aleatòria, funcions de distribució i probabilitat.</a></li>
+<li class="chapter" data-level="1.1.4" data-path=""><a href="#variable-aleat%C3%B2ria-k-dimensional-o-vector-aleatori"><i class="fa fa-check"></i><b>1.1.4</b> Variable aleatòria k-dimensional o vector aleatori</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path=""><a href="#funcions-de-densitat-i-de-distribuci%C3%B3-conjuntes."><i class="fa fa-check"></i><b>1.2</b> Funcions de densitat i de distribució conjuntes.</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path=""><a href="#funci%C3%B3-de-distribuci%C3%B3-conjunta"><i class="fa fa-check"></i><b>1.2.1</b> Funció de distribució conjunta</a></li>
+<li class="chapter" data-level="1.2.2" data-path=""><a href="#variables-aleat%C3%B2ries-multivariants-discretas"><i class="fa fa-check"></i><b>1.2.2</b> Variables aleatòries multivariants discretas</a></li>
+<li class="chapter" data-level="1.2.3" data-path=""><a href="#variables-aleat%C3%B2ries-multivariants-continues"><i class="fa fa-check"></i><b>1.2.3</b> Variables aleatòries multivariants continues</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path=""><a href="#funcions-de-densitat-i-de-distribuci%C3%B3-marginals-i-condicionades."><i class="fa fa-check"></i><b>1.3</b> Funcions de densitat i de distribució marginals i condicionades.</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path=""><a href="#distribucions-marginals."><i class="fa fa-check"></i><b>1.3.1</b> Distribucions marginals.</a></li>
+<li class="chapter" data-level="1.3.2" data-path=""><a href="#distribucions-condicionals"><i class="fa fa-check"></i><b>1.3.2</b> Distribucions condicionals</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path=""><a href="#moments-multivariants-vector-desperances-matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4</b> Moments multivariants: vector d’esperances, matriu de variància-covariància</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path=""><a href="#moments-univariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.1</b> Moments univariants: Esperança i Variància</a></li>
+<li class="chapter" data-level="1.4.2" data-path=""><a href="#moments-multivariants-esperan%C3%A7a-i-vari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.2</b> Moments multivariants: Esperança i Variància</a></li>
+<li class="chapter" data-level="1.4.3" data-path=""><a href="#matriu-de-vari%C3%A0ncia-covari%C3%A0ncia"><i class="fa fa-check"></i><b>1.4.3</b> Matriu de Variància-Covariància</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path=""><a href="#transformacions-de-variables-multivariants"><i class="fa fa-check"></i><b>1.5</b> Transformacions de variables multivariants</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path=""><a href="#suma-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.1</b> Suma de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.2" data-path=""><a href="#producte-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.2</b> Producte de dues variables aleatòries</a></li>
+<li class="chapter" data-level="1.5.3" data-path=""><a href="#quocient-de-dues-variables-aleat%C3%B2ries"><i class="fa fa-check"></i><b>1.5.3</b> Quocient de dues variables aleatòries</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com" target="_blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
+</div>
+<script>
+(function () {
+  function createSectionToc() {
+    var section = document.querySelector('.page-inner section.normal');
+    if (!section || document.getElementById('section-toc')) return;
+
+    var headings = Array.prototype.slice.call(section.querySelectorAll('h2, h3'))
+      .filter(function (heading) { return heading.id || heading.parentElement.id; });
+    if (!headings.length) return;
+
+    var toc = document.createElement('aside');
+    toc.id = 'section-toc';
+    toc.setAttribute('aria-label', 'Índex de la secció');
+    toc.innerHTML = '<h2>En aquesta secció</h2><ul></ul>';
+    var list = toc.querySelector('ul');
+
+    headings.forEach(function (heading) {
+      var target = heading.id || heading.parentElement.id;
+      heading.id = target;
+      var item = document.createElement('li');
+      item.className = heading.tagName === 'H3' ? 'level-3' : 'level-2';
+      var link = document.createElement('a');
+      link.href = '#' + target;
+      link.textContent = heading.textContent.replace(/^\s*[\d.]+\s*/, '');
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+    document.body.appendChild(toc);
+
+    if ('IntersectionObserver' in window) {
+      var links = Array.prototype.slice.call(toc.querySelectorAll('a'));
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (link) {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        });
+      }, { rootMargin: '-15% 0px -70% 0px' });
+      headings.forEach(function (heading) { observer.observe(heading); });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createSectionToc);
+  } else {
+    createSectionToc();
+  }
+}());
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": false,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": false,
+  "toc": {
+    "collapse": "section",
+    "scroll_highlight": true
+  },
+  "toolbar": "fixed"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -664,7 +664,7 @@ A_2 = S_{x, y+k} -S_{x,y}  \\
 \begin{aligned}
 P_{X,Y}(A) &amp;=F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)- P_{X,Y}(A_1)-P_{X,Y}(A_2)  \\
 &amp;=F_{X,Y}(x+h, y+k)-F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)-F_{X,Y}(x,y))-(F_{X,Y} (x,y+k)- F_{X,Y}(x,y))\\
-&amp;=F_{X,Y}(x+h, y+k)+F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)+F_{X,Y}(x,y))-(F_{X,Y}(x,y+k)- F_{X,Y}(x,y)) &gt;0
+&amp;=F_{X,Y}(x+h, y+k)+F_{X,Y}(x, y)-(F_{X,Y}(x+h,y)-(F_{X,Y}(x,y+k) &gt;0
 \end{aligned}
 }
 \]</span></p>
@@ -819,7 +819,7 @@ Figura 1.4: Double integral
 <div class="example">
 <p><span id="exm:densitat1" class="example"><strong>Exemple 1.15  </strong></span>Calculem el volum que la funció f(x,y)=x+y deixa sota el rectangle [1,2] x[3,4] , es a dir <span class="math inline">\(1 \leq x \leq 2\)</span> i <span class="math inline">\(3 \leq y \leq 4\)</span>.</p>
 <p><span class="math inline">\(V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx=\int_{3}^{4}\int_{1}^{2}(x+y)dxdy\)</span></p>
-<p>Si integren primer en funció de y la integral interior és, tenint en compte que x es constant :</p>
+<p>Si integren primer en funció de <span class="math inline">\(y\)</span> la integral anterior és, tenint en compte que <span class="math inline">\(x\)</span> és constant :</p>
 <p><span class="math inline">\(V= \int_{1}^{2}\int_{3}^{4} (x+y)dydx\)</span></p>
 <p><span class="math inline">\(\int (x+y)dy= xy+\frac{y^2}{2}\)</span></p>
 <p>que avaluat en y=3 i y=4 dona</p>
@@ -883,7 +883,7 @@ Començant primer per fixar la <span class="math inline">\(y\)</span> , hem de a
 <p>En la Figura <a href="variables-aleatòries-multivariades.html#fig:img-doubleintegral2">1.6</a> es pot veure el que significa el càlcul de la probabilitat, Es pot generar una quadrícula amb costats <span class="math inline">\([x,x+dx] \times [y,y+dy]\)</span> en l’àrea de suport. El volum del prisma sobre aquest rectangle es la seva àrea per l’alçada de la funció de densitat en el limit.</p>
 <p>Així<br />
 <span class="math display">\[
-\int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dy
+\int_{x}^{x+dx}\int_{y}^{y+dy} f(u,v) dx dy \approx f(x,y)dx dy
 \]</span>
 donat que per la continuïtat de la funció <span class="math inline">\(f\)</span>, aquesta es pràcticament constant al llarg de la superfície.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-doubleintegral2"></span>
@@ -896,7 +896,7 @@ Figura 1.6: Double integral
 <p><span class="math display">\[
 \begin{aligned}
 P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \} &amp;=P \{(X,Y) \in (x,x+dx] \times (y,y+dy] \\
-&amp;=\int_{x}^{x+dx}\int_{y}^{y+dy4} f(u,v) dx dy \approx f(x,y)dx dty
+&amp;=\int_{x}^{x+dx}\int_{y}^{y+dy} f(u,v) dx dy \approx f(x,y)dx dy
 \end{aligned}
 \]</span>
 Aleshores, es pot deduir que la unitat de mesura de la densitat de probabilitat és la probabilitat per unitat d’àrea.</p>
@@ -904,7 +904,7 @@ Aleshores, es pot deduir que la unitat de mesura de la densitat de probabilitat 
 f(x,y) \approx \frac {P \{ x \leq X \leq x+dx, x \leq y \leq y+dy \}} {dxdy}
 \]</span></p>
 <p>Així, qualsevol punt o successió infinita de punts té probabilitat 0, perquè al tenir àrea cero no es pot obtenir damunt un volum positiu.</p>
-<p>Per altra banda qualsevol corba unidimensional té probabilitat 0. En particular la probabilitat d’una recta <span class="math inline">\(P \{ Y=a+bX \}=0\)</span> o una cercle <span class="math inline">\(P \{ X^2+Y^2=r^2 \} =0\)</span> es 0.</p>
+<p>Per altra banda qualsevol corba unidimensional té probabilitat 0. En particular la probabilitat d’una recta <span class="math inline">\(P \{ Y=a+bX \}=0\)</span> o una cercle <span class="math inline">\(P \{ X^2+Y^2=r^2 \} =0\)</span></p>
 <hr />
 <div class="example">
 <p><span id="exm:unlabeled-div-35" class="example"><strong>Exemple 1.17  </strong></span>Per a que la funció que hem calculat la integral doble en l’exemple <a href="variables-aleatòries-multivariades.html#exm:densitat1">1.15</a> hem de garantir que la integral en tot <span class="math inline">\(\mathbb{R}^2\)</span> sigui 1.</p>
@@ -929,8 +929,8 @@ donat que la funció <span class="math inline">\(f(x,y) \geq 0\)</span> per a to
 <p><span class="math display">\[
 1= \int_{\mathbb{R}}\int_{\mathbb{R}} f(x,y)dydx=\int_{\mathbb{R}}\int_{\mathbb{R}} k(x+y)I_{[1,2]} (x) I_{[3,4]}(y)dydx= k \int_{1}^{2}\int_{3}^{4} (x+y)dydx=k5
 \]</span>
-El valor de k és per tant 1/5 per a que f(x,y) sigui una funció de densitat.</p>
-<p>En la figura <a href="variables-aleatòries-multivariades.html#fig:density2">1.7</a> es mostra la funció de densitat que val (x+y)/5 per als punts (x,y) en el rectangle A definit i 0 en la resta.</p>
+El valor de <span class="math inline">\(k\)</span> és per tant <strong>1/5</strong> per a que <span class="math inline">\(f(x,y)\)</span> sigui una funció de densitat.</p>
+<p>En la figura <a href="variables-aleatòries-multivariades.html#fig:density2">1.7</a> es mostra la funció de densitat que val <span class="math inline">\((x+y)/5\)</span> per als punts <span class="math inline">\((x,y)\)</span> en el rectangle A definit i 0 en la resta.</p>
 <div class="figure"><span style="display:block;" id="fig:density2"></span>
 <img src="images/density2-1.png" alt="Funció de densitat f(x,y)" width="672" />
 <p class="caption">
@@ -1211,7 +1211,7 @@ f_{XY}(x,y)=
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariades.html#fig:img-condicionada2">1.11</a> es pot veure la representació de la funció de densitat conjunta.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada2"></span>
-<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta"  />
+<img src="images/condicionada_joint.png" alt="Exemple de distribució conjunta" width="314" />
 <p class="caption">
 Figura 1.11: Exemple de distribució conjunta
 </p>
@@ -1243,7 +1243,7 @@ f_{X|Y}(x)= \frac {f_{X,Y} (x,y)} {f_Y(y)} =
 \]</span>
 El la gràfica <a href="variables-aleatòries-multivariades.html#fig:img-condicionada3">1.12</a> es pot veure la representació de la funció de densitat condicional <span class="math inline">\(X|Y\)</span> per a cada valor de <span class="math inline">\(y\)</span> .</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-condicionada3"></span>
-<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y"  />
+<img src="images/condicionada_Y.png" alt="Exemple de distribució condicionada X|Y" width="418" />
 <p class="caption">
 Figura 1.12: Exemple de distribució condicionada X|Y
 </p>
