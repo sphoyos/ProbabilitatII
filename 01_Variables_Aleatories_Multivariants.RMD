@@ -1038,7 +1038,7 @@ y-y^2/4 ,       & \text{si } (x,y)  \notin T \quad \& \quad 1< x1,0<y \leq 2 \te
 \end{cases}
 $$
 
-Cal observar que les expressions de F_{XY}(x,y)  depenen només de $x$ i de $y$. Si recordem com calculem les marginals  tenim que 
+Cal observar que les expressions de $F_{XY}(x,y)$  depenen només de $x$ i de $y$. Si recordem com calculem les marginals  tenim que 
 
 $F_{X}(x)= F_X(x,y)$ 
 
