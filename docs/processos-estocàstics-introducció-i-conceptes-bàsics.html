@@ -48,8 +48,6 @@
 
 
 
-<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
@@ -130,7 +128,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
-<link rel="stylesheet" href="Rcode/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -143,11 +140,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><div style="padding: 15px;"><img src="images/logo_UB.png" width="80%"></div></li>
-<li><a href="Probabilitat-II.pdf" download="probabilitat-II.pdf" target="_blank" style="padding: 10px; background-color: #007bff; color: white; border-radius: 5px; display: block; text-align: center; margin: 10px;">📄 Version PDF</a></li>
-<li><h2 align="center">Probabilitat II</h2></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Pla docent</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#dades-generals"><i class="fa fa-check"></i>Dades generals</a></li>
@@ -244,9 +236,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#processos-de-poisson."><i class="fa fa-check"></i><b>5.3</b> Processos de Poisson.</a></li>
 <li class="chapter" data-level="5.4" data-path="principals-tipus-de-processos-estocàstics..html"><a href="principals-tipus-de-processos-estocàstics..html#moviment-browni%C3%A0."><i class="fa fa-check"></i><b>5.4</b> Moviment Brownià.</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com" target="_blank">Publicado con bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -497,56 +486,6 @@ E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h
 
 </div>
 </div>
-<script>
-(function () {
-  function createSectionToc() {
-    var section = document.querySelector('.page-inner section.normal');
-    if (!section || document.getElementById('section-toc')) return;
-
-    var headings = Array.prototype.slice.call(section.querySelectorAll('h2, h3'))
-      .filter(function (heading) { return heading.id || heading.parentElement.id; });
-    if (!headings.length) return;
-
-    var toc = document.createElement('aside');
-    toc.id = 'section-toc';
-    toc.setAttribute('aria-label', 'Índex de la secció');
-    toc.innerHTML = '<h2>En aquesta secció</h2><ul></ul>';
-    var list = toc.querySelector('ul');
-
-    headings.forEach(function (heading) {
-      var target = heading.id || heading.parentElement.id;
-      heading.id = target;
-      var item = document.createElement('li');
-      item.className = heading.tagName === 'H3' ? 'level-3' : 'level-2';
-      var link = document.createElement('a');
-      link.href = '#' + target;
-      link.textContent = heading.textContent.replace(/^\s*[\d.]+\s*/, '');
-      item.appendChild(link);
-      list.appendChild(item);
-    });
-    document.body.appendChild(toc);
-
-    if ('IntersectionObserver' in window) {
-      var links = Array.prototype.slice.call(toc.querySelectorAll('a'));
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          links.forEach(function (link) {
-            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
-          });
-        });
-      }, { rootMargin: '-15% 0px -70% 0px' });
-      headings.forEach(function (heading) { observer.observe(heading); });
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', createSectionToc);
-  } else {
-    createSectionToc();
-  }
-}());
-</script>
             </section>
 
           </div>
@@ -567,7 +506,17 @@ E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-  "sharing": false,
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
   "fontsettings": {
     "theme": "white",
     "family": "sans",
@@ -591,10 +540,8 @@ gitbook.start({
     "options": null
   },
   "toc": {
-    "collapse": "section",
-    "scroll_highlight": true
-  },
-  "toolbar": "fixed"
+    "collapse": "subsection"
+  }
 });
 });
 </script>
