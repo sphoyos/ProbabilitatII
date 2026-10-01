@@ -1511,13 +1511,13 @@ que dona lloc a $E[X_1^{n_1} .....X_k^{n_k}]$ respecte a l'origen de cada compon
 
 :::
 
-Un cas particulasr si $n_i=m$ i $n_j=0, j \neq i$  dona que $E[X_1^{n_1} .....X_k^{n_k}]=E[X_i^m]$
+Un cas particular si $n_i=m$ i $n_j=0, j \neq i$  dona que $E[X_1^{n_1} .....X_k^{n_k}]=E[X_i^m]$
 
 
-El moment conjunt central d'ordre k respecte de l'origen de cada component es un cas particular , que es pot obtenir sempre que l'esperança existixca
+El moment conjunt central d'ordre k respecte de l'origen de cada component es un cas particular , que es pot obtenir sempre que l'esperança existeixi
 
 $$
-g(X_1,...,X_k)=(X_1-E[X_1])^{n_1} .....X_k-E[X_k])^{n_k}, n_i \geq 0
+g(X_1,...,X_k)=(X_1-E[X_1])^{n_1},...,(X_k-E[X_k])^{n_k}, n_i \geq 0
 $$ 
 
 La linealitat de l'esperança aplicada quan $g(X)=X_1+...+X_k$ permet concloure que l'esperança de la suma de variables es la suma de les esperances.
@@ -1525,7 +1525,7 @@ La linealitat de l'esperança aplicada quan $g(X)=X_1+...+X_k$ permet concloure 
 $$
 E(X_1+...+X_k) =\sum_{i=1}^kE(X_i)
 $$
-Així mateix si $g(X)=\sum_{i=1}^k (a_i X_i)$ obtenim que l'esperança de d'una constant per una variable es la constant per l'esperança de la variable
+Així mateix si $g(X)=\sum_{i=1}^k (a_i X_i)$ obtenim que l'esperança d'una constant per una variable es la constant per l'esperança de la variable
 
 
 $$
