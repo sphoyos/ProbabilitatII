@@ -1675,7 +1675,7 @@ Llavors, $Y=g(X)$ es un vector aleatori continu amb densitat conjunta per a $y=(
 $$
 f_Y(y_1,...,y_k)=f_X(h_1(y1,...,yk),....,h_k(y1,...,yk)) |J^{-1}|
 $$
-on $|J^{-1}|=\frac{\partial (h_1,....,h_k)}{\partial (y_1,...,y_k) }$ és el Jacobià de h. 
+on $J^{-1}=\frac{\partial (h_1,....,h_k)}{\partial (y_1,...,y_k) }$ és el Jacobià de h. 
 
 
 :::
