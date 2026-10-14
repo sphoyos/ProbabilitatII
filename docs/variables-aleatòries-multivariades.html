@@ -1704,11 +1704,11 @@ J^{-1}=
 <p>I per tant <span class="math inline">\(|J^{-1}|=\dfrac{1}{|v|}\)</span></p>
 <p>La distribució conjunta de (W,V) és</p>
 <p><span class="math display">\[
-f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (\dfrac{w}{v},v)
+f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (v,\dfrac{w}{v})
 \]</span></p>
 <p>I la distribució marginal del producte s’obté integren respecte a l’altra component</p>
 <p><span class="math display">\[
-f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v})dv
+f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v}dv
 \]</span></p>
 <hr />
 <div class="example">
@@ -1726,7 +1726,7 @@ f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|x|}f_{XY}(x,\dfrac{w}{x})dx
 <p><span class="math display">\[
 w&lt;x&lt;1.
 \]</span></p>
-<p>Així, si <span class="math inline">\(0&lt;w&lt;1\)</span>,</p>
+<p>Així, si <span class="math inline">\(0&lt;w&lt;\)</span>,</p>
 <p><span class="math display">\[
 f_W(w)=\int_w^1\frac{1}{x}\,dx.
 \]</span></p>
@@ -1747,7 +1747,7 @@ f_W(w)=
 </div>
 <div id="quocient-de-dues-variables-aleatòries" class="section level3 hasAnchor" number="1.5.3">
 <h3><span class="header-section-number">1.5.3</span> Quocient de dues variables aleatòries<a href="variables-aleatòries-multivariades.html#quocient-de-dues-variables-aleat%C3%B2ries" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>En el cas del quocient <span class="math inline">\(Q=XY\)</span> i com abans definint V=X tenim que podem calcular la distribució conjunta (Q,V) aplicant el teorema <a href="variables-aleatòries-multivariades.html#thm:thm-cambio">1.1</a> partir de les funcions inverses X=V i Y=QV i el Jacobià</p>
+<p>En el cas del quocient <span class="math inline">\(Q=X/Y\)</span> i com abans definint <span class="math inline">\(V=X\)</span> tenim que podem calcular la distribució conjunta <span class="math inline">\((Q,V)\)</span> aplicant el teorema <a href="variables-aleatòries-multivariades.html#thm:thm-cambio">1.1</a> partir de les funcions inverses <span class="math inline">\(X=V\)</span> i <span class="math inline">\(Y=QV\)</span> i el Jacobià</p>
 <p><span class="math display">\[
 J^{-1}=
 \det
@@ -1765,14 +1765,81 @@ v &amp; q \\
 =v
 \]</span></p>
 <p>I per tant <span class="math inline">\(|J^{-1}|=|v|\)</span></p>
-<p>La distribució conjunta de (W,V) és</p>
+<p>La distribució conjunta de <span class="math inline">\((W,V)\)</span> és</p>
 <p><span class="math display">\[
 f_{QV}(q,v)=|v| f_{XY} (v,qv)
 \]</span></p>
-<p>I la distribució marginal del producte s’obté integren respecte a l’altra component</p>
+<p>I la distribució marginal del quocient s’obté integrant respecte a l’altra component</p>
 <p><span class="math display">\[
 f_{Q}(q)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(\dfrac{q}{v},v)dv
 \]</span></p>
+<table style="width:6%;">
+<colgroup>
+<col width="5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>:::{example}
+Sigui l’exemple anterior <span class="math inline">\(X \sim U(0,1)\)</span> i <span class="math inline">\(Y\sim U(0,1)\)</span> i amb densitat conjunta</td>
+</tr>
+<tr class="even">
+<td>$
+_{X,Y}(x,y)=
+begin{cases}
+, &amp; 0&lt;x&lt;1,;0&lt;y&lt;1,\
+, &amp;
+end{cases}
+$</td>
+</tr>
+<tr class="odd">
+<td>i<span class="math inline">\(W=X/Y\)</span>, definim<span class="math inline">\(V=Y\)</span> i la transformació inversa és <span class="math inline">\(X=WV\)</span> i <span class="math inline">\(Y=V\)</span></td>
+</tr>
+<tr class="even">
+<td>l determinant jacobià de la transformació inversa és</td>
+</tr>
+<tr class="odd">
+<td>$
+J^{-1}=</td>
+</tr>
+<tr class="even">
+<td>er tant, la densitat conjunta transformada és</td>
+</tr>
+<tr class="odd">
+<td>f_{W,V}(w,v)=v f_{X,Y}(wv,v)$</td>
+</tr>
+<tr class="even">
+<td>es condicions del suport transformat són <span class="math inline">\(0&lt;v&lt;1,\qquad 0&lt;wv&lt;1\)</span></td>
+</tr>
+<tr class="odd">
+<td>mplica <span class="math inline">\(0&lt;v&lt;\min\left(1,\frac1w\right),\qquad w&gt;0\)</span></td>
+</tr>
+<tr class="even">
+<td>ixí doncs, <span class="math inline">\(f_W(w)= \int_0^{\min(1,1/w)}vdv\)</span></td>
+</tr>
+<tr class="odd">
+<td>as 1: <span class="math inline">\(0&lt;w \leq 1 \rightarrow min(1,1/w)=1\)</span></td>
+</tr>
+<tr class="even">
+<td>f_W(w)=_0^1vdv=$</td>
+</tr>
+<tr class="odd">
+<td>as 2: <span class="math inline">\(w&gt;1 \rightarrow \min(1,1/w)=1/w\)</span></td>
+</tr>
+<tr class="even">
+<td>f_W(w)=_0^{1/w}v\dv =$</td>
+</tr>
+<tr class="odd">
+<td>ixí la densitat de <span class="math inline">\((W=X/Y\)</span> és</td>
+</tr>
+<tr class="even">
+<td>$
+$$</td>
+</tr>
+<tr class="odd">
+<td>::</td>
+</tr>
+</tbody>
+</table>
 
 <div style="page-break-after: always;"></div>
 </div>

@@ -2204,11 +2204,7 @@ següent </small></p>
 </div>
 <hr />
 <hr />
-</div>
-</div>
-</div>
-<div id="distribució-de-la-variable-aleatòria-zxy" class="section level1 {example}">
-<h1>Distribució de la variable aleatòria <span class="math inline">\((Z=X+Y\)</span>)$</h1>
+<div id="suma2" class="example">
 <p>Siguin <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> dues variables aleatòries contínues amb
 densitat conjunta</p>
 <p><span class="math display">\[
@@ -2295,6 +2291,7 @@ f_Z(z)=
 \]</span></p>
 </div>
 <hr />
+</div>
 <div id="producte-de-dues-variables-aleatòries" class="section level3">
 <h3>Producte de dues variables aleatòries</h3>
 <p>En el cas del producte W=XY i com abans definint V=X tenim que podem
@@ -2320,13 +2317,13 @@ J^{-1}=
 <p>I per tant <span class="math inline">\(|J^{-1}|=\dfrac{1}{|v|}\)</span></p>
 <p>La distribució conjunta de (W,V) és</p>
 <p><span class="math display">\[
-f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (\dfrac{w}{v},v)
+f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (v,\dfrac{w}{v})
 \]</span></p>
 <p>I la distribució marginal del producte s’obté integren respecte a
 l’altra component</p>
 <p><span class="math display">\[
 f_{W}(w)= \int_{- \infty}^{+ \infty}
-\dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v})dv
+\dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v}dv
 \]</span></p>
 <hr />
 <div class="example">
@@ -2398,6 +2395,8 @@ l’altra component</p>
 f_{Q}(q)= \int_{- \infty}^{+ \infty}
 \dfrac{1}{|v|}f_{XY}(\dfrac{q}{v},v)dv
 \]</span></p>
+</div>
+</div>
 </div>
 
 
