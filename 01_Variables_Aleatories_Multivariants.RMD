@@ -2123,7 +2123,9 @@ $$
 
  
  ---
- :::{example}
+ 
+ :::{.example}
+ 
  Sigui l'exemple anterior  $X \sim U(0,1)$ i $Y\sim U(0,1)$  i amb densitat conjunta
 
 $$
