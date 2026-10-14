@@ -7,3 +7,4 @@ if (!requireNamespace("bookdown", quietly = TRUE)) {
 }
 
 bookdown::render_book("index.rmd")
+

@@ -1665,11 +1665,14 @@ $$
 
 Sigui $X=(X_1,..., X_k)$ un vector aleatori  continu  amb soport $D_X$, és a dir $P((X_1,...,X_k) \in D_X)=1$, i sigui $g=(g_1,...,g_k):\mathbb{R^k} \rightarrow  \mathbb{R^k}$   una funció vectorial que verifica:
 
-1. g es unívoca sobre Dx
+\begin{enumerate}
 
-2. el  Jacobiano de g, $J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }$ es diferente de cero $\forall x \in D_X$
+\item g es unívoca sobre Dx
 
-3. existeix $h=(h_1,...,h_k)$ inversa de g
+\item El  Jacobiano de g, $J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }$ es diferent de cero $\forall x \in D_X$
+
+\item  Existeix $h=(h_1,...,h_k)$ inversa de g
+\end{enumerate}
 
 Llavors, $Y=g(X)$ es un vector aleatori continu amb densitat conjunta per a $y=(y_1,...,y_k) \in g(D_X)$ ve donada per 
 $$
