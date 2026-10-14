@@ -1703,7 +1703,7 @@ La demostració d'aquest teorema no es més que el teorema del canvi de variable
 
 Considerem un canvi entre les coordenades cartesianes a les coordenades polars del punt del cercle.
 
-En aquest casa la transformació a coordenades polars serà $R= \sqrt{X^2+Y^2}$ i $\Theta=arctan (Y/X)$.
+En aquest cas la transformació a coordenades polars serà $R= \sqrt{X^2+Y^2}$ i $\Theta=arctan (Y/X)$.
 
 
 Per obtenir la seva densitat conjunta necessitem les transformacions inverses de coordenades polars a euclídias, $X=R cos(\Theta)$ i $Y=R sin(\Theta)$. Si es calcula el jacobià aquest val $J_1=R$ 
@@ -1865,6 +1865,126 @@ Que es la coneguda distribució triangular resultat de sumar dues variables inde
 ::: 
 
 ---
+
+
+--- 
+
+:::{example}
+
+# Distribució de la variable aleatòria $(Z=X+Y$)$
+
+Siguin $X$ i $Y$ dues variables aleatòries contínues amb densitat conjunta
+
+$$
+f_{X,Y}(x,y)=
+\begin{cases}
+\dfrac{3}{16}(4-2x-y), &
+0<x<2,\quad 0<y<4-2x,\\[4pt]
+0, & \text{altrament}.
+\end{cases}
+$$
+
+Volem determinar la distribució de la variable aleatòria $Z=X+Y$
+
+
+Definim les noves variables
+
+$Z=X+Y,\qquad U=X$
+
+
+La transformació inversa és
+
+$X=U,\qquad Y=Z-U$
+
+ 
+El jacobià de la transformació inversa és   $|J^{-1}|=1$
+
+
+$$
+\begin{aligned}
+f_{U,Z}(u,z)
+&=f_{X,Y}(u,z-u)|J|\\[4pt]
+&=\frac{3}{16}\bigl(4-2u-(z-u)\bigr)\\[4pt]
+&=\frac{3}{16}(4-u-z).
+\end{aligned}
+$$
+
+**Determinació de la regió d'integració**
+
+Les restriccions originals són $0<x<2,\qquad 0<y<4-2x$
+
+Substituint $x=u$ i $y=z-u$ obtenim $0<u<2,\qquad 0<z-u<4-2u$
+
+La segona desigualtat equival a $u<z,\qquad u<4-z$\]
+
+Així, els límits d'integració són $0<u<\min\{2,z,4-z$
+
+
+Com que $0<z<4$, distingim dos casos:
+
+- Si $0<z<2$, tenim $0<u<z$.
+- Si $2\leq z<4$, tenim $0<u<4-z$.
+
+Això implica que $Z$ només pot prendre valors entre 0 i 4.
+
+
+
+La densitat de $Z$ s'obté integrant respecte de $u$:
+
+$f_Z(z)=\int f_{U,Z}(u,z)\,du$
+
+* Cas 1: $0<z<2$
+
+En aquest cas, els límits d'integració són \(0<u<z\). Per tant,
+
+$$
+\begin{aligned}
+f_Z(z)
+&=\int_0^z f_{U,Z}(u,z)\,du\\[4pt]
+&=\int_0^z \frac{3}{16}(4-u-z)\,du\\[4pt]
+&=\frac{3}{16}
+\left[(4-z)u-\frac{u^2}{2}\right]_0^z\\[4pt]
+&=\frac{3}{16}\left((4-z)z-\frac{z^2}{2}\right)\\[4pt]
+&=\frac{3}{16}\left(4z-\frac{3z^2}{2}\right).
+\end{aligned}
+$$
+
+* Cas 2: $2\leq z<4$
+
+En aquest cas, els límits d'integració són $0<u<4-z$. Per tant,
+
+$$
+\begin{aligned}
+f_Z(z)
+&=\int_0^{4-z} f_{U,Z}(u,z)\,du\\[4pt]
+&=\int_0^{4-z}\frac{3}{16}(4-u-z)\,du\\[4pt]
+&=\frac{3}{16}
+\left[(4-z)u-\frac{u^2}{2}\right]_0^{4-z}\\[4pt]
+&=\frac{3}{16}
+\left((4-z)^2-\frac{(4-z)^2}{2}\right)\\[4pt]
+&=\frac{3}{32}(4-z)^2.
+\end{aligned}
+$$
+
+
+Ajuntant els dos casos, obtenim
+
+$$
+\boxed{
+f_Z(z)=
+\begin{cases}
+\dfrac{3}{16}\left(4z-\dfrac{3z^2}{2}\right),
+&0<z<2,\\[8pt]
+\dfrac{3}{32}(4-z)^2,
+&2\leq z<4,\\[8pt]
+0,&\text{altrament}.
+\end{cases}
+}
+$$
+:::
+
+---
+
 
 ### Producte de dues variables aleatòries
 

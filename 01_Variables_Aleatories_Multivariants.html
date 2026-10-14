@@ -2073,7 +2073,7 @@ f_{XY}(x,y)=
 \]</span></p>
 <p>Considerem un canvi entre les coordenades cartesianes a les
 coordenades polars del punt del cercle.</p>
-<p>En aquest casa la transformació a coordenades polars serà <span class="math inline">\(R= \sqrt{X^2+Y^2}\)</span> i <span class="math inline">\(\Theta=arctan (Y/X)\)</span>.</p>
+<p>En aquest cas la transformació a coordenades polars serà <span class="math inline">\(R= \sqrt{X^2+Y^2}\)</span> i <span class="math inline">\(\Theta=arctan (Y/X)\)</span>.</p>
 <p>Per obtenir la seva densitat conjunta necessitem les transformacions
 inverses de coordenades polars a euclídias, <span class="math inline">\(X=R cos(\Theta)\)</span> i <span class="math inline">\(Y=R sin(\Theta)\)</span>. Si es calcula el jacobià
 aquest val <span class="math inline">\(J_1=R\)</span></p>
@@ -2203,7 +2203,98 @@ variables independents* U(0,1)</p>
 següent </small></p>
 </div>
 <hr />
+<hr />
 </div>
+</div>
+</div>
+<div id="distribució-de-la-variable-aleatòria-zxy" class="section level1 {example}">
+<h1>Distribució de la variable aleatòria <span class="math inline">\((Z=X+Y\)</span>)$</h1>
+<p>Siguin <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> dues variables aleatòries contínues amb
+densitat conjunta</p>
+<p><span class="math display">\[
+f_{X,Y}(x,y)=
+\begin{cases}
+\dfrac{3}{16}(4-2x-y), &amp;
+0&lt;x&lt;2,\quad 0&lt;y&lt;4-2x,\\[4pt]
+0, &amp; \text{altrament}.
+\end{cases}
+\]</span></p>
+<p>Volem determinar la distribució de la variable aleatòria <span class="math inline">\(Z=X+Y\)</span></p>
+<p>Definim les noves variables</p>
+<p><span class="math inline">\(Z=X+Y,\qquad U=X\)</span></p>
+<p>La transformació inversa és</p>
+<p><span class="math inline">\(X=U,\qquad Y=Z-U\)</span></p>
+<p>El jacobià de la transformació inversa és <span class="math inline">\(|J^{-1}|=1\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+f_{U,Z}(u,z)
+&amp;=f_{X,Y}(u,z-u)|J|\\[4pt]
+&amp;=\frac{3}{16}\bigl(4-2u-(z-u)\bigr)\\[4pt]
+&amp;=\frac{3}{16}(4-u-z).
+\end{aligned}
+\]</span></p>
+<p><strong>Determinació de la regió d’integració</strong></p>
+<p>Les restriccions originals són <span class="math inline">\(0&lt;x&lt;2,\qquad 0&lt;y&lt;4-2x\)</span></p>
+<p>Substituint <span class="math inline">\(x=u\)</span> i <span class="math inline">\(y=z-u\)</span> obtenim <span class="math inline">\(0&lt;u&lt;2,\qquad 0&lt;z-u&lt;4-2u\)</span></p>
+<p>La segona desigualtat equival a <span class="math inline">\(u&lt;z,\qquad u&lt;4-z\)</span>]</p>
+<p>Així, els límits d’integració són <span class="math inline">\(0&lt;u&lt;\min\{2,z,4-z\)</span></p>
+<p>Com que <span class="math inline">\(0&lt;z&lt;4\)</span>, distingim
+dos casos:</p>
+<ul>
+<li>Si <span class="math inline">\(0&lt;z&lt;2\)</span>, tenim <span class="math inline">\(0&lt;u&lt;z\)</span>.</li>
+<li>Si <span class="math inline">\(2\leq z&lt;4\)</span>, tenim <span class="math inline">\(0&lt;u&lt;4-z\)</span>.</li>
+</ul>
+<p>Això implica que <span class="math inline">\(Z\)</span> només pot
+prendre valors entre 0 i 4.</p>
+<p>La densitat de <span class="math inline">\(Z\)</span> s’obté
+integrant respecte de <span class="math inline">\(u\)</span>:</p>
+<p><span class="math inline">\(f_Z(z)=\int f_{U,Z}(u,z)\,du\)</span></p>
+<ul>
+<li>Cas 1: <span class="math inline">\(0&lt;z&lt;2\)</span></li>
+</ul>
+<p>En aquest cas, els límits d’integració són <span class="math inline">\(0&lt;u&lt;z\)</span>. Per tant,</p>
+<p><span class="math display">\[
+\begin{aligned}
+f_Z(z)
+&amp;=\int_0^z f_{U,Z}(u,z)\,du\\[4pt]
+&amp;=\int_0^z \frac{3}{16}(4-u-z)\,du\\[4pt]
+&amp;=\frac{3}{16}
+\left[(4-z)u-\frac{u^2}{2}\right]_0^z\\[4pt]
+&amp;=\frac{3}{16}\left((4-z)z-\frac{z^2}{2}\right)\\[4pt]
+&amp;=\frac{3}{16}\left(4z-\frac{3z^2}{2}\right).
+\end{aligned}
+\]</span></p>
+<ul>
+<li>Cas 2: <span class="math inline">\(2\leq z&lt;4\)</span></li>
+</ul>
+<p>En aquest cas, els límits d’integració són <span class="math inline">\(0&lt;u&lt;4-z\)</span>. Per tant,</p>
+<p><span class="math display">\[
+\begin{aligned}
+f_Z(z)
+&amp;=\int_0^{4-z} f_{U,Z}(u,z)\,du\\[4pt]
+&amp;=\int_0^{4-z}\frac{3}{16}(4-u-z)\,du\\[4pt]
+&amp;=\frac{3}{16}
+\left[(4-z)u-\frac{u^2}{2}\right]_0^{4-z}\\[4pt]
+&amp;=\frac{3}{16}
+\left((4-z)^2-\frac{(4-z)^2}{2}\right)\\[4pt]
+&amp;=\frac{3}{32}(4-z)^2.
+\end{aligned}
+\]</span></p>
+<p>Ajuntant els dos casos, obtenim</p>
+<p><span class="math display">\[
+\boxed{
+f_Z(z)=
+\begin{cases}
+\dfrac{3}{16}\left(4z-\dfrac{3z^2}{2}\right),
+&amp;0&lt;z&lt;2,\\[8pt]
+\dfrac{3}{32}(4-z)^2,
+&amp;2\leq z&lt;4,\\[8pt]
+0,&amp;\text{altrament}.
+\end{cases}
+}
+\]</span></p>
+</div>
+<hr />
 <div id="producte-de-dues-variables-aleatòries" class="section level3">
 <h3>Producte de dues variables aleatòries</h3>
 <p>En el cas del producte W=XY i com abans definint V=X tenim que podem
@@ -2307,8 +2398,6 @@ l’altra component</p>
 f_{Q}(q)= \int_{- \infty}^{+ \infty}
 \dfrac{1}{|v|}f_{XY}(\dfrac{q}{v},v)dv
 \]</span></p>
-</div>
-</div>
 </div>
 
 
