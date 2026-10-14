@@ -6,5 +6,6 @@ if (!requireNamespace("bookdown", quietly = TRUE)) {
   stop("Cal instal·lar el paquet 'bookdown': install.packages('bookdown')")
 }
 
+# 
 bookdown::render_book("index.rmd")
 

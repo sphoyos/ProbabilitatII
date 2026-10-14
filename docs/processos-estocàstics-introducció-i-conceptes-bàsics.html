@@ -261,7 +261,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 En questst tema introduirem el concepte de procés estocàstic. De tota manera cal ressenyar que el concepte de procés estocàstic va mès enllà de les successions de variables. Es tracta d’una conjunt de variables aleatòries on pot estar indexat per un conjunt no numerables.</p>
 <p>Un exemple seria l’estudi de l’ocurrència de un mateix esdeveniment al llarg del temps. Si aquestes ocurrències son independents i el tema d’interès es el temps que transcorri entre esdeveniments, parlarem de la successió <span class="math inline">\(\{X_n\}\)</span> on <span class="math inline">\(X_i\)</span>=(temps que passa entre l’esdeveniment i- i el i). Però, si el que ens interessa es el nombre de vegades que l’esdeveniment ha succeït en l’interval [0,t], la familia a considerar és <span class="math inline">\(N_t\)</span>, amb t&gt;0 i per descomptat no és numerable .</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-85" class="definition"><strong>Definició 4.1  </strong></span><strong>Procés estocàstic</strong></p>
+<p><span id="def:unlabeled-div-86" class="definition"><strong>Definició 4.1  </strong></span><strong>Procés estocàstic</strong></p>
 <p>Un procés estocàstic es una colecció de variables aleatòries <span class="math inline">\(\{ X_t,t \in T \}\)</span> definides sobre un espai de probabilitat <span class="math inline">\((\Omega, \mathcal{A},P)\)</span>.</p>
 <p><span class="math inline">\(T\)</span> es un subconjunt de <span class="math inline">\(\mathbb{R}\)</span> que s’anomena <strong>conjunt d’indexs</strong>. S’utilitza la lletra <span class="math inline">\(t\)</span> donat que l’estudi de processos estocàstics surt del estudi de l’evolutcó temporal de fenòmens aleatoris.</p>
 <p>El conjunt de valors <span class="math inline">\(S \subseteq \mathbb{R}\)</span> que poden prendre les variables aleatòries <span class="math inline">\(X_t\)</span> s’anomena <strong>espai d’estats</strong> del procés.</p>
@@ -290,7 +290,7 @@ Figura 4.1:  Exemple Compra botiga de roba
 </div>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-86" class="example"><strong>Exemple 4.2  </strong></span>Un jugador comença amb <strong>10 euros</strong> i juga consecutivament <strong>20 partides</strong>. En cada partida aposta 1 euro a cara o creu.</p>
+<p><span id="exm:unlabeled-div-87" class="example"><strong>Exemple 4.2  </strong></span>Un jugador comença amb <strong>10 euros</strong> i juga consecutivament <strong>20 partides</strong>. En cada partida aposta 1 euro a cara o creu.</p>
 <p>Denotem per <span class="math inline">\(X_t\)</span> els diners que té el jugador després d’haver jugat <span class="math inline">\(t\)</span> partides, on</p>
 <p><span class="math display">\[
 t=0,1,\ldots,20. \qquad X_0=10
@@ -427,7 +427,7 @@ que obviament pren valors entre <span class="math inline">\([-1,1]\)</span>- Em 
 <div id="processos-estocàstics-estacionaris-i-no-estacionaris." class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Processos estocàstics estacionaris i no estacionaris.<a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#processos-estoc%C3%A0stics-estacionaris-i-no-estacionaris." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-87" class="definition"><strong>Definició 4.2  </strong></span><strong>Distribucions finito-dimensionals</strong>
+<p><span id="def:unlabeled-div-88" class="definition"><strong>Definició 4.2  </strong></span><strong>Distribucions finito-dimensionals</strong>
 En general les variables aleatòries del procés <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> no son independents entre elles. Si <span class="math inline">\(\{ t_1,t_2,..,t_n\} \subset T\)</span> és un subconjunt finit de qualsevol dels índex, la distribució conjunta del vector <span class="math inline">\((X_{t_1},X_{t_2},...,X_{t_n})\)</span> vindrà donada per</p>
 <p><span class="math display">\[
 F_{t_1},{t_2},...,{t_n}(x_1,...,x_n))=P(X_{t_1}\leq x_{t_1},X_{t_2}\leq x_{t_2},...,X_{t_n}\leq x_{t_n})   
@@ -436,12 +436,12 @@ Aquesta distribució rep el nom de distribució finito-dimensional del procés. 
 </div>
 <p>Un procés estocàstic es pot descriure especificant les seves distribucions finito-dimensionals, que permeten obtenir la probabilitat de qualsevol esdeveniment involucrat en el procés. Cal remarcar que el conjunt de distribucions finito-dimensionals no determinen per complet les característiques del procés, i en ocasions cal definir certes característiques o propietats addicionals. Si el procés es pot especificar completament a partir de les distribucions finites , es diu que el procés es <em>separable</em>.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-88" class="definition"><strong>Definició 4.3  </strong></span><strong>Processos de variables independents</strong></p>
+<p><span id="def:unlabeled-div-89" class="definition"><strong>Definició 4.3  </strong></span><strong>Processos de variables independents</strong></p>
 <p>sea <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es diu que es un procés estocàstic de variables aleatòries independents si <span class="math inline">\(X_m\)</span> i <span class="math inline">\(X_n\)</span> son independents para todo <span class="math inline">\(n,m \leq 0\)</span> con <span class="math inline">\(n \neq m\)</span></p>
 </div>
 <p>L’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:cadena">4.1</a> del procés on es vol saber si un client que entra en una botiga compra o no es tracta de un procés de variables independents</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-89" class="definition"><strong>Definició 4.4  </strong></span><strong>Processos amb increments independents</strong></p>
+<p><span id="def:unlabeled-div-90" class="definition"><strong>Definició 4.4  </strong></span><strong>Processos amb increments independents</strong></p>
 <p>sigui <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es diu que es un procés estocàstic que té increments independents si per a qualsevol <span class="math inline">\(t_0&lt;t_1&lt;...&lt;t_n,\quad t_i \in T\)</span> les variables aleatòries:</p>
 <p><span class="math display">\[
 X_{t_1}-X_{t_0},X_{t_2}-X_{t_1},...,X_{t_n}-X_{t_{n-1}}
@@ -450,7 +450,7 @@ són independents.</p>
 </div>
 <p>En l’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> sobre el nombre d’urgències, el nombre de urgències en la primera hora és independent del de la segona hora i de la tercera hora.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-90" class="definition"><strong>Definició 4.5  </strong></span><strong>Processos de Markov</strong></p>
+<p><span id="def:unlabeled-div-91" class="definition"><strong>Definició 4.5  </strong></span><strong>Processos de Markov</strong></p>
 <p>Sea <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es diu que es un procés estocàstic de Markov si satisfà la propietat de Markov, és a dir</p>
 <p><span class="math display">\[
 P(X_{t_n}=x_n|X_{t_{n-1}}=x_{n-1},...,X_{t_0}=x_0)=P(X_{t_n}=x_n|X_{t_{n-1}}=x_{n-1})
@@ -460,7 +460,7 @@ amb <span class="math inline">\(t_0&lt;t_1&lt;....&lt;t_n, t_i \in T\)</span></p
 <p>Aquest tipus de processos son aquells on l’evolució futura depén només del estat present del procés.</p>
 <p>L’exemple <a href="processos-estocàstics-introducció-i-conceptes-bàsics.html#exm:ppuntual">4.3</a> sobre el nombre d’urgències també es un procés de Markov. Per calcular el nombre de urgències en l’instant t, necessitem saber quants hi ha en t ( present), donat que les arribades futures són independents de les passades i saber en quin temps estem no aporta cap informació. en la primera hora és independent del de la segona hora i de la tercera hora.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-91" class="definition"><strong>Definició 4.6  </strong></span><strong>Processos estacionaris forts</strong></p>
+<p><span id="def:unlabeled-div-92" class="definition"><strong>Definició 4.6  </strong></span><strong>Processos estacionaris forts</strong></p>
 <p>El procés <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es fortament estacionari si les families de les variables aleatòries
 <span class="math display">\[
 (X_{t_1},X_{t_2},...,X_{t_n}) \quad \text(i) \quad (X_{t_1+h},X_{t_2+h},...,X_{t_n+h})
@@ -468,7 +468,7 @@ amb <span class="math inline">\(t_0&lt;t_1&lt;....&lt;t_n, t_i \in T\)</span></p
 tenen la mateixa distribució conjunta per a tot <span class="math inline">\(h&gt;0\)</span>, tots <span class="math inline">\(\{t_1,...,t_n\} \subset T\)</span> i <span class="math inline">\(n\geq 1\)</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-92" class="theorem"><strong>Theorem 4.1  </strong></span>La funció mitjana d’un procés estocàstic estacionari es constant</p>
+<p><span id="thm:unlabeled-div-93" class="theorem"><strong>Theorem 4.1  </strong></span>La funció mitjana d’un procés estocàstic estacionari es constant</p>
 </div>
 <p><strong>Demostració</strong></p>
 <p><span class="math display">\[
@@ -476,7 +476,7 @@ tenen la mateixa distribució conjunta per a tot <span class="math inline">\(h&g
 \]</span>
 Més en general , qualsevol propietat de una variable singular d’un procés estacionari es invariant al temps</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-93" class="definition"><strong>Definició 4.7  </strong></span><strong>Processos estacionaris dèbil</strong></p>
+<p><span id="def:unlabeled-div-94" class="definition"><strong>Definició 4.7  </strong></span><strong>Processos estacionaris dèbil</strong></p>
 <p>El procés <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es dèbilment estacionari si per a tot <span class="math inline">\(t_1\)</span> i <span class="math inline">\(t_2 \in T\)</span> i tot <span class="math inline">\(h&gt;0\)</span>,</p>
 <p><span class="math display">\[
 E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h},X_{t_2+h})
