@@ -1869,9 +1869,8 @@ Que es la coneguda distribució triangular resultat de sumar dues variables inde
 
 --- 
 
-:::{example}
+:::{.example #suma2}
 
-# Distribució de la variable aleatòria $(Z=X+Y$)$
 
 Siguin $X$ i $Y$ dues variables aleatòries contínues amb densitat conjunta
 
@@ -1981,9 +1980,11 @@ f_Z(z)=
 \end{cases}
 }
 $$
-:::
+
+::: 
 
 ---
+
 
 
 ### Producte de dues variables aleatòries

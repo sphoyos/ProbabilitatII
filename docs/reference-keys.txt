@@ -76,6 +76,7 @@ eq:provcov5
 thm:thm-cambio
 exm:circulo
 exm:suma
+exm:suma2
 exm:unlabeled-div-46
 def:indep
 eq:pxindep
@@ -249,7 +250,6 @@ moments-multivariants-esperança-i-variància
 matriu-de-variància-covariància
 transformacions-de-variables-multivariants
 suma-de-dues-variables-aleatòries
-distribució-de-la-variable-aleatòria-zxy
 producte-de-dues-variables-aleatòries
 quocient-de-dues-variables-aleatòries
 independència-de-variables-aleatòries
