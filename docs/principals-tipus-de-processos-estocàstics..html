@@ -263,7 +263,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 P(X_{t_n}=x_n |X_{t_{n-1}}=x_{n-1}, \cdots ,X_{t_0}=x_0)=P(X_{t_n}=x_n|X_{t_{n-1}}=x_{n-1})
 \]</span></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-95" class="definition"><strong>Definició 5.1  </strong></span><strong>Cadena de Markov</strong></p>
+<p><span id="def:unlabeled-div-97" class="definition"><strong>Definició 5.1  </strong></span><strong>Cadena de Markov</strong></p>
 <p>Si un procés estocàstic DTDV, és a dir discret amb el temps i amb un nombre finit d’estats compleix la propietat de Markov es una cadena de Markov</p>
 <p>Es costum designar com a <span class="math inline">\(X_0\)</span> l’inici de la cadena. Considerem com espai d’estats de la cadena al suport de les variables del procés <span class="math inline">\(X_n\)</span>, <span class="math inline">\(S=(s_1,...,s_k)\)</span> on <span class="math inline">\(n \in \mathbb{N} \cup \{0\}\)</span></p>
 </div>
@@ -292,7 +292,7 @@ A més les distribucions finito-dimensionals s’obtenen fàcilment a partir de 
 \end{aligned}
 \]</span></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-96" class="definition"><strong>Definició 5.2  </strong></span><strong>Matriu de transició</strong></p>
+<p><span id="def:unlabeled-div-98" class="definition"><strong>Definició 5.2  </strong></span><strong>Matriu de transició</strong></p>
 <p>La cadena de Markov discreta, <span class="math inline">\(X_n\)</span>, queda completament especificada amb les probabilitats inicials i l’anomenada matriu de transició d’un pas, que recull les probabilitats del mateix nom:</p>
 <p><span class="math display" id="eq:ptransp">\[
 P =
@@ -310,7 +310,7 @@ p_{k1} &amp; p_{k12} &amp; \cdots &amp;  p_{kk}
 \]</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-97" class="definition"><strong>Definició 5.3  </strong></span>Una matriu quadrada amb tots els elements no negatius i tals que la suma dels elements de cada fila sigui 1 s’anomena matriu estocàstica. La matriu de transició <span class="math inline">\(\mathbf{P}\)</span> d’una cadena de Markov es una matriu estocàstica</p>
+<p><span id="def:unlabeled-div-99" class="definition"><strong>Definició 5.3  </strong></span>Una matriu quadrada amb tots els elements no negatius i tals que la suma dels elements de cada fila sigui 1 s’anomena matriu estocàstica. La matriu de transició <span class="math inline">\(\mathbf{P}\)</span> d’una cadena de Markov es una matriu estocàstica</p>
 </div>
 <hr />
 <div class="example">
@@ -395,7 +395,7 @@ Aquestes expressions son conegudes com les equacions de <strong>Chapman-Kolmogor
 \]</span></p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-98" class="example"><strong>Exemple 5.2  </strong></span>Seguint les dades del exemple <a href="principals-tipus-de-processos-estocàstics..html#exm:climapoble">5.1</a> del clima al poble volem obtenir la matriu de transició per a un canvi de 2 dies i a partir de les dades generals .</p>
+<p><span id="exm:unlabeled-div-100" class="example"><strong>Exemple 5.2  </strong></span>Seguint les dades del exemple <a href="principals-tipus-de-processos-estocàstics..html#exm:climapoble">5.1</a> del clima al poble volem obtenir la matriu de transició per a un canvi de 2 dies i a partir de les dades generals .</p>
 <p>Per trobar les probabilitats de transició d’ací a dos dies, multipliquem la matriu per si mateixa (<span class="math inline">\(P^2 = P \times P\)</span>).</p>
 <pre><code>## Matriu de transició a 2 dies (P^2):</code></pre>
 <pre><code>##        Sol Núvol Pluja
@@ -444,7 +444,7 @@ la qual <strong>no depèn de la distribució inicial</strong>.</p>
 </div>
 <hr />
 <div class="definition">
-<p><span id="def:unlabeled-div-99" class="definition"><strong>Definició 5.4  </strong></span><strong>Equilibri d’una cadena de Markov</strong>
+<p><span id="def:unlabeled-div-101" class="definition"><strong>Definició 5.4  </strong></span><strong>Equilibri d’una cadena de Markov</strong>
 El que hem vist en l’exemple significa que una cadena de Markov tendeix a una situació estacionaria a mesura que n augmenta.</p>
 <p>Si en general</p>
 <p><span class="math display">\[
@@ -463,7 +463,7 @@ amb la condició adicional de <span class="math inline">\(\sum_i \pi_i^{(e)}=1\)
 </div>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-100" class="example"><strong>Exemple 5.4  </strong></span>Continuació del exemple <a href="principals-tipus-de-processos-estocàstics..html#exm:dequilibri">5.3</a></p>
+<p><span id="exm:unlabeled-div-102" class="example"><strong>Exemple 5.4  </strong></span>Continuació del exemple <a href="principals-tipus-de-processos-estocàstics..html#exm:dequilibri">5.3</a></p>
 <p>La distribució estacionària també es pot obtenir utilitzant l’equació <a href="principals-tipus-de-processos-estocàstics..html#eq:pie">(5.6)</a> . Si <span class="math inline">\(\boldsymbol{\pi}^{(e)}=\left[\pi^{(e)}_0,\,\pi^{(e)}_1\right]\)</span></p>
 <p>aleshores el sistema d’equacions que cal resoldre és</p>
 <p><span class="math display">\[
@@ -486,36 +486,36 @@ amb la condició adicional de <span class="math inline">\(\sum_i \pi_i^{(e)}=1\)
 <p>Les cadenes de Markov es poden classificar segons els diferents tipus de matrius de transició que te interès per qué permet entendre el paper que juga cadascun dels possibles estats del procés i de l’altra per qué alguns tipus de matriu admeten un límit quan <span class="math inline">\(n\)</span> tendeix a <span class="math inline">\(\infty\)</span>.</p>
 <p>Sigui <span class="math inline">\(\{X_n\}_{n\geq 1}\)</span> una cadena de Markov amb estats <span class="math inline">\(\{1,2,3,\dots,m\}\)</span> i amb matriu de transició <span class="math inline">\(\boldsymbol{P}= (p_{ij})_{1\leq i,j\leq m}\)</span></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-101" class="definition"><strong>Definició 5.5  </strong></span>Un <strong>camí</strong> <span class="math inline">\(i \rightarrow j\)</span> és una seqüència de transicions entre estats que porta de l’estat <span class="math inline">\(i\)</span> a l’estat <span class="math inline">\(j\)</span>.</p>
+<p><span id="def:unlabeled-div-103" class="definition"><strong>Definició 5.5  </strong></span>Un <strong>camí</strong> <span class="math inline">\(i \rightarrow j\)</span> és una seqüència de transicions entre estats que porta de l’estat <span class="math inline">\(i\)</span> a l’estat <span class="math inline">\(j\)</span>.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-102" class="definition"><strong>Definició 5.6  </strong></span>L’estat <span class="math inline">\(j\)</span> es un <strong>estat accessible</strong> des d’<span class="math inline">\(i\)</span> si existeix un camì <span class="math inline">\(i \rightarrow j\)</span> que porta de <span class="math inline">\(i\)</span> a <span class="math inline">\(j\)</span>. En aquest cas existeix un <span class="math inline">\(k\)</span> tal qué <span class="math inline">\(p_{ij}^{(k)&gt;0}\)</span>.</p>
+<p><span id="def:unlabeled-div-104" class="definition"><strong>Definició 5.6  </strong></span>L’estat <span class="math inline">\(j\)</span> es un <strong>estat accessible</strong> des d’<span class="math inline">\(i\)</span> si existeix un camì <span class="math inline">\(i \rightarrow j\)</span> que porta de <span class="math inline">\(i\)</span> a <span class="math inline">\(j\)</span>. En aquest cas existeix un <span class="math inline">\(k\)</span> tal qué <span class="math inline">\(p_{ij}^{(k)&gt;0}\)</span>.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-103" class="definition"><strong>Definició 5.7  </strong></span>Els estats <span class="math inline">\(i\)</span> i <span class="math inline">\(j\)</span> són <strong>estats comunicats</strong> si existèix un camí de <span class="math inline">\(i\)</span> a <span class="math inline">\(j\)</span> i un altre de <span class="math inline">\(j\)</span> a <span class="math inline">\(i\)</span>. Ho representarem com <span class="math inline">\(i \leftrightarrow j\)</span></p>
+<p><span id="def:unlabeled-div-105" class="definition"><strong>Definició 5.7  </strong></span>Els estats <span class="math inline">\(i\)</span> i <span class="math inline">\(j\)</span> són <strong>estats comunicats</strong> si existèix un camí de <span class="math inline">\(i\)</span> a <span class="math inline">\(j\)</span> i un altre de <span class="math inline">\(j\)</span> a <span class="math inline">\(i\)</span>. Ho representarem com <span class="math inline">\(i \leftrightarrow j\)</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-104" class="definition"><strong>Definició 5.8  </strong></span>Definim una <strong>classe d’estats o de comunicació</strong> es un subconjunt de estats del que cada parell d’estats (considerant el mateix estat) estan comunicats. La coumicació es una relació d’equivalència que indueix una partició en l’espai d’estats.</p>
+<p><span id="def:unlabeled-div-106" class="definition"><strong>Definició 5.8  </strong></span>Definim una <strong>classe d’estats o de comunicació</strong> es un subconjunt de estats del que cada parell d’estats (considerant el mateix estat) estan comunicats. La coumicació es una relació d’equivalència que indueix una partició en l’espai d’estats.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-105" class="definition"><strong>Definició 5.9  </strong></span>Es diu que un cadena de Markov és <strong>irreductible</strong> quant tots els seus estats comuniquen. És a dir <span class="math inline">\(\forall i, j  \quad \exists k  \text{ tal que } p_{ij}^{(k)}&gt;0\)</span> . En aquest cas només hi ha una classe de comunicació.</p>
+<p><span id="def:unlabeled-div-107" class="definition"><strong>Definició 5.9  </strong></span>Es diu que un cadena de Markov és <strong>irreductible</strong> quant tots els seus estats comuniquen. És a dir <span class="math inline">\(\forall i, j  \quad \exists k  \text{ tal que } p_{ij}^{(k)}&gt;0\)</span> . En aquest cas només hi ha una classe de comunicació.</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-106" class="definition"><strong>Definició 5.10  </strong></span>Un estat <span class="math inline">\(i\)</span> és absorbent si <span class="math inline">\(p_{ii}=1\)</span>. El que vol dir és que si ens situem en un estat absorbent ens hi quedarem</p>
+<p><span id="def:unlabeled-div-108" class="definition"><strong>Definició 5.10  </strong></span>Un estat <span class="math inline">\(i\)</span> és absorbent si <span class="math inline">\(p_{ii}=1\)</span>. El que vol dir és que si ens situem en un estat absorbent ens hi quedarem</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-107" class="definition"><strong>Definició 5.11  </strong></span>Un estat <span class="math inline">\(i\)</span> és <strong>transitori</strong> si existeix un estat <span class="math inline">\(j\)</span> i una camí <span class="math inline">\(i \rightarrow j\)</span> i no existeix cap camí
+<p><span id="def:unlabeled-div-109" class="definition"><strong>Definició 5.11  </strong></span>Un estat <span class="math inline">\(i\)</span> és <strong>transitori</strong> si existeix un estat <span class="math inline">\(j\)</span> i una camí <span class="math inline">\(i \rightarrow j\)</span> i no existeix cap camí
 <span class="math inline">\(j \rightarrow i\)</span>. que ho escriuem com <span class="math inline">\(j \nrightarrow i\)</span>. Això vol dir que</p>
 <p><span class="math display">\[
 \text{i es transitori si existeix j,n tals que } p_{ij}^{(n)}&gt;0 \quad i \quad p_{ji}^{(k)}=0 \text{ per a tot k}
 \]</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-108" class="definition"><strong>Definició 5.12  </strong></span>Un estat <span class="math inline">\(i\)</span> que no és transitori s’anomena <strong>estat recurrent</strong>. En un estat recurrent la probabilitat de (eventualment) regresar a <span class="math inline">\(i\)</span> es u es a dir <span class="math inline">\(P(X_n=s_i \mid X_0=s_i)=1\)</span> per algú <span class="math inline">\(n\geq 1\)</span></p>
+<p><span id="def:unlabeled-div-110" class="definition"><strong>Definició 5.12  </strong></span>Un estat <span class="math inline">\(i\)</span> que no és transitori s’anomena <strong>estat recurrent</strong>. En un estat recurrent la probabilitat de (eventualment) regresar a <span class="math inline">\(i\)</span> es u es a dir <span class="math inline">\(P(X_n=s_i \mid X_0=s_i)=1\)</span> per algú <span class="math inline">\(n\geq 1\)</span></p>
 </div>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-109" class="example"><strong>Exemple 5.5  </strong></span>Sigui una cadena de Markov amb els estats 0,1,2,3,4 Tenim la matriu de transició</p>
+<p><span id="exm:unlabeled-div-111" class="example"><strong>Exemple 5.5  </strong></span>Sigui una cadena de Markov amb els estats 0,1,2,3,4 Tenim la matriu de transició</p>
 <p><span class="math display">\[P_ =
 \begin{array}{r | ccccc}
 { }{} &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4  \\
@@ -530,8 +530,8 @@ amb la condició adicional de <span class="math inline">\(\sum_i \pi_i^{(e)}=1\)
 <p>La representació de la cadena de Markov és la següent:</p>
 <!-- ```{r echo=FALSE, message=FALSE, warning=FALSE ,fig.align='center',fig.width=5,fig.height=1.2,out.width="70%", fig.cap="Representació cadena de Markov", code=readLines("Rcode/cadenaestats.r")} -->
 <!-- ``` -->
-<div id="htmlwidget-7c3b1d228ef5a9123f9b" style="width:70%;height:150px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7c3b1d228ef5a9123f9b">{"x":{"diagram":"\ndigraph Markov {\n\ngraph [\n  layout = neato,\n  overlap = false\n]\n\nnode [\n  shape = circle,\n  fixedsize = true,\n  width = 0.6,\n  fontsize = 14\n]\n\nedge [\n  fontsize = 12\n]\n\n# 1. Definim els nodes amb posicions fixes (X, Y!)\n0 [pos = \"0,0!\"]\n1 [pos = \"2,0!\"]\n2 [pos = \"4,0!\"]\n3 [pos = \"6,0!\"]\n4 [pos = \"8,0!\"]\n\n# 2. Bucles\n0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n# 3. Transicions cap a la dreta (p) per dalt\n1 -> 2 [label = \"p\", constraint = false]\n2 -> 3 [label = \"p\", constraint = false]\n3 -> 4 [label = \"p\", constraint = false]\n\n# 4. Transicions cap a l\"esquerra (1-p) per baix\n1 -> 0 [label = \"1-p\", constraint = false]\n2 -> 1 [label = \"1-p\", constraint = false]\n3 -> 2 [label = \"1-p\", constraint = false]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-afad060b521be532fd87" style="width:70%;height:150px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-afad060b521be532fd87">{"x":{"diagram":"\ndigraph Markov {\n\ngraph [\n  layout = neato,\n  overlap = false\n]\n\nnode [\n  shape = circle,\n  fixedsize = true,\n  width = 0.6,\n  fontsize = 14\n]\n\nedge [\n  fontsize = 12\n]\n\n# 1. Definim els nodes amb posicions fixes (X, Y!)\n0 [pos = \"0,0!\"]\n1 [pos = \"2,0!\"]\n2 [pos = \"4,0!\"]\n3 [pos = \"6,0!\"]\n4 [pos = \"8,0!\"]\n\n# 2. Bucles\n0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n# 3. Transicions cap a la dreta (p) per dalt\n1 -> 2 [label = \"p\", constraint = false]\n2 -> 3 [label = \"p\", constraint = false]\n3 -> 4 [label = \"p\", constraint = false]\n\n# 4. Transicions cap a l\"esquerra (1-p) per baix\n1 -> 0 [label = \"1-p\", constraint = false]\n2 -> 1 [label = \"1-p\", constraint = false]\n3 -> 2 [label = \"1-p\", constraint = false]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p>Tenim que:</p>
 <ul>
 <li><p>Els estats <strong>0</strong> i <strong>4</strong> són <strong>absorbents</strong>.</p></li>
@@ -542,7 +542,7 @@ amb la condició adicional de <span class="math inline">\(\sum_i \pi_i^{(e)}=1\)
 </div>
 <hr />
 <div class="definition">
-<p><span id="def:unlabeled-div-110" class="definition"><strong>Definició 5.13  </strong></span>Una <strong>classe</strong> A s’anomena <strong>tancada</strong> si quan es comença en qualsevol estat d’A sempre ens quedem a A. ÉEs a dir</p>
+<p><span id="def:unlabeled-div-112" class="definition"><strong>Definició 5.13  </strong></span>Una <strong>classe</strong> A s’anomena <strong>tancada</strong> si quan es comença en qualsevol estat d’A sempre ens quedem a A. ÉEs a dir</p>
 <p><span class="math display">\[
 Si \quad y \in A \quad llavors \quad P(A|y)=1
 \]</span>
@@ -552,15 +552,15 @@ Si \quad y \in A \quad llavors \quad P(X_{n+1}\in A |X_n \in A)=1
 \]</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-111" class="definition"><strong>Definició 5.14  </strong></span>Direm que l’estat <span class="math inline">\(i\)</span> és <strong>periòdic</strong> amb període <span class="math inline">\(k&gt;1\)</span> si <span class="math inline">\(k\)</span> és l’enter més petit tal que la longitud de qualsevol camí de <span class="math inline">\(i \leftarrow i\)</span> es múltiple de k.</p>
+<p><span id="def:unlabeled-div-113" class="definition"><strong>Definició 5.14  </strong></span>Direm que l’estat <span class="math inline">\(i\)</span> és <strong>periòdic</strong> amb període <span class="math inline">\(k&gt;1\)</span> si <span class="math inline">\(k\)</span> és l’enter més petit tal que la longitud de qualsevol camí de <span class="math inline">\(i \leftarrow i\)</span> es múltiple de k.</p>
 <p>Dit d’una altra manera</p>
 <p><span class="math inline">\(\text{k=màxim comú divisor  } \{n\mid p_{i,i}^{(n)}&gt;0\} \text{ i } k&gt;1\)</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-112" class="definition"><strong>Definició 5.15  </strong></span>Un estat que no és periòdic s’anomena <strong>aperiòdic</strong>. Ës aquell estat <span class="math inline">\(i\)</span> per al que existeix un enter positiu <span class="math inline">\(r\)</span> tal que <span class="math inline">\(p_{i,i}^r&gt;0\)</span> i <span class="math inline">\(p_{i,i}^{r+1}&gt;0\)</span></p>
+<p><span id="def:unlabeled-div-114" class="definition"><strong>Definició 5.15  </strong></span>Un estat que no és periòdic s’anomena <strong>aperiòdic</strong>. Ës aquell estat <span class="math inline">\(i\)</span> per al que existeix un enter positiu <span class="math inline">\(r\)</span> tal que <span class="math inline">\(p_{i,i}^r&gt;0\)</span> i <span class="math inline">\(p_{i,i}^{r+1}&gt;0\)</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-113" class="definition"><strong>Definició 5.16  </strong></span>Una cadena de Markov es <strong>ergòdica</strong> si és irreductible i aperiòdica</p>
+<p><span id="def:unlabeled-div-115" class="definition"><strong>Definició 5.16  </strong></span>Una cadena de Markov es <strong>ergòdica</strong> si és irreductible i aperiòdica</p>
 </div>
 <div class="{[.example}">
 <p>A continuació es mostren alguns exemples de cadenes definides a partir de la seva matriu de transició on es representa la cadena i es classifiquen els estats segons les definicions previes.</p>
@@ -570,8 +570,8 @@ Si \quad y \in A \quad llavors \quad P(X_{n+1}\in A |X_n \in A)=1
 P_1=\begin{pmatrix}0&amp;1&amp;0\\ 0&amp;0&amp;1\\ 1&amp;0&amp;0\end{pmatrix}
 \]</span></p>
 <p><br><br></p>
-<div id="htmlwidget-bea0ec5770a78e998f69" style="width:70%;height:140px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bea0ec5770a78e998f69">{"x":{"diagram":"\ndigraph Markov1 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,0!\"]\n  3 [pos = \"4,0!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 1 [label = \"1\", tailport = \"s\", headport = \"s\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-5295ad522469fad99ab2" style="width:70%;height:140px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5295ad522469fad99ab2">{"x":{"diagram":"\ndigraph Markov1 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,0!\"]\n  3 [pos = \"4,0!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 1 [label = \"1\", tailport = \"s\", headport = \"s\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><span class="math display">\[
 \{n \mid p_{i,i}^{(n)}&gt;0\} = \{3,6,9,12,\dots\}
 \]</span>
@@ -590,8 +590,8 @@ P_2 = \begin{pmatrix}
 \end{pmatrix}
 \]</span></p>
 <p><br><br></p>
-<div id="htmlwidget-a1408d4b72ce1ba1667d" style="width:70%;height:220px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a1408d4b72ce1ba1667d">{"x":{"diagram":"\ndigraph Markov2 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"3,-0.5!\"]\n  5 [pos = \"1,-0.5!\"]\n\n  1 -> 1 [label = \"0.4\", tailport = \"nw\", headport = \"sw\"]\n  1 -> 2 [label = \"0.6\"]\n  2 -> 1 [label = \"0.5\"]\n  2 -> 2 [label = \"0.5\", tailport = \"ne\", headport = \"se\"]\n\n  3 -> 4 [label = \"0.7\"]\n  4 -> 3 [label = \"0.5\"]\n  3 -> 3 [label = \"0.3\", tailport = \"ne\", headport = \"se\"]\n  4 -> 4 [label = \"0.4\", tailport = \"se\", headport = \"sw\"]\n  4 -> 5 [label = \"0.1\"]\n\n  5 -> 4 [label = \"0.8\"]\n  5 -> 5 [label = \"0.2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b5641a7d89a515cae50b" style="width:70%;height:220px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b5641a7d89a515cae50b">{"x":{"diagram":"\ndigraph Markov2 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"3,-0.5!\"]\n  5 [pos = \"1,-0.5!\"]\n\n  1 -> 1 [label = \"0.4\", tailport = \"nw\", headport = \"sw\"]\n  1 -> 2 [label = \"0.6\"]\n  2 -> 1 [label = \"0.5\"]\n  2 -> 2 [label = \"0.5\", tailport = \"ne\", headport = \"se\"]\n\n  3 -> 4 [label = \"0.7\"]\n  4 -> 3 [label = \"0.5\"]\n  3 -> 3 [label = \"0.3\", tailport = \"ne\", headport = \"se\"]\n  4 -> 4 [label = \"0.4\", tailport = \"se\", headport = \"sw\"]\n  4 -> 5 [label = \"0.1\"]\n\n  5 -> 4 [label = \"0.8\"]\n  5 -> 5 [label = \"0.2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br><br></p>
 <p>Fixem-nos que <span class="math inline">\(p_{i,i}&gt;0\)</span> per tot <span class="math inline">\(i\)</span> i per tant tots els estats són aperiòdics.</p>
 <hr />
@@ -607,15 +607,15 @@ P_{3}=\begin{pmatrix}
 \end{pmatrix}
 \]</span></p>
 <p><br><br></p>
-<div id="htmlwidget-3ecd7feea0da87326e72" style="width:70%;height:140px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3ecd7feea0da87326e72">{"x":{"diagram":"\ndigraph Markov3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  0 [pos = \"0,0!\"]\n  1 [pos = \"2,0!\"]\n  2 [pos = \"4,0!\"]\n  3 [pos = \"6,0!\"]\n  4 [pos = \"8,0!\"]\n\n  0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n  4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n  1 -> 2 [label = \"p\"]\n  2 -> 3 [label = \"p\"]\n  3 -> 4 [label = \"p\"]\n\n  1 -> 0 [label = \"1-p\"]\n  2 -> 1 [label = \"1-p\"]\n  3 -> 2 [label = \"1-p\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-40999f1befc220e428e8" style="width:70%;height:140px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-40999f1befc220e428e8">{"x":{"diagram":"\ndigraph Markov3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  0 [pos = \"0,0!\"]\n  1 [pos = \"2,0!\"]\n  2 [pos = \"4,0!\"]\n  3 [pos = \"6,0!\"]\n  4 [pos = \"8,0!\"]\n\n  0 -> 0 [label = \"1\", tailport = \"w\", headport = \"nw\"]\n  4 -> 4 [label = \"1\", tailport = \"e\", headport = \"ne\"]\n\n  1 -> 2 [label = \"p\"]\n  2 -> 3 [label = \"p\"]\n  3 -> 4 [label = \"p\"]\n\n  1 -> 0 [label = \"1-p\"]\n  2 -> 1 [label = \"1-p\"]\n  3 -> 2 [label = \"1-p\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br><br></p>
 <p>Quan <span class="math inline">\(i=1,2,3\)</span> llavors <span class="math display">\[\{n \mid p_{i,i}^{(n)}&gt;0\} = \{2,4,6,8,\dots\}\]</span> i per tant els estats 1, 2, 3 són periòdics amb període <span class="math inline">\(k=2\)</span>.</p>
 <hr />
 <hr />
 <p><strong>Quarta cadena</strong></p>
-<div id="htmlwidget-26dcdd5f775482f51e95" style="width:70%;height:180px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-26dcdd5f775482f51e95">{"x":{"diagram":"\ndigraph Markov4 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n\n  7 [pos = \"0,0!\"]\n  8 [pos = \"1.5,0.8!\"]\n  9 [pos = \"3.5,0.8!\"]\n  1 [pos = \"5,0!\"]\n  2 [pos = \"6.5,0.8!\"]\n  3 [pos = \"8.5,0!\"]\n  4 [pos = \"6.5,-0.8!\"]\n  5 [pos = \"3.5,-0.8!\"]\n  6 [pos = \"1.5,-0.8!\"]\n\n  7 -> 8; 8 -> 9; 9 -> 1;\n  1 -> 2; 2 -> 3; 3 -> 4; 4 -> 1;\n  1 -> 5; 5 -> 6; 6 -> 7;\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-41cfe017b85aa397a186" style="width:70%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-41cfe017b85aa397a186">{"x":{"diagram":"\ndigraph Markov4 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n\n  7 [pos = \"0,0!\"]\n  8 [pos = \"1.5,0.8!\"]\n  9 [pos = \"3.5,0.8!\"]\n  1 [pos = \"5,0!\"]\n  2 [pos = \"6.5,0.8!\"]\n  3 [pos = \"8.5,0!\"]\n  4 [pos = \"6.5,-0.8!\"]\n  5 [pos = \"3.5,-0.8!\"]\n  6 [pos = \"1.5,-0.8!\"]\n\n  7 -> 8; 8 -> 9; 9 -> 1;\n  1 -> 2; 2 -> 3; 3 -> 4; 4 -> 1;\n  1 -> 5; 5 -> 6; 6 -> 7;\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br><br></p>
 <p><span class="math display">\[\{n \mid p_{i,i}^{(n)}&gt;0\} = \{4,6,8,10\dots\}\]</span> amb perìode 2</p>
 <hr />
@@ -631,8 +631,8 @@ P_{5}=
 \end{pmatrix}
 \]</span></p>
 <p><br><br></p>
-<div id="htmlwidget-9e206886e62a45a2e275" style="width:70%;height:180px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9e206886e62a45a2e275">{"x":{"diagram":"\ndigraph Markov5 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"2,-0.5!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 4 [label = \"1\"]\n  4 -> 1 [label = \"1/2\"]\n  4 -> 2 [label = \"1/2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d273cf0d4283f603f5b4" style="width:70%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d273cf0d4283f603f5b4">{"x":{"diagram":"\ndigraph Markov5 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  1 [pos = \"0,1!\"]\n  2 [pos = \"2,1!\"]\n  3 [pos = \"4,1!\"]\n  4 [pos = \"2,-0.5!\"]\n\n  1 -> 2 [label = \"1\"]\n  2 -> 3 [label = \"1\"]\n  3 -> 4 [label = \"1\"]\n  4 -> 1 [label = \"1/2\"]\n  4 -> 2 [label = \"1/2\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><span class="math display">\[
 \{n \mid p_{1,1}^{(n)}&gt;0\} = \{4,7,8,10,\dots\} \quad \text{amb període 1.}
 \]</span></p>
@@ -655,8 +655,8 @@ P_{5}=
 9 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
 \end{array}\]</span></p>
 <p>la representació gràfica de la cadena de Markov es</p>
-<div id="htmlwidget-864acbf48b38f3c8611c" style="width:70%;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-864acbf48b38f3c8611c">{"x":{"diagram":"\ndigraph Markov11 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,2!\"]\n  2 [pos = \"0,0!\"]\n  3 [pos = \"2,2!\"]\n  4 [pos = \"1,3.2!\"]\n  5 [pos = \"2,0!\"]\n  6 [pos = \"1,-1.2!\"]\n  7 [pos = \"5,-0.8!\"]\n  8 [pos = \"4,0!\"]\n  9 [pos = \"4,2!\"]\n\n  1 -> 4 [label = \"0.4\"]\n  1 -> 3 [label = \"0.6\"]\n  2 -> 4 [label = \"0.4\"]\n  2 -> 3 [label = \"0.6\"]\n  3 -> 5 [label = \"0.6\"]\n  3 -> 6 [label = \"0.2\"]\n  3 -> 9 [label = \"0.2\"]\n  4 -> 5 [label = \"0.6\"]\n  4 -> 6 [label = \"0.4\"]\n  5 -> 1 [label = \"0.6\"]\n  5 -> 2 [label = \"0.3\"]\n  5 -> 8 [label = \"0.1\"]\n  6 -> 1 [label = \"0.6\"]\n  6 -> 2 [label = \"0.4\"]\n\n  7 -> 7 [label = \"0.7\", tailport = \"se\", headport = \"ne\"]\n  7 -> 8 [label = \"0.3\"]\n  8 -> 7 [label = \"1\"]\n\n  9 -> 9 [label = \"1\", tailport = \"ne\", headport = \"se\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a9429be1c8981851021a" style="width:70%;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a9429be1c8981851021a">{"x":{"diagram":"\ndigraph Markov11 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 10]\n\n  1 [pos = \"0,2!\"]\n  2 [pos = \"0,0!\"]\n  3 [pos = \"2,2!\"]\n  4 [pos = \"1,3.2!\"]\n  5 [pos = \"2,0!\"]\n  6 [pos = \"1,-1.2!\"]\n  7 [pos = \"5,-0.8!\"]\n  8 [pos = \"4,0!\"]\n  9 [pos = \"4,2!\"]\n\n  1 -> 4 [label = \"0.4\"]\n  1 -> 3 [label = \"0.6\"]\n  2 -> 4 [label = \"0.4\"]\n  2 -> 3 [label = \"0.6\"]\n  3 -> 5 [label = \"0.6\"]\n  3 -> 6 [label = \"0.2\"]\n  3 -> 9 [label = \"0.2\"]\n  4 -> 5 [label = \"0.6\"]\n  4 -> 6 [label = \"0.4\"]\n  5 -> 1 [label = \"0.6\"]\n  5 -> 2 [label = \"0.3\"]\n  5 -> 8 [label = \"0.1\"]\n  6 -> 1 [label = \"0.6\"]\n  6 -> 2 [label = \"0.4\"]\n\n  7 -> 7 [label = \"0.7\", tailport = \"se\", headport = \"ne\"]\n  7 -> 8 [label = \"0.3\"]\n  8 -> 7 [label = \"1\"]\n\n  9 -> 9 [label = \"1\", tailport = \"ne\", headport = \"se\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p>Veiem doncs que tenim 3 classes:</p>
 <ul>
 <li>Classe 1 formada pels estats <span class="math inline">\(\{1,2,\dots, 6\}\)</span>. És transitòria.</li>
@@ -669,8 +669,8 @@ P_{5}=
 <p>Considerem la següent matriu de transició</p>
 <p><span class="math display">\[P_7 = \begin{pmatrix} 0.5 &amp; 0.5 &amp; 0 \\ 0 &amp; 0.3 &amp; 0.7 \\ 0.8 &amp; 0 &amp; 0.2 \end{pmatrix}\]</span>
 On la seva reprentació gràfica es</p>
-<div id="htmlwidget-787e36eda7d616a4bd75" style="width:100%;height:180px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-787e36eda7d616a4bd75">{"x":{"diagram":"\ndigraph MarkovP3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  # Posicions dels nodes en un triangle\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,1.5!\"]\n  3 [pos = \"4,0!\"]\n\n  # Bucles (transicions a un mateix)\n  1 -> 1 [label = \"0.5\", tailport = \"w\", headport = \"nw\"]\n  2 -> 2 [label = \"0.3\", tailport = \"ne\", headport = \"nw\"]\n  3 -> 3 [label = \"0.2\", tailport = \"e\", headport = \"se\"]\n\n  # Transicions entre estats\n  1 -> 2 [label = \"0.5\"]\n  2 -> 3 [label = \"0.7\"]\n  3 -> 1 [label = \"0.8\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-98d6aa7b955576ea4005" style="width:100%;height:180px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-98d6aa7b955576ea4005">{"x":{"diagram":"\ndigraph MarkovP3 {\n  graph [layout = neato, overlap = false]\n  node [shape = circle, fixedsize = true, width = 0.5, fontsize = 12]\n  edge [fontsize = 11]\n\n  # Posicions dels nodes en un triangle\n  1 [pos = \"0,0!\"]\n  2 [pos = \"2,1.5!\"]\n  3 [pos = \"4,0!\"]\n\n  # Bucles (transicions a un mateix)\n  1 -> 1 [label = \"0.5\", tailport = \"w\", headport = \"nw\"]\n  2 -> 2 [label = \"0.3\", tailport = \"ne\", headport = \"nw\"]\n  3 -> 3 [label = \"0.2\", tailport = \"e\", headport = \"se\"]\n\n  # Transicions entre estats\n  1 -> 2 [label = \"0.5\"]\n  2 -> 3 [label = \"0.7\"]\n  3 -> 1 [label = \"0.8\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p>La cadena de Markov es ergòdica ja que es aperiòdica al ser tots els <span class="math inline">\(p_{ii}&gt;0\)</span> i es irreductible per que tots els nodes estan comunicats entre si.</p>
 </div>
 </div>
@@ -679,7 +679,7 @@ On la seva reprentació gràfica es</p>
 <h2><span class="header-section-number">5.2</span> Passeig o Caminades aleatòries.<a href="principals-tipus-de-processos-estocàstics..html#passeig-o-caminades-aleat%C3%B2ries." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Imagineu un caminant que es mou al atzar cap a la dreta o cap a l’esquerra. Suposem que el caminant llança una moneda amb una probabilitat p d’obtenir una cara. Si surt cara va cap a dreta (amb probabilitat <span class="math inline">\(p\)</span>) i si surt creu va cap a l’esquerra (amb probabilitat <span class="math inline">\(q=1-p\)</span>). Estarem interessats en conèixer quina es la situació <span class="math inline">\(S_n\)</span> després de n passos del caminant que direm que esta seguint un passeig o caminada aleatòria.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-114" class="definition"><strong>Definició 5.17  </strong></span>Sigui <span class="math inline">\(\{Y1,\dots\}\)</span> una successió de variables aleatòries independents idènticament distribuïdes que prenen els valors <span class="math inline">\(1\)</span> i <span class="math inline">\(-1\)</span> amb una probabilitat <span class="math inline">\(p\in [0,1]\)</span> i <span class="math inline">\(q=1-p\)</span>, respectivament. La <strong>caminada aleatòria (“random walk”)</strong> simple amb paràmetre p es la successió</p>
+<p><span id="def:unlabeled-div-116" class="definition"><strong>Definició 5.17  </strong></span>Sigui <span class="math inline">\(\{Y1,\dots\}\)</span> una successió de variables aleatòries independents idènticament distribuïdes que prenen els valors <span class="math inline">\(1\)</span> i <span class="math inline">\(-1\)</span> amb una probabilitat <span class="math inline">\(p\in [0,1]\)</span> i <span class="math inline">\(q=1-p\)</span>, respectivament. La <strong>caminada aleatòria (“random walk”)</strong> simple amb paràmetre p es la successió</p>
 <p><span class="math display" id="eq:rwalk">\[
 S_n=S_0+Y_1+Y_2+\dots+Y_n, \quad  n\geq 0  \tag{5.7}
 \]</span>
@@ -717,7 +717,7 @@ P(S_n=k\mid S_{i_0}=a_0,S_{i_1}=a_1,\dots, S_{i_m}=a_m)=P(S_n=k\mid S_{i_m}=a_m)
 \]</span>
 —</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-115" class="example"><strong>Exemple 5.6  </strong></span>Suposem que p=1/2 . En aquest cas es diu que <span class="math inline">\(S_n\)</span> es una <strong>caminata aleatòria simple simètrica</strong>. En aquest cas el vector aleatori <span class="math inline">\(\textbf{Y}^n=\{Y_1\dots,Y_n\}\)</span> es distribueix uniformement en <span class="math inline">\(\Omega=\{-1,1\}^n\)</span> Axi el nombre de combinacions serà <span class="math inline">\(2^n\)</span> que sera el número de camins diferents.</p>
+<p><span id="exm:unlabeled-div-117" class="example"><strong>Exemple 5.6  </strong></span>Suposem que p=1/2 . En aquest cas es diu que <span class="math inline">\(S_n\)</span> es una <strong>caminata aleatòria simple simètrica</strong>. En aquest cas el vector aleatori <span class="math inline">\(\textbf{Y}^n=\{Y_1\dots,Y_n\}\)</span> es distribueix uniformement en <span class="math inline">\(\Omega=\{-1,1\}^n\)</span> Axi el nombre de combinacions serà <span class="math inline">\(2^n\)</span> que sera el número de camins diferents.</p>
 <p>I seguint l’equació <a href="principals-tipus-de-processos-estocàstics..html#eq:prwalk">(5.9)</a> la probabilitat de <span class="math inline">\(S_n\)</span> és:</p>
 <p><span class="math display">\[
 \Pr(S_n = k) = \binom{n}{\frac{n+k}{2}} \frac{1}{2^n}, \quad k \in \{-n, -n+2, \dots, n-2, n\}.
@@ -756,7 +756,7 @@ S_k^{*}=\{-S_k,\quad  0\le k\le \tau,S_k,  k&gt;\tau.\}
 <p>En conseqüència, ambdós conjunts tenen el mateix nombre d’elements.</p>
 <p>Aquesta propietat és coneguda com el principi de reflexió i constitueix una eina fonamental en l’estudi dels passeigs aleatoris, ja que permet comptar camins amb restriccions transformant-los en un problema equivalent sense restriccions.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-116" class="theorem"><strong>Theorem 5.1  </strong></span><strong>Recompte de camins que no creuen el 0</strong>
+<p><span id="thm:unlabeled-div-118" class="theorem"><strong>Theorem 5.1  </strong></span><strong>Recompte de camins que no creuen el 0</strong>
 Si <span class="math inline">\(b&gt;0\)</span> el nombre de camins que porten de <span class="math inline">\(80,0\)</span> a (n,b) sense tornar a tocar l’eix d’abscisses es <span class="math inline">\((b/n)N_n(0,b)\)</span></p>
 </div>
 <hr />
@@ -776,7 +776,7 @@ T=min \{n \in \mathbb{N}_+ : S_n=0 \}
 \]</span>
 Cal observar que el retorn a 0 només pot passar per instants parells. També es possible que el passeig aleatori mai torni a 0. Per <span class="math inline">\(T\)</span> pren valors <span class="math inline">\(\{2,4,\dots\} \cup \{ \infty \}\)</span></p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-117" class="theorem"><strong>Theorem 5.2  </strong></span>La funció de probabilitat de <span class="math inline">\(T_2n\)</span> ve donada per</p>
+<p><span id="thm:unlabeled-div-119" class="theorem"><strong>Theorem 5.2  </strong></span>La funció de probabilitat de <span class="math inline">\(T_2n\)</span> ve donada per</p>
 <p><span class="math display" id="eq:restorn1">\[
 \Pr(T=2n)=\frac{1}{2n-1}\Pr(S_{2n}=0)
 =\frac{1}{2n-1}\binom{2n}{n}p^n(1-p)^n,
@@ -789,7 +789,7 @@ La prova és la següent. Per a <span class="math inline">\(n \in \mathbb{N}_{+}
 Però <span class="math inline">\(Pr(T = 2n|S2n = 0)\)</span> és la probabilitat d’anar de la posició <span class="math inline">\((0, 0)\)</span> inicial a la posició <span class="math inline">\((2n − 1, 1)\)</span> (la immediatament anterior a la <span class="math inline">\((2n, 0)\)</span> sense haver tocat l’eix d’abscisses. Pel problema del recompte de vots sabem que aquesta
 probabilitat és <span class="math inline">\(1/(2n − 1)\)</span>, i el resultat queda provat.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-118" class="theorem"><strong>Theorem 5.3  </strong></span>*Primer retorn després de n etapes.</p>
+<p><span id="thm:unlabeled-div-120" class="theorem"><strong>Theorem 5.3  </strong></span>*Primer retorn després de n etapes.</p>
 <p>Suposem <span class="math inline">\(P(S_0=0)=1\)</span>, aleshores</p>
 <p><span class="math display">\[
 P(S_1·S_2···S_n \neq 0, S_n=k)=\dfrac{|k|}{n} P(S_n=k, k \in \mathbb{Z})
@@ -806,7 +806,7 @@ P(S_n=k)=N_n(0,k)p^{(n+k)/2} (1-p)^{(n-k)/2}
 <p><strong>La posició màxima</strong></p>
 <p>Considerem de nou el passeig aleatori simple simètric. A la posició màxima a la que arriba el procés en els primers n passos la denotarem per <span class="math inline">\(M_n=max\{S_0,S_1,\dots,S_n\}\)</span>, que pren valors en el conjunt <span class="math inline">\(\{0,1,\dots,n \}\)</span>. La distribució de <span class="math inline">\(M_n\)</span> es pot obtenir a partir del principi de reflexió.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-119" class="theorem"><strong>Theorem 5.4  </strong></span><em>(Màxim)</em>. Suposem <span class="math inline">\(P(S_0=0)=1\)</span> i <span class="math inline">\(p=1/2\)</span>. La funció de probabilitat del màxim <span class="math inline">\(M_n\)</span> és per a <span class="math inline">\(m\geq 1\)</span></p>
+<p><span id="thm:unlabeled-div-121" class="theorem"><strong>Theorem 5.4  </strong></span><em>(Màxim)</em>. Suposem <span class="math inline">\(P(S_0=0)=1\)</span> i <span class="math inline">\(p=1/2\)</span>. La funció de probabilitat del màxim <span class="math inline">\(M_n\)</span> és per a <span class="math inline">\(m\geq 1\)</span></p>
 <p><span class="math display" id="eq:posmax">\[
 P(M_n=M)=
 \begin{cases}
@@ -823,7 +823,7 @@ L_{2n}=max\{j \in \{0,2,\dots,2n\}: S_j=0\} \quad n \in \mathbb{N}
 \]</span>
 Observeu que, donat que les visites a 0 només pot passar en instants parells, <span class="math inline">\(L_{2n}\)</span> preu els valors del conjunt <span class="math inline">\(\{0,2,\dots,2n\}\)</span>. Aquesta variable aleatòria té una distribució coneguda com a <em>distribució arcsinus discreta</em></p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-120" class="theorem"><strong>Theorem 5.5  </strong></span><em>Llei de l’arcsinus per l’última visita a l’origen</em>. suposem <span class="math inline">\(P(S_0=0)=1\)</span> i <span class="math inline">\(p=1/2\)</span>. Aleshores, per <span class="math inline">\(k \in \{0,1,\dots,n \}\)</span></p>
+<p><span id="thm:unlabeled-div-122" class="theorem"><strong>Theorem 5.5  </strong></span><em>Llei de l’arcsinus per l’última visita a l’origen</em>. suposem <span class="math inline">\(P(S_0=0)=1\)</span> i <span class="math inline">\(p=1/2\)</span>. Aleshores, per <span class="math inline">\(k \in \{0,1,\dots,n \}\)</span></p>
 <p><span class="math display" id="eq:arcsinus">\[
 P(L_{2n}=2k)=P(S_{2k}=0)P(S_{2n-2k}=0)=\binom{2k}{k}\binom{2n-2k}{n-k}\dfrac{1}{2^{2n}} \tag{5.12}
 \]</span>
@@ -844,7 +844,7 @@ La distribució de probabilitat amb aquesta densitat rep el nom de distribució 
 <p><strong>Probabilitat de visitar una posició donada</strong></p>
 <p>Considerem un caminant que es mou segons un passeig aleatori simple <span class="math inline">\(\{S_n: n \geq 0\}\)</span> amb probabilitats <span class="math inline">\(p\)</span> i <span class="math inline">\(q=1-p\)</span> de moviment a dreta i esquerra respectivament. Suposem que <span class="math inline">\(P(S=0)=1\)</span>. Ens preguntem aquí per la probabilitat que el caminant torni alguna vegada a l’origen, el seu punt de partida. També ens interessa saber amb quina probabilitat visitarà alguna vegada una posició fixada r</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-121" class="theorem"><strong>Theorem 5.6  </strong></span></p>
+<p><span id="thm:unlabeled-div-123" class="theorem"><strong>Theorem 5.6  </strong></span></p>
 <ul>
 <li><p>La probabilitat que el caminant torni alguna vegada a l’origen és <span class="math inline">\(1-|p-q|\)</span>.</p></li>
 <li><p>El cas del passeig aleatori simple simètric <span class="math inline">\((p=2=1/2)\)</span>. En aquest cas el temps fins al primer retorn és una variable aleatòria no negativa amb esperança infinita</p></li>
@@ -858,7 +858,7 @@ La distribució de probabilitat amb aquesta densitat rep el nom de distribució 
 <p>Considerem una successió d’ocurrències d’un determinat esdeveniment al llarg del temps. Sigui <span class="math inline">\(X_1\)</span> el temps d’espera necesari per a que el esdeveniment passi per primera vegada, <span class="math inline">\(X_2\)</span> el temps d’espera entre la primera i la segona ocurrència, i en general <span class="math inline">\(X_i\)</span> el temps entre les ocurrències <span class="math inline">\(i-1\)</span> i <span class="math inline">\(i\)</span>. El model formal que descriu aquest fenòmen es una successió de variables aleatòries definides sobre un determinat espai de probabilitat.</p>
 <p>Un altra característica d’interés lligada al fenomen anterior es el nombre d’esdeveniments que han ocorregut en un determinat interval de temps <span class="math inline">\(]t_1,t_2]\)</span> . Per exemple, per a <span class="math inline">\(t_1=0\)</span> i <span class="math inline">\(t2=t\)</span> definim la variable <span class="math inline">\(N_t=N_t=\)</span>{nombre d’esdeveniments ocorreguts fins al temps <span class="math inline">\(t\)</span>}. Aquest procés <span class="math inline">\(N_t; t\geq0\)</span> en temps continu te espai d’estats discret {<span class="math inline">\(S=\{0,1,2,\dots \}\)</span> i verifica que <span class="math inline">\(N(0)=0\)</span> i que no es decreixent en el temps, <span class="math inline">\(N_s\leq N_t\)</span>, si <span class="math inline">\(s&lt;t\)</span>. Aquest tipus de processos s’anomenen <strong>processos comptadors(count process)</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-122" class="definition"><strong>Definició 5.18  </strong></span>Un procés comptador es un <strong>procés de Poisson amb intensitat <span class="math inline">\(\lambda\)</span></strong> que compleix les segúents propietats</p>
+<p><span id="def:unlabeled-div-124" class="definition"><strong>Definició 5.18  </strong></span>Un procés comptador es un <strong>procés de Poisson amb intensitat <span class="math inline">\(\lambda\)</span></strong> que compleix les segúents propietats</p>
 <p>1.No poden ocórrer dues esdeveniments alhora</p>
 <p>2.En cada interval finit de temps el nombre d’esdeveniments observables es finit</p>
 <p>3.Els temps d’espera són independents i idènticament distribuïts segons una distribució <span class="math inline">\(Exp(\lambda)\)</span></p>
@@ -981,7 +981,7 @@ Per tant, <span class="math inline">\(N_{t_1} \mid N_t = n \sim \text{Binomial}(
 aments petits de longitud <span class="math inline">\(\Delta\)</span> que es produeixen en intervals de temps petit de longitud <span class="math inline">\(\tau\)</span>, En el límit, quan tant la longitud dels desplaçaments com la durada dels intervals de temps tendeixen a zero, s’obté un procés estocàstic les realitzacions del qual són funcions contínues del temps.</p>
 <p>El matemàtic Norbert Wiener estipulo las següents assumpcions para un procés aleatori estacionari W(.,.) amb increments independents en 1923</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-123" class="definition"><strong>Definició 5.19  </strong></span><strong>Moviment Brownià</strong></p>
+<p><span id="def:unlabeled-div-125" class="definition"><strong>Definició 5.19  </strong></span><strong>Moviment Brownià</strong></p>
 <p>Un procés estocàstic W(t) s’anomena moviment Brownià si</p>
 <ol style="list-style-type: decimal">
 <li><em>Independència:</em> <span class="math inline">\(W(t+\Delta t)- W(t)\)</span> es independent de ${ W() } t</li>
@@ -1006,7 +1006,7 @@ W(t+\Delta t)-W(t)\sim \mathcal{N}\left(\mu\,\Delta t,\sigma^2\Delta t\right).
 \sigma^2 T.
 \]</span></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-124" class="definition"><strong>Definició 5.20  </strong></span>Un moviment Bronwnià es estàndard si.</p>
+<p><span id="def:unlabeled-div-126" class="definition"><strong>Definició 5.20  </strong></span>Un moviment Bronwnià es estàndard si.</p>
 <p><span class="math inline">\(W(0)=0\)</span></p>
 <p><span class="math inline">\(E[W(t)]=0 ; \mu=0\)</span></p>
 <p><span class="math inline">\(E[W^2(t)]=t ; \sigma^2=1\)</span></p>

@@ -161,7 +161,10 @@ D'aquesta definició es dedueix que les dades observades en una mostra de subjec
 :::{.proposition}
 **Independència i Esperança**
 
-Si $X_1,...,X_k$ són independents, aleshores $E[X_1,...,X_k]=E[\prod_{j=1}^{k}X_i]=\prod_{j=1}^{k}E[X_i]$ (\#eq:indep)
+Si $X_1,...,X_k$ són independents, aleshores 
+$$ 
+E[X_1,...,X_k]=E[\prod_{j=1}^{k}X_i]=\prod_{j=1}^{k}E[X_i] (\#eq:indep)
+$$
 
 **Demostració**
 
@@ -204,6 +207,7 @@ De manera més general , el resultat anterior es pot generalitzar a les funcions
 $$
 E[\prod_{j=1}^{k}g(X_i)]=\prod_{j=1}^{k}E[g_i(X_i)](\#eq:gindep)
 $$
+
 :::{.corollary}
 Si les variables $X_1,...,X_k$ son independents, llavors $cov(X_i,X_j)=0, \quad \forall i,j$
 :::
@@ -502,6 +506,7 @@ E_1(X)=
 E\!\left(E(X\mid A_k)\right)=\frac{1}{n} \sum_{k=1}^{n} E(X\mid A_k)= \frac{l(n^2-1)}{3n}.
 \end{aligned}
 $$
+
 **Estratègia 2**
 
 Per facilitar els càlculs, suposem que $n$ és imparell, de manera que hi ha una màquina situada al punt mig de la línia, és a dir, la $\frac{n+1}{2}$-èsima. Si la pròxima màquina avariada és la i-èsima, la distància a recórrer serà
@@ -550,6 +555,7 @@ Si $E[Y^2]" existeix, llavors
 $$
 var(Y)=E(var[Y|X])+ var(E[X|Y])  (\#eq:varcond)
 $$
+
 :::
 **Demostració**
 $$
@@ -570,6 +576,7 @@ $$
 + \operatorname{Var}\left(E[Y\mid X]\right)
 \end{aligned}
 $$
+
 :::{.corollary}
 
 Si $E[Y^2]$  existeix, per la propietat anterior $Var(Y) \geq Var(E[Y|X])$
@@ -809,14 +816,14 @@ Si $V(X)=0$ aleshores $X$ es constant amb probabilitat 1.
 Suposem $E[X]=\mu$ i considerem els conjunts $A_n={|X-\mu| \geq 1/n}$ aplicant la desigualtat de Txebixev
 
 $$
-P(A_n)= P(|X-\mu| \geq\frac{1}{n})=0 \forall n
+P(A_n)= P(|X-\mu| \geq\frac{1}{n})=0 \quad \forall n
 $$
 d'aci obtenim que $P(\cup_n A_n)=0$ i  $P(\cap_n A_n^c)=1$ Però 
 
 $$
 \bigcap_{n\geq1} A_n^c=\bigcap_{n\geq1} \{  |X-\mu| \geq \frac{1}{n} \}=\{X=\mu \}
 $$
-i per tant $P(X=\mu)=1
+i per tant $P(X=\mu)=1$
 
 :::
 
@@ -835,7 +842,8 @@ i per tant $P(X=\mu)=1
 $$
  E[g(X)] \geq g(E[X])   (\#eq:desjensen)
  $$
-:::{.Theorem #thm-cauchy}
+
+:::{.theorem #thm-cauchy}
 **Desigualtat de Cauchy-Schwarz**
 
 Si $X$ i $Y$ son variables aleatòries amb variàncies finites. Aleshores, $cov(X,Y)$ existeix i es verifica que 
@@ -846,6 +854,7 @@ $$
 $$
 verificant-se la igualtat si i només si existeix un nombre real tal que $P(\alpha X+Y=0)=1$
 :::
+
 **Demostració**
 Per qualsevol nombre real $a$ i $b$ es verifica que:
 
@@ -1056,4 +1065,4 @@ knitr::include_graphics("images/icecream_drowning.png")
 ```
 
 
-En la URL https://tylervigen.com/spurious-correlations es poden trobar nombrosoes correlacions espúries on estàn disponibles les dades . D'ací la famosa frase en estadística **Correlation is not causation**, la correlació no implica causalitat.
+En la URL https://tylervigen.com/spurious-correlations es poden trobar nombroses correlacions espúries on estàn disponibles les dades . D'ací la famosa frase en estadística **Correlation is not causation**, la correlació no implica causalitat.
