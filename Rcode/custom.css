@@ -127,6 +127,112 @@ a[href^="mailto"] { color: #C8D2FA; }
 background-color:#e4e3e3;
   cursor:pointer}
 
+/* Identitat UB i controls del menú lateral del llibre. */
+#course-sidebar-brand a {
+  display: block;
+  padding: 18px 24px 12px;
+  text-align: center;
+}
+
+#course-sidebar-brand img {
+  display: block;
+  width: 100%;
+  max-width: 225px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#course-sidebar-print {
+  padding: 4px 18px 12px;
+}
+
+#course-sidebar-print button {
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: #0073CE;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+#course-sidebar-print button:hover,
+#course-sidebar-print button:focus {
+  background: #005a9e;
+}
+
+#course-current-location {
+  display: none;
+}
+
+#course-current-location .location-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #0073CE;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+#course-current-location .location-title {
+  display: block;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+@media screen and (min-width: 1400px) {
+  #course-current-location {
+    display: block;
+    position: fixed;
+    top: 92px;
+    right: 18px;
+    width: 230px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-left: 3px solid #0073CE;
+    background: #fff;
+    color: #404040;
+    overflow-wrap: anywhere;
+    z-index: 20;
+  }
+
+  #section-toc {
+    top: 168px;
+    max-height: calc(100vh - 190px);
+  }
+}
+
+@media print {
+  #course-current-location {
+    display: none !important;
+  }
+}
+
+@media print {
+  .book-summary,
+  .book-header,
+  #section-toc,
+  .navigation,
+  .header-section-number,
+  .anchor-section {
+    display: none !important;
+  }
+
+  .book.with-summary .book-body,
+  .book.without-summary .book-body {
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .book .book-body .page-wrapper .page-inner section.normal {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
 
 /* recuadro abajo izquierda*/
   #postamble{
@@ -293,10 +399,10 @@ table thead th {
 
   #section-toc {
     position: fixed;
-    top: 92px;
+    top: 168px;
     right: 18px;
     width: 230px;
-    max-height: calc(100vh - 115px);
+    max-height: calc(100vh - 190px);
     overflow-y: auto;
     z-index: 20;
     border-left: 1px solid #e5e5e5;

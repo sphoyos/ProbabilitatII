@@ -36,7 +36,7 @@ P(A_{j_1} \cap ...\cap A_{j_n} ) =P(X_{j_l} \in B_{j_l},l=1,...,n)=
 \prod_{l=1}^n P(X_{j_l} \in  B_{j_l})  \\  \forall(j_1,...,j_n) \in(1,...,k)  
 (\#eq:pxindep)
 $$
-on $A_{j_1}=X^{-1}B_{j_1}$
+on $A_{j_1}=X^{-1}(B_{j_1})$
 
 :::
 
@@ -63,10 +63,10 @@ $$
 
 **Demostració**
 
-Suposem que les variables aleatòries contínues (X_1,\ldots,X_k) són independents. Per definició,
+Suposem que les variables aleatòries contínues $(X_1,\ldots,X_k)$ són independents. Per definició,
 
 $$
-\prod_{j=1}^{k}\Pr(X_j\in A_j),
+P(A_{j_1} \cap ...\cap A_{j_n} )=\prod_{j=1}^{k}\Pr(X_j\in A_j),
 \qquad
 \forall,A_1,\ldots,A_k\in\mathcal{B}(\mathbb{R}).
 $$
@@ -116,12 +116,12 @@ $$
 
 :::{.observation}
 
-Com es va veure en el tema anterior a partir de la distribució conjunta d'un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components.  Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin indepen                                                                                                                              dents. 
+Com es va veure en el tema anterior a partir de la distribució conjunta d'un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components.  Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin independents. 
 
 :::
 
 :::{.example}
-En l'exemple \@ref(exm:circulo)  del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l'atzar en el cercle unitats $C_1$ tenia una densitat conjunta
+En l'exemple \@ref(exm:circulo)  del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l'atzar en el cercle unitat $C_1$ tenia una densitat conjunta
 
 
  $$

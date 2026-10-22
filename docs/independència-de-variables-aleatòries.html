@@ -128,6 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="Rcode/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -276,7 +277,7 @@ P(A_{j_1} \cap ...\cap A_{j_n} ) =P(X_{j_l} \in B_{j_l},l=1,...,n)=
 \prod_{l=1}^n P(X_{j_l} \in  B_{j_l})  \\  \forall(j_1,...,j_n) \in(1,...,k)  
 \tag{2.1}
 \]</span>
-on <span class="math inline">\(A_{j_1}=X^{-1}B_{j_1}\)</span></p>
+on <span class="math inline">\(A_{j_1}=X^{-1}(B_{j_1})\)</span></p>
 </div>
 <p>Comprovar la independència de variables aleatòries a partir de la equació <a href="independència-de-variables-aleatòries.html#eq:pxindep">(2.1)</a> es complicat i es mès fàcil caracteritzar la independènciaa partir de les funcions de distribució i densitat conjuntes i marginals.</p>
 <div class="theorem">
@@ -290,9 +291,9 @@ on <span class="math inline">\(A_{j_1}=X^{-1}B_{j_1}\)</span></p>
 \]</span></p>
 </div>
 <p><strong>Demostració</strong></p>
-<p>Suposem que les variables aleatòries contínues (X_1,,X_k) són independents. Per definició,</p>
+<p>Suposem que les variables aleatòries contínues <span class="math inline">\((X_1,\ldots,X_k)\)</span> són independents. Per definició,</p>
 <p><span class="math display">\[
-\prod_{j=1}^{k}\Pr(X_j\in A_j),
+P(A_{j_1} \cap ...\cap A_{j_n} )=\prod_{j=1}^{k}\Pr(X_j\in A_j),
 \qquad
 \forall,A_1,\ldots,A_k\in\mathcal{B}(\mathbb{R}).
 \]</span></p>
@@ -333,10 +334,10 @@ f_k(x_k) \\
 \end{aligned}
 \]</span></p>
 <div class="observation">
-<p>Com es va veure en el tema anterior a partir de la distribució conjunta d’un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components. Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin indepen dents.</p>
+<p>Com es va veure en el tema anterior a partir de la distribució conjunta d’un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components. Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin independents.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-49" class="example"><strong>Exemple 2.1  </strong></span>En l’exemple <a href="variables-aleatòries-multivariades.html#exm:circulo">1.25</a> del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l’atzar en el cercle unitats <span class="math inline">\(C_1\)</span> tenia una densitat conjunta</p>
+<p><span id="exm:unlabeled-div-49" class="example"><strong>Exemple 2.1  </strong></span>En l’exemple <a href="variables-aleatòries-multivariades.html#exm:circulo">1.25</a> del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l’atzar en el cercle unitat <span class="math inline">\(C_1\)</span> tenia una densitat conjunta</p>
 <p><span class="math display">\[
 f_{XY}(x,y)=
 \begin{cases}
@@ -1009,6 +1010,7 @@ Figura 2.1: Correlació espúria entre el consum de gelats i morts per ofegament
 </div>
 </div>
 </div>
+<script src="Rcode/sidebar-controls.js"></script>
             </section>
 
           </div>

@@ -1,0 +1,4 @@
+bookdown::gitbook:
+  css: Rcode/custom.css
+  includes:
+    after_body: Rcode/sidebar-controls.html
