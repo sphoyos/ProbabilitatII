@@ -556,11 +556,12 @@ També és possible relacionar la variància absoluta amb la variància condicio
 
 
 :::{.proposition}
-** Llei de la variància total** 
-Si $E[Y^2]" existeix, llavors
+**Llei de la variància total** 
+
+Si $E[Y^2]$ existeix, llavors
 
 $$
-var(Y)=E(var[Y|X])+ var(E[X|Y])  (\#eq:varcond)
+var(Y)=E(var[Y|X])+ var(E[Y|X])  (\#eq:varcond)
 $$
 
 :::
@@ -571,6 +572,7 @@ $$
 &= E\left[(Y - E(Y))^2\right]= E\left\{E\left[(Y - E(Y))^2 \mid X\right]\right\} \\
 &= E\left\{E\left[Y^2 + (E(Y))^2 - 2Y\,E(Y)\mid X\right]\right\} \\
 &= E\left\{E[Y^2\mid X] + E(Y)^2 - 2E(Y)\,E[Y\mid X]\right\} \\
+&= E\left\{E[Y^2\mid X] -E[Y\mid X]^2 +E[Y\mid X]^2 + E(Y)^2 - 2E(Y)\,E[Y\mid X]\right\} \\
 &= E\left\{\operatorname{Var}(Y\mid X)
 + (E[Y\mid X])^2
 + E(Y)^2
@@ -579,7 +581,7 @@ $$
 + \left(E[Y\mid X]-E(Y)\right)^2\right\} \\
 &= E\{\operatorname{Var}(Y\mid X)\}
 + E\left[\left(E[Y\mid X]-E(Y)\right)^2\right] \\
-&= E\left(\operatorname{Var}(Y\mid X)\right)
+&= E\left[\operatorname{Var}(Y\mid X)\right]
 + \operatorname{Var}\left(E[Y\mid X]\right)
 \end{aligned}
 $$
@@ -604,6 +606,9 @@ e^{-y}, & 0\le x\le y,\\
 0, & \text{en la resta}
 \end{cases}
 $$
+Comprova que es cumpleix la llei de la variància total 
+
+Calcularem totes les funcions que necessitem 
 
 **(a) Densitat marginal de $X$**
 
@@ -621,7 +626,7 @@ $$
 
 Per tant,  $Y\sim\Gamma(\alpha=2,\beta=1)$
 
-**(c) Densitat condicional de $(X\mid Y=y$**
+**(c) Densitat condicional de $(X\mid Y=y)$**
 
 $$
 f_{X\mid Y=y}(x)=\frac{f(x,y)}{f_Y(y)}=\frac{e^{-y}}{ye^{-y}}=\frac1y,\qquad 0\le x\le y

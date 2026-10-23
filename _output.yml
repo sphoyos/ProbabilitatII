@@ -1,4 +1,8 @@
 bookdown::gitbook:
   css: Rcode/custom.css
+  download: ["pdf"]
   includes:
     after_body: Rcode/sidebar-controls.html
+
+bookdown::pdf_book:
+  latex_engine: xelatex

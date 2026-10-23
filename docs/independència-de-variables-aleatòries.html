@@ -652,10 +652,10 @@ E_2(X)=\frac{2}{n}\sum_{i=1}^{n}\left|\frac{n+1}{2}-i\right|l=\frac{l(n^2-1)}{2n
 </div>
 <p>També és possible relacionar la variància absoluta amb la variància condicionada, encara que l’expressió no és tan directa com la que s’ha obtingut per a l’esperança.</p>
 <div class="proposition">
-<p><span id="prp:unlabeled-div-59" class="proposition"><strong>Proposició 2.2  </strong></span>** Llei de la variància total**
-Si $E[Y^2]” existeix, llavors</p>
+<p><span id="prp:unlabeled-div-59" class="proposition"><strong>Proposició 2.2  </strong></span><strong>Llei de la variància total</strong></p>
+<p>Si <span class="math inline">\(E[Y^2]\)</span> existeix, llavors</p>
 <p><span class="math display" id="eq:varcond">\[
-var(Y)=E(var[Y|X])+ var(E[X|Y])  \tag{2.12}
+var(Y)=E(var[Y|X])+ var(E[Y|X])  \tag{2.12}
 \]</span></p>
 </div>
 <p><strong>Demostració</strong>
@@ -665,6 +665,7 @@ var(Y)=E(var[Y|X])+ var(E[X|Y])  \tag{2.12}
 &amp;= E\left[(Y - E(Y))^2\right]= E\left\{E\left[(Y - E(Y))^2 \mid X\right]\right\} \\
 &amp;= E\left\{E\left[Y^2 + (E(Y))^2 - 2Y\,E(Y)\mid X\right]\right\} \\
 &amp;= E\left\{E[Y^2\mid X] + E(Y)^2 - 2E(Y)\,E[Y\mid X]\right\} \\
+&amp;= E\left\{E[Y^2\mid X] -E[Y\mid X]^2 +E[Y\mid X]^2 + E(Y)^2 - 2E(Y)\,E[Y\mid X]\right\} \\
 &amp;= E\left\{\operatorname{Var}(Y\mid X)
 + (E[Y\mid X])^2
 + E(Y)^2
@@ -673,7 +674,7 @@ var(Y)=E(var[Y|X])+ var(E[X|Y])  \tag{2.12}
 + \left(E[Y\mid X]-E(Y)\right)^2\right\} \\
 &amp;= E\{\operatorname{Var}(Y\mid X)\}
 + E\left[\left(E[Y\mid X]-E(Y)\right)^2\right] \\
-&amp;= E\left(\operatorname{Var}(Y\mid X)\right)
+&amp;= E\left[\operatorname{Var}(Y\mid X)\right]
 + \operatorname{Var}\left(E[Y\mid X]\right)
 \end{aligned}
 \]</span></p>
@@ -689,7 +690,9 @@ f(x,y)=
 e^{-y}, &amp; 0\le x\le y,\\
 0, &amp; \text{en la resta}
 \end{cases}
-\]</span></p>
+\]</span>
+Comprova que es cumpleix la llei de la variància total</p>
+<p>Calcularem totes les funcions que necessitem</p>
 <p><strong>(a) Densitat marginal de <span class="math inline">\(X\)</span></strong></p>
 <p><span class="math display">\[
 f_X(x)=\int_x^\infty f(x,y)\,dy=\int_x^\infty e^{-y}\,dy=\left[-e^{-y}\right]_x^\infty=e^{-x}
@@ -700,7 +703,7 @@ f_X(x)=\int_x^\infty f(x,y)\,dy=\int_x^\infty e^{-y}\,dy=\left[-e^{-y}\right]_x^
 f_Y(y)=\int_0^y f(x,y)\,dx=\int_0^y e^{-y}\,dx=e^{-y}[x]_0^y=ye^{-y}
 \]</span></p>
 <p>Per tant, <span class="math inline">\(Y\sim\Gamma(\alpha=2,\beta=1)\)</span></p>
-<p><strong>(c) Densitat condicional de <span class="math inline">\((X\mid Y=y\)</span></strong></p>
+<p><strong>(c) Densitat condicional de <span class="math inline">\((X\mid Y=y)\)</span></strong></p>
 <p><span class="math display">\[
 f_{X\mid Y=y}(x)=\frac{f(x,y)}{f_Y(y)}=\frac{e^{-y}}{ye^{-y}}=\frac1y,\qquad 0\le x\le y
 \]</span></p>
