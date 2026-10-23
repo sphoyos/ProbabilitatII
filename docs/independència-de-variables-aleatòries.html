@@ -359,7 +359,7 @@ f_{X}(x)=
 <p><span id="def:unlabeled-div-50" class="definition"><strong>Definició 2.2  </strong></span><strong>Mostra aleatòria</strong></p>
 <p>Considerem una distribució de probabilitat que ve representada per la seva funció de probabilitat o densitat de probabilitat segons sigui discreta o continua. Es diu que n variables aleatòries <span class="math inline">\(X_1,...,X_n\)</span> formen una mostra aleatòria d’aquesta distribució si les variables aleatòries son independents i la funció de probabilitat o densitat marginal de cada variable aleatòria <span class="math inline">\(X_i\)</span> es f. Normalment a este conjunt de variables aleatòrias es diu que son independents i idènticament distribuïdes o abreviadament i.i.d. El nombre de variables aleatòries es la grandària o mida mostral.</p>
 </div>
-<p>D’aquesta definició es dedueix que les dades observades en una mostra de subjectes d’una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu <span class="math inline">\(g(x_1,...,x_n)=f(x_1)...f(x_n)\)</span></p>
+<p>D’aquesta definició es dedueix que les dades observades en una mostra de subjectes d’una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu com<span class="math inline">\(g(x_1,...,x_n)=f(x_1)...f(x_n)\)</span></p>
 <div class="proposition">
 <p><span id="prp:unlabeled-div-51" class="proposition"><strong>Proposició 2.1  </strong></span><strong>Independència i Esperança</strong></p>
 <p>Si <span class="math inline">\(X_1,...,X_k\)</span> són independents, aleshores
@@ -414,7 +414,7 @@ E[\prod_{j=1}^{k}g(X_i)]=\prod_{j=1}^{k}E[g_i(X_i)]\tag{2.5}
 <p>En el tema anterior varem introduir el concepte d’esperança i variància de un vector aleatori, així com el concepte de distribució condicional. En aquest apartat introduirem el concepte de esperança condicional i la seva relació amb el concepte d’independència.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-54" class="definition"><strong>Definició 2.3  </strong></span><strong>Esperança condicionada</strong></p>
-<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori definti sbore l’espai de probabilitat <span class="math inline">\((\Omega,\mathcal{A}, \mathbb{R})\)</span> i sigui <span class="math inline">\(P_{Y|X=x}\)</span> la distribució de probabilitat de Y condicionada a X=x. Si g es una funció mesurable definida de <span class="math inline">\((\mathbb{R},\beta)\)</span> en <span class="math inline">\((\mathbb{R},\beta)\)</span> de manera que <span class="math inline">\(E[g(Y)]\)</span> exiteix, l’esperança condicionada de g(Y) donat X,<span class="math inline">\(E[g(Y)|X]\)</span> es una variable aleatòria que paer <span class="math inline">\(X=x\)</span> pren el valor</p>
+<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori definit sobre l’espai de probabilitat <span class="math inline">\((\Omega,\mathcal{A}, \mathbb{R})\)</span> i sigui <span class="math inline">\(P_{Y|X=x}\)</span> la distribució de probabilitat de Y condicionada a X=x. Si g es una funció mesurable definida de <span class="math inline">\((\mathbb{R},\beta)\)</span> en <span class="math inline">\((\mathbb{R},\beta)\)</span> de manera que <span class="math inline">\(E[g(Y)]\)</span> existeix, l’esperança condicionada de <span class="math inline">\(g(Y)\)</span> donat <span class="math inline">\(X\)</span>,<span class="math inline">\(E[g(Y)|X]\)</span> es una variable aleatòria que per a <span class="math inline">\(X=x\)</span> pren el valor</p>
 <p><span class="math display" id="eq:espcond">\[
 E\!\left[g(Y)\mid X=x\right]
 =
@@ -434,7 +434,7 @@ E[g(Y)\mid X=x]=\sum_{y\in D_x} g(y)P(Y=y\mid X=x)=\sum_{y\in D_x}g(y)f_{Y\mid X
 <p><span class="math display">\[
 E[g(Y)| X=x] =\int_{\mathbb{R}} g(y)f_{Y | X}(y |x) dx
 \]</span></p>
-<p>Així si g(Y)=y tenim</p>
+<p>Així si <span class="math inline">\(g(Y)=Y\)</span> tenim</p>
 <p><span class="math display" id="eq:espcondic">\[
 E[Y\mid X=x]=
 \begin{cases}
@@ -456,7 +456,7 @@ m_y =E[Y \mid X=x]
 que estarà definida per a tot x tal que <span class="math inline">\(f_X(x)&gt;0\)</span> i que la funció de probabilitat o densitat condicionada <span class="math inline">\(f_{Y|X=x}(y)\)</span> tingui esperança finita</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-55" class="definition"><strong>Definició 2.4  </strong></span><strong>Funció de esperança condicionada o regressió</strong></p>
-<p>La funció <span class="math inline">\(m_y =E[Y \mid X=x]\)</span> s’anomena funció de esperança condicionada de Y donat X o també funció de regressió de Y sobre X.</p>
+<p>La funció <span class="math inline">\(m_y(x) =E[Y \mid X=x]\)</span> s’anomena funció de esperança condicionada de Y donat X o també funció de regressió de Y sobre X.</p>
 </div>
 <hr />
 <div class="exemple">
@@ -542,7 +542,7 @@ P(a \leq Y \leq b) = 1 \implies a \leq E(Y|X) \leq b \tag{2.9}
 <li><span class="math display" id="eq:expcondconstant" id="eq:expconddesigual">\[
 P(g_1(Y) \leq g_2(Y)) = 1 \implies E[g_1(Y)|X] \leq E[g_2(Y)|X] \tag{2.10}
 \]</span></li>
-<li><span class="math inline">\(E[c|X]=c\)</span> para c constant. \tag{2.11}</li>
+<li><span class="math inline">\(E[c|X]=c\)</span> per a c constant. \tag{2.11}</li>
 </ol>
 <p>Però hi ha algunes propietats que son específiques de de l’esperança condicional</p>
 <div class="{proposition}">
@@ -577,7 +577,7 @@ f_{XY}(x,y)=
 &amp; \text{en la resta}.
 \end{cases}
 \]</span></p>
-<p>Fècilment obtenim que <span class="math inline">\(X \sim U(0,1)\)</span> i que <span class="math inline">\(Y|X=x \sim U(0,x)\)</span></p>
+<p>Fàcilment obtenim que <span class="math inline">\(X \sim U(0,1)\)</span> i que <span class="math inline">\(Y|X=x \sim U(0,x)\)</span></p>
 <p>aplicant el resultat anterior podem obtenir <span class="math inline">\(E[Y]\)</span></p>
 <p><span class="math display">\[
 E[Y]= \int_0^1 E(Y|x)f_X(x) dx= \int_0^1 \frac{1}{2} xdx=\frac{1}{4}
@@ -594,7 +594,7 @@ E[Y]= \int_0^1 E(Y|x)f_X(x) dx= \int_0^1 \frac{1}{2} xdx=\frac{1}{4}
 <p>Si X es la distància que camina el treballador entre dues avaries consecutives, ¿Quina de les dues estratègies es la més convenient per caminar menys?</p>
 <p>Per tant es tracta de obtenir el valor E[X] amb les dues estratègies i triar la que tingui menys valor esperat. Designem <span class="math inline">\(E_i[X]\)</span> l’esperança que obtenim en cada estratègia <span class="math inline">\(i=1,2\)</span>.</p>
 <p><strong>Estratègia 1</strong></p>
-<p>Si <span class="math inline">\(A_k\)</span> es l’esdeveniment l’operari està en la màquina k. Per obtenir <span class="math inline">\(E_1[X]\)</span> recorrem a la propietat de l’esperança total, però utilitzan com a distribució condicionada la que es deriva condicionar respecte de l’esdeveniment<span class="math inline">\(A_k\)</span>. Tindrem E_1[X]=E[E(A_k]]</p>
+<p>Si <span class="math inline">\(A_k\)</span> es l’esdeveniment l’operari està en la màquina k. Per obtenir <span class="math inline">\(E_1[X]\)</span> recorrem a la propietat de l’esperança total, però utilitzan com a distribució condicionada la que es deriva condicionar respecte de l’esdeveniment<span class="math inline">\(A_k\)</span>. Tindrem E_1[X]=E[E(X|A_k]]</p>
 <p>Para obtenir <span class="math inline">\(E[X\mid A_k])\)</span>, tinguem en compte que, si <span class="math inline">\(i\)</span> és la pròxima màquina avariada, <span class="math inline">\(P(A_i)=\frac{1}{n}, \qquad \forall i=1,\ldots,n,\)</span> i la distància a recórrer serà</p>
 <p><span class="math display">\[
 X\mid A_k=
@@ -608,19 +608,23 @@ X\mid A_k=
 \begin{aligned}
 E(X\mid A_k)
 &amp;= \frac{1}{n} \left( \sum_{i=1}^{k}(k-i)\,l + \sum_{i=k+1}^{n}(i-k)\,l\right)\\
+&amp;=\frac{l}{n} \left( \dfrac{k(k-1)}{2}+ \dfrac{(n-k)(1+n-k)}{2}\right) \\
 &amp;= \frac{l}{2n} \left[ 2k^2-2(n+1)k+n(n+1) \right].
+\end{aligned}
+\]</span></p>
+<p>La distancia esperada és.</p>
+<p><span class="math display">\[
+\begin{aligned}
+E_1[X]
+&amp;= E[E[X\mid A_k]]=\frac{1}{n} \sum_{k=1}^{n} E[X\mid A_k]\\
+&amp;= \frac{l}{2n^2} \sum_{k=1}^{n}\left[2k^2-2(n+1)k+n(n+1)\right] \\
+&amp;=\frac{l}{2n^2}[2\sum_{k=1}^{n}k^2-2(n+1)\sum_{k=1}^{n}k+\sum_{k=1}^{n}n(n+1)] \\
+&amp;= \frac{l(n^2-1)}{3n}.
 \end{aligned}
 \]</span></p>
 <p>Utilitzant</p>
 <p><span class="math display">\[
-\sum_{k=1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6},
-\]</span></p>
-<p>obtenim</p>
-<p><span class="math display">\[
-\begin{aligned}
-E_1(X)=
-E\!\left(E(X\mid A_k)\right)=\frac{1}{n} \sum_{k=1}^{n} E(X\mid A_k)= \frac{l(n^2-1)}{3n}.
-\end{aligned}
+\sum_{k=1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6},  \qquad \sum_{k=1}^{n}k=\frac{n(n+1)}{2},  \qquad \sum_{k=1}^{n} n(n+1)=n^2(n+1)
 \]</span></p>
 <p><strong>Estratègia 2</strong></p>
 <p>Per facilitar els càlculs, suposem que <span class="math inline">\(n\)</span> és imparell, de manera que hi ha una màquina situada al punt mig de la línia, és a dir, la <span class="math inline">\(\frac{n+1}{2}\)</span>-èsima. Si la pròxima màquina avariada és la i-èsima, la distància a recórrer serà</p>
@@ -635,10 +639,10 @@ X=
 <p>L’esperança ve donada per</p>
 <p><span class="math display">\[
 \begin{aligned}
-E_2(X)=\frac{2}{n}\sum_{i=1}^{n}\left|\frac{n+1}{2}-i\right|l,=\frac{l(n-1)}{2}
+E_2(X)=\frac{2}{n}\sum_{i=1}^{n}\left|\frac{n+1}{2}-i\right|l=\frac{l(n^2-1)}{2n}
 \end{aligned}
 \]</span></p>
-<p>Com que <span class="math inline">\(E_1(X)\le E_2(X) \iff \frac{n+1}{3n}\le\frac{1}{2}  \iff n\ge 2\)</span>,podem deduir que la primera estratègia és millor, excepte quan només hi ha una màquina.</p>
+<p>Com que <span class="math inline">\(E_1(X)\le E_2(X) \iff \frac{l(n^2-1)}{3n}&lt;\frac{l(n^2-1)}{2n} \iff \frac{1}{3} &lt; \frac{1}{2}  \iff n\ge 2\)</span>,podem deduir que la primera estratègia és millor, excepte quan només hi ha una màquina.</p>
 </div>
 <hr />
 <div class="definition">
