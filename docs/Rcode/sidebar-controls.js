@@ -9,11 +9,11 @@
 
     var printItem = document.createElement('li');
     printItem.id = 'course-sidebar-print';
-    var printButton = document.createElement('button');
-    printButton.type = 'button';
-    printButton.textContent = 'Imprimeix o desa en PDF';
-    printButton.addEventListener('click', function () { window.print(); });
-    printItem.appendChild(printButton);
+    var pdfLink = document.createElement('a');
+    pdfLink.href = './Probabilitat-II.pdf';
+    pdfLink.download = 'Probabilitat-II.pdf';
+    pdfLink.textContent = 'Descarrega el PDF';
+    printItem.appendChild(pdfLink);
 
     var locationItem = document.createElement('aside');
     locationItem.id = 'course-current-location';

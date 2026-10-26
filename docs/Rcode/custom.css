@@ -146,7 +146,8 @@ background-color:#e4e3e3;
   padding: 4px 18px 12px;
 }
 
-#course-sidebar-print button {
+#course-sidebar-print a {
+  display: block;
   width: 100%;
   padding: 10px 12px;
   border: 0;
@@ -154,11 +155,12 @@ background-color:#e4e3e3;
   background: #0073CE;
   color: #fff;
   font: inherit;
+  text-align: center;
   cursor: pointer;
 }
 
-#course-sidebar-print button:hover,
-#course-sidebar-print button:focus {
+#course-sidebar-print a:hover,
+#course-sidebar-print a:focus {
   background: #005a9e;
 }
 
