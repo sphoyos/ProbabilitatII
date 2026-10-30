@@ -2118,7 +2118,7 @@ I la distribució marginal del quocient s'obté integrant respecte a l'altra com
 
 
 $$
-f_{Q}(q)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(\dfrac{q}{v},v)dv
+f_{Q}(q)= \int_{- \infty}^{+ \infty} |v|f_{XY}(\dfrac{q}{v},v)dv
 $$
 
  

@@ -364,7 +364,7 @@ f_{X}(x)=
 <p><span id="prp:unlabeled-div-51" class="proposition"><strong>Proposició 2.1  </strong></span><strong>Independència i Esperança</strong></p>
 <p>Si <span class="math inline">\(X_1,...,X_k\)</span> són independents, aleshores
 <span class="math display" id="eq:indep">\[
-E[X_1,...,X_k]=E[\prod_{j=1}^{k}X_i]=\prod_{j=1}^{k}E[X_i] \tag{2.4}
+E[X_1,...,X_k]=E[\prod_{i=1}^{k}X_i]=\prod_{i=1}^{k}E[X_i] \tag{2.4}
 \]</span></p>
 <p><strong>Demostració</strong></p>
 <p>Utilitzant la definició de esperança d’un vector i la intercanviabilitat de les integrals i els productes de funcions pel teorema de Fubini podem demostrar</p>
@@ -440,7 +440,7 @@ E[Y\mid X=x]=
 \begin{cases}
 \displaystyle
 \int_{-\infty}^{\infty}
-y\,f_{Y\mid X=x}(y)\,dy,
+y\,f_{Y\mid X=x}(y)\,dx,
 &amp; \text{en el cas continu},\\
 \displaystyle
 \sum_{y}
@@ -830,7 +830,7 @@ i d’ací</p>
 <p><span class="math display" id="eq:desigepsilon">\[
 P(X \geq \epsilon) \leq \dfrac{E[X]}{\epsilon} \tag{2.13}
 \]</span></p>
-<p>Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcionen cotes superiors paer a la probabilitat de certs conjunts i que son vàlides independentment de la distribució de la variable involucrada.</p>
+<p>Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcionen cotes superiors per a la probabilitat de certs conjunts i que son vàlides independentment de la distribució de la variable involucrada.</p>
 <p><strong>Desigualtat de Markov</strong></p>
 <p>Si en la desigualtat <a href="independència-de-variables-aleatòries.html#eq:desigepsilon">(2.13)</a> substituïm <span class="math inline">\(X\)</span> per <span class="math inline">\(|X|^k\)</span> i <span class="math inline">\(\epsilon\)</span> per <span class="math inline">\(\epsilon^k\)</span> tenim</p>
 <p><span class="math display" id="eq:desmarkov">\[
@@ -838,12 +838,14 @@ P(|X| \geq \epsilon)=P(|X|^k \geq \epsilon^k) \leq \dfrac{E[|X|^k]}{\epsilon^k} 
 \]</span>
 coneguda com a desigualtat de Markov.</p>
 <p><strong>Desigualtat de Txebixev</strong></p>
-<p>Un cas especial de <a href="independència-de-variables-aleatòries.html#eq:desmarkov">(2.14)</a>, que es coneix com la desigualtat de Txebixev, és el cas en el que k=2 i X=X-E[X]</p>
+<p>Un cas especial de <a href="independència-de-variables-aleatòries.html#eq:desmarkov">(2.14)</a>, que es coneix com la desigualtat de Txebixev, és el cas en el que <span class="math inline">\(k=2\)</span> Si
+<span class="math inline">\(X=X-E[X]\)</span></p>
 <p><span class="math display" id="eq:destxebixev">\[
 P(|X-E[X]| \geq \epsilon) \leq \frac {1}{\epsilon^2}Var(X)     \tag{2.15}
 \]</span></p>
-<div class="proposition">
-<p><span id="prp:unlabeled-div-62" class="proposition"><strong>Proposició 2.3  </strong></span>Si <span class="math inline">\(V(X)=0\)</span> aleshores <span class="math inline">\(X\)</span> es constant amb probabilitat 1.</p>
+<p>:::
+:::{.proposition}</p>
+<p>Si <span class="math inline">\(V(X)=0\)</span> aleshores <span class="math inline">\(X\)</span> es constant amb probabilitat 1.</p>
 <p><strong>Demostració</strong></p>
 <p>Suposem <span class="math inline">\(E[X]=\mu\)</span> i considerem els conjunts <span class="math inline">\(A_n={|X-\mu| \geq 1/n}\)</span> aplicant la desigualtat de Txebixev</p>
 <p><span class="math display">\[
@@ -854,7 +856,6 @@ d’aci obtenim que <span class="math inline">\(P(\cup_n A_n)=0\)</span> i <span
 \bigcap_{n\geq1} A_n^c=\bigcap_{n\geq1} \{  |X-\mu| \geq \frac{1}{n} \}=\{X=\mu \}
 \]</span>
 i per tant <span class="math inline">\(P(X=\mu)=1\)</span></p>
-</div>
 <p><strong>Desigualtat de Jensen</strong></p>
 <p>Si <span class="math inline">\(g(X)\)</span> es convexa sabem que <span class="math inline">\(\forall a, \exists \lambda_a\)</span> tal que <span class="math inline">\(g(x) \geq g(a)+lambda_a(x-a)\)</span></p>
 <p>Si es substitueix <span class="math inline">\(a=E[X]\)</span> llavors</p>
@@ -874,20 +875,7 @@ E[g(X)] \geq g(E[X])   \tag{2.16}
 verificant-se la igualtat si i només si existeix un nombre real tal que <span class="math inline">\(P(\alpha X+Y=0)=1\)</span></p>
 </div>
 <p><strong>Demostració</strong>
-Per qualsevol nombre real <span class="math inline">\(a\)</span> i <span class="math inline">\(b\)</span> es verifica que:</p>
-<p><span class="math display">\[
-|ab| \leq \dfrac {a^2+b^2}{2}
-\]</span>
-el que significa que si <span class="math inline">\(E[XY]&lt;\infty\)</span>, <span class="math inline">\(E[X^2]&lt;\infty\)</span> i <span class="math inline">\(E[Y^2]&lt;\infty\)</span></p>
-<p>Per altra banda per qualsevol real <span class="math inline">\(\alpha\)</span> es te que:</p>
-<p><span class="math display">\[
-E[(\alpha X+Y)]^2 =\alpha^2 E[X^2] +2 \alpha E[XY]+E[X^2] \geq 0
-\]</span>
-que es tracta d’una equació de segon grau que te almenys una arrel i el seu discriminant no serà positiu. És a dir:</p>
-<p><span class="math display">\[
-(E[XY])^2\leq E[X^2] E[Y^2]
-\]</span>
-Si es donés el cas de la igualtat, l’equació tindria una arrel doble <span class="math inline">\(\alpha0\)</span> i <span class="math inline">\(E[(\alpha_0 X+Y)]^2=0\)</span> de una funció no negativa que implica que <span class="math inline">\(P(\alpha_0 X+Y=0)=1\)</span></p>
+Covar</p>
 </div>
 <div id="covariància-i-correlació" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Covariància i Correlació<a href="independència-de-variables-aleatòries.html#covari%C3%A0ncia-i-correlaci%C3%B3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -895,9 +883,9 @@ Si es donés el cas de la igualtat, l’equació tindria una arrel doble <span c
 <p><span class="math display">\[
 cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=E[(X_iX_j)]-E[X_i]E[X_j]
 \]</span></p>
-<p>La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si <span class="math inline">\(X\)</span> es el pes i <span class="math inline">\(Y\)</span> es l’alçada en centímetres i transformem l’alçada en metres multiplicant per 100 Cov(X,100Y)= 100Cov(X,Y) segons <a href="variables-aleatòries-multivariades.html#eq:provcov5">(1.15)</a></p>
+<p>La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si <span class="math inline">\(X\)</span> es el pes i <span class="math inline">\(Y\)</span> es l’alçada en centímetres i transformem l’alçada en metres multiplicant per <span class="math inline">\(Cov(X,100Y)= 100Cov(X,Y)\)</span> segons <a href="variables-aleatòries-multivariades.html#eq:provcov5">(1.15)</a></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-63" class="definition"><strong>Definició 2.6  </strong></span><strong>Coeficient de correlació</strong></p>
+<p><span id="def:unlabeled-div-62" class="definition"><strong>Definició 2.6  </strong></span><strong>Coeficient de correlació</strong></p>
 <p>Si (X,Y) són variables aleatòries amb variànces finites <span class="math inline">\(Var(X)=\sigma_X^2\)</span> I <span class="math inline">\(Var(Y)=\sigma_Y^2\)</span> la correlació <span class="math inline">\(\rho(X,Y)\)</span> entre <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> es defineix com</p>
 <p><span class="math display">\[
 \rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
@@ -905,7 +893,7 @@ cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=E[(X_iX_j)]-E[X_i]E[X_j]
 es a dir la covariància de les variables <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> tipificades</p>
 </div>
 <div class="proposition">
-<p><span id="prp:unlabeled-div-64" class="proposition"><strong>Proposició 2.4  </strong></span>Siguin <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> dues variables aleatòries amb variància finita llavors</p>
+<p><span id="prp:unlabeled-div-63" class="proposition"><strong>Proposició 2.3  </strong></span>Siguin <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> dues variables aleatòries amb variància finita llavors</p>
 <p><span class="math display">\[
 (Cov(X,Y))^2 \leq \sigma_X^2 \sigma_Y^2
 \]</span>
@@ -942,7 +930,7 @@ i per tant
 <p>Si <span class="math inline">\(\rho_{XY}&gt;0\)</span> parlarem de que les variables estàn positivament correlacionades i si <span class="math inline">\(\rho_{XY}&lt;0\)</span> direm que estan negativament correlacionades.</p>
 <p>Si <span class="math inline">\(\rho_{XY}=0\)</span> es diu que les variables estan incorrelades i a més a més la <span class="math inline">\(Cov(X,Y)=0\)</span> i hi ha absència de correlació lineal.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-65" class="theorem"><strong>Theorem 2.3  </strong></span>Si <span class="math inline">\(X_i\)</span> i <span class="math inline">\(X_j\)</span> son independents aleshores <span class="math inline">\(Cov(X_i,X_J)=\rho{X_i,X_J}=0\)</span></p>
+<p><span id="thm:unlabeled-div-64" class="theorem"><strong>Theorem 2.3  </strong></span>Si <span class="math inline">\(X_i\)</span> i <span class="math inline">\(X_j\)</span> son independents aleshores <span class="math inline">\(Cov(X_i,X_J)=\rho{X_i,X_J}=0\)</span></p>
 </div>
 <p><strong>Demostració</strong></p>
 <p>Si dues variables son independents l’esperança del producte es el producte d’esperances .</p>
@@ -953,7 +941,7 @@ cov(X_i,X_j)=E[(X_iX_j)]-E[X_i]E[X_j]=E[X_i]E[X_j]-E[X_i]E[X_j]=0
 <p>L’invers del teorema anterior no es cumpleix en general, es a dir dues variables poden estar incorrelades però no ser independents.</p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-66" class="example"><strong>Exemple 2.5  </strong></span>Imaginem una variable aleatòria <span class="math inline">\(X\)</span> que pren només tres valors <span class="math inline">\(\{-1,0,1\}\)</span> i que cadascú d’aquests valors te la mateixa probabilitat <span class="math inline">\((1/3\)</span>. Imaginem la variable <span class="math inline">\(Y=X^2\)</span>. Les dues variables clarament no son independents per definició ja que els valors de Y estan completament determinats pels valors de Y.</p>
+<p><span id="exm:unlabeled-div-65" class="example"><strong>Exemple 2.5  </strong></span>Imaginem una variable aleatòria <span class="math inline">\(X\)</span> que pren només tres valors <span class="math inline">\(\{-1,0,1\}\)</span> i que cadascú d’aquests valors te la mateixa probabilitat <span class="math inline">\((1/3\)</span>. Imaginem la variable <span class="math inline">\(Y=X^2\)</span>. Les dues variables clarament no son independents per definició ja que els valors de Y estan completament determinats pels valors de Y.</p>
 <p>Si calculem <span class="math inline">\(E[XY]=E[X^3]=E[X]=0\)</span> ja que la variable <span class="math inline">\(X\)</span> i <span class="math inline">\(X^3\)</span> son la mateixa que X. A més <span class="math inline">\(E[X]E[Y]=0\)</span> ja que <span class="math inline">\(E[X]=0\)</span>-</p>
 <p>Per tant</p>
 <p><span class="math display">\[

@@ -163,7 +163,7 @@ D'aquesta definició es dedueix que les dades observades en una mostra de subjec
 
 Si $X_1,...,X_k$ són independents, aleshores 
 $$ 
-E[X_1,...,X_k]=E[\prod_{j=1}^{k}X_i]=\prod_{j=1}^{k}E[X_i] (\#eq:indep)
+E[X_1,...,X_k]=E[\prod_{i=1}^{k}X_i]=\prod_{i=1}^{k}E[X_i] (\#eq:indep)
 $$
 
 **Demostració**
@@ -263,7 +263,7 @@ E[Y\mid X=x]=
 \begin{cases}
 \displaystyle
 \int_{-\infty}^{\infty}
-y\,f_{Y\mid X=x}(y)\,dy,
+y\,f_{Y\mid X=x}(y)\,dx,
 & \text{en el cas continu},\\
 \displaystyle
 \sum_{y}
@@ -556,6 +556,7 @@ També és possible relacionar la variància absoluta amb la variància condicio
 
 
 :::{.proposition}
+
 **Llei de la variància total** 
 
 Si $E[Y^2]$ existeix, llavors
@@ -565,6 +566,7 @@ var(Y)=E(var[Y|X])+ var(E[Y|X])  (\#eq:varcond)
 $$
 
 :::
+
 **Demostració**
 $$
 \begin{aligned}
@@ -796,7 +798,7 @@ $$
  P(X \geq \epsilon) \leq \dfrac{E[X]}{\epsilon} (\#eq:desigepsilon)
  $$
  
-Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcionen cotes superiors paer a la probabilitat de certs conjunts i que son vàlides independentment de la distribució de la variable involucrada.
+Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcionen cotes superiors per a la probabilitat de certs conjunts i que son vàlides independentment de la distribució de la variable involucrada.
 
 
 **Desigualtat de Markov**
@@ -812,13 +814,16 @@ Si en la desigualtat  \@ref(eq:desigepsilon) substituïm $X$ per $|X|^k$  i $\ep
  
  **Desigualtat de Txebixev**
  
- Un cas especial de  \@ref(eq:desmarkov),  que es coneix com la desigualtat de Txebixev, és el cas en el que k=2 i X=X-E[X] 
+ Un cas especial de  \@ref(eq:desmarkov),  que es coneix com la desigualtat de Txebixev, és el cas en el que $k=2$ Si
+ $X=X-E[X]$
+ 
  
 
  $$
  P(|X-E[X]| \geq \epsilon) \leq \frac {1}{\epsilon^2}Var(X)     (\#eq:destxebixev)
  $$
 
+:::
 :::{.proposition} 
  
 Si $V(X)=0$ aleshores $X$ es constant amb probabilitat 1.
@@ -837,7 +842,6 @@ $$
 $$
 i per tant $P(X=\mu)=1$
 
-:::
 
 **Desigualtat de Jensen**
  
@@ -868,25 +872,7 @@ verificant-se la igualtat si i només si existeix un nombre real tal que $P(\alp
 :::
 
 **Demostració**
-Per qualsevol nombre real $a$ i $b$ es verifica que:
-
-$$
-|ab| \leq \dfrac {a^2+b^2}{2}
-$$
-el que significa que si $E[XY]<\infty$, $E[X^2]<\infty$ i $E[Y^2]<\infty$ 
-
-Per altra banda per qualsevol real $\alpha$ es te que:
-
-$$
-E[(\alpha X+Y)]^2 =\alpha^2 E[X^2] +2 \alpha E[XY]+E[X^2] \geq 0
-$$
-que es tracta d'una equació de segon grau que te almenys una arrel i el seu discriminant no serà positiu. És a dir:
-
-
-$$
-(E[XY])^2\leq E[X^2] E[Y^2]
-$$
- Si es donés el cas de la igualtat, l'equació tindria una arrel doble $\alpha0$ i $E[(\alpha_0 X+Y)]^2=0$ de una funció no negativa que implica que $P(\alpha_0 X+Y=0)=1$
+Covar
 
 ### Covariància i Correlació
 
@@ -896,7 +882,7 @@ $$
 cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=E[(X_iX_j)]-E[X_i]E[X_j] 
 $$
 
-La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si $X$ es el pes i $Y$ es l'alçada en centímetres i transformem l'alçada en metres multiplicant per 100 Cov(X,100Y)= 100Cov(X,Y)  segons   \@ref(eq:provcov5)
+La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si $X$ es el pes i $Y$ es l'alçada en centímetres i transformem l'alçada en metres multiplicant per $Cov(X,100Y)= 100Cov(X,Y)$  segons   \@ref(eq:provcov5)
 
 
 
