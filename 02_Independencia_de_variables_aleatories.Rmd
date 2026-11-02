@@ -892,7 +892,7 @@ La covariància ens informa sobre el grau i tipus de dependència entre dues var
 Si (X,Y) són variables aleatòries amb variànces finites $Var(X)=\sigma_X^2$ I $Var(Y)=\sigma_Y^2$   la correlació $\rho(X,Y)$ entre $X$ i $Y$  es defineix com
 
 $$
-\rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
+\rho(X,Y)=\dfrac{Cov(X,Y)} {\sqrt{Var(X)Var(Y)}}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
 $$
 es a dir la covariància de les variables $X$ i $Y$ tipificades 
 
@@ -935,7 +935,7 @@ $$
  Com a conseqüència si $\sigma_X>0$ i  $\sigma_Y>0$  el coeficient de correlació es 
  
 $$
-\rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
+\rho(X,Y)=\dfrac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
 $$ 
  i elevant al quadrat
  

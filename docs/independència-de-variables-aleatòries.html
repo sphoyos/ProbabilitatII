@@ -888,7 +888,7 @@ cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=E[(X_iX_j)]-E[X_i]E[X_j]
 <p><span id="def:unlabeled-div-62" class="definition"><strong>Definició 2.6  </strong></span><strong>Coeficient de correlació</strong></p>
 <p>Si (X,Y) són variables aleatòries amb variànces finites <span class="math inline">\(Var(X)=\sigma_X^2\)</span> I <span class="math inline">\(Var(Y)=\sigma_Y^2\)</span> la correlació <span class="math inline">\(\rho(X,Y)\)</span> entre <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> es defineix com</p>
 <p><span class="math display">\[
-\rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
+\rho(X,Y)=\dfrac{Cov(X,Y)} {\sqrt{Var(X)Var(Y)}}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
 \]</span>
 es a dir la covariància de les variables <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> tipificades</p>
 </div>
@@ -916,7 +916,7 @@ A més sabem que <span class="math inline">\(E[X_c^2]=Var(X)=\sigma_X^2\)</span>
 \]</span>
 Com a conseqüència si <span class="math inline">\(\sigma_X&gt;0\)</span> i <span class="math inline">\(\sigma_Y&gt;0\)</span> el coeficient de correlació es</p>
 <p><span class="math display">\[
-\rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
+\rho(X,Y)=\dfrac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
 \]</span>
 i elevant al quadrat</p>
 <p><span class="math display">\[
@@ -930,7 +930,7 @@ i per tant
 <p>Si <span class="math inline">\(\rho_{XY}&gt;0\)</span> parlarem de que les variables estàn positivament correlacionades i si <span class="math inline">\(\rho_{XY}&lt;0\)</span> direm que estan negativament correlacionades.</p>
 <p>Si <span class="math inline">\(\rho_{XY}=0\)</span> es diu que les variables estan incorrelades i a més a més la <span class="math inline">\(Cov(X,Y)=0\)</span> i hi ha absència de correlació lineal.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-64" class="theorem"><strong>Theorem 2.3  </strong></span>Si <span class="math inline">\(X_i\)</span> i <span class="math inline">\(X_j\)</span> son independents aleshores <span class="math inline">\(Cov(X_i,X_J)=\rho{X_i,X_J}=0\)</span></p>
+<p><span id="thm:unlabeled-div-64" class="theorem"><strong>Theorem 2.3  </strong></span>Si <span class="math inline">\(X_i\)</span> i <span class="math inline">\(X_j\)</span> son independents aleshores <span class="math inline">\(Cov(X_i,X_J)=\rho_{X_i,X_J}=0\)</span></p>
 </div>
 <p><strong>Demostració</strong></p>
 <p>Si dues variables son independents l’esperança del producte es el producte d’esperances .</p>
@@ -942,7 +942,7 @@ cov(X_i,X_j)=E[(X_iX_j)]-E[X_i]E[X_j]=E[X_i]E[X_j]-E[X_i]E[X_j]=0
 <hr />
 <div class="example">
 <p><span id="exm:unlabeled-div-65" class="example"><strong>Exemple 2.5  </strong></span>Imaginem una variable aleatòria <span class="math inline">\(X\)</span> que pren només tres valors <span class="math inline">\(\{-1,0,1\}\)</span> i que cadascú d’aquests valors te la mateixa probabilitat <span class="math inline">\((1/3\)</span>. Imaginem la variable <span class="math inline">\(Y=X^2\)</span>. Les dues variables clarament no son independents per definició ja que els valors de Y estan completament determinats pels valors de Y.</p>
-<p>Si calculem <span class="math inline">\(E[XY]=E[X^3]=E[X]=0\)</span> ja que la variable <span class="math inline">\(X\)</span> i <span class="math inline">\(X^3\)</span> son la mateixa que X. A més <span class="math inline">\(E[X]E[Y]=0\)</span> ja que <span class="math inline">\(E[X]=0\)</span>-</p>
+<p>Si calculem <span class="math inline">\(E[XY]=E[X^3]=E[X]=0\)</span> ja que la variable <span class="math inline">\(X\)</span> i <span class="math inline">\(X^3\)</span> son la mateixa que X. A més <span class="math inline">\(E[X]E[Y]=0\)</span> ja que <span class="math inline">\(E[X]=0\)</span></p>
 <p>Per tant</p>
 <p><span class="math display">\[
 Cov(X,Y)=E[X,Y] -E[X]E[Y]=0-0=0
