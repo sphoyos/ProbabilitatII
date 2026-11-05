@@ -281,11 +281,11 @@ q(x,y)=\dfrac{1}{1-\rho^2} \left\{ \left(\dfrac{x-\mu_x}{\sigma_x}\right)^2 -2 \
 <p><strong>Primera condició.</strong> Es veu de manera immediata que <span class="math inline">\(f_{XY}(x,y)\ge 0\)</span> per a tot <span class="math inline">\((x,y)\in\mathbb{R}^2\)</span>, ja que és el producte d’una constant positiva per una exponencial.</p>
 <p><strong>Segona condició.</strong> Hem de veure que</p>
 <p><span class="math display">\[
-\int_{\mathbb{R}^2} f_{XY}(x,y)\,dx\,dy=1 .
+\int_{\mathbb{R}^2} f_{XY}(x,y)\,dx\,dy=1
 \]</span></p>
 <p>Per simplificar la notació, posem</p>
 <p><span class="math display">\[
-u=\frac{x-\mu_x}{\sigma_x},\qquad v=\frac{y-\mu_y}{\sigma_y}.
+u=\frac{x-\mu_x}{\sigma_x},\qquad v=\frac{y-\mu_y}{\sigma_y}
 \]</span></p>
 <p>Completant el quadrat respecte de <span class="math inline">\(u\)</span>, tenim</p>
 <p><span class="math display" id="eq:qxysimp">\[
@@ -298,11 +298,11 @@ u-\rho v=\frac{x-\mu_x}{\sigma_x}-\rho\,\frac{y-\mu_y}{\sigma_y}
 \]</span></p>
 <p>amb</p>
 <p><span class="math display">\[
-b=\mu_x+\rho\,\sigma_x\,\frac{y-\mu_y}{\sigma_y}.
+b=\mu_x+\rho\,\sigma_x\,\frac{y-\mu_y}{\sigma_y}
 \]</span></p>
 <p>Substituint <a href="algunes-distribucions-multivariants.html#eq:qxysimp1">(3.4)</a> a <a href="algunes-distribucions-multivariants.html#eq:qxysimp">(3.3)</a>:</p>
 <p><span class="math display">\[
-(1-\rho^2)\,q(x,y)=\left(\frac{x-b}{\sigma_x}\right)^2+(1-\rho^2)\left(\frac{y-\mu_y}{\sigma_y}\right)^2 ,
+(1-\rho^2)\,q(x,y)=\left(\frac{x-b}{\sigma_x}\right)^2+(1-\rho^2)\left(\frac{y-\mu_y}{\sigma_y}\right)^2
 \]</span></p>
 <p>i per tant</p>
 <p><span class="math display">\[
@@ -317,7 +317,7 @@ b=\mu_x+\rho\,\sigma_x\,\frac{y-\mu_y}{\sigma_y}.
 </ul>
 <p>Això demostra que <span class="math inline">\(f_{XY}\)</span> és una densitat. A més, com que la integral interior val <span class="math inline">\(1\)</span>, la densitat marginal de <span class="math inline">\(Y\)</span> s’obté de la conjunta.
 <span class="math display">\[
-f_Y(y)=\int_{-\infty}^{+\infty} f_{XY}(x,y)\,dx=\frac{1}{\sigma_y\sqrt{2\pi}}\,e^{-\frac12\left(\frac{y-\mu_y}{\sigma_y}\right)^2},
+f_Y(y)=\int_{-\infty}^{+\infty} f_{XY}(x,y)\,dx=\frac{1}{\sigma_y\sqrt{2\pi}}\,e^{-\frac12\left(\frac{y-\mu_y}{\sigma_y}\right)^2}
 \]</span></p>
 <p>és a dir, <span class="math inline">\(Y\sim N(\mu_y,\sigma_y^2)\)</span>. Per simetria, <span class="math inline">\(X\sim N(\mu_x,\sigma_x^2)\)</span>.</p>
 </div>
