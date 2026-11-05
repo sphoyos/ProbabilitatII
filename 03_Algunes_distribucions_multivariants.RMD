@@ -25,6 +25,80 @@ $$
 :::
 
 
+:::{.proposition}
+La funció $f_{XY}(x,y)$ és una funció de probabilitat i les densitats marginals $f_X$ i $f_Y$ corresponen a les densitats normals univariants amb paramètres $(\mu_X,\sigma_X^2)$ i  $(\mu_Y,\sigma_Y^2)$ respectivament
+:::
+
+:::{.Proof}
+
+
+Per veure que es una densitat hem de veure que la funció es positiva i que la integral en $\mathbb{R}^2$ és 1.
+
+**Primera condició.** Es veu de manera immediata que $f_{XY}(x,y)\ge 0$ per a tot $(x,y)\in\mathbb{R}^2$, ja que és el producte d'una constant positiva per una exponencial.
+
+**Segona condició.** Hem de veure que
+
+$$
+\int_{\mathbb{R}^2} f_{XY}(x,y)\,dx\,dy=1 .
+$$
+
+Per simplificar la notació, posem
+
+$$
+u=\frac{x-\mu_x}{\sigma_x},\qquad v=\frac{y-\mu_y}{\sigma_y}.
+$$
+
+Completant el quadrat respecte de $u$, tenim
+
+$$
+(1-\rho^2)\,q(x,y)=u^2-2\rho\,uv+v^2=(u-\rho v)^2+(1-\rho^2)\,v^2.  (\#eq:qxysimp)
+$$
+
+El primer sumand de \@ref(eq:qxysimp) és pot escriure com
+
+$$
+u-\rho v=\frac{x-\mu_x}{\sigma_x}-\rho\,\frac{y-\mu_y}{\sigma_y}
+=\frac{1}{\sigma_x}\left(x-\Big(\mu_x+\rho\,\sigma_x\,\frac{y-\mu_y}{\sigma_y}\Big)\right)=\frac{x-b}{\sigma_x}, (\#eq:qxysimp1)
+$$
+
+amb
+
+$$
+b=\mu_x+\rho\,\sigma_x\,\frac{y-\mu_y}{\sigma_y}.
+$$
+
+Substituint  \@ref(eq:qxysimp1) a \@ref(eq:qxysimp):
+
+$$
+(1-\rho^2)\,q(x,y)=\left(\frac{x-b}{\sigma_x}\right)^2+(1-\rho^2)\left(\frac{y-\mu_y}{\sigma_y}\right)^2 ,
+$$
+
+i per tant
+
+$$
+\int_{\mathbb{R}^2} f_{XY}\,dx\,dy=
+\int_{-\infty}^{+\infty}\frac{1}{\sigma_y\sqrt{2\pi}}\,e^{-\frac12\left(\frac{y-\mu_y}{\sigma_y}\right)^2}
+\left[\int_{-\infty}^{+\infty}\frac{1}{\sigma_x\sqrt{2\pi(1-\rho^2)}}\,e^{-\frac{1}{2(1-\rho^2)}\left(\frac{x-b}{\sigma_x}\right)^2}dx\right]dy  
+$$
+
+* La integral interior (en $x$, amb $y$ fixat) és la integral de la densitat d'una
+  $N\big(b,\ \sigma_x^2(1-\rho^2)\big)$ i, per tant, val $1$.
+* La integral exterior (en $y$) és la integral de la densitat d'una $N(\mu_y,\sigma_y^2)$ i, per tant, també val $1$.
+
+Això demostra que $f_{XY}$ és una densitat. A més, com que la integral interior val $1$, la densitat marginal de $Y$ s'obté de la conjunta. 
+$$
+f_Y(y)=\int_{-\infty}^{+\infty} f_{XY}(x,y)\,dx=\frac{1}{\sigma_y\sqrt{2\pi}}\,e^{-\frac12\left(\frac{y-\mu_y}{\sigma_y}\right)^2},
+$$
+
+és a dir, $Y\sim N(\mu_y,\sigma_y^2)$. Per simetria, $X\sim N(\mu_x,\sigma_x^2)$.
+
+
+:::
+
+
+
+
+
 En la figura  \@ref(fig:graf-binormalrho) es mostra en la part esquerra la distribució de densitat normal bivariant conjunta i en la part dreta es mostren les corbes de nivell. Es pot veure la forma el·líptica que té la figura que mostra el nivell de correlació entre les dues variables, que és molt estreta ja que la correlació és $\rho=0.8$. 
 
 
