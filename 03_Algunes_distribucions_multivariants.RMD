@@ -417,7 +417,7 @@ Com que
 
 $\operatorname{Cov}(X,Y)=\rho\sigma_x\sigma_y$ i $\sigma_x,\sigma_y>0$, s'obté $\rho=0$
 
-$\Leftarrow$ Si $\rho=0$, aleshores $(X)$ i $(Y)$ són independents
+$\Leftarrow$ Si $\rho=0$, aleshores $X$ i $Y$ són independents
 
 Suposem ara que $\rho=0$. La densitat conjunta esdevé
 
@@ -444,7 +444,7 @@ Així, en una distribució normal bivariant, la incorrelació és equivalent a l
 :::{.theorem}
 **Distribucions condicionals**
 
-Sigui $(X,Y)$ un vector aleatori que sequeix una distribució normal bivariant amb paràmetres  $\mu_x,\mu_y\in\mathbb{R}$ y $\sigma_x,\sigma_y>0$ i $\rho \in [-1,1]$ amb la funció  de densitat definida en \@ref(eq:fxybinorm) corresponent a una distribució normal bivariant. La distribució condicional de $y$ donat que $X=x$  es una distribució normal amb la esperança i variància següent:
+Sigui $(X,Y)$ un vector aleatori que sequeix una distribució normal bivariant amb paràmetres  $\mu_x amb la funció  de densitat definida en \@ref(eq:fxybinorm) corresponent a una distribució normal bivariant. La distribució condicional de $y$ donat que $X=x$  es una distribució normal amb la esperança i variància següent:
 
 $$
 E(Y|X=x]= \mu_Y+\rho \sigma_Y \left (  \dfrac {X-\mu_X}{\sigma_X}\right )   (\#eq:espcondbinorm)
@@ -515,7 +515,7 @@ $$
 4- Per la llei de la variància iterada
 
 $$
-\text{Var}(Y) = \underbrace{\text{E}(\text{Var}(Y|X))}_{\textit{VNE}} + \underbrace{\text{Var}(\text{E}(Y|X))}_{\textit{VE}} \quad on \quad \rho^2= \frac {VE}{VNE+VE}
+\text{Var}(Y) = \underbrace{\text{E}(\text{Var}(Y|X))}_{\textit{VNE}} + \underbrace{\text{Var}(\text{E}(Y|X))}_{\textit{VE}} \quad \text{on} \quad \rho^2= \frac {VE}{VNE+VE}
 $$
 
 ---
@@ -525,7 +525,7 @@ $$
 El històric anàlisi de les dades de Francis Galton que posteriorment va formalitzar Karl Pearson sobre les estatures des pares i fills mesurades en polsades. Es sap que la distribució conjunta $(X,Y)$ de les dues alçades de pares i fills segueix una llei normal bivariant. Estem interessats en predir l'alçada de un fill Y en dues situacions:
 
 1- No tenim més informació que la distribució conjunta i per tant la predicció es $\mu_Y$ amb una variància $\sigma_Y^2$
-2- Coneixem l'alçada del pare X=X, llavors la predicció será $E[Y \mid X=x]=\mu_Y+\sigma_Y \rho \dfrac{x-\mu_X}{\sigma_X}$ i variància $\sigma_Y^2 (1-\rho^2)<\sigma_Y^2$. La variància no depen de x i per tant l'error es independent de l'alçada del pare.
+2- Coneixem l'alçada del pare X=x, llavors la predicció será $E[Y \mid X=x]=\mu_Y+\sigma_Y \rho \dfrac{x-\mu_X}{\sigma_X}$ i variància $\sigma_Y^2 (1-\rho^2)<\sigma_Y^2$. La variància no depen de x i per tant l'error es independent de l'alçada del pare.
 
 
 Asumim els valors de la distribució normal bivariada  $\mu_X=68.3, \sigma_X=10.8, \mu_Y=68.1, \sigma_Y=2.5 \quad i \quad \rho=0.5$ la distribució és:
@@ -565,7 +565,7 @@ Si resolem les qüestions pendents
 ::: {.definition}
 **Distribució normal multivariant**
 
-Sigui un vector aleatori $X=(X_1,....,X_n)$  on  $\boldsymbol{\mu}^{\prime}=(\mu_1,...,\mu_n)$ és el vector de mitjanes o valors esperats i  $|\Sigma|$ es el determinant de  la matriu de variàncies covariàncies $\Sigma$ que pren el valor 
+Sigui un vector aleatori $X=(X_1,....,X_n)$  on  $\boldsymbol{\mu}^{\prime}=(\mu_1,...,\mu_n)$ és el vector de mitjanes o valors esperats i  $|\Sigma|$ és el determinant de  la matriu de variàncies covariàncies $\Sigma$ que pren el valor 
 
 $$
 \Sigma=
@@ -594,14 +594,45 @@ $$
 f(x_1, x_2, \dots, x_n) = \frac{1}{\prod_{i=1}^n (2\pi\sigma_i^2)^{\frac{1}{2}}} e^{-\frac{1}{2} \sum_{i=1}^n \left(\frac{x_i - \mu_i}{\sigma_i}\right)^2} = \prod_{i=1}^n \left[ \frac{1}{\sqrt{2\pi\sigma_i^2}} e^{-\frac{1}{2} \left(\frac{x_i - \mu_i}{\sigma_i}\right)^2} \right]
 $$
 
-que no es més que el producte de les densitats de les normals de cadascuna de les components. Per tant en el cas multivariant també la incorrelació implica independència.
+que no és més que el producte de les densitats de les normals de cadascuna de les components. Per tant en el cas multivariant també la incorrelació implica independència.
 
 La forma quadràtica de l'exponent en una distribució normal multivariant  (coneguda com la distància de Mahalanobis) es redueix a la suma clàssica de residus al quadrat ponderats per la variància:
 
 $$
 (\mathbf{x} - \boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x} - \boldsymbol{\mu}) = \sum_{i=1}^n \left(\frac{x_i - \mu_i}{\sigma_i}\right)^2
 $$
+## Transformació lineal d'una Normal multivariant
 
+A partir del vector $\mathbf{X}$ definim un nou vector $\mathbf{Y}$ mitjançant una transformació lineal la matriu $A$ de la qual és invertible. Tindrem
+
+$$
+\mathbf{Y} = A\mathbf{X}, \qquad \text{i} \qquad \mathbf{X} = A^{-1}\mathbf{Y},
+$$
+
+i, donada la linealitat de l'esperança, la mateixa relació es verifica per als vectors de mitjanes,
+
+$$
+\boldsymbol{\mu}_Y = A\boldsymbol{\mu}_X, \qquad \text{i} \qquad \boldsymbol{\mu}_X = A^{-1}\boldsymbol{\mu}_Y.
+$$
+
+Per conèixer la distribució del vector $\mathbf{Y}$ recorrerem a la fórmula del canvi de variable (1.36). El jacobià de la transformació inversa és precisament $|J^{-1}| = |A^{-1}|$, amb la qual cosa la densitat conjunta de $\mathbf{Y} = (Y_1, Y_2, \ldots, Y_n)$ valdrà
+
+$$
+\begin{aligned}
+f_{\mathbf{Y}}(y_1, y_2, \ldots, y_n)
+&= \frac{|\Sigma|^{-1/2}}{(2\pi)^{n/2}}
+\, e^{-\frac{1}{2}(A^{-1}\mathbf{y} - A^{-1}\boldsymbol{\mu}_Y)'\,\Sigma^{-1}\,(A^{-1}\mathbf{y} - A^{-1}\boldsymbol{\mu}_Y)}
+\, |A^{-1}| \\[2mm]
+&= \frac{|A^{-1}|\,|\Sigma|^{-1/2}}{(2\pi)^{n/2}}
+\, e^{-\frac{1}{2}\left[A^{-1}(\mathbf{y} - \boldsymbol{\mu}_Y)\right]'\,\Sigma^{-1}\,\left[A^{-1}(\mathbf{y} - \boldsymbol{\mu}_Y)\right]} \\[2mm]
+&= \frac{|A^{-1}|\,|\Sigma|^{-1/2}}{(2\pi)^{n/2}}
+\, e^{-\frac{1}{2}(\mathbf{y} - \boldsymbol{\mu}_Y)'\,[A^{-1}]'\,\Sigma^{-1}\,A^{-1}\,(\mathbf{y} - \boldsymbol{\mu}_Y)} \\[2mm]
+&= \frac{|A\Sigma A'|^{-1/2}}{(2\pi)^{n/2}}
+\, e^{-\frac{1}{2}(\mathbf{y} - \boldsymbol{\mu}_Y)'\,[A\Sigma A']^{-1}\,(\mathbf{y} - \boldsymbol{\mu}_Y)},
+\end{aligned}
+$$
+
+que és la densitat d'una Normal multivariant amb vector de mitjanes $\boldsymbol{\mu}_Y = A\boldsymbol{\mu}_X$ i matriu de covariàncies $\Sigma_Y = A\Sigma A'$.
  
 ##  Distribucions especials:  Multinomial, t-Student multivariant,Khi-quadrat, Wishart  i Dirichlet.
 
@@ -1230,7 +1261,7 @@ Per generar un parell $(x_1, x_2)$:
 
  **Implementació en R**
 
-```{r simulacio-bivariant}
+```{r simulacio-bivariant,echo=TRUE}
 # Funció per simular N observacions del vector (X1, X2)
 simular_bivariant_condicional <- function(N, rho) {
   # 1. Generem valors uniformes independents
@@ -1335,7 +1366,7 @@ $$\begin{pmatrix} X_1 \\ X_2 \end{pmatrix} = \mathbf{C} \begin{pmatrix} Z_1 \\ Z
 
 **Implementació en R**
 
-```{r simulacio-cholesky, message=FALSE, warning=FALSE}
+```{r simulacio-cholesky,echo=TRUE}
 library(ggplot2)
 
 # Funció per simular una Normal Multivariant usant Cholesky

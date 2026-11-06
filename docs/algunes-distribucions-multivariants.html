@@ -551,7 +551,7 @@ f_Y(y)=\frac{1}{\sqrt{2\pi}\sigma_y}\exp\left(-\frac{(y-\mu_y)^2}{2\sigma_y^2}\r
 ja que l’esperança del producte es factoritza per la independència.</p>
 <p>Com que</p>
 <p><span class="math inline">\(\operatorname{Cov}(X,Y)=\rho\sigma_x\sigma_y\)</span> i <span class="math inline">\(\sigma_x,\sigma_y&gt;0\)</span>, s’obté <span class="math inline">\(\rho=0\)</span></p>
-<p><span class="math inline">\(\Leftarrow\)</span> Si <span class="math inline">\(\rho=0\)</span>, aleshores <span class="math inline">\((X)\)</span> i <span class="math inline">\((Y)\)</span> són independents</p>
+<p><span class="math inline">\(\Leftarrow\)</span> Si <span class="math inline">\(\rho=0\)</span>, aleshores <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> són independents</p>
 <p>Suposem ara que <span class="math inline">\(\rho=0\)</span>. La densitat conjunta esdevé</p>
 <p><span class="math display">\[
 f_{X,Y}(x,y)=\frac{1}{2\pi\sigma_x\sigma_y}\exp\left[-\frac12\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)\right].
@@ -569,7 +569,7 @@ X\perp Y\quad\Longleftrightarrow\quad\rho=0
 Així, en una distribució normal bivariant, la incorrelació és equivalent a la independència.</p>
 <div class="theorem">
 <p><span id="thm:unlabeled-div-73" class="theorem"><strong>Theorem 3.1  </strong></span><strong>Distribucions condicionals</strong></p>
-<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori que sequeix una distribució normal bivariant amb paràmetres <span class="math inline">\(\mu_x,\mu_y\in\mathbb{R}\)</span> y <span class="math inline">\(\sigma_x,\sigma_y&gt;0\)</span> i <span class="math inline">\(\rho \in [-1,1]\)</span> amb la funció de densitat definida en <a href="algunes-distribucions-multivariants.html#eq:fxybinorm">(3.1)</a> corresponent a una distribució normal bivariant. La distribució condicional de <span class="math inline">\(y\)</span> donat que <span class="math inline">\(X=x\)</span> es una distribució normal amb la esperança i variància següent:</p>
+<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori que sequeix una distribució normal bivariant amb paràmetres $_x amb la funció de densitat definida en <a href="algunes-distribucions-multivariants.html#eq:fxybinorm">(3.1)</a> corresponent a una distribució normal bivariant. La distribució condicional de <span class="math inline">\(y\)</span> donat que <span class="math inline">\(X=x\)</span> es una distribució normal amb la esperança i variància següent:</p>
 <p><span class="math display" id="eq:espcondbinorm">\[
 E(Y|X=x]= \mu_Y+\rho \sigma_Y \left (  \dfrac {X-\mu_X}{\sigma_X}\right )   \tag{3.12}
 \]</span></p>
@@ -621,13 +621,13 @@ E[Y|X] \sim N(\mu_X,\rho^2 \sigma_Y^2)
 \]</span>
 4- Per la llei de la variància iterada</p>
 <p><span class="math display">\[
-\text{Var}(Y) = \underbrace{\text{E}(\text{Var}(Y|X))}_{\textit{VNE}} + \underbrace{\text{Var}(\text{E}(Y|X))}_{\textit{VE}} \quad on \quad \rho^2= \frac {VE}{VNE+VE}
+\text{Var}(Y) = \underbrace{\text{E}(\text{Var}(Y|X))}_{\textit{VNE}} + \underbrace{\text{Var}(\text{E}(Y|X))}_{\textit{VE}} \quad \text{on} \quad \rho^2= \frac {VE}{VNE+VE}
 \]</span></p>
 <hr />
 <div class="exammple">
 <p>El històric anàlisi de les dades de Francis Galton que posteriorment va formalitzar Karl Pearson sobre les estatures des pares i fills mesurades en polsades. Es sap que la distribució conjunta <span class="math inline">\((X,Y)\)</span> de les dues alçades de pares i fills segueix una llei normal bivariant. Estem interessats en predir l’alçada de un fill Y en dues situacions:</p>
 <p>1- No tenim més informació que la distribució conjunta i per tant la predicció es <span class="math inline">\(\mu_Y\)</span> amb una variància <span class="math inline">\(\sigma_Y^2\)</span>
-2- Coneixem l’alçada del pare X=X, llavors la predicció será <span class="math inline">\(E[Y \mid X=x]=\mu_Y+\sigma_Y \rho \dfrac{x-\mu_X}{\sigma_X}\)</span> i variància <span class="math inline">\(\sigma_Y^2 (1-\rho^2)&lt;\sigma_Y^2\)</span>. La variància no depen de x i per tant l’error es independent de l’alçada del pare.</p>
+2- Coneixem l’alçada del pare X=x, llavors la predicció será <span class="math inline">\(E[Y \mid X=x]=\mu_Y+\sigma_Y \rho \dfrac{x-\mu_X}{\sigma_X}\)</span> i variància <span class="math inline">\(\sigma_Y^2 (1-\rho^2)&lt;\sigma_Y^2\)</span>. La variància no depen de x i per tant l’error es independent de l’alçada del pare.</p>
 <p>Asumim els valors de la distribució normal bivariada <span class="math inline">\(\mu_X=68.3, \sigma_X=10.8, \mu_Y=68.1, \sigma_Y=2.5 \quad i \quad \rho=0.5\)</span> la distribució és:
 <span class="math display">\[
 \begin{pmatrix}
@@ -657,7 +657,7 @@ N
 <h3><span class="header-section-number">3.1.3</span> Distribució normal multivariant<a href="algunes-distribucions-multivariants.html#distribuci%C3%B3-normal-multivariant" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
 <p><span id="def:unlabeled-div-74" class="definition"><strong>Definició 3.4  </strong></span><strong>Distribució normal multivariant</strong></p>
-<p>Sigui un vector aleatori <span class="math inline">\(X=(X_1,....,X_n)\)</span> on <span class="math inline">\(\boldsymbol{\mu}^{\prime}=(\mu_1,...,\mu_n)\)</span> és el vector de mitjanes o valors esperats i <span class="math inline">\(|\Sigma|\)</span> es el determinant de la matriu de variàncies covariàncies <span class="math inline">\(\Sigma\)</span> que pren el valor</p>
+<p>Sigui un vector aleatori <span class="math inline">\(X=(X_1,....,X_n)\)</span> on <span class="math inline">\(\boldsymbol{\mu}^{\prime}=(\mu_1,...,\mu_n)\)</span> és el vector de mitjanes o valors esperats i <span class="math inline">\(|\Sigma|\)</span> és el determinant de la matriu de variàncies covariàncies <span class="math inline">\(\Sigma\)</span> que pren el valor</p>
 <p><span class="math display">\[
 \Sigma=
 \begin{bmatrix}
@@ -677,11 +677,36 @@ f(x_1,...,x_n=\dfrac {|\Sigma|^{-\frac{1}{2}}}{(2\pi)^\frac{1}{2}} e^{ -\frac{1}
 <p><span class="math display">\[
 f(x_1, x_2, \dots, x_n) = \frac{1}{\prod_{i=1}^n (2\pi\sigma_i^2)^{\frac{1}{2}}} e^{-\frac{1}{2} \sum_{i=1}^n \left(\frac{x_i - \mu_i}{\sigma_i}\right)^2} = \prod_{i=1}^n \left[ \frac{1}{\sqrt{2\pi\sigma_i^2}} e^{-\frac{1}{2} \left(\frac{x_i - \mu_i}{\sigma_i}\right)^2} \right]
 \]</span></p>
-<p>que no es més que el producte de les densitats de les normals de cadascuna de les components. Per tant en el cas multivariant també la incorrelació implica independència.</p>
+<p>que no és més que el producte de les densitats de les normals de cadascuna de les components. Per tant en el cas multivariant també la incorrelació implica independència.</p>
 <p>La forma quadràtica de l’exponent en una distribució normal multivariant (coneguda com la distància de Mahalanobis) es redueix a la suma clàssica de residus al quadrat ponderats per la variància:</p>
 <p><span class="math display">\[
 (\mathbf{x} - \boldsymbol{\mu})^T \Sigma^{-1} (\mathbf{x} - \boldsymbol{\mu}) = \sum_{i=1}^n \left(\frac{x_i - \mu_i}{\sigma_i}\right)^2
+\]</span>
+## Transformació lineal d’una Normal multivariant</p>
+<p>A partir del vector <span class="math inline">\(\mathbf{X}\)</span> definim un nou vector <span class="math inline">\(\mathbf{Y}\)</span> mitjançant una transformació lineal la matriu <span class="math inline">\(A\)</span> de la qual és invertible. Tindrem</p>
+<p><span class="math display">\[
+\mathbf{Y} = A\mathbf{X}, \qquad \text{i} \qquad \mathbf{X} = A^{-1}\mathbf{Y},
 \]</span></p>
+<p>i, donada la linealitat de l’esperança, la mateixa relació es verifica per als vectors de mitjanes,</p>
+<p><span class="math display">\[
+\boldsymbol{\mu}_Y = A\boldsymbol{\mu}_X, \qquad \text{i} \qquad \boldsymbol{\mu}_X = A^{-1}\boldsymbol{\mu}_Y.
+\]</span></p>
+<p>Per conèixer la distribució del vector <span class="math inline">\(\mathbf{Y}\)</span> recorrerem a la fórmula del canvi de variable (1.36). El jacobià de la transformació inversa és precisament <span class="math inline">\(|J^{-1}| = |A^{-1}|\)</span>, amb la qual cosa la densitat conjunta de <span class="math inline">\(\mathbf{Y} = (Y_1, Y_2, \ldots, Y_n)\)</span> valdrà</p>
+<p><span class="math display">\[
+\begin{aligned}
+f_{\mathbf{Y}}(y_1, y_2, \ldots, y_n)
+&amp;= \frac{|\Sigma|^{-1/2}}{(2\pi)^{n/2}}
+\, e^{-\frac{1}{2}(A^{-1}\mathbf{y} - A^{-1}\boldsymbol{\mu}_Y)&#39;\,\Sigma^{-1}\,(A^{-1}\mathbf{y} - A^{-1}\boldsymbol{\mu}_Y)}
+\, |A^{-1}| \\[2mm]
+&amp;= \frac{|A^{-1}|\,|\Sigma|^{-1/2}}{(2\pi)^{n/2}}
+\, e^{-\frac{1}{2}\left[A^{-1}(\mathbf{y} - \boldsymbol{\mu}_Y)\right]&#39;\,\Sigma^{-1}\,\left[A^{-1}(\mathbf{y} - \boldsymbol{\mu}_Y)\right]} \\[2mm]
+&amp;= \frac{|A^{-1}|\,|\Sigma|^{-1/2}}{(2\pi)^{n/2}}
+\, e^{-\frac{1}{2}(\mathbf{y} - \boldsymbol{\mu}_Y)&#39;\,[A^{-1}]&#39;\,\Sigma^{-1}\,A^{-1}\,(\mathbf{y} - \boldsymbol{\mu}_Y)} \\[2mm]
+&amp;= \frac{|A\Sigma A&#39;|^{-1/2}}{(2\pi)^{n/2}}
+\, e^{-\frac{1}{2}(\mathbf{y} - \boldsymbol{\mu}_Y)&#39;\,[A\Sigma A&#39;]^{-1}\,(\mathbf{y} - \boldsymbol{\mu}_Y)},
+\end{aligned}
+\]</span></p>
+<p>que és la densitat d’una Normal multivariant amb vector de mitjanes <span class="math inline">\(\boldsymbol{\mu}_Y = A\boldsymbol{\mu}_X\)</span> i matriu de covariàncies <span class="math inline">\(\Sigma_Y = A\Sigma A&#39;\)</span>.</p>
 </div>
 </div>
 <div id="distribucions-especials-multinomial-t-student-multivariantkhi-quadrat-wishart-i-dirichlet." class="section level2 hasAnchor" number="3.2">
@@ -1153,9 +1178,44 @@ Sabem que</p>
 </ul></li>
 </ol>
 <p><strong>Implementació en R</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="algunes-distribucions-multivariants.html#cb1-1" tabindex="-1"></a><span class="co"># Funció per simular N observacions del vector (X1, X2)</span></span>
+<span id="cb1-2"><a href="algunes-distribucions-multivariants.html#cb1-2" tabindex="-1"></a>simular_bivariant_condicional <span class="ot">&lt;-</span> <span class="cf">function</span>(N, rho) {</span>
+<span id="cb1-3"><a href="algunes-distribucions-multivariants.html#cb1-3" tabindex="-1"></a>  <span class="co"># 1. Generem valors uniformes independents</span></span>
+<span id="cb1-4"><a href="algunes-distribucions-multivariants.html#cb1-4" tabindex="-1"></a>  U1 <span class="ot">&lt;-</span> <span class="fu">runif</span>(N)</span>
+<span id="cb1-5"><a href="algunes-distribucions-multivariants.html#cb1-5" tabindex="-1"></a>  U2 <span class="ot">&lt;-</span> <span class="fu">runif</span>(N)</span>
+<span id="cb1-6"><a href="algunes-distribucions-multivariants.html#cb1-6" tabindex="-1"></a>  </span>
+<span id="cb1-7"><a href="algunes-distribucions-multivariants.html#cb1-7" tabindex="-1"></a>  <span class="co"># PAS 1: Inversió univariant per a X1 (marginal) </span></span>
+<span id="cb1-8"><a href="algunes-distribucions-multivariants.html#cb1-8" tabindex="-1"></a>  x1 <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(U1, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb1-9"><a href="algunes-distribucions-multivariants.html#cb1-9" tabindex="-1"></a>  </span>
+<span id="cb1-10"><a href="algunes-distribucions-multivariants.html#cb1-10" tabindex="-1"></a>  <span class="co"># PAS 2: Inversió univariant per a X2 | X1 = x1 (condicional)</span></span>
+<span id="cb1-11"><a href="algunes-distribucions-multivariants.html#cb1-11" tabindex="-1"></a>  mu_cond <span class="ot">&lt;-</span> rho <span class="sc">*</span> x1</span>
+<span id="cb1-12"><a href="algunes-distribucions-multivariants.html#cb1-12" tabindex="-1"></a>  sd_cond <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">1</span> <span class="sc">-</span> rho<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb1-13"><a href="algunes-distribucions-multivariants.html#cb1-13" tabindex="-1"></a>  x2 <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(U2, <span class="at">mean =</span> mu_cond, <span class="at">sd =</span> sd_cond)</span>
+<span id="cb1-14"><a href="algunes-distribucions-multivariants.html#cb1-14" tabindex="-1"></a>  </span>
+<span id="cb1-15"><a href="algunes-distribucions-multivariants.html#cb1-15" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">cbind</span>(<span class="at">X1 =</span> x1, <span class="at">X2 =</span> x2))</span>
+<span id="cb1-16"><a href="algunes-distribucions-multivariants.html#cb1-16" tabindex="-1"></a>}</span>
+<span id="cb1-17"><a href="algunes-distribucions-multivariants.html#cb1-17" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="algunes-distribucions-multivariants.html#cb1-18" tabindex="-1"></a><span class="co"># Exemple d&#39;execució</span></span>
+<span id="cb1-19"><a href="algunes-distribucions-multivariants.html#cb1-19" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb1-20"><a href="algunes-distribucions-multivariants.html#cb1-20" tabindex="-1"></a>mostres <span class="ot">&lt;-</span> <span class="fu">simular_bivariant_condicional</span>(<span class="at">N =</span> <span class="dv">1000</span>, <span class="at">rho =</span> <span class="fl">0.8</span>)</span>
+<span id="cb1-21"><a href="algunes-distribucions-multivariants.html#cb1-21" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="algunes-distribucions-multivariants.html#cb1-22" tabindex="-1"></a><span class="co"># Comprovació de la matriu de covariàncies mostral</span></span>
+<span id="cb1-23"><a href="algunes-distribucions-multivariants.html#cb1-23" tabindex="-1"></a><span class="fu">cov</span>(mostres)</span></code></pre></div>
 <pre><code>##           X1        X2
 ## X1 0.9436775 0.7727192
 ## X2 0.7727192 0.9971821</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="algunes-distribucions-multivariants.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="algunes-distribucions-multivariants.html#cb3-2" tabindex="-1"></a><span class="fu">ggplot</span>(mostres, <span class="fu">aes</span>(<span class="at">x =</span> X1, <span class="at">y =</span> X2)) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="algunes-distribucions-multivariants.html#cb3-3" tabindex="-1"></a>  <span class="co"># Punts simulats amb certa transparència</span></span>
+<span id="cb3-4"><a href="algunes-distribucions-multivariants.html#cb3-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">color =</span> <span class="st">&quot;steelblue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="algunes-distribucions-multivariants.html#cb3-5" tabindex="-1"></a>  <span class="co"># Línies de contorn de la densitat bivariant</span></span>
+<span id="cb3-6"><a href="algunes-distribucions-multivariants.html#cb3-6" tabindex="-1"></a>  <span class="fu">geom_density_2d</span>(<span class="at">color =</span> <span class="st">&quot;#FF6B6B&quot;</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb3-7"><a href="algunes-distribucions-multivariants.html#cb3-7" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb3-8"><a href="algunes-distribucions-multivariants.html#cb3-8" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-9"><a href="algunes-distribucions-multivariants.html#cb3-9" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Simulació i Contorns d&#39;una Normal Bivariant (rho = 0.8)&quot;</span>,</span>
+<span id="cb3-10"><a href="algunes-distribucions-multivariants.html#cb3-10" tabindex="-1"></a>    <span class="at">x =</span> <span class="fu">expression</span>(X[<span class="dv">1</span>]),</span>
+<span id="cb3-11"><a href="algunes-distribucions-multivariants.html#cb3-11" tabindex="-1"></a>    <span class="at">y =</span> <span class="fu">expression</span>(X[<span class="dv">2</span>])</span>
+<span id="cb3-12"><a href="algunes-distribucions-multivariants.html#cb3-12" tabindex="-1"></a>  )</span></code></pre></div>
 <p><img src="images/simulacio-bivariant-1.png" alt="" width="672" /></p>
 </div>
 <hr />
@@ -1188,9 +1248,53 @@ Així la matriu <span class="math inline">\(C=\sqrt{D}U\)</span> que satisfa <sp
 <p><span class="math display">\[\begin{pmatrix} X_1 \\ X_2 \end{pmatrix} = \mathbf{C} \begin{pmatrix} Z_1 \\ Z_2 \end{pmatrix} = \begin{pmatrix} Z_1 \\ \rho Z_1 + \sqrt{1 - \rho^2} Z_2 \end{pmatrix}\]</span></p>
 <p><em>(Observem que s’obté exactament la mateixa relació que en el mètode de les condicionals).</em></p>
 <p><strong>Implementació en R</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="algunes-distribucions-multivariants.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-2"><a href="algunes-distribucions-multivariants.html#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="algunes-distribucions-multivariants.html#cb4-3" tabindex="-1"></a><span class="co"># Funció per simular una Normal Multivariant usant Cholesky</span></span>
+<span id="cb4-4"><a href="algunes-distribucions-multivariants.html#cb4-4" tabindex="-1"></a>simular_normal_cholesky <span class="ot">&lt;-</span> <span class="cf">function</span>(N, mu, Sigma) {</span>
+<span id="cb4-5"><a href="algunes-distribucions-multivariants.html#cb4-5" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">length</span>(mu)</span>
+<span id="cb4-6"><a href="algunes-distribucions-multivariants.html#cb4-6" tabindex="-1"></a>  </span>
+<span id="cb4-7"><a href="algunes-distribucions-multivariants.html#cb4-7" tabindex="-1"></a>  <span class="co"># 1. Generem matriu d&#39;esborrany Z de dimensions (d x N) de N(0,1)</span></span>
+<span id="cb4-8"><a href="algunes-distribucions-multivariants.html#cb4-8" tabindex="-1"></a>  Z <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(d <span class="sc">*</span> N), <span class="at">nrow =</span> d, <span class="at">ncol =</span> N)</span>
+<span id="cb4-9"><a href="algunes-distribucions-multivariants.html#cb4-9" tabindex="-1"></a>  </span>
+<span id="cb4-10"><a href="algunes-distribucions-multivariants.html#cb4-10" tabindex="-1"></a>  <span class="co"># 2. Descomposició de Cholesky (en R, chol() retorna la triangular SUPERIOR,</span></span>
+<span id="cb4-11"><a href="algunes-distribucions-multivariants.html#cb4-11" tabindex="-1"></a>  <span class="co">#    per tant fem t(chol(Sigma)) per tenir C triangular inferior)</span></span>
+<span id="cb4-12"><a href="algunes-distribucions-multivariants.html#cb4-12" tabindex="-1"></a>  C <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">chol</span>(Sigma))</span>
+<span id="cb4-13"><a href="algunes-distribucions-multivariants.html#cb4-13" tabindex="-1"></a>  </span>
+<span id="cb4-14"><a href="algunes-distribucions-multivariants.html#cb4-14" tabindex="-1"></a>  <span class="co"># 3. Transformació lineal: X = mu + C %*% Z</span></span>
+<span id="cb4-15"><a href="algunes-distribucions-multivariants.html#cb4-15" tabindex="-1"></a>  X <span class="ot">&lt;-</span> <span class="fu">t</span>(mu <span class="sc">+</span> C <span class="sc">%*%</span> Z)</span>
+<span id="cb4-16"><a href="algunes-distribucions-multivariants.html#cb4-16" tabindex="-1"></a>  </span>
+<span id="cb4-17"><a href="algunes-distribucions-multivariants.html#cb4-17" tabindex="-1"></a>  <span class="fu">colnames</span>(X) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;X&quot;</span>, <span class="dv">1</span><span class="sc">:</span>d)</span>
+<span id="cb4-18"><a href="algunes-distribucions-multivariants.html#cb4-18" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">as.data.frame</span>(X))</span>
+<span id="cb4-19"><a href="algunes-distribucions-multivariants.html#cb4-19" tabindex="-1"></a>}</span>
+<span id="cb4-20"><a href="algunes-distribucions-multivariants.html#cb4-20" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="algunes-distribucions-multivariants.html#cb4-21" tabindex="-1"></a><span class="co"># Paràmetres del cas bivariant</span></span>
+<span id="cb4-22"><a href="algunes-distribucions-multivariants.html#cb4-22" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb4-23"><a href="algunes-distribucions-multivariants.html#cb4-23" tabindex="-1"></a>rho <span class="ot">&lt;-</span> <span class="fl">0.8</span></span>
+<span id="cb4-24"><a href="algunes-distribucions-multivariants.html#cb4-24" tabindex="-1"></a>Sigma <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, rho, </span>
+<span id="cb4-25"><a href="algunes-distribucions-multivariants.html#cb4-25" tabindex="-1"></a>                  rho, <span class="dv">1</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb4-26"><a href="algunes-distribucions-multivariants.html#cb4-26" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="algunes-distribucions-multivariants.html#cb4-27" tabindex="-1"></a><span class="co"># Simulació de 2000 mostres</span></span>
+<span id="cb4-28"><a href="algunes-distribucions-multivariants.html#cb4-28" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">12345</span>)</span>
+<span id="cb4-29"><a href="algunes-distribucions-multivariants.html#cb4-29" tabindex="-1"></a>mostres_cholesky <span class="ot">&lt;-</span> <span class="fu">simular_normal_cholesky</span>(<span class="at">N =</span> <span class="dv">2000</span>, <span class="at">mu =</span> mu, <span class="at">Sigma =</span> Sigma)</span>
+<span id="cb4-30"><a href="algunes-distribucions-multivariants.html#cb4-30" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="algunes-distribucions-multivariants.html#cb4-31" tabindex="-1"></a><span class="co"># Comprovació de la matriu de covariàncies mostral</span></span>
+<span id="cb4-32"><a href="algunes-distribucions-multivariants.html#cb4-32" tabindex="-1"></a> <span class="fu">cov</span>(mostres_cholesky)</span></code></pre></div>
 <pre><code>##           X1        X2
 ## X1 0.9598590 0.7725724
 ## X2 0.7725724 0.9671766</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="algunes-distribucions-multivariants.html#cb6-1" tabindex="-1"></a><span class="co"># Diagrama de dispersió de les dades i corbes de nivell</span></span>
+<span id="cb6-2"><a href="algunes-distribucions-multivariants.html#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="algunes-distribucions-multivariants.html#cb6-3" tabindex="-1"></a> <span class="fu">ggplot</span>(mostres_cholesky, <span class="fu">aes</span>(<span class="at">x =</span> X1, <span class="at">y =</span> X2)) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="algunes-distribucions-multivariants.html#cb6-4" tabindex="-1"></a>   <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.25</span>, <span class="at">color =</span> <span class="st">&quot;darkgreen&quot;</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="algunes-distribucions-multivariants.html#cb6-5" tabindex="-1"></a>   <span class="fu">geom_density_2d</span>(<span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="algunes-distribucions-multivariants.html#cb6-6" tabindex="-1"></a>   <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb6-7"><a href="algunes-distribucions-multivariants.html#cb6-7" tabindex="-1"></a>   <span class="fu">labs</span>(</span>
+<span id="cb6-8"><a href="algunes-distribucions-multivariants.html#cb6-8" tabindex="-1"></a>     <span class="at">title =</span> <span class="st">&quot;Simulació Normal Bivariant via Descomposició de Cholesky&quot;</span>,</span>
+<span id="cb6-9"><a href="algunes-distribucions-multivariants.html#cb6-9" tabindex="-1"></a>     <span class="at">subtitle =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(mu, <span class="st">&quot; = (0,0), &quot;</span>, rho, <span class="st">&quot; = 0.8&quot;</span>)),</span>
+<span id="cb6-10"><a href="algunes-distribucions-multivariants.html#cb6-10" tabindex="-1"></a>      <span class="at">x =</span> <span class="fu">expression</span>(X[<span class="dv">1</span>]),</span>
+<span id="cb6-11"><a href="algunes-distribucions-multivariants.html#cb6-11" tabindex="-1"></a>      <span class="at">y =</span> <span class="fu">expression</span>(X[<span class="dv">2</span>])</span>
+<span id="cb6-12"><a href="algunes-distribucions-multivariants.html#cb6-12" tabindex="-1"></a>   )</span></code></pre></div>
 <p><img src="images/simulacio-cholesky-1.png" alt="" width="672" /></p>
 </div>
 <hr />
