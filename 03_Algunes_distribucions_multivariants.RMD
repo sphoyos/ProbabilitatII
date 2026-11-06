@@ -165,7 +165,7 @@ source("Rcode/binormalrho0.r")
 Sigui  $Z_1 \sim N(0,1)$ i  $Z_2 \sim N(0,1)$  amb $Z_1$ i $Z_2$  i la correlació $\rho \in (-1,1)$ 
 Llavors  
 $$
-f_{Z_1, Z_2}(z_1,z_2)= \dfrac {1}{2\pi\sqrt{1-\rho^2 }}e^{(-\frac{1}{2(1-\rho^2)})(z_1^2-2\rho z_1z_2 +z_2^2)}   (\#eq:fxybinormstandcorr
+f_{Z_1, Z_2}(z_1,z_2)= \dfrac {1}{2\pi\sqrt{1-\rho^2 }}e^{(-\frac{1}{2(1-\rho^2)})(z_1^2-2\rho z_1z_2 +z_2^2)}   (\#eq:fxybinormstandcorr)
 $$
 
 es defineix com la funció de densitat conjunta  de la distribució normal bivariant estàndard amb marginals correlades
@@ -178,7 +178,7 @@ es defineix com la funció de densitat conjunta  de la distribució normal bivar
 
 :::{.example}
 
-Per qüestions de conveniència formal hem introduït la distribució de les variables normals bivariants com a combinació de variables aleatòries normals independents. Cal remarcar que en nombroses ocasions aquesta distribució es la manera habitual com es presenten les dades. De fet Karl Pearson a partir de les dades treballades de Francis Galton a finals del segle 19, planteja el coeficient de correlació entre les alçades dels pares i els fills, on hi ha un correlació diferent de 0 entre elles. Els pares alts tendeixen a tenir els fills alts i a l'inrevés en els baixets. Aquesta seria una distribució normal bivariant.
+Per qüestions de conveniència formal hem introduït la distribució de les variables normals bivariants com a combinació de variables aleatòries normals independents. Cal remarcar que en nombroses ocasions aquesta distribució es la manera habitual com es presenten les dades. De fet Karl Pearson a partir de les dades treballades de Francis Galton a finals del segle XIX, planteja el coeficient de correlació entre les alçades dels pares i els fills, on hi ha un correlació diferent de 0 entre elles. Els pares alts tendeixen a tenir els fills alts i a l'inrevés en els baixets. Aquesta seria una distribució normal bivariant.
 
 :::
 
@@ -335,7 +335,7 @@ $$
 **Distribucions marginals**
 
 
-Sigui $(X,Y)$ un vector aleatori que segueix una distribució normal bivariant amb paràmetres  $\mu_x,\mu_y\in\mathbb{R}$ y $\sigma_x,\sigma_y>0$ i $\rho \in [-1,1]$. que tal com hem vist podem representar com la combinació de distribucions normals estàndard $Z_1,Z_2$. Per això  X e Y segueixen una una distribució normal $X \sim N(\mu_x,\sigma_x)$ i $Y \sim N(\mu_y,\sigma_y)$
+Sigui $(X,Y)$ un vector aleatori que segueix una distribució normal bivariant amb paràmetres  $\mu_x,\mu_y\in\mathbb{R}$ y $\sigma_x,\sigma_y>0$ i $\rho \in [-1,1]$. que tal com hem vist podem representar com la combinació de distribucions normals estàndard $Z_1,Z_2$. Per això  X e Y segueixen una distribució normal $X \sim N(\mu_x,\sigma_x)$ i $Y \sim N(\mu_y,\sigma_y)$
 
 En la figura \@ref(fig:img-distmargi) es mostren les distribucions marginals de la distribució normal bivariant que es veu segueixen  una distribució normal. 
 
@@ -367,7 +367,7 @@ N
 \right)
 $$
 
-Llavors $X$ i $Y$ son independents si i només si $\rho=0$. És a dir , en una distribució normal bivariant, la absència de correlació equival a la independència.
+
 :::
 **Demostració**
 
@@ -402,9 +402,9 @@ $$
 
 Cal demostrar les dues implicacions.
 
-$\Rightarrow$ Si (X) i (Y) són independents, aleshores $\rho=0$
+$\Rightarrow$ Si $X$ i $Y$ són independents, aleshores $\rho=0$
 
-Si (X) i (Y) són independents,$f_{X,Y}(x,y)=f_X(x)f_Y(y)$
+Si $X$ i $Y$ són independents,$f_{X,Y}(x,y)=f_X(x)f_Y(y)$
 
 D'altra banda,
 
@@ -432,7 +432,7 @@ f_{X,Y}(x,y)=\left[\frac{1}{\sqrt{2\pi}\sigma_x}\exp\left(-\frac{(x-\mu_x)^2}{2\
 -\frac{(y-\mu_y)^2}{2\sigma_y^2}\right)\right] =f_X(x)f_Y(y)
 $$
 
-La densitat conjunta factoritza com el producte de les densitats marginals. Per la caracterització de la independència mitjançant les densitats, es conclou que (X) i (Y) són independents.
+La densitat conjunta factoritza com el producte de les densitats marginals. Per la caracterització de la independència mitjançant les densitats, es conclou que $X$ i $Y$ són independents.
 
 Per tant,
 

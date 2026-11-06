@@ -368,14 +368,14 @@ Figura 3.2: Densitat i corbes de nivell binormal amb <span class="math inline">\
 <p><span id="def:unlabeled-div-69" class="definition"><strong>Definició 3.3  </strong></span><strong>Distribució normal bivariant estàndard amb marginals correlades </strong></p>
 <p>Sigui <span class="math inline">\(Z_1 \sim N(0,1)\)</span> i <span class="math inline">\(Z_2 \sim N(0,1)\)</span> amb <span class="math inline">\(Z_1\)</span> i <span class="math inline">\(Z_2\)</span> i la correlació <span class="math inline">\(\rho \in (-1,1)\)</span>
 Llavors<br />
-<span class="math display">\[
-f_{Z_1, Z_2}(z_1,z_2)= \dfrac {1}{2\pi\sqrt{1-\rho^2 }}e^{(-\frac{1}{2(1-\rho^2)})(z_1^2-2\rho z_1z_2 +z_2^2)}   (\#eq:fxybinormstandcorr
+<span class="math display" id="eq:fxybinormstandcorr">\[
+f_{Z_1, Z_2}(z_1,z_2)= \dfrac {1}{2\pi\sqrt{1-\rho^2 }}e^{(-\frac{1}{2(1-\rho^2)})(z_1^2-2\rho z_1z_2 +z_2^2)}   \tag{3.10}
 \]</span></p>
 <p>es defineix com la funció de densitat conjunta de la distribució normal bivariant estàndard amb marginals correlades</p>
 </div>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-70" class="example"><strong>Exemple 3.1  </strong></span>Per qüestions de conveniència formal hem introduït la distribució de les variables normals bivariants com a combinació de variables aleatòries normals independents. Cal remarcar que en nombroses ocasions aquesta distribució es la manera habitual com es presenten les dades. De fet Karl Pearson a partir de les dades treballades de Francis Galton a finals del segle 19, planteja el coeficient de correlació entre les alçades dels pares i els fills, on hi ha un correlació diferent de 0 entre elles. Els pares alts tendeixen a tenir els fills alts i a l’inrevés en els baixets. Aquesta seria una distribució normal bivariant.</p>
+<p><span id="exm:unlabeled-div-70" class="example"><strong>Exemple 3.1  </strong></span>Per qüestions de conveniència formal hem introduït la distribució de les variables normals bivariants com a combinació de variables aleatòries normals independents. Cal remarcar que en nombroses ocasions aquesta distribució es la manera habitual com es presenten les dades. De fet Karl Pearson a partir de les dades treballades de Francis Galton a finals del segle XIX, planteja el coeficient de correlació entre les alçades dels pares i els fills, on hi ha un correlació diferent de 0 entre elles. Els pares alts tendeixen a tenir els fills alts i a l’inrevés en els baixets. Aquesta seria una distribució normal bivariant.</p>
 </div>
 <hr />
 <div class="proposition">
@@ -492,7 +492,7 @@ N
 <div id="distribucions-marginals-i-condicional-de-una-normal-bivariant." class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Distribucions marginals i condicional de una normal bivariant.<a href="algunes-distribucions-multivariants.html#distribucions-marginals-i-condicional-de-una-normal-bivariant." class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Distribucions marginals</strong></p>
-<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori que segueix una distribució normal bivariant amb paràmetres <span class="math inline">\(\mu_x,\mu_y\in\mathbb{R}\)</span> y <span class="math inline">\(\sigma_x,\sigma_y&gt;0\)</span> i <span class="math inline">\(\rho \in [-1,1]\)</span>. que tal com hem vist podem representar com la combinació de distribucions normals estàndard <span class="math inline">\(Z_1,Z_2\)</span>. Per això X e Y segueixen una una distribució normal <span class="math inline">\(X \sim N(\mu_x,\sigma_x)\)</span> i <span class="math inline">\(Y \sim N(\mu_y,\sigma_y)\)</span></p>
+<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori que segueix una distribució normal bivariant amb paràmetres <span class="math inline">\(\mu_x,\mu_y\in\mathbb{R}\)</span> y <span class="math inline">\(\sigma_x,\sigma_y&gt;0\)</span> i <span class="math inline">\(\rho \in [-1,1]\)</span>. que tal com hem vist podem representar com la combinació de distribucions normals estàndard <span class="math inline">\(Z_1,Z_2\)</span>. Per això X e Y segueixen una distribució normal <span class="math inline">\(X \sim N(\mu_x,\sigma_x)\)</span> i <span class="math inline">\(Y \sim N(\mu_y,\sigma_y)\)</span></p>
 <p>En la figura <a href="algunes-distribucions-multivariants.html#fig:img-distmargi">3.3</a> es mostren les distribucions marginals de la distribució normal bivariant que es veu segueixen una distribució normal.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:img-distmargi"></span>
 <img src="images/distnormalbivariant_marginal.png" alt="Marginals de la distribució continua bivariant" width="80%" />
@@ -521,14 +521,13 @@ N
 \end{pmatrix}
 \right)
 \]</span></p>
-<p>Llavors <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> son independents si i només si <span class="math inline">\(\rho=0\)</span>. És a dir , en una distribució normal bivariant, la absència de correlació equival a la independència.</p>
 </div>
 <p><strong>Demostració</strong></p>
 <p>La funció de densitat d’una distribució normal bivariant és</p>
 <p><span class="math display" id="eq:fxybinormlarge">\[
 \small
 f_{X,Y}(x,y)=
-\frac{1}{2\pi\sigma_x\sigma_y\sqrt{1-\rho^2}}\exp\left(-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_x)^2}{\sigma_x^2}-2\rho\frac{(x-\mu_x)(y-\mu_y)}{\sigma_x\sigma_y}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right]\right)   \tag{3.10}
+\frac{1}{2\pi\sigma_x\sigma_y\sqrt{1-\rho^2}}\exp\left(-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_x)^2}{\sigma_x^2}-2\rho\frac{(x-\mu_x)(y-\mu_y)}{\sigma_x\sigma_y}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right]\right)   \tag{3.11}
 \]</span></p>
 <p>A més, les distribucions marginals són</p>
 <p><span class="math display">\[
@@ -543,8 +542,8 @@ i</p>
 f_Y(y)=\frac{1}{\sqrt{2\pi}\sigma_y}\exp\left(-\frac{(y-\mu_y)^2}{2\sigma_y^2}\right)
 \]</span></p>
 <p>Cal demostrar les dues implicacions.</p>
-<p><span class="math inline">\(\Rightarrow\)</span> Si (X) i (Y) són independents, aleshores <span class="math inline">\(\rho=0\)</span></p>
-<p>Si (X) i (Y) són independents,<span class="math inline">\(f_{X,Y}(x,y)=f_X(x)f_Y(y)\)</span></p>
+<p><span class="math inline">\(\Rightarrow\)</span> Si <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> són independents, aleshores <span class="math inline">\(\rho=0\)</span></p>
+<p>Si <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> són independents,<span class="math inline">\(f_{X,Y}(x,y)=f_X(x)f_Y(y)\)</span></p>
 <p>D’altra banda,</p>
 <p><span class="math display">\[
 \operatorname{Cov}(X,Y)=E[(X-\mu_x)(Y-\mu_y)]=E(X-\mu_x)E(Y-\mu_y)=0
@@ -562,7 +561,7 @@ f_{X,Y}(x,y)=\frac{1}{2\pi\sigma_x\sigma_y}\exp\left[-\frac12\left(\frac{(x-\mu_
 f_{X,Y}(x,y)=\left[\frac{1}{\sqrt{2\pi}\sigma_x}\exp\left(-\frac{(x-\mu_x)^2}{2\sigma_x^2}\right)\right]\left[\frac{1}{\sqrt{2\pi}\sigma_y}\exp\left(
 -\frac{(y-\mu_y)^2}{2\sigma_y^2}\right)\right] =f_X(x)f_Y(y)
 \]</span></p>
-<p>La densitat conjunta factoritza com el producte de les densitats marginals. Per la caracterització de la independència mitjançant les densitats, es conclou que (X) i (Y) són independents.</p>
+<p>La densitat conjunta factoritza com el producte de les densitats marginals. Per la caracterització de la independència mitjançant les densitats, es conclou que <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> són independents.</p>
 <p>Per tant,</p>
 <p><span class="math display">\[
 X\perp Y\quad\Longleftrightarrow\quad\rho=0
@@ -572,10 +571,10 @@ Així, en una distribució normal bivariant, la incorrelació és equivalent a l
 <p><span id="thm:unlabeled-div-73" class="theorem"><strong>Theorem 3.1  </strong></span><strong>Distribucions condicionals</strong></p>
 <p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori que sequeix una distribució normal bivariant amb paràmetres <span class="math inline">\(\mu_x,\mu_y\in\mathbb{R}\)</span> y <span class="math inline">\(\sigma_x,\sigma_y&gt;0\)</span> i <span class="math inline">\(\rho \in [-1,1]\)</span> amb la funció de densitat definida en <a href="algunes-distribucions-multivariants.html#eq:fxybinorm">(3.1)</a> corresponent a una distribució normal bivariant. La distribució condicional de <span class="math inline">\(y\)</span> donat que <span class="math inline">\(X=x\)</span> es una distribució normal amb la esperança i variància següent:</p>
 <p><span class="math display" id="eq:espcondbinorm">\[
-E(Y|X=x]= \mu_Y+\rho \sigma_Y \left (  \dfrac {X-\mu_X}{\sigma_X}\right )   \tag{3.11}
+E(Y|X=x]= \mu_Y+\rho \sigma_Y \left (  \dfrac {X-\mu_X}{\sigma_X}\right )   \tag{3.12}
 \]</span></p>
 <p><span class="math display" id="eq:varcondbinorm">\[
-Var(Y|X=x)=(1-\rho^2) \sigma_Y^2    \tag{3.12}
+Var(Y|X=x)=(1-\rho^2) \sigma_Y^2    \tag{3.13}
 \]</span></p>
 </div>
 <p><strong>Demostració</strong></p>
@@ -671,10 +670,10 @@ N
 \]</span></p>
 <p>Podem generalitzar la distribució de densitat normal bivariada al cas multivariant com</p>
 <p><span class="math display" id="eq:fxybinormmulti">\[
-f(x_1,...,x_n=\dfrac {|\Sigma|^{-\frac{1}{2}}}{(2\pi)^\frac{1}{2}} e^{ -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})&#39; \Sigma^{-1} (\mathbf{x} - \boldsymbol{\mu})} , \quad  (x_1,...,,xn) \in   \mathbb{R}^n  \tag{3.13}
+f(x_1,...,x_n=\dfrac {|\Sigma|^{-\frac{1}{2}}}{(2\pi)^\frac{1}{2}} e^{ -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})&#39; \Sigma^{-1} (\mathbf{x} - \boldsymbol{\mu})} , \quad  (x_1,...,,xn) \in   \mathbb{R}^n  \tag{3.14}
 \]</span></p>
 </div>
-<p>Si les components del vector son independents, les covariàncies son totes nul·les i <span class="math inline">\(\Sigma\)</span> es una matriu diagonal amb elements les variàncies de cada component . Així <span class="math inline">\(|\Sigma|^{-1}|=\dfrac{1}{\sigma_1^2\sigma_2^2...\sigma_n^2}\)</span> A més la forma quadràtica de la equació <a href="algunes-distribucions-multivariants.html#eq:fxybinormmulti">(3.13)</a> es simplifica i la densitat és:</p>
+<p>Si les components del vector son independents, les covariàncies son totes nul·les i <span class="math inline">\(\Sigma\)</span> es una matriu diagonal amb elements les variàncies de cada component . Així <span class="math inline">\(|\Sigma|^{-1}|=\dfrac{1}{\sigma_1^2\sigma_2^2...\sigma_n^2}\)</span> A més la forma quadràtica de la equació <a href="algunes-distribucions-multivariants.html#eq:fxybinormmulti">(3.14)</a> es simplifica i la densitat és:</p>
 <p><span class="math display">\[
 f(x_1, x_2, \dots, x_n) = \frac{1}{\prod_{i=1}^n (2\pi\sigma_i^2)^{\frac{1}{2}}} e^{-\frac{1}{2} \sum_{i=1}^n \left(\frac{x_i - \mu_i}{\sigma_i}\right)^2} = \prod_{i=1}^n \left[ \frac{1}{\sqrt{2\pi\sigma_i^2}} e^{-\frac{1}{2} \left(\frac{x_i - \mu_i}{\sigma_i}\right)^2} \right]
 \]</span></p>
@@ -708,7 +707,7 @@ f(x_1, x_2, \dots, x_n) = \frac{1}{\prod_{i=1}^n (2\pi\sigma_i^2)^{\frac{1}{2}}}
 f(\mathbf{x}|n, \mathbf{p}) = \Pr(\mathbf{X} = \mathbf{x}) = \Pr(X_1 = x_1, \dots, X_k = x_k)
 \]</span></p>
 <p><span class="math display" id="eq:fxymultinomial">\[
-= \begin{cases} \binom{n}{x_1, \dots, x_k} p_1^{x_1} \dots p_k^{x_k} &amp; \text{if } x_1 + \dots + x_k = n, \\ 0 &amp; \text{en la resta} \end{cases} \tag{3.14}
+= \begin{cases} \binom{n}{x_1, \dots, x_k} p_1^{x_1} \dots p_k^{x_k} &amp; \text{if } x_1 + \dots + x_k = n, \\ 0 &amp; \text{en la resta} \end{cases} \tag{3.15}
 \]</span></p>
 </div>
 <hr />
@@ -774,7 +773,7 @@ Cal resenyar que la covariància de la distribució multinomial és negativa, el
 \]</span>
 si i només si la funció de densitat de probabilitat és:</p>
 <p><span class="math display" id="eq:fxymultit">\[
-t(x;\mu,\Sigma,\nu)=\sqrt{\dfrac {1}{(\nu\pi)^n |\Sigma|}} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} (x-\mu)^T \Sigma^{-1} (x-\mu)  \right]^{-(\nu+n)/2}   \tag{3.15}
+t(x;\mu,\Sigma,\nu)=\sqrt{\dfrac {1}{(\nu\pi)^n |\Sigma|}} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} (x-\mu)^T \Sigma^{-1} (x-\mu)  \right]^{-(\nu+n)/2}   \tag{3.16}
 \]</span>
 on <span class="math inline">\(\Gamma ()\)</span> es la funció Gamma <span class="math inline">\(\Gamma(z)= \int_0^{\infty} x^{z-1} e^{-x}dx\)</span></p>
 </div>
@@ -794,7 +793,7 @@ on <span class="math inline">\(\Gamma ()\)</span> es la funció Gamma <span clas
 <div class="definition">
 <p><span id="def:unlabeled-div-81" class="definition"><strong>Definició 3.7  </strong></span>Sigui <span class="math inline">\(\mathbf{X}=(X_1,...,X_n)\)</span> un vector aleatori de dimensió <span class="math inline">\(n\)</span>, direm que <span class="math inline">\(\mathbf{X}\)</span> segueix una distribució t-multivariant standard amb <span class="math inline">\(\nu\)</span> graus de llibertat, si la funció de densitat es</p>
 <p><span class="math display" id="eq:fxymultit2">\[
-t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} x^T  x  \right]^{-(\nu+n)/2}   \tag{3.16}
+t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} \left[ 1+\dfrac {1}{\nu} x^T  x  \right]^{-(\nu+n)/2}   \tag{3.17}
 \]</span></p>
 </div>
 <p>La funció de distribució de la distribució t-multivariant estàndard es un distribució t-univariada estàndard amb <span class="math inline">\(\nu\)</span> graus de llibertat. Es pot deduir directament que el valor esperat es el vector nul <span class="math inline">\(E[\mathbf{X}]=\mathbf{0}\)</span> i que la matriu de variància es <span class="math inline">\(Var(\mathbf{X}) = \frac {\nu}{\nu-2} I\)</span> on I es la matriu identitat <span class="math inline">\(k \times k\)</span></p>
@@ -806,13 +805,13 @@ t(x;n)=\sqrt{\dfrac {1}{(\nu\pi)^n }} \dfrac {\Gamma((\nu+n)/2)}{\Gamma(\nu/2)} 
 <p><span id="def:unlabeled-div-82" class="definition"><strong>Definició 3.8  </strong></span><strong>Distribució Khi-quadrat</strong>
 Sigui <span class="math inline">\(\mathbf{X}=(X_1,...,X_k)\)</span> un vector aleatori de variables aleatòries normals amb mitjana <span class="math inline">\(\mu_i=0\)</span> i variància <span class="math inline">\(\sigma_i^2=1\)</span> es a dir <span class="math inline">\(X_i \sim N(0,1)\)</span> i <span class="math inline">\(\mathbf{X} \sim N_n(0,\mathbf{I})\)</span> llavors</p>
 <p><span class="math display" id="eq:chi2">\[
-Y=\mathbf{X}^T \mathbf{X}= \sum_{i=1}^k  X_i^2 \sim \chi^2(k) \qquad  0&gt;Q&lt;\infty  \tag{3.17}
+Y=\mathbf{X}^T \mathbf{X}= \sum_{i=1}^k  X_i^2 \sim \chi^2(k) \qquad  0&gt;Q&lt;\infty  \tag{3.18}
 \]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-83" class="theorem"><strong>Theorem 3.4  </strong></span>La funció de densitat de la variable definida en <a href="algunes-distribucions-multivariants.html#eq:chi2">(3.17)</a> ve definida per</p>
+<p><span id="thm:unlabeled-div-83" class="theorem"><strong>Theorem 3.4  </strong></span>La funció de densitat de la variable definida en <a href="algunes-distribucions-multivariants.html#eq:chi2">(3.18)</a> ve definida per</p>
 <p><span class="math display" id="eq:denschi2">\[
-f_Y(y) = \frac{1}{2^{k/2} \Gamma(k/2)} y^{k/2 - 1} \exp[-y/2]    \tag{3.18}
+f_Y(y) = \frac{1}{2^{k/2} \Gamma(k/2)} y^{k/2 - 1} \exp[-y/2]    \tag{3.19}
 \]</span></p>
 </div>
 <p><strong>Demostració</strong></p>
