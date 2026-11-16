@@ -1,0 +1,9 @@
+
+
+git status --short --branch
+git add -u
+git status
+
+git commit -m "Actualitza el llibre de Probabilitat II"
+git push origin main
+git status --short --branch

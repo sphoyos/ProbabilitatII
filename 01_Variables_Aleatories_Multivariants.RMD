@@ -1038,7 +1038,7 @@ y-y^2/4 ,       & \text{si } (x,y)  \notin T \quad \& \quad 1< x1,0<y \leq 2 \te
 \end{cases}
 $$
 
-Cal observar que les expressions de F_{XY}(x,y)  depenen només de $x$ i de $y$. Si recordem com calculem les marginals  tenim que 
+Cal observar que les expressions de $F_{XY}(x,y)$  depenen només de $x$ i de $y$. Si recordem com calculem les marginals  tenim que 
 
 $F_{X}(x)= F_X(x,y)$ 
 
@@ -1511,13 +1511,13 @@ que dona lloc a $E[X_1^{n_1} .....X_k^{n_k}]$ respecte a l'origen de cada compon
 
 :::
 
-Un cas particulasr si $n_i=m$ i $n_j=0, j \neq i$  dona que $E[X_1^{n_1} .....X_k^{n_k}]=E[X_i^m]$
+Un cas particular si $n_i=m$ i $n_j=0, j \neq i$  dona que $E[X_1^{n_1} .....X_k^{n_k}]=E[X_i^m]$
 
 
-El moment conjunt central d'ordre k respecte de l'origen de cada component es un cas particular , que es pot obtenir sempre que l'esperança existixca
+El moment conjunt central d'ordre k respecte de l'origen de cada component es un cas particular , que es pot obtenir sempre que l'esperança existeixi
 
 $$
-g(X_1,...,X_k)=(X_1-E[X_1])^{n_1} .....X_k-E[X_k])^{n_k}, n_i \geq 0
+g(X_1,...,X_k)=(X_1-E[X_1])^{n_1},...,(X_k-E[X_k])^{n_k}, n_i \geq 0
 $$ 
 
 La linealitat de l'esperança aplicada quan $g(X)=X_1+...+X_k$ permet concloure que l'esperança de la suma de variables es la suma de les esperances.
@@ -1525,7 +1525,7 @@ La linealitat de l'esperança aplicada quan $g(X)=X_1+...+X_k$ permet concloure 
 $$
 E(X_1+...+X_k) =\sum_{i=1}^kE(X_i)
 $$
-Així mateix si $g(X)=\sum_{i=1}^k (a_i X_i)$ obtenim que l'esperança de d'una constant per una variable es la constant per l'esperança de la variable
+Així mateix si $g(X)=\sum_{i=1}^k (a_i X_i)$ obtenim que l'esperança d'una constant per una variable es la constant per l'esperança de la variable
 
 
 $$
@@ -1665,17 +1665,20 @@ $$
 
 Sigui $X=(X_1,..., X_k)$ un vector aleatori  continu  amb soport $D_X$, és a dir $P((X_1,...,X_k) \in D_X)=1$, i sigui $g=(g_1,...,g_k):\mathbb{R^k} \rightarrow  \mathbb{R^k}$   una funció vectorial que verifica:
 
-1. g es unívoca sobre Dx
+\begin{enumerate}
 
-2. el  Jacobiano de g, $J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }$ es diferente de cero $\forall x \in D_X$
+\item g es unívoca sobre Dx
 
-3. existeix $h=(h_1,...,h_k)$ inversa de g
+\item El  Jacobiano de g, $J=\frac{\partial (g_1,....,g_k)}{\partial (x_1,...,x_k) }$ es diferent de cero $\forall x \in D_X$
+
+\item  Existeix $h=(h_1,...,h_k)$ inversa de g
+\end{enumerate}
 
 Llavors, $Y=g(X)$ es un vector aleatori continu amb densitat conjunta per a $y=(y_1,...,y_k) \in g(D_X)$ ve donada per 
 $$
 f_Y(y_1,...,y_k)=f_X(h_1(y1,...,yk),....,h_k(y1,...,yk)) |J^{-1}|
 $$
-on $|J^{-1}|=\frac{\partial (h_1,....,h_k)}{\partial (y_1,...,y_k) }$ és el Jacobià de h. 
+on $J^{-1}=\frac{\partial (h_1,....,h_k)}{\partial (y_1,...,y_k) }$ és el Jacobià de h. 
 
 
 :::
@@ -1700,7 +1703,7 @@ La demostració d'aquest teorema no es més que el teorema del canvi de variable
 
 Considerem un canvi entre les coordenades cartesianes a les coordenades polars del punt del cercle.
 
-En aquest casa la transformació a coordenades polars serà $R= \sqrt{X^2+Y^2}$ i $\Theta=arctan (Y/X)$.
+En aquest cas la transformació a coordenades polars serà $R= \sqrt{X^2+Y^2}$ i $\Theta=arctan (Y/X)$.
 
 
 Per obtenir la seva densitat conjunta necessitem les transformacions inverses de coordenades polars a euclídias, $X=R cos(\Theta)$ i $Y=R sin(\Theta)$. Si es calcula el jacobià aquest val $J_1=R$ 
@@ -1863,6 +1866,127 @@ Que es la coneguda distribució triangular resultat de sumar dues variables inde
 
 ---
 
+
+--- 
+
+:::{.example #suma2}
+
+
+Siguin $X$ i $Y$ dues variables aleatòries contínues amb densitat conjunta
+
+$$
+f_{X,Y}(x,y)=
+\begin{cases}
+\dfrac{3}{16}(4-2x-y), &
+0<x<2,\quad 0<y<4-2x,\\[4pt]
+0, & \text{altrament}.
+\end{cases}
+$$
+
+Volem determinar la distribució de la variable aleatòria $Z=X+Y$
+
+
+Definim les noves variables
+
+$Z=X+Y,\qquad U=X$
+
+
+La transformació inversa és
+
+$X=U,\qquad Y=Z-U$
+
+ 
+El jacobià de la transformació inversa és   $|J^{-1}|=1$
+
+
+$$
+\begin{aligned}
+f_{U,Z}(u,z)
+&=f_{X,Y}(u,z-u)|J|\\[4pt]
+&=\frac{3}{16}\bigl(4-2u-(z-u)\bigr)\\[4pt]
+&=\frac{3}{16}(4-u-z).
+\end{aligned}
+$$
+
+**Determinació de la regió d'integració**
+
+Les restriccions originals són $0<x<2,\qquad 0<y<4-2x$
+
+Substituint $x=u$ i $y=z-u$ obtenim $0<u<2,\qquad 0<z-u<4-2u$
+
+La segona desigualtat equival a $u<z,\qquad u<4-z$\]
+
+Així, els límits d'integració són $0<u<\min\{2,z,4-z$
+
+
+Com que $0<z<4$, distingim dos casos:
+
+- Si $0<z<2$, tenim $0<u<z$.
+- Si $2\leq z<4$, tenim $0<u<4-z$.
+
+Això implica que $Z$ només pot prendre valors entre 0 i 4.
+
+
+
+La densitat de $Z$ s'obté integrant respecte de $u$:
+
+$f_Z(z)=\int f_{U,Z}(u,z)\,du$
+
+* Cas 1: $0<z<2$
+
+En aquest cas, els límits d'integració són \(0<u<z\). Per tant,
+
+$$
+\begin{aligned}
+f_Z(z)
+&=\int_0^z f_{U,Z}(u,z)\,du\\[4pt]
+&=\int_0^z \frac{3}{16}(4-u-z)\,du\\[4pt]
+&=\frac{3}{16}
+\left[(4-z)u-\frac{u^2}{2}\right]_0^z\\[4pt]
+&=\frac{3}{16}\left((4-z)z-\frac{z^2}{2}\right)\\[4pt]
+&=\frac{3}{16}\left(4z-\frac{3z^2}{2}\right).
+\end{aligned}
+$$
+
+* Cas 2: $2\leq z<4$
+
+En aquest cas, els límits d'integració són $0<u<4-z$. Per tant,
+
+$$
+\begin{aligned}
+f_Z(z)
+&=\int_0^{4-z} f_{U,Z}(u,z)\,du\\[4pt]
+&=\int_0^{4-z}\frac{3}{16}(4-u-z)\,du\\[4pt]
+&=\frac{3}{16}
+\left[(4-z)u-\frac{u^2}{2}\right]_0^{4-z}\\[4pt]
+&=\frac{3}{16}
+\left((4-z)^2-\frac{(4-z)^2}{2}\right)\\[4pt]
+&=\frac{3}{32}(4-z)^2.
+\end{aligned}
+$$
+
+
+Ajuntant els dos casos, obtenim
+
+$$
+\boxed{
+f_Z(z)=
+\begin{cases}
+\dfrac{3}{16}\left(4z-\dfrac{3z^2}{2}\right),
+&0<z<2,\\[8pt]
+\dfrac{3}{32}(4-z)^2,
+&2\leq z<4,\\[8pt]
+0,&\text{altrament}.
+\end{cases}
+}
+$$
+
+::: 
+
+---
+
+
+
 ### Producte de dues variables aleatòries
 
 En el cas del producte W=XY i com abans definint V=X tenim que podem calcular la distribució conjunta (W,V) aplicant el teorema  \@ref(thm:thm-cambio)  partir de les funcions inverses  X=V i Y=W/V i el Jacobià 
@@ -1891,7 +2015,7 @@ I per tant $|J^{-1}|=\dfrac{1}{|v|}$
 La distribució conjunta de (W,V) és
 
 $$
-f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (\dfrac{w}{v},v)
+f_{WV}(w,v)=  \dfrac{1}{|v|} f_{XY} (v,\dfrac{w}{v})
 $$
 
 
@@ -1899,7 +2023,7 @@ I la distribució marginal del producte s'obté integren respecte a l'altra comp
 
 
 $$
-f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v})dv
+f_{W}(w)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(v,\dfrac{w}{v}dv
 $$
 
 ---
@@ -1929,7 +2053,7 @@ $$
 w<x<1.
 $$
 
-Així, si \(0<w<1\),
+Així, si $0<w<$,
 
 $$
 f_W(w)=\int_w^1\frac{1}{x}\,dx.
@@ -1960,7 +2084,7 @@ $$
 
 ### Quocient de dues variables aleatòries
 
-En el cas del quocient $Q=XY$ i com abans definint V=X tenim que podem calcular la distribució conjunta (Q,V) aplicant el teorema  \@ref(thm:thm-cambio)  partir de les funcions inverses  X=V i Y=QV i el Jacobià 
+En el cas del quocient $Q=X/Y$ i com abans definint $V=X$ tenim que podem calcular la distribució conjunta $(Q,V)$ aplicant el teorema  \@ref(thm:thm-cambio)  partir de les funcions inverses  $X=V$ i $Y=QV$ i el Jacobià 
   
 $$
 J^{-1}= 
@@ -1983,19 +2107,79 @@ I per tant $|J^{-1}|=|v|$
 
 
 
-La distribució conjunta de (W,V) és
+La distribució conjunta de $(W,V)$ és
 
 $$
 f_{QV}(q,v)=|v| f_{XY} (v,qv)
 $$
 
 
-I la distribució marginal del producte s'obté integren respecte a l'altra component
+I la distribució marginal del quocient s'obté integrant respecte a l'altra component
 
 
 $$
-f_{Q}(q)= \int_{- \infty}^{+ \infty} \dfrac{1}{|v|}f_{XY}(\dfrac{q}{v},v)dv
+f_{Q}(q)= \int_{- \infty}^{+ \infty} |v|f_{XY}(\dfrac{q}{v},v)dv
 $$
 
  
+ ---
  
+:::{.example}
+ 
+ Sigui l'exemple anterior  $X \sim U(0,1)$ i $Y\sim U(0,1)$  i amb densitat conjunta
+
+$$
+f_{X,Y}(x,y)=
+\begin{cases}
+1, & \text{si } 0<x<1,\;0<y<1,\\
+0, & \text{en la resta}
+\end{cases}
+$$
+
+Si$W=X/Y$, definim$V=Y$ i la transformació inversa és $X=WV$ i $Y=V$
+
+El determinant jacobià de la transformació inversa és
+
+$$
+ J^{-1}=
+ \begin{vmatrix} 
+ \dfrac{\partial X}{\partial W}& \dfrac{\partial X}{\partial V}\\
+ \\[4pt] \dfrac{\partial Y}{\partial W}& \dfrac{\partial Y}{\partial V} 
+ \end{vmatrix} 
+ = \begin{vmatrix} 
+ v&w\\\ 0&1 
+ \end{vmatrix} =v 
+ $$
+
+Per tant, la densitat conjunta transformada és
+
+$f_{W,V}(w,v)=v f_{X,Y}(wv,v)$
+
+les condicions del suport transformat són $0<v<1,\qquad 0<wv<1$
+
+Implica $0<v<\min\left(1,\frac1w\right),\qquad w>0$
+
+Així doncs,  $f_W(w)= \int_0^{\min(1,1/w)}vdv$
+
+
+Cas 1: $0<w \leq 1 \rightarrow min(1,1/w)=1$ 
+
+$f_W(w)=\int_0^1vdv=\frac12$
+
+Cas 2: $w>1 \rightarrow \min(1,1/w)=1/w$ 
+
+$f_W(w)=\int_0^{1/w}v\\dv =\frac{1}{2w^2}$
+
+Així la densitat de $(W=X/Y$ és
+
+$$ \boxed{
+f_W(w)=
+\begin{cases}
+\dfrac12,&0<w\leq1,\\
+ \dfrac{1}{2w^2},&w>1,\\
+ 0,&\text{altrament}. \end{cases} }
+ $$
+ 
+:::
+
+--

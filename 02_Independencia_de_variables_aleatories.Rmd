@@ -36,7 +36,7 @@ P(A_{j_1} \cap ...\cap A_{j_n} ) =P(X_{j_l} \in B_{j_l},l=1,...,n)=
 \prod_{l=1}^n P(X_{j_l} \in  B_{j_l})  \\  \forall(j_1,...,j_n) \in(1,...,k)  
 (\#eq:pxindep)
 $$
-on $A_{j_1}=X^{-1}B_{j_1}$
+on $A_{j_1}=X^{-1}(B_{j_1})$
 
 :::
 
@@ -63,10 +63,10 @@ $$
 
 **Demostració**
 
-Suposem que les variables aleatòries contínues (X_1,\ldots,X_k) són independents. Per definició,
+Suposem que les variables aleatòries contínues $(X_1,\ldots,X_k)$ són independents. Per definició,
 
 $$
-\prod_{j=1}^{k}\Pr(X_j\in A_j),
+P(A_{j_1} \cap ...\cap A_{j_n} )=\prod_{j=1}^{k}\Pr(X_j\in A_j),
 \qquad
 \forall,A_1,\ldots,A_k\in\mathcal{B}(\mathbb{R}).
 $$
@@ -116,12 +116,12 @@ $$
 
 :::{.observation}
 
-Com es va veure en el tema anterior a partir de la distribució conjunta d'un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components.  Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin indepen                                                                                                                              dents. 
+Com es va veure en el tema anterior a partir de la distribució conjunta d'un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components.  Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin independents. 
 
 :::
 
 :::{.example}
-En l'exemple \@ref(exm:circulo)  del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l'atzar en el cercle unitats $C_1$ tenia una densitat conjunta
+En l'exemple \@ref(exm:circulo)  del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l'atzar en el cercle unitat $C_1$ tenia una densitat conjunta
 
 
  $$
@@ -156,12 +156,15 @@ Considerem una distribució de probabilitat que ve representada per la seva func
 
 :::
 
-D'aquesta definició es dedueix que les dades observades en una mostra de subjectes d'una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu $g(x_1,...,x_n)=f(x_1)...f(x_n)$
+D'aquesta definició es dedueix que les dades observades en una mostra de subjectes d'una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu com$g(x_1,...,x_n)=f(x_1)...f(x_n)$
 
 :::{.proposition}
 **Independència i Esperança**
 
-Si $X_1,...,X_k$ són independents, aleshores $E[X_1,...,X_k]=E[\prod_{j=1}^{k}X_i]=\prod_{j=1}^{k}E[X_i]$ (\#eq:indep)
+Si $X_1,...,X_k$ són independents, aleshores 
+$$ 
+E[X_1,...,X_k]=E[\prod_{i=1}^{k}X_i]=\prod_{i=1}^{k}E[X_i] (\#eq:indep)
+$$
 
 **Demostració**
 
@@ -204,6 +207,7 @@ De manera més general , el resultat anterior es pot generalitzar a les funcions
 $$
 E[\prod_{j=1}^{k}g(X_i)]=\prod_{j=1}^{k}E[g_i(X_i)](\#eq:gindep)
 $$
+
 :::{.corollary}
 Si les variables $X_1,...,X_k$ son independents, llavors $cov(X_i,X_j)=0, \quad \forall i,j$
 :::
@@ -225,7 +229,7 @@ En el tema anterior varem introduir el concepte d'esperança i variància de un 
 :::{.definition}
 **Esperança condicionada**
 
-Sigui $(X,Y)$ un vector aleatori definti sbore l'espai de probabilitat $(\Omega,\mathcal{A}, \mathbb{R})$ i sigui $P_{Y|X=x}$ la distribució de probabilitat de Y condicionada a X=x. Si g es una funció mesurable definida de $(\mathbb{R},\beta)$ en  $(\mathbb{R},\beta)$ de manera que $E[g(Y)]$ exiteix, l'esperança condicionada de g(Y) donat X,$E[g(Y)|X]$ es una variable aleatòria que paer $X=x$ pren el valor
+Sigui $(X,Y)$ un vector aleatori definit sobre l'espai de probabilitat $(\Omega,\mathcal{A}, \mathbb{R})$ i sigui $P_{Y|X=x}$ la distribució de probabilitat de Y condicionada a X=x. Si g es una funció mesurable definida de $(\mathbb{R},\beta)$ en  $(\mathbb{R},\beta)$ de manera que $E[g(Y)]$ existeix, l'esperança condicionada de $g(Y)$ donat $X$,$E[g(Y)|X]$ es una variable aleatòria que per a  $X=x$ pren el valor
 
 
 $$
@@ -250,7 +254,7 @@ $$
 E[g(Y)| X=x] =\int_{\mathbb{R}} g(y)f_{Y | X}(y |x) dx
 $$
 
-Així si  g(Y)=y tenim 
+Així si  $g(Y)=Y$ tenim 
 
 
 
@@ -259,7 +263,7 @@ E[Y\mid X=x]=
 \begin{cases}
 \displaystyle
 \int_{-\infty}^{\infty}
-y\,f_{Y\mid X=x}(y)\,dy,
+y\,f_{Y\mid X=x}(y)\,dx,
 & \text{en el cas continu},\\
 \displaystyle
 \sum_{y}
@@ -278,7 +282,7 @@ que estarà definida per a tot x tal que $f_X(x)>0$  i que la funció de probabi
 :::{.definition} 
 **Funció de esperança condicionada o regressió**
 
-La funció $m_y =E[Y \mid X=x]$ s'anomena funció de esperança condicionada de Y donat X o també funció de regressió de Y sobre X. 
+La funció $m_y(x) =E[Y \mid X=x]$ s'anomena funció de esperança condicionada de Y donat X o també funció de regressió de Y sobre X. 
 
 
 :::
@@ -387,7 +391,7 @@ $$
 P(g_1(Y) \leq g_2(Y)) = 1 \implies E[g_1(Y)|X] \leq E[g_2(Y)|X] (\#eq:expconddesigual)
 $$
 4.  
-$E[c|X]=c$ para c constant.  (\#eq:expcondconstant)
+$E[c|X]=c$ per a c constant.  (\#eq:expcondconstant)
 
 
 
@@ -436,7 +440,7 @@ f_{XY}(x,y)=
 $$
 
 
-Fècilment obtenim que $X \sim U(0,1)$ i que $Y|X=x \sim U(0,x)$ 
+Fàcilment obtenim que $X \sim U(0,1)$ i que $Y|X=x \sim U(0,x)$ 
 
 aplicant el resultat anterior podem obtenir $E[Y]$
 
@@ -466,7 +470,7 @@ Per tant es tracta de obtenir el valor E[X] amb les dues estratègies i triar la
 
 **Estratègia 1** 
 
-Si $A_k$  es l'esdeveniment  l'operari està en la màquina k. Per obtenir $E_1[X]$ recorrem a la propietat de l'esperança total, però utilitzan com a distribució condicionada la que es deriva condicionar respecte de l'esdeveniment$A_k$. Tindrem E_1[X]=E[E(A_k]] 
+Si $A_k$  es l'esdeveniment  l'operari està en la màquina k. Per obtenir $E_1[X]$ recorrem a la propietat de l'esperança total, però utilitzan com a distribució condicionada la que es deriva condicionar respecte de l'esdeveniment$A_k$. Tindrem E_1[X]=E[E(X|A_k]] 
 
 Para obtenir $E[X\mid A_k])$, tinguem en compte que, si $i$ és la pròxima màquina avariada,  $P(A_i)=\frac{1}{n}, \qquad \forall i=1,\ldots,n,$ i la distància a recórrer serà 
 
@@ -478,30 +482,38 @@ X\mid A_k=
 \end{cases}
 $$
 
+
+
 Així doncs,
 
 $$
 \begin{aligned}
 E(X\mid A_k)
 &= \frac{1}{n} \left( \sum_{i=1}^{k}(k-i)\,l + \sum_{i=k+1}^{n}(i-k)\,l\right)\\
+&=\frac{l}{n} \left( \dfrac{k(k-1)}{2}+ \dfrac{(n-k)(1+n-k)}{2}\right) \\
 &= \frac{l}{2n} \left[ 2k^2-2(n+1)k+n(n+1) \right].
+\end{aligned}
+$$
+
+La distancia esperada és. 
+
+$$
+\begin{aligned}
+E_1[X]
+&= E[E[X\mid A_k]]=\frac{1}{n} \sum_{k=1}^{n} E[X\mid A_k]\\
+&= \frac{l}{2n^2} \sum_{k=1}^{n}\left[2k^2-2(n+1)k+n(n+1)\right] \\
+&=\frac{l}{2n^2}[2\sum_{k=1}^{n}k^2-2(n+1)\sum_{k=1}^{n}k+\sum_{k=1}^{n}n(n+1)] \\
+&= \frac{l(n^2-1)}{3n}.
 \end{aligned}
 $$
 
 Utilitzant
 
 $$
-\sum_{k=1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6},
+\sum_{k=1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6},  \qquad \sum_{k=1}^{n}k=\frac{n(n+1)}{2},  \qquad \sum_{k=1}^{n} n(n+1)=n^2(n+1)
 $$
 
-obtenim
 
-$$
-\begin{aligned}
-E_1(X)=
-E\!\left(E(X\mid A_k)\right)=\frac{1}{n} \sum_{k=1}^{n} E(X\mid A_k)= \frac{l(n^2-1)}{3n}.
-\end{aligned}
-$$
 **Estratègia 2**
 
 Per facilitar els càlculs, suposem que $n$ és imparell, de manera que hi ha una màquina situada al punt mig de la línia, és a dir, la $\frac{n+1}{2}$-èsima. Si la pròxima màquina avariada és la i-èsima, la distància a recórrer serà
@@ -520,11 +532,11 @@ L'esperança ve donada per
 
 $$
 \begin{aligned}
-E_2(X)=\frac{2}{n}\sum_{i=1}^{n}\left|\frac{n+1}{2}-i\right|l,=\frac{l(n-1)}{2}
+E_2(X)=\frac{2}{n}\sum_{i=1}^{n}\left|\frac{n+1}{2}-i\right|l=\frac{l(n^2-1)}{2n}
 \end{aligned}
 $$
 
-Com que $E_1(X)\le E_2(X) \iff \frac{n+1}{3n}\le\frac{1}{2}  \iff n\ge 2$,podem deduir que la primera estratègia és millor, excepte quan només hi ha una màquina.
+Com que $E_1(X)\le E_2(X) \iff \frac{l(n^2-1)}{3n}<\frac{l(n^2-1)}{2n} \iff \frac{1}{3} < \frac{1}{2}  \iff n\ge 2$,podem deduir que la primera estratègia és millor, excepte quan només hi ha una màquina.
 
 :::
 
@@ -544,13 +556,17 @@ També és possible relacionar la variància absoluta amb la variància condicio
 
 
 :::{.proposition}
-** Llei de la variància total** 
-Si $E[Y^2]" existeix, llavors
+
+**Llei de la variància total** 
+
+Si $E[Y^2]$ existeix, llavors
 
 $$
-var(Y)=E(var[Y|X])+ var(E[X|Y])  (\#eq:varcond)
+var(Y)=E(var[Y|X])+ var(E[Y|X])  (\#eq:varcond)
 $$
+
 :::
+
 **Demostració**
 $$
 \begin{aligned}
@@ -558,6 +574,7 @@ $$
 &= E\left[(Y - E(Y))^2\right]= E\left\{E\left[(Y - E(Y))^2 \mid X\right]\right\} \\
 &= E\left\{E\left[Y^2 + (E(Y))^2 - 2Y\,E(Y)\mid X\right]\right\} \\
 &= E\left\{E[Y^2\mid X] + E(Y)^2 - 2E(Y)\,E[Y\mid X]\right\} \\
+&= E\left\{E[Y^2\mid X] -E[Y\mid X]^2 +E[Y\mid X]^2 + E(Y)^2 - 2E(Y)\,E[Y\mid X]\right\} \\
 &= E\left\{\operatorname{Var}(Y\mid X)
 + (E[Y\mid X])^2
 + E(Y)^2
@@ -566,10 +583,11 @@ $$
 + \left(E[Y\mid X]-E(Y)\right)^2\right\} \\
 &= E\{\operatorname{Var}(Y\mid X)\}
 + E\left[\left(E[Y\mid X]-E(Y)\right)^2\right] \\
-&= E\left(\operatorname{Var}(Y\mid X)\right)
+&= E\left[\operatorname{Var}(Y\mid X)\right]
 + \operatorname{Var}\left(E[Y\mid X]\right)
 \end{aligned}
 $$
+
 :::{.corollary}
 
 Si $E[Y^2]$  existeix, per la propietat anterior $Var(Y) \geq Var(E[Y|X])$
@@ -590,6 +608,9 @@ e^{-y}, & 0\le x\le y,\\
 0, & \text{en la resta}
 \end{cases}
 $$
+Comprova que es cumpleix la llei de la variància total 
+
+Calcularem totes les funcions que necessitem 
 
 **(a) Densitat marginal de $X$**
 
@@ -607,7 +628,7 @@ $$
 
 Per tant,  $Y\sim\Gamma(\alpha=2,\beta=1)$
 
-**(c) Densitat condicional de $(X\mid Y=y$**
+**(c) Densitat condicional de $(X\mid Y=y)$**
 
 $$
 f_{X\mid Y=y}(x)=\frac{f(x,y)}{f_Y(y)}=\frac{e^{-y}}{ye^{-y}}=\frac1y,\qquad 0\le x\le y
@@ -777,7 +798,7 @@ $$
  P(X \geq \epsilon) \leq \dfrac{E[X]}{\epsilon} (\#eq:desigepsilon)
  $$
  
-Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcionen cotes superiors paer a la probabilitat de certs conjunts i que son vàlides independentment de la distribució de la variable involucrada.
+Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcionen cotes superiors per a la probabilitat de certs conjunts i que son vàlides independentment de la distribució de la variable involucrada.
 
 
 **Desigualtat de Markov**
@@ -793,13 +814,16 @@ Si en la desigualtat  \@ref(eq:desigepsilon) substituïm $X$ per $|X|^k$  i $\ep
  
  **Desigualtat de Txebixev**
  
- Un cas especial de  \@ref(eq:desmarkov),  que es coneix com la desigualtat de Txebixev, és el cas en el que k=2 i X=X-E[X] 
+ Un cas especial de  \@ref(eq:desmarkov),  que es coneix com la desigualtat de Txebixev, és el cas en el que $k=2$ Si
+ $X=X-E[X]$
+ 
  
 
  $$
  P(|X-E[X]| \geq \epsilon) \leq \frac {1}{\epsilon^2}Var(X)     (\#eq:destxebixev)
  $$
 
+:::
 :::{.proposition} 
  
 Si $V(X)=0$ aleshores $X$ es constant amb probabilitat 1.
@@ -809,16 +833,15 @@ Si $V(X)=0$ aleshores $X$ es constant amb probabilitat 1.
 Suposem $E[X]=\mu$ i considerem els conjunts $A_n={|X-\mu| \geq 1/n}$ aplicant la desigualtat de Txebixev
 
 $$
-P(A_n)= P(|X-\mu| \geq\frac{1}{n})=0 \forall n
+P(A_n)= P(|X-\mu| \geq\frac{1}{n})=0 \quad \forall n
 $$
 d'aci obtenim que $P(\cup_n A_n)=0$ i  $P(\cap_n A_n^c)=1$ Però 
 
 $$
 \bigcap_{n\geq1} A_n^c=\bigcap_{n\geq1} \{  |X-\mu| \geq \frac{1}{n} \}=\{X=\mu \}
 $$
-i per tant $P(X=\mu)=1
+i per tant $P(X=\mu)=1$
 
-:::
 
 **Desigualtat de Jensen**
  
@@ -835,7 +858,8 @@ i per tant $P(X=\mu)=1
 $$
  E[g(X)] \geq g(E[X])   (\#eq:desjensen)
  $$
-:::{.Theorem #thm-cauchy}
+
+:::{.theorem #thm-cauchy}
 **Desigualtat de Cauchy-Schwarz**
 
 Si $X$ i $Y$ son variables aleatòries amb variàncies finites. Aleshores, $cov(X,Y)$ existeix i es verifica que 
@@ -846,26 +870,9 @@ $$
 $$
 verificant-se la igualtat si i només si existeix un nombre real tal que $P(\alpha X+Y=0)=1$
 :::
+
 **Demostració**
-Per qualsevol nombre real $a$ i $b$ es verifica que:
-
-$$
-|ab| \leq \dfrac {a^2+b^2}{2}
-$$
-el que significa que si $E[XY]<\infty$, $E[X^2]<\infty$ i $E[Y^2]<\infty$ 
-
-Per altra banda per qualsevol real $\alpha$ es te que:
-
-$$
-E[(\alpha X+Y)]^2 =\alpha^2 E[X^2] +2 \alpha E[XY]+E[X^2] \geq 0
-$$
-que es tracta d'una equació de segon grau que te almenys una arrel i el seu discriminant no serà positiu. És a dir:
-
-
-$$
-(E[XY])^2\leq E[X^2] E[Y^2]
-$$
- Si es donés el cas de la igualtat, l'equació tindria una arrel doble $\alpha0$ i $E[(\alpha_0 X+Y)]^2=0$ de una funció no negativa que implica que $P(\alpha_0 X+Y=0)=1$
+Covar
 
 ### Covariància i Correlació
 
@@ -875,7 +882,7 @@ $$
 cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=E[(X_iX_j)]-E[X_i]E[X_j] 
 $$
 
-La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si $X$ es el pes i $Y$ es l'alçada en centímetres i transformem l'alçada en metres multiplicant per 100 Cov(X,100Y)= 100Cov(X,Y)  segons   \@ref(eq:provcov5)
+La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si $X$ es el pes i $Y$ es l'alçada en centímetres i transformem l'alçada en metres multiplicant per $Cov(X,100Y)= 100Cov(X,Y)$  segons   \@ref(eq:provcov5)
 
 
 
@@ -885,7 +892,7 @@ La covariància ens informa sobre el grau i tipus de dependència entre dues var
 Si (X,Y) són variables aleatòries amb variànces finites $Var(X)=\sigma_X^2$ I $Var(Y)=\sigma_Y^2$   la correlació $\rho(X,Y)$ entre $X$ i $Y$  es defineix com
 
 $$
-\rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
+\rho(X,Y)=\dfrac{Cov(X,Y)} {\sqrt{Var(X)Var(Y)}}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
 $$
 es a dir la covariància de les variables $X$ i $Y$ tipificades 
 
@@ -928,7 +935,7 @@ $$
  Com a conseqüència si $\sigma_X>0$ i  $\sigma_Y>0$  el coeficient de correlació es 
  
 $$
-\rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
+\rho(X,Y)=\dfrac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
 $$ 
  i elevant al quadrat
  
@@ -952,7 +959,7 @@ Si  $\rho_{XY}=0$ es diu que les variables estan incorrelades i a més a més la
 
 :::{.theorem}
 
-Si $X_i$ i $X_j$ son independents  aleshores $Cov(X_i,X_J)=\rho{X_i,X_J}=0$
+Si $X_i$ i $X_j$ son independents  aleshores $Cov(X_i,X_J)=\rho_{X_i,X_J}=0$
 :::
 
 **Demostració**
@@ -973,7 +980,7 @@ L'invers del teorema anterior no es cumpleix en general, es a dir dues variables
 
 Imaginem una variable aleatòria $X$ que pren només tres valors $\{-1,0,1\}$ i que cadascú d'aquests valors te la mateixa probabilitat $(1/3$. Imaginem la variable $Y=X^2$.  Les dues variables clarament no son independents per definició ja que els valors de Y estan completament determinats pels valors de Y. 
 
- Si calculem $E[XY]=E[X^3]=E[X]=0$ ja que la variable $X$ i $X^3$ son la mateixa que X.  A més $E[X]E[Y]=0$ ja que $E[X]=0$-
+ Si calculem $E[XY]=E[X^3]=E[X]=0$ ja que la variable $X$ i $X^3$ son la mateixa que X.  A més $E[X]E[Y]=0$ ja que $E[X]=0$
  
  Per tant
  
@@ -1056,4 +1063,4 @@ knitr::include_graphics("images/icecream_drowning.png")
 ```
 
 
-En la URL https://tylervigen.com/spurious-correlations es poden trobar nombrosoes correlacions espúries on estàn disponibles les dades . D'ací la famosa frase en estadística **Correlation is not causation**, la correlació no implica causalitat.
+En la URL https://tylervigen.com/spurious-correlations es poden trobar nombroses correlacions espúries on estàn disponibles les dades . D'ací la famosa frase en estadística **Correlation is not causation**, la correlació no implica causalitat.
