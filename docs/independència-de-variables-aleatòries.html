@@ -128,6 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="Rcode/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -276,11 +277,11 @@ P(A_{j_1} \cap ...\cap A_{j_n} ) =P(X_{j_l} \in B_{j_l},l=1,...,n)=
 \prod_{l=1}^n P(X_{j_l} \in  B_{j_l})  \\  \forall(j_1,...,j_n) \in(1,...,k)  
 \tag{2.1}
 \]</span>
-on <span class="math inline">\(A_{j_1}=X^{-1}B_{j_1}\)</span></p>
+on <span class="math inline">\(A_{j_1}=X^{-1}(B_{j_1})\)</span></p>
 </div>
 <p>Comprovar la independència de variables aleatòries a partir de la equació <a href="independència-de-variables-aleatòries.html#eq:pxindep">(2.1)</a> es complicat i es mès fàcil caracteritzar la independènciaa partir de les funcions de distribució i densitat conjuntes i marginals.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-47" class="theorem"><strong>Theorem 2.1  </strong></span><strong>Teorema de factorització</strong></p>
+<p><span id="thm:unlabeled-div-48" class="theorem"><strong>Theorem 2.1  </strong></span><strong>Teorema de factorització</strong></p>
 <p>Sigui <span class="math inline">\(X=(X_1,...,X_k)\)</span> un vector aleatori amb funció de distribució conjunta <span class="math inline">\(F_X(x_1,...,x_k)\)</span> i funció de densitat o probabilitat <span class="math inline">\(f_X(x_1,...,x_k)\)</span>. Si <span class="math inline">\(F_j(x_j) \quad i \quad f_j(x_j)  , j=1,...,k\)</span> con les funcions de distribució marginals i les funcions de densitat o probabilitat marginals de cada component del vector aleatori direm que les variables <span class="math inline">\(X_1,...,X_k\)</span> son independents si i només si es verifiquen les següents condicions equivalents:</p>
 <p><span class="math display" id="eq:Fxindep">\[
 1.\qquad F_X(x_1,...,x_k)= \prod_{l=1}^k F_j(x_j), \quad \forall (x_1,...,x_k) \in \mathbb{R}^k \tag{2.2}
@@ -290,9 +291,9 @@ on <span class="math inline">\(A_{j_1}=X^{-1}B_{j_1}\)</span></p>
 \]</span></p>
 </div>
 <p><strong>Demostració</strong></p>
-<p>Suposem que les variables aleatòries contínues (X_1,,X_k) són independents. Per definició,</p>
+<p>Suposem que les variables aleatòries contínues <span class="math inline">\((X_1,\ldots,X_k)\)</span> són independents. Per definició,</p>
 <p><span class="math display">\[
-\prod_{j=1}^{k}\Pr(X_j\in A_j),
+P(A_{j_1} \cap ...\cap A_{j_n} )=\prod_{j=1}^{k}\Pr(X_j\in A_j),
 \qquad
 \forall,A_1,\ldots,A_k\in\mathcal{B}(\mathbb{R}).
 \]</span></p>
@@ -333,10 +334,10 @@ f_k(x_k) \\
 \end{aligned}
 \]</span></p>
 <div class="observation">
-<p>Com es va veure en el tema anterior a partir de la distribució conjunta d’un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components. Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin indepen dents.</p>
+<p>Com es va veure en el tema anterior a partir de la distribució conjunta d’un vector aleatori es poden obtenir les distribucions marginals de cadascuna de les seves components. Segons el teorema de factorització, es pot reconstruir la distribució conjunta multiplicant las distribucions marginals sempre que les variables siguin independents.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-48" class="example"><strong>Exemple 2.1  </strong></span>En l’exemple <a href="variables-aleatòries-multivariades.html#exm:circulo">1.25</a> del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l’atzar en el cercle unitats <span class="math inline">\(C_1\)</span> tenia una densitat conjunta</p>
+<p><span id="exm:unlabeled-div-49" class="example"><strong>Exemple 2.1  </strong></span>En l’exemple <a href="variables-aleatòries-multivariades.html#exm:circulo">1.25</a> del tema anterior vàrem veure que les coordenades de la distribució conjunta de un punt triat a l’atzar en el cercle unitat <span class="math inline">\(C_1\)</span> tenia una densitat conjunta</p>
 <p><span class="math display">\[
 f_{XY}(x,y)=
 \begin{cases}
@@ -345,7 +346,7 @@ f_{XY}(x,y)=
 \end{cases}
 \]</span></p>
 <p>I fàcilment i de forma simètrica, les marginals de X e Y son idèntiques i tenen la forma</p>
-<p><span class="math display" id="eq:indep">\[
+<p><span class="math display">\[
 f_{X}(x)=
 \begin{cases}
 \dfrac{2}{\pi}\sqrt(1-x^2),          &amp; \text{si} \quad |x|&lt;1 \\
@@ -355,13 +356,16 @@ f_{X}(x)=
 <p>Directamente les dues variables <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> no son independents donat que <span class="math inline">\(f_{XY}(x,y) \neq  f_{X}(x)f_{Y}(y)\)</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-49" class="definition"><strong>Definició 2.2  </strong></span><strong>Mostra aleatòria</strong></p>
+<p><span id="def:unlabeled-div-50" class="definition"><strong>Definició 2.2  </strong></span><strong>Mostra aleatòria</strong></p>
 <p>Considerem una distribució de probabilitat que ve representada per la seva funció de probabilitat o densitat de probabilitat segons sigui discreta o continua. Es diu que n variables aleatòries <span class="math inline">\(X_1,...,X_n\)</span> formen una mostra aleatòria d’aquesta distribució si les variables aleatòries son independents i la funció de probabilitat o densitat marginal de cada variable aleatòria <span class="math inline">\(X_i\)</span> es f. Normalment a este conjunt de variables aleatòrias es diu que son independents i idènticament distribuïdes o abreviadament i.i.d. El nombre de variables aleatòries es la grandària o mida mostral.</p>
 </div>
-<p>D’aquesta definició es dedueix que les dades observades en una mostra de subjectes d’una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu <span class="math inline">\(g(x_1,...,x_n)=f(x_1)...f(x_n)\)</span></p>
+<p>D’aquesta definició es dedueix que les dades observades en una mostra de subjectes d’una població han estat generades per n variables i.i.d i que la seva funció de probabilitat conjunta es el producte de les densitats de cada individu com<span class="math inline">\(g(x_1,...,x_n)=f(x_1)...f(x_n)\)</span></p>
 <div class="proposition">
-<p><span id="prp:unlabeled-div-50" class="proposition"><strong>Proposició 2.1  </strong></span><strong>Independència i Esperança</strong></p>
-<p>Si <span class="math inline">\(X_1,...,X_k\)</span> són independents, aleshores <span class="math inline">\(E[X_1,...,X_k]=E[\prod_{j=1}^{k}X_i]=\prod_{j=1}^{k}E[X_i]\)</span> \tag{2.4}</p>
+<p><span id="prp:unlabeled-div-51" class="proposition"><strong>Proposició 2.1  </strong></span><strong>Independència i Esperança</strong></p>
+<p>Si <span class="math inline">\(X_1,...,X_k\)</span> són independents, aleshores
+<span class="math display" id="eq:indep">\[
+E[X_1,...,X_k]=E[\prod_{i=1}^{k}X_i]=\prod_{i=1}^{k}E[X_i] \tag{2.4}
+\]</span></p>
 <p><strong>Demostració</strong></p>
 <p>Utilitzant la definició de esperança d’un vector i la intercanviabilitat de les integrals i els productes de funcions pel teorema de Fubini podem demostrar</p>
 <p><span class="math display">\[
@@ -396,12 +400,12 @@ E(X_i).
 <p>De manera més general , el resultat anterior es pot generalitzar a les funcions <span class="math inline">\(g_i,i=1,...,k\)</span> son mesurables, les <span class="math inline">\(g_i(X_i)\)</span> també son variables independents i es pot escriure:</p>
 <p><span class="math display" id="eq:gindep">\[
 E[\prod_{j=1}^{k}g(X_i)]=\prod_{j=1}^{k}E[g_i(X_i)]\tag{2.5}
-\]</span>
-:::{.corollary}
-Si les variables <span class="math inline">\(X_1,...,X_k\)</span> son independents, llavors <span class="math inline">\(cov(X_i,X_j)=0, \quad \forall i,j\)</span>
-:::</p>
+\]</span></p>
 <div class="corollary">
-<p><span id="cor:unlabeled-div-51" class="corollary"><strong>Corollary 2.1  </strong></span>Si les variables <span class="math inline">\(X_1,...,X_k\)</span> son independents i les seves variàncies existeixen, la variància de <span class="math inline">\(S=\sum_{i=1}^k a_i X_i\)</span>, on <span class="math inline">\(a_i\)</span> son qualsevol número real, existeix i ve donada per <span class="math inline">\(V(S)= \sum_{i=1}^k a_i^2  Var(X_i)\)</span></p>
+<p><span id="cor:unlabeled-div-52" class="corollary"><strong>Corollary 2.1  </strong></span>Si les variables <span class="math inline">\(X_1,...,X_k\)</span> son independents, llavors <span class="math inline">\(cov(X_i,X_j)=0, \quad \forall i,j\)</span></p>
+</div>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-53" class="corollary"><strong>Corollary 2.2  </strong></span>Si les variables <span class="math inline">\(X_1,...,X_k\)</span> son independents i les seves variàncies existeixen, la variància de <span class="math inline">\(S=\sum_{i=1}^k a_i X_i\)</span>, on <span class="math inline">\(a_i\)</span> son qualsevol número real, existeix i ve donada per <span class="math inline">\(V(S)= \sum_{i=1}^k a_i^2  Var(X_i)\)</span></p>
 </div>
 <p>Aquests corol·laris permeten obtenir esperances i variàncies de algunes variables conegudes de manera fàcil com veurem en el tema 3.</p>
 </div>
@@ -409,8 +413,8 @@ Si les variables <span class="math inline">\(X_1,...,X_k\)</span> son independen
 <h2><span class="header-section-number">2.2</span> Esperances i variàncies condicionades.<a href="independència-de-variables-aleatòries.html#esperances-i-vari%C3%A0ncies-condicionades." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En el tema anterior varem introduir el concepte d’esperança i variància de un vector aleatori, així com el concepte de distribució condicional. En aquest apartat introduirem el concepte de esperança condicional i la seva relació amb el concepte d’independència.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-52" class="definition"><strong>Definició 2.3  </strong></span><strong>Esperança condicionada</strong></p>
-<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori definti sbore l’espai de probabilitat <span class="math inline">\((\Omega,\mathcal{A}, \mathbb{R})\)</span> i sigui <span class="math inline">\(P_{Y|X=x}\)</span> la distribució de probabilitat de Y condicionada a X=x. Si g es una funció mesurable definida de <span class="math inline">\((\mathbb{R},\beta)\)</span> en <span class="math inline">\((\mathbb{R},\beta)\)</span> de manera que <span class="math inline">\(E[g(Y)]\)</span> exiteix, l’esperança condicionada de g(Y) donat X,<span class="math inline">\(E[g(Y)|X]\)</span> es una variable aleatòria que paer <span class="math inline">\(X=x\)</span> pren el valor</p>
+<p><span id="def:unlabeled-div-54" class="definition"><strong>Definició 2.3  </strong></span><strong>Esperança condicionada</strong></p>
+<p>Sigui <span class="math inline">\((X,Y)\)</span> un vector aleatori definit sobre l’espai de probabilitat <span class="math inline">\((\Omega,\mathcal{A}, \mathbb{R})\)</span> i sigui <span class="math inline">\(P_{Y|X=x}\)</span> la distribució de probabilitat de Y condicionada a X=x. Si g es una funció mesurable definida de <span class="math inline">\((\mathbb{R},\beta)\)</span> en <span class="math inline">\((\mathbb{R},\beta)\)</span> de manera que <span class="math inline">\(E[g(Y)]\)</span> existeix, l’esperança condicionada de <span class="math inline">\(g(Y)\)</span> donat <span class="math inline">\(X\)</span>,<span class="math inline">\(E[g(Y)|X]\)</span> es una variable aleatòria que per a <span class="math inline">\(X=x\)</span> pren el valor</p>
 <p><span class="math display" id="eq:espcond">\[
 E\!\left[g(Y)\mid X=x\right]
 =
@@ -430,13 +434,13 @@ E[g(Y)\mid X=x]=\sum_{y\in D_x} g(y)P(Y=y\mid X=x)=\sum_{y\in D_x}g(y)f_{Y\mid X
 <p><span class="math display">\[
 E[g(Y)| X=x] =\int_{\mathbb{R}} g(y)f_{Y | X}(y |x) dx
 \]</span></p>
-<p>Així si g(Y)=y tenim</p>
+<p>Així si <span class="math inline">\(g(Y)=Y\)</span> tenim</p>
 <p><span class="math display" id="eq:espcondic">\[
 E[Y\mid X=x]=
 \begin{cases}
 \displaystyle
 \int_{-\infty}^{\infty}
-y\,f_{Y\mid X=x}(y)\,dy,
+y\,f_{Y\mid X=x}(y)\,dx,
 &amp; \text{en el cas continu},\\
 \displaystyle
 \sum_{y}
@@ -451,8 +455,8 @@ m_y =E[Y \mid X=x]
 \]</span>
 que estarà definida per a tot x tal que <span class="math inline">\(f_X(x)&gt;0\)</span> i que la funció de probabilitat o densitat condicionada <span class="math inline">\(f_{Y|X=x}(y)\)</span> tingui esperança finita</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-53" class="definition"><strong>Definició 2.4  </strong></span><strong>Funció de esperança condicionada o regressió</strong></p>
-<p>La funció <span class="math inline">\(m_y =E[Y \mid X=x]\)</span> s’anomena funció de esperança condicionada de Y donat X o també funció de regressió de Y sobre X.</p>
+<p><span id="def:unlabeled-div-55" class="definition"><strong>Definició 2.4  </strong></span><strong>Funció de esperança condicionada o regressió</strong></p>
+<p>La funció <span class="math inline">\(m_y(x) =E[Y \mid X=x]\)</span> s’anomena funció de esperança condicionada de Y donat X o també funció de regressió de Y sobre X.</p>
 </div>
 <hr />
 <div class="exemple">
@@ -538,7 +542,7 @@ P(a \leq Y \leq b) = 1 \implies a \leq E(Y|X) \leq b \tag{2.9}
 <li><span class="math display" id="eq:expcondconstant" id="eq:expconddesigual">\[
 P(g_1(Y) \leq g_2(Y)) = 1 \implies E[g_1(Y)|X] \leq E[g_2(Y)|X] \tag{2.10}
 \]</span></li>
-<li><span class="math inline">\(E[c|X]=c\)</span> para c constant. \tag{2.11}</li>
+<li><span class="math inline">\(E[c|X]=c\)</span> per a c constant. \tag{2.11}</li>
 </ol>
 <p>Però hi ha algunes propietats que son específiques de de l’esperança condicional</p>
 <div class="{proposition}">
@@ -563,7 +567,7 @@ f_X(x)\,dx \\
 \]</span></p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-54" class="example"><strong>Exemple 2.2  </strong></span>Considerem el vector <span class="math inline">\((X,Y)\)</span> amb densitat conjunta</p>
+<p><span id="exm:unlabeled-div-56" class="example"><strong>Exemple 2.2  </strong></span>Considerem el vector <span class="math inline">\((X,Y)\)</span> amb densitat conjunta</p>
 <p><span class="math display">\[
 f_{XY}(x,y)=
 \begin{cases}
@@ -573,7 +577,7 @@ f_{XY}(x,y)=
 &amp; \text{en la resta}.
 \end{cases}
 \]</span></p>
-<p>Fècilment obtenim que <span class="math inline">\(X \sim U(0,1)\)</span> i que <span class="math inline">\(Y|X=x \sim U(0,x)\)</span></p>
+<p>Fàcilment obtenim que <span class="math inline">\(X \sim U(0,1)\)</span> i que <span class="math inline">\(Y|X=x \sim U(0,x)\)</span></p>
 <p>aplicant el resultat anterior podem obtenir <span class="math inline">\(E[Y]\)</span></p>
 <p><span class="math display">\[
 E[Y]= \int_0^1 E(Y|x)f_X(x) dx= \int_0^1 \frac{1}{2} xdx=\frac{1}{4}
@@ -582,7 +586,7 @@ E[Y]= \int_0^1 E(Y|x)f_X(x) dx= \int_0^1 \frac{1}{2} xdx=\frac{1}{4}
 <hr />
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-55" class="example"><strong>Exemple 2.3  </strong></span>Un treballador está encarregat del correcte funcionament de n màquines situades en línia recta i distants una de l’altra l metros. El treballador ha de reparar-les quan s’espatllen, el que succeeix amb la mateixa probabilitat per totes les màquines de manera independent una de l’altra. L’operari pot seguir dues estratègies.</p>
+<p><span id="exm:unlabeled-div-57" class="example"><strong>Exemple 2.3  </strong></span>Un treballador está encarregat del correcte funcionament de n màquines situades en línia recta i distants una de l’altra l metros. El treballador ha de reparar-les quan s’espatllen, el que succeeix amb la mateixa probabilitat per totes les màquines de manera independent una de l’altra. L’operari pot seguir dues estratègies.</p>
 <ol style="list-style-type: decimal">
 <li><p>Anar a reparar la màquina que s’espatlli i romandre al costat d’ella fins que un altra s’espatlle i anar llavors a reparar-la</p></li>
 <li><p>Situar-se al punt mig de la línia de màquines i des de alli anar a la màquina espatllada i tornar al punt mig quan la màquina estigui reparada.</p></li>
@@ -590,7 +594,7 @@ E[Y]= \int_0^1 E(Y|x)f_X(x) dx= \int_0^1 \frac{1}{2} xdx=\frac{1}{4}
 <p>Si X es la distància que camina el treballador entre dues avaries consecutives, ¿Quina de les dues estratègies es la més convenient per caminar menys?</p>
 <p>Per tant es tracta de obtenir el valor E[X] amb les dues estratègies i triar la que tingui menys valor esperat. Designem <span class="math inline">\(E_i[X]\)</span> l’esperança que obtenim en cada estratègia <span class="math inline">\(i=1,2\)</span>.</p>
 <p><strong>Estratègia 1</strong></p>
-<p>Si <span class="math inline">\(A_k\)</span> es l’esdeveniment l’operari està en la màquina k. Per obtenir <span class="math inline">\(E_1[X]\)</span> recorrem a la propietat de l’esperança total, però utilitzan com a distribució condicionada la que es deriva condicionar respecte de l’esdeveniment<span class="math inline">\(A_k\)</span>. Tindrem E_1[X]=E[E(A_k]]</p>
+<p>Si <span class="math inline">\(A_k\)</span> es l’esdeveniment l’operari està en la màquina k. Per obtenir <span class="math inline">\(E_1[X]\)</span> recorrem a la propietat de l’esperança total, però utilitzan com a distribució condicionada la que es deriva condicionar respecte de l’esdeveniment<span class="math inline">\(A_k\)</span>. Tindrem E_1[X]=E[E(X|A_k]]</p>
 <p>Para obtenir <span class="math inline">\(E[X\mid A_k])\)</span>, tinguem en compte que, si <span class="math inline">\(i\)</span> és la pròxima màquina avariada, <span class="math inline">\(P(A_i)=\frac{1}{n}, \qquad \forall i=1,\ldots,n,\)</span> i la distància a recórrer serà</p>
 <p><span class="math display">\[
 X\mid A_k=
@@ -604,21 +608,25 @@ X\mid A_k=
 \begin{aligned}
 E(X\mid A_k)
 &amp;= \frac{1}{n} \left( \sum_{i=1}^{k}(k-i)\,l + \sum_{i=k+1}^{n}(i-k)\,l\right)\\
+&amp;=\frac{l}{n} \left( \dfrac{k(k-1)}{2}+ \dfrac{(n-k)(1+n-k)}{2}\right) \\
 &amp;= \frac{l}{2n} \left[ 2k^2-2(n+1)k+n(n+1) \right].
+\end{aligned}
+\]</span></p>
+<p>La distancia esperada és.</p>
+<p><span class="math display">\[
+\begin{aligned}
+E_1[X]
+&amp;= E[E[X\mid A_k]]=\frac{1}{n} \sum_{k=1}^{n} E[X\mid A_k]\\
+&amp;= \frac{l}{2n^2} \sum_{k=1}^{n}\left[2k^2-2(n+1)k+n(n+1)\right] \\
+&amp;=\frac{l}{2n^2}[2\sum_{k=1}^{n}k^2-2(n+1)\sum_{k=1}^{n}k+\sum_{k=1}^{n}n(n+1)] \\
+&amp;= \frac{l(n^2-1)}{3n}.
 \end{aligned}
 \]</span></p>
 <p>Utilitzant</p>
 <p><span class="math display">\[
-\sum_{k=1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6},
+\sum_{k=1}^{n}k^2 = \frac{n(n+1)(2n+1)}{6},  \qquad \sum_{k=1}^{n}k=\frac{n(n+1)}{2},  \qquad \sum_{k=1}^{n} n(n+1)=n^2(n+1)
 \]</span></p>
-<p>obtenim</p>
-<p><span class="math display">\[
-\begin{aligned}
-E_1(X)=
-E\!\left(E(X\mid A_k)\right)=\frac{1}{n} \sum_{k=1}^{n} E(X\mid A_k)= \frac{l(n^2-1)}{3n}.
-\end{aligned}
-\]</span>
-<strong>Estratègia 2</strong></p>
+<p><strong>Estratègia 2</strong></p>
 <p>Per facilitar els càlculs, suposem que <span class="math inline">\(n\)</span> és imparell, de manera que hi ha una màquina situada al punt mig de la línia, és a dir, la <span class="math inline">\(\frac{n+1}{2}\)</span>-èsima. Si la pròxima màquina avariada és la i-èsima, la distància a recórrer serà</p>
 <p><span class="math display">\[
 X=
@@ -631,23 +639,23 @@ X=
 <p>L’esperança ve donada per</p>
 <p><span class="math display">\[
 \begin{aligned}
-E_2(X)=\frac{2}{n}\sum_{i=1}^{n}\left|\frac{n+1}{2}-i\right|l,=\frac{l(n-1)}{2}
+E_2(X)=\frac{2}{n}\sum_{i=1}^{n}\left|\frac{n+1}{2}-i\right|l=\frac{l(n^2-1)}{2n}
 \end{aligned}
 \]</span></p>
-<p>Com que <span class="math inline">\(E_1(X)\le E_2(X) \iff \frac{n+1}{3n}\le\frac{1}{2}  \iff n\ge 2\)</span>,podem deduir que la primera estratègia és millor, excepte quan només hi ha una màquina.</p>
+<p>Com que <span class="math inline">\(E_1(X)\le E_2(X) \iff \frac{l(n^2-1)}{3n}&lt;\frac{l(n^2-1)}{2n} \iff \frac{1}{3} &lt; \frac{1}{2}  \iff n\ge 2\)</span>,podem deduir que la primera estratègia és millor, excepte quan només hi ha una màquina.</p>
 </div>
 <hr />
 <div class="definition">
-<p><span id="def:unlabeled-div-56" class="definition"><strong>Definició 2.5  </strong></span><strong>Variància condicionada</strong></p>
+<p><span id="def:unlabeled-div-58" class="definition"><strong>Definició 2.5  </strong></span><strong>Variància condicionada</strong></p>
 <p>Definim la variància condicionada <span class="math inline">\(Var(Y|X)\)</span> a la variable definida con una funció de la variable aleatòria <span class="math inline">\(X\)</span> com la funció <span class="math inline">\(v_Y(x)\)</span><br />
 <span class="math inline">\(v_Y(x)= Var(Y|X=x)=E[Y^2|X]-(E[Y|X])^2\)</span></p>
 </div>
 <p>També és possible relacionar la variància absoluta amb la variància condicionada, encara que l’expressió no és tan directa com la que s’ha obtingut per a l’esperança.</p>
 <div class="proposition">
-<p><span id="prp:unlabeled-div-57" class="proposition"><strong>Proposició 2.2  </strong></span>** Llei de la variància total**
-Si $E[Y^2]” existeix, llavors</p>
+<p><span id="prp:unlabeled-div-59" class="proposition"><strong>Proposició 2.2  </strong></span><strong>Llei de la variància total</strong></p>
+<p>Si <span class="math inline">\(E[Y^2]\)</span> existeix, llavors</p>
 <p><span class="math display" id="eq:varcond">\[
-var(Y)=E(var[Y|X])+ var(E[X|Y])  \tag{2.12}
+var(Y)=E(var[Y|X])+ var(E[Y|X])  \tag{2.12}
 \]</span></p>
 </div>
 <p><strong>Demostració</strong>
@@ -657,6 +665,7 @@ var(Y)=E(var[Y|X])+ var(E[X|Y])  \tag{2.12}
 &amp;= E\left[(Y - E(Y))^2\right]= E\left\{E\left[(Y - E(Y))^2 \mid X\right]\right\} \\
 &amp;= E\left\{E\left[Y^2 + (E(Y))^2 - 2Y\,E(Y)\mid X\right]\right\} \\
 &amp;= E\left\{E[Y^2\mid X] + E(Y)^2 - 2E(Y)\,E[Y\mid X]\right\} \\
+&amp;= E\left\{E[Y^2\mid X] -E[Y\mid X]^2 +E[Y\mid X]^2 + E(Y)^2 - 2E(Y)\,E[Y\mid X]\right\} \\
 &amp;= E\left\{\operatorname{Var}(Y\mid X)
 + (E[Y\mid X])^2
 + E(Y)^2
@@ -665,23 +674,25 @@ var(Y)=E(var[Y|X])+ var(E[X|Y])  \tag{2.12}
 + \left(E[Y\mid X]-E(Y)\right)^2\right\} \\
 &amp;= E\{\operatorname{Var}(Y\mid X)\}
 + E\left[\left(E[Y\mid X]-E(Y)\right)^2\right] \\
-&amp;= E\left(\operatorname{Var}(Y\mid X)\right)
+&amp;= E\left[\operatorname{Var}(Y\mid X)\right]
 + \operatorname{Var}\left(E[Y\mid X]\right)
 \end{aligned}
-\]</span>
-:::{.corollary}</p>
-<p>Si <span class="math inline">\(E[Y^2]\)</span> existeix, per la propietat anterior <span class="math inline">\(Var(Y) \geq Var(E[Y|X])\)</span></p>
-<p>:::</p>
+\]</span></p>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-60" class="corollary"><strong>Corollary 2.3  </strong></span>Si <span class="math inline">\(E[Y^2]\)</span> existeix, per la propietat anterior <span class="math inline">\(Var(Y) \geq Var(E[Y|X])\)</span></p>
+</div>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-58" class="example"><strong>Exemple 2.4  </strong></span>Siguin <span class="math inline">\((X, Y)\)</span> variables aleatòries contínues amb densitat conjunta</p>
+<p><span id="exm:unlabeled-div-61" class="example"><strong>Exemple 2.4  </strong></span>Siguin <span class="math inline">\((X, Y)\)</span> variables aleatòries contínues amb densitat conjunta</p>
 <p><span class="math display">\[
 f(x,y)=
 \begin{cases}
 e^{-y}, &amp; 0\le x\le y,\\
 0, &amp; \text{en la resta}
 \end{cases}
-\]</span></p>
+\]</span>
+Comprova que es cumpleix la llei de la variància total</p>
+<p>Calcularem totes les funcions que necessitem</p>
 <p><strong>(a) Densitat marginal de <span class="math inline">\(X\)</span></strong></p>
 <p><span class="math display">\[
 f_X(x)=\int_x^\infty f(x,y)\,dy=\int_x^\infty e^{-y}\,dy=\left[-e^{-y}\right]_x^\infty=e^{-x}
@@ -692,7 +703,7 @@ f_X(x)=\int_x^\infty f(x,y)\,dy=\int_x^\infty e^{-y}\,dy=\left[-e^{-y}\right]_x^
 f_Y(y)=\int_0^y f(x,y)\,dx=\int_0^y e^{-y}\,dx=e^{-y}[x]_0^y=ye^{-y}
 \]</span></p>
 <p>Per tant, <span class="math inline">\(Y\sim\Gamma(\alpha=2,\beta=1)\)</span></p>
-<p><strong>(c) Densitat condicional de <span class="math inline">\((X\mid Y=y\)</span></strong></p>
+<p><strong>(c) Densitat condicional de <span class="math inline">\((X\mid Y=y)\)</span></strong></p>
 <p><span class="math display">\[
 f_{X\mid Y=y}(x)=\frac{f(x,y)}{f_Y(y)}=\frac{e^{-y}}{ye^{-y}}=\frac1y,\qquad 0\le x\le y
 \]</span></p>
@@ -819,7 +830,7 @@ i d’ací</p>
 <p><span class="math display" id="eq:desigepsilon">\[
 P(X \geq \epsilon) \leq \dfrac{E[X]}{\epsilon} \tag{2.13}
 \]</span></p>
-<p>Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcionen cotes superiors paer a la probabilitat de certs conjunts i que son vàlides independentment de la distribució de la variable involucrada.</p>
+<p>Aquest resultat dona lloc a dues conegudes desigualtats generals que proporcionen cotes superiors per a la probabilitat de certs conjunts i que son vàlides independentment de la distribució de la variable involucrada.</p>
 <p><strong>Desigualtat de Markov</strong></p>
 <p>Si en la desigualtat <a href="independència-de-variables-aleatòries.html#eq:desigepsilon">(2.13)</a> substituïm <span class="math inline">\(X\)</span> per <span class="math inline">\(|X|^k\)</span> i <span class="math inline">\(\epsilon\)</span> per <span class="math inline">\(\epsilon^k\)</span> tenim</p>
 <p><span class="math display" id="eq:desmarkov">\[
@@ -827,23 +838,24 @@ P(|X| \geq \epsilon)=P(|X|^k \geq \epsilon^k) \leq \dfrac{E[|X|^k]}{\epsilon^k} 
 \]</span>
 coneguda com a desigualtat de Markov.</p>
 <p><strong>Desigualtat de Txebixev</strong></p>
-<p>Un cas especial de <a href="independència-de-variables-aleatòries.html#eq:desmarkov">(2.14)</a>, que es coneix com la desigualtat de Txebixev, és el cas en el que k=2 i X=X-E[X]</p>
+<p>Un cas especial de <a href="independència-de-variables-aleatòries.html#eq:desmarkov">(2.14)</a>, que es coneix com la desigualtat de Txebixev, és el cas en el que <span class="math inline">\(k=2\)</span> Si
+<span class="math inline">\(X=X-E[X]\)</span></p>
 <p><span class="math display" id="eq:destxebixev">\[
 P(|X-E[X]| \geq \epsilon) \leq \frac {1}{\epsilon^2}Var(X)     \tag{2.15}
 \]</span></p>
-<div class="proposition">
-<p><span id="prp:unlabeled-div-59" class="proposition"><strong>Proposició 2.3  </strong></span>Si <span class="math inline">\(V(X)=0\)</span> aleshores <span class="math inline">\(X\)</span> es constant amb probabilitat 1.</p>
+<p>:::
+:::{.proposition}</p>
+<p>Si <span class="math inline">\(V(X)=0\)</span> aleshores <span class="math inline">\(X\)</span> es constant amb probabilitat 1.</p>
 <p><strong>Demostració</strong></p>
 <p>Suposem <span class="math inline">\(E[X]=\mu\)</span> i considerem els conjunts <span class="math inline">\(A_n={|X-\mu| \geq 1/n}\)</span> aplicant la desigualtat de Txebixev</p>
 <p><span class="math display">\[
-P(A_n)= P(|X-\mu| \geq\frac{1}{n})=0 \forall n
+P(A_n)= P(|X-\mu| \geq\frac{1}{n})=0 \quad \forall n
 \]</span>
 d’aci obtenim que <span class="math inline">\(P(\cup_n A_n)=0\)</span> i <span class="math inline">\(P(\cap_n A_n^c)=1\)</span> Però</p>
 <p><span class="math display">\[
 \bigcap_{n\geq1} A_n^c=\bigcap_{n\geq1} \{  |X-\mu| \geq \frac{1}{n} \}=\{X=\mu \}
 \]</span>
-i per tant $P(X=)=1</p>
-</div>
+i per tant <span class="math inline">\(P(X=\mu)=1\)</span></p>
 <p><strong>Desigualtat de Jensen</strong></p>
 <p>Si <span class="math inline">\(g(X)\)</span> es convexa sabem que <span class="math inline">\(\forall a, \exists \lambda_a\)</span> tal que <span class="math inline">\(g(x) \geq g(a)+lambda_a(x-a)\)</span></p>
 <p>Si es substitueix <span class="math inline">\(a=E[X]\)</span> llavors</p>
@@ -853,30 +865,17 @@ g(X) \geq g(E[X])+lambda_a(X-E[X])
 i calculant esperances de l’expressió anterior obtenim la coneguda com desigualtat de Jensen</p>
 <p><span class="math display" id="eq:desjensen">\[
 E[g(X)] \geq g(E[X])   \tag{2.16}
-\]</span>
-:::{.Theorem #thm-cauchy}
-<strong>Desigualtat de Cauchy-Schwarz</strong></p>
+\]</span></p>
+<div class="theorem">
+<p><span id="thm:thm-cauchy" class="theorem"><strong>Theorem 2.2  </strong></span><strong>Desigualtat de Cauchy-Schwarz</strong></p>
 <p>Si <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> son variables aleatòries amb variàncies finites. Aleshores, <span class="math inline">\(cov(X,Y)\)</span> existeix i es verifica que</p>
 <p><span class="math display" id="eq:descauchy">\[
 (E[XY])^2 \leq E[X^2]E[Y^2]  \tag{2.17}
 \]</span>
-verificant-se la igualtat si i només si existeix un nombre real tal que <span class="math inline">\(P(\alpha X+Y=0)=1\)</span>
-:::
-<strong>Demostració</strong>
-Per qualsevol nombre real <span class="math inline">\(a\)</span> i <span class="math inline">\(b\)</span> es verifica que:</p>
-<p><span class="math display">\[
-|ab| \leq \dfrac {a^2+b^2}{2}
-\]</span>
-el que significa que si <span class="math inline">\(E[XY]&lt;\infty\)</span>, <span class="math inline">\(E[X^2]&lt;\infty\)</span> i <span class="math inline">\(E[Y^2]&lt;\infty\)</span></p>
-<p>Per altra banda per qualsevol real <span class="math inline">\(\alpha\)</span> es te que:</p>
-<p><span class="math display">\[
-E[(\alpha X+Y)]^2 =\alpha^2 E[X^2] +2 \alpha E[XY]+E[X^2] \geq 0
-\]</span>
-que es tracta d’una equació de segon grau que te almenys una arrel i el seu discriminant no serà positiu. És a dir:</p>
-<p><span class="math display">\[
-(E[XY])^2\leq E[X^2] E[Y^2]
-\]</span>
-Si es donés el cas de la igualtat, l’equació tindria una arrel doble <span class="math inline">\(\alpha0\)</span> i <span class="math inline">\(E[(\alpha_0 X+Y)]^2=0\)</span> de una funció no negativa que implica que <span class="math inline">\(P(\alpha_0 X+Y=0)=1\)</span></p>
+verificant-se la igualtat si i només si existeix un nombre real tal que <span class="math inline">\(P(\alpha X+Y=0)=1\)</span></p>
+</div>
+<p><strong>Demostració</strong>
+Covar</p>
 </div>
 <div id="covariància-i-correlació" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Covariància i Correlació<a href="independència-de-variables-aleatòries.html#covari%C3%A0ncia-i-correlaci%C3%B3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -884,17 +883,17 @@ Si es donés el cas de la igualtat, l’equació tindria una arrel doble <span c
 <p><span class="math display">\[
 cov(X_i,X_j)=E[(X_i-E[X_i])(X_j-E[X_j])]=E[(X_iX_j)]-E[X_i]E[X_j]
 \]</span></p>
-<p>La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si <span class="math inline">\(X\)</span> es el pes i <span class="math inline">\(Y\)</span> es l’alçada en centímetres i transformem l’alçada en metres multiplicant per 100 Cov(X,100Y)= 100Cov(X,Y) segons <a href="variables-aleatòries-multivariades.html#eq:provcov5">(1.15)</a></p>
+<p>La covariància ens informa sobre el grau i tipus de dependència entre dues variables a través de la seva magnitud i signe, ja que la relació pot ser positiva o negativa. Tanmateix les unitats de mesura de les variables, alteren els valors de les covariàncies. Si <span class="math inline">\(X\)</span> es el pes i <span class="math inline">\(Y\)</span> es l’alçada en centímetres i transformem l’alçada en metres multiplicant per <span class="math inline">\(Cov(X,100Y)= 100Cov(X,Y)\)</span> segons <a href="variables-aleatòries-multivariades.html#eq:provcov5">(1.15)</a></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-60" class="definition"><strong>Definició 2.6  </strong></span><strong>Coeficient de correlació</strong></p>
+<p><span id="def:unlabeled-div-62" class="definition"><strong>Definició 2.6  </strong></span><strong>Coeficient de correlació</strong></p>
 <p>Si (X,Y) són variables aleatòries amb variànces finites <span class="math inline">\(Var(X)=\sigma_X^2\)</span> I <span class="math inline">\(Var(Y)=\sigma_Y^2\)</span> la correlació <span class="math inline">\(\rho(X,Y)\)</span> entre <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> es defineix com</p>
 <p><span class="math display">\[
-\rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
+\rho(X,Y)=\dfrac{Cov(X,Y)} {\sqrt{Var(X)Var(Y)}}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y} = E \left[\left(\dfrac{X-E[X]}{\sigma_X}\right)\left(\dfrac{Y-E[Y]}{\sigma_Y}\right)\right]= cov(X_t,Y_t)
 \]</span>
 es a dir la covariància de les variables <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> tipificades</p>
 </div>
 <div class="proposition">
-<p><span id="prp:unlabeled-div-61" class="proposition"><strong>Proposició 2.4  </strong></span>Siguin <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> dues variables aleatòries amb variància finita llavors</p>
+<p><span id="prp:unlabeled-div-63" class="proposition"><strong>Proposició 2.3  </strong></span>Siguin <span class="math inline">\(X\)</span> i <span class="math inline">\(Y\)</span> dues variables aleatòries amb variància finita llavors</p>
 <p><span class="math display">\[
 (Cov(X,Y))^2 \leq \sigma_X^2 \sigma_Y^2
 \]</span>
@@ -917,7 +916,7 @@ A més sabem que <span class="math inline">\(E[X_c^2]=Var(X)=\sigma_X^2\)</span>
 \]</span>
 Com a conseqüència si <span class="math inline">\(\sigma_X&gt;0\)</span> i <span class="math inline">\(\sigma_Y&gt;0\)</span> el coeficient de correlació es</p>
 <p><span class="math display">\[
-\rho(X,Y)=\dfrac{Cov(X,Y)}{Var(X)Var(Y)}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
+\rho(X,Y)=\dfrac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}= \dfrac{\sigma_{XY}}{\sigma_X \sigma_Y}
 \]</span>
 i elevant al quadrat</p>
 <p><span class="math display">\[
@@ -931,7 +930,7 @@ i per tant
 <p>Si <span class="math inline">\(\rho_{XY}&gt;0\)</span> parlarem de que les variables estàn positivament correlacionades i si <span class="math inline">\(\rho_{XY}&lt;0\)</span> direm que estan negativament correlacionades.</p>
 <p>Si <span class="math inline">\(\rho_{XY}=0\)</span> es diu que les variables estan incorrelades i a més a més la <span class="math inline">\(Cov(X,Y)=0\)</span> i hi ha absència de correlació lineal.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-62" class="theorem"><strong>Theorem 2.2  </strong></span>Si <span class="math inline">\(X_i\)</span> i <span class="math inline">\(X_j\)</span> son independents aleshores <span class="math inline">\(Cov(X_i,X_J)=\rho{X_i,X_J}=0\)</span></p>
+<p><span id="thm:unlabeled-div-64" class="theorem"><strong>Theorem 2.3  </strong></span>Si <span class="math inline">\(X_i\)</span> i <span class="math inline">\(X_j\)</span> son independents aleshores <span class="math inline">\(Cov(X_i,X_J)=\rho_{X_i,X_J}=0\)</span></p>
 </div>
 <p><strong>Demostració</strong></p>
 <p>Si dues variables son independents l’esperança del producte es el producte d’esperances .</p>
@@ -942,8 +941,8 @@ cov(X_i,X_j)=E[(X_iX_j)]-E[X_i]E[X_j]=E[X_i]E[X_j]-E[X_i]E[X_j]=0
 <p>L’invers del teorema anterior no es cumpleix en general, es a dir dues variables poden estar incorrelades però no ser independents.</p>
 <hr />
 <div class="example">
-<p><span id="exm:unlabeled-div-63" class="example"><strong>Exemple 2.5  </strong></span>Imaginem una variable aleatòria <span class="math inline">\(X\)</span> que pren només tres valors <span class="math inline">\(\{-1,0,1\}\)</span> i que cadascú d’aquests valors te la mateixa probabilitat <span class="math inline">\((1/3\)</span>. Imaginem la variable <span class="math inline">\(Y=X^2\)</span>. Les dues variables clarament no son independents per definició ja que els valors de Y estan completament determinats pels valors de Y.</p>
-<p>Si calculem <span class="math inline">\(E[XY]=E[X^3]=E[X]=0\)</span> ja que la variable <span class="math inline">\(X\)</span> i <span class="math inline">\(X^3\)</span> son la mateixa que X. A més <span class="math inline">\(E[X]E[Y]=0\)</span> ja que <span class="math inline">\(E[X]=0\)</span>-</p>
+<p><span id="exm:unlabeled-div-65" class="example"><strong>Exemple 2.5  </strong></span>Imaginem una variable aleatòria <span class="math inline">\(X\)</span> que pren només tres valors <span class="math inline">\(\{-1,0,1\}\)</span> i que cadascú d’aquests valors te la mateixa probabilitat <span class="math inline">\((1/3\)</span>. Imaginem la variable <span class="math inline">\(Y=X^2\)</span>. Les dues variables clarament no son independents per definició ja que els valors de Y estan completament determinats pels valors de Y.</p>
+<p>Si calculem <span class="math inline">\(E[XY]=E[X^3]=E[X]=0\)</span> ja que la variable <span class="math inline">\(X\)</span> i <span class="math inline">\(X^3\)</span> son la mateixa que X. A més <span class="math inline">\(E[X]E[Y]=0\)</span> ja que <span class="math inline">\(E[X]=0\)</span></p>
 <p>Per tant</p>
 <p><span class="math display">\[
 Cov(X,Y)=E[X,Y] -E[X]E[Y]=0-0=0
@@ -1001,11 +1000,12 @@ i <span class="math inline">\(D^{-1}\)</span> es una matriu diagonal amb <span c
 Figura 2.1: Correlació espúria entre el consum de gelats i morts per ofegament en aigua en USA
 </p>
 </div>
-<p>En la URL <a href="https://tylervigen.com/spurious-correlations" class="uri">https://tylervigen.com/spurious-correlations</a> es poden trobar nombrosoes correlacions espúries on estàn disponibles les dades . D’ací la famosa frase en estadística <strong>Correlation is not causation</strong>, la correlació no implica causalitat.</p>
+<p>En la URL <a href="https://tylervigen.com/spurious-correlations" class="uri">https://tylervigen.com/spurious-correlations</a> es poden trobar nombroses correlacions espúries on estàn disponibles les dades . D’ací la famosa frase en estadística <strong>Correlation is not causation</strong>, la correlació no implica causalitat.</p>
 
 </div>
 </div>
 </div>
+<script src="Rcode/sidebar-controls.js"></script>
             </section>
 
           </div>

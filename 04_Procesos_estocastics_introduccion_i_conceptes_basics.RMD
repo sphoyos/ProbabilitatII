@@ -6,8 +6,8 @@
 ## Definició de procés estocàstic.
 
 
-En el curs de probabilitat I es van estudiar les succesions de variables aleatòries, es a dir col·leccions infinites numerables de variables aleatòries i es va centrar l'interès en les diferents convergències d'aquestes variables, sobretot utilitzant la llei dels grans nombres i el teorema central del límit. En aquell moment no es varen analitzar les relacions entre les variables de la successió i altres. 
-En questst tema introduirem el concepte de procés estocàstic. De tota manera cal ressenyar que el concepte de procés estocàstic va mès enllà de les successions de variables. Es tracta d'una conjunt de variables aleatòries on pot estar indexat per un conjunt no numerables. 
+En el curs de probabilitat I es van estudiar les succesions de variables aleatòries, es a dir col·leccions infinites numerables de variables aleatòries i es va centrar l'interès en les diferents convergències d'aquestes variables, sobretot utilitzant la llei dels grans nombres i el teorema central del límit. En aquell moment no es varen analitzar les relacions entre les variables de la successió i altres questions. 
+En aquestt tema introduirem el concepte de procés estocàstic. De tota manera cal ressenyar que el concepte de procés estocàstic va mès enllà de les successions de variables. Es tracta d'una conjunt de variables aleatòries que pot estar indexat per un conjunt no numerables. 
 
 Un exemple seria l'estudi de l'ocurrència de un mateix esdeveniment al llarg del temps. Si aquestes ocurrències son independents i el tema d'interès es el temps que transcorri entre esdeveniments, parlarem de la successió $\{X_n\}$  on $X_i$=(temps que passa entre l'esdeveniment i- i el i). Però, si el que ens interessa es el nombre de vegades que l'esdeveniment ha succeït en l'interval [0,t], la familia a considerar és $N_t$, amb t>0 i per descomptat no és numerable . 
 
@@ -19,11 +19,11 @@ Un exemple seria l'estudi de l'ocurrència de un mateix esdeveniment al llarg de
 
 Un procés estocàstic es una colecció de variables aleatòries $\{ X_t,t \in T \}$ definides sobre un espai de probabilitat $(\Omega, \mathcal{A},P)$.
 
-$T$ es un subconjunt de $\mathbb{R}$ que s'anomena **conjunt d'indexs**. S'utilitza la lletra $t$  donat que l'estudi de processos estocàstics surt del estudi de l'evolutcó temporal de fenòmens aleatoris.   
+$T$ es un subconjunt de $\mathbb{R}$ que s'anomena **conjunt d'indexs**. S'utilitza la lletra $t$  donat que l'estudi de processos estocàstics surt del estudi de l'evolució temporal de fenòmens aleatoris.   
 
 El conjunt de valors   $S \subseteq \mathbb{R}$ que poden prendre les variables aleatòries $X_t$ s'anomena **espai d'estats** del procés.
 
-Amb freqüència l'índex $t \in T$ que ordena les variables aleatòries del procés correspon al temps i $X_t$ és l'estat del sistema en estudi a l'instant t. 
+Amb freqüència l'índex $t \in T$ que ordena les variables aleatòries del procés correspon al temps i $X_t$ és l'estat del sistema en estudi a l'instant $t$. 
 
 :::
 
@@ -228,7 +228,7 @@ que obviament pren valors entre $[-1,1]$- Em el cas de les series temporals es r
 ## Processos estocàstics discrets i continus.
 
 
-Els processos estocàstics es poden classificar en  funció del tipo de variables T i X_t 
+Els processos estocàstics es poden classificar en  funció del tipo de variables $T$ i $X_t$ 
 
 
 | **$X_t$ **  |  **T Discret** | **T Continu** |
@@ -249,13 +249,23 @@ Els processos estocàstics es poden classificar en  funció del tipo de variable
 
 
 ## Processos estocàstics estacionaris i no estacionaris.
- 
+:::{.definition}
+**Trajectòria d'un procés**
+Un procés estocàstic també es pot veure com una funció aleatòria  amb un doble argument,
+$$
+\{X(t,\omega),\ t\in T,\ \omega\in\Omega\}.
+$$
+Si amb aquesta notació fixem $\omega=\omega_0$, obtenim una **realització** del procés, $X(\cdot,\omega_0)$, la representació gràfica de la qual constitueix la **trajectòria** del procés (\textit{sample path}).
+
+::: 
+
+
 :::{.definition}
 **Distribucions finito-dimensionals**
 En general les variables aleatòries del procés $\textbf{X}=\{X_t\}_{t \in T}$ no son independents entre elles. Si $\{ t_1,t_2,..,t_n\} \subset T$ és un subconjunt finit de qualsevol dels índex, la distribució conjunta del vector $(X_{t_1},X_{t_2},...,X_{t_n})$ vindrà donada per
 
 $$
-F_{t_1},{t_2},...,{t_n}(x_1,...,x_n))=P(X_{t_1}\leq x_{t_1},X_{t_2}\leq x_{t_2},...,X_{t_n}\leq x_{t_n})   
+F_{t_1,t_2,\dots,t_n}(x_1,\dots,x_n)=P\left(X_{t_1}\leq x_1,\;X_{t_2}\leq x_2,\;\dots,\;X_{t_n}\leq x_n\right)
 $$
 Aquesta distribució rep el nom de distribució finito-dimensional del procés. També es poden expressar aquestes distribucions a partir de les funcions de densitat i probabilitat conjuntes del vector. 
 
@@ -285,7 +295,7 @@ X_{t_1}-X_{t_0},X_{t_2}-X_{t_1},...,X_{t_n}-X_{t_{n-1}}
 són independents.
 :::
 
-En l'exemple \@ref(exm:ppuntual) sobre el nombre d'urgències, el nombre de urgències en la primera hora és independent del de la segona hora i de la tercera hora.
+En l'exemple \@ref(exm:ppuntual) sobre el nombre d'urgències, el nombre de urgències en la primera hora és independent dels de la segona hora i de la tercera hora.
 
 
 
@@ -303,7 +313,7 @@ Aquest tipus de processos son aquells on l'evolució futura depén només del es
 
 
 
- L'exemple \@ref(exm:ppuntual) sobre el nombre d'urgències també es un procés de Markov. Per calcular el nombre de urgències en l'instant t, necessitem saber quants hi ha en t ( present), donat que les arribades futures són independents de les passades i saber en quin temps estem no aporta cap informació. en la primera hora és independent del de la segona hora i de la tercera hora.
+ L'exemple \@ref(exm:ppuntual) sobre el nombre d'urgències també es un procés de Markov. Per calcular el nombre de urgències en l'instant $t+1$, necessitem saber quants hi ha en $t$ ( present), donat que les arribades futures són independents de les passades i saber en quin temps estem no aporta cap informació.
 
 
 
@@ -333,9 +343,9 @@ Més en general , qualsevol propietat de una variable singular d'un procés esta
 
 
 :::{.definition}
-**Processos estacionaris dèbil**
+**Processos estacionaris feblel**
 
-El procés $\textbf{X}=\{X_t\}_{t \in T}$ es dèbilment  estacionari si  per a tot $t_1$ i $t_2 \in T$ i tot $h>0$,
+El procés $\textbf{X}=\{X_t\}_{t \in T}$ és feblement  estacionari si  per a tot $t_1$ i $t_2 \in T$ i tot $h>0$,
 
 $$
 E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h},X_{t_2+h})
@@ -344,6 +354,6 @@ $$
 :::
 
 
-Una forma equivalent de definir l’estacionarietat dèbil és dir que un procés es dèbilment estacionari si i només si te esperança constant i la covariància entre $X_{t_1}$ i $X_{t_2}$ només depén de $t_2-t_1$. La estacionarietat dèbil implica la estacionarietat forta.
+Una forma equivalent de definir l’estacionarietat dèbil és dir que un procés és feblement estacionari si i només si te esperança constant i la covariància entre $X_{t_1}$ i $X_{t_2}$ només depén de $t_2-t_1$. La estacionarietat forta implica la estacionarietat feble
 
 
