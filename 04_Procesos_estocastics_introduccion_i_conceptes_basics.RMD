@@ -240,13 +240,13 @@ Els processos estocàstics es poden classificar en  funció del tipo de variable
 
 
 
--Un procés discret amb el temps discret (**DTDV*+- Discret Time/Discret Values) , que s'anomena cadena, seria l'exemple   \@ref(exm:cadena) on es veia en 30 clients que entraven en una botiga si compraven o no
+-Un procés discret amb el temps discret (**DTDV**: Discret Time/Discret Values) , que s'anomena cadena, seria l'exemple   \@ref(exm:cadena) on es veia en 30 clients que entraven en una botiga si compraven o no
 
--Un procés  continu en un temps discret  (**DTCV**- Discret Time/Continous Values)s'anomena un successió de variables. Si en el cas anterior en lloc de mesurar si compra o no compra haguéssim mesurat l 'alçada o el pes del client seria un bon exemple
+-Un procés  continu en un temps discret  (**DTCV**: Discret Time/Continous Values)s'anomena un successió de variables. Si en el cas anterior en lloc de mesurar si compra o no compra haguéssim mesurat l 'alçada o el pes del client seria un bon exemple
 
--Un procés puntual com el de l'exemple  \@ref(exm:ppuntual) on es mesura el nombre de urgències en un determinat temps és el cas on el procés es discret pero el temps és continu.(**CTDV**+-Continous Time/Discret Values) 
+-Un procés puntual com el de l'exemple  \@ref(exm:ppuntual) on es mesura el nombre de urgències en un determinat temps és el cas on el procés es discret pero el temps és continu.(**CTDV**: Continous Time/Discret Values) 
 
--El procés continu es aquell en el que la variable es continua i el temps també(**CTCV**+-Continous Time/Continous Values) . Es el cas de  l'exemple \@ref(exm:pcontinu) on es mesura el $VO_2$ d'un esportista en 10 minuts d'esforç
+-El procés continu es aquell en el que la variable es continua i el temps també(**CTCV**: Continous Time/Continous Values) . Es el cas de  l'exemple \@ref(exm:pcontinu) on es mesura el $VO_2$ d'un esportista en 10 minuts d'esforç
 
 
 ## Processos estocàstics estacionaris i no estacionaris.
@@ -332,7 +332,7 @@ tenen la mateixa distribució conjunta per a tot $h>0$, tots $\{t_1,...,t_n\} \s
 
 
 :::{.theorem}
-La funció mitjana d'un procés estocàstic estacionari es constant 
+La funció mitjana d'un procés estocàstic estacionari, on $E[X_t]<+\infty$, és constant 
 :::
 **Demostració**
 
@@ -346,7 +346,7 @@ Més en general , qualsevol propietat d'una variable unidimensional d'un procés
 :::{.definition}
 **Processos estacionaris feble**
 
-El procés $\textbf{X}=\{X_t\}_{t \in T}$ és feblement  estacionari si  per a tot $t_1$ i $t_2 \in T$ i tot $h>0$,
+El procés $\textbf{X}=\{X_t\}_{t \in T}$ és feblement  estacionari si  per a tot $t_1$ i $t_2 \in T$ i tot $h>0$ i $E[X_t]<+\infty$
 
 $$
 E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h},X_{t_2+h})
