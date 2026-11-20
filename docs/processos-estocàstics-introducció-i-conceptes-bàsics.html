@@ -402,21 +402,21 @@ que obviament pren valors entre <span class="math inline">\([-1,1]\)</span>- Em 
 <table>
 <thead>
 <tr class="header">
-<th align="center"><strong><span class="math inline">\(X_t\)</span> </strong></th>
-<th align="center"><strong>T Discret</strong></th>
-<th align="center"><strong>T Continu</strong></th>
+<th align="left"><span class="math inline">\(X_t\)</span></th>
+<th align="left"><span class="math inline">\(T\)</span> discret</th>
+<th align="left"><span class="math inline">\(T\)</span> continu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><strong>Discret</strong></td>
-<td align="center">Cadena</td>
-<td align="center">Proc. puntual</td>
+<td align="left"><strong>Discret</strong></td>
+<td align="left"><strong>DTDV</strong> Cadena</td>
+<td align="left"><strong>CTDV</strong> Procés puntual</td>
 </tr>
 <tr class="even">
-<td align="center"><strong>Continu</strong></td>
-<td align="center">Suc. de v.a.</td>
-<td align="center">Proc. continu</td>
+<td align="left"><strong>Continu</strong></td>
+<td align="left"><strong>DTCV</strong> Successió v.a.</td>
+<td align="left"><strong>CTCV</strong> Procés continu</td>
 </tr>
 </tbody>
 </table>
@@ -472,7 +472,7 @@ amb <span class="math inline">\(t_0&lt;t_1&lt;....&lt;t_n, t_i \in T\)</span></p
 <p><span id="def:unlabeled-div-95" class="definition"><strong>Definició 4.7  </strong></span><strong>Processos estacionaris forts</strong></p>
 <p>El procés <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> es fortament estacionari si les families de les variables aleatòries
 <span class="math display">\[
-(X_{t_1},X_{t_2},...,X_{t_n}) \quad \text(i) \quad (X_{t_1+h},X_{t_2+h},...,X_{t_n+h})
+(X_{t_1},X_{t_2},...,X_{t_n}) \quad \text{i} \quad (X_{t_1+h},X_{t_2+h},...,X_{t_n+h})
 \]</span>
 tenen la mateixa distribució conjunta per a tot <span class="math inline">\(h&gt;0\)</span>, tots <span class="math inline">\(\{t_1,...,t_n\} \subset T\)</span> i <span class="math inline">\(n\geq 1\)</span></p>
 </div>
@@ -481,11 +481,11 @@ tenen la mateixa distribució conjunta per a tot <span class="math inline">\(h&g
 </div>
 <p><strong>Demostració</strong></p>
 <p><span class="math display">\[
-\mu_X(t)=\int_{- \infty}^{+\infty} xf_t(x) dx=  \int_{- \infty}^{+\infty} xf(x) dx=m(x)
+\]</span><em>X(t)=</em>{-}^{+} x,dF_{X_t}(x)=<em>{-}^{+} x,dF</em>{X_{t+h}}(x)=_X(t+h)<span class="math display">\[
 \]</span>
-Més en general , qualsevol propietat de una variable singular d’un procés estacionari es invariant al temps</p>
+Més en general , qualsevol propietat d’una variable unidimensional d’un procés estacionari es invariant al temps</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-97" class="definition"><strong>Definició 4.8  </strong></span><strong>Processos estacionaris feblel</strong></p>
+<p><span id="def:unlabeled-div-97" class="definition"><strong>Definició 4.8  </strong></span><strong>Processos estacionaris feble</strong></p>
 <p>El procés <span class="math inline">\(\textbf{X}=\{X_t\}_{t \in T}\)</span> és feblement estacionari si per a tot <span class="math inline">\(t_1\)</span> i <span class="math inline">\(t_2 \in T\)</span> i tot <span class="math inline">\(h&gt;0\)</span>,</p>
 <p><span class="math display">\[
 E[X_{t_1}]=E[X_{t_2}] \quad \text{i}  \quad   Cov(X_{t_1},X_{t_2})= Cov(X_{t_1+h},X_{t_2+h})
